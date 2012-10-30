@@ -1,0 +1,10 @@
+dog
+animals
+puppy
+cattle
+scattered
+showers
+rain
+overcast
+light
+snow
