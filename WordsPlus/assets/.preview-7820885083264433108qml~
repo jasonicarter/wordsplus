@@ -1,0 +1,338 @@
+// Tabbed Pane project template
+import bb.cascades 1.0
+
+TabbedPane {
+    id: mainTab
+    showTabsOnActionBar: true
+    Menu.definition: MenuDefinition {
+        // Add a Help action
+        helpAction: HelpActionItem {
+        }
+
+        // Add a Settings action
+        settingsAction: SettingsActionItem {
+        }
+
+        // Add any remaining actions
+        actions: [
+            ActionItem {
+                title: "About"
+                onTriggered: {
+                    aboutSheet.open();
+                }
+            }
+        ]
+    }
+
+    // The home weather page that the user can select which city that they want to show
+    // here by long pressing a city in the list and setting it as home.
+    Tab {
+        title: "Home"
+        imageSource: "asset:///images/menuicons/icon_home.png"
+        Page {
+            id: homeCityPage
+            Container {
+                background: Color.Black
+                Container {
+                    Label {
+                        text: "Welcome."
+                        textStyle {
+                            base: bigTextNormalWhite.style
+                        }
+                    }
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                Container { //divider
+                    bottomMargin: 50
+                    preferredWidth: 600
+                    preferredHeight: 3
+                    background: Color.create("#ff8c00")
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                Container {
+                    layout: DockLayout {
+                    }
+                    topMargin: 30
+                    horizontalAlignment: HorizontalAlignment.Center
+                    verticalAlignment: VerticalAlignment.Center
+                    ImageView {
+                        id: puzzleLetters
+                        opacity: 1
+                        imageSource: "asset:///images/puzzleLetters.png"
+                        preferredWidth: 500
+                        preferredHeight: 500
+                        animations: HomeTabAnimation {
+                            id: puzzleLettersAnimation
+                            onEnded: {
+                                //wordsplusAnimation.play();
+                            }
+                        }
+                    }
+                    ImageView {
+                        id: wordsplus
+                        opacity: 0
+                        imageSource: "asset:///images/wordsplus.png"
+                        preferredWidth: 500
+                        preferredHeight: 500
+                        animations: HomeTabAnimation {
+                            id: wordsplusAnimation
+                            onEnded: {
+                                byAnimation.play();
+                            }
+                        }
+                    }
+                    ImageView {
+                        id: by
+                        opacity: 0
+                        imageSource: "asset:///images/by.png"
+                        preferredWidth: 500
+                        preferredHeight: 500
+                        animations: HomeTabAnimation {
+                            id: byAnimation
+                            onEnded: {
+                                jiAnimation.play();
+                            }
+                        }
+                    }
+                    ImageView {
+                        id: ji
+                        opacity: 0
+                        imageSource: "asset:///images/ji.png"
+                        preferredWidth: 500
+                        preferredHeight: 500
+                        animations: HomeTabAnimation {
+                            id: jiAnimation
+                            onEnded: {
+                                carterAnimation.play();
+                            }
+                        }
+                    }
+                    ImageView {
+                        id: carter
+                        opacity: 0
+                        imageSource: "asset:///images/carter.png"
+                        preferredWidth: 500
+                        preferredHeight: 500
+                        animations: HomeTabAnimation {
+                            id: carterAnimation
+                        }
+                    }
+                }
+                Container {
+                    topMargin: 50
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                    Label {
+                        text: "Total points won: 4638 \n" + "Total # of games played: 54"
+                        multiline: true
+                        textStyle {
+                            base: subTitleNormalBlue.style
+                            textAlign: TextAlign.Center
+                        }
+                    }
+                }
+                Container { //divider
+                    bottomMargin: 50
+                    preferredWidth: 600
+                    preferredHeight: 3
+                    background: Color.create("#ff8c00")
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+                onCreationCompleted: {
+                    //puzzleLettersAnimation.play();
+                    wordsplusAnimation.play();
+                }
+            }
+        }
+        onTriggered: {
+         wordsplusAnimation.play();   
+        }
+    } // tab
+
+    // The city browse page where filtering is done based on continents
+    Tab {
+        title: "Play"
+        imageSource: "asset:///images/menuicons/icon_browse.png"
+        PlayPuzzlePage {
+            id: puzzle
+        }
+        
+        onTriggered: {
+            puzzleLetters.opacity = 1;
+            wordsplus.opacity = 0;
+            by.opacity = 0;
+            ji.opacity = 0;
+            carter.opacity = 0;
+        }
+    }
+
+    // A tab where a list of favorite cities are shown
+    Tab {
+        title: "Stats"
+        imageSource: "asset:///images/menuicons/icon_favorites.png"
+        //        SetupPuzzlePage {
+        //            id: favorites
+        //        }
+        Page {
+            Container {
+                background: Color.Black
+                Container {
+                    horizontalAlignment: HorizontalAlignment.Center
+                    verticalAlignment: VerticalAlignment.Center
+                    Label {
+                        text: "Stats."
+                        textStyle {
+                            base: bigTextNormalWhite.style
+                        }
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Center
+                    }
+                }
+                Container {
+                    bottomMargin: 50
+                    preferredWidth: 600
+                    preferredHeight: 3
+                    background: Color.create("#ff8c00")
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+            }
+        }
+    }
+
+    // A tab where the maximum and minimum temperatures are shown
+    Tab {
+        title: "Challenge"
+        imageSource: "asset:///images/menuicons/icon_browse.png"
+        Page {
+            Container {
+                background: Color.Black
+                Container {
+                    horizontalAlignment: HorizontalAlignment.Center
+                    verticalAlignment: VerticalAlignment.Center
+                    Label {
+                        text: "Challenges."
+                        textStyle {
+                            base: bigTextNormalWhite.style
+                        }
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Center
+                    }
+                }
+                Container {
+                    bottomMargin: 50
+                    preferredWidth: 600
+                    preferredHeight: 3
+                    background: Color.create("#ff8c00")
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
+            }
+        }
+    }
+    attachedObjects: [
+        // When modifying the SystemDefult fonts, like changing wieght or color,
+        // it is better from a memory consumption point of view to create text
+        // styles as attached objects.
+        TextStyleDefinition {
+            id: bigTextNormalWhite
+            base: SystemDefaults.TextStyles.BigText
+            color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: bigBodyNormalWhite
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: subTitleNormalBlue
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        Sheet {
+            id: aboutSheet
+            Page {
+                Container {
+                    background: Color.Black
+                    layout: StackLayout {
+                    }
+                    Label {
+                        horizontalAlignment: HorizontalAlignment.Center
+                        text: "Categories"
+                        textStyle {
+                            color: Color.create("#fafafa")
+                            base: SystemDefaults.TextStyles.TitleText
+                        }
+                    }
+                    Container {
+                        verticalAlignment: VerticalAlignment.Top
+                        preferredWidth: 720
+                        layout: AbsoluteLayout {
+                        }
+                        RadioGroup {
+                            id: radioGroup
+                            layoutProperties: AbsoluteLayoutProperties {
+                                positionX: 20
+                                positionY: 55
+                            }
+                            Option {
+                                id: radioOptionCategory
+                                selected: true
+                            }
+                            Option {
+                                id: radioOptionLocation
+                            }
+                            onSelectedIndexChanged: {
+                                if (radioOptionCategory.selected == true) {
+                                    byCategory.opacity = 1;
+                                    byLocation.opacity = 0;
+                                } else {
+                                    byLocation.opacity = 1;
+                                    byCategory.opacity = 0;
+                                }
+                            }
+                        }
+                        Label {
+                            layoutProperties: AbsoluteLayoutProperties {
+                                positionX: 120
+                                positionY: 80
+                            }
+                            text: "By Category"
+                            textStyle {
+                                color: Color.create("#fafafa")
+                                base: SystemDefaults.TextStyles.BodyText
+                            }
+                        }
+                        Label {
+                            layoutProperties: AbsoluteLayoutProperties {
+                                positionX: 120
+                                positionY: 220
+                            }
+                            text: "By Location"
+                            textStyle {
+                                color: Color.create("#fafafa")
+                                base: SystemDefaults.TextStyles.BodyText
+                            }
+                        }
+                    }
+                }
+                actions: [
+                    ActionItem {
+                        title: "Close"
+                        ActionBar.placement: ActionBarPlacement.OnBar
+                        onTriggered: {
+                            aboutSheet.close();
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}// TabbedPane
