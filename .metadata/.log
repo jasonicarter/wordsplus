@@ -140,3 +140,12 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 
 !ENTRY org.eclipse.cdt.core 1 0 2012-10-30 14:15:26.482
 !MESSAGE Indexed 'WordsPlus' (5 sources, 667 headers) in 20.29 sec: 82,569 declarations; 114,642 references; 0 unresolved inclusions; 0 syntax errors; 56 unresolved names (0.03%)
+
+!ENTRY org.eclipse.ui 4 4 2012-10-30 15:44:59.681
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-10-30 15:44:59.732
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-10-30 16:06:08.539
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf

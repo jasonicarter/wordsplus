@@ -4,7 +4,7 @@
 <listAttribute key="com.qnx.tools.ide.qde.core.ACTIVE_TOOLS"/>
 <listAttribute key="com.qnx.tools.ide.qde.core.ACTIVE_TOOL_DELEGATES"/>
 <booleanAttribute key="com.qnx.tools.ide.qde.core.LD_BIND_NOW" value="true"/>
-<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value=""/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="usb"/>
 <booleanAttribute key="com.qnx.tools.ide.qde.core.TARGET_FILTER_ATTR" value="true"/>
 <booleanAttribute key="org.eclipse.cdt.debug.mi.core.AUTO_SOLIB" value="true"/>
 <listAttribute key="org.eclipse.cdt.debug.mi.core.AUTO_SOLIB_LIST"/>
@@ -27,7 +27,7 @@
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PLATFFORM" value="qnxbbt"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_ARGUMENTS" value=""/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="x86\o-g\WordsPlus"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="arm\o.le-v7-g\WordsPlus"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="WordsPlus"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
@@ -43,4 +43,5 @@
 </mapAttribute>
 <stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.cdt.debug.core.sourceLocator"/>
 <stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;sourceLookupDirector&gt;&#13;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#13;&#10;&lt;container memento=&quot;AbsolutePath&quot; typeId=&quot;org.eclipse.cdt.debug.core.containerType.absolutePath&quot;/&gt;&#13;&#10;&lt;/sourceContainers&gt;&#13;&#10;&lt;/sourceLookupDirector&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#13;&#10;"/>
 </launchConfiguration>
