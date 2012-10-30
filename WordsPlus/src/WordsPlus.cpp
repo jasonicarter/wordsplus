@@ -1,6 +1,7 @@
 // Default empty project template
 #include "WordsPlus.hpp"
 #include "wordsearch.h"
+#include "ActiveFrame.h"
 #include <string>
 
 #include <bb/cascades/Application>
@@ -55,8 +56,19 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) : QObject(app) {
 		tabs = mQmlDocument->createRootObject<TabbedPane>();
 
 		if (tabs) {
+
+		    // Create the cover now. When application in moved to a background it's too late
+			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
+			// Using DataModel in ActiveFrame isn't good idea too.
+			// Provider creates the CustomControls once they are needed.
+			app->setCover(new ActiveFrame());
+
+			//possible connecting to a function here so on thumbnail - stop timer
+			//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
+
 			intializePlayArea(); //check spelling :)
 			stopTimer();
+
 			// Set the main application scene to NavigationPane.
 			Application::instance()->setScene(tabs);
 		}
@@ -401,16 +413,18 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		numberOfWordsFound++;
 		CrossOutPuzzleWord(selectedWord);
 
-		if( numberOfWordsFound == numberOfWords) {
-			showToast("Puzzle Completed! Great work but don't stop there...");
-		}
-
+		// save off total words found
 		bool ok;
 		int found = settings->getValueFor(WORDSFOUND, "0").toInt(&ok, 10);
 		if(ok) {
 			found++;
 			settings->saveValueFor(WORDSFOUND, QString::number(found));
 			emit totalWordsFoundChanged();
+		}
+
+		if( numberOfWordsFound == numberOfWords) {
+			showToast("PUZZLE COMPLETED!"); // add icon url to pass to function
+			intializePlayArea(); // create a new puzzle
 		}
 	}
 	else {
