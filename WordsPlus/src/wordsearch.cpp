@@ -302,7 +302,7 @@ char** createNewPuzzle(char *str = "weather.txt") {
 		}
 	}
 
-	//grid -> garbage () ;
+	grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();
 

@@ -73,6 +73,9 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) : QObject(app) {
 			Application::instance()->setScene(tabs);
 		}
 	}
+
+	//include ScoreLoop stuff here
+
 }
 
 

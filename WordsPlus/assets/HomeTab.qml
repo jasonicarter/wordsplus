@@ -2,25 +2,29 @@ import bb.cascades 1.0
 
 Page {
     Container {
+            layout: DockLayout {
+            }
         background: Color.Black
         Container {
+            background: Color.create("#00629C")
+            preferredWidth: 768
             Label {
-                text: "Welcome."
+                text: "At Home."
+                verticalAlignment: VerticalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Center
                 textStyle {
                     base: bigTextNormalWhite.style
                 }
-            }
-            verticalAlignment: VerticalAlignment.Center
-            horizontalAlignment: HorizontalAlignment.Center
+            } 
         }
-        Container { //divider
-            bottomMargin: 50
-            preferredWidth: 600
-            preferredHeight: 3
-            background: Color.create("#ff8c00")
-            verticalAlignment: VerticalAlignment.Center
-            horizontalAlignment: HorizontalAlignment.Center
-        }
+//        Container { //divider
+//            bottomMargin: 50
+//            preferredWidth: 600
+//            preferredHeight: 3
+//            background: Color.create("#ff8c00")
+//            verticalAlignment: VerticalAlignment.Center
+//            horizontalAlignment: HorizontalAlignment.Center
+//        }
         Container {
             layout: DockLayout {
             }
@@ -189,27 +193,26 @@ Page {
             }
         }
         Container {
-            topMargin: 50
-            verticalAlignment: VerticalAlignment.Center
+            bottomPadding: 50
+            verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             Label {
                 text: "Total points won: 4638 \n" + 
                 "Total # of Words Found: " + wordsPlus.totalWordsFound;
                 multiline: true
                 textStyle {
-                    base: subTitleNormalBlue.style
+                    base: subTitleNormalWhite.style
                     textAlign: TextAlign.Center
                 }
             }
         }
-//        Container { //divider
-//            bottomMargin: 50
-//            preferredWidth: 600
-//            preferredHeight: 3
-//            background: Color.create("#ff8c00")
-//            verticalAlignment: VerticalAlignment.Center
-//            horizontalAlignment: HorizontalAlignment.Center
-//        }
+        Container { //divider
+            preferredWidth: 768
+            preferredHeight: 50
+            background: Color.create("#00629C")
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
+        }
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();

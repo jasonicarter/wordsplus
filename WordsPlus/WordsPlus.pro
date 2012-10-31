@@ -7,6 +7,7 @@ INCLUDEPATH += ../src
 SOURCES += ../src/*.cpp
 HEADERS += ../src/*.hpp ../src/*.h
 LIBS += -lbbsystem
+LIBS += -lscoreloopcore
 
 lupdate_inclusion {
     SOURCES += ../assets/*.qml
