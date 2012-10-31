@@ -22,36 +22,42 @@ NavigationPane {
         ]
         Container {
             id: playPuzzleRootContainer
+            layout: DockLayout {
+            }
             horizontalAlignment: HorizontalAlignment.Center
             background: Color.Black
             preferredWidth: 768
             Container {
-                horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Center
+                background: Color.create("#00629C")
+                preferredWidth: 768
                 Label {
-                    text: "Play."
+                    text: "Puzzles."
+                    horizontalAlignment: HorizontalAlignment.Center
+                    verticalAlignment: VerticalAlignment.Center
                     textStyle {
                         base: textNormalWhite.style
                     }
                 }
             }
-            Container { // divider
-                preferredWidth: 600
-                preferredHeight: 3
-                background: Color.create("#ff8c00")
-                verticalAlignment: VerticalAlignment.Center
-                horizontalAlignment: HorizontalAlignment.Center
-            }
+            //            Container { // divider
+            //                preferredWidth: 600
+            //                preferredHeight: 3
+            //                background: Color.create("#ff8c00")
+            //                verticalAlignment: VerticalAlignment.Center
+            //                horizontalAlignment: HorizontalAlignment.Center
+            //            }
             Container {
                 layout: DockLayout {
                 }
+                topPadding: 125
                 preferredWidth: 720
                 horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Top
                 Container {
                     horizontalAlignment: HorizontalAlignment.Left
                     Label {
                         id: timerDisplay
-                        text: "TIME: " + wordsPlus.time;
+                        text: "TIME: " + wordsPlus.time
                         textStyle {
                             base: subTitleNormalWhite.style
                         }
@@ -69,6 +75,7 @@ NavigationPane {
             }
             Container {
                 objectName: "playAreaContainer"
+                bottomPadding: 50
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
@@ -76,14 +83,23 @@ NavigationPane {
                 preferredWidth: 700
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
-            }         
+                verticalAlignment: VerticalAlignment.Center
+            }
             Container { // Container for words to find
-                topMargin: 50
+                bottomPadding: 100
                 objectName: "wordsToFind"
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
                 preferredWidth: 720
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Bottom
+            }
+            Container { //divider
+                preferredWidth: 768
+                preferredHeight: 50
+                background: Color.create("#00629C")
+                verticalAlignment: VerticalAlignment.Bottom
                 horizontalAlignment: HorizontalAlignment.Center
             }
         } // Page
@@ -229,7 +245,7 @@ NavigationPane {
                             ListView {
                                 dataModel: XmlDataModel {
                                     source: "models/categories.xml"
-                                }                             
+                                }
                                 preferredHeight: 500
                                 listItemComponents: [
                                     ListItemComponent {

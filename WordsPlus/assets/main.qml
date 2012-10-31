@@ -24,7 +24,7 @@ TabbedPane {
         ]
     }
     Tab {
-        title: "Home"
+        title: "Start"
         imageSource: "asset:///images/menuicons/icon_home.png"
         HomeTab {
             id: homeTab
@@ -48,16 +48,16 @@ TabbedPane {
 
     // Stats from local storage and Score Loop
     Tab {
-        title: "Stats"
+        title: "Review"
         imageSource: "asset:///images/menuicons/icon_favorites.png"
         Page {
             Container {
                 background: Color.Black
                 Container {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Center
+                    background: Color.create("#00629C")
+                    preferredWidth: 768
                     Label {
-                        text: "Stats."
+                        text: "Your Stats."
                         textStyle {
                             base: bigTextNormalWhite.style
                         }
@@ -65,21 +65,21 @@ TabbedPane {
                         horizontalAlignment: HorizontalAlignment.Center
                     }
                 }
-                Container {
-                    bottomMargin: 50
-                    preferredWidth: 600
-                    preferredHeight: 3
-                    background: Color.create("#ff8c00")
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Center
-                }
+//                Container { //divider
+//                    bottomMargin: 50
+//                    preferredWidth: 600
+//                    preferredHeight: 3
+//                    background: Color.create("#ff8c00")
+//                    verticalAlignment: VerticalAlignment.Center
+//                    horizontalAlignment: HorizontalAlignment.Center
+//                }
             }
         }
         onTriggered: {
-           wordsPlus.stopTimer();
+            wordsPlus.stopTimer();
         }
     }
-    
+
     // Score Loop challenges
     Tab {
         title: "Challenge"
@@ -88,10 +88,10 @@ TabbedPane {
             Container {
                 background: Color.Black
                 Container {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Center
+                        background: Color.create("#00629C")
+                        preferredWidth: 768
                     Label {
-                        text: "Challenge."
+                        text: "And Brag."
                         textStyle {
                             base: bigTextNormalWhite.style
                         }
@@ -99,18 +99,18 @@ TabbedPane {
                         horizontalAlignment: HorizontalAlignment.Center
                     }
                 }
-                Container {
-                    bottomMargin: 50
-                    preferredWidth: 600
-                    preferredHeight: 3
-                    background: Color.create("#ff8c00")
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Center
-                }
+//                Container { //divider
+//                    bottomMargin: 50
+//                    preferredWidth: 600
+//                    preferredHeight: 3
+//                    background: Color.create("#ff8c00")
+//                    verticalAlignment: VerticalAlignment.Center
+//                    horizontalAlignment: HorizontalAlignment.Center
+//                }
             }
         }
         onTriggered: {
-           wordsPlus.stopTimer();
+            wordsPlus.stopTimer();
         }
     }
     attachedObjects: [
@@ -135,6 +135,13 @@ TabbedPane {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: subTitleNormalWhite
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
         },
         Sheet {
             id: aboutSheet
