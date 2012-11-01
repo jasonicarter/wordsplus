@@ -1,10 +1,8 @@
 <root>
-    <item title="ANIMALS" filename="animals" />
-    <item title="COMMON WORDS" filename="common"/>
-    <item title="BABY NAMES" filename="names"/>
-    <item title="JOBS + OCCUPATIONS" filename="jobs"/>
-    <item title="STAR TREK" filename="startrek"/>
-    <item title="BABY NAMES" filename="animals"/>
-    <item title="BABY NAMES" filename="animals"/>
-    <item title="BABY NAMES" filename="animals"/>
+    <item category="ANIMALS" filename="animals" />
+    <item category="COMMON WORDS" filename="common"/>
+    <item category="JOBS + OCCUPATIONS" filename="jobs"/>
+    <item category="STAR TREK" filename="startrek"/>
+    <item category="GIRL NAMES" filename="girlnames"/>
+    <item category="BOY NAMES" filename="boynames"/>
 </root>

@@ -52,27 +52,29 @@ TabbedPane {
         imageSource: "asset:///images/menuicons/icon_favorites.png"
         Page {
             Container {
+                layout: DockLayout {
+                }
                 background: Color.Black
+                horizontalAlignment: HorizontalAlignment.Center
                 Container {
                     background: Color.create("#00629C")
                     preferredWidth: 768
                     Label {
                         text: "Your Stats."
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Center
                         textStyle {
                             base: bigTextNormalWhite.style
                         }
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
                     }
                 }
-//                Container { //divider
-//                    bottomMargin: 50
-//                    preferredWidth: 600
-//                    preferredHeight: 3
-//                    background: Color.create("#ff8c00")
-//                    verticalAlignment: VerticalAlignment.Center
-//                    horizontalAlignment: HorizontalAlignment.Center
-//                }
+                Container { //divider
+                    preferredWidth: 768
+                    preferredHeight: 50
+                    background: Color.create("#00629C")
+                    verticalAlignment: VerticalAlignment.Bottom
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
             }
         }
         onTriggered: {
@@ -86,10 +88,13 @@ TabbedPane {
         imageSource: "asset:///images/menuicons/icon_browse.png"
         Page {
             Container {
+                layout: DockLayout {
+                }
                 background: Color.Black
+                horizontalAlignment: HorizontalAlignment.Center
                 Container {
-                        background: Color.create("#00629C")
-                        preferredWidth: 768
+                    background: Color.create("#00629C")
+                    preferredWidth: 768
                     Label {
                         text: "And Brag."
                         textStyle {
@@ -99,14 +104,13 @@ TabbedPane {
                         horizontalAlignment: HorizontalAlignment.Center
                     }
                 }
-//                Container { //divider
-//                    bottomMargin: 50
-//                    preferredWidth: 600
-//                    preferredHeight: 3
-//                    background: Color.create("#ff8c00")
-//                    verticalAlignment: VerticalAlignment.Center
-//                    horizontalAlignment: HorizontalAlignment.Center
-//                }
+                Container { //divider
+                    preferredWidth: 768
+                    preferredHeight: 50
+                    background: Color.create("#00629C")
+                    verticalAlignment: VerticalAlignment.Bottom
+                    horizontalAlignment: HorizontalAlignment.Center
+                }
             }
         }
         onTriggered: {
