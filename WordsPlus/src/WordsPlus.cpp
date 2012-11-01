@@ -25,6 +25,7 @@
 #define HIGHLIGHT	3
 #define WORDSFOUND "settingsWordsFound"
 
+
 using namespace bb::cascades;
 using namespace bb::system;
 
@@ -46,35 +47,34 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) : QObject(app) {
 	stopWatch = NULL;
 	numberOfWordsFound = 0;
 
-	mQmlDocument = QmlDocument::create("asset:///main.qml");
-	mQmlDocument->setParent(this);
-	mQmlDocument->setContextProperty("wordsPlus", this);
 
-	if (!mQmlDocument->hasErrors()) {
+		mQmlDocument = QmlDocument::create("asset:///main.qml");
+		mQmlDocument->setParent(this);
+		mQmlDocument->setContextProperty("wordsPlus", this);
 
-		// The application navigationPane is created from QML.
-		tabs = mQmlDocument->createRootObject<TabbedPane>();
+		if (!mQmlDocument->hasErrors()) {
 
-		if (tabs) {
+			// The application navigationPane is created from QML.
+			tabs = mQmlDocument->createRootObject<TabbedPane>();
 
-		    // Create the cover now. When application in moved to a background it's too late
-			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
-			// Using DataModel in ActiveFrame isn't good idea too.
-			// Provider creates the CustomControls once they are needed.
-			app->setCover(new ActiveFrame());
+			if (tabs) {
 
-			//possible connecting to a function here so on thumbnail - stop timer
-			//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
+			    // Create the cover now. When application in moved to a background it's too late
+				// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
+				// Using DataModel in ActiveFrame isn't good idea too.
+				// Provider creates the CustomControls once they are needed.
+				app->setCover(new ActiveFrame());
 
-			intializePlayArea(); //check spelling :)
-			stopTimer();
+				//possible connecting to a function here so on thumbnail - stop timer
+				//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
 
-			// Set the main application scene to NavigationPane.
-			Application::instance()->setScene(tabs);
+				intializePlayArea(); //check spelling :)
+				stopTimer();
+
+				// Set the main application scene to NavigationPane.
+				Application::instance()->setScene(tabs);
+			}
 		}
-	}
-
-	//include ScoreLoop stuff here
 
 }
 
@@ -549,3 +549,5 @@ QString WordsPlus::getTime(){
 QString WordsPlus::getTotalWordsFound() {
 	return settings->getValueFor(WORDSFOUND, "0");
 }
+
+
