@@ -101,54 +101,53 @@ int main(int argc, char **argv)
 		   }
 
 		   new WordsPlus(&appqml);
-	//
-	//	   // we complete the transaction started in the app constructor and start the client event loop here
-	//	  return Application::exec();
-	//	  // when loop is exited the Application deletes the scene which deletes all its children (per qt rules for children)
+		   // we complete the transaction started in the app constructor and start the client event loop here
+		  return Application::exec();
+		  // when loop is exited the Application deletes the scene which deletes all its children (per qt rules for children)
 
 
 
-	/* SCORELOOP */
-
-		AppData_t app;
-	    SC_InitData_t initData;
-	    SC_Error_t rc;
-	    char versionBuffer[0x100]; /* Thats 256 bytes */
-
-	    LOG("Starting Scoreloop Sample...")
-
-	    /* Initialize the BPS event system */
-	    bps_initialize();
-	    bps_set_verbosity(0); /* Set to 1 or 2 for more output if you like */
-	    navigator_request_events(0);
-	    dialog_request_events(0);
-
-	    memset(&app, 0, sizeof(AppData_t));
-
-	    /* Initialize the Scoreloop platform dependent SC_InitData_t structure to default values. */
-	    SC_InitData_Init(&initData);
-
-	    /* What version of the Scoreloop library do we use? */
-	    if (SC_GetVersionInfo(&initData, versionBuffer, sizeof(versionBuffer))) {
-	        LOG("Version-Info: %s", versionBuffer);
-	    }
-
-	    /* Now, create the Scoreloop Client with the initialized SC_InitData_t structure
-	     * as well as the game-id and game-secret as found on the developer portal.
-	     */
-	    rc = SC_Client_New(&app.client, &initData, GAME_ID, GAME_SECRET, GAME_VERSION, GAME_CURRENCY, GAME_LANGUAGE);
-	    if (rc != SC_OK) {
-	        HandleError(&app, rc);
-	    }
-	    else {
-	        InformUser(&app, "Note", "Scoreloop Sample started...");
-
-	        /* Request the user here just for demonstration purposes */
-	        RequestUser(&app);
-	    }
-
-	    LOG("Done with RequestUser");
-	    /* SCORELOOP */
+//	/* SCORELOOP */
+//
+//		AppData_t app;
+//	    SC_InitData_t initData;
+//	    SC_Error_t rc;
+//	    char versionBuffer[0x100]; /* Thats 256 bytes */
+//
+//	    LOG("Starting Scoreloop Sample...")
+//
+//	    /* Initialize the BPS event system */
+//	    bps_initialize();
+//	    bps_set_verbosity(0); /* Set to 1 or 2 for more output if you like */
+//	    navigator_request_events(0);
+//	    dialog_request_events(0);
+//
+//	    memset(&app, 0, sizeof(AppData_t));
+//
+//	    /* Initialize the Scoreloop platform dependent SC_InitData_t structure to default values. */
+//	    SC_InitData_Init(&initData);
+//
+//	    /* What version of the Scoreloop library do we use? */
+//	    if (SC_GetVersionInfo(&initData, versionBuffer, sizeof(versionBuffer))) {
+//	        LOG("Version-Info: %s", versionBuffer);
+//	    }
+//
+//	    /* Now, create the Scoreloop Client with the initialized SC_InitData_t structure
+//	     * as well as the game-id and game-secret as found on the developer portal.
+//	     */
+//	    rc = SC_Client_New(&app.client, &initData, GAME_ID, GAME_SECRET, GAME_VERSION, GAME_CURRENCY, GAME_LANGUAGE);
+//	    if (rc != SC_OK) {
+//	        HandleError(&app, rc);
+//	    }
+//	    else {
+//	        InformUser(&app, "Note", "Scoreloop Sample started...");
+//
+//	        /* Request the user here just for demonstration purposes */
+//	        RequestUser(&app);
+//	    }
+//
+//	    LOG("Done with RequestUser");
+//	    /* SCORELOOP */
 
 
 //		// this is where the server is started etc
@@ -171,42 +170,42 @@ int main(int argc, char **argv)
 
 
 
-	    /* SCORELOOP */
-	    /* Now start the BPS runloop */
-	   while (true) {
-
-	        /* Get next BPS event */
-	        bps_event_t *event;
-	        bps_get_event(&event, -1);
-
-
-	        /* Scoreloop event handling  */
-	        if (bps_event_get_domain(event) == SC_GetBPSEventDomain(&initData)) {
-	            SC_HandleBPSEvent(&initData, event);
-	        }
-	        /* Dialog and Navigator event handling */
-	        else if (bps_event_get_domain(event) == navigator_get_domain()) {
-	            if (bps_event_get_code(event) == NAVIGATOR_EXIT) {
-	                break;
-	            }
-	        }
-	        else if (bps_event_get_domain(event) == dialog_get_domain()) {
-	            dialog_destroy(dialog_event_get_dialog_instance(event));
-	    		app.dialog = 0;
-	        }
-	        /* Add more BPS event handling here... */
-	    }
-
-	    /* Cleanup the Scoreloop client */
-	    SC_Client_Release(app.client);
-
-	    /* Shutdown BPS */
-	    bps_shutdown();
-
-	    LOG("Done with Scoreloop Sample");
-	    /* SCORELOOP */
-
-	    return Application::exec();
+//	    /* SCORELOOP */
+//	    /* Now start the BPS runloop */
+//	   while (true) {
+//
+//	        /* Get next BPS event */
+//	        bps_event_t *event;
+//	        bps_get_event(&event, -1);
+//
+//
+//	        /* Scoreloop event handling  */
+//	        if (bps_event_get_domain(event) == SC_GetBPSEventDomain(&initData)) {
+//	            SC_HandleBPSEvent(&initData, event);
+//	        }
+//	        /* Dialog and Navigator event handling */
+//	        else if (bps_event_get_domain(event) == navigator_get_domain()) {
+//	            if (bps_event_get_code(event) == NAVIGATOR_EXIT) {
+//	                break;
+//	            }
+//	        }
+//	        else if (bps_event_get_domain(event) == dialog_get_domain()) {
+//	            dialog_destroy(dialog_event_get_dialog_instance(event));
+//	    		app.dialog = 0;
+//	        }
+//	        /* Add more BPS event handling here... */
+//	    }
+//
+//	    /* Cleanup the Scoreloop client */
+//	    SC_Client_Release(app.client);
+//
+//	    /* Shutdown BPS */
+//	    bps_shutdown();
+//
+//	    LOG("Done with Scoreloop Sample");
+//	    /* SCORELOOP */
+//
+//	    return Application::exec();
 
 }
 
