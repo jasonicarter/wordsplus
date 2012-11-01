@@ -1,7 +1,5 @@
 import bb.cascades 1.0
 
-NavigationPane {
-    id: puzzleNav
     Page {
         id: playPuzzlePage
         actions: [
@@ -16,6 +14,7 @@ NavigationPane {
                 title: "Category"
                 ActionBar.placement: ActionBarPlacement.OnBar
                 onTriggered: {
+                    wordsPlus.stopTimer();
                     categorySheet.open();
                 }
             }
@@ -39,13 +38,6 @@ NavigationPane {
                     }
                 }
             }
-            //            Container { // divider
-            //                preferredWidth: 600
-            //                preferredHeight: 3
-            //                background: Color.create("#ff8c00")
-            //                verticalAlignment: VerticalAlignment.Center
-            //                horizontalAlignment: HorizontalAlignment.Center
-            //            }
             Container {
                 layout: DockLayout {
                 }
@@ -125,168 +117,8 @@ NavigationPane {
             },
             Sheet {
                 id: categorySheet
-                Page {
-                    Container {
-                        background: Color.Black
-                        layout: DockLayout {
-                        }
-                        Container {
-                            background: Color.create("#272727")
-                            preferredWidth: 720
-                            preferredHeight: 400
-                            verticalAlignment: VerticalAlignment.Top
-                            horizontalAlignment: HorizontalAlignment.Center
-                            layout: AbsoluteLayout {
-                            }
-                            Label {
-                                text: "Pick your Word List Type"
-                                textStyle {
-                                    color: Color.create("#fafafa")
-                                    base: SystemDefaults.TextStyles.TitleText
-                                }
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 20
-                                    positionY: 20
-                                }
-                            }
-                            RadioGroup {
-                                id: radioGroup
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 20
-                                    positionY: 75
-                                }
-                                Option {
-                                    id: radioOptionCategory
-                                    selected: true
-                                }
-                                Option {
-                                    id: radioOptionLocation
-                                }
-                                onSelectedIndexChanged: {
-                                    if (radioOptionCategory.selected == true) {
-                                        byCategory.visible = true;
-                                        byCategory.opacity = 1;
-                                        byLocation.opacity = 0;
-                                    }
-                                    if (radioOptionLocation.selected == true) {
-                                        byLocation.opacity = 1;
-                                        byCategory.opacity = 0;
-                                        byCategory.visible = false; //added to avoid issue with overlapping
-                                    }
-                                }
-                            }
-                            Label {
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 120
-                                    positionY: 100
-                                }
-                                text: "By Category"
-                                textStyle {
-                                    color: Color.create("#fafafa")
-                                    base: SystemDefaults.TextStyles.BodyText
-                                }
-                            }
-                            Label {
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 120
-                                    positionY: 240
-                                }
-                                text: "By Location"
-                                textStyle {
-                                    color: Color.create("#fafafa")
-                                    base: SystemDefaults.TextStyles.BodyText
-                                }
-                            }
-                        }
-                        Container {
-                            id: byLocation
-                            topPadding: 50
-                            preferredWidth: 720
-                            background: Color.create("#272727")
-                            horizontalAlignment: HorizontalAlignment.Center
-                            verticalAlignment: VerticalAlignment.Bottom
-                            opacity: 0
-                            ToggleButton {
-                            }
-                            TextArea {
-                                text: "By Location wordsearch is an awesome new way to play wordsearh. " + "Now there's no limit to the number of different words you can search!"
-                                editable: false
-                                textStyle {
-                                    base: SystemDefaults.TextStyles.BodyText
-                                    color: Color.create("#555555")
-                                }
-                            }
-                            TextArea {
-                                text: "Location Services must be turned ON for this feature to work correctly"
-                                editable: false
-                                textStyle {
-                                    base: SystemDefaults.TextStyles.SmallText
-                                    color: Color.create("#0098f0")
-                                }
-                            }
-                        }
-                        Container {
-                            id: byCategory
-                            topPadding: 50
-                            preferredWidth: 720
-                            background: Color.create("#272727")
-                            horizontalAlignment: HorizontalAlignment.Center
-                            verticalAlignment: VerticalAlignment.Bottom
-                            opacity: 1
-                            TextArea {
-                                id: textField
-                                text: "Current category: " + wordsPlus.category
-                                editable: false
-                                textStyle {
-                                    base: SystemDefaults.TextStyles.SubtitleText
-                                    color: Color.create("#0098f0")
-                                }
-                            }
-                            ListView {
-                                dataModel: XmlDataModel {
-                                    source: "models/categories.xml"
-                                }
-                                preferredHeight: 500
-                                listItemComponents: [
-                                    ListItemComponent {
-                                        type: "listItem"
-                                        Container {
-                                            layout: StackLayout {
-                                                orientation: LayoutOrientation.LeftToRight
-                                            }
-                                            Label {
-                                                text: ListItemData.title
-                                                textStyle.color: Color.create("#fafafa")
-                                            }
-                                        } // end of Container
-                                    } // end of second ListItemComponent
-                                ] // end of listItemComponents list
-
-                                // When an item is selected, update the text in the TextField
-                                // to display the status of the new item
-                                onTriggered: {
-                                    var selectedItem = dataModel.data(indexPath);
-                                    wordsPlus.category = selectedItem.filename;
-                                    textField.text = "Current category: " + wordsPlus.category;
-                                }
-                            } // end of ListView
-                        }
-                    }
-                    actions: [
-                        ActionItem {
-                            title: "Close"
-                            ActionBar.placement: ActionBarPlacement.OnBar
-
-                            // When this action is selected, close
-                            // the sheet
-                            onTriggered: {
-                                wordsPlus.intializePlayArea();
-                                categorySheet.close();
-                            }
-                        }
-                    ]
+                CategorySheet {
                 }
             }
         ]
     } //end of page
-}// end of nav
