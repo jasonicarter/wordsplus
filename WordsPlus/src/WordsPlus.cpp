@@ -24,6 +24,7 @@
 #define SELECTED	2
 #define HIGHLIGHT	3
 #define WORDSFOUND "settingsWordsFound"
+#define CATEGORY "settingsCategory"
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -33,7 +34,6 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) : QObject(app) {
 	settings = new GameSettings();
 
 	//set default values
-	setCategory("weather");
 	deltaX = 0.0;
 	deltaY = 0.0;
 	multiple = 1;
@@ -98,7 +98,7 @@ void WordsPlus::intializePlayArea() {
 	// As long as nothing is broken, we continue.
 	if (mPlayAreaContainer) {
 
-		std::string cat = getCategory().toStdString();
+		std::string cat = getCategory().toLower().toStdString();
 		cat.append(".txt");
 //		printf(cat.c_str());
 //		fflush(stdout);
@@ -525,11 +525,13 @@ void WordsPlus::resetTimer() {
 }
 
 QString WordsPlus::getCategory() {
+	m_strCategory = settings->getValueFor(CATEGORY, "WEATHER");
 	return m_strCategory;
 }
 
 void WordsPlus::setCategory(const QString cat) {
 	m_strCategory = cat;
+	settings->saveValueFor(CATEGORY, m_strCategory);
 	emit categoryChanged(m_strCategory);
 }
 
