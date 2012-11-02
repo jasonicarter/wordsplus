@@ -32,6 +32,7 @@ Page {
                         id: textField
                         text: "By Category: " + wordsPlus.category
                         editable: false
+                        touchPropagationMode: TouchPropagationMode.None
                         textStyle {
                             base: SystemDefaults.TextStyles.BodyText
                             color: Color.create("#0098f0")
@@ -63,11 +64,11 @@ Page {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                background: Color.create("#272727")           
+                background: Color.create("#272727")          
                 TextArea {
-                    text: "By LOCATION: "
+                    text: "By Location: "
                     editable: false
-                    enabled: false
+                    touchPropagationMode: TouchPropagationMode.None
                     textStyle {
                         base: SystemDefaults.TextStyles.BodyText
                         color: Color.create("#0098f0")
@@ -86,7 +87,7 @@ Page {
                 TextArea {
                     text: "Now there's no limit to the number of different words you can search! \n\n" + "Location Services must be turned ON for this feature to work correctly"
                     editable: false
-                    enabled: false
+                    touchPropagationMode: TouchPropagationMode.None
                     textStyle {
                         base: SystemDefaults.TextStyles.SubtitleText
                         color: Color.create("#555555")
@@ -106,9 +107,6 @@ Page {
         ActionItem {
             title: "Close"
             ActionBar.placement: ActionBarPlacement.OnBar
-
-            // When this action is selected, close
-            // the sheet
             onTriggered: {
                 wordsPlus.intializePlayArea();
                 categorySheet.close();

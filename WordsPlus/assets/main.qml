@@ -5,19 +5,23 @@ TabbedPane {
     id: mainTab
     showTabsOnActionBar: true
     Menu.definition: MenuDefinition {
-        // Add a Help action
         helpAction: HelpActionItem {
+            onTriggered: {
+                wordsPlus.stopTimer();
+                helpSheet.open();
+            }
         }
-
-        // Add a Settings action
         settingsAction: SettingsActionItem {
+            onTriggered: {
+                wordsPlus.stopTimer();
+                settingsSheet.open();
+            }
         }
-
-        // Add any remaining actions
         actions: [
             ActionItem {
                 title: "About"
                 onTriggered: {
+                    wordsPlus.stopTimer();
                     aboutSheet.open();
                 }
             }
@@ -149,81 +153,18 @@ TabbedPane {
         },
         Sheet {
             id: aboutSheet
-            Page {
-                Container {
-                    background: Color.Black
-                    layout: StackLayout {
-                    }
-                    Label {
-                        horizontalAlignment: HorizontalAlignment.Center
-                        text: "Categories"
-                        textStyle {
-                            color: Color.create("#fafafa")
-                            base: SystemDefaults.TextStyles.TitleText
-                        }
-                    }
-                    Container {
-                        verticalAlignment: VerticalAlignment.Top
-                        preferredWidth: 720
-                        layout: AbsoluteLayout {
-                        }
-                        RadioGroup {
-                            id: radioGroup
-                            layoutProperties: AbsoluteLayoutProperties {
-                                positionX: 20
-                                positionY: 55
-                            }
-                            Option {
-                                id: radioOptionCategory
-                                selected: true
-                            }
-                            Option {
-                                id: radioOptionLocation
-                            }
-                            onSelectedIndexChanged: {
-                                if (radioOptionCategory.selected == true) {
-                                    byCategory.opacity = 1;
-                                    byLocation.opacity = 0;
-                                } else {
-                                    byLocation.opacity = 1;
-                                    byCategory.opacity = 0;
-                                }
-                            }
-                        }
-                        Label {
-                            layoutProperties: AbsoluteLayoutProperties {
-                                positionX: 120
-                                positionY: 80
-                            }
-                            text: "By Category"
-                            textStyle {
-                                color: Color.create("#fafafa")
-                                base: SystemDefaults.TextStyles.BodyText
-                            }
-                        }
-                        Label {
-                            layoutProperties: AbsoluteLayoutProperties {
-                                positionX: 120
-                                positionY: 220
-                            }
-                            text: "By Location"
-                            textStyle {
-                                color: Color.create("#fafafa")
-                                base: SystemDefaults.TextStyles.BodyText
-                            }
-                        }
-                    }
-                }
-                actions: [
-                    ActionItem {
-                        title: "Close"
-                        ActionBar.placement: ActionBarPlacement.OnBar
-                        onTriggered: {
-                            aboutSheet.close();
-                        }
-                    }
-                ]
+            AboutSheet {
             }
-        } // Sheet
+        },
+        Sheet {
+            id: helpSheet
+            HelpSheet {
+            }
+        },
+        Sheet {
+            id: settingsSheet
+            SettingsSheet {
+            }
+        }
     ]
 }// TabbedPane
