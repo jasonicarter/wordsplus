@@ -1,5 +1,5 @@
 
-**** Build of configuration Default for project WordsPlus ****
+**** Build of configuration Device-Debug for project WordsPlus ****
 
 make Device-Debug 
 C:/bbndk/host_10_0_9_52/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device

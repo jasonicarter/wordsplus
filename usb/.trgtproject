@@ -3,18 +3,13 @@
 <data>
 <item id="com.qnx.tools.ide.target">
 <qconnport value="8000"/>
-<qconnguid value="39271213-9e2f-43d4-b609-e797d8a2a6d9"/>
+<qconnguid value="7d5ad73b-0458-4bd5-a2f1-447446085d87"/>
 <qconnostype value="nto"/>
 <qconnhostname value="169.254.125.205"/>
-<qconn>
-<core>
-<show_warning value="true"/>
-</core>
-</qconn>
-<targettmpdir value="/var/tmp"/>
 <project>
 <name value="usb"/>
 </project>
+<targettmpdir value="/var/tmp"/>
 </item>
 </data>
 </trgtproject>

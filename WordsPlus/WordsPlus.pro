@@ -8,6 +8,8 @@ SOURCES += ../src/*.cpp
 HEADERS += ../src/*.hpp ../src/*.h
 LIBS += -lbbsystem
 LIBS += -lscoreloopcore
+LIBS += -lbbmultimedia
+LIBS += -lOpenAL -lalut -lasound
 
 lupdate_inclusion {
     SOURCES += ../assets/*.qml

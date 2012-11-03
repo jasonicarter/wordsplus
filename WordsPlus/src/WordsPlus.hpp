@@ -4,6 +4,8 @@
 
 #include "timer.hpp"
 #include "GameSettings.hpp"
+#include "soundmanager.h"
+#include "ActiveFrame.h"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -26,7 +28,7 @@ class WordsPlus : public QObject
     Q_OBJECT
 public:
     WordsPlus(bb::cascades::Application *app);
-    virtual ~WordsPlus() {}
+    virtual ~WordsPlus();
 
     Q_INVOKABLE void intializePlayArea();
     Q_INVOKABLE void startTimer();
@@ -37,14 +39,20 @@ public:
     Q_PROPERTY (const QString puzzleWords READ getPuzzleWords WRITE setPuzzleWords NOTIFY puzzleWordsChanged);
     Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
     Q_PROPERTY (const QString totalWordsFound READ getTotalWordsFound NOTIFY totalWordsFoundChanged);
+    Q_PROPERTY (bool sound READ getSound WRITE setSound NOTIFY soundChanged);
 
     QString getCategory();
-    QString getPuzzleWords();
-    QString getTime();
-    QString getTotalWordsFound();
     void setCategory(const QString cat);
+
+    QString getPuzzleWords();
     void setPuzzleWords(const QString words);
 
+    QString getTime();
+    QString getTotalWordsFound();
+    void playSound(const QString &msg);
+
+    bool getSound();
+    void setSound(bool status);
 
 private slots:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -55,6 +63,7 @@ signals:
 	void puzzleWordsChanged(const QString);
 	void timeChanged();
 	void totalWordsFoundChanged();
+	void soundChanged();
 
 private:
 	void initTimer();
@@ -87,6 +96,7 @@ private:
 	int timeSec;
 	int numberOfWords;
 	int numberOfWordsFound;
+	bool isSoundEnabled;
 
     QString m_strCategory;
     QString m_strPuzzleWords;
@@ -95,6 +105,7 @@ private:
     QDateTime timeKeeper;
     Timer *stopWatch;
     GameSettings *settings;
+    SoundManager *mSoundManager;
 };
 
 
