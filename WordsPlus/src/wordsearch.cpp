@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <string>
+#include <QList>
 #ifdef WIN32
 #include <windows.h>
 #else
@@ -277,7 +278,7 @@ char** createNewPuzzle(char *str = "weather.txt") {
 		perror("Error opening file"); //do something better
 	}
 
-//	int j = 0;
+
 	while (fgets(s, 3000, pFile) != NULL) {
 		if (strlen(s) - 1 < GRID_SIZE) //string has newline char at end
 		{
@@ -291,18 +292,24 @@ char** createNewPuzzle(char *str = "weather.txt") {
 	grid = new Grid(GRID_SIZE);
 
 	int i = 0;
+	QList<int> randList;
 	while (i < WORD_COUNT) {
 //		printf("\n");
 //		printf("%i", i);
 //		fflush(stdout);
 		int r = rand() % next_word;
-		if(grid->fit(words[r])) {
-			puzzleWords[i] = words[r];
-			i++;
+
+		if(randList.indexOf(r) < 0) { //prevent duplicate words
+			randList.append(r);
+
+			if(grid->fit(words[r])) {
+				puzzleWords[i] = words[r];
+				i++;
+			}
 		}
 	}
 
-	grid -> garbage () ;
+	//grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();
 
