@@ -89,7 +89,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 // Look into what else to destroy if nescessary
 WordsPlus::~WordsPlus() {
 	// Destroy the sound manager.
-	//delete mSoundManager;
+	delete mSoundManager;
 }
 
 void WordsPlus::intializePlayArea() {
