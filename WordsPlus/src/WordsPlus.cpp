@@ -2,13 +2,7 @@
 #include "WordsPlus.hpp"
 #include "wordsearch.h"
 
-#include "Global.hpp"
-#include "ProfileBox.hpp"
-#include "UpdateProfilePage.hpp"
-#include "RegistrationHandler.hpp"
-
 #include <string>
-
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/AbstractPane>
@@ -34,6 +28,9 @@
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
 #define SOUNDLEVELSELECTED "levelSelected"
 #define SOUND "settingsSound"
+#define REGISTERBBM 4
+#define PROFILEBOXPUZZLECOMPLETED 5
+#define PRESONALMESSAGE 6
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -73,19 +70,15 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 		if (tabs) {
 
-			RegistrationHandler* regBBM;
-			regBBM = new RegistrationHandler();
-			regBBM->appRegister();
+			ControlsForBBM(REGISTERBBM);
 
 			/* MOVE CODE OUT OF METHOD - WORKS. MAYBE ADD A ACTION ITEM ON MAIN PAGE */
 //			// Grab the user's Profile data and populate the fields.
 //			m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
 //			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
 //			updateProfilePage->savePersonalMessage();
-
 //			ProfileBox *profileBox = new ProfileBox();
 //			profileBox->createItem("I just completed another puzzle!", "none");
-
 			// Create the cover now. When application in moved to a background it's too late
 			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
 			// Using DataModel in ActiveFrame isn't good idea too.
@@ -463,14 +456,6 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		numberOfWordsFound++;
 		CrossOutPuzzleWord(selectedWord);
 
-//		// Grab the user's Profile data and populate the fields.
-//		m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
-//		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
-//		updateProfilePage->savePersonalMessage();
-
-//		ProfileBox *profileBox = new ProfileBox();
-//		profileBox->createItem("I just completed another puzzle!", "none");
-
 		// save off total words found
 		bool ok;
 		int found = settings->getValueFor(WORDSFOUND, "0").toInt(&ok, 10);
@@ -483,6 +468,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		if (numberOfWordsFound == numberOfWords) { // Puzzle Completed
 			playSound(SOUNDLEVELCOMPLETED);
 			showToast("PUZZLE COMPLETED!"); // add icon url to pass to function
+			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			intializePlayArea(); // create a new puzzle
 		}
 	} else {
@@ -627,3 +613,29 @@ void WordsPlus::setSound(bool status) {
 	emit soundChanged();
 }
 
+void WordsPlus::ControlsForBBM(int state) {
+
+	switch (state) {
+	case REGISTERBBM:
+		{
+			regBBM = new RegistrationHandler();
+			regBBM->appRegister();
+			break;
+		}
+	case PROFILEBOXPUZZLECOMPLETED:
+		{
+			QString msg = QString("Completed another puzzle! Score: %1").arg(560);
+			//get real score
+			profileBox = new ProfileBox();
+			profileBox->createItem(msg, "none");
+			break;
+		}
+	case PRESONALMESSAGE:
+		{
+			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
+			updateProfilePage->savePersonalMessage();
+			break;
+		}
+	}
+
+}

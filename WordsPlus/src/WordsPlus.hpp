@@ -6,6 +6,10 @@
 #include "GameSettings.hpp"
 #include "soundmanager.h"
 #include "ActiveFrame.h"
+#include "ProfileBox.hpp"
+#include "RegistrationHandler.hpp"
+#include "Global.hpp"
+#include "UpdateProfilePage.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -73,6 +77,7 @@ private:
 	void WordCompleted(QList<int> listOfLetters);
 	void CrossOutPuzzleWord(QString wordFound);
 	void showToast(QString msg);
+	void ControlsForBBM(int state);
 
     Page *appPage;
     TabbedPane *tabs;
@@ -108,6 +113,8 @@ private:
     Timer *stopWatch;
     GameSettings *settings;
     SoundManager *mSoundManager;
+    ProfileBox *profileBox;
+    RegistrationHandler* regBBM;
 
     bb::platform::bbm::UserProfile * m_userProfile;
 };
