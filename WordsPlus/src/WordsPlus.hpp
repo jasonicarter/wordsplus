@@ -14,6 +14,8 @@
 #include <bb/cascades/Application>
 #include <bb/cascades/ImageView>
 
+#include <bb/platform/bbm/Context>
+#include <bb/platform/bbm/UserProfile>
 
 using namespace bb::cascades;
 namespace bb { namespace cascades { class Application; class QmlDocument; class ImageView; class TouchEvent; }}
@@ -106,6 +108,8 @@ private:
     Timer *stopWatch;
     GameSettings *settings;
     SoundManager *mSoundManager;
+
+    bb::platform::bbm::UserProfile * m_userProfile;
 };
 
 

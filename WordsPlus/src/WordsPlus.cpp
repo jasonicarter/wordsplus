@@ -2,6 +2,9 @@
 #include "WordsPlus.hpp"
 #include "wordsearch.h"
 
+#include "Global.hpp"
+#include "ProfileBox.hpp"
+#include "UpdateProfilePage.hpp"
 #include "RegistrationHandler.hpp"
 
 #include <string>
@@ -73,6 +76,15 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 			RegistrationHandler* regBBM;
 			regBBM = new RegistrationHandler();
 			regBBM->appRegister();
+
+			/* MOVE CODE OUT OF METHOD - WORKS. MAYBE ADD A ACTION ITEM ON MAIN PAGE */
+//			// Grab the user's Profile data and populate the fields.
+//			m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
+//			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
+//			updateProfilePage->savePersonalMessage();
+
+//			ProfileBox *profileBox = new ProfileBox();
+//			profileBox->createItem("I just completed another puzzle!", "none");
 
 			// Create the cover now. When application in moved to a background it's too late
 			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
@@ -450,6 +462,14 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
 		numberOfWordsFound++;
 		CrossOutPuzzleWord(selectedWord);
+
+//		// Grab the user's Profile data and populate the fields.
+//		m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
+//		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
+//		updateProfilePage->savePersonalMessage();
+
+//		ProfileBox *profileBox = new ProfileBox();
+//		profileBox->createItem("I just completed another puzzle!", "none");
 
 		// save off total words found
 		bool ok;
