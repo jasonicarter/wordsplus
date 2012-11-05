@@ -10,6 +10,7 @@ LIBS += -lbbsystem
 LIBS += -lscoreloopcore
 LIBS += -lbbmultimedia
 LIBS += -lOpenAL -lalut -lasound
+LIBS += -lbbplatformbbm
 
 lupdate_inclusion {
     SOURCES += ../assets/*.qml

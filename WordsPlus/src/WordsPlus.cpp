@@ -2,6 +2,8 @@
 #include "WordsPlus.hpp"
 #include "wordsearch.h"
 
+#include "RegistrationHandler.hpp"
+
 #include <string>
 
 #include <bb/cascades/Application>
@@ -57,7 +59,6 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	// assets directory which only contains playable files.
 	mSoundManager = new SoundManager("sounds/");
 
-
 	mQmlDocument = QmlDocument::create("asset:///main.qml");
 	mQmlDocument->setParent(this);
 	mQmlDocument->setContextProperty("wordsPlus", this);
@@ -68,6 +69,11 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 		tabs = mQmlDocument->createRootObject<TabbedPane>();
 
 		if (tabs) {
+
+			RegistrationHandler* regBBM;
+			regBBM = new RegistrationHandler();
+			regBBM->appRegister();
+
 			// Create the cover now. When application in moved to a background it's too late
 			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
 			// Using DataModel in ActiveFrame isn't good idea too.

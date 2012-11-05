@@ -2,8 +2,8 @@ import bb.cascades 1.0
 
 Page {
     Container {
-            layout: DockLayout {
-            }
+        layout: DockLayout {
+        }
         background: Color.Black
         Container {
             background: Color.create("#00629C")
@@ -15,16 +15,16 @@ Page {
                 textStyle {
                     base: bigTextNormalWhite.style
                 }
-            } 
+            }
         }
-//        Container { //divider
-//            bottomMargin: 50
-//            preferredWidth: 600
-//            preferredHeight: 3
-//            background: Color.create("#ff8c00")
-//            verticalAlignment: VerticalAlignment.Center
-//            horizontalAlignment: HorizontalAlignment.Center
-//        }
+        //        Container { //divider
+        //            bottomMargin: 50
+        //            preferredWidth: 600
+        //            preferredHeight: 3
+        //            background: Color.create("#ff8c00")
+        //            verticalAlignment: VerticalAlignment.Center
+        //            horizontalAlignment: HorizontalAlignment.Center
+        //        }
         Container {
             layout: DockLayout {
             }
@@ -91,10 +91,10 @@ Page {
                 preferredHeight: 500
                 animations: HomeTabAnimation {
                     id: dAnimation
-//                    onStarted: {
-//                        //pAnimation.delay = 500
-//                        pAnimation.play();
-//                    }
+                    //                    onStarted: {
+                    //                        //pAnimation.delay = 500
+                    //                        pAnimation.play();
+                    //                    }
                 }
             }
             ImageView {
@@ -197,8 +197,7 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             Label {
-                text: "Total points won: 4638 \n" + 
-                "Total # of Words Found: " + wordsPlus.totalWordsFound;
+                text: "Total points won: 4638 \n" + "Total # of Words Found: " + wordsPlus.totalWordsFound
                 multiline: true
                 textStyle {
                     base: subTitleNormalWhite.style
