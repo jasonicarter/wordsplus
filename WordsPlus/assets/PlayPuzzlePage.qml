@@ -72,7 +72,7 @@ import bb.cascades 1.0
                     orientation: LayoutOrientation.LeftToRight
                 }
                 topMargin: 30
-                preferredWidth: 700
+                preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Center

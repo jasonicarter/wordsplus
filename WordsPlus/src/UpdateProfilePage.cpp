@@ -14,6 +14,7 @@
  */
 
 #include "UpdateProfilePage.hpp"
+#include "Global.hpp"
 
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/Control>
@@ -25,6 +26,7 @@ using namespace bb::cascades;
 UpdateProfilePage::UpdateProfilePage(bb::platform::bbm::UserProfile* userProfile) : m_userProfile(userProfile)
 {
 	LOG("UpdateProfilePage");
+	m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
 //  QmlDocument* qmlContent = QmlDocument::create("asset:///UpdateProfile.qml");
 //  if (qmlContent) {
 //    Control* content = qmlContent->createRootObject<Control>();
@@ -66,7 +68,7 @@ UpdateProfilePage::savePersonalMessage()
 {
 	LOG("savePersonalMessage");
   qDebug() << "SAVE PERSONAL MSG BUTTON PRESSED";
-  QString personalMessageString = "I'm playing WordsPlus - It's the BEST!"; //m_personalMessageField->text();
+  QString personalMessageString = "WordsPlus is the BEST wordsearch game I've ever played!"; //m_personalMessageField->text();
 
   m_userProfile->requestUpdatePersonalMessage(personalMessageString);
 }

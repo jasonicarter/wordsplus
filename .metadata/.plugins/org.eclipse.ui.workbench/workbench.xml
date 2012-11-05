@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="24" version="2.0">
 <workbenchAdvisor/>
-<window height="1040" width="960" x="0" y="0">
+<window height="1040" width="961" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="205"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="189" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.qnx.tools.ide.phab.ui.PhabActionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="com.qnx.tools.ide.ui" itemType="typeToolBarContribution" x="252" y="22"/>
@@ -23,7 +23,7 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -35,28 +35,33 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 <part id="2"/>
+<part id="1"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.cpp" partName="WordsPlus.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/WordsPlus.cpp" title="WordsPlus.cpp" tooltip="WordsPlus/src/WordsPlus.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/WordsPlus.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15938" selectionTopPixel="8171"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.hpp" partName="WordsPlus.hpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/WordsPlus.hpp" title="WordsPlus.hpp" tooltip="WordsPlus/src/WordsPlus.hpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/WordsPlus.hpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2978" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13429" selectionTopPixel="6574"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/main.cpp" title="main.cpp" tooltip="WordsPlus/src/main.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/main.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="335" selectionTopPixel="0"/>
 </editor>
-<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" partName="PlayPuzzlePage.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/assets/PlayPuzzlePage.qml" title="PlayPuzzlePage.qml" tooltip="WordsPlus/assets/PlayPuzzlePage.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="832" selectionTopPixel="720"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.hpp" partName="WordsPlus.hpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/WordsPlus.hpp" title="WordsPlus.hpp" tooltip="WordsPlus/src/WordsPlus.hpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/WordsPlus.hpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="379" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.cpp" partName="ProfileBox.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/ProfileBox.cpp" title="ProfileBox.cpp" tooltip="WordsPlus/src/ProfileBox.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/ProfileBox.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2329" selectionTopPixel="859"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.hpp" partName="ProfileBox.hpp" title="ProfileBox.hpp" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\bb\platform\bbm\ProfileBox.hpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" path="C:\bbndk\target_10_0_9_386\qnx6\usr\include\bb\platform\bbm\ProfileBox.hpp" project="WordsPlus"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1337" selectionTopPixel="147"/>
 </editor>
 </editors>
 <views>
@@ -454,24 +459,24 @@
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
-<fastViews>
-<view id="com.rim.tad.tools.builder.view.properties" ratio="0.29978472"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
+<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
+<fastViews>
+<view id="com.rim.tad.tools.builder.view.properties" ratio="0.29978472"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.2973262"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29654405"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="lefttop" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
 <fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.29655543"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.29445073"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="leftbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.palette" style="0">
@@ -535,155 +540,163 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.hpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlus/bar-descriptor.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/soundmanager.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/soundmanager.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/UpdateProfilePage.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/UpdateProfilePage.cpp"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qstring.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/ProfileBox.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/ProfileBox.cpp"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\bbndk\target_10_0_9_386\qnx6\usr\include\bb\platform\bbm\ProfileBox.hpp" project="WordsPlus"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.hpp"/>
 </editors>
-<item historyLabel="main.cpp" index="1">
-<position info="not_deleted" x="335" y="0"/>
-</item>
 <item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="11515" y="0"/>
+<position info="not_deleted" x="2649" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="1">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="15968" y="0"/>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="967" y="0"/>
 </item>
 <item historyLabel="main.cpp" index="1">
 <position info="not_deleted" x="335" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="15968" y="0"/>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="2668" y="0"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="2">
-<position info="not_deleted" x="832" y="0"/>
+<item historyLabel="qstring.h" index="4">
+<position info="not_deleted" x="42006" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13971" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="2">
-<position info="not_deleted" x="832" y="0"/>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="2668" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13971" y="0"/>
+<position info="not_deleted" x="13842" y="0"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="2">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13971" y="0"/>
-</item>
-<item historyLabel="WordsPlus.hpp" index="3">
-<position info="not_deleted" x="2764" y="14"/>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="249" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="12986" y="0"/>
+<position info="not_deleted" x="2123" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="1622" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13915" y="244"/>
-</item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13962" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="14159" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="13964" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="14157" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="14157" y="0"/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="5"/>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="5"/>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="5"/>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="11483" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="soundmanager.cpp" index="7">
+<item historyLabel="ProfileBox.hpp" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="soundmanager.h" index="8">
-<position info="not_deleted" x="854" y="0"/>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="682" y="0"/>
 </item>
-<item historyLabel="soundmanager.cpp" index="7">
+<item historyLabel="ProfileBox.hpp" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="0">
-<position/>
+<position info="not_deleted" x="3917" y="0"/>
 </item>
-<item historyLabel="WordsPlus.hpp" index="9">
-<position info="not_deleted" x="2978" y="0"/>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="2084" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="2412" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="11483" y="0"/>
+<position info="not_deleted" x="2649" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1593" y="12"/>
+</item>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="2084" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="2083" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1562" y="29"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="2150" y="0"/>
+</item>
+<item historyLabel="UpdateProfilePage.hpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1562" y="29"/>
+</item>
+<item historyLabel="UpdateProfilePage.hpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1562" y="29"/>
+</item>
+<item historyLabel="UpdateProfilePage.cpp" index="3">
+<position info="not_deleted" x="2084" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1562" y="29"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="2150" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="2573" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="2647" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="13877" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1562" y="29"/>
+</item>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="2412" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1220" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="0">
+<position info="not_deleted" x="13318" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
 <position info="not_deleted" x="335" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="1759" y="0"/>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1415" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="3049" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="15938" y="0"/>
+<item historyLabel="ProfileBox.hpp" index="7">
+<position info="not_deleted" x="2429" y="0"/>
 </item>
-<item historyLabel="WordsPlus.hpp" index="9">
-<position info="not_deleted" x="2978" y="0"/>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="3049" y="0"/>
 </item>
-<item historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="15938" y="0"/>
+<item historyLabel="ProfileBox.hpp" index="7">
+<position info="not_deleted" x="2429" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1415" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="7">
+<position info="not_deleted" x="1337" y="0"/>
+</item>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="2329" y="0"/>
+</item>
+<item historyLabel="ProfileBox.hpp" index="5">
+<position info="not_deleted" x="1415" y="0"/>
+</item>
+<item historyLabel="ProfileBox.cpp" index="6">
+<position info="not_deleted" x="2329" y="0"/>
+</item>
+<item historyLabel="WordsPlus.hpp" index="8">
+<position info="not_deleted" x="379" y="0"/>
 </item>
 <item active="true" historyLabel="WordsPlus.cpp" index="0">
-<position info="not_deleted" x="15938" y="0"/>
+<position info="not_deleted" x="13318" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -711,38 +724,35 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="soundmanager.h" tooltip="WordsPlus/src/soundmanager.h">
-<persistable path="/WordsPlus/src/soundmanager.h"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.hpp" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\bb\platform\bbm\ProfileBox.hpp">
+<persistable path="C:\bbndk\target_10_0_9_386\qnx6\usr\include\bb\platform\bbm\ProfileBox.hpp" project="WordsPlus"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="soundmanager.cpp" tooltip="WordsPlus/src/soundmanager.cpp">
-<persistable path="/WordsPlus/src/soundmanager.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UpdateProfilePage.hpp" tooltip="WordsPlus/src/UpdateProfilePage.hpp">
+<persistable path="/WordsPlus/src/UpdateProfilePage.hpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlus/bar-descriptor.xml">
-<persistable path="/WordsPlus/bar-descriptor.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.cpp" tooltip="WordsPlus/src/ProfileBox.cpp">
+<persistable path="/WordsPlus/src/ProfileBox.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlus/assets/PlayPuzzlePage.qml">
-<persistable path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qlist.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qlist.h">
-<persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qlist.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qstringlist.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qstringlist.h">
-<persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qstringlist.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qatomic_armv6.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qatomic_armv6.h">
-<persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qatomic_armv6.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qglobal.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qglobal.h">
-<persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qglobal.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qvariant.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qvariant.h">
-<persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qvariant.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GameSettings.cpp" tooltip="C:\Users\Jason\Documents\ndk-10.0.9-workspace\WordsPlus\src\GameSettings.cpp">
-<persistable uri="file:/C:/Users/Jason/Documents/ndk-10.0.9-workspace/WordsPlus/src/GameSettings.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.hpp" tooltip="WordsPlus/src/ProfileBox.hpp">
+<persistable path="/WordsPlus/src/ProfileBox.hpp"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qstring.h" tooltip="C:\bbndk\target_10_0_9_386\qnx6\usr\include\qt4\QtCore\qstring.h">
 <persistable uri="file:/C:/bbndk/target_10_0_9_386/qnx6/usr/include/qt4/QtCore/qstring.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UpdateProfilePage.cpp" tooltip="WordsPlus/src/UpdateProfilePage.cpp">
+<persistable path="/WordsPlus/src/UpdateProfilePage.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.hpp" tooltip="WordsPlus/src/WordsPlus.hpp">
+<persistable path="/WordsPlus/src/WordsPlus.hpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.cpp" tooltip="WordsPlus/src/RegistrationHandler.cpp">
+<persistable path="/WordsPlus/src/RegistrationHandler.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="BBMQtRegistration/src/main.cpp">
+<persistable path="/BBMQtRegistration/src/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.hpp" tooltip="BBMQtRegistration/src/RegistrationHandler.hpp">
+<persistable path="/BBMQtRegistration/src/RegistrationHandler.hpp"/>
 </file>
 </mruList>
 </workbench>

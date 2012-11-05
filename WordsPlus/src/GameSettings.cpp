@@ -6,8 +6,8 @@
  */
 
 #include "GameSettings.hpp"
-
 #include <QSettings>
+
 
 GameSettings::GameSettings()
 {
