@@ -119,8 +119,7 @@ void WordsPlus::intializePlayArea() {
 
 		std::string cat = getCategory().toLower().toStdString();
 		cat.append(".txt");
-//		printf(cat.c_str());
-//		fflush(stdout);
+
 		char** letter = createNewPuzzle((char*) cat.c_str());
 		char** puzzleWords = returnPuzzleWords();
 
@@ -618,7 +617,7 @@ QString WordsPlus::getPuzzleCompletedTime() {
 	bool okTime;
 	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
 	int savedTime = strSavedTime.toInt(&okTime, 10);
-	LOG("get savedTime: %i",savedTime );
+	//LOG("get savedTime: %i",savedTime );
 	return (QDateTime::fromTime_t(savedTime)).toString("mm':'ss");
 
 }
@@ -629,7 +628,7 @@ void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
 	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
 	int savedTime = strSavedTime.toInt(&okTime, 10);
 
-	LOG("puzzleTime: %i savedTime: %i",puzzleTime,savedTime );
+	//LOG("puzzleTime: %i savedTime: %i",puzzleTime,savedTime );
 	if( savedTime == 0) savedTime = puzzleTime;
 	if( puzzleTime <= savedTime ) {
 		settings->saveValueFor(PUZZLECOMPLETEDTIME, QString::number(puzzleTime));

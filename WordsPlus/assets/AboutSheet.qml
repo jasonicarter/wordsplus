@@ -85,20 +85,13 @@ Page {
         }
     }
     actions: [
-//        ActionItem {
-//            title: "Support"
-//            ActionBar.placement: ActionBarPlacement.OnBar
-//            onTriggered: {
-//                aboutSheet.close();
-//            }
-//        },
-        ActionItem {
-            title: "Close"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                aboutSheet.close();
-            }
-        },
+        //        ActionItem {
+        //            title: "Support"
+        //            ActionBar.placement: ActionBarPlacement.OnBar
+        //            onTriggered: {
+        //                aboutSheet.close();
+        //            }
+        //        },
         InvokeActionItem {
             title: "Website"
             ActionBar.placement: ActionBarPlacement.OnBar
@@ -106,6 +99,13 @@ Page {
                 mimeType: "text/html"
                 uri: "http://www.twocasualcoders.com"
                 invokeActionId: "bb.action.OPEN"
+            }
+        },
+        ActionItem {
+            title: "Close"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                aboutSheet.close();
             }
         }
     ]

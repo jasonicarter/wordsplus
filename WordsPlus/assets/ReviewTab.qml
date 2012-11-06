@@ -1,26 +1,26 @@
 import bb.cascades 1.0
 
 Page {
-    actions: [
-        ActionItem {
-            title: "T20 This Week"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-            }
-        },
-        ActionItem {
-            title: "T20 This Month"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-            }
-        },
-        ActionItem {
-            title: "Your Position"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-            }
-        }
-    ]
+//    actions: [
+//        ActionItem {
+//            title: "T20 This Week"
+//            ActionBar.placement: ActionBarPlacement.OnBar
+//            onTriggered: {
+//            }
+//        },
+//        ActionItem {
+//            title: "T20 This Month"
+//            ActionBar.placement: ActionBarPlacement.OnBar
+//            onTriggered: {
+//            }
+//        },
+//        ActionItem {
+//            title: "Your Position"
+//            ActionBar.placement: ActionBarPlacement.OnBar
+//            onTriggered: {
+//            }
+//        }
+//    ]
     Container {
         layout: DockLayout {
         }
@@ -48,7 +48,7 @@ Page {
                 Container {
                     background: Color.create("#272727")
                     preferredWidth: 720
-                    preferredHeight: 70
+                    preferredHeight: 100
                     topPadding: 10
                     leftPadding: 15
                     Label {
@@ -69,43 +69,43 @@ Page {
                     }
                 }
             }
-            Container { //leader section
-                topMargin: 100
-                Container {
-                    background: Color.create("#272727")
-                    preferredWidth: 720
-                    preferredHeight: 70
-                    topPadding: 10
-                    leftPadding: 15
-                    Label {
-                        text: "Top 20 Leaders of All Time:"
-                        touchPropagationMode: TouchPropagationMode.None
-                        textStyle {
-                            base: bigBodyNormalWhite.style
-                            color: Color.create("#0098f0")
-                        }
-                    }
-                }
-                Container {
-                    preferredWidth: 720
-                    //preferredHeight: 500
-                    ListView {
-                        id: categoryListView
-                        dataModel: XmlDataModel {
-                            source: "models/test.xml"
-                        }
-                        horizontalAlignment: HorizontalAlignment.Center
-
-                        // When an item is selected, update the text in the TextField
-                        // to display the status of the new item
-                        onTriggered: {
-                            var selectedItem = dataModel.data(indexPath);
-                            wordsPlus.category = selectedItem.filename;
-                            textField.text = "By Category: " + selectedItem.category
-                        }
-                    } // end of ListView
-                }
-            }
+//            Container { //leader section
+//                topMargin: 100
+//                Container {
+//                    background: Color.create("#272727")
+//                    preferredWidth: 720
+//                    preferredHeight: 70
+//                    topPadding: 10
+//                    leftPadding: 15
+//                    Label {
+//                        text: "Top 20 Leaders of All Time:"
+//                        touchPropagationMode: TouchPropagationMode.None
+//                        textStyle {
+//                            base: bigBodyNormalWhite.style
+//                            color: Color.create("#0098f0")
+//                        }
+//                    }
+//                }
+//                Container {
+//                    preferredWidth: 720
+//                    //preferredHeight: 500
+//                    ListView {
+//                        id: categoryListView
+//                        dataModel: XmlDataModel {
+//                            source: "models/test.xml"
+//                        }
+//                        horizontalAlignment: HorizontalAlignment.Center
+//
+//                        // When an item is selected, update the text in the TextField
+//                        // to display the status of the new item
+//                        onTriggered: {
+//                            var selectedItem = dataModel.data(indexPath);
+//                            wordsPlus.category = selectedItem.filename;
+//                            textField.text = "By Category: " + selectedItem.category
+//                        }
+//                    } // end of ListView
+//                }
+//            }
         }
         Container { //divider
             preferredWidth: 768

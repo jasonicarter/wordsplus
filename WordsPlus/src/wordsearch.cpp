@@ -271,11 +271,11 @@ char** createNewPuzzle(char *str = "weather.txt") {
 	std::string strFilePath("app//native//assets//wordLists//");
 	strFilePath.append(str);
 	pFile = fopen(strFilePath.c_str(), "r"); //replace weather.txt with category
-	printf("before opening file\n     ");
+	//printf("before opening file\n     ");
 
 	if (pFile == NULL) {
-		printf("Error message opening file\n     ");
-		perror("Error opening file"); //do something better
+		//printf("Error message opening file\n     ");
+		//perror("Error opening file"); //do something better
 	}
 
 
@@ -309,7 +309,7 @@ char** createNewPuzzle(char *str = "weather.txt") {
 		}
 	}
 
-	//grid -> garbage () ;
+	grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();
 
