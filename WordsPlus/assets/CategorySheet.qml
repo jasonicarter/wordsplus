@@ -30,6 +30,7 @@ Page {
                     horizontalAlignment: HorizontalAlignment.Right
                     TextArea {
                         id: textField
+                        preferredHeight: 100
                         text: "By Category: " + wordsPlus.category
                         editable: false
                         touchPropagationMode: TouchPropagationMode.None
@@ -61,25 +62,31 @@ Page {
             }
             Container {
                 id: byLocation
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
+                layout: DockLayout {
                 }
-                background: Color.create("#272727")          
-                TextArea {
+                background: Color.create("#272727")
+                preferredWidth: 720
+                preferredHeight: 100
+                leftPadding: 15
+                Label {
                     text: "By Location: "
-                    editable: false
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Left
                     touchPropagationMode: TouchPropagationMode.None
                     textStyle {
                         base: SystemDefaults.TextStyles.BodyText
                         color: Color.create("#0098f0")
                     }
                 }
-                ToggleButton {
-                    enabled: true
-                    verticalAlignment: verticalAlignment.Center
-                    onCheckedChanged: {
-                         if ( checked  == true )  categoryListView.enabled = false;
-                         else categoryListView.enabled = true;
+                Container {
+                    rightPadding: 15
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Right
+                    ToggleButton {
+                        enabled: true
+                        onCheckedChanged: {
+                            if (checked == true) categoryListView.enabled = false; else categoryListView.enabled = true;
+                        }
                     }
                 }
             }

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Mon Nov 5 14:47:45 2012
+** Created: Tue Nov 6 00:02:45 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,12 +23,12 @@ static const uint qt_meta_data_WordsPlus[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
-       5,   69, // properties
+      14,   14, // methods
+       7,   84, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       5,       // signalCount
+       7,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x05,
@@ -36,23 +36,28 @@ static const uint qt_meta_data_WordsPlus[] = {
       64,   10,   10,   10, 0x05,
       78,   10,   10,   10, 0x05,
      103,   10,   10,   10, 0x05,
+     118,   10,   10,   10, 0x05,
+     147,   10,   10,   10, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     124,  118,   10,   10, 0x08,
-     163,   10,   10,   10, 0x08,
+     168,  162,   10,   10, 0x08,
+     207,   10,   10,   10, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     172,   10,   10,   10, 0x02,
-     192,   10,   10,   10, 0x02,
-     205,   10,   10,   10, 0x02,
-     217,   10,   10,   10, 0x02,
+     216,   10,   10,   10, 0x02,
+     236,   10,   10,   10, 0x02,
+     249,   10,   10,   10, 0x02,
+     261,   10,   10,   10, 0x02,
+     280,  274,   10,   10, 0x02,
 
  // properties: name, type, flags
-     238,  230, 0x0a495103,
-     247,  230, 0x0a495103,
-     259,  230, 0x0a495001,
-     264,  230, 0x0a495001,
-     285,  280, 0x01495103,
+     308,  300, 0x0a495103,
+     317,  300, 0x0a495103,
+     329,  300, 0x0a495001,
+     334,  300, 0x0a495001,
+     355,  350, 0x01495103,
+     361,  300, 0x0a495001,
+     385,  381, 0x02495103,
 
  // properties: notify_signal_id
        0,
@@ -60,6 +65,8 @@ static const uint qt_meta_data_WordsPlus[] = {
        2,
        3,
        4,
+       5,
+       6,
 
        0        // eod
 };
@@ -68,11 +75,14 @@ static const char qt_meta_stringdata_WordsPlus[] = {
     "WordsPlus\0\0categoryChanged(QString)\0"
     "puzzleWordsChanged(QString)\0timeChanged()\0"
     "totalWordsFoundChanged()\0soundChanged()\0"
-    "event\0onTileTouch(bb::cascades::TouchEvent*)\0"
+    "puzzleCompletedTimeChanged()\0"
+    "scoreChanged()\0event\0"
+    "onTileTouch(bb::cascades::TouchEvent*)\0"
     "onTick()\0intializePlayArea()\0startTimer()\0"
-    "stopTimer()\0resetTimer()\0QString\0"
-    "category\0puzzleWords\0time\0totalWordsFound\0"
-    "bool\0sound\0"
+    "stopTimer()\0resetTimer()\0state\0"
+    "ControlsForBBM(int)\0QString\0category\0"
+    "puzzleWords\0time\0totalWordsFound\0bool\0"
+    "sound\0puzzleCompletedTime\0int\0score\0"
 };
 
 void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -86,12 +96,15 @@ void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 2: _t->timeChanged(); break;
         case 3: _t->totalWordsFoundChanged(); break;
         case 4: _t->soundChanged(); break;
-        case 5: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 6: _t->onTick(); break;
-        case 7: _t->intializePlayArea(); break;
-        case 8: _t->startTimer(); break;
-        case 9: _t->stopTimer(); break;
-        case 10: _t->resetTimer(); break;
+        case 5: _t->puzzleCompletedTimeChanged(); break;
+        case 6: _t->scoreChanged(); break;
+        case 7: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 8: _t->onTick(); break;
+        case 9: _t->intializePlayArea(); break;
+        case 10: _t->startTimer(); break;
+        case 11: _t->stopTimer(); break;
+        case 12: _t->resetTimer(); break;
+        case 13: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -129,9 +142,9 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 14;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -142,28 +155,31 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: *reinterpret_cast< QString*>(_v) = getTime(); break;
         case 3: *reinterpret_cast< QString*>(_v) = getTotalWordsFound(); break;
         case 4: *reinterpret_cast< bool*>(_v) = getSound(); break;
+        case 5: *reinterpret_cast< QString*>(_v) = getPuzzleCompletedTime(); break;
+        case 6: *reinterpret_cast< int*>(_v) = getScore(); break;
         }
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
         case 0: setCategory(*reinterpret_cast< QString*>(_v)); break;
         case 1: setPuzzleWords(*reinterpret_cast< QString*>(_v)); break;
         case 4: setSound(*reinterpret_cast< bool*>(_v)); break;
+        case 6: setScore(*reinterpret_cast< int*>(_v)); break;
         }
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 5;
+        _id -= 7;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -199,5 +215,17 @@ void WordsPlus::totalWordsFoundChanged()
 void WordsPlus::soundChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, 0);
+}
+
+// SIGNAL 5
+void WordsPlus::puzzleCompletedTimeChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, 0);
+}
+
+// SIGNAL 6
+void WordsPlus::scoreChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, 0);
 }
 QT_END_MOC_NAMESPACE

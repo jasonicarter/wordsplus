@@ -20,6 +20,8 @@
 #include "ProfileBox.hpp"
 #include "Global.hpp"
 
+#define LOG(fmt, args...)   do { fprintf(stdout, "[Registration Sample] " fmt "\n", ##args); fflush(stdout); } while (0);
+
 using namespace bb::cascades;
 
 static const QString logPrefix("ProfileBox");
@@ -27,14 +29,14 @@ static const QString logPrefix("ProfileBox");
 ProfileBox::ProfileBox()
 {
   m_profileBox = new bb::platform::bbm::ProfileBox(Global::instance()->getContext(), this);
+  //registerIcons();
 }
 
 void ProfileBox::registerIcons()
 {
   QString imageDir(QDir::currentPath() + "/app/native/assets/images/");
-  registerIcon(imageDir + "apple.png", 1);
-  registerIcon(imageDir + "pear.png", 2);
-  registerIcon(imageDir + "orange.png", 3);
+  registerIcon(imageDir + "profileBox.png", 1);
+  //register other icons that you might want to use
 }
 
 void ProfileBox::registerIcon(const QString& path, int iconId)
@@ -49,15 +51,18 @@ void ProfileBox::registerIcon(const QString& path, int iconId)
   buffer.open(QIODevice::WriteOnly);
   if(not image.load(path)) {
     qDebug() << logPrefix << ": Failed to load icon";
+    LOG("Failed to load icon");
     return;
   }
   qDebug() << logPrefix << ": Icon loaded";
+  LOG("Icon loaded");
   image.save(&buffer, "PNG");
 
   // Create the icon object and register the icon
   const bool result = m_profileBox->requestRegisterIcon(
     iconId, bb::platform::bbm::ImageType::Png, iconArray);
   qDebug() << logPrefix << ": Icon registered; result=" << result;
+  LOG("load result: %i", result);
 }
 
 QString ProfileBox::getText()
@@ -96,11 +101,12 @@ void ProfileBox::createItem(const QString& text, const QString& iconPath)
 
   // Icon was selected. Determine its ID
   int iconId;
-  if(m_iconPath == "images/apple.png") {
+  if(m_iconPath == "profileBox") {
     iconId = 1;
-  } else if(m_iconPath == "images/pear.png") {
+    LOG("IconID 1");
+  } else if(m_iconPath == "x") {
     iconId = 2;
-  } else if(m_iconPath == "images/orange.png") {
+  } else if(m_iconPath == "y") {
     iconId = 3;
   } else {
     qDebug() << logPrefix << ": Item could not be added because icon ID could not"
