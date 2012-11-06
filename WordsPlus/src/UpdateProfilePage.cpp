@@ -23,10 +23,12 @@
 
 using namespace bb::cascades;
 
-UpdateProfilePage::UpdateProfilePage(bb::platform::bbm::UserProfile* userProfile) : m_userProfile(userProfile)
-{
+UpdateProfilePage::UpdateProfilePage(
+		bb::platform::bbm::UserProfile* userProfile) :
+		m_userProfile(userProfile) {
 	LOG("UpdateProfilePage");
-	m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
+	m_userProfile = new bb::platform::bbm::UserProfile(
+			Global::instance()->getContext(), this);
 //  QmlDocument* qmlContent = QmlDocument::create("asset:///UpdateProfile.qml");
 //  if (qmlContent) {
 //    Control* content = qmlContent->createRootObject<Control>();
@@ -41,35 +43,35 @@ UpdateProfilePage::UpdateProfilePage(bb::platform::bbm::UserProfile* userProfile
 //  Button* savePersonalMsgButton = this->findChild<Button*>(
 //    "savePersonalMsgButton");
 
-  // The user may set a custom status (instead of 'Available', etc.).
+// The user may set a custom status (instead of 'Available', etc.).
 //  QObject::connect(saveStatusButton,
 //                   SIGNAL(clicked()),
 //                   this,
 //                   SLOT(saveStatus()));
 
-  // The user may also set a personal message (e.g. 'I'm at the beach').
+// The user may also set a personal message (e.g. 'I'm at the beach').
 //  QObject::connect(savePersonalMsgButton,
 //                   SIGNAL(clicked()),
 //                   this,
 //                   SLOT(savePersonalMessage()));
 }
 
-void
-UpdateProfilePage::saveStatus()
-{
-  qDebug() << "SAVE STATUS BUTTON PRESSED";
-  QString statusMessageString = m_statusMessageField->text();
-  bool showBusy = m_showBusyCheckBox->isChecked();
-  m_userProfile->requestUpdateStatus((showBusy? bb::platform::bbm::UserStatus::Busy : bb::platform::bbm::UserStatus::Available), statusMessageString);
+void UpdateProfilePage::saveStatus() {
+	qDebug() << "SAVE STATUS BUTTON PRESSED";
+	QString statusMessageString = "I'm Playing WordsPlus";
+	bool showBusy = true;
+	m_userProfile->requestUpdateStatus(
+			(showBusy ?
+					bb::platform::bbm::UserStatus::Busy :
+					bb::platform::bbm::UserStatus::Available),
+			statusMessageString);
 }
 
-void
-UpdateProfilePage::savePersonalMessage()
-{
+void UpdateProfilePage::savePersonalMessage() {
 	LOG("savePersonalMessage");
-  qDebug() << "SAVE PERSONAL MSG BUTTON PRESSED";
-  QString personalMessageString = "WordsPlus is the BEST wordsearch game I've ever played!"; //m_personalMessageField->text();
-
-  m_userProfile->requestUpdatePersonalMessage(personalMessageString);
+	qDebug() << "SAVE PERSONAL MSG BUTTON PRESSED";
+	QString personalMessageString =
+			"WordsPlus is the BEST wordsearch game I've ever played!";
+	m_userProfile->requestUpdatePersonalMessage(personalMessageString);
 }
 

@@ -1,6 +1,33 @@
 import bb.cascades 1.0
 
 Page {
+    //matching #define values in WordsPlus.cpp
+    property int bbm_personalmessage: 6
+    property int bbm_statusmessage: 7
+    property int bbm_invitetodownload: 8
+    actions: [
+        ActionItem {
+            title: "Invite Your Friends"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                wordsPlus.ControlsForBBM(bbm_invitetodownload);
+            }
+        },
+        ActionItem {
+            title: "I Love WordsPlus!"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                wordsPlus.ControlsForBBM(bbm_personalmessage);
+            }
+        },
+        ActionItem {
+            title: "I'm Busy Playing WordsPlus"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                wordsPlus.ControlsForBBM(bbm_statusmessage);
+            }
+        }
+    ]
     Container {
         layout: DockLayout {
         }
@@ -17,14 +44,6 @@ Page {
                 }
             }
         }
-        //        Container { //divider
-        //            bottomMargin: 50
-        //            preferredWidth: 600
-        //            preferredHeight: 3
-        //            background: Color.create("#ff8c00")
-        //            verticalAlignment: VerticalAlignment.Center
-        //            horizontalAlignment: HorizontalAlignment.Center
-        //        }
         Container {
             layout: DockLayout {
             }
@@ -91,10 +110,6 @@ Page {
                 preferredHeight: 500
                 animations: HomeTabAnimation {
                     id: dAnimation
-                    //                    onStarted: {
-                    //                        //pAnimation.delay = 500
-                    //                        pAnimation.play();
-                    //                    }
                 }
             }
             ImageView {
@@ -197,7 +212,8 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             Label {
-                text: "Total points won: 4638 \n" + "Total # of Words Found: " + wordsPlus.totalWordsFound
+                text: "Total points won: " + wordsPlus.score + "\n " + 
+                "Total # of Words Found: " + wordsPlus.totalWordsFound
                 multiline: true
                 textStyle {
                     base: subTitleNormalWhite.style

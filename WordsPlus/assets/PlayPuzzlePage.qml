@@ -55,15 +55,6 @@ import bb.cascades 1.0
                         }
                     }
                 }
-                Container {
-                    horizontalAlignment: HorizontalAlignment.Right
-                    Label {
-                        text: "SCORE: " + "2734555"
-                        textStyle {
-                            base: subTitleNormalWhite.style
-                        }
-                    }
-                }
             }
             Container {
                 objectName: "playAreaContainer"

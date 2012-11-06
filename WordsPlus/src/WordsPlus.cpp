@@ -23,14 +23,18 @@
 #define NORMAL		1
 #define SELECTED	2
 #define HIGHLIGHT	3
+#define REGISTERBBM 4
+#define PROFILEBOXPUZZLECOMPLETED 5
+#define PRESONALMESSAGE 6
+#define STATUSMESSAGE 7
+#define INVITETODOWNLOAD 8
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
 #define SOUNDLEVELSELECTED "levelSelected"
 #define SOUND "settingsSound"
-#define REGISTERBBM 4
-#define PROFILEBOXPUZZLECOMPLETED 5
-#define PRESONALMESSAGE 6
+#define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
+#define SCORE "settingsScore"
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -466,8 +470,12 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		}
 
 		if (numberOfWordsFound == numberOfWords) { // Puzzle Completed
+			SaveBestPuzzleTime(timeSec);
+			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
-			showToast("PUZZLE COMPLETED!"); // add icon url to pass to function
+			QString puzzleMsg = QString("PUZZLE COMPLETED! \nTime: %1 Score: %2")
+					.arg(getPuzzleCompletedTime()).arg(getScore());
+			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			intializePlayArea(); // create a new puzzle
 		}
@@ -613,6 +621,52 @@ void WordsPlus::setSound(bool status) {
 	emit soundChanged();
 }
 
+QString WordsPlus::getPuzzleCompletedTime() {
+
+	bool okTime;
+	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
+	int savedTime = strSavedTime.toInt(&okTime, 10);
+
+	return (QDateTime::fromTime_t(savedTime)).toString("mm':'ss");
+
+}
+
+void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
+
+	bool okTime;
+	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
+	int savedTime = strSavedTime.toInt(&okTime, 10);
+
+	if( puzzleTime < savedTime ) {
+		settings->saveValueFor(PUZZLECOMPLETEDTIME, QString::number(puzzleTime));
+		emit puzzleCompletedTimeChanged();
+	}
+
+}
+
+int WordsPlus::getScore() {
+
+	bool okScore;
+	QString strScore = settings->getValueFor(SCORE, "0");
+	int score = strScore.toInt(&okScore, 10);
+
+	return score;
+
+}
+
+void WordsPlus::setScore(int puzzleTime) {
+
+	bool okScore;
+	QString strScore = settings->getValueFor(SCORE, "0");
+	int score = strScore.toInt(&okScore, 10);
+
+
+	score = score + 100000/puzzleTime; //multiple by level difficulty
+	settings->saveValueFor(SCORE, QString::number(score));
+	emit scoreChanged();
+
+}
+
 void WordsPlus::ControlsForBBM(int state) {
 
 	switch (state) {
@@ -624,16 +678,22 @@ void WordsPlus::ControlsForBBM(int state) {
 		}
 	case PROFILEBOXPUZZLECOMPLETED:
 		{
-			QString msg = QString("Completed another puzzle! Score: %1").arg(560);
+			QString msg = QString("Completed another puzzle! Score: %1").arg(getScore());
 			//get real score
 			profileBox = new ProfileBox();
-			profileBox->createItem(msg, "none");
+			profileBox->createItem(msg, "profileBox");
 			break;
 		}
 	case PRESONALMESSAGE:
 		{
 			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
 			updateProfilePage->savePersonalMessage();
+			break;
+		}
+	case STATUSMESSAGE:
+		{
+			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
+			updateProfilePage->saveStatus();
 			break;
 		}
 	}

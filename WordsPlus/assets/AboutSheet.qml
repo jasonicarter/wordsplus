@@ -10,7 +10,7 @@ Page {
             background: Color.create("#00629C")
             preferredWidth: 768
             Label {
-                text: "This Game."
+                text: "WordsPlus (v...)"
                 textStyle {
                     base: bigTextNormalWhite.style
                 }
@@ -23,14 +23,7 @@ Page {
             preferredHeight: 900
             verticalAlignment: VerticalAlignment.Center
             horizontalAlignment: HorizontalAlignment.Center
-            Label {
-                text: "WordsPlus (v...)"
-                textStyle {
-                    base: bigTextNormalWhite.style
-                }
-            }
             Container { //developer section
-                topMargin: 50
                 Container {
                     background: Color.create("#272727")
                     TextArea {
@@ -92,26 +85,27 @@ Page {
         }
     }
     actions: [
-        ActionItem {
-            title: "Support"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                aboutSheet.close();
-            }
-        },
+//        ActionItem {
+//            title: "Support"
+//            ActionBar.placement: ActionBarPlacement.OnBar
+//            onTriggered: {
+//                aboutSheet.close();
+//            }
+//        },
         ActionItem {
             title: "Close"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
-                wordsPlus.startTimer();
                 aboutSheet.close();
             }
         },
-        ActionItem {
+        InvokeActionItem {
             title: "Website"
             ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                aboutSheet.close();
+            query {
+                mimeType: "text/html"
+                uri: "http://www.twocasualcoders.com"
+                invokeActionId: "bb.action.OPEN"
             }
         }
     ]

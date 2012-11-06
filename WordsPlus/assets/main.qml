@@ -54,32 +54,7 @@ TabbedPane {
     Tab {
         title: "Review"
         imageSource: "asset:///images/menuicons/icon_favorites.png"
-        Page {
-            Container {
-                layout: DockLayout {
-                }
-                background: Color.Black
-                horizontalAlignment: HorizontalAlignment.Center
-                Container {
-                    background: Color.create("#00629C")
-                    preferredWidth: 768
-                    Label {
-                        text: "Your Stats."
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                        textStyle {
-                            base: bigTextNormalWhite.style
-                        }
-                    }
-                }
-                Container { //divider
-                    preferredWidth: 768
-                    preferredHeight: 50
-                    background: Color.create("#00629C")
-                    verticalAlignment: VerticalAlignment.Bottom
-                    horizontalAlignment: HorizontalAlignment.Center
-                }
-            }
+        ReviewTab {
         }
         onTriggered: {
             wordsPlus.stopTimer();

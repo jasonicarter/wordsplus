@@ -40,12 +40,15 @@ public:
     Q_INVOKABLE void startTimer();
     Q_INVOKABLE void stopTimer();
     Q_INVOKABLE void resetTimer();
+    Q_INVOKABLE void ControlsForBBM(int state);
 
     Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
     Q_PROPERTY (const QString puzzleWords READ getPuzzleWords WRITE setPuzzleWords NOTIFY puzzleWordsChanged);
     Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
     Q_PROPERTY (const QString totalWordsFound READ getTotalWordsFound NOTIFY totalWordsFoundChanged);
     Q_PROPERTY (bool sound READ getSound WRITE setSound NOTIFY soundChanged);
+    Q_PROPERTY (const QString puzzleCompletedTime READ getPuzzleCompletedTime NOTIFY puzzleCompletedTimeChanged);
+    Q_PROPERTY (int score READ getScore WRITE setScore NOTIFY scoreChanged);
 
     QString getCategory();
     void setCategory(const QString cat);
@@ -60,6 +63,11 @@ public:
     bool getSound();
     void setSound(bool status);
 
+    QString getPuzzleCompletedTime();
+
+    int getScore();
+    void setScore(int puzzleTime);
+
 private slots:
 	void onTileTouch(bb::cascades::TouchEvent *event);
 	void onTick();
@@ -70,6 +78,8 @@ signals:
 	void timeChanged();
 	void totalWordsFoundChanged();
 	void soundChanged();
+	void puzzleCompletedTimeChanged();
+	void scoreChanged();
 
 private:
 	void initTimer();
@@ -77,7 +87,7 @@ private:
 	void WordCompleted(QList<int> listOfLetters);
 	void CrossOutPuzzleWord(QString wordFound);
 	void showToast(QString msg);
-	void ControlsForBBM(int state);
+	void SaveBestPuzzleTime(int puzzleTime);
 
     Page *appPage;
     TabbedPane *tabs;
