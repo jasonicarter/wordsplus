@@ -29,35 +29,9 @@ UpdateProfilePage::UpdateProfilePage(
 	LOG("UpdateProfilePage");
 	m_userProfile = new bb::platform::bbm::UserProfile(
 			Global::instance()->getContext(), this);
-//  QmlDocument* qmlContent = QmlDocument::create("asset:///UpdateProfile.qml");
-//  if (qmlContent) {
-//    Control* content = qmlContent->createRootObject<Control>();
-//    this->setContent(content);
-//  }
-//
-//  m_personalMessageField = this->findChild<TextField*>("personalMessageField");
-//  m_statusMessageField = this->findChild<TextField*>("statusMessageField");
-//  m_showBusyCheckBox = this->findChild<CheckBox*>("showBusyCheckBox");
-//
-//  Button* saveStatusButton = this->findChild<Button*>("saveStatusButton");
-//  Button* savePersonalMsgButton = this->findChild<Button*>(
-//    "savePersonalMsgButton");
-
-// The user may set a custom status (instead of 'Available', etc.).
-//  QObject::connect(saveStatusButton,
-//                   SIGNAL(clicked()),
-//                   this,
-//                   SLOT(saveStatus()));
-
-// The user may also set a personal message (e.g. 'I'm at the beach').
-//  QObject::connect(savePersonalMsgButton,
-//                   SIGNAL(clicked()),
-//                   this,
-//                   SLOT(savePersonalMessage()));
 }
 
 void UpdateProfilePage::saveStatus() {
-	qDebug() << "SAVE STATUS BUTTON PRESSED";
 	QString statusMessageString = "I'm Playing WordsPlus";
 	bool showBusy = true;
 	m_userProfile->requestUpdateStatus(
@@ -69,9 +43,8 @@ void UpdateProfilePage::saveStatus() {
 
 void UpdateProfilePage::savePersonalMessage() {
 	LOG("savePersonalMessage");
-	qDebug() << "SAVE PERSONAL MSG BUTTON PRESSED";
 	QString personalMessageString =
-			"WordsPlus is the BEST wordsearch game I've ever played!";
+			"WordsPlus: BEST WORDSEARCH GAME EVER!";
 	m_userProfile->requestUpdatePersonalMessage(personalMessageString);
 }
 

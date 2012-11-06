@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="24" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" width="960" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -17,7 +17,7 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -38,7 +38,6 @@
 <part id="2"/>
 <part id="1"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -55,13 +54,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/WordsPlus.hpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1217" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="UpdateProfilePage.cpp" partName="UpdateProfilePage.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/UpdateProfilePage.cpp" title="UpdateProfilePage.cpp" tooltip="WordsPlus/src/UpdateProfilePage.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/UpdateProfilePage.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1920" selectionTopPixel="319"/>
-</editor>
-<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" partName="AboutSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/assets/AboutSheet.qml" title="AboutSheet.qml" tooltip="WordsPlus/assets/AboutSheet.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/assets/AboutSheet.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2908" selectionTopPixel="870"/>
+<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ReviewTab.qml" partName="ReviewTab.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/assets/ReviewTab.qml" title="ReviewTab.qml" tooltip="WordsPlus/assets/ReviewTab.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/assets/ReviewTab.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1456" selectionTopPixel="450"/>
 </editor>
 </editors>
 <views>
@@ -246,27 +241,18 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.77069354" ratioLeft="689" ratioRight="205" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.77069354" ratioLeft="689" ratioRight="205" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -274,8 +260,7 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -283,26 +268,20 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44948453" ratioLeft="218" ratioRight="267" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="500" ratioRight="500" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="500" ratioRight="500" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -542,36 +521,16 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/main.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.hpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/ProfileBox.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/main.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/HomeTab.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/UpdateProfilePage.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/AboutSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/CategorySheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/main.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlus/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/ReviewTab.qml"/>
 </editors>
-<item historyLabel="main.cpp" index="1">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="3">
-<position info="not_deleted" x="17569" y="0"/>
-</item>
-<item historyLabel="WordsPlus.cpp" index="3">
-<position info="not_deleted" x="13934" y="0"/>
-</item>
-<item historyLabel="WordsPlus.hpp" index="2">
-<position info="not_deleted" x="2847" y="0"/>
-</item>
-<item historyLabel="WordsPlus.hpp" index="2">
-<position info="not_deleted" x="2249" y="0"/>
-</item>
-<item historyLabel="WordsPlus.hpp" index="2">
-<position info="not_deleted" x="2287" y="0"/>
-</item>
-<item historyLabel="WordsPlus.hpp" index="2">
-<position info="not_deleted" x="2606" y="0"/>
-</item>
-<item historyLabel="ProfileBox.cpp" index="4">
-<position info="not_deleted" x="1098" y="0"/>
-</item>
 <item historyLabel="WordsPlus.hpp" index="2">
 <position info="not_deleted" x="2606" y="0"/>
 </item>
@@ -596,19 +555,19 @@
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="14325" y="0"/>
 </item>
-<item historyLabel="main.qml" index="5">
+<item historyLabel="main.qml" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="ReviewTab.qml" index="0">
 <position info="not_deleted" x="34" y="537"/>
 </item>
-<item historyLabel="main.qml" index="5">
+<item historyLabel="main.qml" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="14378" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
@@ -617,19 +576,19 @@
 <item historyLabel="WordsPlus.hpp" index="2">
 <position info="not_deleted" x="1217" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.hpp" index="2">
 <position info="not_deleted" x="1217" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="14378" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.hpp" index="2">
@@ -638,19 +597,19 @@
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="824" y="15"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="894" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="884" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="main.cpp" index="1">
@@ -662,31 +621,31 @@
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="884" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="19039" y="0"/>
 </item>
-<item historyLabel="UpdateProfilePage.cpp" index="7">
+<item historyLabel="UpdateProfilePage.cpp" index="6">
 <position info="not_deleted" x="1920" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="18473" y="0"/>
 </item>
-<item historyLabel="UpdateProfilePage.cpp" index="7">
+<item historyLabel="UpdateProfilePage.cpp" index="6">
 <position info="not_deleted" x="1920" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position/>
 </item>
-<item historyLabel="UpdateProfilePage.cpp" index="7">
+<item historyLabel="UpdateProfilePage.cpp" index="6">
 <position info="not_deleted" x="1920" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
 <position info="not_deleted" x="18473" y="0"/>
 </item>
-<item historyLabel="HomeTab.qml" index="6">
+<item historyLabel="HomeTab.qml" index="5">
 <position info="not_deleted" x="7499" y="0"/>
 </item>
 <item historyLabel="WordsPlus.cpp" index="3">
@@ -695,7 +654,29 @@
 <item historyLabel="main.cpp" index="1">
 <position info="not_deleted" x="188" y="0"/>
 </item>
-<item active="true" historyLabel="AboutSheet.qml" index="8">
+<item historyLabel="AboutSheet.qml" index="7">
+<position info="not_deleted" x="2831" y="0"/>
+</item>
+<item historyLabel="CategorySheet.qml" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="7">
+<position info="not_deleted" x="2831" y="0"/>
+</item>
+<item historyLabel="main.qml" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="7">
+<position info="not_deleted" x="3875" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="10"/>
+<item historyLabel="AboutSheet.qml" index="7">
+<position info="not_deleted" x="2664" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="11">
+<position info="not_deleted" x="18512" y="0"/>
+</item>
+<item active="true" historyLabel="ReviewTab.qml" index="12">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -724,6 +705,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ReviewTab.qml" tooltip="WordsPlus/assets/ReviewTab.qml">
+<persistable path="/WordsPlus/assets/ReviewTab.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlus/bar-descriptor.xml">
+<persistable path="/WordsPlus/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="WordsPlus/assets/main.qml">
+<persistable path="/WordsPlus/assets/main.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CategorySheet.qml" tooltip="WordsPlus/assets/CategorySheet.qml">
+<persistable path="/WordsPlus/assets/CategorySheet.qml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="WordsPlus/assets/AboutSheet.qml">
 <persistable path="/WordsPlus/assets/AboutSheet.qml"/>
 </file>
@@ -732,12 +725,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UpdateProfilePage.cpp" tooltip="WordsPlus/src/UpdateProfilePage.cpp">
 <persistable path="/WordsPlus/src/UpdateProfilePage.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ReviewTab.qml" tooltip="WordsPlus/assets/ReviewTab.qml">
-<persistable path="/WordsPlus/assets/ReviewTab.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="WordsPlus/assets/main.qml">
-<persistable path="/WordsPlus/assets/main.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ProfileBox.cpp" tooltip="WordsPlus/src/ProfileBox.cpp">
 <persistable path="/WordsPlus/src/ProfileBox.cpp"/>
@@ -759,9 +746,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlus/assets/PlayPuzzlePage.qml">
 <persistable path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CategorySheet.qml" tooltip="WordsPlus/assets/CategorySheet.qml">
-<persistable path="/WordsPlus/assets/CategorySheet.qml"/>
 </file>
 </mruList>
 </workbench>

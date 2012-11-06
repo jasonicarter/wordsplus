@@ -21,7 +21,7 @@ Page {
             }
         },
         ActionItem {
-            title: "I'm Busy Playing WordsPlus"
+            title: "Busy Playing WordsPlus"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.ControlsForBBM(bbm_statusmessage);

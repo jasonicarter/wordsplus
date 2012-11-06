@@ -62,40 +62,40 @@ TabbedPane {
     }
 
     // Score Loop challenges
-    Tab {
-        title: "Challenge"
-        imageSource: "asset:///images/menuicons/icon_browse.png"
-        Page {
-            Container {
-                layout: DockLayout {
-                }
-                background: Color.Black
-                horizontalAlignment: HorizontalAlignment.Center
-                Container {
-                    background: Color.create("#00629C")
-                    preferredWidth: 768
-                    Label {
-                        text: "And Brag."
-                        textStyle {
-                            base: bigTextNormalWhite.style
-                        }
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                    }
-                }
-                Container { //divider
-                    preferredWidth: 768
-                    preferredHeight: 50
-                    background: Color.create("#00629C")
-                    verticalAlignment: VerticalAlignment.Bottom
-                    horizontalAlignment: HorizontalAlignment.Center
-                }
-            }
-        }
-        onTriggered: {
-            wordsPlus.stopTimer();
-        }
-    }
+//    Tab {
+//        title: "Challenge"
+//        imageSource: "asset:///images/menuicons/icon_browse.png"
+//        Page {
+//            Container {
+//                layout: DockLayout {
+//                }
+//                background: Color.Black
+//                horizontalAlignment: HorizontalAlignment.Center
+//                Container {
+//                    background: Color.create("#00629C")
+//                    preferredWidth: 768
+//                    Label {
+//                        text: "And Brag."
+//                        textStyle {
+//                            base: bigTextNormalWhite.style
+//                        }
+//                        verticalAlignment: VerticalAlignment.Center
+//                        horizontalAlignment: HorizontalAlignment.Center
+//                    }
+//                }
+//                Container { //divider
+//                    preferredWidth: 768
+//                    preferredHeight: 50
+//                    background: Color.create("#00629C")
+//                    verticalAlignment: VerticalAlignment.Bottom
+//                    horizontalAlignment: HorizontalAlignment.Center
+//                }
+//            }
+//        }
+//        onTriggered: {
+//            wordsPlus.stopTimer();
+//        }
+//    }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text
