@@ -6518,3 +6518,30 @@ com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
 
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 15:13:40.541
 !MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 16:23:51.767
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:23:51.811
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:24:24.607
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:25:09.669
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:27:02.321
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:28:23.329
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:31:32.539
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 16:34:16.542
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 16:34:16.585
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf

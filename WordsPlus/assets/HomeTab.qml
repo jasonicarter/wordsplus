@@ -7,7 +7,7 @@ Page {
     property int bbm_invitetodownload: 8
     actions: [
         ActionItem {
-            title: "Invite Your Friends"
+            title: "Invite My Friends"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.ControlsForBBM(bbm_invitetodownload);
@@ -21,7 +21,7 @@ Page {
             }
         },
         ActionItem {
-            title: "Busy Playing WordsPlus"
+            title: "I'm Busy Playing"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.ControlsForBBM(bbm_statusmessage);
@@ -212,7 +212,7 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             Label {
-                text: "Total points won: " + wordsPlus.score + "\n " + 
+                text: "Total Points Won: " + wordsPlus.score + "\n " + 
                 "Total # of Words Found: " + wordsPlus.totalWordsFound
                 multiline: true
                 textStyle {

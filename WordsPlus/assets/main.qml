@@ -5,23 +5,21 @@ TabbedPane {
     id: mainTab
     showTabsOnActionBar: true
     Menu.definition: MenuDefinition {
-        helpAction: HelpActionItem {
-            onTriggered: {
-                wordsPlus.stopTimer();
-                helpSheet.open();
-            }
-        }
-        settingsAction: SettingsActionItem {
-            onTriggered: {
-                wordsPlus.stopTimer();
-                settingsSheet.open();
-            }
-        }
+//        helpAction: HelpActionItem {
+//            onTriggered: {
+//                helpSheet.open();
+//            }
+//        }
+//        settingsAction: SettingsActionItem {
+//            onTriggered: {
+//                wordsPlus.stopTimer();
+//                settingsSheet.open();
+//            }
+//        }
         actions: [
             ActionItem {
                 title: "About"
                 onTriggered: {
-                    wordsPlus.stopTimer();
                     aboutSheet.open();
                 }
             }

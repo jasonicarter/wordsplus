@@ -115,7 +115,6 @@ Page {
             title: "Close"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
-                wordsPlus.startTimer();
                 helpSheet.close();
             }
         }
