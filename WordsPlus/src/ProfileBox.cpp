@@ -24,7 +24,7 @@
 
 using namespace bb::cascades;
 
-static const QString logPrefix("ProfileBox");
+//static const QString logPrefix("ProfileBox");
 
 ProfileBox::ProfileBox()
 {
@@ -41,60 +41,33 @@ void ProfileBox::registerIcons()
 
 void ProfileBox::registerIcon(const QString& path, int iconId)
 {
-  qDebug() << logPrefix << ": Registering icon id=" << iconId << ", path="
-    << path;
-
   // Read the icon from the file
   QImage image;
   QByteArray iconArray;
   QBuffer buffer(&iconArray);
   buffer.open(QIODevice::WriteOnly);
   if(not image.load(path)) {
-    qDebug() << logPrefix << ": Failed to load icon";
     LOG("Failed to load icon");
     return;
   }
-  qDebug() << logPrefix << ": Icon loaded";
   LOG("Icon loaded");
   image.save(&buffer, "PNG");
 
   // Create the icon object and register the icon
   const bool result = m_profileBox->requestRegisterIcon(
     iconId, bb::platform::bbm::ImageType::Png, iconArray);
-  qDebug() << logPrefix << ": Icon registered; result=" << result;
   LOG("load result: %i", result);
-}
-
-QString ProfileBox::getText()
-{
-  return m_text;
-}
-
-QString ProfileBox::getIconPath()
-{
-  return m_iconPath;
-}
-
-void ProfileBox::setText(QString text)
-{
-  m_text = text;
-}
-
-void ProfileBox::setIconPath(QString iconPath)
-{
-  m_iconPath = iconPath;
 }
 
 void ProfileBox::createItem(const QString& text, const QString& iconPath)
 {
-  qDebug() << logPrefix << ": Adding item";
+
   m_text = text;
   m_iconPath = iconPath;
 
   // If no icon was selected, add the item right away
   if(m_iconPath == "none") {
-    const bool result = m_profileBox->requestAddItem(m_text, QString("cookie"));
-    qDebug() << logPrefix << ": Added item with no icon; result=" << result;
+    m_profileBox->requestAddItem(m_text, QString("cookie"));
     return;
   }
 
@@ -109,14 +82,10 @@ void ProfileBox::createItem(const QString& text, const QString& iconPath)
   } else if(m_iconPath == "y") {
     iconId = 3;
   } else {
-    qDebug() << logPrefix << ": Item could not be added because icon ID could not"
-      " be determined; iconPath=" << m_iconPath;
     return;
   }
 
   // Add the item
-  const bool result = m_profileBox->requestAddItem(
-    m_text, iconId, QString("cookie"));
-  qDebug() << logPrefix << ": Added item with icon; result="
-    << result;
+  m_profileBox->requestAddItem(
+  m_text, iconId, QString("cookie"));
 }

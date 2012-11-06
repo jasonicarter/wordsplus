@@ -6190,3 +6190,331 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 01:46:30.943
 !MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+!SESSION 2012-11-06 11:30:43.211 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.274
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.586
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.599
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.600
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.611
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.618
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.621
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.627
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.628
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.631
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.633
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.635
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.636
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.636
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.640
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.642
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.646
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: orientationChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.647
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On UI Orientation Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.647
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: displayDirectionChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.648
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On Display Direction Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.650
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.652
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.652
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.662
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.665
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:30:47.668
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.675
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.675
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.676
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.677
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.678
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:30:47.678
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 11:30:47.880
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 11:30:48.738
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-11-06 11:30:50.538
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-11-06 11:30:50.538
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f796d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f796d0)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f796d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f796d0)),sourcePriority=16640)
+
+!ENTRY org.eclipse.core.jobs 4 2 2012-11-06 11:30:53.222
+!MESSAGE An internal error occurred during: "Validating C/C++ build settings".
+!STACK 0
+java.lang.NullPointerException
+	at com.qnx.tools.ide.core.AbstractSDKDescriptor.getSpawnPathEnv(AbstractSDKDescriptor.java:81)
+	at com.qnx.tools.ide.core.AbstractSDKDescriptor.getRequiredQNXEnvironment(AbstractSDKDescriptor.java:31)
+	at com.qnx.tools.ide.core.QNXIdePlugin.getRequiredQNXEnvironment(QNXIdePlugin.java:388)
+	at com.qnx.tools.ide.qde.managedbuilder.core.QCCEnvironmentVariableSupplier.getQNXEnvironment(QCCEnvironmentVariableSupplier.java:135)
+	at com.qnx.tools.ide.qde.managedbuilder.core.QCCEnvironmentVariableSupplier.getVariables(QCCEnvironmentVariableSupplier.java:126)
+	at org.eclipse.cdt.managedbuilder.internal.envvar.ExternalExtensionEnvironmentSupplier.getVariables(ExternalExtensionEnvironmentSupplier.java:92)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEnvironmentContributor.getVariables(BuildEnvironmentContributor.java:72)
+	at org.eclipse.cdt.internal.core.envvar.BuildSystemEnvironmentSupplier.getVariables(BuildSystemEnvironmentSupplier.java:188)
+	at org.eclipse.cdt.internal.core.envvar.EnvironmentVariableManager.getVariables(EnvironmentVariableManager.java:274)
+	at org.eclipse.cdt.internal.core.envvar.EnvironmentVariableManager.getVariables(EnvironmentVariableManager.java:290)
+	at org.eclipse.cdt.internal.core.settings.model.CBuildSettingCache.initEnvironmentCache(CBuildSettingCache.java:48)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:104)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:486)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:231)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:416)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:398)
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.findBuildInfo(ManagedBuildManager.java:2709)
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.getBuildInfo(ManagedBuildManager.java:2970)
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.getBuildInfo(ManagedBuildManager.java:2925)
+	at com.qnx.tools.ide.qde.managedbuilder.core.validation.ValidationJob$ValidateAction.perform(ValidationJob.java:186)
+	at com.qnx.tools.ide.qde.managedbuilder.core.validation.ValidationJob.run(ValidationJob.java:140)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-11-06 11:31:46.976 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.074
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.346
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.359
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.365
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.377
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.385
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.389
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.396
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.399
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.402
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.405
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.408
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.409
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.409
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.415
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.416
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.421
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: orientationChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.422
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On UI Orientation Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.422
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: displayDirectionChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.423
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On Display Direction Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.426
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.428
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.429
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.440
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.444
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-06 11:31:51.447
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.456
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.457
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.458
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.459
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.460
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-06 11:31:51.461
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 11:31:51.684
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 11:31:52.547
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-11-06 11:31:53.542
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-11-06 11:31:53.542
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@14189d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@14189d0)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@14189d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@14189d0)),sourcePriority=16640)
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 12:39:22.176
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 12:39:22.232
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-11-06 12:52:15.668
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-11-06 12:52:17.383
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-11-06 12:52:17.481
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2012-11-06 13:50:12.847
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:492)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:257)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 14:32:52.377
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 14:32:52.445
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 15:13:24.487
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 15:13:24.540
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui 4 4 2012-11-06 15:13:40.489
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-06 15:13:40.541
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf

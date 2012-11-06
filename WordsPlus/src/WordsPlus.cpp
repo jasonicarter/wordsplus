@@ -36,6 +36,8 @@
 #define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
 #define SCORE "settingsScore"
 
+#define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
+
 using namespace bb::cascades;
 using namespace bb::system;
 using namespace bb::multimedia;
@@ -48,7 +50,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	deltaY = 0.0;
 	multiple = 1;
 	length = 0;
-	upperbound = 100;
+	upperbound = 90;
 	lowerbound = 0;
 	position = 0;
 	tileSize = 50;
@@ -76,17 +78,6 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 			ControlsForBBM(REGISTERBBM);
 
-			/* MOVE CODE OUT OF METHOD - WORKS. MAYBE ADD A ACTION ITEM ON MAIN PAGE */
-//			// Grab the user's Profile data and populate the fields.
-//			m_userProfile = new bb::platform::bbm::UserProfile(Global::instance()->getContext(), this);
-//			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
-//			updateProfilePage->savePersonalMessage();
-//			ProfileBox *profileBox = new ProfileBox();
-//			profileBox->createItem("I just completed another puzzle!", "none");
-			// Create the cover now. When application in moved to a background it's too late
-			// to create some UI controls or send asynch. requests. Remember ActiveFrame is refreshed every 30sec.
-			// Using DataModel in ActiveFrame isn't good idea too.
-			// Provider creates the CustomControls once they are needed.
 			app->setCover(new ActiveFrame());
 
 			//possible connecting to a function here so on thumbnail - stop timer
@@ -274,6 +265,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			//deltaY increases (+ve) when finger moves top to bottom
 			if (length / 60 == multiple && length > 0) {
 				position += 1;
+				LOG("%i",position);
 				if (position < upperbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
 					tileNumbers.append(position);
@@ -474,7 +466,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
 			QString puzzleMsg = QString("PUZZLE COMPLETED! \nTime: %1 Score: %2")
-					.arg(getPuzzleCompletedTime()).arg(getScore());
+					.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
 			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			intializePlayArea(); // create a new puzzle
@@ -626,7 +618,7 @@ QString WordsPlus::getPuzzleCompletedTime() {
 	bool okTime;
 	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
 	int savedTime = strSavedTime.toInt(&okTime, 10);
-
+	LOG("get savedTime: %i",savedTime );
 	return (QDateTime::fromTime_t(savedTime)).toString("mm':'ss");
 
 }
@@ -637,7 +629,9 @@ void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
 	QString strSavedTime = settings->getValueFor(PUZZLECOMPLETEDTIME, "0");
 	int savedTime = strSavedTime.toInt(&okTime, 10);
 
-	if( puzzleTime < savedTime ) {
+	LOG("puzzleTime: %i savedTime: %i",puzzleTime,savedTime );
+	if( savedTime == 0) savedTime = puzzleTime;
+	if( puzzleTime <= savedTime ) {
 		settings->saveValueFor(PUZZLECOMPLETEDTIME, QString::number(puzzleTime));
 		emit puzzleCompletedTimeChanged();
 	}
@@ -660,7 +654,6 @@ void WordsPlus::setScore(int puzzleTime) {
 	QString strScore = settings->getValueFor(SCORE, "0");
 	int score = strScore.toInt(&okScore, 10);
 
-
 	score = score + 100000/puzzleTime; //multiple by level difficulty
 	settings->saveValueFor(SCORE, QString::number(score));
 	emit scoreChanged();
@@ -678,8 +671,8 @@ void WordsPlus::ControlsForBBM(int state) {
 		}
 	case PROFILEBOXPUZZLECOMPLETED:
 		{
-			QString msg = QString("Completed another puzzle! Score: %1").arg(getScore());
-			//get real score
+			QString msg = QString("Completed another puzzle! \nTime: %1 Score: %2")
+					.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
 			profileBox = new ProfileBox();
 			profileBox->createItem(msg, "profileBox");
 			break;

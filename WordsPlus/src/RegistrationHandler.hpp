@@ -43,7 +43,6 @@ class RegistrationHandler : public bb::cascades::Page
 public slots:
   void appRegister();
   void registrationStatus(bb::platform::bbm::RegistrationState::Type state);
-  void continueToMainAppScreen();
 
 public:
   RegistrationHandler();
@@ -51,8 +50,7 @@ public:
 private:
   void checkRegistrationAccess();
   void registrationFailed();
-  bb::cascades::Button* m_continueButton;
-  bb::cascades::TextArea* m_statusText;
+
   bb::platform::bbm::Context* m_context;
   QString m_uuid;
 };

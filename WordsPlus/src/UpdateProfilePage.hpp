@@ -36,9 +36,6 @@ public:
   UpdateProfilePage(bb::platform::bbm::UserProfile* userProfile);
 
 private:
-  bb::cascades::TextField* m_personalMessageField;
-  bb::cascades::TextField* m_statusMessageField;
-  bb::cascades::CheckBox* m_showBusyCheckBox;
   bb::platform::bbm::UserProfile * m_userProfile;
 
 };

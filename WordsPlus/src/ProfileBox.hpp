@@ -27,8 +27,6 @@ class ProfileBox : public QObject
 {
   Q_OBJECT
 
-  Q_PROPERTY(QString text READ getText WRITE setText NOTIFY textChanged)
-  Q_PROPERTY(QString iconPath READ getIconPath WRITE setIconPath NOTIFY iconPathChanged)
 
 signals:
   void textChanged(QVariant);
@@ -40,12 +38,6 @@ public:
 
   // Registers all of the icons.
   void registerIcons();
-
-  QString getText();
-  QString getIconPath();
-
-  void setText(QString text);
-  void setIconPath(QString iconPath);
 
   // Creates an item with \a text and \a iconPath.
   void createItem(const QString& text, const QString& iconPath);
