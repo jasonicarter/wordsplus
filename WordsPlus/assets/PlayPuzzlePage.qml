@@ -1,58 +1,39 @@
 import bb.cascades 1.0
 
-    Page {
-        id: playPuzzlePage
-        actions: [
-            ActionItem {
-                title: "New Puzzle"
-                ActionBar.placement: ActionBarPlacement.OnBar
-                onTriggered: {
-                    wordsPlus.intializePlayArea();
-                }
-            },
-            ActionItem {
-                title: "Category"
-                ActionBar.placement: ActionBarPlacement.OnBar
-                onTriggered: {
-                    wordsPlus.stopTimer();
-                    categorySheet.open();
-                }
-            }
-        ]
+Container { // root Container
+    id: playPuzzleRootContainer
+    Container { //main container
+        layout: DockLayout {
+        }
+        horizontalAlignment: HorizontalAlignment.Center
+        background: Color.Black
+        preferredWidth: 768
+        preferredHeight: 1280
         Container {
-            id: playPuzzleRootContainer
-            layout: DockLayout {
-            }
-            horizontalAlignment: HorizontalAlignment.Center
-            background: Color.Black
+            verticalAlignment: VerticalAlignment.Top
+            background: Color.create("#00629C")
             preferredWidth: 768
-            Container {
-                background: Color.create("#00629C")
-                preferredWidth: 768
-                Label {
-                    text: "Puzzles."
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Center
-                    textStyle {
-                        base: textNormalWhite.style
-                    }
+            Label {
+                text: "Puzzles."
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Center
+                textStyle {
+                    base: puzzlePageTextNormalWhite.style
                 }
             }
+        }
+        Container { // center container
+            //background: Color.Green
+            horizontalAlignment: HorizontalAlignment.Center
+            //verticalAlignment: VerticalAlignment.Center
             Container {
-                layout: DockLayout {
-                }
                 topPadding: 125
-                preferredWidth: 720
-                horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Top
-                Container {
-                    horizontalAlignment: HorizontalAlignment.Left
-                    Label {
-                        id: timerDisplay
-                        text: "TIME: " + wordsPlus.time
-                        textStyle {
-                            base: subTitleNormalWhite.style
-                        }
+                horizontalAlignment: HorizontalAlignment.Left
+                Label {
+                    id: timerDisplay
+                    text: "TIME: " + wordsPlus.time
+                    textStyle {
+                        base: puzzlePageSubTitleNormalWhite.style
                     }
                 }
             }
@@ -67,10 +48,11 @@ import bb.cascades 1.0
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Center
+                //background: Color.Gray
             }
             Container { // Container for words to find
-                bottomPadding: 100
                 objectName: "wordsToFind"
+                //background: Color.Yellow
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
@@ -78,38 +60,48 @@ import bb.cascades 1.0
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Bottom
             }
-            Container { //divider
-                preferredWidth: 768
-                preferredHeight: 50
-                background: Color.create("#00629C")
-                verticalAlignment: VerticalAlignment.Bottom
-                horizontalAlignment: HorizontalAlignment.Center
+        } //center container
+        BtmNavPanel { // bottom panel
+            verticalAlignment: VerticalAlignment.Bottom
+        }
+    } // main container
+    attachedObjects: [
+        // When modifying the SystemDefult fonts, like changing wieght or color,
+        // it is better from a memory consumption point of view to create text
+        // styles as attached objects.
+        TextStyleDefinition {
+            id: puzzlePageTextNormalWhite
+            base: SystemDefaults.TextStyles.BigText
+            color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: puzzlePageSubTitleNormalBlue
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: puzzlePageSubTitleNormalWhite
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
+        },
+        Sheet {
+            id: aboutSheet
+            AboutSheet {
             }
-        } // Page
-        attachedObjects: [
-            TextStyleDefinition {
-                id: textNormalWhite
-                base: SystemDefaults.TextStyles.BigText
-                color: Color.create("#fafafa")
-            },
-            TextStyleDefinition {
-                id: subTitleNormalWhite
-                base: SystemDefaults.TextStyles.SubtitleText
-                fontWeight: FontWeight.Normal
-                fontFamily: "Times New Roman"
-                color: Color.create("#fafafa")
-            },
-            TextStyleDefinition {
-                id: subTitleNormalBlue
-                base: SystemDefaults.TextStyles.SubtitleText
-                fontWeight: FontWeight.Normal
-                fontFamily: "Times New Roman"
-                color: Color.create("#0098f0")
-            },
-            Sheet {
-                id: categorySheet
-                CategorySheet {
-                }
+        },
+        Sheet {
+            id: helpSheet
+            HelpSheet {
             }
-        ]
-    } //end of page
+        },
+        Sheet {
+            id: settingsSheet
+            SettingsSheet {
+            }
+        }
+    ]
+}// root Container
