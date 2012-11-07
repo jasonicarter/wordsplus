@@ -37,6 +37,9 @@ public:
     virtual ~WordsPlus();
 
     Q_INVOKABLE void intializePlayArea();
+    Q_INVOKABLE void InitializeHomePage();
+    Q_INVOKABLE void InitializePuzzlePage();
+
     Q_INVOKABLE void startTimer();
     Q_INVOKABLE void stopTimer();
     Q_INVOKABLE void resetTimer();
@@ -92,9 +95,12 @@ private:
     Page *appPage;
     TabbedPane *tabs;
     QmlDocument *mQmlDocument;
+    Control *homePageControl;
+    Control *puzzlePageControl;
 
     // Some Controls that we need to remember
     Container *mPlayAreaContainer;
+    Container *mWordsToFindContainer;
     ImageView* mPlayField[32][32]; //change this or set to 10
 
     // Internal game state variables

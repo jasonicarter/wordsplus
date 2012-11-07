@@ -50,7 +50,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	deltaY = 0.0;
 	multiple = 1;
 	length = 0;
-	upperbound = 90;
+	upperbound = 100;
 	lowerbound = 0;
 	position = 0;
 	tileSize = 50;
@@ -72,9 +72,9 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	if (!mQmlDocument->hasErrors()) {
 
 		// The application navigationPane is created from QML.
-		tabs = mQmlDocument->createRootObject<TabbedPane>();
+		appPage = mQmlDocument->createRootObject<Page>();
 
-		if (tabs) {
+		if (appPage) {
 
 			ControlsForBBM(REGISTERBBM);
 
@@ -83,11 +83,9 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 			//possible connecting to a function here so on thumbnail - stop timer
 			//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
 
-			intializePlayArea(); //check spelling :)
-			stopTimer();
-
-			// Set the main application scene to NavigationPane.
-			Application::instance()->setScene(tabs);
+			InitializeHomePage();
+			InitializePuzzlePage();
+			Application::instance()->setScene(appPage);
 		}
 	}
 }
@@ -98,13 +96,34 @@ WordsPlus::~WordsPlus() {
 	delete mSoundManager;
 }
 
+void WordsPlus::InitializeHomePage() {
+
+	LOG("InitializeHomePage");
+	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
+	qmlContent->setContextProperty("wordsPlus", this);
+	homePageControl = qmlContent->createRootObject<Control>();
+	appPage->setContent(homePageControl);
+}
+
+void WordsPlus::InitializePuzzlePage() {
+
+		LOG("InitializePuzzlePage");
+		QmlDocument* qmlContent = QmlDocument::create("asset:///PlayPuzzlePage.qml");
+		qmlContent->setContextProperty("wordsPlus", this);
+		puzzlePageControl = qmlContent->createRootObject<Control>();
+
+}
+
 void WordsPlus::intializePlayArea() {
 
-	mPlayAreaContainer = tabs->findChild<Container*>("playAreaContainer");
-	mPlayAreaContainer->removeAll();
+	//need to do id for timer, then get container to setup timer
+	//try to divide up below into smaller methods passing control for each one
 
-	Container *mWordsToFindContainer = tabs->findChild<Container*>(
-			"wordsToFind");
+//	LOG("intializePlayArea");
+
+	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
+	mPlayAreaContainer->removeAll();
+	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
 	mWordsToFindContainer->removeAll();
 
 	Container* pContainer = new Container();
@@ -215,6 +234,8 @@ void WordsPlus::intializePlayArea() {
 		numberOfWordsFound = 0;
 
 	} // set up mPlayAreaContainer
+
+	appPage->setContent(puzzlePageControl);
 }
 
 void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
@@ -264,7 +285,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			//deltaY increases (+ve) when finger moves top to bottom
 			if (length / 60 == multiple && length > 0) {
 				position += 1;
-				LOG("%i",position);
+				LOG("%i", position);
 				if (position < upperbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
 					tileNumbers.append(position);
@@ -464,8 +485,10 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
-			QString puzzleMsg = QString("PUZZLE COMPLETED! \nTime: %1 Score: %2")
-					.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
+			QString puzzleMsg = QString(
+					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
+					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+					getScore());
 			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			intializePlayArea(); // create a new puzzle
@@ -501,7 +524,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
 void WordsPlus::CrossOutPuzzleWord(QString wordFound) {
 
-	Label *mWordFound = tabs->findChild<Label*>(wordFound);
+	Label *mWordFound = appPage->findChild<Label*>(wordFound);
 
 	TextStyle subTitleSelected = SystemDefaults::TextStyles::smallText();
 	subTitleSelected.setColor(Color::fromARGB(0xff00629C));
@@ -629,9 +652,11 @@ void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
 	int savedTime = strSavedTime.toInt(&okTime, 10);
 
 	//LOG("puzzleTime: %i savedTime: %i",puzzleTime,savedTime );
-	if( savedTime == 0) savedTime = puzzleTime;
-	if( puzzleTime <= savedTime ) {
-		settings->saveValueFor(PUZZLECOMPLETEDTIME, QString::number(puzzleTime));
+	if (savedTime == 0)
+		savedTime = puzzleTime;
+	if (puzzleTime <= savedTime) {
+		settings->saveValueFor(PUZZLECOMPLETEDTIME,
+				QString::number(puzzleTime));
 		emit puzzleCompletedTimeChanged();
 	}
 
@@ -653,7 +678,7 @@ void WordsPlus::setScore(int puzzleTime) {
 	QString strScore = settings->getValueFor(SCORE, "0");
 	int score = strScore.toInt(&okScore, 10);
 
-	score = score + 100000/puzzleTime; //multiple by level difficulty
+	score = score + 100000 / puzzleTime; //multiple by level difficulty
 	settings->saveValueFor(SCORE, QString::number(score));
 	emit scoreChanged();
 
@@ -662,32 +687,32 @@ void WordsPlus::setScore(int puzzleTime) {
 void WordsPlus::ControlsForBBM(int state) {
 
 	switch (state) {
-	case REGISTERBBM:
-		{
-			regBBM = new RegistrationHandler();
-			regBBM->appRegister();
-			break;
-		}
-	case PROFILEBOXPUZZLECOMPLETED:
-		{
-			QString msg = QString("Completed another puzzle! \nTime: %1 Score: %2")
-					.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
-			profileBox = new ProfileBox();
-			profileBox->createItem(msg, "profileBox");
-			break;
-		}
-	case PRESONALMESSAGE:
-		{
-			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
-			updateProfilePage->savePersonalMessage();
-			break;
-		}
-	case STATUSMESSAGE:
-		{
-			UpdateProfilePage *updateProfilePage = new UpdateProfilePage(m_userProfile);
-			updateProfilePage->saveStatus();
-			break;
-		}
+	case REGISTERBBM: {
+		regBBM = new RegistrationHandler();
+		regBBM->appRegister();
+		break;
+	}
+	case PROFILEBOXPUZZLECOMPLETED: {
+		QString msg =
+				QString("Completed another puzzle! \nTime: %1 Score: %2").arg(
+						(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+						getScore());
+		profileBox = new ProfileBox();
+		profileBox->createItem(msg, "profileBox");
+		break;
+	}
+	case PRESONALMESSAGE: {
+		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(
+				m_userProfile);
+		updateProfilePage->savePersonalMessage();
+		break;
+	}
+	case STATUSMESSAGE: {
+		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(
+				m_userProfile);
+		updateProfilePage->saveStatus();
+		break;
+	}
 	}
 
 }
