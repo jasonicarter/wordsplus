@@ -107,10 +107,10 @@ void WordsPlus::InitializeHomePage() {
 
 void WordsPlus::InitializePuzzlePage() {
 
-		LOG("InitializePuzzlePage");
-		QmlDocument* qmlContent = QmlDocument::create("asset:///PlayPuzzlePage.qml");
-		qmlContent->setContextProperty("wordsPlus", this);
-		puzzlePageControl = qmlContent->createRootObject<Control>();
+	LOG("InitializePuzzlePage");
+	QmlDocument* qmlContent = QmlDocument::create("asset:///PlayPuzzlePage.qml");
+	qmlContent->setContextProperty("wordsPlus", this);
+	puzzlePageControl = qmlContent->createRootObject<Control>();
 
 }
 

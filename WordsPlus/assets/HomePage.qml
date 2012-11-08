@@ -1,48 +1,76 @@
 import bb.cascades 1.0
 
 Container {
-    //matching #define values in WordsPlus.cpp
-    //    property int bbm_personalmessage: 6
-    //    property int bbm_statusmessage: 7
-    //    property int bbm_invitetodownload: 8
-    //    actions: [
-    //        ActionItem {
-    //            title: "Invite My Friends"
-    //            ActionBar.placement: ActionBarPlacement.OnBar
-    //            onTriggered: {
-    //                wordsPlus.ControlsForBBM(bbm_invitetodownload);
-    //            }
-    //        },
-    //        ActionItem {
-    //            title: "I Love WordsPlus!"
-    //            ActionBar.placement: ActionBarPlacement.OnBar
-    //            onTriggered: {
-    //                wordsPlus.ControlsForBBM(bbm_personalmessage);
-    //            }
-    //        },
-    //        ActionItem {
-    //            title: "I'm Busy Playing"
-    //            ActionBar.placement: ActionBarPlacement.OnBar
-    //            onTriggered: {
-    //                wordsPlus.ControlsForBBM(bbm_statusmessage);
-    //            }
-    //        }
-    //    ]
     Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
         background: Color.Black
         Container {
-            background: Color.create("#00629C")
-            preferredWidth: 768
-            verticalAlignment: VerticalAlignment.Top
-            Label {
-                text: "At Home."
-                verticalAlignment: VerticalAlignment.Center
+            //background: Color.Yellow
+            Container {
+                preferredWidth: 768
+                background: Color.create("#00629C")
+                verticalAlignment: VerticalAlignment.Top
+                Label {
+                    text: "At Home."
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Center
+                    textStyle {
+                        base: bigTextNormalWhite.style
+                    }
+                }
+            }
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+                }
+                rightPadding: 15
+                topPadding: 100
                 horizontalAlignment: HorizontalAlignment.Center
-                textStyle {
-                    base: bigTextNormalWhite.style
+                Container {
+                    rightPadding: 20
+                    layout: DockLayout {
+                    }
+                    //background: Color.Black
+                    ImageView {
+                        id: redHeart
+                        opacity: 1
+                        imageSource: "asset:///images/heart.png"
+                        onTouch: {
+                            invokeWebSite.trigger("bb.action.OPEN");
+                        }
+                    }
+                    //                    ImageView {
+                    //                        id: blueHeart
+                    //                        opacity: 1
+                    //                        imageSource: "asset:///images/heart_blue.png"
+                    //                    }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    topPadding: 40
+                    //background: Color.Black
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/l.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/o.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/v.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
                 }
             }
         }
@@ -58,7 +86,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/puzzleLetters.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: puzzleLettersAnimation
                 }
             }
@@ -68,7 +96,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/w.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: wAnimation
                     onStarted: {
                         oAnimation.delay = 500
@@ -82,7 +110,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/o.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: oAnimation
                     onStarted: {
                         rAnimation.delay = 1000
@@ -96,7 +124,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/r.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: rAnimation
                     onStarted: {
                         dAnimation.delay = 1500
@@ -110,7 +138,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/d.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: dAnimation
                 }
             }
@@ -120,7 +148,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/p.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: pAnimation
                     onStarted: {
                         lAnimation.delay = 500
@@ -134,7 +162,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/l.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: lAnimation
                     onStarted: {
                         uAnimation.delay = 1000
@@ -148,7 +176,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/u.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: uAnimation
                     onStarted: {
                         sAnimation.delay = 1500
@@ -162,7 +190,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/s.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: sAnimation
                     onStarted: {
                         byAnimation.delay = 2000
@@ -176,7 +204,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/by.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: byAnimation
                     onStarted: {
                         jiAnimation.delay = 2500
@@ -190,7 +218,7 @@ Container {
                 imageSource: "asset:///images/homeAnimation/ji.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: jiAnimation
                     onStarted: {
                         carterAnimation.delay = 3000
@@ -204,8 +232,21 @@ Container {
                 imageSource: "asset:///images/homeAnimation/carter.png"
                 preferredWidth: 500
                 preferredHeight: 500
-                animations: HomeTabAnimation {
+                animations: HomePageAnimation {
                     id: carterAnimation
+                }
+            }
+        }
+        Container {
+            bottomPadding: 250
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
+            Label {
+                text: "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
+                multiline: true
+                textStyle {
+                    base: subTitleNormalWhite.style
+                    textAlign: TextAlign.Center
                 }
             }
         }
@@ -246,6 +287,13 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
+        },
+        Invocation {
+            id: invokeWebSite
+            query: InvokeQuery {
+                mimeType: "text/html"
+                uri: "http://www.twocasualcoders.com"
+            }
         },
         Sheet {
             id: aboutSheet

@@ -12,7 +12,7 @@ Page {
             Label {
                 text: "WordsPlus (v...)"
                 textStyle {
-                    base: bigTextNormalWhite.style
+                    base: aboutSheetBigTextNormalWhite.style
                 }
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
@@ -31,16 +31,14 @@ Page {
                         editable: false
                         touchPropagationMode: TouchPropagationMode.None
                         textStyle {
-                            base: bigBodyNormalWhite.style
-                            color: Color.create("#0098f0")
+                            base: aboutSheetBigBodyNormalBlue.style
                         }
                     }
                 }
                 Label {
                     text: "by Jason I. Carter"
                     textStyle {
-                        base: subTitleNormalBlue.style
-                        color: Color.create("#0098f0")
+                        base: aboutSheetSubTitleNormalWhite.style
                     }
                 }
             }
@@ -53,25 +51,67 @@ Page {
                         touchPropagationMode: TouchPropagationMode.None
                         editable: false
                         textStyle {
-                            base: bigBodyNormalWhite.style
-                            color: Color.create("#0098f0")
+                            base: aboutSheetBigBodyNormalBlue.style
                         }
                     }
                 }
                 Label {
                     leftPadding: 25
-                    text: "jicarter@twocasualcoders.com"
+                    text: "Having problems? What to see a new feature added? \n\n" +
+                    "Help improve WordsPlus by sending any requests, suggestions or issues to " +
+                    "jason.ian.carter@hotmail.com or www.twocasualcoders.com"
+                    multiline: true
                     textStyle {
-                        base: subTitleNormalBlue.style
-                        color: Color.create("#0098f0")
+                        base: aboutSheetSubTitleNormalWhite.style
                     }
                 }
-                Label {
-                    leftPadding: 25
-                    text: "www.twocasualcoders.com"
-                    textStyle {
-                        base: subTitleNormalBlue.style
-                        color: Color.create("#0098f0")
+            }
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+                }
+                rightPadding: 15
+                topPadding: 100
+                horizontalAlignment: HorizontalAlignment.Center
+                Container {
+                    rightPadding: 20
+                    //background: Color.Black
+                    ImageView {
+                        imageSource: "asset:///images/men_at_work.png"
+                    }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    topPadding: 40
+                    //background: Color.Black
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/i.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/p.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/r.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/o.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/v.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        imageSource: "asset:///images/letters/selected/e.png"
                     }
                 }
             }
@@ -105,8 +145,40 @@ Page {
             title: "Close"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
+                wordsPlus.startTimer();
                 aboutSheet.close();
             }
+        }
+    ]
+    attachedObjects: [
+        // When modifying the SystemDefult fonts, like changing wieght or color,
+        // it is better from a memory consumption point of view to create text
+        // styles as attached objects.
+        TextStyleDefinition {
+            id: aboutSheetBigTextNormalWhite
+            base: SystemDefaults.TextStyles.BigText
+            color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: aboutSheetBigBodyNormalBlue
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: aboutSheetSubTitleNormalBlue
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: aboutSheetSubTitleNormalWhite
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
         }
     ]
 }

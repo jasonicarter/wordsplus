@@ -6,6 +6,7 @@ Page {
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
+                wordsPlus.stopTimer();
                 helpSheet.open();
             }
         }
@@ -19,48 +20,51 @@ Page {
             ActionItem {
                 title: "About"
                 onTriggered: {
+                    wordsPlus.stopTimer();
                     aboutSheet.open();
                 }
             },
             ActionItem {
                 title: "Category"
                 onTriggered: {
-                    aboutSheet.open();
+                    wordsPlus.stopTimer();
+                    categorySheet.open();
                 }
             },
             ActionItem {
-                title: "Stats"
+                title: "Review"
                 onTriggered: {
-                    aboutSheet.open();
+                    wordsPlus.stopTimer();
+                    statsSheet.open();
                 }
             }
         ]
     }
-//    //matching #define values in WordsPlus.cpp
-//        property int bbm_personalmessage: 6
-//        property int bbm_statusmessage: 7
-//        property int bbm_invitetodownload: 8
-//        actions: [
-//            ActionItem {
-//                title: "Invite My Friends"
-//                ActionBar.placement: ActionBarPlacement.OnBar
-//                onTriggered: {
-//                    wordsPlus.ControlsForBBM(bbm_invitetodownload);
-//                }
-//            },
-//            ActionItem {
-//                title: "I Love WordsPlus!"
-//                ActionBar.placement: ActionBarPlacement.OnBar
-//                onTriggered: {
-//                    wordsPlus.ControlsForBBM(bbm_personalmessage);
-//                }
-//            },
-//            ActionItem {
-//                title: "I'm Busy Playing"
-//                ActionBar.placement: ActionBarPlacement.OnBar
-//                onTriggered: {
-//                    wordsPlus.ControlsForBBM(bbm_statusmessage);
-//                }
-//            }
-//        ]
+    attachedObjects: [
+        Sheet {
+            id: aboutSheet
+            AboutSheet {
+            }
+        },
+        Sheet {
+            id: helpSheet
+            HelpSheet {
+            }
+        },
+        Sheet {
+            id: settingsSheet
+            SettingsSheet {
+            }
+        },
+        Sheet {
+            id: categorySheet
+            CategorySheet {
+            }
+        },
+        Sheet {
+             id: statsSheet
+             StatsSheet {
+             }  
+        }
+    ]
 }// Page

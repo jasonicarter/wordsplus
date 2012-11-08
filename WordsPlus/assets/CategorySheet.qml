@@ -13,7 +13,7 @@ Page {
                 verticalAlignment: VerticalAlignment.Top
                 horizontalAlignment: HorizontalAlignment.Center
                 textStyle {
-                    base: bigTextNormalWhite.style
+                    base: categorySheetBigTextNormalWhite.style
                 }
             }
         }
@@ -35,8 +35,7 @@ Page {
                         editable: false
                         touchPropagationMode: TouchPropagationMode.None
                         textStyle {
-                            base: SystemDefaults.TextStyles.BodyText
-                            color: Color.create("#0098f0")
+                            base: categorySheetBigBodyNormalBlue.style
                         }
                     }
                 }
@@ -74,8 +73,7 @@ Page {
                     horizontalAlignment: HorizontalAlignment.Left
                     touchPropagationMode: TouchPropagationMode.None
                     textStyle {
-                        base: SystemDefaults.TextStyles.BodyText
-                        color: Color.create("#0098f0")
+                        base: categorySheetBigBodyNormalBlue.style
                     }
                 }
                 Container {
@@ -85,19 +83,27 @@ Page {
                     ToggleButton {
                         enabled: true
                         onCheckedChanged: {
-                            if (checked == true) categoryListView.enabled = false; else categoryListView.enabled = true;
+                            if (checked == true) { 
+                                categoryListView.enabled = false;
+                                locationTxt.textStyle.color = Color.create("#fafafa");
+                            } 
+                            else {
+                                categoryListView.enabled = true;
+                                locationTxt.textStyle.color = Color.create("#555555");
+                            }
                         }
                     }
                 }
             }
             Container {
                 TextArea {
+                    id: locationTxt
                     text: "Now there's no limit to the number of different words you can search! \n\n" + "Location Services must be turned ON for this feature to work correctly"
                     editable: false
                     touchPropagationMode: TouchPropagationMode.None
                     textStyle {
-                        base: SystemDefaults.TextStyles.SubtitleText
-                        color: Color.create("#555555")
+                        base: categorySheetSubTitleNormalWhite.style
+                        color: Color.create("#555555");
                     }
                 }
             }
@@ -118,6 +124,37 @@ Page {
                 wordsPlus.intializePlayArea();
                 categorySheet.close();
             }
+        }
+    ]
+    attachedObjects: [
+        // When modifying the SystemDefult fonts, like changing wieght or color,
+        // it is better from a memory consumption point of view to create text
+        // styles as attached objects.
+        TextStyleDefinition {
+            id: categorySheetBigTextNormalWhite
+            base: SystemDefaults.TextStyles.BigText
+            color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: categorySheetBigBodyNormalBlue
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: categorySheetSubTitleNormalBlue
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
+        },
+        TextStyleDefinition {
+            id: categorySheetSubTitleNormalWhite
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
         }
     ]
 }

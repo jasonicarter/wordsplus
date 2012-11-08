@@ -1,6 +1,9 @@
 import bb.cascades 1.0
 
 Container {
+    property int bbm_personalmessage: 6
+    property int bbm_statusmessage: 7
+    property int bbm_invitetodownload: 8
     Container { // bottom panel
         background: Color.Gray
         verticalAlignment: VerticalAlignment.Bottom
@@ -23,8 +26,9 @@ Container {
                     verticalAlignment: VerticalAlignment.Center
                     horizontalAlignment: HorizontalAlignment.Left
                     Container {
-                        leftPadding: 35
                         ImageView {
+                            preferredHeight: 100
+                            preferredWidth: 100
                             imageSource: "asset:///images/test.png"
                         }
                         Label {
@@ -38,30 +42,25 @@ Container {
                     }
                     contextActions: [
                         ActionSet {
-                            title: "Animations"
-                            subtitle: "Choose your animation"
-
-                            // This action plays the translation animation
+                            title: "Share The Love."
+                            subtitle: "HOW DO YOU BBM?"
                             ActionItem {
-                                title: "Slide"
-                                imageSource: "asset:///images/test.png"
+                                title: "Invite My Friends"
                                 onTriggered: {
+                                    wordsPlus.ControlsForBBM(bbm_invitetodownload);
                                 }
                             }
-
-                            // This action plays the rotation animation
                             ActionItem {
-                                title: "Spin"
-                                imageSource: "asset:///images/test.png"
+                                title: "I Love WordsPlus!"
                                 onTriggered: {
+                                    wordsPlus.ControlsForBBM(bbm_personalmessage);
                                 }
                             }
-
-                            // This action plays the scaling animation
                             ActionItem {
-                                title: "Grow"
+                                title: "I'm Busy Playing"
                                 imageSource: "asset:///images/grow_action.png"
                                 onTriggered: {
+                                    wordsPlus.ControlsForBBM(bbm_statusmessage);
                                 }
                             }
                         } // end of ActionSet
@@ -117,8 +116,10 @@ Container {
                     verticalAlignment: VerticalAlignment.Center
                     horizontalAlignment: HorizontalAlignment.Right
                     Container {
-                        rightPadding: 35
+                        horizontalAlignment: HorizontalAlignment.Center
                         ImageView {
+                            preferredHeight: 100
+                            preferredWidth: 100
                             imageSource: "asset:///images/test.png"
                         }
                         Label {
