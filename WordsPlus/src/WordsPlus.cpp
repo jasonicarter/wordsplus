@@ -30,9 +30,12 @@
 #define INVITETODOWNLOAD 8
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
+#define SOUNDBACKGROUNDMUSIC "X.WAV"
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
 #define SOUNDLEVELSELECTED "levelSelected"
 #define SOUND "settingsSound"
+#define MUSIC "settingsMusic"
+#define PROFILEBOXUPDATES "settingsProfileBox"
 #define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
 #define SCORE "settingsScore"
 
@@ -85,6 +88,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 			InitializeHomePage();
 			InitializePuzzlePage();
+			//playSound(SOUNDBACKGROUNDMUSIC);
 			Application::instance()->setScene(appPage);
 		}
 	}
@@ -108,7 +112,8 @@ void WordsPlus::InitializeHomePage() {
 void WordsPlus::InitializePuzzlePage() {
 
 	LOG("InitializePuzzlePage");
-	QmlDocument* qmlContent = QmlDocument::create("asset:///PlayPuzzlePage.qml");
+	QmlDocument* qmlContent = QmlDocument::create(
+			"asset:///PlayPuzzlePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
 	puzzlePageControl = qmlContent->createRootObject<Control>();
 
@@ -121,9 +126,11 @@ void WordsPlus::intializePlayArea() {
 
 //	LOG("intializePlayArea");
 
-	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
+	mPlayAreaContainer = puzzlePageControl->findChild<Container*>(
+			"playAreaContainer");
 	mPlayAreaContainer->removeAll();
-	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
+	mWordsToFindContainer = puzzlePageControl->findChild<Container*>(
+			"wordsToFind");
 	mWordsToFindContainer->removeAll();
 
 	Container* pContainer = new Container();
@@ -285,7 +292,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			//deltaY increases (+ve) when finger moves top to bottom
 			if (length / 60 == multiple && length > 0) {
 				position += 1;
-				LOG("%i", position);
+				//LOG("%i", position);
 				if (position < upperbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
 					tileNumbers.append(position);
@@ -617,6 +624,8 @@ void WordsPlus::playSound(const QString &msg) {
 			SystemSound::play(SystemSound::InputKeypress);
 		if (msg == SOUNDLEVELCOMPLETED)
 			mSoundManager->play(msg);
+		if(msg == SOUNDBACKGROUNDMUSIC)
+			mSoundManager->play(msg);
 	}
 
 }
@@ -633,6 +642,34 @@ void WordsPlus::setSound(bool status) {
 	QString strSoundEnabled = QString::number(isSoundEnabled);
 	settings->saveValueFor(SOUND, strSoundEnabled);
 	emit soundChanged();
+}
+
+bool WordsPlus::getMusic() {
+	bool okMusic;
+	QString strMusicEnabled = settings->getValueFor(MUSIC, "1");
+	isMusicEnabled = strMusicEnabled.toInt(&okMusic, 10);
+	return isMusicEnabled;
+}
+
+void WordsPlus::setMusic(bool status) {
+	isMusicEnabled = status;
+	QString strMusicEnabled = QString::number(isMusicEnabled);
+	settings->saveValueFor(MUSIC, strMusicEnabled);
+	emit musicChanged();
+}
+
+bool WordsPlus::getProfileBox() {
+	bool okProfile;
+	QString strProfileBoxEnabled = settings->getValueFor(PROFILEBOXUPDATES, "1");
+	isProfileBoxEnabled = strProfileBoxEnabled.toInt(&okProfile, 10);
+	return isProfileBoxEnabled;
+}
+
+void WordsPlus::setProfileBox(bool status) {
+	isProfileBoxEnabled = status;
+	QString strProfileBoxEnabled = QString::number(isProfileBoxEnabled);
+	settings->saveValueFor(PROFILEBOXUPDATES, strProfileBoxEnabled);
+	emit profileBoxChanged();
 }
 
 QString WordsPlus::getPuzzleCompletedTime() {
@@ -693,12 +730,14 @@ void WordsPlus::ControlsForBBM(int state) {
 		break;
 	}
 	case PROFILEBOXPUZZLECOMPLETED: {
-		QString msg =
-				QString("Completed another puzzle! \nTime: %1 Score: %2").arg(
-						(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-						getScore());
-		profileBox = new ProfileBox();
-		profileBox->createItem(msg, "profileBox");
+		if (getProfileBox()) {
+			QString msg = QString(
+					"Completed another puzzle! \nTime: %1 Score: %2").arg(
+					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+					getScore());
+			profileBox = new ProfileBox();
+			profileBox->createItem(msg, "profileBox");
+		}
 		break;
 	}
 	case PRESONALMESSAGE: {

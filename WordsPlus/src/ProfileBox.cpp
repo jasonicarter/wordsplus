@@ -29,7 +29,7 @@ using namespace bb::cascades;
 ProfileBox::ProfileBox()
 {
   m_profileBox = new bb::platform::bbm::ProfileBox(Global::instance()->getContext(), this);
-  //registerIcons();
+  registerIcons();
 }
 
 void ProfileBox::registerIcons()

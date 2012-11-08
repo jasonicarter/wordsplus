@@ -24,10 +24,6 @@ Page {
             verticalAlignment: VerticalAlignment.Center
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle
-                //                preferredWidth: 720
-                //                preferredHeight: 900
-                //                verticalAlignment: VerticalAlignment.Center
-                //                horizontalAlignment: HorizontalAlignment.Center
                 //background: Color.Gray
                 Container {
                     Container { // sound
@@ -51,13 +47,13 @@ Page {
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Right
                             ToggleButton {
-                                enabled: true
-                                checked: true
+                                id: soundEffects
+                                checked: wordsPlus.soundOn
                                 onCheckedChanged: {
-                                    if (checked == true) {
-                                        wordsPlus.sound = true;
-                                    } else {
-                                        wordsPlus.sound = true;
+                                    if (soundEffects.checked == true) {
+                                        wordsPlus.soundOn = true;
+                                    } else if (soundEffects.checked == false) {
+                                        wordsPlus.soundOn = false;
                                     }
                                 }
                             }
@@ -87,13 +83,13 @@ Page {
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Right
                             ToggleButton {
-                                enabled: true
-                                checked: true
+                                id: music
+                                checked: wordsPlus.musicOn
                                 onCheckedChanged: {
-                                    if (checked == true) {
-                                        wordsPlus.sound = true;
-                                    } else {
-                                        wordsPlus.sound = true;
+                                    if (music.checked == true) {
+                                        wordsPlus.musicOn = true;
+                                    } else if (music.checked == false ) {
+                                        wordsPlus.musicOn = false;
                                     }
                                 }
                             }
@@ -164,13 +160,13 @@ Page {
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Right
                             ToggleButton {
-                                enabled: true
-                                checked: true
+                                id: profileBox
+                                checked: wordsPlus.profileBoxOn
                                 onCheckedChanged: {
-                                    if (checked == true) {
-                                        wordsPlus.sound = true;
-                                    } else {
-                                        wordsPlus.sound = true;
+                                    if (profileBox.checked == true) {
+                                        wordsPlus.profileBoxOn = true;
+                                    } else if (profileBox.checked == false) {
+                                        wordsPlus.profileBoxOn = false;
                                     }
                                 }
                             }
