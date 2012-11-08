@@ -9,14 +9,18 @@ Container {
         verticalAlignment: VerticalAlignment.Bottom
         Container {
             preferredWidth: 768
-            preferredHeight: 5
-            background: Color.create("#FF8C00")
+            preferredHeight: 3
+            //background: Color.create("#FF8C00")
+            //background: Color.create("#CC3F10")
+            //background: Color.create("#00629C")
+            background: Color.create("#262626")
+            //background: Color.Black
         }
-        Container {
+        Container { // whole panel
             preferredWidth: 768
             preferredHeight: 200
             background: Color.Black
-            Container {
+            Container { // image panel
                 //background: Color.Yellow
                 preferredWidth: 768
                 preferredHeight: 150
@@ -46,19 +50,21 @@ Container {
                             subtitle: "HOW DO YOU BBM?"
                             ActionItem {
                                 title: "Invite My Friends"
+                                imageSource: "asset:///images/invite.png"
                                 onTriggered: {
                                     wordsPlus.ControlsForBBM(bbm_invitetodownload);
                                 }
                             }
                             ActionItem {
                                 title: "I Love WordsPlus!"
+                                imageSource: "asset:///images/heart_small.png"
                                 onTriggered: {
                                     wordsPlus.ControlsForBBM(bbm_personalmessage);
                                 }
                             }
                             ActionItem {
                                 title: "I'm Busy Playing"
-                                imageSource: "asset:///images/grow_action.png"
+                                imageSource: "asset:///images/busy.png"
                                 onTriggered: {
                                     wordsPlus.ControlsForBBM(bbm_statusmessage);
                                 }
@@ -67,8 +73,13 @@ Container {
                     ] // end of contextActions list
                 } // share
                 Container {
-                    topPadding: 15
-                    verticalAlignment: VerticalAlignment.Center
+                    layout: DockLayout {
+                    }
+                    property real dx: 0
+                    property real currentX: 0
+                    property real deltaThreshold: 100
+                    topPadding: 20
+                    verticalAlignment: VerticalAlignment.Top
                     horizontalAlignment: HorizontalAlignment.Center
                     Container {
                         layout: StackLayout {
@@ -76,39 +87,153 @@ Container {
                         }
                         leftPadding: 20
                         verticalAlignment: VerticalAlignment.Center
-                        touchPropagationMode: TouchPropagationMode.None //change this later
                         ImageView {
+                            id: pLetter
                             preferredHeight: 75
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/p.png"
+                            onTouch: {
+                                if (event.isDown) {
+                                    pLetter.imageSource = "asset:///images/letters/highlight/p.png"
+                                } else if (event.isUp) {
+                                    pLetter.imageSource = "asset:///images/letters/p.png"
+                                }
+                            }
                         }
                         ImageView {
+                            id: lLetter
                             preferredHeight: 75
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/l.png"
+                            onTouchEnter: {
+                                lLetter.imageSource = "asset:///images/letters/highlight/l.png"
+                            }
                         }
                         ImageView {
+                            id: aLetter
                             preferredHeight: 75
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/a.png"
+                            onTouchEnter: {
+                                aLetter.imageSource = "asset:///images/letters/highlight/a.png"
+                            }
                         }
                         ImageView {
+                            id: yLetter
                             preferredHeight: 75
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/y.png"
+                            onTouchEnter: {
+                                yLetter.imageSource = "asset:///images/letters/highlight/y.png"
+                                if (event.isUp()) {
+                                    wordsPlus.intializePlayArea();
+                                    pLetter.imageSource = "asset:///images/letters/p.png"
+                                    lLetter.imageSource = "asset:///images/letters/l.png"
+                                    aLetter.imageSource = "asset:///images/letters/a.png"
+                                    yLetter.imageSource = "asset:///images/letters/y.png"
+                                }
+                            }
+                            onTouch: {
+                            }
+                            onTouchExit: {
+                                wordsPlus.intializePlayArea();
+                                pLetter.imageSource = "asset:///images/letters/p.png"
+                                lLetter.imageSource = "asset:///images/letters/l.png"
+                                aLetter.imageSource = "asset:///images/letters/a.png"
+                                yLetter.imageSource = "asset:///images/letters/y.png"
+                            }
                         }
                     }
-                    Label {
-                        text: "swipe me"
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                        touchPropagationMode: TouchPropagationMode.None //change this later
-                        textStyle {
-                            base: btmNavPanelSubTitleNormalWhite.style
-                        }
-                    }
-                    onTouch: {
-                        wordsPlus.intializePlayArea();
+                    //                    Container {
+                    //                        layout: StackLayout {
+                    //                            orientation: LayoutOrientation.LeftToRight
+                    //                        }
+                    //                        leftPadding: 20
+                    //                        verticalAlignment: VerticalAlignment.Center
+                    //                        touchPropagationMode: TouchPropagationMode.None //change this later
+                    //                        ImageView {
+                    //                            id: pLetter
+                    //                            opacity: 0
+                    //                            preferredHeight: 75
+                    //                            preferredWidth: 75
+                    //                            imageSource: "asset:///images/letters/highlight/p.png"
+                    //                            animations: BtmNavAnimation {
+                    //                                id: pLetterAnimation
+                    //                                onStarted: {
+                    //                                    lLetterAnimation.delay = 500
+                    //                                    lLetterAnimation.play();
+                    //                                }
+                    //                            }
+                    //                        }
+                    //                        ImageView {
+                    //                            id: lLetter
+                    //                            opacity: 0
+                    //                            preferredHeight: 75
+                    //                            preferredWidth: 75
+                    //                            imageSource: "asset:///images/letters/highlight/l.png"
+                    //                            animations: BtmNavAnimation {
+                    //                                id: lLetterAnimation
+                    //                                onStarted: {
+                    //                                    aLetterAnimation.delay = 500
+                    //                                    aLetterAnimation.play();
+                    //                                }
+                    //                            }
+                    //                        }
+                    //                        ImageView {
+                    //                            id: aLetter
+                    //                            opacity: 0
+                    //                            preferredHeight: 75
+                    //                            preferredWidth: 75
+                    //                            imageSource: "asset:///images/letters/highlight/a.png"
+                    //                            animations: BtmNavAnimation {
+                    //                                id: aLetterAnimation
+                    //                                onStarted: {
+                    //                                    yLetterAnimation.delay = 500
+                    //                                    yLetterAnimation.play();
+                    //                                }
+                    //                            }
+                    //                        }
+                    //                        ImageView {
+                    //                            id: yLetter
+                    //                            opacity: 0
+                    //                            preferredHeight: 75
+                    //                            preferredWidth: 75
+                    //                            imageSource: "asset:///images/letters/highlight/y.png"
+                    //                            animations: BtmNavAnimation {
+                    //                                id: yLetterAnimation
+                    //                                onEnded: {
+                    //                                    wordsPlus.intializePlayArea();
+                    //                                    pLetter.opacity = 0;
+                    //                                    lLetter.opacity = 0;
+                    //                                    aLetter.opacity = 0;
+                    //                                    yLetter.opacity = 0;
+                    //                                }
+                    //                            }
+                    //                        }
+                    //                    } // end of highlighted letters
+                    //                    onTouchExit: {
+                    //                        currentX = 0
+                    //                    }
+                    //                    onTouch: {
+                    //                        if (event.isDown()) {
+                    //                            dx = event.windowX;
+                    //                        } else if (event.isMove()) {
+                    //                            currentX = event.windowX - dx;
+                    //                            if (currentX > deltaThreshold) {
+                    //                                pLetterAnimation.play();
+                    //                            }
+                    //                        } else if (event.isUp()) {
+                    //                            currentX = 0;
+                    //                        }
+                    //                    }
+                } // end of letter container
+                Label {
+                    text: "swipe me"
+                    verticalAlignment: VerticalAlignment.Bottom
+                    horizontalAlignment: HorizontalAlignment.Center
+                    touchPropagationMode: TouchPropagationMode.None //change this later
+                    textStyle {
+                        base: btmNavPanelSubTitleNormalWhite.style
                     }
                 }
                 Container {
@@ -117,10 +242,16 @@ Container {
                     horizontalAlignment: HorizontalAlignment.Right
                     Container {
                         horizontalAlignment: HorizontalAlignment.Center
+                        touchPropagationMode: TouchPropagationMode.PassThrough
                         ImageView {
                             preferredHeight: 100
                             preferredWidth: 100
                             imageSource: "asset:///images/test.png"
+                            //                            onTouch: {
+                            //                                if (event.isUp()) {
+                            //                                    wordsPlus.InitializeHomePage();
+                            //                                }
+                            //                            }
                         }
                         Label {
                             text: "tap me"
@@ -131,12 +262,16 @@ Container {
                             }
                         }
                     }
-                    onTouch: {
-                        wordsPlus.InitializeHomePage();
-                    }
                 }
+            } // image panel
+            Container { //divider
+                preferredWidth: 768
+                preferredHeight: 50
+                background: Color.create("#00629C")
+                verticalAlignment: VerticalAlignment.Bottom
+                horizontalAlignment: HorizontalAlignment.Center
             }
-        }
+        } // whole panel
     } // bottom panel
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,

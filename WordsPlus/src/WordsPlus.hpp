@@ -49,7 +49,9 @@ public:
     Q_PROPERTY (const QString puzzleWords READ getPuzzleWords WRITE setPuzzleWords NOTIFY puzzleWordsChanged);
     Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
     Q_PROPERTY (const QString totalWordsFound READ getTotalWordsFound NOTIFY totalWordsFoundChanged);
-    Q_PROPERTY (bool sound READ getSound WRITE setSound NOTIFY soundChanged);
+    Q_PROPERTY (bool soundOn READ getSound WRITE setSound NOTIFY soundChanged);
+    Q_PROPERTY (bool musicOn READ getMusic WRITE setMusic NOTIFY musicChanged);
+    Q_PROPERTY (bool profileBoxOn READ getProfileBox WRITE setProfileBox NOTIFY profileBoxChanged);
     Q_PROPERTY (const QString puzzleCompletedTime READ getPuzzleCompletedTime NOTIFY puzzleCompletedTimeChanged);
     Q_PROPERTY (int score READ getScore WRITE setScore NOTIFY scoreChanged);
 
@@ -66,6 +68,12 @@ public:
     bool getSound();
     void setSound(bool status);
 
+    bool getMusic();
+    void setMusic(bool status);
+
+    bool getProfileBox();
+    void setProfileBox(bool status);
+
     QString getPuzzleCompletedTime();
 
     int getScore();
@@ -81,6 +89,8 @@ signals:
 	void timeChanged();
 	void totalWordsFoundChanged();
 	void soundChanged();
+	void musicChanged();
+	void profileBoxChanged();
 	void puzzleCompletedTimeChanged();
 	void scoreChanged();
 
@@ -120,6 +130,8 @@ private:
 	int numberOfWords;
 	int numberOfWordsFound;
 	bool isSoundEnabled;
+	bool isMusicEnabled;
+	bool isProfileBoxEnabled;
 
     QString m_strCategory;
     QString m_strPuzzleWords;
