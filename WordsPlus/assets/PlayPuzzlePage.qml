@@ -25,15 +25,27 @@ Container { // root Container
         Container { // center container
             //background: Color.Green
             horizontalAlignment: HorizontalAlignment.Center
-            //verticalAlignment: VerticalAlignment.Center
             Container {
+                layout: DockLayout {
+                }
                 topPadding: 125
-                horizontalAlignment: HorizontalAlignment.Left
+                //background: Color.Green
+                preferredWidth: 720
+                //horizontalAlignment: HorizontalAlignment.Left
                 Label {
                     id: timerDisplay
                     text: "TIME: " + wordsPlus.time
+                    horizontalAlignment: HorizontalAlignment.Left
                     textStyle {
                         base: puzzlePageSubTitleNormalWhite.style
+                    }
+                }
+                Label {
+                    id: letterDisplay
+                    text: wordsPlus.selectedLetters
+                    horizontalAlignment: HorizontalAlignment.Right
+                    textStyle {
+                        base: puzzlePageSubTitleNormalBurntOrgange.style
                     }
                 }
             }
@@ -87,6 +99,13 @@ Container { // root Container
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
+        },
+        TextStyleDefinition {
+            id: puzzlePageSubTitleNormalBurntOrgange
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#CC3F10")
         },
         Sheet {
             id: aboutSheet

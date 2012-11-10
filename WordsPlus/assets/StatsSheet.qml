@@ -10,7 +10,7 @@ Page {
             background: Color.create("#00629C")
             preferredWidth: 768
             Label {
-                text: "Your Stats."
+                text: "To Brag About."
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
                 textStyle {

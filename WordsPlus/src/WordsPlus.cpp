@@ -38,6 +38,7 @@
 #define PROFILEBOXUPDATES "settingsProfileBox"
 #define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
 #define SCORE "settingsScore"
+#define GAMESPLAYED "settingsGamesPlayed"
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -60,6 +61,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	timeSec = 0;
 	stopWatch = NULL;
 	numberOfWordsFound = 0;
+	m_strSeletedLetters = "";
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -83,8 +85,9 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 			app->setCover(new ActiveFrame());
 
-			//possible connecting to a function here so on thumbnail - stop timer
-			//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
+			// deal with stuff when thumbnailed or re-opened
+			QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
+			QObject::connect(Application::instance(), SIGNAL( fullscreen() ), this, SLOT(onFullscreen()));
 
 			InitializeHomePage();
 			InitializePuzzlePage();
@@ -100,9 +103,19 @@ WordsPlus::~WordsPlus() {
 	delete mSoundManager;
 }
 
-void WordsPlus::InitializeHomePage() {
+void WordsPlus::onThumbnail() {
+    stopTimer();
+}
 
-	LOG("InitializeHomePage");
+void WordsPlus::onFullscreen() {
+    startTimer();
+}
+
+void WordsPlus::InitializeHomePage() {
+	//LOG("InitializeHomePage");
+	//stop and null timer
+	//prevent it from running in background even if not on puzle page
+	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
 	homePageControl = qmlContent->createRootObject<Control>();
@@ -413,6 +426,8 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 		QString objURL = v.value<QString>();
 		QStringList imageSrc = objURL.split("/");
 		int index = imageSrc.size() - 1; // size gives count not last index
+		QStringList letterSrc = (imageSrc[index]).split(".");
+		QString letter = letterSrc[0]; //a.png
 
 		switch (stateOfLetter) {
 		case NORMAL:
@@ -428,6 +443,7 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 			imageSource = QString("asset:///images/letters/highlight/%1").arg(
 					imageSrc[index]);
 			playSound(SOUNDLEVELSELECTED);
+			setSelectedLetters(letter);
 			break;
 		}
 
@@ -442,6 +458,9 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 	int ii;
 	QString selectedWord;
 	QStringList puzzleWords;
+
+	//whether word found or not blank out selectedLetters
+	setSelectedLetters("clear");
 
 	// get array of puzzle words
 	puzzleWords = getPuzzleWords().split(" ");
@@ -479,7 +498,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		numberOfWordsFound++;
 		CrossOutPuzzleWord(selectedWord);
 
-		// save off total words found
+		// save off total words found - create a setter
 		bool ok;
 		int found = settings->getValueFor(WORDSFOUND, "0").toInt(&ok, 10);
 		if (ok) {
@@ -489,6 +508,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		}
 
 		if (numberOfWordsFound == numberOfWords) { // Puzzle Completed
+			setGamesPlayed();
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
@@ -721,6 +741,44 @@ void WordsPlus::setScore(int puzzleTime) {
 
 }
 
+int WordsPlus::getGamesPlayed() {
+
+	bool okGames;
+	QString strPlayed = settings->getValueFor(GAMESPLAYED, "0");
+	int numberOfGames = strPlayed.toInt(&okGames, 10);
+
+	return numberOfGames;
+
+}
+
+void WordsPlus::setGamesPlayed() {
+
+	bool okGames;
+	QString strPlayed = settings->getValueFor(GAMESPLAYED, "0");
+	int numberOfGames = strPlayed.toInt(&okGames, 10);
+
+	numberOfGames++; //increase by 1
+
+	settings->saveValueFor(GAMESPLAYED, QString::number(numberOfGames));
+	emit gamesPlayedChanged();
+
+}
+
+void WordsPlus::setSelectedLetters(QString letter) {
+
+	if(letter == "clear") {
+		m_strSeletedLetters = "";
+	}
+	else {
+		m_strSeletedLetters = m_strSeletedLetters.append(letter.toUpper());
+	}
+	emit selectedLettersChanged();
+}
+
+QString WordsPlus::getSelectedLetters() {
+	return m_strSeletedLetters;
+}
+
 void WordsPlus::ControlsForBBM(int state) {
 
 	switch (state) {
@@ -750,6 +808,11 @@ void WordsPlus::ControlsForBBM(int state) {
 		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(
 				m_userProfile);
 		updateProfilePage->saveStatus();
+		break;
+	}
+	case INVITETODOWNLOAD: {
+		InviteToDownload *inviteToDownload = new InviteToDownload();
+		inviteToDownload->sendInvite();
 		break;
 	}
 	}
