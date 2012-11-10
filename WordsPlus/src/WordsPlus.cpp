@@ -32,13 +32,14 @@
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
-#define SOUNDLEVELSELECTED "levelSelected"
+#define SOUNDLETTERSELECTED "letterSelected"
 #define SOUND "settingsSound"
 #define MUSIC "settingsMusic"
 #define PROFILEBOXUPDATES "settingsProfileBox"
 #define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
 #define SCORE "settingsScore"
 #define GAMESPLAYED "settingsGamesPlayed"
+#define DIFFICULTY "settingsDifficulity"
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -159,7 +160,7 @@ void WordsPlus::intializePlayArea() {
 		std::string cat = getCategory().toLower().toStdString();
 		cat.append(".txt");
 
-		char** letter = createNewPuzzle((char*) cat.c_str());
+		char** letter = createNewPuzzle((char*) cat.c_str(), getDifficulty());
 		char** puzzleWords = returnPuzzleWords();
 
 		QString listOfWords;
@@ -442,7 +443,7 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 		case HIGHLIGHT:
 			imageSource = QString("asset:///images/letters/highlight/%1").arg(
 					imageSrc[index]);
-			playSound(SOUNDLEVELSELECTED);
+			playSound(SOUNDLETTERSELECTED);
 			setSelectedLetters(letter);
 			break;
 		}
@@ -637,10 +638,10 @@ QString WordsPlus::getTotalWordsFound() {
 	return settings->getValueFor(WORDSFOUND, "0");
 }
 
-void WordsPlus::playSound(const QString &msg) {
+void WordsPlus::playSound(const QString msg) {
 
 	if (getSound()) { // if true play sound
-		if (msg == SOUNDLEVELSELECTED)
+		if (msg == SOUNDLETTERSELECTED)
 			SystemSound::play(SystemSound::InputKeypress);
 		if (msg == SOUNDLEVELCOMPLETED)
 			mSoundManager->play(msg);
@@ -777,6 +778,23 @@ void WordsPlus::setSelectedLetters(QString letter) {
 
 QString WordsPlus::getSelectedLetters() {
 	return m_strSeletedLetters;
+}
+
+int WordsPlus::getDifficulty() {
+
+	bool okDiff;
+	QString strDiff = settings->getValueFor(DIFFICULTY, "8");
+	puzzleDifficulty = strDiff.toInt(&okDiff, 10);
+
+	return puzzleDifficulty;
+
+}
+
+void WordsPlus::setDifficulty(int difficulty) {
+
+	settings->saveValueFor(DIFFICULTY, QString::number(difficulty));
+	emit difficultyChanged();
+
 }
 
 void WordsPlus::ControlsForBBM(int state) {

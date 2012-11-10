@@ -96,6 +96,7 @@ Container {
                             onTouch: {
                                 if (event.isDown()) {
                                     pLetter.imageSource = "asset:///images/letters/highlight/p.png"
+                                    wordsPlus.playSound("letterSelected");
                                 } else if (event.isUp()) {
                                     pLetter.imageSource = "asset:///images/letters/p.png"
                                 }
@@ -109,6 +110,7 @@ Container {
                             onTouchEnter: {
                                 if (pLetter.imageSource == "asset:///images/letters/highlight/p.png") {
                                     lLetter.imageSource = "asset:///images/letters/highlight/l.png"
+                                    wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouch: {
@@ -126,6 +128,7 @@ Container {
                             onTouchEnter: {
                                 if (lLetter.imageSource == "asset:///images/letters/highlight/l.png") {
                                     aLetter.imageSource = "asset:///images/letters/highlight/a.png"
+                                    wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouch: {
@@ -144,6 +147,7 @@ Container {
                             onTouchEnter: {
                                 if (aLetter.imageSource == "asset:///images/letters/highlight/a.png") {
                                     yLetter.imageSource = "asset:///images/letters/highlight/y.png"
+                                    wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouchExit: {

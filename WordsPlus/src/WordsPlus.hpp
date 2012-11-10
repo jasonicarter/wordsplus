@@ -45,6 +45,7 @@ public:
     Q_INVOKABLE void stopTimer();
     Q_INVOKABLE void resetTimer();
     Q_INVOKABLE void ControlsForBBM(int state);
+    Q_INVOKABLE void playSound(const QString msg);
 
     Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
     Q_PROPERTY (const QString puzzleWords READ getPuzzleWords WRITE setPuzzleWords NOTIFY puzzleWordsChanged);
@@ -57,6 +58,7 @@ public:
     Q_PROPERTY (int score READ getScore WRITE setScore NOTIFY scoreChanged);
     Q_PROPERTY (int gamesPlayed READ getGamesPlayed NOTIFY gamesPlayedChanged);
     Q_PROPERTY (const QString selectedLetters READ getSelectedLetters WRITE setSelectedLetters NOTIFY selectedLettersChanged);
+    Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
 
     QString getCategory();
     void setCategory(const QString cat);
@@ -66,7 +68,6 @@ public:
 
     QString getTime();
     QString getTotalWordsFound();
-    void playSound(const QString &msg);
 
     bool getSound();
     void setSound(bool status);
@@ -88,6 +89,9 @@ public:
     QString getSelectedLetters();
     void setSelectedLetters(QString letter);
 
+    int getDifficulty();
+    void setDifficulty(int difficulty);
+
 private slots:
 	void onTileTouch(bb::cascades::TouchEvent *event);
 	void onTick();
@@ -106,6 +110,7 @@ signals:
 	void scoreChanged();
 	void gamesPlayedChanged();
 	void selectedLettersChanged();
+	void difficultyChanged();
 
 private:
 	void initTimer();
@@ -143,6 +148,7 @@ private:
 	int numberOfWords;
 	int numberOfWordsFound;
 	int numberOfGames;
+	int puzzleDifficulty;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
