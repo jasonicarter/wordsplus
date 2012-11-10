@@ -10,6 +10,7 @@
 #include "RegistrationHandler.hpp"
 #include "Global.hpp"
 #include "UpdateProfilePage.hpp"
+#include "InviteToDownload.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -54,6 +55,8 @@ public:
     Q_PROPERTY (bool profileBoxOn READ getProfileBox WRITE setProfileBox NOTIFY profileBoxChanged);
     Q_PROPERTY (const QString puzzleCompletedTime READ getPuzzleCompletedTime NOTIFY puzzleCompletedTimeChanged);
     Q_PROPERTY (int score READ getScore WRITE setScore NOTIFY scoreChanged);
+    Q_PROPERTY (int gamesPlayed READ getGamesPlayed NOTIFY gamesPlayedChanged);
+    Q_PROPERTY (const QString selectedLetters READ getSelectedLetters WRITE setSelectedLetters NOTIFY selectedLettersChanged);
 
     QString getCategory();
     void setCategory(const QString cat);
@@ -74,14 +77,22 @@ public:
     bool getProfileBox();
     void setProfileBox(bool status);
 
+    int getGamesPlayed();
+    void setGamesPlayed();
+
     QString getPuzzleCompletedTime();
 
     int getScore();
     void setScore(int puzzleTime);
 
+    QString getSelectedLetters();
+    void setSelectedLetters(QString letter);
+
 private slots:
 	void onTileTouch(bb::cascades::TouchEvent *event);
 	void onTick();
+	void onThumbnail();
+	void onFullscreen();
 
 signals:
 	void categoryChanged(const QString);
@@ -93,6 +104,8 @@ signals:
 	void profileBoxChanged();
 	void puzzleCompletedTimeChanged();
 	void scoreChanged();
+	void gamesPlayedChanged();
+	void selectedLettersChanged();
 
 private:
 	void initTimer();
@@ -129,6 +142,7 @@ private:
 	int timeSec;
 	int numberOfWords;
 	int numberOfWordsFound;
+	int numberOfGames;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
@@ -136,6 +150,7 @@ private:
     QString m_strCategory;
     QString m_strPuzzleWords;
     QString m_strTime;
+    QString m_strSeletedLetters;
     QList<int> tileNumbers;
     QDateTime timeKeeper;
     Timer *stopWatch;

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Thu Nov 8 14:03:26 2012
+** Created: Fri Nov 9 22:30:37 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,12 +23,12 @@ static const uint qt_meta_data_WordsPlus[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
-       9,  104, // properties
+      22,   14, // methods
+      11,  124, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       9,       // signalCount
+      11,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       11,   10,   10,   10, 0x05,
@@ -40,30 +40,36 @@ static const uint qt_meta_data_WordsPlus[] = {
      133,   10,   10,   10, 0x05,
      153,   10,   10,   10, 0x05,
      182,   10,   10,   10, 0x05,
+     197,   10,   10,   10, 0x05,
+     218,   10,   10,   10, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     203,  197,   10,   10, 0x08,
-     242,   10,   10,   10, 0x08,
+     249,  243,   10,   10, 0x08,
+     288,   10,   10,   10, 0x08,
+     297,   10,   10,   10, 0x08,
+     311,   10,   10,   10, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     251,   10,   10,   10, 0x02,
-     271,   10,   10,   10, 0x02,
-     292,   10,   10,   10, 0x02,
-     315,   10,   10,   10, 0x02,
-     328,   10,   10,   10, 0x02,
-     340,   10,   10,   10, 0x02,
-     359,  353,   10,   10, 0x02,
+     326,   10,   10,   10, 0x02,
+     346,   10,   10,   10, 0x02,
+     367,   10,   10,   10, 0x02,
+     390,   10,   10,   10, 0x02,
+     403,   10,   10,   10, 0x02,
+     415,   10,   10,   10, 0x02,
+     434,  428,   10,   10, 0x02,
 
  // properties: name, type, flags
-     387,  379, 0x0a495103,
-     396,  379, 0x0a495103,
-     408,  379, 0x0a495001,
-     413,  379, 0x0a495001,
-     434,  429, 0x01495003,
-     442,  429, 0x01495003,
-     450,  429, 0x01495003,
-     463,  379, 0x0a495001,
-     487,  483, 0x02495103,
+     462,  454, 0x0a495103,
+     471,  454, 0x0a495103,
+     483,  454, 0x0a495001,
+     488,  454, 0x0a495001,
+     509,  504, 0x01495003,
+     517,  504, 0x01495003,
+     525,  504, 0x01495003,
+     538,  454, 0x0a495001,
+     562,  558, 0x02495103,
+     568,  558, 0x02495001,
+     580,  454, 0x0a495103,
 
  // properties: notify_signal_id
        0,
@@ -75,6 +81,8 @@ static const uint qt_meta_data_WordsPlus[] = {
        6,
        7,
        8,
+       9,
+      10,
 
        0        // eod
 };
@@ -85,15 +93,18 @@ static const char qt_meta_stringdata_WordsPlus[] = {
     "totalWordsFoundChanged()\0soundChanged()\0"
     "musicChanged()\0profileBoxChanged()\0"
     "puzzleCompletedTimeChanged()\0"
-    "scoreChanged()\0event\0"
+    "scoreChanged()\0gamesPlayedChanged()\0"
+    "selectedLettersChanged()\0event\0"
     "onTileTouch(bb::cascades::TouchEvent*)\0"
-    "onTick()\0intializePlayArea()\0"
-    "InitializeHomePage()\0InitializePuzzlePage()\0"
-    "startTimer()\0stopTimer()\0resetTimer()\0"
-    "state\0ControlsForBBM(int)\0QString\0"
-    "category\0puzzleWords\0time\0totalWordsFound\0"
-    "bool\0soundOn\0musicOn\0profileBoxOn\0"
-    "puzzleCompletedTime\0int\0score\0"
+    "onTick()\0onThumbnail()\0onFullscreen()\0"
+    "intializePlayArea()\0InitializeHomePage()\0"
+    "InitializePuzzlePage()\0startTimer()\0"
+    "stopTimer()\0resetTimer()\0state\0"
+    "ControlsForBBM(int)\0QString\0category\0"
+    "puzzleWords\0time\0totalWordsFound\0bool\0"
+    "soundOn\0musicOn\0profileBoxOn\0"
+    "puzzleCompletedTime\0int\0score\0gamesPlayed\0"
+    "selectedLetters\0"
 };
 
 void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -111,15 +122,19 @@ void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 6: _t->profileBoxChanged(); break;
         case 7: _t->puzzleCompletedTimeChanged(); break;
         case 8: _t->scoreChanged(); break;
-        case 9: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 10: _t->onTick(); break;
-        case 11: _t->intializePlayArea(); break;
-        case 12: _t->InitializeHomePage(); break;
-        case 13: _t->InitializePuzzlePage(); break;
-        case 14: _t->startTimer(); break;
-        case 15: _t->stopTimer(); break;
-        case 16: _t->resetTimer(); break;
-        case 17: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->gamesPlayedChanged(); break;
+        case 10: _t->selectedLettersChanged(); break;
+        case 11: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 12: _t->onTick(); break;
+        case 13: _t->onThumbnail(); break;
+        case 14: _t->onFullscreen(); break;
+        case 15: _t->intializePlayArea(); break;
+        case 16: _t->InitializeHomePage(); break;
+        case 17: _t->InitializePuzzlePage(); break;
+        case 18: _t->startTimer(); break;
+        case 19: _t->stopTimer(); break;
+        case 20: _t->resetTimer(); break;
+        case 21: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -157,9 +172,9 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 22;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -174,8 +189,10 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 6: *reinterpret_cast< bool*>(_v) = getProfileBox(); break;
         case 7: *reinterpret_cast< QString*>(_v) = getPuzzleCompletedTime(); break;
         case 8: *reinterpret_cast< int*>(_v) = getScore(); break;
+        case 9: *reinterpret_cast< int*>(_v) = getGamesPlayed(); break;
+        case 10: *reinterpret_cast< QString*>(_v) = getSelectedLetters(); break;
         }
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
@@ -185,20 +202,21 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: setMusic(*reinterpret_cast< bool*>(_v)); break;
         case 6: setProfileBox(*reinterpret_cast< bool*>(_v)); break;
         case 8: setScore(*reinterpret_cast< int*>(_v)); break;
+        case 10: setSelectedLetters(*reinterpret_cast< QString*>(_v)); break;
         }
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 9;
+        _id -= 11;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -258,5 +276,17 @@ void WordsPlus::puzzleCompletedTimeChanged()
 void WordsPlus::scoreChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 8, 0);
+}
+
+// SIGNAL 9
+void WordsPlus::gamesPlayedChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 9, 0);
+}
+
+// SIGNAL 10
+void WordsPlus::selectedLettersChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 10, 0);
 }
 QT_END_MOC_NAMESPACE

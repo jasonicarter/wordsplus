@@ -19,6 +19,7 @@ Page {
         actions: [
             ActionItem {
                 title: "About"
+                imageSource: "asset:///images/about.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
                     aboutSheet.open();
@@ -26,13 +27,15 @@ Page {
             },
             ActionItem {
                 title: "Category"
+                imageSource: "asset:///images/category.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
                     categorySheet.open();
                 }
             },
             ActionItem {
-                title: "Review"
+                title: "Stats"
+                imageSource: "asset:///images/trophy.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
                     statsSheet.open();

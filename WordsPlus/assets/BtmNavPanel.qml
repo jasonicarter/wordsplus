@@ -26,24 +26,27 @@ Container {
                 preferredHeight: 150
                 layout: DockLayout {
                 }
-                Container { // BBM Share
-                    verticalAlignment: VerticalAlignment.Center
+                Container {
+                    topPadding: 20
+                    //background: Color.Gray
                     horizontalAlignment: HorizontalAlignment.Left
-                    Container {
-                        ImageView {
-                            preferredHeight: 100
-                            preferredWidth: 100
-                            imageSource: "asset:///images/test.png"
-                        }
-                        Label {
-                            text: "hold me"
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Center
-                            textStyle {
-                                base: btmNavPanelSubTitleNormalWhite.style
-                            }
+                    preferredHeight: 150
+                    preferredWidth: 150
+                    ImageView {
+                        preferredHeight: 81
+                        preferredWidth: 81
+                        horizontalAlignment: HorizontalAlignment.Center
+                        imageSource: "asset:///images/share.png"
+                    }
+                    Label {
+                        text: "Hold Me"
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Center
+                        textStyle {
+                            base: btmNavPanelSubTitleNormalWhite.style
                         }
                     }
+                    //}
                     contextActions: [
                         ActionSet {
                             title: "Share The Love."
@@ -71,31 +74,29 @@ Container {
                             }
                         } // end of ActionSet
                     ] // end of contextActions list
-                } // share
-                Container {
+                }
+                Container { //play container
+                    property bool isSwipe: true
                     layout: DockLayout {
                     }
-                    property real dx: 0
-                    property real currentX: 0
-                    property real deltaThreshold: 100
+                    //background: Color.Gray
                     topPadding: 20
+                    //preferredHeight: 150
                     verticalAlignment: VerticalAlignment.Top
                     horizontalAlignment: HorizontalAlignment.Center
                     Container {
                         layout: StackLayout {
                             orientation: LayoutOrientation.LeftToRight
                         }
-                        leftPadding: 20
-                        verticalAlignment: VerticalAlignment.Center
                         ImageView {
                             id: pLetter
                             preferredHeight: 75
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/p.png"
                             onTouch: {
-                                if (event.isDown) {
+                                if (event.isDown()) {
                                     pLetter.imageSource = "asset:///images/letters/highlight/p.png"
-                                } else if (event.isUp) {
+                                } else if (event.isUp()) {
                                     pLetter.imageSource = "asset:///images/letters/p.png"
                                 }
                             }
@@ -106,7 +107,15 @@ Container {
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/l.png"
                             onTouchEnter: {
-                                lLetter.imageSource = "asset:///images/letters/highlight/l.png"
+                                if (pLetter.imageSource == "asset:///images/letters/highlight/p.png") {
+                                    lLetter.imageSource = "asset:///images/letters/highlight/l.png"
+                                }
+                            }
+                            onTouch: {
+                                if (event.isUp()) {
+                                    pLetter.imageSource = "asset:///images/letters/p.png"
+                                    lLetter.imageSource = "asset:///images/letters/l.png"
+                                }
                             }
                         }
                         ImageView {
@@ -115,7 +124,16 @@ Container {
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/a.png"
                             onTouchEnter: {
-                                aLetter.imageSource = "asset:///images/letters/highlight/a.png"
+                                if (lLetter.imageSource == "asset:///images/letters/highlight/l.png") {
+                                    aLetter.imageSource = "asset:///images/letters/highlight/a.png"
+                                }
+                            }
+                            onTouch: {
+                                if (event.isUp()) {
+                                    pLetter.imageSource = "asset:///images/letters/p.png"
+                                    lLetter.imageSource = "asset:///images/letters/l.png"
+                                    aLetter.imageSource = "asset:///images/letters/a.png"
+                                }
                             }
                         }
                         ImageView {
@@ -124,142 +142,74 @@ Container {
                             preferredWidth: 75
                             imageSource: "asset:///images/letters/y.png"
                             onTouchEnter: {
-                                yLetter.imageSource = "asset:///images/letters/highlight/y.png"
-                                if (event.isUp()) {
-                                    wordsPlus.intializePlayArea();
-                                    pLetter.imageSource = "asset:///images/letters/p.png"
-                                    lLetter.imageSource = "asset:///images/letters/l.png"
-                                    aLetter.imageSource = "asset:///images/letters/a.png"
-                                    yLetter.imageSource = "asset:///images/letters/y.png"
+                                if (aLetter.imageSource == "asset:///images/letters/highlight/a.png") {
+                                    yLetter.imageSource = "asset:///images/letters/highlight/y.png"
                                 }
                             }
-                            onTouch: {
-                            }
                             onTouchExit: {
-                                wordsPlus.intializePlayArea();
                                 pLetter.imageSource = "asset:///images/letters/p.png"
                                 lLetter.imageSource = "asset:///images/letters/l.png"
                                 aLetter.imageSource = "asset:///images/letters/a.png"
                                 yLetter.imageSource = "asset:///images/letters/y.png"
+                                wordsPlus.intializePlayArea();
+                            }
+                            onTouch: {
+                                if (event.isUp()) {
+                                    if (yLetter.imageSource == "asset:///images/letters/highlight/y.png") {
+                                        pLetter.imageSource = "asset:///images/letters/p.png"
+                                        lLetter.imageSource = "asset:///images/letters/l.png"
+                                        aLetter.imageSource = "asset:///images/letters/a.png"
+                                        yLetter.imageSource = "asset:///images/letters/y.png"
+                                        wordsPlus.intializePlayArea();
+                                    }
+                                }
                             }
                         }
                     }
-                    //                    Container {
-                    //                        layout: StackLayout {
-                    //                            orientation: LayoutOrientation.LeftToRight
-                    //                        }
-                    //                        leftPadding: 20
-                    //                        verticalAlignment: VerticalAlignment.Center
-                    //                        touchPropagationMode: TouchPropagationMode.None //change this later
-                    //                        ImageView {
-                    //                            id: pLetter
-                    //                            opacity: 0
-                    //                            preferredHeight: 75
-                    //                            preferredWidth: 75
-                    //                            imageSource: "asset:///images/letters/highlight/p.png"
-                    //                            animations: BtmNavAnimation {
-                    //                                id: pLetterAnimation
-                    //                                onStarted: {
-                    //                                    lLetterAnimation.delay = 500
-                    //                                    lLetterAnimation.play();
-                    //                                }
-                    //                            }
-                    //                        }
-                    //                        ImageView {
-                    //                            id: lLetter
-                    //                            opacity: 0
-                    //                            preferredHeight: 75
-                    //                            preferredWidth: 75
-                    //                            imageSource: "asset:///images/letters/highlight/l.png"
-                    //                            animations: BtmNavAnimation {
-                    //                                id: lLetterAnimation
-                    //                                onStarted: {
-                    //                                    aLetterAnimation.delay = 500
-                    //                                    aLetterAnimation.play();
-                    //                                }
-                    //                            }
-                    //                        }
-                    //                        ImageView {
-                    //                            id: aLetter
-                    //                            opacity: 0
-                    //                            preferredHeight: 75
-                    //                            preferredWidth: 75
-                    //                            imageSource: "asset:///images/letters/highlight/a.png"
-                    //                            animations: BtmNavAnimation {
-                    //                                id: aLetterAnimation
-                    //                                onStarted: {
-                    //                                    yLetterAnimation.delay = 500
-                    //                                    yLetterAnimation.play();
-                    //                                }
-                    //                            }
-                    //                        }
-                    //                        ImageView {
-                    //                            id: yLetter
-                    //                            opacity: 0
-                    //                            preferredHeight: 75
-                    //                            preferredWidth: 75
-                    //                            imageSource: "asset:///images/letters/highlight/y.png"
-                    //                            animations: BtmNavAnimation {
-                    //                                id: yLetterAnimation
-                    //                                onEnded: {
-                    //                                    wordsPlus.intializePlayArea();
-                    //                                    pLetter.opacity = 0;
-                    //                                    lLetter.opacity = 0;
-                    //                                    aLetter.opacity = 0;
-                    //                                    yLetter.opacity = 0;
-                    //                                }
-                    //                            }
-                    //                        }
-                    //                    } // end of highlighted letters
-                    //                    onTouchExit: {
-                    //                        currentX = 0
-                    //                    }
-                    //                    onTouch: {
-                    //                        if (event.isDown()) {
-                    //                            dx = event.windowX;
-                    //                        } else if (event.isMove()) {
-                    //                            currentX = event.windowX - dx;
-                    //                            if (currentX > deltaThreshold) {
-                    //                                pLetterAnimation.play();
-                    //                            }
-                    //                        } else if (event.isUp()) {
-                    //                            currentX = 0;
-                    //                        }
-                    //                    }
-                } // end of letter container
-                Label {
-                    text: "swipe me"
-                    verticalAlignment: VerticalAlignment.Bottom
-                    horizontalAlignment: HorizontalAlignment.Center
-                    touchPropagationMode: TouchPropagationMode.None //change this later
-                    textStyle {
-                        base: btmNavPanelSubTitleNormalWhite.style
-                    }
-                }
-                Container {
-                    //background: Color.Gray
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Right
                     Container {
+                        topPadding: 87
                         horizontalAlignment: HorizontalAlignment.Center
-                        touchPropagationMode: TouchPropagationMode.PassThrough
-                        ImageView {
-                            preferredHeight: 100
-                            preferredWidth: 100
-                            imageSource: "asset:///images/test.png"
-                            //                            onTouch: {
-                            //                                if (event.isUp()) {
-                            //                                    wordsPlus.InitializeHomePage();
-                            //                                }
-                            //                            }
-                        }
+                        overlapTouchPolicy: OverlapTouchPolicy.Allow
                         Label {
-                            text: "tap me"
-                            verticalAlignment: VerticalAlignment.Center
+                            text: "Swipe Me"
+                            //verticalAlignment: VerticalAlignment.Bottom
                             horizontalAlignment: HorizontalAlignment.Center
+                            touchPropagationMode: TouchPropagationMode.None //change this later
                             textStyle {
                                 base: btmNavPanelSubTitleNormalWhite.style
                             }
+                        }
+                    }
+                } // end of letter container
+                Container {
+                    property bool isHome: false
+                    topPadding: 20
+                    //background: Color.Gray
+                    preferredHeight: 150
+                    preferredWidth: 150
+                    horizontalAlignment: HorizontalAlignment.Right
+                    ImageView {
+                        preferredHeight: 81
+                        preferredWidth: 81
+                        horizontalAlignment: HorizontalAlignment.Center
+                        imageSource: "asset:///images/home.png"
+                    }
+                    Label {
+                        text: "Tap Me"
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Center
+                        textStyle {
+                            base: btmNavPanelSubTitleNormalWhite.style
+                        }
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            isHome = true;
+                        }
+                        if (event.isUp() && isHome) {
+                            isHome = false;
+                            wordsPlus.stopTimer();
+                            wordsPlus.InitializeHomePage();
                         }
                     }
                 }
