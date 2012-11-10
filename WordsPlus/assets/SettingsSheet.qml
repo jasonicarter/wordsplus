@@ -88,7 +88,7 @@ Page {
                                 onCheckedChanged: {
                                     if (music.checked == true) {
                                         wordsPlus.musicOn = true;
-                                    } else if (music.checked == false ) {
+                                    } else if (music.checked == false) {
                                         wordsPlus.musicOn = false;
                                     }
                                 }
@@ -116,24 +116,59 @@ Page {
                         }
                     } // difficulty
                     Container {
+                        property int settingHard: 8
+                        property int settingMedium: 5
+                        property int settingEasy: 2
                         //background: Color.Yellow
                         maxHeight: 400
                         RadioGroup {
                             Option {
-                                id: option5
+                                id: hard
                                 text: "HARD"
-                                selected: false
+                                onSelectedChanged: {
+                                    if (selected == true) {
+                                        hard.selected = true;
+                                        wordsPlus.difficulty = settingHard;
+                                    }
+                                }
                             }
                             Option {
-                                id: option6
+                                id: medium
                                 text: "MEDIUM"
-                                selected: true
+                                onSelectedChanged: {
+                                    if (selected == true) {
+                                        medium.selected = true;
+                                        wordsPlus.difficulty = settingMedium;
+                                    }
+                                }
                             }
                             Option {
-                                id: option7
+                                id: easy
                                 text: "EASY"
-                                selected: false
+                                onSelectedChanged: {
+                                    if (selected == true) {
+                                        easy.selected = true;
+                                        wordsPlus.difficulty = settingEasy;
+                                    }
+                                }
                             }
+//                            onCreationCompleted: {
+//                                if (wordsPlus.difficulty != 0) {
+//                                    easy.selected == true;
+//                                    medium.selected == false;
+//                                    hard.selected == false;
+//                                }
+//                                if (wordsPlus.difficulty == 5) {
+//                                    easy.selected == false;
+//                                    medium.selected == true;
+//                                    hard.selected == false;
+//                                }
+//                                if (wordsPlus.difficulty == 8) {
+//                                    easy.selected == false;
+//                                    medium.selected == false;
+//                                    hard.selected == true;
+//                                }
+//                            }
                         }
                     }
                     Divider {

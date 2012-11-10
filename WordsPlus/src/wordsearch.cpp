@@ -10,7 +10,7 @@
 #endif
 
 
-#define HARDNESS    8   /* The first direction we *WON'T* use */
+//#define HARDNESS    8   /* The first direction we *WON'T* use */
 #define GRID_SIZE  10   /* The size of the grid. */
 #define WORD_COUNT 12
 
@@ -20,6 +20,7 @@
 char *words[1000];
 char *puzzleWords[1000];
 int next_word = 0;
+int hardness = 8;
 
 /* Directions are coded easiest to hardest. */
 
@@ -138,7 +139,7 @@ int Grid::fit(char *s) {
 	for (int r = 0; r < 10; r++) {
 		i = rand() % max;
 		j = rand() % max;
-		d = rand() % HARDNESS;
+		d = rand() % hardness;
 
 		int sc = fits(l, s, i, j, d);
 
@@ -161,8 +162,8 @@ int Grid::fit(char *s) {
 	for (xi = 0, i = rand() % max; xi < max; xi++, i = (i + 1) % max)
 		for (xj = 0, j = rand() % max; xj < max; xj++, j = (j + 1) % max) {
 			if (letter[i][j] == ' ' || letter[i][j] == s[0])
-				for (xd = 0, d = rand() % HARDNESS; xd < HARDNESS;
-						xd++, d = (d + 1) % HARDNESS) {
+				for (xd = 0, d = rand() % hardness; xd < hardness;
+						xd++, d = (d + 1) % hardness) {
 					int sc = fits(l, s, i, j, d);
 
 					if (sc > score) {
@@ -261,9 +262,9 @@ int longest(const void *first, const void *second) {
 	return strlen(*(char**) second) - strlen(*(char**) first);
 }
 
-char** createNewPuzzle(char *str = "weather.txt") {
+char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	//hardness, category, grid size will all be properties
-
+	hardness = difficulity;
 	Grid *grid = NULL;
 	char s[1000];
 

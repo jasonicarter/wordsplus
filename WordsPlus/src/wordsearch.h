@@ -9,7 +9,7 @@
 #define WORDSEARCH_H_
 
 
-char** createNewPuzzle(char *str = "weather.txt");
+char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8);
 char** returnPuzzleWords();
 int returnNumberOfPuzzleWords();
 
