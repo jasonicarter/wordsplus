@@ -491,6 +491,10 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 	}
 
 	if (puzzleWords.indexOf(selectedWord) >= 0) { // word found in puzzle words
+
+		//remove word from list so it can't be selected a second time
+		puzzleWords.removeAll(selectedWord);
+
 		for (int j = 0; j < listOfNumbers.size(); j++) {
 			int pos = listOfNumbers.at(j);
 			HighlightSelectedTile(pos, SELECTED);
