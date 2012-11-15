@@ -169,30 +169,30 @@ Page {
         }
     }
     actions: [
-        ActionItem {
-            title: "Your Stats"
-            ActionBar.placement: ActionBarPlacement.InOverflow
-            onTriggered: {
-            }
-        },
-        ActionItem {
-            title: "T20 This Week"
-            ActionBar.placement: ActionBarPlacement.InOverflow
-            onTriggered: {
-            }
-        },
-        ActionItem {
-            title: "T20 This Month"
-            ActionBar.placement: ActionBarPlacement.InOverflow
-            onTriggered: {
-            }
-        },
-        ActionItem {
-            title: "T20 All Time"
-            ActionBar.placement: ActionBarPlacement.InOverflow
-            onTriggered: {
-            }
-        },
+//        ActionItem {
+//            title: "Your Stats"
+//            ActionBar.placement: ActionBarPlacement.InOverflow
+//            onTriggered: {
+//            }
+//        },
+//        ActionItem {
+//            title: "T20 This Week"
+//            ActionBar.placement: ActionBarPlacement.InOverflow
+//            onTriggered: {
+//            }
+//        },
+//        ActionItem {
+//            title: "T20 This Month"
+//            ActionBar.placement: ActionBarPlacement.InOverflow
+//            onTriggered: {
+//            }
+//        },
+//        ActionItem {
+//            title: "T20 All Time"
+//            ActionBar.placement: ActionBarPlacement.InOverflow
+//            onTriggered: {
+//            }
+//        },
         ActionItem {
             title: "Close"
             ActionBar.placement: ActionBarPlacement.OnBar
