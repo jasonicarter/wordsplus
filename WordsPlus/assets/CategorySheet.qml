@@ -41,7 +41,7 @@ Page {
                 }
                 Container {
                     preferredWidth: 720
-                    preferredHeight: 500
+                    preferredHeight: 800
                     ListView {
                         id: categoryListView
                         dataModel: XmlDataModel {
@@ -59,54 +59,54 @@ Page {
                     } // end of ListView
                 }
             }
-            Container {
-                id: byLocation
-                layout: DockLayout {
-                }
-                background: Color.create("#272727")
-                preferredWidth: 720
-                preferredHeight: 100
-                leftPadding: 15
-                Label {
-                    text: "By Location: "
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Left
-                    touchPropagationMode: TouchPropagationMode.None
-                    textStyle {
-                        base: categorySheetBigBodyNormalBlue.style
-                    }
-                }
-                Container {
-                    rightPadding: 15
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Right
-                    ToggleButton {
-                        enabled: true
-                        onCheckedChanged: {
-                            if (checked == true) { 
-                                categoryListView.enabled = false;
-                                locationTxt.textStyle.color = Color.create("#fafafa");
-                            } 
-                            else {
-                                categoryListView.enabled = true;
-                                locationTxt.textStyle.color = Color.create("#555555");
-                            }
-                        }
-                    }
-                }
-            }
-            Container {
-                TextArea {
-                    id: locationTxt
-                    text: "Now there's no limit to the number of different words you can search! \n\n" + "Location Services must be turned ON for this feature to work correctly"
-                    editable: false
-                    touchPropagationMode: TouchPropagationMode.None
-                    textStyle {
-                        base: categorySheetSubTitleNormalWhite.style
-                        color: Color.create("#555555");
-                    }
-                }
-            }
+//            Container {
+//                id: byLocation
+//                layout: DockLayout {
+//                }
+//                background: Color.create("#272727")
+//                preferredWidth: 720
+//                preferredHeight: 100
+//                leftPadding: 15
+//                Label {
+//                    text: "By Location: "
+//                    verticalAlignment: VerticalAlignment.Center
+//                    horizontalAlignment: HorizontalAlignment.Left
+//                    touchPropagationMode: TouchPropagationMode.None
+//                    textStyle {
+//                        base: categorySheetBigBodyNormalBlue.style
+//                    }
+//                }
+//                Container {
+//                    rightPadding: 15
+//                    verticalAlignment: VerticalAlignment.Center
+//                    horizontalAlignment: HorizontalAlignment.Right
+//                    ToggleButton {
+//                        enabled: true
+//                        onCheckedChanged: {
+//                            if (checked == true) { 
+//                                categoryListView.enabled = false;
+//                                locationTxt.textStyle.color = Color.create("#fafafa");
+//                            } 
+//                            else {
+//                                categoryListView.enabled = true;
+//                                locationTxt.textStyle.color = Color.create("#555555");
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//            Container {
+//                TextArea {
+//                    id: locationTxt
+//                    text: "Now there's no limit to the number of different words you can search! \n\n" + "Location Services must be turned ON for this feature to work correctly"
+//                    editable: false
+//                    touchPropagationMode: TouchPropagationMode.None
+//                    textStyle {
+//                        base: categorySheetSubTitleNormalWhite.style
+//                        color: Color.create("#555555");
+//                    }
+//                }
+//            }
         } //middle container
         Container { //divider
             preferredWidth: 768
