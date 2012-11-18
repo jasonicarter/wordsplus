@@ -5,11 +5,11 @@
 <qconnport value="8000"/>
 <qconnguid value="7d5ad73b-0458-4bd5-a2f1-447446085d87"/>
 <qconnostype value="nto"/>
-<qconnhostname value="169.254.125.205"/>
+<qconnhostname value="169.254.0.1"/>
+<targettmpdir value="/var/tmp"/>
 <project>
 <name value="usb"/>
 </project>
-<targettmpdir value="/var/tmp"/>
 </item>
 </data>
 </trgtproject>

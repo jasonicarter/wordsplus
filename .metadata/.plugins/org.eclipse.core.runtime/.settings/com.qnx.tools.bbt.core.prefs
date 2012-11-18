@@ -1,4 +1,3 @@
-DEVELOPER_CERTIFICATE_PATH=C\:\\Users\\Jason\\AppData\\Local\\Research In Motion\\author.p12
+DEVELOPER_CERTIFICATE_PATH=/Users/jaiaca/Library/Research In Motion/author.p12
 VERIFY_DEBUG_TOKEN_DURING_APP_INSTALL=true
-debugToken_0=C\:\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken1.bar
 eclipse.preferences.version=1

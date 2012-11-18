@@ -9,14 +9,17 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-            Label {
-                text: "WordsPlus (v...)"
-                textStyle {
-                    base: aboutSheetBigTextNormalWhite.style
-                }
-                verticalAlignment: VerticalAlignment.Center
-                horizontalAlignment: HorizontalAlignment.Center
-            }
+//            Label {
+//                text: "WordsPlus (v...)"
+//                textStyle {
+//                    base: aboutSheetBigTextNormalWhite.style
+//                }
+//                verticalAlignment: VerticalAlignment.Center
+//                horizontalAlignment: HorizontalAlignment.Center
+//            }
+                    ImageView {
+                        imageSource: "asset:///images/titles/wordsplusversion.png"
+                    }
         }
         Container { //middle
             preferredWidth: 720

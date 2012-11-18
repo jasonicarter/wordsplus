@@ -9,14 +9,17 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-            Label {
-                text: "To Clarify."
-                verticalAlignment: VerticalAlignment.Center
-                horizontalAlignment: HorizontalAlignment.Center
-                textStyle {
-                    base: helpSheetBigTextNormalWhite.style
-                }
-            }
+//            Label {
+//                text: "To Clarify."
+//                verticalAlignment: VerticalAlignment.Center
+//                horizontalAlignment: HorizontalAlignment.Center
+//                textStyle {
+//                    base: helpSheetBigTextNormalWhite.style
+//                }
+//            }
+                    ImageView {
+                        imageSource: "asset:///images/titles/toclarify.png"
+                    }
         }
 //        ScrollView {
 //            preferredWidth: 720

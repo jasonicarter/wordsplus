@@ -54,6 +54,7 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <author>Jason I. Carter</author>
+    <authorId>gYAAgIkV5XIFWiolvJjFDcSN46c</authorId>
     <platformVersion>10.0.9.386</platformVersion>
     
     <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
@@ -73,6 +74,7 @@
     </splashScreens>
     <icon>
        <image></image>
+       <image>icon.png</image>
     </icon>
     <configuration id="com.qnx.qcc.toolChain.174817791" name="Default">
        <platformArchitecture>armle-v7</platformArchitecture>
@@ -100,6 +102,7 @@
         <include name="*.qm"/>
     </asset>
     <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
+    <asset path="assets/images/icon.png">icon.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
