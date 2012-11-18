@@ -166,9 +166,9 @@ void WordsPlus::intializePlayArea() {
 		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();
 
-		printf("WordsPlus\n");
-		printf("Number Of Words: ");
-		printf("%i", numberOfWords);
+		//printf("WordsPlus\n");
+		//printf("Number Of Words: ");
+		//printf("%i", numberOfWords);
 		for (int i = 0; i < numberOfWords; i++) {
 			listOfWords.append(puzzleWords[i]);
 			listOfWords.append(' ');
@@ -180,9 +180,9 @@ void WordsPlus::intializePlayArea() {
 			wordLabel->setObjectName(labelText);
 			wordLabel->setText(labelText);
 
-			printf("\n");
-			printf("%s", labelText.toStdString().c_str());
-			fflush(stdout);
+			//printf("\n");
+			//printf("%s", labelText.toStdString().c_str());
+			//fflush(stdout);
 
 			//always give them x space and then if total is more than 720
 			//update positionY (new line)

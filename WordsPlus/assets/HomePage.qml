@@ -10,16 +10,20 @@ Container {
             //background: Color.Yellow
             Container {
                 preferredWidth: 768
+                //preferredHeight: 100
                 background: Color.create("#00629C")
                 verticalAlignment: VerticalAlignment.Top
-                Label {
-                    text: "At Home."
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Center
-                    textStyle {
-                        base: bigTextNormalWhite.style
+//                Label {
+//                    text: "At Home."
+//                    verticalAlignment: VerticalAlignment.Center
+//                    horizontalAlignment: HorizontalAlignment.Center
+//                    textStyle {
+//                        base: bigTextNormalWhite.style
+//                    }
+//                }
+                    ImageView {
+                        imageSource: "asset:///images/titles/welcome.png"
                     }
-                }
             }
             Container {
                 layout: StackLayout {

@@ -9,14 +9,17 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-            Label {
-                text: "To Brag About."
-                verticalAlignment: VerticalAlignment.Center
-                horizontalAlignment: HorizontalAlignment.Center
-                textStyle {
-                    base: statsSheetBigTextNormalWhite.style
-                }
-            }
+//            Label {
+//                text: "To Brag About."
+//                verticalAlignment: VerticalAlignment.Center
+//                horizontalAlignment: HorizontalAlignment.Center
+//                textStyle {
+//                    base: statsSheetBigTextNormalWhite.style
+//                }
+//            }
+                    ImageView {
+                        imageSource: "asset:///images/titles/tobragabout.png"
+                    }
         }
         Container { //middle
             preferredWidth: 720

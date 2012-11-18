@@ -8,14 +8,17 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-            Label {
-                text: "Word List."
-                verticalAlignment: VerticalAlignment.Top
-                horizontalAlignment: HorizontalAlignment.Center
-                textStyle {
-                    base: categorySheetBigTextNormalWhite.style
-                }
-            }
+//            Label {
+//                text: "Word List."
+//                verticalAlignment: VerticalAlignment.Top
+//                horizontalAlignment: HorizontalAlignment.Center
+//                textStyle {
+//                    base: categorySheetBigTextNormalWhite.style
+//                }
+//            }
+                    ImageView {
+                        imageSource: "asset:///images/titles/tosearch.png"
+                    }
         }
         Container { //middle container
             preferredWidth: 720

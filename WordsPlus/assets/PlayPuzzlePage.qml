@@ -13,14 +13,17 @@ Container { // root Container
             verticalAlignment: VerticalAlignment.Top
             background: Color.create("#00629C")
             preferredWidth: 768
-            Label {
-                text: "Puzzles."
-                horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Center
-                textStyle {
-                    base: puzzlePageTextNormalWhite.style
-                }
-            }
+//            Label {
+//                text: "Puzzles."
+//                horizontalAlignment: HorizontalAlignment.Center
+//                verticalAlignment: VerticalAlignment.Center
+//                textStyle {
+//                    base: puzzlePageTextNormalWhite.style
+//                }
+//            }
+                                ImageView {
+                                    imageSource: "asset:///images/titles/withpuzzles.png"
+                                }
         }
         Container { // center container
             //background: Color.Green
