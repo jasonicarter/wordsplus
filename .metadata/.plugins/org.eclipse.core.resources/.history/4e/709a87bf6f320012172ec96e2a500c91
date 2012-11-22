@@ -1,0 +1,35 @@
+// Navigation pane project template
+import bb.cascades 1.0
+
+Page {
+    Container {
+        id: container
+        background: Color.LightGray
+        layout: DockLayout {
+        }
+        ScrollView {
+            Container {
+                background: Color.create("#fafafa")
+                layout: StackLayout {
+                    orientation: LayoutOrientation.TopToBottom
+                }
+                WebView {
+                    url: "http://www.google.com"
+                    onLoadProgressChanged: {
+                        // Update the ProgressBar while loading.
+                        progressIndicator.value = loadProgress / 100.0
+                    }
+                }
+            }
+        }
+        Container {
+            // progress of the webview loading and web status
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Fill
+            ProgressIndicator {
+                id: progressIndicator
+                opacity: 0
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/*
+ * TestPage.hpp
+ *
+ *  Created on: 2012-11-07
+ *      Author: Jason
+ */
+
+#ifndef TESTPAGE_HPP_
+#define TESTPAGE_HPP_
+
+#include <bb/cascades/Control>
+#include <bb/cascades/ListView>
+#include <bb/cascades/Container>
+#include <bb/cascades/ActionItem>
+#include <QtCore/QObject>
+
+class TestPage: public bb::cascades::Control{
+	Q_OBJECT
+
+public:
+	TestPage();
+	virtual ~TestPage(){}
+
+};
+
+#endif /* TESTPAGE_HPP_ */

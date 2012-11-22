@@ -1,0 +1,8 @@
+
+**** Build of configuration Device-Debug for project ScoreloopIntegrationSampleManaged ****
+
+**** Internal Builder is used for build               ****
+qcc -o src\main.o ..\src\main.c -V4.6.3,gcc_ntoarmv7le -w1 -D_FORTIFY_SOURCE=2 -c -g -fstack-protector-all
+qcc -o ScoreloopIntegrationSampleManaged src\main.o -lscoreloopcore -lbps -V4.6.3,gcc_ntoarmv7le -w1 -g -Wl,-z,relro -Wl,-z,now
+Build complete for project ScoreloopIntegrationSampleManaged
+Time consumed: 588  ms.  
