@@ -13158,3 +13158,139 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 
 !ENTRY org.eclipse.core.net 1 0 2012-11-17 23:25:35.675
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 4 2012-11-18 00:30:14.922
+!MESSAGE credentials required
+!STACK 1
+org.eclipse.core.runtime.CoreException: credentials required
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.target.core.TargetConnection.connect(TargetConnection.java:76)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut.getTargetArch(QConnShortcut.java:484)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut$1.run(QConnShortcut.java:392)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.bbt.core 4 0 2012-11-18 00:30:14.923
+!MESSAGE credentials required
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2012-11-18 00:31:04.974
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:492)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:257)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:81)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.284
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.350
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.372
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.374
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [leadingVisualSnapThreshold]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.392
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.404
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.409
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.419
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.426
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.430
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.431
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.435
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.436
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.436
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.443
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.445
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.449
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: orientationChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.449
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On UI Orientation Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.450
+!MESSAGE Cannot find signalID for PVCellInfo: ComponentID: bb::cascades::QmlOrientationHandler SignalID: displayDirectionChanged
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.450
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::QmlOrientationHandler RowInfo: On Display Direction Changed
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.463
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.465
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.flags, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.466
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.490
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.500
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-11-21 16:36:23.504
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.519
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.519
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.520
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.521
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.521
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-11-21 16:36:23.522
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-11-21 16:36:23.921
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-21 16:36:24.699
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-21 16:36:49.361
+!MESSAGE Indexed 'UI_Test' (2 sources, 577 headers) in 26.46 sec: 78,444 declarations; 107,732 references; 0 unresolved inclusions; 0 syntax errors; 37 unresolved names (0.02%)
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-21 16:38:38.576
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-21 17:52:08.668
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
