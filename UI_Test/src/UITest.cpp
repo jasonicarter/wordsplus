@@ -18,7 +18,7 @@ UITest::UITest(bb::cascades::Application *app)
     // create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
 
-    app->setCover(new ActiveFrame());
+    //app->setCover(new ActiveFrame());
 
     // set created root object as a scene
     app->setScene(root);
