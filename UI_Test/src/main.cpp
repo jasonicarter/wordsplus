@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     // localization support
     QTranslator translator;
     QString locale_string = QLocale().name();
-    QString filename = QString( "UI_Test_%1" ).arg( locale_string );
+    QString filename = QString( "UITest_%1" ).arg( locale_string );
     if (translator.load(filename, "app/native/qm")) {
         app.installTranslator( &translator );
     }

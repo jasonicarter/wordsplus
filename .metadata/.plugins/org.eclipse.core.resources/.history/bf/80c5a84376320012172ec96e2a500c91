@@ -1,0 +1,66 @@
+// Navigation pane project template
+import bb.cascades 1.0
+
+NavigationPane {
+    id: navigationPane
+    
+    Page {
+        // Add the application menu using a MenuDefinition
+            Menu.definition: MenuDefinition {
+                // Specify the actions that should be included in the menu
+                helpAction: HelpActionItem {
+                    onTriggered: {
+                        myQmlToast.show();
+                    }
+                }
+                actions: [
+                    ActionItem {
+                        title: "Find Text"
+                        imageSource: "images/actionOneIcon.png"
+                        onTriggered: {
+                            //open dialog box
+                            myQmlToast.show();
+                        }
+                    }
+                ] // end of actions list
+            } // end of MenuDefinition
+        // page with a picture thumbnail
+        Container {
+            background: Color.LightGray
+            layout: DockLayout {
+            }
+            Button {
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Center
+                text: qsTr("Show detail")
+                imageSource: "asset:///images/picture1thumb.png"
+                onClicked: {
+                    // show detail page when the button is clicked
+                    var page = secondPageDefinition.createObject();
+                    navigationPane.push(page);
+                }
+                attachedObjects: [
+                    ComponentDefinition {
+                        id: secondPageDefinition
+                        source: "DetailsPage.qml"
+                    }
+                ]
+            }
+        }
+    }
+    onCreationCompleted: {
+        // this slot is called when declarative scene is created
+        // write post creation initialization here
+        console.log("NavigationPane - onCreationCompleted()");
+
+        // enable layout to adapt to the device rotation
+        // don't forget to enable screen rotation in bar-bescriptor.xml (Application->Orientation->Auto-orient)
+        OrientationSupport.supportedDisplayOrientation = SupportedDisplayOrientation.All;
+    }
+    attachedObjects: [
+        SystemToast {
+            id: myQmlToast
+            body: "So long! Thanks for coming, see you next time!"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<root>
+    <item category="ANIMALS" filename="animals"/>
+    <item category="WEATHER" filename="weather"/>
+    <item category="COMMON WORDS" filename="common"/>
+    <item category="JOBS + OCCUPATIONS" filename="jobs"/>
+    <item category="GIRL NAMES" filename="girlnames"/>
+    <item category="BOY NAMES" filename="boynames"/>
+</root>

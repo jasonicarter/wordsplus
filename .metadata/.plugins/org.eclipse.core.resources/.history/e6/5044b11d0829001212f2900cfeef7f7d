@@ -1,0 +1,10 @@
+import bb.cascades 1.0
+
+Container {
+    layout: DockLayout {
+    }
+    background: Color.create("#272727")
+    Button {
+        text: "hello"
+    }
+}

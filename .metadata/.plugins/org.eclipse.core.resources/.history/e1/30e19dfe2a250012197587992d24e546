@@ -1,0 +1,58 @@
+import bb.cascades 1.0
+
+Page {
+    Container {
+        layout: DockLayout {
+        }
+        background: Color.Black
+        horizontalAlignment: HorizontalAlignment.Center
+        Container {
+            background: Color.create("#00629C")
+            preferredWidth: 768
+            Label {
+                text: "This Game."
+                textStyle {
+                    base: bigTextNormalWhite.style
+                }
+                verticalAlignment: VerticalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Center
+            }
+        }
+        Container { //middle
+            preferredWidth: 720
+            preferredHeight: 1000
+            background: Color.create("#fafafa")
+            verticalAlignment: VerticalAlignment.Center
+            horizontalAlignment: HorizontalAlignment.Center
+            Label {
+                text: "WordsPlus (v...)"
+                textStyle {
+                    base: bigTextNormalWhite.style
+                }
+            }
+            Label {
+                text: "Game Design & Programming: \n" + "by Jason I. Carter"
+                multiline: true
+                textStyle {
+                    base: bigTextNormalWhite.style
+                }
+            }
+        }
+        Container { //divider
+            preferredWidth: 768
+            preferredHeight: 50
+            background: Color.create("#00629C")
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
+        }
+    }
+    actions: [
+        ActionItem {
+            title: "Close"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                aboutSheet.close();
+            }
+        }
+    ]
+}
