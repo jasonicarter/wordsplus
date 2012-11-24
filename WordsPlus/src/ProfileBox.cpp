@@ -47,16 +47,16 @@ void ProfileBox::registerIcon(const QString& path, int iconId)
   QBuffer buffer(&iconArray);
   buffer.open(QIODevice::WriteOnly);
   if(not image.load(path)) {
-    LOG("Failed to load icon");
+    //LOG("Failed to load icon");
     return;
   }
-  LOG("Icon loaded");
+  //LOG("Icon loaded");
   image.save(&buffer, "PNG");
 
   // Create the icon object and register the icon
   const bool result = m_profileBox->requestRegisterIcon(
     iconId, bb::platform::bbm::ImageType::Png, iconArray);
-  LOG("load result: %i", result);
+  //LOG("load result: %i", result);
 }
 
 void ProfileBox::createItem(const QString& text, const QString& iconPath)
@@ -76,7 +76,7 @@ void ProfileBox::createItem(const QString& text, const QString& iconPath)
   int iconId;
   if(m_iconPath == "profileBox") {
     iconId = 1;
-    LOG("IconID 1");
+    //LOG("IconID 1");
   } else if(m_iconPath == "x") {
     iconId = 2;
   } else if(m_iconPath == "y") {

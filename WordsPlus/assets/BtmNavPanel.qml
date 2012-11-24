@@ -18,8 +18,9 @@ Container {
         }
         Container { // whole panel
             preferredWidth: 768
-            preferredHeight: 200
-            background: Color.Black
+            preferredHeight: 100
+            //background: Color.Black
+            background: Color.create("#00629C")
             Container { // image panel
                 //background: Color.Yellow
                 preferredWidth: 768

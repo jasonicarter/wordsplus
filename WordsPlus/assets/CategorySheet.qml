@@ -8,17 +8,9 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-//            Label {
-//                text: "Word List."
-//                verticalAlignment: VerticalAlignment.Top
-//                horizontalAlignment: HorizontalAlignment.Center
-//                textStyle {
-//                    base: categorySheetBigTextNormalWhite.style
-//                }
-//            }
-                    ImageView {
-                        imageSource: "asset:///images/titles/tosearch.png"
-                    }
+            ImageView {
+                imageSource: "asset:///images/titles/tosearch.png"
+            }
         }
         Container { //middle container
             preferredWidth: 720
@@ -28,6 +20,65 @@ Page {
             Container {
                 topPadding: 50
                 preferredWidth: 720
+                Container {
+                    property int settingHard: 8
+                    property int settingMedium: 4
+                    property int settingEasy: 2
+                    preferredWidth: 720
+//                    Label {
+//                        text: "testing: " + wordsPlus.difficulty
+//                    }
+                    DropDown {
+                        id: diffDropDown
+                        title: "Difficulty:"
+                        Option {
+                            id: hard
+                            text: "Hard"
+                            description: "Now we're talking!"
+                            value: settingHard
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 8;
+                                }
+                            }
+                        }
+                        Option {
+                            id: medium
+                            text: "Medium"
+                            description: "Great place to start"
+                            value: settingMedium
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 4;
+                                }
+                            }
+                        }
+                        Option {
+                            id: easy
+                            text: "Easy"
+                            description: "Don't pick me, I'm too easy"
+                            value: settingEasy
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 2; //settingEasy;
+                                }
+                            }
+                        }
+                    }
+                    onCreationCompleted: {
+                        //diffDropDown.setSelectedOption(easy);
+                        if (wordsPlus.difficulty == 2) {
+                            diffDropDown.setSelectedOption(easy);
+                        } else if (wordsPlus.difficulty == 4) {
+                            diffDropDown.setSelectedOption(medium);
+                        } else if (wordsPlus.difficulty == 8) {
+                            diffDropDown.setSelectedOption(hard);
+                        }
+                    }
+                } //diff buttons
+                Divider {
+                    opacity: 0
+                }
                 Container {
                     background: Color.create("#272727")
                     horizontalAlignment: HorizontalAlignment.Right
@@ -62,54 +113,6 @@ Page {
                     } // end of ListView
                 }
             }
-//            Container {
-//                id: byLocation
-//                layout: DockLayout {
-//                }
-//                background: Color.create("#272727")
-//                preferredWidth: 720
-//                preferredHeight: 100
-//                leftPadding: 15
-//                Label {
-//                    text: "By Location: "
-//                    verticalAlignment: VerticalAlignment.Center
-//                    horizontalAlignment: HorizontalAlignment.Left
-//                    touchPropagationMode: TouchPropagationMode.None
-//                    textStyle {
-//                        base: categorySheetBigBodyNormalBlue.style
-//                    }
-//                }
-//                Container {
-//                    rightPadding: 15
-//                    verticalAlignment: VerticalAlignment.Center
-//                    horizontalAlignment: HorizontalAlignment.Right
-//                    ToggleButton {
-//                        enabled: true
-//                        onCheckedChanged: {
-//                            if (checked == true) { 
-//                                categoryListView.enabled = false;
-//                                locationTxt.textStyle.color = Color.create("#fafafa");
-//                            } 
-//                            else {
-//                                categoryListView.enabled = true;
-//                                locationTxt.textStyle.color = Color.create("#555555");
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            Container {
-//                TextArea {
-//                    id: locationTxt
-//                    text: "Now there's no limit to the number of different words you can search! \n\n" + "Location Services must be turned ON for this feature to work correctly"
-//                    editable: false
-//                    touchPropagationMode: TouchPropagationMode.None
-//                    textStyle {
-//                        base: categorySheetSubTitleNormalWhite.style
-//                        color: Color.create("#555555");
-//                    }
-//                }
-//            }
         } //middle container
         Container { //divider
             preferredWidth: 768

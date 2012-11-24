@@ -130,7 +130,7 @@ Page {
                         rightPadding: 20
                         //background: Color.Black
                         ImageView {
-                            imageSource: "asset:///images/help.png"
+                            imageSource: "asset:///images/heart.png"
                         }
                     }
                     Container {

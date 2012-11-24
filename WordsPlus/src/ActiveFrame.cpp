@@ -18,13 +18,8 @@ ActiveFrame::ActiveFrame() :
 
 	// Set the content of ActiveFrame
 	setContent(mMainContainer);
+	QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(update()));
 
-	// description xml file - run in background if using update();
-	// You can do it now or trigger the slot whne application is moved to baackground.
-	//QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(update()));
-	// and/or disable updates when it's in foreground
-
-	//update();
 }
 
 ActiveFrame::~ActiveFrame() {
@@ -38,14 +33,21 @@ void ActiveFrame::update() {
 	 */
 
 	//You can update AF every 1 sec but BB10 platform will update UI every 30sec :)
-	//QTimer::singleShot(1000, this, SLOT(update()));
+//	QTimer::singleShot(1000, this, SLOT(update()));
 
-	Label* label2 = mMainContainer->findChild<Label*>("label2");
+//	Label* label2 = mMainContainer->findChild<Label*>("label2");
+//
+//	if (label2) {
+//		int c = label2->text().toInt() + 1;
+//		label2->setText(QString::number(c));
+//	}
 
-	if (label2) {
-		int c = label2->text().toInt() + 1;
-		label2->setText(QString::number(c));
-	}
+		Label* label_cat = mMainContainer->findChild<Label*>("label_category");
+
+		if (label_cat) {
+			label_cat->setText(" " + settings->getValueFor("settingsCategory", "WEATHER").toUpper());
+			//label_cat->setText(" " + settings->getValueFor("settingsDifficulty", "8").toUpper());
+		}
 
 }
 
