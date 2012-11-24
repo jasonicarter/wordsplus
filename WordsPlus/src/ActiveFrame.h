@@ -8,6 +8,8 @@
 #ifndef ACTIVEFRAME_H_
 #define ACTIVEFRAME_H_
 
+#include "GameSettings.hpp"
+
 #include <bb/cascades/SceneCover>
 #include <bb/cascades/Container>
 #include <bb/cascades/Application>
@@ -29,6 +31,7 @@ public slots:
 private:
 	Container *mMainContainer;
 	QmlDocument *qml;
+	GameSettings *settings;
 
 };
 

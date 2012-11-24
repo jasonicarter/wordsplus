@@ -13,17 +13,9 @@ Container { // root Container
             verticalAlignment: VerticalAlignment.Top
             background: Color.create("#00629C")
             preferredWidth: 768
-//            Label {
-//                text: "Puzzles."
-//                horizontalAlignment: HorizontalAlignment.Center
-//                verticalAlignment: VerticalAlignment.Center
-//                textStyle {
-//                    base: puzzlePageTextNormalWhite.style
-//                }
-//            }
-                                ImageView {
-                                    imageSource: "asset:///images/titles/withpuzzles.png"
-                                }
+            ImageView {
+                imageSource: "asset:///images/titles/withpuzzles.png"
+            }
         }
         Container { // center container
             //background: Color.Green
@@ -37,10 +29,21 @@ Container { // root Container
                 //horizontalAlignment: HorizontalAlignment.Left
                 Label {
                     id: timerDisplay
-                    text: "TIME: " + wordsPlus.time
+                    //text: "TIME: " + wordsPlus.time
+                    text: {
+                        if (wordsPlus.difficulty == 8) {
+                            "HARD: " + wordsPlus.time
+                        } else if (wordsPlus.difficulty == 4) {
+                            "MEDIUM: " + wordsPlus.time
+                        } else if (wordsPlus.difficulty == 2) {
+                            "EASY: " + wordsPlus.time
+                        }
+                    }
                     horizontalAlignment: HorizontalAlignment.Left
                     textStyle {
-                        base: puzzlePageSubTitleNormalWhite.style
+                        base: puzzlePageBodyWhite.style
+                    }
+                    onTextChanged: {
                     }
                 }
                 Label {
@@ -48,7 +51,7 @@ Container { // root Container
                     text: wordsPlus.selectedLetters
                     horizontalAlignment: HorizontalAlignment.Right
                     textStyle {
-                        base: puzzlePageSubTitleNormalBurntOrgange.style
+                        base: puzzlePageBurntOrgange.style
                     }
                 }
             }
@@ -76,8 +79,16 @@ Container { // root Container
                 verticalAlignment: VerticalAlignment.Bottom
             }
         } //center container
-        BtmNavPanel { // bottom panel
+        Container {
             verticalAlignment: VerticalAlignment.Bottom
+            Container {
+                ImageView {
+                    imageSource: "asset:///images/heart.png"
+                }
+            }
+            BtmNavPanel { // bottom panel
+                verticalAlignment: VerticalAlignment.Bottom
+            }
         }
     } // main container
     attachedObjects: [
@@ -85,8 +96,10 @@ Container { // root Container
         // it is better from a memory consumption point of view to create text
         // styles as attached objects.
         TextStyleDefinition {
-            id: puzzlePageTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
+            id: puzzlePageBodyWhite
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {
@@ -104,10 +117,10 @@ Container { // root Container
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleNormalBurntOrgange
-            base: SystemDefaults.TextStyles.SubtitleText
+            id: puzzlePageBurntOrgange
+            base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#CC3F10")
         },
         Sheet {

@@ -9,14 +9,6 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-//            Label {
-//                text: "To Play With."
-//                verticalAlignment: VerticalAlignment.Center
-//                horizontalAlignment: HorizontalAlignment.Center
-//                textStyle {
-//                    base: settingsSheetBigTextNormalWhite.style
-//                }
-//            }
             ImageView {
                 imageSource: "asset:///images/titles/toplaywith.png"
             }
@@ -98,86 +90,6 @@ Page {
                             }
                         }
                     } // music
-//                    Divider {
-//                        opacity: 0
-//                    }
-//                    Container { // difficulty
-//                        property int settingHard: 8
-//                        property int settingMedium: 5
-//                        property int settingEasy: 2
-//                        layout: DockLayout {
-//                        }
-//                        background: Color.create("#272727")
-//                        preferredWidth: 720
-//                        preferredHeight: 100
-//                        leftPadding: 15
-//                        Label {
-//                            text: "Difficulty Level:"
-//                            verticalAlignment: VerticalAlignment.Center
-//                            horizontalAlignment: HorizontalAlignment.Left
-//                            textStyle {
-//                                base: settingsSheetBigBodyNormalBlue.style
-//                            }
-//                        }
-//                        Container {
-//                            layout: StackLayout {
-//                                orientation: LayoutOrientation.LeftToRight
-//                            }
-//                            rightPadding: 20
-//                            horizontalAlignment: HorizontalAlignment.Right
-//                            verticalAlignment: VerticalAlignment.Center
-//                            Label {
-//                                id: hard
-//                                text: "Hard"
-//                                textStyle {
-//                                    base: settingsSheetBigBodyNormalWhite.style
-//                                }
-//                                onTouch: {
-//                                    wordsPlus.difficulty = settingsHard;
-//                                    hard.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                    medium.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                    easy.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                }
-//                            }
-//                            Label {
-//                                id: medium
-//                                text: "Medium"
-//                                textStyle {
-//                                    base: settingsSheetBigBodyNormalWhite.style
-//                                }
-//                                onTouch: {
-//                                    wordsPlus.difficulty = settingsMedium;
-//                                    medium.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                    hard.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                    easy.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                }
-//                            }
-//                            Label {
-//                                id: easy
-//                                text: "Easy"
-//                                textStyle {
-//                                    base: settingsSheetBigBodyNormalWhite.style
-//                                }
-//                                onTouch: {
-//                                    wordsPlus.difficulty = settingsEasy;
-//                                    easy.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                    hard.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                    medium.textStyle.base = settingsSheetBigBodyNormalWhite.style
-//                                }
-//                            }
-//                            onCreationCompleted: {
-//                                if (wordsPlus.difficulty == settingHard) {
-//                                    hard.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                }
-//                                if (wordsPlus.difficulty == settingMedium) {
-//                                    medium.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                }
-//                                if (wordsPlus.difficulty == settingEasy) {
-//                                    easy.textStyle.base = settingsSheetBigBodyNormalBlue.style
-//                                }
-//                            }
-//                        } //diff buttons
-//                    } // difficulty
                     Divider {
                         opacity: 0
                     }

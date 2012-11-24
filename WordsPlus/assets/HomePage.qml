@@ -13,17 +13,9 @@ Container {
                 //preferredHeight: 100
                 background: Color.create("#00629C")
                 verticalAlignment: VerticalAlignment.Top
-//                Label {
-//                    text: "At Home."
-//                    verticalAlignment: VerticalAlignment.Center
-//                    horizontalAlignment: HorizontalAlignment.Center
-//                    textStyle {
-//                        base: bigTextNormalWhite.style
-//                    }
-//                }
-                    ImageView {
-                        imageSource: "asset:///images/titles/welcome.png"
-                    }
+                ImageView {
+                    imageSource: "asset:///images/titles/welcome.png"
+                }
             }
             Container {
                 layout: StackLayout {
@@ -144,6 +136,8 @@ Container {
                 preferredHeight: 500
                 animations: HomePageAnimation {
                     id: dAnimation
+                    onStarted: {
+                    }
                 }
             }
             ImageView {
@@ -238,6 +232,8 @@ Container {
                 preferredHeight: 500
                 animations: HomePageAnimation {
                     id: carterAnimation
+                    onStarted: {
+                    }
                 }
             }
         }

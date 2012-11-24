@@ -39,7 +39,7 @@
 #define PUZZLECOMPLETEDTIME "settingsPuzzleTime"
 #define SCORE "settingsScore"
 #define GAMESPLAYED "settingsGamesPlayed"
-#define DIFFICULTY "settingsDifficulity"
+#define DIFFICULTY "settingsDifficulty"
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -790,12 +790,14 @@ int WordsPlus::getDifficulty() {
 	QString strDiff = settings->getValueFor(DIFFICULTY, "8");
 	puzzleDifficulty = strDiff.toInt(&okDiff, 10);
 
+	//LOG("%i", puzzleDifficulty);
 	return puzzleDifficulty;
 
 }
 
 void WordsPlus::setDifficulty(int difficulty) {
 
+	//LOG("Set Difficulty: %i", difficulty);
 	settings->saveValueFor(DIFFICULTY, QString::number(difficulty));
 	emit difficultyChanged();
 

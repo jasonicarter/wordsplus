@@ -6,23 +6,24 @@ Container {
     }
     ImageView {
         imageSource: "asset:///images/cover.png"
-        verticalAlignment: VerticalAlignment.Center
+        verticalAlignment: VerticalAlignment.Top
         horizontalAlignment: HorizontalAlignment.Center
     }
-//    Label {
-//        objectName: "label"
-//        text: "Cover is refreshed by BB10 every 30sec"
-//        multiline: true
-//        verticalAlignment: VerticalAlignment.Top
-//        horizontalAlignment: HorizontalAlignment.Center
-//        textStyle.fontSize: FontSize.XXSmall
-//    }
-//    Label {
-//        objectName: "label2"
-//        text: ""
-//        multiline: true
-//        horizontalAlignment: HorizontalAlignment.Center
-//        verticalAlignment: VerticalAlignment.Bottom
-//        textStyle.fontSize: FontSize.XLarge
-//    }
+    Container {
+        //background: Color.LightGray
+        verticalAlignment: VerticalAlignment.Top
+        horizontalAlignment: HorizontalAlignment.Center
+        preferredWidth: 334
+        Label {
+            objectName: "label_category"
+            text: "Category: " //+ wordsPlus.category
+            textStyle {
+                base: SystemDefaults.TextStyles.BodyText
+                color: Color.create("#252525")
+                //fontFamily: "Times New Roman"
+                fontFamily: "Slate Pro"
+                //fontSize: FontSize.PointValue(25)
+            }
+        }
+    }
 }

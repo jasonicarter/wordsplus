@@ -70,9 +70,11 @@
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.games</category>
     <splashScreens>
+       <image></image>
        <image>splashScreen.png</image>
     </splashScreens>
     <icon>
+       <image></image>
        <image></image>
        <image>icon.png</image>
     </icon>
@@ -101,8 +103,10 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
-    <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
     <asset path="assets/images/icon.png">icon.png</asset>
+    <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
+
+
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
