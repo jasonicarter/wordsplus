@@ -150,6 +150,7 @@ Page {
     actions: [
         ActionItem {
             title: "Close"
+            imageSource: "asset:///images/close.png"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.startTimer();

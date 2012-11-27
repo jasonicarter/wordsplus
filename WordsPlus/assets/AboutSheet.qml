@@ -128,18 +128,19 @@ Page {
         }
     }
     actions: [
-        InvokeActionItem {
-            title: "Website"
-            imageSource: "asset:///images/category.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            query {
-                mimeType: "text/html"
-                uri: "http://www.twocasualcoders.com"
-                invokeActionId: "bb.action.OPEN"
-            }
-        },
+//        InvokeActionItem {
+//            title: "Website"
+//            imageSource: "asset:///images/earth.png"
+//            ActionBar.placement: ActionBarPlacement.OnBar
+//            query {
+//                mimeType: "text/html"
+//                uri: "http://www.twocasualcoders.com"
+//                invokeActionId: "bb.action.OPEN"
+//            }
+//        },
         ActionItem {
             title: "Close"
+            imageSource: "asset:///images/close.png"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.startTimer();
