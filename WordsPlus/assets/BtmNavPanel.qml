@@ -5,27 +5,27 @@ Container {
     property int bbm_statusmessage: 7
     property int bbm_invitetodownload: 8
     Container { // bottom panel
-        background: Color.Gray
+        //background: Color.Gray
         verticalAlignment: VerticalAlignment.Bottom
-        Container {
-            preferredWidth: 768
-            preferredHeight: 3
-            //background: Color.create("#FF8C00")
-            //background: Color.create("#CC3F10")
-            //background: Color.create("#00629C")
-            background: Color.create("#262626")
-            //background: Color.Black
-        }
+        //        Container {
+        //            preferredWidth: 768
+        //            preferredHeight: 3
+        //            //background: Color.create("#FF8C00")
+        //            background: Color.create("#CC3F10")
+        //            //background: Color.create("#00629C")
+        //            //background: Color.create("#262626")
+        //            //background: Color.Black
+        //        }
         Container { // whole panel
-            preferredWidth: 768
-            preferredHeight: 100
             //background: Color.Black
-            background: Color.create("#00629C")
             Container { // image panel
                 //background: Color.Yellow
-                preferredWidth: 768
-                preferredHeight: 150
                 layout: DockLayout {
+                }
+                Container {
+                    ImageView {
+                        imageSource: "asset:///images/title_test.png"
+                    }
                 }
                 Container {
                     topPadding: 20
@@ -33,21 +33,6 @@ Container {
                     horizontalAlignment: HorizontalAlignment.Left
                     preferredHeight: 150
                     preferredWidth: 150
-                    ImageView {
-                        preferredHeight: 81
-                        preferredWidth: 81
-                        horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/share.png"
-                    }
-                    Label {
-                        text: "Hold Me"
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                        textStyle {
-                            base: btmNavPanelSubTitleNormalWhite.style
-                        }
-                    }
-                    //}
                     contextActions: [
                         ActionSet {
                             title: "Share The Love."
@@ -81,8 +66,8 @@ Container {
                     layout: DockLayout {
                     }
                     //background: Color.Gray
-                    topPadding: 20
-                    //preferredHeight: 150
+                    topPadding: 23.5
+                    //leftPadding: 0
                     verticalAlignment: VerticalAlignment.Top
                     horizontalAlignment: HorizontalAlignment.Center
                     Container {
@@ -91,122 +76,101 @@ Container {
                         }
                         ImageView {
                             id: pLetter
+                            rightMargin: 0.5
+                            leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            imageSource: "asset:///images/letters/p.png"
+                            //imageSource: "asset:///images/letters/p.png"
                             onTouch: {
                                 if (event.isDown()) {
-                                    pLetter.imageSource = "asset:///images/letters/highlight/p.png"
+                                    pLetter.imageSource = "asset:///images/letters/highlight/p_navbar.png"
                                     wordsPlus.playSound("letterSelected");
                                 } else if (event.isUp()) {
-                                    pLetter.imageSource = "asset:///images/letters/p.png"
+                                    pLetter.imageSource = ""
                                 }
                             }
                         }
                         ImageView {
                             id: lLetter
+                            rightMargin: 1.5
+                            leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            imageSource: "asset:///images/letters/l.png"
+                            //imageSource: "asset:///images/letters/l.png"
                             onTouchEnter: {
-                                if (pLetter.imageSource == "asset:///images/letters/highlight/p.png") {
+                                if (pLetter.imageSource == "asset:///images/letters/highlight/p_navbar.png") {
                                     lLetter.imageSource = "asset:///images/letters/highlight/l.png"
                                     wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouch: {
                                 if (event.isUp()) {
-                                    pLetter.imageSource = "asset:///images/letters/p.png"
-                                    lLetter.imageSource = "asset:///images/letters/l.png"
+                                    pLetter.imageSource = ""
+                                    lLetter.imageSource = ""
                                 }
                             }
                         }
                         ImageView {
                             id: aLetter
+                            rightMargin: 0
+                            leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            imageSource: "asset:///images/letters/a.png"
+                            //imageSource: "asset:///images/letters/a.png"
                             onTouchEnter: {
                                 if (lLetter.imageSource == "asset:///images/letters/highlight/l.png") {
-                                    aLetter.imageSource = "asset:///images/letters/highlight/a.png"
+                                    aLetter.imageSource = "asset:///images/letters/highlight/a_navbar.png"
                                     wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouch: {
                                 if (event.isUp()) {
-                                    pLetter.imageSource = "asset:///images/letters/p.png"
-                                    lLetter.imageSource = "asset:///images/letters/l.png"
-                                    aLetter.imageSource = "asset:///images/letters/a.png"
+                                    pLetter.imageSource = ""
+                                    lLetter.imageSource = ""
+                                    aLetter.imageSource = ""
                                 }
                             }
                         }
                         ImageView {
                             id: yLetter
+                            rightMargin: 0
+                            leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            imageSource: "asset:///images/letters/y.png"
+                            //imageSource: "asset:///images/letters/y.png"
                             onTouchEnter: {
-                                if (aLetter.imageSource == "asset:///images/letters/highlight/a.png") {
-                                    yLetter.imageSource = "asset:///images/letters/highlight/y.png"
+                                if (aLetter.imageSource == "asset:///images/letters/highlight/a_navbar.png") {
+                                    yLetter.imageSource = "asset:///images/letters/highlight/y_navbar.png"
                                     wordsPlus.playSound("letterSelected");
                                 }
                             }
                             onTouchExit: {
-                                pLetter.imageSource = "asset:///images/letters/p.png"
-                                lLetter.imageSource = "asset:///images/letters/l.png"
-                                aLetter.imageSource = "asset:///images/letters/a.png"
-                                yLetter.imageSource = "asset:///images/letters/y.png"
+                                pLetter.imageSource = ""
+                                lLetter.imageSource = ""
+                                aLetter.imageSource = ""
+                                yLetter.imageSource = ""
                                 wordsPlus.intializePlayArea();
                             }
                             onTouch: {
                                 if (event.isUp()) {
-                                    if (yLetter.imageSource == "asset:///images/letters/highlight/y.png") {
-                                        pLetter.imageSource = "asset:///images/letters/p.png"
-                                        lLetter.imageSource = "asset:///images/letters/l.png"
-                                        aLetter.imageSource = "asset:///images/letters/a.png"
-                                        yLetter.imageSource = "asset:///images/letters/y.png"
+                                    if (yLetter.imageSource == "asset:///images/letters/highlight/y_navbar.png") {
+                                        pLetter.imageSource = ""
+                                        lLetter.imageSource = ""
+                                        aLetter.imageSource = ""
+                                        yLetter.imageSource = ""
                                         wordsPlus.intializePlayArea();
                                     }
                                 }
                             }
                         }
                     }
-                    Container {
-                        topPadding: 87
-                        horizontalAlignment: HorizontalAlignment.Center
-                        overlapTouchPolicy: OverlapTouchPolicy.Allow
-                        Label {
-                            text: "Swipe Me"
-                            //verticalAlignment: VerticalAlignment.Bottom
-                            horizontalAlignment: HorizontalAlignment.Center
-                            touchPropagationMode: TouchPropagationMode.None //change this later
-                            textStyle {
-                                base: btmNavPanelSubTitleNormalWhite.style
-                            }
-                        }
-                    }
                 } // end of letter container
                 Container {
                     property bool isHome: false
-                    topPadding: 20
                     //background: Color.Gray
                     preferredHeight: 150
                     preferredWidth: 150
                     horizontalAlignment: HorizontalAlignment.Right
-                    ImageView {
-                        preferredHeight: 81
-                        preferredWidth: 81
-                        horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/home.png"
-                    }
-                    Label {
-                        text: "Tap Me"
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Center
-                        textStyle {
-                            base: btmNavPanelSubTitleNormalWhite.style
-                        }
-                    }
                     onTouch: {
                         if (event.isDown()) {
                             isHome = true;
@@ -219,13 +183,6 @@ Container {
                     }
                 }
             } // image panel
-            Container { //divider
-                preferredWidth: 768
-                preferredHeight: 50
-                background: Color.create("#00629C")
-                verticalAlignment: VerticalAlignment.Bottom
-                horizontalAlignment: HorizontalAlignment.Center
-            }
         } // whole panel
     } // bottom panel
     attachedObjects: [

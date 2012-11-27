@@ -1,7 +1,9 @@
 import bb.cascades 1.0
 
 Container {
+    id: homePageContainer
     Container {
+        id: mainContainer
         layout: DockLayout {
         }
         preferredHeight: 1280
@@ -238,10 +240,19 @@ Container {
             }
         }
         Container {
-            bottomPadding: 250
+            bottomPadding: 200
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
+            ActivityIndicator {
+                id: mainLoader
+                running: true
+//                preferredHeight: 500
+//                preferredWidth: 500
+//                verticalAlignment: VerticalAlignment.Center
+//                horizontalAlignment: HorizontalAlignment.Center
+            }
             Label {
+                id: welcomeUserLabel
                 text: "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
                 multiline: true
                 textStyle {
@@ -256,6 +267,18 @@ Container {
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
+            //because score()->start is called after qml creation
+            //scoreloop instance created, calls run() which does requestUserCompleted
+            //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
+            //if you do that, don't need this connnection in qml
+            wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
+        }
+        //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
+        function onScoreloopLoaded(username) {
+            mainLoader.stop();
+            mainLoader.visible = false;
+            welcomeUserLabel.text = qsTr("Welcome") + " " + username + "! \n" + 
+            "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
         }
     } //main container
     attachedObjects: [

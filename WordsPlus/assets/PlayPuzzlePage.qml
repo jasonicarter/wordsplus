@@ -26,11 +26,9 @@ Container { // root Container
                 topPadding: 125
                 //background: Color.Green
                 preferredWidth: 720
-                //horizontalAlignment: HorizontalAlignment.Left
                 Label {
                     id: timerDisplay
-                    //text: "TIME: " + wordsPlus.time
-                    text: {
+                    text: {    
                         if (wordsPlus.difficulty == 8) {
                             "HARD: " + wordsPlus.time
                         } else if (wordsPlus.difficulty == 4) {
@@ -39,19 +37,27 @@ Container { // root Container
                             "EASY: " + wordsPlus.time
                         }
                     }
+                    //text: "TIME: "
                     horizontalAlignment: HorizontalAlignment.Left
                     textStyle {
-                        base: puzzlePageBodyWhite.style
-                    }
-                    onTextChanged: {
+                        base: puzzlePageSubTitleBlue.style
                     }
                 }
-                Label {
-                    id: letterDisplay
-                    text: wordsPlus.selectedLetters
+                Container {
+                    layout: StackLayout {
+                                orientation: LayoutOrientation.RightToLeft
+                            }
                     horizontalAlignment: HorizontalAlignment.Right
-                    textStyle {
-                        base: puzzlePageBurntOrgange.style
+                    ImageView {                       
+                        imageSource: "asset:///images/heart.png"
+                    }
+                    Label {
+                        id: letterDisplay
+                        text: wordsPlus.selectedLetters
+                        horizontalAlignment: HorizontalAlignment.Right
+                        textStyle {
+                            base: puzzlePageBurntOrgange.style
+                        }
                     }
                 }
             }
@@ -81,11 +87,6 @@ Container { // root Container
         } //center container
         Container {
             verticalAlignment: VerticalAlignment.Bottom
-            Container {
-                ImageView {
-                    imageSource: "asset:///images/heart.png"
-                }
-            }
             BtmNavPanel { // bottom panel
                 verticalAlignment: VerticalAlignment.Bottom
             }
@@ -103,10 +104,10 @@ Container { // root Container
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleNormalBlue
+            id: puzzlePageSubTitleBlue
             base: SystemDefaults.TextStyles.SubtitleText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {

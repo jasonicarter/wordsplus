@@ -71,6 +71,9 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	// assets directory which only contains playable files.
 	mSoundManager = new SoundManager("sounds/");
 
+	//score loop stuff - need to register to make it work - investigate
+	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
+
 	mQmlDocument = QmlDocument::create("asset:///main.qml");
 	mQmlDocument->setParent(this);
 	mQmlDocument->setContextProperty("wordsPlus", this);
@@ -86,6 +89,11 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 			app->setCover(new ActiveFrame());
 
+			// scoreloop stuff
+		    mScoreLoop = ScoreLoopThread::instance();
+		   	QObject::connect(mScoreLoop, SIGNAL(ScoreLoopUserReady(AppData_t*)), this, SLOT(scoreLoopLoaded(AppData_t*)));
+		   	QObject::connect(mScoreLoop, SIGNAL(SubmitScoreCompleted(ScoreData_t*)), this, SLOT(onSubmitScoreCompleted(ScoreData_t*)));
+
 			// deal with stuff when thumbnailed or re-opened
 			QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
 			QObject::connect(Application::instance(), SIGNAL( fullscreen() ), this, SLOT(onFullscreen()));
@@ -94,6 +102,8 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 			InitializePuzzlePage();
 			//playSound(SOUNDBACKGROUNDMUSIC);
 			Application::instance()->setScene(appPage);
+
+			mScoreLoop->start();
 		}
 	}
 }
@@ -112,10 +122,53 @@ void WordsPlus::onFullscreen() {
     startTimer();
 }
 
+/****************************************************************************************************/
+
+/************
+ * SLOTS
+ ************/
+void WordsPlus::scoreLoopLoaded(AppData_t *data)
+{
+	mAppData = data;
+}
+
+void WordsPlus::onSubmitScoreCompleted(ScoreData_t *scoreData)
+{
+	mLastScoreData = scoreData;
+	emit(submitScoreCompleted());
+}
+
+
+/***********
+ * QML HELPERS
+ ***********/
+void WordsPlus::submitScore(int score)
+{
+	LOG("submitScore: %i", score);
+	ScoreLoopThread::SubmitScore(mAppData, score, 0);
+}
+
+void WordsPlus::loadLeaderboard()
+{
+	ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 15);
+}
+
+void WordsPlus::loadLeaderboardAroundLastScore()
+{
+	ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 15);
+}
+
+ScoreLoopThread* WordsPlus::scoreLoop()
+{
+	return ScoreLoopThread::instance();
+}
+
+/****************************************************************************************************/
+
 void WordsPlus::InitializeHomePage() {
 	//LOG("InitializeHomePage");
 	//stop and null timer
-	//prevent it from running in background even if not on puzle page
+	//prevent it from running in background even if not on puzzle page
 	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
@@ -130,6 +183,7 @@ void WordsPlus::InitializePuzzlePage() {
 			"asset:///PlayPuzzlePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
 	puzzlePageControl = qmlContent->createRootObject<Control>();
+	//setContent performed in InitializePlayArea
 
 }
 
@@ -742,6 +796,8 @@ void WordsPlus::setScore(int puzzleTime) {
 
 	score = score + 100000 / puzzleTime; //multiple by level difficulty
 	settings->saveValueFor(SCORE, QString::number(score));
+	submitScore(score);
+
 	emit scoreChanged();
 
 }
@@ -787,7 +843,7 @@ QString WordsPlus::getSelectedLetters() {
 int WordsPlus::getDifficulty() {
 
 	bool okDiff;
-	QString strDiff = settings->getValueFor(DIFFICULTY, "8");
+	QString strDiff = settings->getValueFor(DIFFICULTY, "2");
 	puzzleDifficulty = strDiff.toInt(&okDiff, 10);
 
 	//LOG("%i", puzzleDifficulty);

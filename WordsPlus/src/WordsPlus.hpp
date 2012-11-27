@@ -11,6 +11,7 @@
 #include "Global.hpp"
 #include "UpdateProfilePage.hpp"
 #include "InviteToDownload.hpp"
+#include "ScoreLoopThread.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -40,6 +41,11 @@ public:
     Q_INVOKABLE void intializePlayArea();
     Q_INVOKABLE void InitializeHomePage();
     Q_INVOKABLE void InitializePuzzlePage();
+
+    Q_INVOKABLE void submitScore(int score);
+    Q_INVOKABLE void loadLeaderboard();
+    Q_INVOKABLE void loadLeaderboardAroundLastScore();
+    Q_INVOKABLE ScoreLoopThread* scoreLoop();
 
     Q_INVOKABLE void startTimer();
     Q_INVOKABLE void stopTimer();
@@ -91,6 +97,13 @@ public:
 
     int getDifficulty();
     void setDifficulty(int difficulty);
+
+public slots:
+	void scoreLoopLoaded(AppData_t *data);
+	void onSubmitScoreCompleted(ScoreData_t *scoreData);
+
+signals:
+	void submitScoreCompleted();
 
 private slots:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -166,6 +179,10 @@ private:
     RegistrationHandler* regBBM;
 
     bb::platform::bbm::UserProfile * m_userProfile;
+
+	AppData_t *mAppData;
+	ScoreLoopThread *mScoreLoop;
+	ScoreData_t *mLastScoreData;
 };
 
 
