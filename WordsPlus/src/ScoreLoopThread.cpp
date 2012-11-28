@@ -17,8 +17,11 @@
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[ScoreLoopThread.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
-static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6";
-static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA==";
+static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
+static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
+
+//static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
+//static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
@@ -329,7 +332,7 @@ void ScoreLoopThread::LoadLeaderboardAroundScore(AppData_t *app, SC_Score_h scor
 		HandleError(app, rc);
 		return;
 	}
-	qDebug() << "Loading Leaderboard...";
+	LOG("LoadLeaderboardAroundScore - Loading Leaderboard...");
 }
 
 void ScoreLoopThread::LoadLeaderboardCompletionCallback(void *userData, SC_Error_t completionStatus) {
@@ -350,7 +353,7 @@ void ScoreLoopThread::LoadLeaderboardCompletionCallback(void *userData, SC_Error
 		HandleError(app, SC_NOT_FOUND);
 		return;
 	}
-	qDebug() << "Done loading Leaderboard";
+	LOG("Done loading Leaderboard");
 
 	/* Get the score formatter here - remember that you need to add a
 	 * scoreloop/SLScoreFormatter.strings file to your asset files in order to retrieve a formatter.
@@ -372,12 +375,13 @@ void ScoreLoopThread::LoadLeaderboardCompletionCallback(void *userData, SC_Error
 		SC_String_h formattedScore;
 
 		/* Format the score - we take ownership of string */
-		int rc = SC_ScoreFormatter_FormatScore(scoreFormatter, score, SC_SCORE_FORMAT_DEFAULT, &formattedScore);
+		int rc = SC_ScoreFormatter_FormatScore(scoreFormatter, score, SC_SCORE_FORMAT_SCORES_ONLY, &formattedScore);
 		if (rc != SC_OK) {
 			HandleError(app, rc);
 			return;
 		}
-		qDebug() << "  Rank: " << SC_Score_GetRank(score) << ", Result: " << SC_String_GetData(formattedScore) << ", User: " << (login ? SC_String_GetData(login) : "<unknown>");
+		//qDebug() << "  Rank: " << SC_Score_GetRank(score) << ", Result: " << SC_String_GetData(formattedScore) << ", User: " << (login ? SC_String_GetData(login) : "<unknown>");
+		LOG("Rank: %i, Result: %s, User: %s",SC_Score_GetRank(score), SC_String_GetData(formattedScore), (login ? SC_String_GetData(login) : "<unknown>") );
 
 		QVariantMap scoreData;
 		scoreData["rank"] = SC_Score_GetRank(score);
