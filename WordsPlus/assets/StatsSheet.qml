@@ -9,17 +9,9 @@ Page {
         Container {
             background: Color.create("#00629C")
             preferredWidth: 768
-//            Label {
-//                text: "To Brag About."
-//                verticalAlignment: VerticalAlignment.Center
-//                horizontalAlignment: HorizontalAlignment.Center
-//                textStyle {
-//                    base: statsSheetBigTextNormalWhite.style
-//                }
-//            }
-                    ImageView {
-                        imageSource: "asset:///images/titles/tobragabout.png"
-                    }
+            ImageView {
+                imageSource: "asset:///images/titles/tobragabout.png"
+            }
         }
         Container { //middle
             preferredWidth: 720
@@ -28,139 +20,209 @@ Page {
             horizontalAlignment: HorizontalAlignment.Center
             //background: Color.Gray
             Container {
-                Container { // points
-                    layout: DockLayout {
-                    }
-                    background: Color.create("#272727")
-                    preferredWidth: 720
-                    preferredHeight: 100
-                    leftPadding: 15
-                    Label {
-                        text: "Points Won: "
-                        touchPropagationMode: TouchPropagationMode.None
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Left
-                        textStyle {
-                            base: statsSheetBigBodyNormalBlue.style
-                        }
-                    }
-                    Container {
-                        rightPadding: 15
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Right
-                        Label {
-                            text: wordsPlus.score
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalWhite.style
+                preferredWidth: 720
+                DropDown {
+                    id: statsDropDown
+                    title: "Stats"
+                    Option {
+                        id: dropDwnYourStats
+                        text: "YOUR STATS"
+                        description: "Best time, # of words, etc"
+                        selected: true
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                localStats.visible = true;
+                                leaderBoard.visible = false;
+                                leaderBoard.removeAll();
                             }
                         }
                     }
-                } // points
-                Divider {
-                    opacity: 0
+                    Option {
+                        id: dropDwnTopLeaders
+                        text: "TOP LEADERS"
+                        description: "All-time top notch word finders. "
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                var LeadersContainer = leaderDef.createObject();
+                                leaderBoard.add(LeadersContainer);
+                                leaderBoard.visible = true;
+                                localStats.visible = false;
+                            }
+                        }
+                    }
+                    Option {
+                        id: dropDwnYourPosition
+                        text: "YOUR POSITION"
+                        description: "How do you measure up to the rest?"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                localStats.visible = false;
+                                leaderBoard.removeAll();
+                                var positionContainer = positionDef.createObject();
+                                leaderBoard.add(positionContainer);
+                            }
+                        }
+                    }
                 }
-                Container { // found
-                    layout: DockLayout {
-                    }
-                    background: Color.create("#272727")
+            } //diff buttons
+            Divider {
+                opacity: 0
+            }
+            Container {
+                Container {
+                    id: leaderBoard
+                    visible: false
+                    //background: Color.LightGray
                     preferredWidth: 720
-                    preferredHeight: 100
-                    leftPadding: 15
-                    Label {
-                        text: "Total # Words Found: "
-                        touchPropagationMode: TouchPropagationMode.None
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Left
-                        textStyle {
-                            base: statsSheetBigBodyNormalBlue.style
+                    preferredHeight: 800
+                    attachedObjects: [
+                        ComponentDefinition {
+                            id: leaderDef
+                            source: "TopLeaderboard.qml"
+                        },
+                        ComponentDefinition {
+                            id: positionDef
+                            source: "PositionLeaderboard.qml"
                         }
-                    }
-                    Container {
-                        rightPadding: 15
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Right
-                        Label {
-                            text: wordsPlus.totalWordsFound
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalWhite.style
-                            }
-                        }
-                    }
-                } // found
-                Divider {
-                    opacity: 0
+                    ]
                 }
-                Container { // played
-                    layout: DockLayout {
-                    }
-                    background: Color.create("#272727")
-                    preferredWidth: 720
-                    preferredHeight: 100
-                    leftPadding: 15
-                    Label {
-                        text: "Total # of Games Played: "
-                        touchPropagationMode: TouchPropagationMode.None
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Left
-                        textStyle {
-                            base: statsSheetBigBodyNormalBlue.style
+                Container {
+                    id: localStats
+                    //visible: false
+                    Container { // points
+                        layout: DockLayout {
                         }
-                    }
-                    Container {
-                        rightPadding: 15
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Right
+                        background: Color.create("#272727")
+                        preferredWidth: 720
+                        preferredHeight: 100
+                        leftPadding: 15
                         Label {
-                            text: wordsPlus.gamesPlayed
+                            text: "Points Won: "
                             touchPropagationMode: TouchPropagationMode.None
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
                             textStyle {
-                                base: statsSheetBigBodyNormalWhite.style
+                                base: statsSheetBigBodyNormalBlue.style
                             }
                         }
+                        Container {
+                            rightPadding: 15
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Right
+                            Label {
+                                text: wordsPlus.score
+                                touchPropagationMode: TouchPropagationMode.None
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Left
+                                textStyle {
+                                    base: statsSheetBigBodyNormalWhite.style
+                                }
+                            }
+                        }
+                    } // points
+                    Divider {
+                        opacity: 0
                     }
-                } // played
-                Divider {
-                    opacity: 0
+                    Container { // found
+                        layout: DockLayout {
+                        }
+                        background: Color.create("#272727")
+                        preferredWidth: 720
+                        preferredHeight: 100
+                        leftPadding: 15
+                        Label {
+                            text: "Total # Words Found: "
+                            touchPropagationMode: TouchPropagationMode.None
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Left
+                            textStyle {
+                                base: statsSheetBigBodyNormalBlue.style
+                            }
+                        }
+                        Container {
+                            rightPadding: 15
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Right
+                            Label {
+                                text: wordsPlus.totalWordsFound
+                                touchPropagationMode: TouchPropagationMode.None
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Left
+                                textStyle {
+                                    base: statsSheetBigBodyNormalWhite.style
+                                }
+                            }
+                        }
+                    } // found
+                    Divider {
+                        opacity: 0
+                    }
+                    Container { // played
+                        layout: DockLayout {
+                        }
+                        background: Color.create("#272727")
+                        preferredWidth: 720
+                        preferredHeight: 100
+                        leftPadding: 15
+                        Label {
+                            text: "Total # of Games Played: "
+                            touchPropagationMode: TouchPropagationMode.None
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Left
+                            textStyle {
+                                base: statsSheetBigBodyNormalBlue.style
+                            }
+                        }
+                        Container {
+                            rightPadding: 15
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Right
+                            Label {
+                                text: wordsPlus.gamesPlayed
+                                touchPropagationMode: TouchPropagationMode.None
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Left
+                                textStyle {
+                                    base: statsSheetBigBodyNormalWhite.style
+                                }
+                            }
+                        }
+                    } // played
+                    Divider {
+                        opacity: 0
+                    }
+                    Container { // time
+                        layout: DockLayout {
+                        }
+                        background: Color.create("#272727")
+                        preferredWidth: 720
+                        preferredHeight: 100
+                        leftPadding: 15
+                        Label {
+                            text: "Best Puzzle Time: "
+                            touchPropagationMode: TouchPropagationMode.None
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Left
+                            textStyle {
+                                base: statsSheetBigBodyNormalBlue.style
+                            }
+                        }
+                        Container {
+                            rightPadding: 15
+                            verticalAlignment: VerticalAlignment.Center
+                            horizontalAlignment: HorizontalAlignment.Right
+                            Label {
+                                text: wordsPlus.puzzleCompletedTime
+                                touchPropagationMode: TouchPropagationMode.None
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Left
+                                textStyle {
+                                    base: statsSheetBigBodyNormalWhite.style
+                                }
+                            }
+                        }
+                    } // time
                 }
-                Container { // time
-                    layout: DockLayout {
-                    }
-                    background: Color.create("#272727")
-                    preferredWidth: 720
-                    preferredHeight: 100
-                    leftPadding: 15
-                    Label {
-                        text: "Best Puzzle Time: "
-                        touchPropagationMode: TouchPropagationMode.None
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Left
-                        textStyle {
-                            base: statsSheetBigBodyNormalBlue.style
-                        }
-                    }
-                    Container {
-                        rightPadding: 15
-                        verticalAlignment: VerticalAlignment.Center
-                        horizontalAlignment: HorizontalAlignment.Right
-                        Label {
-                            text: wordsPlus.puzzleCompletedTime
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalWhite.style
-                            }
-                        }
-                    }
-                } // time
             }
         }
         Container { //divider
@@ -172,30 +234,6 @@ Page {
         }
     }
     actions: [
-//        ActionItem {
-//            title: "Your Stats"
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            onTriggered: {
-//            }
-//        },
-//        ActionItem {
-//            title: "T20 This Week"
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            onTriggered: {
-//            }
-//        },
-//        ActionItem {
-//            title: "T20 This Month"
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            onTriggered: {
-//            }
-//        },
-//        ActionItem {
-//            title: "T20 All Time"
-//            ActionBar.placement: ActionBarPlacement.InOverflow
-//            onTriggered: {
-//            }
-//        },
         ActionItem {
             title: "Close"
             imageSource: "asset:///images/close.png"

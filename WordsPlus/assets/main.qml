@@ -65,9 +65,9 @@ Page {
             }
         },
         Sheet {
-             id: statsSheet
-             StatsSheet {
-             }  
+            id: statsSheet
+            StatsSheet {
+            }
         }
     ]
 }// Page

@@ -144,15 +144,16 @@ void WordsPlus::submitScore(int score)
 
 void WordsPlus::loadLeaderboard()
 {
+	LOG("loadLeaderboard")
 	if(Global::instance()->getIsInternetAvailable()){
-		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 15);
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 20);
 	}
 }
 
 void WordsPlus::loadLeaderboardAroundLastScore()
 {
 	if(Global::instance()->getIsInternetAvailable()){
-		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 15);
+		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 5);
 	}
 }
 
