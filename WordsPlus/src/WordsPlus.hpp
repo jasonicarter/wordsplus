@@ -177,6 +177,8 @@ private:
     SoundManager *mSoundManager;
     ProfileBox *profileBox;
     RegistrationHandler* regBBM;
+    UpdateProfilePage *updateProfilePage;
+    InviteToDownload *inviteToDownload;
 
     bb::platform::bbm::UserProfile * m_userProfile;
 

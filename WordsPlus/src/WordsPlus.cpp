@@ -66,6 +66,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
+	Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
 
 	// Initialize the sound manager with a directory that resides in the
 	// assets directory which only contains playable files.
@@ -94,7 +95,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 		   	QObject::connect(mScoreLoop, SIGNAL(ScoreLoopUserReady(AppData_t*)), this, SLOT(scoreLoopLoaded(AppData_t*)));
 		   	QObject::connect(mScoreLoop, SIGNAL(SubmitScoreCompleted(ScoreData_t*)), this, SLOT(onSubmitScoreCompleted(ScoreData_t*)));
 
-			// deal with stuff when thumbnailed or re-opened
+			// deal with stuff when enter/exit thumbnail or fullscreen
 			QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
 			QObject::connect(Application::instance(), SIGNAL( fullscreen() ), this, SLOT(onFullscreen()));
 
@@ -123,10 +124,6 @@ void WordsPlus::onFullscreen() {
 }
 
 /****************************************************************************************************/
-
-/************
- * SLOTS
- ************/
 void WordsPlus::scoreLoopLoaded(AppData_t *data)
 {
 	mAppData = data;
@@ -138,24 +135,25 @@ void WordsPlus::onSubmitScoreCompleted(ScoreData_t *scoreData)
 	emit(submitScoreCompleted());
 }
 
-
-/***********
- * QML HELPERS
- ***********/
 void WordsPlus::submitScore(int score)
 {
-	LOG("submitScore: %i", score);
-	ScoreLoopThread::SubmitScore(mAppData, score, 0);
+	if(Global::instance()->getIsInternetAvailable()){
+		ScoreLoopThread::SubmitScore(mAppData, score, 0);
+	}
 }
 
 void WordsPlus::loadLeaderboard()
 {
-	ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 15);
+	if(Global::instance()->getIsInternetAvailable()){
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 15);
+	}
 }
 
 void WordsPlus::loadLeaderboardAroundLastScore()
 {
-	ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 15);
+	if(Global::instance()->getIsInternetAvailable()){
+		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 15);
+	}
 }
 
 ScoreLoopThread* WordsPlus::scoreLoop()
@@ -220,9 +218,6 @@ void WordsPlus::intializePlayArea() {
 		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();
 
-		//printf("WordsPlus\n");
-		//printf("Number Of Words: ");
-		//printf("%i", numberOfWords);
 		for (int i = 0; i < numberOfWords; i++) {
 			listOfWords.append(puzzleWords[i]);
 			listOfWords.append(' ');
@@ -233,10 +228,6 @@ void WordsPlus::intializePlayArea() {
 			wordLabel->textStyle()->setBase(subTitleWhite);
 			wordLabel->setObjectName(labelText);
 			wordLabel->setText(labelText);
-
-			//printf("\n");
-			//printf("%s", labelText.toStdString().c_str());
-			//fflush(stdout);
 
 			//always give them x space and then if total is more than 720
 			//update positionY (new line)
@@ -350,9 +341,6 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 
 		deltaX = event->windowX() - initX;
 		deltaY = event->windowY() - initY;
-
-//		printf("(%i , %i) ", (int) deltaX, (int) deltaY);
-//		fflush(stdout);
 
 		//Y direction only
 		if (deltaX >= -25 && deltaX <= 25) {
@@ -794,7 +782,7 @@ void WordsPlus::setScore(int puzzleTime) {
 	QString strScore = settings->getValueFor(SCORE, "0");
 	int score = strScore.toInt(&okScore, 10);
 
-	score = score + 100000 / puzzleTime; //multiple by level difficulty
+	score = (score + 100000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
 	settings->saveValueFor(SCORE, QString::number(score));
 	submitScore(score);
 
@@ -879,19 +867,17 @@ void WordsPlus::ControlsForBBM(int state) {
 		break;
 	}
 	case PRESONALMESSAGE: {
-		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(
-				m_userProfile);
+		updateProfilePage = new UpdateProfilePage(m_userProfile);
 		updateProfilePage->savePersonalMessage();
 		break;
 	}
 	case STATUSMESSAGE: {
-		UpdateProfilePage *updateProfilePage = new UpdateProfilePage(
-				m_userProfile);
+		updateProfilePage = new UpdateProfilePage(m_userProfile);
 		updateProfilePage->saveStatus();
 		break;
 	}
 	case INVITETODOWNLOAD: {
-		InviteToDownload *inviteToDownload = new InviteToDownload();
+		inviteToDownload = new InviteToDownload();
 		inviteToDownload->sendInvite();
 		break;
 	}
