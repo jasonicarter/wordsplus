@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'GameSettings.hpp'
 **
-** Created: Thu Nov 8 00:57:02 2012
+** Created: Tue Nov 27 13:41:21 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.3)
 **
 ** WARNING! All changes made in this file will be lost!

@@ -6,6 +6,7 @@
  */
 #include <scoreloop/scoreloopcore.h>
 #include "ScoreLoopThread.hpp"
+#include "Global.hpp"
 
 #ifndef NDEBUG
 #include <assert.h>
@@ -77,6 +78,7 @@ void ScoreLoopThread::run() {
 	 */
 	rc = SC_Client_New(&app.client, &initData, SCORELOOP_GAME_ID, SCORELOOP_GAME_SECRET, SCORELOOP_GAME_VERSION, SCORELOOP_GAME_CURRENCY, SCORELOOP_GAME_LANGUAGE);
 	if (rc != SC_OK) {
+		LOG("Error on SC_Client_NEW");
 		HandleError(&app, rc);
 	} else {
 		//InformUser(&app, "Note", "Scoreloop Sample started...");
@@ -115,6 +117,7 @@ void ScoreLoopThread::RequestUser(AppData_t *app) {
 	/* Create a UserController */
 	SC_Error_t rc = SC_Client_CreateUserController(app->client, &app->userController, RequestUserCompletionCallback, app);
 	if (rc != SC_OK) {
+		LOG("RequestUser Error");
 		HandleError(app, rc);
 		return;
 	}
@@ -122,6 +125,7 @@ void ScoreLoopThread::RequestUser(AppData_t *app) {
 	/* Make the asynchronous request */
 	rc = SC_UserController_LoadUser(app->userController);
 	if (rc != SC_OK) {
+		LOG("LoadUser Error");
 		SC_UserController_Release(app->userController);
 		HandleError(app, rc);
 		return;
@@ -183,12 +187,18 @@ void ScoreLoopThread::InformUser(AppData_t *app, const char* title, const char* 
 	DisplayDialog(app, title, message);
 
 	/* Also log title and message */
-	qDebug() << title << ": " << message;
+	LOG("%s: %s", title, message);
 }
 
 void ScoreLoopThread::HandleError(AppData_t *app, SC_Error_t error) {
 	/* Inform user with an alert dialog here - you would probably want to do a more intelligent error handling instead */
-	InformUser(app, "Error", SC_MapErrorToStr(error));
+	//InformUser(app, "Error", SC_MapErrorToStr(error));
+
+	if(error == SC_HTTP_SERVER_ERROR) {
+		// other errors could be caught related to connection issues
+		Global::instance()->setIsInternetAvailable(false);
+		LOG("Internet access not available");
+	}
 
 	/* Also log the error */
 	LOG("%s", SC_MapErrorToStr(error));

@@ -263,7 +263,6 @@ int longest(const void *first, const void *second) {
 }
 
 char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
-	//hardness, category, grid size will all be properties
 	hardness = difficulity;
 	Grid *grid = NULL;
 	char s[1000];
@@ -271,21 +270,22 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	FILE *pFile;
 	std::string strFilePath("app//native//assets//wordLists//");
 	strFilePath.append(str);
-	pFile = fopen(strFilePath.c_str(), "r"); //replace weather.txt with category
+	pFile = fopen(strFilePath.c_str(), "r");
 	//printf("before opening file\n     ");
 
-	if (pFile == NULL) {
-		//printf("Error message opening file\n     ");
-		//perror("Error opening file"); //do something better
-	}
-
-
-	while (fgets(s, 3000, pFile) != NULL) {
-		if (strlen(s) - 1 < GRID_SIZE) //string has newline char at end
-		{
-			add_word(s);
-		}
-	}
+	if (pFile == NULL) perror ("Error opening file");
+	   else {
+			while (fgets(s, 3000, pFile) != NULL) {
+				if (strlen(s) - 1 < GRID_SIZE) //string has newline char at end
+				{
+					add_word(s);
+				}
+			}
+			fclose (pFile);
+			//delete[] s;
+			//s[0] = '\0'; //empty string array
+			//memset(s, 0, sizeof s); //fills wordlist buff with 0s
+	   }
 
 	qsort(words, next_word, sizeof(char*), longest);
 
@@ -295,14 +295,10 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	int i = 0;
 	QList<int> randList;
 	while (i < WORD_COUNT) {
-//		printf("\n");
-//		printf("%i", i);
-//		fflush(stdout);
 		int r = rand() % next_word;
 
 		if(randList.indexOf(r) < 0) { //prevent duplicate words
 			randList.append(r);
-
 			if(grid->fit(words[r])) {
 				puzzleWords[i] = words[r];
 				i++;
@@ -310,6 +306,7 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 		}
 	}
 
+	//memset(words, '\0', sizeof words); //fills wordlist buff with 0s
 	grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();

@@ -15,6 +15,7 @@ GameSettings::GameSettings()
     // when saving values to the persistent store.
     QCoreApplication::setOrganizationName("JICarter");
     QCoreApplication::setApplicationName("WordsPlus");
+
 }
 
 GameSettings::~GameSettings()

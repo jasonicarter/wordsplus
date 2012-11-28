@@ -15,7 +15,7 @@
 
 #include "Global.hpp"
 
-bb::cascades::NavigationPane* g_navPane;
+//bb::cascades::NavigationPane* g_navPane;
 
 static Global* _pinstance = NULL;
 
@@ -24,7 +24,6 @@ Global* Global::instance() {
         _pinstance = new Global();
     }
     return _pinstance;
-
 }
 
 bb::platform::bbm::Context* Global::getContext() {
@@ -33,4 +32,12 @@ bb::platform::bbm::Context* Global::getContext() {
 
 void Global::setContext(bb::platform::bbm::Context *context) {
 	m_context = context;
+}
+
+bool Global::getIsInternetAvailable() {
+	return isInternetAvailable;
+}
+
+void Global::setIsInternetAvailable(bool isAvailable) {
+	isInternetAvailable = isAvailable;
 }
