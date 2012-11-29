@@ -23,7 +23,7 @@ Page {
                 preferredWidth: 720
                 DropDown {
                     id: statsDropDown
-                    title: "Review"
+                    title: "Stats"
                     Option {
                         id: dropDwnYourStats
                         text: "YOUR STATS"

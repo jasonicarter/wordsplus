@@ -1117,3 +1117,9 @@ com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
 
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-28 00:51:39.461
 !MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
+
+!ENTRY org.eclipse.ui 4 4 2012-11-28 01:13:56.878
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-11-28 01:13:56.950
+!MESSAGE Build version: 4c4aaff278b6fda93192fbad452ac693376684bf
