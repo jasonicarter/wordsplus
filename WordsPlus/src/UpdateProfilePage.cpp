@@ -32,7 +32,7 @@ UpdateProfilePage::UpdateProfilePage(
 }
 
 void UpdateProfilePage::saveStatus() {
-	QString statusMessageString = "I'm Playing WordsPlus";
+	QString statusMessageString = "I'm playing WordsPlus";
 	bool showBusy = true;
 	m_userProfile->requestUpdateStatus(
 			(showBusy ?
@@ -44,7 +44,7 @@ void UpdateProfilePage::saveStatus() {
 void UpdateProfilePage::savePersonalMessage() {
 	LOG("savePersonalMessage");
 	QString personalMessageString =
-			"WordsPlus: BEST WORDSEARCH GAME EVER!";
+			"I love WordsPlus!";
 	m_userProfile->requestUpdatePersonalMessage(personalMessageString);
 }
 

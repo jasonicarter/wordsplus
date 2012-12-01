@@ -17,11 +17,11 @@
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[ScoreLoopThread.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
-static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
-static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
+//static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
+//static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
 
-//static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
-//static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
+static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
+static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";

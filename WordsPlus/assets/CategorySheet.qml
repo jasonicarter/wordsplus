@@ -25,9 +25,6 @@ Page {
                     property int settingMedium: 4
                     property int settingEasy: 2
                     preferredWidth: 720
-//                    Label {
-//                        text: "testing: " + wordsPlus.difficulty
-//                    }
                     DropDown {
                         id: diffDropDown
                         title: "Difficulty:"
@@ -79,38 +76,7 @@ Page {
                 Divider {
                     opacity: 0
                 }
-                Container {
-                    background: Color.create("#272727")
-                    horizontalAlignment: HorizontalAlignment.Right
-                    TextArea {
-                        id: textField
-                        preferredHeight: 100
-                        text: "By Category: " + wordsPlus.category
-                        editable: false
-                        touchPropagationMode: TouchPropagationMode.None
-                        textStyle {
-                            base: categorySheetBigBodyNormalBlue.style
-                        }
-                    }
-                }
-                Container {
-                    preferredWidth: 720
-                    preferredHeight: 800
-                    ListView {
-                        id: categoryListView
-                        dataModel: XmlDataModel {
-                            source: "models/categories.xml"
-                        }
-                        horizontalAlignment: HorizontalAlignment.Center
-
-                        // When an item is selected, update the text in the TextField
-                        // to display the status of the new item
-                        onTriggered: {
-                            var selectedItem = dataModel.data(indexPath);
-                            wordsPlus.category = selectedItem.filename;
-                            textField.text = "By Category: " + selectedItem.category
-                        }
-                    } // end of ListView
+                CategoryList {
                 }
             }
         } //middle container
@@ -128,7 +94,7 @@ Page {
             imageSource: "asset:///images/close.png"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
-                wordsPlus.intializePlayArea();
+                wordsPlus.startTimer();
                 categorySheet.close();
             }
         }

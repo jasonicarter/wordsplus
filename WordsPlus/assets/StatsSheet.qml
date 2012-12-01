@@ -27,7 +27,7 @@ Page {
                     Option {
                         id: dropDwnYourStats
                         text: "YOUR STATS"
-                        description: "Best time, # of words, etc"
+                        description: "Best time, # of words, games played, etc"
                         selected: true
                         onSelectedChanged: {
                             if (selected == true) {
@@ -50,19 +50,19 @@ Page {
                             }
                         }
                     }
-                    Option {
-                        id: dropDwnYourPosition
-                        text: "YOUR POSITION"
-                        description: "How do you measure up to the rest?"
-                        onSelectedChanged: {
-                            if (selected == true) {
-                                localStats.visible = false;
-                                leaderBoard.removeAll();
-                                var positionContainer = positionDef.createObject();
-                                leaderBoard.add(positionContainer);
-                            }
-                        }
-                    }
+//                    Option {
+//                        id: dropDwnYourPosition
+//                        text: "YOUR POSITION"
+//                        description: "How do you measure up to the rest?"
+//                        onSelectedChanged: {
+//                            if (selected == true) {
+//                                localStats.visible = false;
+//                                leaderBoard.removeAll();
+//                                var positionContainer = positionDef.createObject();
+//                                leaderBoard.add(positionContainer);
+//                            }
+//                        }
+//                    }
                 }
             } //diff buttons
             Divider {
@@ -131,7 +131,7 @@ Page {
                         preferredHeight: 100
                         leftPadding: 15
                         Label {
-                            text: "Total # Words Found: "
+                            text: "Total # of Words Found: "
                             touchPropagationMode: TouchPropagationMode.None
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left

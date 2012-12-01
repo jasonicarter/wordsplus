@@ -24,7 +24,7 @@ Container {
                 }
                 Container {
                     ImageView {
-                        imageSource: "asset:///images/title_test.png"
+                        imageSource: "asset:///images/btm_nav.png"
                     }
                 }
                 Container {
@@ -67,7 +67,7 @@ Container {
                     }
                     //background: Color.Gray
                     topPadding: 23.5
-                    //leftPadding: 0
+                    rightPadding: 2
                     verticalAlignment: VerticalAlignment.Top
                     horizontalAlignment: HorizontalAlignment.Center
                     Container {
@@ -76,11 +76,11 @@ Container {
                         }
                         ImageView {
                             id: pLetter
-                            rightMargin: 0.5
+                            rightMargin: 0
                             leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            //imageSource: "asset:///images/letters/p.png"
+                            //imageSource: "asset:///images/letters/highlight/p_navbar.png"
                             onTouch: {
                                 if (event.isDown()) {
                                     pLetter.imageSource = "asset:///images/letters/highlight/p_navbar.png"
@@ -92,14 +92,14 @@ Container {
                         }
                         ImageView {
                             id: lLetter
-                            rightMargin: 1.5
+                            rightMargin: 0
                             leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            //imageSource: "asset:///images/letters/l.png"
+                            //imageSource: "asset:///images/letters/highlight/l_navbar.png"
                             onTouchEnter: {
                                 if (pLetter.imageSource == "asset:///images/letters/highlight/p_navbar.png") {
-                                    lLetter.imageSource = "asset:///images/letters/highlight/l.png"
+                                    lLetter.imageSource = "asset:///images/letters/highlight/l_navbar.png"
                                     wordsPlus.playSound("letterSelected");
                                 }
                             }
@@ -116,9 +116,9 @@ Container {
                             leftMargin: 0
                             preferredHeight: 75
                             preferredWidth: 75
-                            //imageSource: "asset:///images/letters/a.png"
+                            //imageSource: "asset:///images/letters/highlight/a_navbar.png"
                             onTouchEnter: {
-                                if (lLetter.imageSource == "asset:///images/letters/highlight/l.png") {
+                                if (lLetter.imageSource == "asset:///images/letters/highlight/l_navbar.png") {
                                     aLetter.imageSource = "asset:///images/letters/highlight/a_navbar.png"
                                     wordsPlus.playSound("letterSelected");
                                 }
