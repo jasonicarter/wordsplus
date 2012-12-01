@@ -34,7 +34,8 @@ Container {
                         preferredHeight: 50
                         Label {
                             text: ListItemData.rank
-                            textStyle.fontSizeValue: 25
+                            //textStyle.fontSizeValue: 25
+                            textStyle.base: SystemDefaults.TextStyles.BigText
                             textStyle.textAlign: TextAlign.Center
                             preferredWidth: 150
                             verticalAlignment: VerticalAlignment.Center

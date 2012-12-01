@@ -16,11 +16,10 @@ Container {
         preferredWidth: 334
         Label {
             objectName: "label_category"
-            text: "Category: " //+ wordsPlus.category
+            text: "Category: " //updated dynamically in C++
             textStyle {
                 base: SystemDefaults.TextStyles.BodyText
                 color: Color.create("#252525")
-                //fontFamily: "Times New Roman"
                 fontFamily: "Slate Pro"
                 //fontSize: FontSize.PointValue(25)
             }

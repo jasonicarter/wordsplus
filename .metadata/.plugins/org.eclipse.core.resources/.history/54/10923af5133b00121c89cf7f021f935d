@@ -1,0 +1,39 @@
+import bb.cascades 1.0
+
+Container {
+    layout: DockLayout {
+    }
+    ListView {
+        id: leaderboardList
+        dataModel: XmlDataModel {
+            source: "models/categories.xml"
+        }
+        listItemComponents: [
+            ListItemComponent {
+                type: "item"
+                content: Container {
+                    Container {
+                        layout: StackLayout {
+                            orientation: LayoutOrientation.LeftToRight
+                        }
+                        //preferredHeight: 50
+                        Container {
+                            horizontalAlignment: HorizontalAlignment.Left
+                            verticalAlignment: VerticalAlignment.Center
+                            Label {
+                                text: ListItemData.category
+                                textStyle.base: SystemDefaults.TextStyles.TitleText
+                            }
+                            Label {
+                                text: ListItemData.formattedScore
+                                textStyle.base: SystemDefaults.TextStyles.SubtitleText
+                            }
+                        }
+                    }
+                    Divider {
+                    }
+                }
+            }
+        ]
+    }
+}

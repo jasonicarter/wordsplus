@@ -32,23 +32,14 @@ void ActiveFrame::update() {
 	 *  You can update the cover here.
 	 */
 
-	//You can update AF every 1 sec but BB10 platform will update UI every 30sec :)
-//	QTimer::singleShot(1000, this, SLOT(update()));
+	//You can update AF every 1 sec but BB10 platform will update UI every 30sec
+	//QTimer::singleShot(1000, this, SLOT(update()));
+	Label* label_cat = mMainContainer->findChild<Label*>("label_category");
 
-//	Label* label2 = mMainContainer->findChild<Label*>("label2");
-//
-//	if (label2) {
-//		int c = label2->text().toInt() + 1;
-//		label2->setText(QString::number(c));
-//	}
-
-		Label* label_cat = mMainContainer->findChild<Label*>("label_category");
-
-		if (label_cat) {
-			label_cat->setText(" " + settings->getValueFor("settingsCategory", "WEATHER").toUpper());
-			//label_cat->setText(" " + settings->getValueFor("settingsDifficulty", "8").toUpper());
-		}
+	if (label_cat) {
+		label_cat->setText(" " + settings->getValueFor("settingsCategory", "WEATHER").toUpper());
+		//label_cat->setText(" " + settings->getValueFor("settingsDifficulty", "8").toUpper());
+	}
 
 }
-
 

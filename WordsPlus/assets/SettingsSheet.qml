@@ -79,7 +79,9 @@ Page {
                             horizontalAlignment: HorizontalAlignment.Right
                             ToggleButton {
                                 id: music
-                                checked: wordsPlus.musicOn
+                                enabled: false
+                                checked: false
+                                //checked: wordsPlus.musicOn
                                 onCheckedChanged: {
                                     if (music.checked == true) {
                                         wordsPlus.musicOn = true;
