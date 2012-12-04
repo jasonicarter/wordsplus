@@ -34,9 +34,11 @@ Container {
                         preferredHeight: 50
                         Label {
                             text: ListItemData.rank
-                            //textStyle.fontSizeValue: 25
-                            textStyle.base: SystemDefaults.TextStyles.BigText
-                            textStyle.textAlign: TextAlign.Center
+                            textStyle {
+                                base: SystemDefaults.TextStyles.BigText
+                                textAlign: TextAlign.Center
+                                color: Color.create("#CC3F10")
+                            }
                             preferredWidth: 150
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
@@ -45,7 +47,7 @@ Container {
                             horizontalAlignment: HorizontalAlignment.Left
                             verticalAlignment: VerticalAlignment.Center
                             Label {
-                                text: ListItemData.username //+ ": " + ListItemData.formattedScore
+                                text: ListItemData.username
                                 textStyle.base: SystemDefaults.TextStyles.TitleText
                             }
                             Label {

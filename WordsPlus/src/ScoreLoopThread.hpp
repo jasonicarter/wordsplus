@@ -49,6 +49,7 @@ public:
 
 	static void LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count);
 	static void LoadLeaderboardAroundScore(AppData_t *app, SC_Score_h score, SC_ScoresSearchList_t searchList, unsigned int count);
+	static void LoadLeaderboardAroundUser(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count);
 	static void LoadLeaderboardCompletionCallback(void *userData, SC_Error_t completionStatus);
 
 	static void AchieveAward(AppData_t *app, const char *awardIdentifier);

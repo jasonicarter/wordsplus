@@ -17,11 +17,11 @@
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[ScoreLoopThread.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
-//static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
-//static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
+static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
+static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
 
-static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
-static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
+//static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
+//static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
@@ -333,6 +333,40 @@ void ScoreLoopThread::LoadLeaderboardAroundScore(AppData_t *app, SC_Score_h scor
 		return;
 	}
 	LOG("LoadLeaderboardAroundScore - Loading Leaderboard...");
+}
+
+void ScoreLoopThread::LoadLeaderboardAroundUser(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count) {
+
+	/* Create a ScoresController */
+	SC_Error_t rc = SC_Client_CreateScoresController(app->client, &app->scoresController, LoadLeaderboardCompletionCallback, app);
+	if (rc != SC_OK) {
+		HandleError(app, rc);
+		return;
+	}
+
+	/* Configure the Controller */
+	SC_ScoresController_SetMode(app->scoresController, 0);
+	rc = SC_ScoresController_SetSearchList(app->scoresController, searchList);
+	if (rc != SC_OK) {
+		SC_ScoresController_Release(app->scoresController); /* Cleanup Controller */
+		HandleError(app, rc);
+		return;
+	}
+
+	/* Get the session from the client. */
+	SC_Session_h session = SC_Client_GetSession(app->client);
+
+	/* Get the session user from the session. */
+	SC_User_h user = SC_Session_GetUser(session);
+
+	/* Load the Leaderboard for the given user and count */
+	rc = SC_ScoresController_LoadScoresAroundUser(app->scoresController, user, count);
+	if (rc != SC_OK) {
+		SC_ScoresController_Release(app->scoresController); /* Cleanup Controller */
+		HandleError(app, rc);
+		return;
+	}
+	LOG("LoadLeaderboardAroundUser - Loading Leaderboard...");
 }
 
 void ScoreLoopThread::LoadLeaderboardCompletionCallback(void *userData, SC_Error_t completionStatus) {

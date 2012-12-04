@@ -241,7 +241,7 @@ int Grid::fits(int l, char *s, int i, int j, int dirn) {
 
 	return score;
 }
-void add_word(char *s) {
+void add_word(char *s, char *words[]) {
 	for (int j = 0; j < strlen(s); j++)
 		if (s[j] < ' ')
 			s[j] = '\0';
@@ -266,25 +266,26 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	hardness = difficulity;
 	Grid *grid = NULL;
 	char s[1000];
+	//char *words[1000];
+
+	/*********************************/
+	//get rid of global words[1000] and make it local.
+	//pass it over to add_words - only place it's used (double check)
 
 	FILE *pFile;
 	std::string strFilePath("app//native//assets//wordLists//");
 	strFilePath.append(str);
 	pFile = fopen(strFilePath.c_str(), "r");
-	//printf("before opening file\n     ");
 
 	if (pFile == NULL) perror ("Error opening file");
 	   else {
 			while (fgets(s, 3000, pFile) != NULL) {
 				if (strlen(s) - 1 < GRID_SIZE) //string has newline char at end
 				{
-					add_word(s);
+					add_word(s, words);
 				}
 			}
 			fclose (pFile);
-			//delete[] s;
-			//s[0] = '\0'; //empty string array
-			//memset(s, 0, sizeof s); //fills wordlist buff with 0s
 	   }
 
 	qsort(words, next_word, sizeof(char*), longest);
@@ -306,7 +307,10 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 		}
 	}
 
-	//memset(words, '\0', sizeof words); //fills wordlist buff with 0s
+//	for (int i = 0; i < 1000; i++)
+//				words[i] = "jason";
+
+	//memset(words, 0, sizeof words); //fills wordlist buff with 0s
 	grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();

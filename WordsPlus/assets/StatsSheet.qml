@@ -31,9 +31,9 @@ Page {
                         selected: true
                         onSelectedChanged: {
                             if (selected == true) {
-                                localStats.visible = true;
                                 leaderBoard.visible = false;
                                 leaderBoard.removeAll();
+                                localStats.visible = true;
                             }
                         }
                     }
@@ -43,26 +43,28 @@ Page {
                         description: "All-time top notch word finders. "
                         onSelectedChanged: {
                             if (selected == true) {
+                                leaderBoard.removeAll();
                                 var LeadersContainer = leaderDef.createObject();
                                 leaderBoard.add(LeadersContainer);
-                                leaderBoard.visible = true;
                                 localStats.visible = false;
+                                leaderBoard.visible = true;
                             }
                         }
                     }
-//                    Option {
-//                        id: dropDwnYourPosition
-//                        text: "YOUR POSITION"
-//                        description: "How do you measure up to the rest?"
-//                        onSelectedChanged: {
-//                            if (selected == true) {
-//                                localStats.visible = false;
-//                                leaderBoard.removeAll();
-//                                var positionContainer = positionDef.createObject();
-//                                leaderBoard.add(positionContainer);
-//                            }
-//                        }
-//                    }
+                    Option {
+                        id: dropDwnYourPosition
+                        text: "YOUR POSITION"
+                        description: "How do you measure up against the rest?"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var positionContainer = positionDef.createObject();
+                                leaderBoard.add(positionContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true; 
+                            }
+                        }
+                    }
                 }
             } //diff buttons
             Divider {
