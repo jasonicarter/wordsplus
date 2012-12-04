@@ -36,7 +36,7 @@ Container {
                         opacity: 1
                         imageSource: "asset:///images/heart.png"
                         onTouch: {
-                            invokeWebSite.trigger("bb.action.OPEN");
+                            invokeLeaveReview.trigger("bb.action.OPEN");
                         }
                     }
                     //                    ImageView {
@@ -239,24 +239,24 @@ Container {
                 }
             }
         }
-//        Container {
-//            bottomPadding: 200
-//            verticalAlignment: VerticalAlignment.Bottom
-//            horizontalAlignment: HorizontalAlignment.Center
-//            ActivityIndicator {
-//                id: mainLoader
-//                running: true
-//            }
-//            Label {
-//                id: welcomeUserLabel
-//                text: "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
-//                multiline: true
-//                textStyle {
-//                    base: subTitleNormalWhite.style
-//                    textAlign: TextAlign.Center
-//                }
-//            }
-//        }
+        //        Container {
+        //            bottomPadding: 200
+        //            verticalAlignment: VerticalAlignment.Bottom
+        //            horizontalAlignment: HorizontalAlignment.Center
+        //            ActivityIndicator {
+        //                id: mainLoader
+        //                running: true
+        //            }
+        //            Label {
+        //                id: welcomeUserLabel
+        //                text: "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
+        //                multiline: true
+        //                textStyle {
+        //                    base: subTitleNormalWhite.style
+        //                    textAlign: TextAlign.Center
+        //                }
+        //            }
+        //        }
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }
@@ -273,8 +273,7 @@ Container {
         function onScoreloopLoaded(username) {
             mainLoader.stop();
             mainLoader.visible = false;
-            welcomeUserLabel.text = qsTr("Welcome") + " " + username + "! \n" + 
-            "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
+            welcomeUserLabel.text = qsTr("Welcome") + " " + username + "! \n" + "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
         }
     } //main container
     attachedObjects: [
@@ -312,6 +311,13 @@ Container {
             query: InvokeQuery {
                 mimeType: "text/html"
                 uri: "http://www.twocasualcoders.com"
+            }
+        },
+        Invocation {
+            id: invokeLeaveReview
+            query: InvokeQuery {
+                mimeType: "application/x-bb-appworld"
+                uri: "appworld://content/19132685"
             }
         },
         Sheet {

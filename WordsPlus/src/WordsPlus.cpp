@@ -125,7 +125,7 @@ void WordsPlus::onFullscreen() {
     startTimer();
 }
 
-/****************************************************************************************************/
+/****SCORELOOP*****/
 void WordsPlus::scoreLoopLoaded(AppData_t *data)
 {
 	mAppData = data;
@@ -159,12 +159,18 @@ void WordsPlus::loadLeaderboardAroundLastScore()
 	}
 }
 
+void WordsPlus::loadLeaderboardAroundUser()
+{
+	if(Global::instance()->getIsInternetAvailable()){
+		ScoreLoopThread::LoadLeaderboardAroundUser(mAppData, SC_SCORES_SEARCH_LIST_ALL, 5);
+	}
+}
+
 ScoreLoopThread* WordsPlus::scoreLoop()
 {
 	return ScoreLoopThread::instance();
 }
-
-/****************************************************************************************************/
+/****SCORELOOP*****/
 
 void WordsPlus::InitializeHomePage() {
 	//LOG("InitializeHomePage");

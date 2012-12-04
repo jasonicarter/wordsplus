@@ -9,7 +9,7 @@ Container {
         leaderboard.list.visible = false;
         leaderboard.loader.start();
         wordsPlus.scoreLoop().LoadLeaderboardCompleted.connect(positionLeaderboardPage.handleLeaderboard)
-        wordsPlus.loadLeaderboardAroundLastScore();
+        wordsPlus.loadLeaderboardAroundUser();
     }
     function handleLeaderboard(leaderboardData) {
         leaderboard.loader.stop();

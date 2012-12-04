@@ -1,12 +1,12 @@
 
-**** Build of configuration Device-Debug for project UI_Test ****
+**** Build of configuration Simulator-Debug for project UI_Test ****
 
-make Device-Debug 
-/Applications/bbndk/host_10_0_9_52/darwin/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile UI_Test.pro CONFIG+=device
-/Applications/bbndk/host_10_0_9_52/darwin/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile UI_Test.pro CONFIG+=simulator
+make Simulator-Debug 
+C:/bbndk/host_10_0_9_284/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile UI_Test.pro CONFIG+=device
+C:/bbndk/host_10_0_9_284/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile UI_Test.pro CONFIG+=simulator
 make -C ./translations -f Makefile update release
-make[1]: Entering directory `/Users/jaiaca/blackberry/UI_Test/translations'
-/Applications/bbndk/host_10_0_9_52/darwin/x86/usr/bin/lupdate UI_Test.pro
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations'
+C:/bbndk/host_10_0_9_284/win32/x86/usr/bin/lupdate UI_Test.pro
 Updating 'UI_Test_en_GB.ts'...
     Found 1 source text(s) (0 new and 1 already existing)
 Updating 'UI_Test_fr.ts'...
@@ -19,33 +19,34 @@ Updating 'UI_Test_es.ts'...
     Found 1 source text(s) (0 new and 1 already existing)
 Updating 'UI_Test.ts'...
     Found 1 source text(s) (0 new and 1 already existing)
-/Applications/bbndk/host_10_0_9_52/darwin/x86/usr/bin/lrelease UI_Test.pro
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test_en_GB.qm'...
+C:/bbndk/host_10_0_9_284/win32/x86/usr/bin/lrelease UI_Test.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test_en_GB.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 1 untranslated source text(s)
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test_fr.qm'...
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test_fr.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 1 untranslated source text(s)
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test_it.qm'...
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test_it.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 1 untranslated source text(s)
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test_de.qm'...
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test_de.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 1 untranslated source text(s)
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test_es.qm'...
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test_es.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 1 untranslated source text(s)
-Updating '/Users/jaiaca/blackberry/UI_Test/translations/UI_Test.qm'...
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations/UI_Test.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
-Could not find qmake configuration directoryCould not read qmake configuration file /Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/qmake.confUsing OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/debug_and_release.prf(1): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(4): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(36): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(213): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(3): 'qtPrepareTool' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(12): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(97): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/uic.prf(108): Using OS scope before setting MAKEFILE_GENERATORCould not find qmake configuration directoryCould not read qmake configuration file /Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/qmake.confUsing OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/debug_and_release.prf(1): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(4): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(36): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(197): 'qtAddLibrary' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/qt.prf(213): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(3): 'qtPrepareTool' is not a recognized test function/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(12): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/moc.prf(97): Using OS scope before setting MAKEFILE_GENERATOR/Applications/bbndk/target_10_0_9_386/qnx6/usr/share/qt4/mkspecs/features/uic.prf(108): Using OS scope before setting MAKEFILE_GENERATOR
     Ignored 1 untranslated source text(s)
-make[1]: Leaving directory `/Users/jaiaca/blackberry/UI_Test/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `/Users/jaiaca/blackberry/UI_Test/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/translations'
+make -C ./x86 -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/x86'
 make -f Makefile.Debug
-make[2]: Entering directory `/Users/jaiaca/blackberry/UI_Test/arm'
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/x86'
 make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `/Users/jaiaca/blackberry/UI_Test/arm'
-make[1]: Leaving directory `/Users/jaiaca/blackberry/UI_Test/arm'
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/x86'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/UI_Test/x86'
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
 
 **** Build Finished ****
