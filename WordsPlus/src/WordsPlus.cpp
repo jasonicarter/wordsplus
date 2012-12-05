@@ -222,7 +222,7 @@ void WordsPlus::intializePlayArea() {
 		cat.append(".txt");
 
 		char** letter = createNewPuzzle((char*) cat.c_str(), getDifficulty());
-		char** puzzleWords = returnPuzzleWords();
+		QList<char*> puzzleWords = returnPuzzleWords();
 
 		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();

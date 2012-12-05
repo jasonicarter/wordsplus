@@ -18,7 +18,8 @@
 #define FALSE 0
 
 char *words[1000];
-char *puzzleWords[1000];
+//char *puzzleWords[1000];
+QList<char*> puzzleWords;
 int next_word = 0;
 int hardness = 8;
 
@@ -266,11 +267,6 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	hardness = difficulity;
 	Grid *grid = NULL;
 	char s[1000];
-	//char *words[1000];
-
-	/*********************************/
-	//get rid of global words[1000] and make it local.
-	//pass it over to add_words - only place it's used (double check)
 
 	FILE *pFile;
 	std::string strFilePath("app//native//assets//wordLists//");
@@ -288,29 +284,30 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 			fclose (pFile);
 	   }
 
-	qsort(words, next_word, sizeof(char*), longest);
+	//qsort(words, next_word, sizeof(char*), longest);
 
 	srand((unsigned)std::time(0));
 	grid = new Grid(GRID_SIZE);
 
 	int i = 0;
 	QList<int> randList;
+	puzzleWords.clear();
 	while (i < WORD_COUNT) {
 		int r = rand() % next_word;
 
 		if(randList.indexOf(r) < 0) { //prevent duplicate words
 			randList.append(r);
-			if(grid->fit(words[r])) {
-				puzzleWords[i] = words[r];
-				i++;
+			if(words[r] != NULL){
+				if(grid->fit(words[r])) {
+					//puzzleWords[i] = words[r];
+					puzzleWords.append(words[r]);
+					i++;
+				}
 			}
 		}
 	}
 
-//	for (int i = 0; i < 1000; i++)
-//				words[i] = "jason";
-
-	//memset(words, 0, sizeof words); //fills wordlist buff with 0s
+	memset(words, '\0', sizeof words); //fills wordlist buff with 0s
 	grid -> garbage () ;
 	//grid -> display () ;
 	char **letterGrid = grid->returnLetterGrid();
@@ -318,7 +315,7 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	return letterGrid;
 }
 
-char** returnPuzzleWords() {
+QList<char*> returnPuzzleWords() {
 	return puzzleWords;
 }
 

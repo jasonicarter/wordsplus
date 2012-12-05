@@ -8,9 +8,11 @@
 #ifndef WORDSEARCH_H_
 #define WORDSEARCH_H_
 
+#include <QList>
+
 
 char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8);
-char** returnPuzzleWords();
+QList<char*> returnPuzzleWords();
 int returnNumberOfPuzzleWords();
 
 
