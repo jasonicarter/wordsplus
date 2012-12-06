@@ -166,6 +166,13 @@ void WordsPlus::loadLeaderboardAroundUser()
 	}
 }
 
+void WordsPlus::LoadAchievementsAwards()
+{
+	if(Global::instance()->getIsInternetAvailable()){
+		ScoreLoopThread::LoadAchievements(mAppData);
+	}
+}
+
 ScoreLoopThread* WordsPlus::scoreLoop()
 {
 	return ScoreLoopThread::instance();
@@ -542,6 +549,8 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 	}
 
 	if (puzzleWords.indexOf(selectedWord) >= 0) { // word found in puzzle words
+
+		LoadAchievementsAwards();
 
 		//remove word from list so it can't be selected a second time
 		puzzleWords.removeAll(selectedWord);

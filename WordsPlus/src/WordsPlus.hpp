@@ -46,6 +46,7 @@ public:
     Q_INVOKABLE void loadLeaderboard();
     Q_INVOKABLE void loadLeaderboardAroundLastScore();
     Q_INVOKABLE void loadLeaderboardAroundUser();
+    Q_INVOKABLE void LoadAchievementsAwards();
     Q_INVOKABLE ScoreLoopThread* scoreLoop();
 
     Q_INVOKABLE void startTimer();

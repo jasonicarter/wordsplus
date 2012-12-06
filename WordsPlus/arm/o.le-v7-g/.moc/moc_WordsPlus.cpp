@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Mon Dec 3 21:40:13 2012
+** Created: Wed Dec 5 22:52:18 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,8 +23,8 @@ static const uint qt_meta_data_WordsPlus[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      32,   14, // methods
-      12,  174, // properties
+      33,   14, // methods
+      12,  179, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -61,26 +61,27 @@ static const uint qt_meta_data_WordsPlus[] = {
      536,   10,   10,   10, 0x02,
      554,   10,   10,   10, 0x02,
      587,   10,   10,   10, 0x02,
-     632,   10,  615,   10, 0x02,
-     644,   10,   10,   10, 0x02,
-     657,   10,   10,   10, 0x02,
+     615,   10,   10,   10, 0x02,
+     657,   10,  640,   10, 0x02,
      669,   10,   10,   10, 0x02,
-     688,  682,   10,   10, 0x02,
-     712,  708,   10,   10, 0x02,
+     682,   10,   10,   10, 0x02,
+     694,   10,   10,   10, 0x02,
+     713,  707,   10,   10, 0x02,
+     737,  733,   10,   10, 0x02,
 
  // properties: name, type, flags
-     739,  731, 0x0a495103,
-     748,  731, 0x0a495103,
-     760,  731, 0x0a495001,
-     765,  731, 0x0a495001,
-     786,  781, 0x01495003,
-     794,  781, 0x01495003,
-     802,  781, 0x01495003,
-     815,  731, 0x0a495001,
-     513,  835, 0x02495103,
-     839,  835, 0x02495001,
-     851,  731, 0x0a495103,
-     867,  835, 0x02495103,
+     764,  756, 0x0a495103,
+     773,  756, 0x0a495103,
+     785,  756, 0x0a495001,
+     790,  756, 0x0a495001,
+     811,  806, 0x01495003,
+     819,  806, 0x01495003,
+     827,  806, 0x01495003,
+     840,  756, 0x0a495001,
+     513,  860, 0x02495103,
+     864,  860, 0x02495001,
+     876,  756, 0x0a495103,
+     892,  860, 0x02495103,
 
  // properties: notify_signal_id
        1,
@@ -117,13 +118,14 @@ static const char qt_meta_stringdata_WordsPlus[] = {
     "submitScore(int)\0loadLeaderboard()\0"
     "loadLeaderboardAroundLastScore()\0"
     "loadLeaderboardAroundUser()\0"
-    "ScoreLoopThread*\0scoreLoop()\0startTimer()\0"
-    "stopTimer()\0resetTimer()\0state\0"
-    "ControlsForBBM(int)\0msg\0playSound(QString)\0"
-    "QString\0category\0puzzleWords\0time\0"
-    "totalWordsFound\0bool\0soundOn\0musicOn\0"
-    "profileBoxOn\0puzzleCompletedTime\0int\0"
-    "gamesPlayed\0selectedLetters\0difficulty\0"
+    "LoadAchievementsAwards()\0ScoreLoopThread*\0"
+    "scoreLoop()\0startTimer()\0stopTimer()\0"
+    "resetTimer()\0state\0ControlsForBBM(int)\0"
+    "msg\0playSound(QString)\0QString\0category\0"
+    "puzzleWords\0time\0totalWordsFound\0bool\0"
+    "soundOn\0musicOn\0profileBoxOn\0"
+    "puzzleCompletedTime\0int\0gamesPlayed\0"
+    "selectedLetters\0difficulty\0"
 };
 
 void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -158,13 +160,14 @@ void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 23: _t->loadLeaderboard(); break;
         case 24: _t->loadLeaderboardAroundLastScore(); break;
         case 25: _t->loadLeaderboardAroundUser(); break;
-        case 26: { ScoreLoopThread* _r = _t->scoreLoop();
+        case 26: _t->LoadAchievementsAwards(); break;
+        case 27: { ScoreLoopThread* _r = _t->scoreLoop();
             if (_a[0]) *reinterpret_cast< ScoreLoopThread**>(_a[0]) = _r; }  break;
-        case 27: _t->startTimer(); break;
-        case 28: _t->stopTimer(); break;
-        case 29: _t->resetTimer(); break;
-        case 30: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 31: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 28: _t->startTimer(); break;
+        case 29: _t->stopTimer(); break;
+        case 30: _t->resetTimer(); break;
+        case 31: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 32: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -202,9 +205,9 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 32)
+        if (_id < 33)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 32;
+        _id -= 33;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {

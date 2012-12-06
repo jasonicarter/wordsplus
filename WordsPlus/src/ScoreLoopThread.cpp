@@ -17,15 +17,15 @@
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[ScoreLoopThread.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
-static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
-static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
+//static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
+//static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
 
-//static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
-//static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
+static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
+static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
-static const char SCORELOOP_AN_AWARD_ID[] = "com.scoreloop.demo.smiley";
+static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
 
 static ScoreLoopThread* _pinstance = NULL;
 
@@ -433,8 +433,6 @@ void ScoreLoopThread::LoadLeaderboardCompletionCallback(void *userData, SC_Error
 	/* Cleanup Controller */
 	SC_ScoresController_Release(app->scoresController);
 
-	/* Set an Award as achieved here just for demonstration purposes */
-	//AchieveAward(app, SCORELOOP_AN_AWARD_ID);
 }
 
 void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) {
@@ -471,7 +469,7 @@ void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) 
 		SC_LocalAchievementsController_Release(app->achievementsController);
 
 		/* Load Achievement here just for demonstration purposes */
-		LoadAchievements(app);
+		//LoadAchievements(app);
 	}
 }
 
@@ -503,7 +501,7 @@ void ScoreLoopThread::LoadAchievements(AppData_t *app) {
 	}
 
 	/* Load the achievements */
-	qDebug() << "Loading Achievements...";
+	LOG("Loading Achievements...");
 	LoadAchievementsCompletionCallback(app, SC_OK);
 }
 
@@ -527,15 +525,32 @@ void ScoreLoopThread::LoadAchievementsCompletionCallback(void *userData, SC_Erro
 	}
 	qDebug() << "Done loading Achievements";
 
+	QVariantList achievementData;
 	unsigned int i, numAchievements = SC_AchievementList_GetCount(achievementList);
 	for (i = 0; i < numAchievements; ++i) {
 		SC_Achievement_h achievement = SC_AchievementList_GetAt(achievementList, i);
+		SC_Bool_t isAchieved = SC_Achievement_IsAchieved(achievement);
 		SC_Award_h award = SC_Achievement_GetAward(achievement);
-		qDebug() << "Achieved Award: " << SC_String_GetData(SC_Award_GetIdentifier(award));
+		SC_String_h title = SC_Award_GetLocalizedTitle(award);
+		SC_String_h description = SC_Award_GetLocalizedDescription(award);
+		SC_String_h image = SC_Achievement_GetImageName(achievement);
+		//LOG("Awards: %s", SC_String_GetData(SC_Award_GetIdentifier(award)));
+
+		QVariantMap awardData;
+		awardData["order"] = i;
+		awardData["achievement"] = SC_String_GetData(SC_Award_GetIdentifier(award));
+		awardData["achieved"] = isAchieved;
+		awardData["title"] = SC_String_GetData(title);
+		awardData["description"] = SC_String_GetData(description);
+		awardData["image"] = SC_String_GetData(image);
+		LOG("Awards: %i, %s, %s, %i, %s", i, SC_String_GetData(title), SC_String_GetData(description), isAchieved, SC_String_GetData(image) );
+		achievementData.append(awardData);
 	}
 
 	/* Cleanup Controller */
 	SC_LocalAchievementsController_Release(app->achievementsController);
+	emit(instance()->LoadAchievementsCompleted(achievementData));
+
 
 	/* Create a Challenge here for demonstration purposes only */
 	/*

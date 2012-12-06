@@ -38,6 +38,9 @@ Container {
                         onTouch: {
                             invokeLeaveReview.trigger("bb.action.OPEN");
                         }
+                        animations: HeartBeatAnimation {
+                         id: heartbeat   
+                        }
                     }
                     //                    ImageView {
                     //                        id: blueHeart
@@ -263,6 +266,7 @@ Container {
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
+            //heartbeat.play();
             //because score()->start is called after qml creation
             //scoreloop instance created, calls run() which does requestUserCompleted
             //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
