@@ -105,6 +105,7 @@
     </asset>
     <asset path="assets/images/icon.png">icon.png</asset>
     <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
+    <asset path="assets/scoreloop">scoreloop</asset>
 
 
     

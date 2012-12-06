@@ -82,10 +82,9 @@ signals:
 	void RequestUserCompleted(QString username);
 	void SubmitScoreCompleted(ScoreData_t *scoreData);
 	void LoadLeaderboardCompleted(QVariantList leaderboardData);
+	void LoadAchievementsCompleted(QVariantList achievementData);
 	/* @TODO arguments & implementation */
 	void AchieveAwardCompleted();
-	/* @TODO arguments & implementation */
-	void LoadAchievementsCompleted();
 	/* @TODO arguments & implementation */
 	void AcceptChallengeCompleted();
 	/* @TODO arguments & implementation */

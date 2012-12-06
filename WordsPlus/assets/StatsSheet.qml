@@ -61,7 +61,21 @@ Page {
                                 var positionContainer = positionDef.createObject();
                                 leaderBoard.add(positionContainer);
                                 localStats.visible = false;
-                                leaderBoard.visible = true; 
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
+                    Option {
+                        id: dropDwnYourAchievements
+                        text: "ACHIEVEMENTS"
+                        description: "Get them all!"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var achievementContainer = achievementDef.createObject();
+                                leaderBoard.add(achievementContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
                             }
                         }
                     }
@@ -85,6 +99,10 @@ Page {
                         ComponentDefinition {
                             id: positionDef
                             source: "PositionLeaderboard.qml"
+                        },
+                        ComponentDefinition {
+                            id: achievementDef
+                            source: "Achievements.qml"
                         }
                     ]
                 }

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScoreLoopThread.hpp'
 **
-** Created: Mon Dec 3 21:40:10 2012
+** Created: Wed Dec 5 22:52:06 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -35,10 +35,10 @@ static const uint qt_meta_data_ScoreLoopThread[] = {
       61,   52,   16,   16, 0x05,
      101,   91,   16,   16, 0x05,
      152,  136,   16,   16, 0x05,
-     191,   16,   16,   16, 0x05,
-     215,   16,   16,   16, 0x05,
-     243,   16,   16,   16, 0x05,
-     270,   16,   16,   16, 0x05,
+     207,  191,   16,   16, 0x05,
+     247,   16,   16,   16, 0x05,
+     271,   16,   16,   16, 0x05,
+     298,   16,   16,   16, 0x05,
 
        0        // eod
 };
@@ -49,8 +49,8 @@ static const char qt_meta_stringdata_ScoreLoopThread[] = {
     "RequestUserCompleted(QString)\0scoreData\0"
     "SubmitScoreCompleted(ScoreData_t*)\0"
     "leaderboardData\0LoadLeaderboardCompleted(QVariantList)\0"
+    "achievementData\0LoadAchievementsCompleted(QVariantList)\0"
     "AchieveAwardCompleted()\0"
-    "LoadAchievementsCompleted()\0"
     "AcceptChallengeCompleted()\0"
     "SubmitChallengeCompleted()\0"
 };
@@ -65,8 +65,8 @@ void ScoreLoopThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 1: _t->RequestUserCompleted((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: _t->SubmitScoreCompleted((*reinterpret_cast< ScoreData_t*(*)>(_a[1]))); break;
         case 3: _t->LoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
-        case 4: _t->AchieveAwardCompleted(); break;
-        case 5: _t->LoadAchievementsCompleted(); break;
+        case 4: _t->LoadAchievementsCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
+        case 5: _t->AchieveAwardCompleted(); break;
         case 6: _t->AcceptChallengeCompleted(); break;
         case 7: _t->SubmitChallengeCompleted(); break;
         default: ;
@@ -142,13 +142,14 @@ void ScoreLoopThread::LoadLeaderboardCompleted(QVariantList _t1)
 }
 
 // SIGNAL 4
-void ScoreLoopThread::AchieveAwardCompleted()
+void ScoreLoopThread::LoadAchievementsCompleted(QVariantList _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 4, 0);
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
 
 // SIGNAL 5
-void ScoreLoopThread::LoadAchievementsCompleted()
+void ScoreLoopThread::AchieveAwardCompleted()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, 0);
 }
