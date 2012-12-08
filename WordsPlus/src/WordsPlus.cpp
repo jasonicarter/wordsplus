@@ -550,8 +550,6 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
 	if (puzzleWords.indexOf(selectedWord) >= 0) { // word found in puzzle words
 
-		LoadAchievementsAwards();
-
 		//remove word from list so it can't be selected a second time
 		puzzleWords.removeAll(selectedWord);
 
@@ -625,10 +623,12 @@ void WordsPlus::CrossOutPuzzleWord(QString wordFound) {
 }
 
 void WordsPlus::showToast(QString msg) {
-	SystemToast *toast = new SystemToast(this);
-	toast->setBody(msg);
-	toast->setPosition(SystemUiPosition::TopCenter);
-	toast->show();
+
+	emit mainSysToastSignal(msg + "\n\nTap home below to return to Main page");
+//	SystemToast *toast = new SystemToast(this);
+//	toast->setBody(msg);
+//	toast->setPosition(SystemUiPosition::TopCenter);
+//	toast->show();
 }
 
 void WordsPlus::onTick() {

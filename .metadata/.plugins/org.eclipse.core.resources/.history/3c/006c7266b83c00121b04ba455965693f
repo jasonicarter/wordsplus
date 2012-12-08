@@ -1,0 +1,20 @@
+// Default empty project template
+import bb.cascades 1.0
+
+// creates one page with a label
+
+Page {
+    Container {
+        property int bbm_personalmessage: 6
+        property int bbm_statusmessage: 7
+        property int bbm_invitetodownload: 8
+        layout: DockLayout {
+        }
+        Label {
+            text: qsTr("Hello BBM")
+            textStyle.base: SystemDefaults.TextStyles.BigText
+            verticalAlignment: VerticalAlignment.Center
+            horizontalAlignment: HorizontalAlignment.Center
+        }
+    }
+}

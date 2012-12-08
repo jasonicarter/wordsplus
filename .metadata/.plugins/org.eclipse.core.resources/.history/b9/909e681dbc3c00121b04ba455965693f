@@ -1,0 +1,56 @@
+// Default empty project template
+import bb.cascades 1.0
+
+// creates one page with a label
+
+Page {
+    property int bbm_profilebox: 2
+    property int bbm_personalmessage: 3
+    property int bbm_statusmessage: 4
+    property int bbm_invitetodownload: 5
+    Container {
+        layout: DockLayout {
+        }
+        Label {
+            text: qsTr("Hello BBM")
+            textStyle.base: SystemDefaults.TextStyles.BigText
+            verticalAlignment: VerticalAlignment.Top
+            horizontalAlignment: HorizontalAlignment.Center
+        }
+        Container {
+            verticalAlignment: VerticalAlignment.Center
+            horizontalAlignment: HorizontalAlignment.Center
+            Label {
+                text: "(ProfileBox:  no user confirmation required)"
+                textStyle.fontSize: FontSize.XXSmall
+            }
+            Container {
+                horizontalAlignment: HorizontalAlignment.Center
+                Button {
+                    text: "Profile Box"
+                    onClicked: {
+                        helloBBM.ControlsForBBM(bbm_profilebox);
+                    }
+                }
+                Button {
+                    text: "Personal Msg"
+                    onClicked: {
+                        helloBBM.ControlsForBBM(bbm_personalmessage);
+                    }
+                }
+                Button {
+                    text: "Status Msg"
+                    onClicked: {
+                        helloBBM.ControlsForBBM(bbm_statusmessage);
+                    }
+                }
+                Button {
+                    text: "Invite To Download"
+                    onClicked: {
+                        helloBBM.ControlsForBBM(bbm_invitetodownload);
+                    }
+                }
+            }
+        }
+    }
+}

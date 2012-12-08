@@ -1,0 +1,41 @@
+// Default empty project template
+#ifndef HelloBBM_HPP_
+#define HelloBBM_HPP_
+
+#include <QObject>
+
+#include "ProfileBox.hpp"
+#include "RegistrationHandler.hpp"
+#include "Global.hpp"
+#include "UpdateProfilePage.hpp"
+#include "InviteToDownload.hpp"
+
+#include <bb/platform/bbm/Context>
+#include <bb/platform/bbm/UserProfile>
+
+namespace bb { namespace cascades { class Application; }}
+
+/*!
+ * @brief Application pane object
+ *
+ *Use this object to create and init app UI, to create context objects, to register the new meta types etc.
+ */
+class HelloBBM : public QObject
+{
+    Q_OBJECT
+public:
+    HelloBBM(bb::cascades::Application *app);
+    virtual ~HelloBBM() {}
+
+private:
+    ProfileBox *profileBox;
+    RegistrationHandler* regBBM;
+    UpdateProfilePage *updateProfilePage;
+    InviteToDownload *inviteToDownload;
+
+    bb::platform::bbm::UserProfile * m_userProfile;
+
+};
+
+
+#endif /* HelloBBM_HPP_ */

@@ -35,8 +35,43 @@ Page {
                     }
                 }
             }
+            Container { //review section
+                topMargin: 50
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    background: Color.create("#272727")
+                    TextArea {
+                        text: "Leave a Review:"
+                        editable: false
+                        touchPropagationMode: TouchPropagationMode.None
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
+                        }
+                    }
+                    TextArea {
+                        text: "Click Here"
+                        editable: false
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
+                            color: Color.create("#CC3F10")
+                        }
+                        onTouch: {
+                            invokeLeaveReview.trigger("bb.action.OPEN");
+                        }
+                    }
+                }
+                Label {
+                    multiline: true
+                    text: "Your reviews help improve and encourage further work.\n" + "Click above and leave a review. Thank You."
+                    textStyle {
+                        base: aboutSheetSubTitleNormalWhite.style
+                    }
+                }
+            }
             Container { //website section
-                topMargin: 100
+                topMargin: 50
                 Container {
                     background: Color.create("#272727")
                     TextArea {
@@ -51,9 +86,7 @@ Page {
                 Label {
                     leftPadding: 25
                     multiline: true
-                    text: "Having problems? Want to see a new feature added? \n\n" + 
-                        "Help improve WordsPlus by sending any requests, suggestions or issues to: " +
-                        "twocasualcoders@gmail.com"
+                    text: "Having problems? Want to see a new feature added? \n\n" + "Help improve WordsPlus by sending any requests, suggestions or issues to: " + "twocasualcoders@gmail.com"
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }
@@ -73,7 +106,7 @@ Page {
                     orientation: LayoutOrientation.LeftToRight
                 }
                 rightPadding: 15
-                topPadding: 100
+                topPadding: 50
                 horizontalAlignment: HorizontalAlignment.Center
                 Container {
                     rightPadding: 20
@@ -127,16 +160,6 @@ Page {
         }
     }
     actions: [
-//        InvokeActionItem {
-//            title: "Website"
-//            imageSource: "asset:///images/earth.png"
-//            ActionBar.placement: ActionBarPlacement.OnBar
-//            query {
-//                mimeType: "text/html"
-//                uri: "http://www.twocasualcoders.com"
-//                invokeActionId: "bb.action.OPEN"
-//            }
-//        },
         ActionItem {
             title: "Close"
             imageSource: "asset:///images/close.png"
@@ -176,6 +199,13 @@ Page {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
+        },
+        Invocation {
+            id: invokeLeaveReview
+            query: InvokeQuery {
+                mimeType: "application/x-bb-appworld"
+                uri: "appworld://content/19132685"
+            }
         }
     ]
 }

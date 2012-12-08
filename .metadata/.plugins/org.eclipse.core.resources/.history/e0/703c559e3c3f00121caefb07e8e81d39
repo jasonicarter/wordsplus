@@ -1,0 +1,25 @@
+{
+  "achievable_list_identifier": "6352b377-acca-4f7f-8dc3-62b4ab66e773",
+  "awards": [
+    {
+      "counterMin": 0,
+      "counterRange": 1,
+      "identifier": "wordsplus.testaward",
+      "rewardMoney": {
+        "amount": 0,
+        "currency": "GRL"
+      }
+    },
+    {
+      "counterMin": 0,
+      "counterRange": 1,
+      "identifier": "wordsplus.testaward2",
+      "achievedIconUrl": "http://images.scoreloop.com/achievable_icons/icon/uploaded_achieved_awards/icons/5ebe1b62-9ee7-428d-912c-a7db28a6e611/standard/0124ba56d15e30bfa9deb7f91e5d364c.png",
+      "unachievedIconUrl": "http://images.scoreloop.com/achievable_icons/icon/uploaded_unachieved_awards/icons/17d1d1b4-a0d5-423e-a993-7026d26e0a01/standard/ebea7862cfa0f0a4d97c4fcea19ef234.png",
+      "rewardMoney": {
+        "amount": 0,
+        "currency": "GRL"
+      }
+    }
+  ]
+}

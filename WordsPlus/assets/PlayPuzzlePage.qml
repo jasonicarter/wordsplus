@@ -28,7 +28,7 @@ Container { // root Container
                 preferredWidth: 720
                 Label {
                     id: timerDisplay
-                    text: {    
+                    text: {
                         if (wordsPlus.difficulty == 8) {
                             "HARD: " + wordsPlus.time
                         } else if (wordsPlus.difficulty == 4) {
@@ -45,10 +45,10 @@ Container { // root Container
                 }
                 Container {
                     layout: StackLayout {
-                                orientation: LayoutOrientation.RightToLeft
-                            }
+                        orientation: LayoutOrientation.RightToLeft
+                    }
                     horizontalAlignment: HorizontalAlignment.Right
-                    ImageView {                       
+                    ImageView {
                         imageSource: "asset:///images/heart.png"
                     }
                     Label {
