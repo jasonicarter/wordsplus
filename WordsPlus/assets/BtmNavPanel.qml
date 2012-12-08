@@ -7,15 +7,6 @@ Container {
     Container { // bottom panel
         //background: Color.Gray
         verticalAlignment: VerticalAlignment.Bottom
-//                Container {
-//                    preferredWidth: 768
-//                    preferredHeight: 3
-//                    //background: Color.create("#FF8C00")
-//                    //background: Color.create("#CC3F10")
-//                    //background: Color.create("#00629C")
-//                    //background: Color.create("#262626")
-//                    //background: Color.Black
-//                }
         Container { // whole panel
             //background: Color.Black
             Container { // image panel
@@ -56,6 +47,13 @@ Container {
                                 imageSource: "asset:///images/busy.png"
                                 onTriggered: {
                                     wordsPlus.ControlsForBBM(bbm_statusmessage);
+                                }
+                            }
+                            ActionItem {
+                                title: "Leave a review"
+                                imageSource: "asset:///images/review.png"
+                                onTriggered: {
+                                    invokeLeaveReview.trigger("bb.action.OPEN");
                                 }
                             }
                         } // end of ActionSet
@@ -207,6 +205,13 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
+        },
+        Invocation {
+            id: invokeLeaveReview
+            query: InvokeQuery {
+                mimeType: "application/x-bb-appworld"
+                uri: "appworld://content/19132685"
+            }
         }
     ]
 }

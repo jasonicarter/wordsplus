@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;UI_Test/assets/main.qml&apos; to &apos;xmain.qml&apos;" description="Rename resource &apos;main.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/main.qml" name="xmain.qml" stamp="1353558693825" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;UI_Test/assets/SettingsSheet.qml&apos; to &apos;main.qml&apos;" description="Rename resource &apos;SettingsSheet.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/SettingsSheet.qml" name="main.qml" stamp="1353558705491" updateReferences="true"/>
+</session>

@@ -19,7 +19,7 @@ Container {
                     imageSource: "asset:///images/titles/welcome.png"
                 }
             }
-            Container {
+            Container { //love me container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
@@ -35,18 +35,10 @@ Container {
                         id: redHeart
                         opacity: 1
                         imageSource: "asset:///images/heart.png"
-                        onTouch: {
-                            invokeLeaveReview.trigger("bb.action.OPEN");
-                        }
                         animations: HeartBeatAnimation {
-                         id: heartbeat   
+                            id: heartbeat
                         }
                     }
-                    //                    ImageView {
-                    //                        id: blueHeart
-                    //                        opacity: 1
-                    //                        imageSource: "asset:///images/heart_blue.png"
-                    //                    }
                 }
                 Container {
                     layout: StackLayout {
@@ -73,7 +65,10 @@ Container {
                         imageSource: "asset:///images/letters/selected/e.png"
                     }
                 }
-            }
+                onTouch: {
+                    invokeLeaveReview.trigger("bb.action.OPEN");
+                }
+            } //end of love me
         }
         Container {
             layout: DockLayout {
