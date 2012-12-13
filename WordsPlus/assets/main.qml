@@ -90,6 +90,7 @@ Page {
     }
     function handleToastSignal(toastMessage) {
         mainSysToast.body = toastMessage;
+        wordsPlus.stopTimer();
         mainSysToast.show();
     }
 }// Page

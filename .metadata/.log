@@ -8579,3 +8579,2374 @@ java.util.concurrent.RejectedExecutionException
 
 !ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 20:35:32.922
 !MESSAGE Unable to locate file: ../src/main.cpp
+!SESSION 2012-12-07 21:00:24.385 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\Jason\Documents\blackberry-workspace\blackberry
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-07 21:00:30.500
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-07 21:00:30.500
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1ce64f6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce64f6)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1ce64f6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1ce64f6)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-07 21:00:31.340
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-07 21:00:33.335
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.027
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.028
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.028
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.030
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.031
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.033
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.037
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.038
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.043
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.045
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.046
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.049
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.052
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.055
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.057
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.058
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.060
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.061
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.065
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.067
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.068
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.070
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.071
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.073
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.075
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.082
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.084
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.086
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.088
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.089
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.090
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.092
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.093
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.093
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.094
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.098
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.099
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.099
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.101
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.104
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.105
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.107
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.108
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.110
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.110
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.114
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.116
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.117
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.118
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.121
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.123
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.124
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.127
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.128
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.129
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.129
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.131
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.132
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-07 21:00:46.133
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.140
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.141
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.142
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.143
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.143
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-07 21:00:46.144
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-07 21:00:46.297
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-07 21:00:46.480
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.ui 4 4 2012-12-07 22:31:02.438
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-07 22:31:02.498
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.ui 4 4 2012-12-07 22:31:06.534
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-07 22:31:06.579
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 22:51:22.573
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:05:42.259
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:05:42.399
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2012-12-07 23:06:53.483
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@17a0549): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2012-12-07 23:06:53.483
+!MESSAGE Connection is shut down
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 5012 2012-12-07 23:07:51.270
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:114)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launchDebugSession(QDEDSFLaunchConfigurationDelegate.java:187)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launch(QDEDSFLaunchConfigurationDelegate.java:99)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFLaunchConfigurationDelegate.launch(BBTDSFLaunchConfigurationDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.runtime.CoreException: application is opening
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 com.qnx.tools.ide.bbt.debug.core 4 -1 2012-12-07 23:07:51.272
+!MESSAGE Cannot prepare and download the binary
+!STACK 1
+org.eclipse.core.runtime.CoreException: application is opening
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 com.qnx.tools.bbt.core 4 0 2012-12-07 23:07:51.272
+!MESSAGE application is opening
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 5012 2012-12-07 23:21:50.957
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:114)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launchDebugSession(QDEDSFLaunchConfigurationDelegate.java:187)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launch(QDEDSFLaunchConfigurationDelegate.java:99)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFLaunchConfigurationDelegate.launch(BBTDSFLaunchConfigurationDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.runtime.CoreException: Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 com.qnx.tools.ide.bbt.debug.core 4 -1 2012-12-07 23:21:50.958
+!MESSAGE Cannot prepare and download the binary
+!STACK 1
+org.eclipse.core.runtime.CoreException: Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 com.qnx.tools.bbt.core 4 0 2012-12-07 23:21:50.958
+!MESSAGE Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:26:01.846
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:26:58.620
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:26:58.753
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2012-12-07 23:29:07.232
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@ac7b29): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2012-12-07 23:29:07.232
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:44:42.964
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-07 23:44:46.325
+!MESSAGE Unable to locate file: ../src/main.cpp
+!SESSION 2012-12-08 15:50:22.305 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-08 15:50:30.279
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-08 15:50:30.279
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-08 15:50:31.141
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-08 15:52:48.919
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-08 15:53:18.205
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-08 15:55:08.338
+!MESSAGE Unable to locate file: ../src/main.cpp
+!SESSION 2012-12-10 11:42:32.424 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-10 11:42:42.939
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-10 11:42:42.939
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-10 11:42:43.731
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-10 11:47:58.414
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2012-12-10 13:13:48.749 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\Jason\Documents\blackberry-workspace\blackberry
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-10 13:13:55.029
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-10 13:13:55.029
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1bef5e8),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1bef5e8)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1bef5e8),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1bef5e8)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-10 13:13:57.369
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-10 13:20:43.842
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2012-12-10 15:43:07.912 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\Jason\Documents\blackberry-workspace\blackberry
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-10 15:43:14.428
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-10 15:43:14.428
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1465ca2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1465ca2)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1465ca2),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1465ca2)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-10 15:43:16.509
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-10 16:33:31.508
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.644
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.645
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.645
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.646
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.647
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.649
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.654
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.655
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.659
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.661
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.662
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.665
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.668
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.671
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.673
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.675
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.676
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.677
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.680
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.682
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.683
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.685
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.686
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.688
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.690
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.695
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.696
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.698
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.700
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.701
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.702
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.704
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.705
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.705
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.706
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.709
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.711
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.711
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.712
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.715
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.717
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.719
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.719
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.721
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.722
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.726
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.728
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.729
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.730
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.733
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.735
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.736
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.740
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.741
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.741
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.742
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.744
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.745
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-10 16:34:54.746
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.753
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.753
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.754
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.755
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.756
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-10 16:34:54.756
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-10 16:34:54.909
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 16:34:55.121
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 16:44:38.983
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 16:48:01.173
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 16:49:40.731
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 16:59:33.223
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 17:00:01.092
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 17:06:01.151
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.ui 4 0 2012-12-10 17:20:16.060
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalArgumentException: Argument not valid)
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+Caused by: java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4263)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.graphics.TextStyle.<init>(TextStyle.java:171)
+	at org.eclipse.swt.custom.StyleRange.<init>(StyleRange.java:78)
+	at org.eclipse.swt.custom.StyleRange.<init>(StyleRange.java:93)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLDamagerRepairer.collectStyleRanges(QMLDamagerRepairer.java:131)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLDamagerRepairer.createPresentation(QMLDamagerRepairer.java:58)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLPresentationReconciler.createPresentation(QMLPresentationReconciler.java:466)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLPresentationReconciler$1.run(QMLPresentationReconciler.java:593)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 22 more
+
+!ENTRY org.eclipse.ui 4 0 2012-12-10 17:20:16.064
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:468)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:340)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3725)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview$WarningLabel.setStatus(SimpleQMLPreview.java:643)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview$3.run(SimpleQMLPreview.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 22 more
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-10 17:39:42.989
+!MESSAGE application is opening
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 5012 2012-12-10 17:40:41.625
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot prepare and download the binary
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:114)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launchDebugSession(QDEDSFLaunchConfigurationDelegate.java:187)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.launch(QDEDSFLaunchConfigurationDelegate.java:99)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFLaunchConfigurationDelegate.launch(BBTDSFLaunchConfigurationDelegate.java:70)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.runtime.CoreException: Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 1 com.qnx.tools.ide.bbt.debug.core 4 -1 2012-12-10 17:40:41.627
+!MESSAGE Cannot prepare and download the binary
+!STACK 1
+org.eclipse.core.runtime.CoreException: Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:312)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:180)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+!SUBENTRY 2 com.qnx.tools.bbt.core 4 0 2012-12-10 17:40:41.627
+!MESSAGE Deployment Failed: Info: Sending request: Launch
+Info: Action: Launch
+Info: Debug native: on
+Info: Launching com.example.WordsPlus.testDev_e_WordsPluse2470d12...
+result::Invalid
+Info: done
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 17:44:10.746
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-10 17:44:18.536
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 20:59:30.108
+!MESSAGE Unable to locate file: ../src/GameSettings.cpp
+!SESSION 2012-12-10 21:16:52.834 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-10 21:16:59.304
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-10 21:16:59.304
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@c378f6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c378f6)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@c378f6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c378f6)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-10 21:17:00.228
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-10 21:17:39.133
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 21:21:47.006
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 21:29:15.259
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-10 21:29:18.501
+!MESSAGE Unable to locate file: ../src/main.cpp
+!SESSION 2012-12-11 10:17:49.913 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-11 10:17:56.840
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-11 10:17:56.840
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6bba64),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6bba64)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-11 10:17:57.718
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-11 13:02:42.127
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2012-12-11 17:10:07.691 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-11 17:10:21.242
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-11 17:10:21.242
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f6ef01),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f6ef01)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f6ef01),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f6ef01)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-11 17:10:22.550
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-11 17:11:07.917
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2012-12-11 18:22:19.448 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-11 18:22:25.833
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-11 18:22:25.833
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@168e429),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@168e429)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@168e429),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@168e429)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-11 18:22:26.787
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-11 18:22:33.533
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.330
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.331
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.332
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.333
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.335
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.337
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.342
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.343
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.348
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.350
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.351
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.354
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.357
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.360
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.362
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.364
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.366
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.367
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.371
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.373
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.373
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.375
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.376
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.379
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.381
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.386
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.387
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.389
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.391
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.392
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.393
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.395
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.396
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.396
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.397
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.401
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.402
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.402
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.404
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.407
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.409
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.410
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.411
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.413
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.413
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.418
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.419
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.420
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.421
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.424
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.426
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.428
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.431
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.432
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.432
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.433
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.435
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.436
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:22:43.437
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.444
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.445
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.446
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.446
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.447
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:22:43.448
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-11 18:22:43.598
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-11 18:22:44.783
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.ui 4 4 2012-12-11 18:23:16.813
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-11 18:23:16.860
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+!SESSION 2012-12-11 18:27:50.354 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-11 18:27:56.459
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-11 18:27:56.459
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@168e429),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@168e429)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@168e429),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@168e429)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-11 18:27:57.351
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+!SESSION 2012-12-11 18:29:37.061 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-11 18:29:43.243
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-11 18:29:43.243
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@15726ec),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15726ec)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@15726ec),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15726ec)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-11 18:29:45.536
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-11 18:30:05.786
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.664
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.665
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.665
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.666
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.668
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.669
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.674
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.675
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.680
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.681
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.682
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.685
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.688
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.696
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.699
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.701
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.703
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.704
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.707
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.710
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.711
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.713
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.714
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.717
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.720
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.724
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.726
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.728
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.730
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.732
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.733
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.735
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.736
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.737
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.738
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.742
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.744
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.744
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.746
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.749
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.752
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.753
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.754
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.757
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.758
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.762
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.764
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.765
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.767
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.770
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.772
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.774
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.777
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.778
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.779
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.780
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.782
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.784
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-11 18:36:33.785
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.792
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.793
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.794
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.794
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.795
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-11 18:36:33.795
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-11 18:36:33.962
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-11 18:36:34.150
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY org.eclipse.ui 4 4 2012-12-11 18:41:18.099
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-11 18:41:18.152
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+!SESSION 2012-12-12 13:24:11.149 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-12 13:24:17.810
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-12 13:24:17.810
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@15726ec),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15726ec)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@15726ec),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@15726ec)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2012-12-12 13:24:18.571
+!MESSAGE SDK PDOM header index not found in BlackBerry 10 Native SDK 10.0.9.1101
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-12 14:31:15.154
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.288
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.288
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.289
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.290
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.291
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.293
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.297
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.299
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.308
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.310
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.311
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.315
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.317
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.320
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.323
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.325
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.327
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.328
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.332
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.334
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.335
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.337
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.338
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.340
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.342
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.347
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, fileTransferMode]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.349
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.351
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.352
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.353
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.354
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.customHttpHeaders, focusAutoShow, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.356
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.357
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.358
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.358
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.362
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.363
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.363
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.365
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.368
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.369
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.371
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.371
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.373
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.374
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.378
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.379
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.381
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.382
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.385
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.386
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.388
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.391
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.392
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.392
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.393
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.395
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.396
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 17:56:22.396
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.404
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.405
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.406
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.407
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.408
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 17:56:22.409
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-12 17:56:22.558
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 17:56:23.315
+!MESSAGE Build version: 881d0041b46f1bf3a22c642afb6733c500e4a7ab
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-12 17:57:39.265
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-12 18:01:47.685
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2012-12-12 18:02:15.219 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2012-12-12 18:02:28.140
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2012-12-12 18:02:28.140
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@10cc9b4),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@10cc9b4)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@10cc9b4),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@10cc9b4)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-12 18:02:33.257
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.osgi 2 0 2012-12-12 18:02:34.513
+!MESSAGE While loading class "org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor", thread "Thread[Worker-8,5,main]" timed out waiting (5005ms) for thread "Thread[Worker-6,5,main]" to finish starting bundle "org.eclipse.debug.core_3.7.1.v20111129-2031 [216]". To avoid deadlock, thread "Thread[Worker-8,5,main]" is proceeding but "org.eclipse.debug.internal.core.LaunchManager$LaunchManagerVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/org.eclipse.debug.core_3.7.1.v20111129-2031.jar" by thread "Worker-6".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.debug.internal.core.LaunchManager.getDeltaVisitor(LaunchManager.java:1213)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2253)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 23 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.debug.internal.core.LaunchManager.getDeltaVisitor(LaunchManager.java:1213)
+	at org.eclipse.debug.internal.core.LaunchManager.resourceChanged(LaunchManager.java:2253)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2012-12-12 18:03:01.155
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-12-12 18:03:10.782
+!MESSAGE Indexed 'CascadesScoreloopSample' (3 sources, 658 headers) in 41.23 sec: 81,144 declarations; 111,924 references; 0 unresolved inclusions; 0 syntax errors; 30 unresolved names (0.02%)
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2012-12-12 18:04:44.550
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 18:05:02.851
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.796
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.796
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.797
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.798
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.799
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.801
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.806
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.807
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.812
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.814
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.815
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.818
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [loadEffect, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.821
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.823
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.825
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [appearance, branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.827
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.829
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.830
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.833
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders, devicePixelRatio, defaultFontSizeFollowsSystemFontSize]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.835
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.836
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.838
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.839
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.842
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.844
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.849
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, invokerIncluded, fileTransferMode, metadata]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.850
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.852
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.854
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.855
+!MESSAGE Cannot find PVInfo for: bb::cascades::AbstractContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.855
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.882
+!MESSAGE Cannot find PVInfo for: bb::cascades::ContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.882
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.883
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.884
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.885
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.887
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.887
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.888
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.977
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.978
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.978
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.980
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.983
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.984
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.985
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.985
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.986
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.987
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.987
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RenderFence PropertyInfoList: [raised]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.988
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.989
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.991
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, maximumLength, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.992
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.996
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.997
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.998
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:02.999
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.001
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.003
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.005
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, query.metadata, query.invokerIncluded, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.007
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.008
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.010
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.011
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2012-12-12 18:10:03.012
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.019
+!MESSAGE Cannot resolve ValueType variant: double
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.020
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.020
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.021
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.021
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.022
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2012-12-12 18:10:03.022
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2012-12-12 18:10:03.175
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 18:10:03.338
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2012-12-12 18:10:32.859
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 18:10:41.679
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 18:10:45.642
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 18:23:17.243
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2012-12-12 18:31:30.690
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 18:31:48.962
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 18:36:34.301
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 18:36:52.363
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 0 2012-12-12 18:50:00.901
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:468)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:340)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3725)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview$WarningLabel.setStatus(SimpleQMLPreview.java:643)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview$3.run(SimpleQMLPreview.java:274)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 22 more
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 18:59:21.582
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 18:59:22.903
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 18:59:23.072
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2012-12-12 19:20:22.875
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 19:20:22.927
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 19:39:02.720
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 19:39:06.504
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 19:39:26.352
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 19:39:43.456
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 19:39:44.909
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 19:39:44.943
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2012-12-12 19:39:46.257
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 19:41:23.475
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:03:13.641
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:03:13.789
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:22:49.218
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:39:00.550
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.ui 4 4 2012-12-12 20:56:57.443
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 20:56:57.495
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:58:26.400
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 20:58:29.819
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 21:08:36.092
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 21:17:52.180
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 21:21:26.451
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 21:30:24.625
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 22:04:04.828
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-12 22:04:18.460
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.core 4 2 2012-12-12 22:16:08.240
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.cdt.core".
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextEntry(Unknown Source)
+	at java.util.LinkedHashMap$KeyIterator.next(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.addLastRecentlyUsed(CModelListener.java:134)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.elementChanged(CModelListener.java:64)
+	at org.eclipse.cdt.internal.core.model.CModelManager$1.run(CModelManager.java:1103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.CModelManager.notifyListeners(CModelManager.java:1096)
+	at org.eclipse.cdt.internal.core.model.CModelManager.firePostChangeDelta(CModelManager.java:1053)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1018)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:975)
+	at org.eclipse.cdt.internal.core.model.CModelManager.resourceChanged(CModelManager.java:894)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:40)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 4 0 2012-12-12 22:16:08.241
+!MESSAGE Error
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.LinkedHashMap$LinkedHashIterator.nextEntry(Unknown Source)
+	at java.util.LinkedHashMap$KeyIterator.next(Unknown Source)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.addLastRecentlyUsed(CModelListener.java:134)
+	at org.eclipse.cdt.internal.core.pdom.CModelListener.elementChanged(CModelListener.java:64)
+	at org.eclipse.cdt.internal.core.model.CModelManager$1.run(CModelManager.java:1103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.CModelManager.notifyListeners(CModelManager.java:1096)
+	at org.eclipse.cdt.internal.core.model.CModelManager.firePostChangeDelta(CModelManager.java:1053)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:1018)
+	at org.eclipse.cdt.internal.core.model.CModelManager.fire(CModelManager.java:975)
+	at org.eclipse.cdt.internal.core.model.CModelManager.resourceChanged(CModelManager.java:894)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2353)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:40)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:17:38.943
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:17:42.969
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:17:55.010
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:18:12.222
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:44:57.189
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:45:01.894
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 22:45:17.680
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:06:30.238
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:08:58.995
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:09:03.504
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:09:48.744
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:12:20.662
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:12:23.894
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:13:02.414
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:13:33.031
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:28:21.429
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:28:33.117
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2012-12-12 23:29:25.604
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@12fa466): Status ERROR: org.eclipse.cdt.dsf code=10004 Sequence "" failed while rolling back. null children=[Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+PC register is not available java.lang.Exception: PC register is not available Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+PC register is not available java.lang.Exception: PC register is not available]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2012-12-12 23:29:25.604
+!MESSAGE Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+PC register is not available
+!STACK 0
+java.lang.Exception: PC register is not available
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:889)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:720)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2012-12-12 23:29:25.604
+!MESSAGE Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+PC register is not available
+!STACK 0
+java.lang.Exception: PC register is not available
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:889)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:720)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:29:25.917
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2012-12-12 23:29:44.414
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2012-12-12 23:29:44.414
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:29:50.899
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-12 23:40:35.967
+!MESSAGE Unable to locate file: ../src/InviteToDownload.cpp

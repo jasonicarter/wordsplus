@@ -2,6 +2,8 @@ TEMPLATE = app
 TARGET = WordsPlus
 
 CONFIG += qt warn_on debug_and_release cascades
+CONFIG += mobility
+MOBILITY += sensors
 
 INCLUDEPATH += ../src
 SOURCES += ../src/*.cpp

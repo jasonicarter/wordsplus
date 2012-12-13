@@ -22,7 +22,22 @@ int main(int argc, char **argv)
         app.installTranslator( &translator );
     }
 
-    new WordsPlus(&app);
+	// Every application is required to have its own unique UUID. You should
+	// keep using the same UUID when you release a new version of your application.
+	//TODO:  YOU MUST CHANGE THIS UUID!
+	// You can generate one here: http://www.guidgenerator.com/
+	const QUuid uuid(QLatin1String("9fc70d32-3634-4335-94a2-56f2257beb63"));
+
+	//Setup BBM registration handler
+	RegistrationHandler *registrationHandler = new RegistrationHandler(uuid, &app);
+
+	//AppName.cpp file which contains your main.qml file
+	WordsPlus *wordsPlus = new WordsPlus(registrationHandler->context(), &app);
+
+    // Whenever the registration has finished successfully, we continue to the main UI
+    // Added finishRegistration() to registrationFinished()
+    // This is to emit signal and by pass use of continue button as shown in sample
+    QObject::connect(registrationHandler, SIGNAL(registered()), wordsPlus, SLOT(show()));
 
     // we complete the transaction started in the app constructor and start the client event loop here
     return Application::exec();
