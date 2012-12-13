@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ActiveFrame.h'
 **
-** Created: Wed Dec 5 22:52:23 2012
+** Created: Wed Dec 12 18:04:29 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

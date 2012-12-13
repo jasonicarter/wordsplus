@@ -3,6 +3,8 @@
 #include <string.h>
 #include <string>
 #include <QList>
+#include <QMap>
+#include <QString>
 #ifdef WIN32
 #include <windows.h>
 #else
@@ -22,6 +24,7 @@ char *words[1000];
 QList<char*> puzzleWords;
 int next_word = 0;
 int hardness = 8;
+QMap<QString, int> wordIndex;
 
 /* Directions are coded easiest to hardest. */
 
@@ -200,6 +203,12 @@ void Grid::stuff(int l, char *s, int i, int j, int dirn) {
 	int dx = ew_lut[dirn];
 	int dy = ns_lut[dirn];
 
+	int position;
+	// Get array position
+	if (i == 0) { position = j; }
+	if (i > 0) { position = i * 10 + j; }
+	wordIndex[QString(s)] = position;
+
 	for (int k = 0; k < l; k++) {
 		letter[i][j] = s[k];
 		i += dy;
@@ -284,8 +293,6 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 			fclose (pFile);
 	   }
 
-	//qsort(words, next_word, sizeof(char*), longest);
-
 	srand((unsigned)std::time(0));
 	grid = new Grid(GRID_SIZE);
 
@@ -299,7 +306,6 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 			randList.append(r);
 			if(words[r] != NULL){
 				if(grid->fit(words[r])) {
-					//puzzleWords[i] = words[r];
 					puzzleWords.append(words[r]);
 					i++;
 				}
@@ -321,5 +327,9 @@ QList<char*> returnPuzzleWords() {
 
 int returnNumberOfPuzzleWords() {
 	return WORD_COUNT;
+}
+
+QMap<QString, int> returnPuzzleIndex() {
+	return wordIndex;
 }
 

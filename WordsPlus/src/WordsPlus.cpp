@@ -21,6 +21,7 @@
 #include <bb/system/SystemDialog>
 #include <bb/system/SystemToast>
 #include <bb/multimedia/SystemSound>
+#include <bb/cascades/FadeTransition>
 
 #define NORMAL		1
 #define SELECTED	2
@@ -49,8 +50,8 @@ using namespace bb::cascades;
 using namespace bb::system;
 using namespace bb::multimedia;
 
-WordsPlus::WordsPlus(bb::cascades::Application *app) :
-		QObject(app) {
+WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
+		QObject(parent), m_context(&context) {
 
 	//set default values
 	deltaX = 0.0;
@@ -65,6 +66,7 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 	stopWatch = NULL;
 	numberOfWordsFound = 0;
 	m_strSeletedLetters = "";
+	isPuzzleDisplayed = false;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -76,6 +78,16 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 	//score loop stuff - need to register to make it work - investigate
 	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
+
+}
+
+// Look into what else to destroy if nescessary
+WordsPlus::~WordsPlus() {
+	// Destroy the sound manager.
+	delete mSoundManager;
+}
+
+void WordsPlus::show() {
 
 	mQmlDocument = QmlDocument::create("asset:///main.qml");
 	mQmlDocument->setParent(this);
@@ -90,16 +102,25 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 
 			ControlsForBBM(REGISTERBBM);
 
-			app->setCover(new ActiveFrame());
+			Application::instance()->setCover(new ActiveFrame());
 
 			// scoreloop stuff
-		    mScoreLoop = ScoreLoopThread::instance();
-		   	QObject::connect(mScoreLoop, SIGNAL(ScoreLoopUserReady(AppData_t*)), this, SLOT(scoreLoopLoaded(AppData_t*)));
-		   	QObject::connect(mScoreLoop, SIGNAL(SubmitScoreCompleted(ScoreData_t*)), this, SLOT(onSubmitScoreCompleted(ScoreData_t*)));
+			mScoreLoop = ScoreLoopThread::instance();
+			QObject::connect(mScoreLoop, SIGNAL(ScoreLoopUserReady(AppData_t*)),
+					this, SLOT(scoreLoopLoaded(AppData_t*)));
+			QObject::connect(mScoreLoop,
+					SIGNAL(SubmitScoreCompleted(ScoreData_t*)), this,
+					SLOT(onSubmitScoreCompleted(ScoreData_t*)));
+
+			mOrientationSensor = new OrientationSensor(this);
+			QObject::connect(mOrientationSensor, SIGNAL(orientationChanged()),
+					this, SLOT(onOrientationChanged()));
 
 			// deal with stuff when enter/exit thumbnail or fullscreen
-			QObject::connect(Application::instance(), SIGNAL(thumbnail()), this, SLOT(onThumbnail()));
-			QObject::connect(Application::instance(), SIGNAL( fullscreen() ), this, SLOT(onFullscreen()));
+			QObject::connect(Application::instance(), SIGNAL(thumbnail()), this,
+					SLOT(onThumbnail()));
+			QObject::connect(Application::instance(), SIGNAL(fullscreen()),
+					this, SLOT(onFullscreen()));
 
 			InitializeHomePage();
 			InitializePuzzlePage();
@@ -109,80 +130,109 @@ WordsPlus::WordsPlus(bb::cascades::Application *app) :
 			mScoreLoop->start();
 		}
 	}
-}
 
-// Look into what else to destroy if nescessary
-WordsPlus::~WordsPlus() {
-	// Destroy the sound manager.
-	delete mSoundManager;
 }
 
 void WordsPlus::onThumbnail() {
-    stopTimer();
+	stopTimer();
 }
 
 void WordsPlus::onFullscreen() {
-    startTimer();
+	startTimer();
+}
+
+void WordsPlus::onOrientationChanged() {
+	if (mOrientationSensor->orientation()
+			== mOrientationSensor->OrientationSensor::RightUp) {
+		if (isPuzzleDisplayed) {
+
+			//wordDataList[listOfWords]
+			QList<int> mapValues = wordDataList.values();
+			for(int i = 0; i < mapValues.count(); i++){
+
+				int j;
+				int k;
+				int pos = mapValues[i];
+
+				if (pos <= 9) {
+					j = 0;
+					k = pos;
+				}
+				if (pos >= 10) {
+					j = pos / 10;
+					k = pos % 10;
+				}
+				mPlayField[j][k]->setRotationZ(90);
+				HighlightSelectedTile(pos, HIGHLIGHT);
+			}
+		}
+	} // end of rightup
+	if (mOrientationSensor->orientation()
+			== mOrientationSensor->OrientationSensor::TopUp) {
+		if (isPuzzleDisplayed) {
+			for (int i = 0; i < mNumTiles; i++) {
+				for (int ii = 0; ii < mNumTiles; ii++) {
+
+					mPlayField[i][ii]->setRotationZ(0);
+
+				}
+			}
+		}
+	} //end of topup
 }
 
 /****SCORELOOP*****/
-void WordsPlus::scoreLoopLoaded(AppData_t *data)
-{
+void WordsPlus::scoreLoopLoaded(AppData_t *data) {
 	mAppData = data;
 }
 
-void WordsPlus::onSubmitScoreCompleted(ScoreData_t *scoreData)
-{
+void WordsPlus::onSubmitScoreCompleted(ScoreData_t *scoreData) {
 	mLastScoreData = scoreData;
 	emit(submitScoreCompleted());
 }
 
-void WordsPlus::submitScore(int score)
-{
-	if(Global::instance()->getIsInternetAvailable()){
+void WordsPlus::submitScore(int score) {
+	if (Global::instance()->getIsInternetAvailable()) {
 		ScoreLoopThread::SubmitScore(mAppData, score, 0);
 	}
 }
 
-void WordsPlus::loadLeaderboard()
-{
+void WordsPlus::loadLeaderboard() {
 	LOG("loadLeaderboard")
-	if(Global::instance()->getIsInternetAvailable()){
-		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 20);
+	if (Global::instance()->getIsInternetAvailable()) {
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL,
+				20);
 	}
 }
 
-void WordsPlus::loadLeaderboardAroundLastScore()
-{
-	if(Global::instance()->getIsInternetAvailable()){
-		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData, mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 5);
+void WordsPlus::loadLeaderboardAroundLastScore() {
+	if (Global::instance()->getIsInternetAvailable()) {
+		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData,
+				mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 5);
 	}
 }
 
-void WordsPlus::loadLeaderboardAroundUser()
-{
-	if(Global::instance()->getIsInternetAvailable()){
-		ScoreLoopThread::LoadLeaderboardAroundUser(mAppData, SC_SCORES_SEARCH_LIST_ALL, 5);
+void WordsPlus::loadLeaderboardAroundUser() {
+	if (Global::instance()->getIsInternetAvailable()) {
+		ScoreLoopThread::LoadLeaderboardAroundUser(mAppData,
+				SC_SCORES_SEARCH_LIST_ALL, 5);
 	}
 }
 
-void WordsPlus::LoadAchievementsAwards()
-{
-	if(Global::instance()->getIsInternetAvailable()){
+void WordsPlus::LoadAchievementsAwards() {
+	if (Global::instance()->getIsInternetAvailable()) {
 		ScoreLoopThread::LoadAchievements(mAppData);
 	}
 }
 
-ScoreLoopThread* WordsPlus::scoreLoop()
-{
+ScoreLoopThread* WordsPlus::scoreLoop() {
 	return ScoreLoopThread::instance();
 }
 /****SCORELOOP*****/
 
 void WordsPlus::InitializeHomePage() {
-	//LOG("InitializeHomePage");
-	//stop and null timer
-	//prevent it from running in background even if not on puzzle page
+
+	isPuzzleDisplayed = false;
 	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
@@ -192,7 +242,6 @@ void WordsPlus::InitializeHomePage() {
 
 void WordsPlus::InitializePuzzlePage() {
 
-	LOG("InitializePuzzlePage");
 	QmlDocument* qmlContent = QmlDocument::create(
 			"asset:///PlayPuzzlePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
@@ -206,8 +255,7 @@ void WordsPlus::intializePlayArea() {
 	//need to do id for timer, then get container to setup timer
 	//try to divide up below into smaller methods passing control for each one
 
-//	LOG("intializePlayArea");
-
+	isPuzzleDisplayed = true;
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>(
 			"playAreaContainer");
 	mPlayAreaContainer->removeAll();
@@ -233,10 +281,14 @@ void WordsPlus::intializePlayArea() {
 
 		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();
+		wordDataList = returnPuzzleIndex();
+
 
 		for (int i = 0; i < numberOfWords; i++) {
 			listOfWords.append(puzzleWords[i]);
 			listOfWords.append(' ');
+
+			//LOG("word index: %i", wordDataList[listOfWords]);
 
 			//get word, create label and add to wordsToFind container
 			QString labelText = puzzleWords[i];
@@ -318,6 +370,7 @@ void WordsPlus::intializePlayArea() {
 	} // set up mPlayAreaContainer
 
 	appPage->setContent(puzzlePageControl);
+
 }
 
 void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
@@ -581,7 +634,6 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 					getScore());
 			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
-			intializePlayArea(); // create a new puzzle
 		}
 	} else {
 		for (int j = 0; j < listOfNumbers.size(); j++) { //word not found in puzzle words
@@ -624,11 +676,9 @@ void WordsPlus::CrossOutPuzzleWord(QString wordFound) {
 
 void WordsPlus::showToast(QString msg) {
 
-	emit mainSysToastSignal(msg + "\n\nTap home below to return to Main page");
-//	SystemToast *toast = new SystemToast(this);
-//	toast->setBody(msg);
-//	toast->setPosition(SystemUiPosition::TopCenter);
-//	toast->show();
+	emit mainSysToastSignal(
+			msg
+					+ "\n\nClick PLAY to continue or...\nTap home below to return to Main page");
 }
 
 void WordsPlus::onTick() {
@@ -709,7 +759,7 @@ void WordsPlus::playSound(const QString msg) {
 			SystemSound::play(SystemSound::InputKeypress);
 		if (msg == SOUNDLEVELCOMPLETED)
 			mSoundManager->play(msg);
-		if(msg == SOUNDBACKGROUNDMUSIC)
+		if (msg == SOUNDBACKGROUNDMUSIC)
 			mSoundManager->play(msg);
 	}
 
@@ -745,7 +795,8 @@ void WordsPlus::setMusic(bool status) {
 
 bool WordsPlus::getProfileBox() {
 	bool okProfile;
-	QString strProfileBoxEnabled = settings->getValueFor(PROFILEBOXUPDATES, "1");
+	QString strProfileBoxEnabled = settings->getValueFor(PROFILEBOXUPDATES,
+			"1");
 	isProfileBoxEnabled = strProfileBoxEnabled.toInt(&okProfile, 10);
 	return isProfileBoxEnabled;
 }
@@ -833,10 +884,9 @@ void WordsPlus::setGamesPlayed() {
 
 void WordsPlus::setSelectedLetters(QString letter) {
 
-	if(letter == "clear") {
+	if (letter == "clear") {
 		m_strSeletedLetters = "";
-	}
-	else {
+	} else {
 		m_strSeletedLetters = m_strSeletedLetters.append(letter.toUpper());
 	}
 	emit selectedLettersChanged();
@@ -867,35 +917,40 @@ void WordsPlus::setDifficulty(int difficulty) {
 
 void WordsPlus::ControlsForBBM(int state) {
 
+	// Create the user profile and profile box objects
+	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
+	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
+
 	switch (state) {
-	case REGISTERBBM: {
-		regBBM = new RegistrationHandler();
-		regBBM->appRegister();
-		break;
-	}
 	case PROFILEBOXPUZZLECOMPLETED: {
 		if (getProfileBox()) {
 			QString msg = QString(
 					"Completed another puzzle! \nTime: %1 Score: %2").arg(
 					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
 					getScore());
-			profileBox = new ProfileBox();
-			profileBox->createItem(msg, "profileBox");
+
+			//register icons
+			profileBox = new ProfileBox(m_profileBox);
+
+			//wordsPlus.png iconId = 1
+			//could use #define WORDSPLUSPROFILEBOX 1
+			//use 0 if you have no image
+			profileBox->addProfileBoxItem(msg, 1);
 		}
 		break;
 	}
 	case PRESONALMESSAGE: {
-		updateProfilePage = new UpdateProfilePage(m_userProfile);
-		updateProfilePage->savePersonalMessage();
+		updateProfile = new UpdateProfile(m_userProfile);
+		updateProfile->savePersonalMessage();
 		break;
 	}
 	case STATUSMESSAGE: {
-		updateProfilePage = new UpdateProfilePage(m_userProfile);
-		updateProfilePage->saveStatus();
+		updateProfile = new UpdateProfile(m_userProfile);
+		updateProfile->saveStatus();
 		break;
 	}
 	case INVITETODOWNLOAD: {
-		inviteToDownload = new InviteToDownload();
+		inviteToDownload = new InviteToDownload(m_context);
 		inviteToDownload->sendInvite();
 		break;
 	}

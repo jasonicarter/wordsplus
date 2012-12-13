@@ -39,6 +39,9 @@ Container {
                             id: heartbeat
                         }
                     }
+                    onTouch: {
+                        invokeLeaveReview.trigger("bb.action.OPEN");
+                    }
                 }
                 Container {
                     layout: StackLayout {
@@ -64,9 +67,6 @@ Container {
                     ImageView {
                         imageSource: "asset:///images/letters/selected/e.png"
                     }
-                }
-                onTouch: {
-                    invokeLeaveReview.trigger("bb.action.OPEN");
                 }
             } //end of love me
         }

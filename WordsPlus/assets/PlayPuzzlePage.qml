@@ -3,6 +3,7 @@ import bb.cascades 1.0
 Container { // root Container
     id: playPuzzleRootContainer
     Container { //main container
+        id: mainContainer
         layout: DockLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center
@@ -10,6 +11,7 @@ Container { // root Container
         preferredWidth: 768
         preferredHeight: 1280
         Container {
+            id: title
             verticalAlignment: VerticalAlignment.Top
             background: Color.create("#00629C")
             preferredWidth: 768
@@ -18,9 +20,11 @@ Container { // root Container
             }
         }
         Container { // center container
+            id: centerContainer
             //background: Color.Green
             horizontalAlignment: HorizontalAlignment.Center
             Container {
+                id: puzzleInfo
                 layout: DockLayout {
                 }
                 topPadding: 125
@@ -49,6 +53,7 @@ Container { // root Container
                     }
                     horizontalAlignment: HorizontalAlignment.Right
                     ImageView {
+                        id: heart
                         imageSource: "asset:///images/heart.png"
                     }
                     Label {
@@ -62,19 +67,21 @@ Container { // root Container
                 }
             }
             Container {
-                objectName: "playAreaContainer"
-                bottomPadding: 50
+                id: playAreaContainer
+                objectName: "playAreaContainer"             
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 30
-                preferredWidth: 720
+                topMargin: 20
+                bottomPadding: 30
+                preferredWidth: 750
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Center
                 //background: Color.Gray
             }
             Container { // Container for words to find
+                id: wordsToFind
                 objectName: "wordsToFind"
                 //background: Color.Yellow
                 layout: StackLayout {
@@ -86,8 +93,9 @@ Container { // root Container
             }
         } //center container
         Container {
+            id: btmNav
             verticalAlignment: VerticalAlignment.Bottom
-            BtmNavPanel { // bottom panel
+            BtmNavPanel {
                 verticalAlignment: VerticalAlignment.Bottom
             }
         }

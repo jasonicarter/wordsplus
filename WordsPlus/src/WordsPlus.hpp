@@ -9,9 +9,10 @@
 #include "ProfileBox.hpp"
 #include "RegistrationHandler.hpp"
 #include "Global.hpp"
-#include "UpdateProfilePage.hpp"
+#include "UpdateProfile.hpp"
 #include "InviteToDownload.hpp"
 #include "ScoreLoopThread.hpp"
+#include "OrientationSensor.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -35,7 +36,7 @@ class WordsPlus : public QObject
 {
     Q_OBJECT
 public:
-    WordsPlus(bb::cascades::Application *app);
+    WordsPlus(bb::platform::bbm::Context &context, QObject *parent = 0);
     virtual ~WordsPlus();
 
     Q_INVOKABLE void intializePlayArea();
@@ -100,21 +101,24 @@ public:
     int getDifficulty();
     void setDifficulty(int difficulty);
 
-public slots:
+public Q_SLOTS:
+    void show();
 	void scoreLoopLoaded(AppData_t *data);
 	void onSubmitScoreCompleted(ScoreData_t *scoreData);
+	void onOrientationChanged();
 
-signals:
+Q_SIGNALS:
 	void submitScoreCompleted();
 	void mainSysToastSignal(QString toastMessage);
 
-private slots:
+private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
 	void onTick();
 	void onThumbnail();
 	void onFullscreen();
 
-signals:
+
+Q_SIGNALS:
 	void categoryChanged(const QString);
 	void puzzleWordsChanged(const QString);
 	void timeChanged();
@@ -168,6 +172,7 @@ private:
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
+	bool isPuzzleDisplayed;
 
     QString m_strCategory;
     QString m_strPuzzleWords;
@@ -178,16 +183,21 @@ private:
     Timer *stopWatch;
     GameSettings *settings;
     SoundManager *mSoundManager;
-    ProfileBox *profileBox;
-    RegistrationHandler* regBBM;
-    UpdateProfilePage *updateProfilePage;
-    InviteToDownload *inviteToDownload;
+    QMap<QString, int> wordDataList;
 
-    bb::platform::bbm::UserProfile * m_userProfile;
+    RegistrationHandler *regHandler;
+    ProfileBox *profileBox;
+    UpdateProfile *updateProfile;
+    InviteToDownload *inviteToDownload;
+    bb::platform::bbm::ProfileBox* m_profileBox;
+    bb::platform::bbm::UserProfile* m_userProfile;
+    bb::platform::bbm::Context* m_context;
 
 	AppData_t *mAppData;
 	ScoreLoopThread *mScoreLoop;
 	ScoreData_t *mLastScoreData;
+
+	OrientationSensor *mOrientationSensor;
 };
 
 
