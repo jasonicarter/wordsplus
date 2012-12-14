@@ -31,6 +31,7 @@
 #define PRESONALMESSAGE 6
 #define STATUSMESSAGE 7
 #define INVITETODOWNLOAD 8
+#define HINT	9
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
@@ -142,41 +143,51 @@ void WordsPlus::onFullscreen() {
 }
 
 void WordsPlus::onOrientationChanged() {
-	if (mOrientationSensor->orientation()
-			== mOrientationSensor->OrientationSensor::RightUp) {
+	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::RightUp) {
 		if (isPuzzleDisplayed) {
+			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
+			redHeart->setRotationZ(90);
 
-			//wordDataList[listOfWords]
-			QList<int> mapValues = wordDataList.values();
-			for(int i = 0; i < mapValues.count(); i++){
-
-				int j;
-				int k;
-				int pos = mapValues[i];
-
-				if (pos <= 9) {
-					j = 0;
-					k = pos;
-				}
-				if (pos >= 10) {
-					j = pos / 10;
-					k = pos % 10;
-				}
-				mPlayField[j][k]->setRotationZ(90);
-				HighlightSelectedTile(pos, HIGHLIGHT);
+			QList<int> mapValues = wordDataIndex.values();
+			for (int i = 0; i < mapValues.count(); i++) {
+				HighlightSelectedTile(mapValues[i], HINT);
 			}
 		}
+		else {
+			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
+			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			rotateReviewImage->setRotationZ(90);
+			rotateHeartImage->setRotationZ(90);
+			rotateRotateImage->setRotationZ(90);
+			rotateGuideImage->setRotationZ(90);
+			rotateImageMsg->setOpacity(1);
+		}
 	} // end of rightup
-	if (mOrientationSensor->orientation()
-			== mOrientationSensor->OrientationSensor::TopUp) {
+	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
 		if (isPuzzleDisplayed) {
+			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
+			redHeart->setRotationZ(0);
+
 			for (int i = 0; i < mNumTiles; i++) {
 				for (int ii = 0; ii < mNumTiles; ii++) {
-
 					mPlayField[i][ii]->setRotationZ(0);
-
 				}
 			}
+		}
+		else {
+			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
+			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			rotateReviewImage->setRotationZ(0);
+			rotateHeartImage->setRotationZ(0);
+			rotateRotateImage->setRotationZ(0);
+			rotateGuideImage->setRotationZ(0);
+			rotateImageMsg->setOpacity(0);
 		}
 	} //end of topup
 }
@@ -281,8 +292,7 @@ void WordsPlus::intializePlayArea() {
 
 		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();
-		wordDataList = returnPuzzleIndex();
-
+		wordDataIndex = returnPuzzleIndex();
 
 		for (int i = 0; i < numberOfWords; i++) {
 			listOfWords.append(puzzleWords[i]);
@@ -543,6 +553,7 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 		switch (stateOfLetter) {
 		case NORMAL:
+			//if(mPlayField[i][ii]->rotationZ() != 0) mPlayField[i][ii]->setRotationZ(0);
 			imageSource = QString("asset:///images/letters/%1").arg(
 					imageSrc[index]);
 			break;
@@ -556,6 +567,12 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 					imageSrc[index]);
 			playSound(SOUNDLETTERSELECTED);
 			setSelectedLetters(letter);
+			break;
+		case HINT:
+			mPlayField[i][ii]->setRotationZ(90);
+			imageSource = QString("asset:///images/letters/hints/%1").arg(
+					imageSrc[index]);
+			playSound(SOUNDLETTERSELECTED);
 			break;
 		}
 

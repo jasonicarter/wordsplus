@@ -50,7 +50,7 @@ Container {
                                 }
                             }
                             ActionItem {
-                                title: "Leave a review"
+                                title: "Leave A Review"
                                 imageSource: "asset:///images/review.png"
                                 onTriggered: {
                                     invokeLeaveReview.trigger("bb.action.OPEN");

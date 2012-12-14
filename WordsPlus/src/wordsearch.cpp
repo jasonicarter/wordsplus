@@ -299,6 +299,7 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	int i = 0;
 	QList<int> randList;
 	puzzleWords.clear();
+	wordIndex.clear();
 	while (i < WORD_COUNT) {
 		int r = rand() % next_word;
 

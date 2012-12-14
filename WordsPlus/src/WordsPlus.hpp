@@ -183,7 +183,7 @@ private:
     Timer *stopWatch;
     GameSettings *settings;
     SoundManager *mSoundManager;
-    QMap<QString, int> wordDataList;
+    QMap<QString, int> wordDataIndex;
 
     RegistrationHandler *regHandler;
     ProfileBox *profileBox;

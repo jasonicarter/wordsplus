@@ -1,18 +1,25 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Container {
     id: homePageContainer
+    objectName: "homePageContainer"
     Container {
         id: mainContainer
         layout: DockLayout {
         }
         preferredHeight: 1280
         background: Color.Black
-        Container {
+            ImageView {
+                objectName: "rotateImageMsg"
+                opacity: 0
+                verticalAlignment: VerticalAlignment.Center
+                imageSource: "asset:///images/hint_image.png"
+            }
+        Container { //top
             //background: Color.Yellow
             Container {
                 preferredWidth: 768
-                //preferredHeight: 100
                 background: Color.create("#00629C")
                 verticalAlignment: VerticalAlignment.Top
                 ImageView {
@@ -33,14 +40,12 @@ Container {
                     //background: Color.Black
                     ImageView {
                         id: redHeart
+                        objectName: "rotateHeartImage"
                         opacity: 1
                         imageSource: "asset:///images/heart.png"
-                        animations: HeartBeatAnimation {
-                            id: heartbeat
-                        }
-                    }
-                    onTouch: {
-                        invokeLeaveReview.trigger("bb.action.OPEN");
+                        //                        animations: HeartBeatAnimation {
+                        //                            id: heartbeat
+                        //                        }
                     }
                 }
                 Container {
@@ -50,27 +55,27 @@ Container {
                     topPadding: 40
                     //background: Color.Black
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/l.png"
+                        imageSource: "asset:///images/letters/l.png"
                     }
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/o.png"
+                        imageSource: "asset:///images/letters/o.png"
                     }
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/v.png"
+                        imageSource: "asset:///images/letters/v.png"
                     }
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/e.png"
+                        imageSource: "asset:///images/letters/e.png"
                     }
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/m.png"
+                        imageSource: "asset:///images/letters/m.png"
                     }
                     ImageView {
-                        imageSource: "asset:///images/letters/selected/e.png"
+                        imageSource: "asset:///images/letters/e.png"
                     }
                 }
             } //end of love me
         }
-        Container {
+        Container { // center
             layout: DockLayout {
             }
             topMargin: 30
@@ -237,31 +242,90 @@ Container {
                 }
             }
         }
-        //        Container {
-        //            bottomPadding: 200
-        //            verticalAlignment: VerticalAlignment.Bottom
-        //            horizontalAlignment: HorizontalAlignment.Center
-        //            ActivityIndicator {
-        //                id: mainLoader
-        //                running: true
-        //            }
-        //            Label {
-        //                id: welcomeUserLabel
-        //                text: "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
-        //                multiline: true
-        //                textStyle {
-        //                    base: subTitleNormalWhite.style
-        //                    textAlign: TextAlign.Center
-        //                }
-        //            }
-        //        }
+        Container { //rotate me container
+            layout: StackLayout {
+                orientation: LayoutOrientation.LeftToRight
+            }
+            leftPadding: 15
+            bottomPadding: 200
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.LeftToRight
+                }
+                Container {
+                    ImageView {
+                        objectName: "rotateRotateImage"
+                        horizontalAlignment: HorizontalAlignment.Center
+                        imageSource: "asset:///images/rotate.png"
+                    }
+                    Label {
+                        topMargin: 0
+                        horizontalAlignment: HorizontalAlignment.Center
+                        text: "ROTATE ME"
+                        textStyle {
+                            base: subTitleNormalWhite.style
+                        }
+                    }
+                    onTouch: {
+                        if (event.isUp()) {
+                            homeSysToast.body = "No, no, no...\nRotate the device, silly"
+                            homeSysToast.show();
+                        }
+                    }
+                }
+                Container {
+                    leftMargin: 50
+                    ImageView {
+                        objectName: "rotateGuideImage"
+                        horizontalAlignment: HorizontalAlignment.Center
+                        imageSource: "asset:///images/guide.png"
+                    }
+                    Label {
+                        topMargin: 0
+                        horizontalAlignment: HorizontalAlignment.Center
+                        text: "GUIDE ME"
+                        textStyle {
+                            base: subTitleNormalWhite.style
+                        }
+                    }
+                    onTouch: {
+                        if (event.isUp()) {
+                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top to see your options"
+                            homeSysToast.show();
+                        }
+                    }
+                }
+                Container {
+                    leftMargin: 50
+                    ImageView {
+                        objectName: "rotateReviewImage"
+                        horizontalAlignment: HorizontalAlignment.Center
+                        imageSource: "asset:///images/review_big.png"
+                    }
+                    Label {
+                        topMargin: 0
+                        horizontalAlignment: HorizontalAlignment.Center
+                        text: "REVIEW ME"
+                        textStyle {
+                            base: subTitleNormalWhite.style
+                        }
+                    }
+                    onTouch: {
+                        if (event.isUp()) {
+                            invokeLeaveReview.trigger("bb.action.OPEN");
+                        }
+                    }
+                }
+            }
+        } //end of rotate me
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
-            //heartbeat.play();
             //because score()->start is called after qml creation
             //scoreloop instance created, calls run() which does requestUserCompleted
             //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
@@ -318,6 +382,12 @@ Container {
                 mimeType: "application/x-bb-appworld"
                 uri: "appworld://content/19132685"
             }
+        },
+        SystemToast {
+            id: homeSysToast
+            body: ""
+            //position: TopCenter //'TopCenter'not working
+            button.label: "Got it!"
         },
         Sheet {
             id: aboutSheet
