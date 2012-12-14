@@ -21,6 +21,7 @@ Container { // root Container
         }
         Container { // center container
             id: centerContainer
+            objectName: "centerPuzzleContainer"
             //background: Color.Green
             horizontalAlignment: HorizontalAlignment.Center
             Container {
@@ -54,6 +55,7 @@ Container { // root Container
                     horizontalAlignment: HorizontalAlignment.Right
                     ImageView {
                         id: heart
+                        objectName: "puzzleHeart"
                         imageSource: "asset:///images/heart.png"
                     }
                     Label {
@@ -68,7 +70,7 @@ Container { // root Container
             }
             Container {
                 id: playAreaContainer
-                objectName: "playAreaContainer"             
+                objectName: "playAreaContainer"
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
