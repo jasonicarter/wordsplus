@@ -10,6 +10,7 @@ Container {
         }
         preferredHeight: 1280
         background: Color.Black
+        //background: Color.create("#fafafa")
             ImageView {
                 objectName: "rotateImageMsg"
                 opacity: 0

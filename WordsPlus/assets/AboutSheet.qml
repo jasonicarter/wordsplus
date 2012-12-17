@@ -35,41 +35,6 @@ Page {
                     }
                 }
             }
-            Container { //review section
-                topMargin: 50
-                Container {
-                    layout: StackLayout {
-                        orientation: LayoutOrientation.LeftToRight
-                    }
-                    background: Color.create("#272727")
-                    TextArea {
-                        text: "Leave a Review:"
-                        editable: false
-                        touchPropagationMode: TouchPropagationMode.None
-                        textStyle {
-                            base: aboutSheetBigBodyNormalBlue.style
-                        }
-                    }
-                    TextArea {
-                        text: "Click Here"
-                        editable: false
-                        textStyle {
-                            base: aboutSheetBigBodyNormalBlue.style
-                            color: Color.create("#CC3F10")
-                        }
-                        onTouch: {
-                            invokeLeaveReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                }
-                Label {
-                    multiline: true
-                    text: "Your reviews help improve and encourage further work.\n" + "Click above and leave a review. Thank You."
-                    textStyle {
-                        base: aboutSheetSubTitleNormalWhite.style
-                    }
-                }
-            }
             Container { //website section
                 topMargin: 50
                 Container {

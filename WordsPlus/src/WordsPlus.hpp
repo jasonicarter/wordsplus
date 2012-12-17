@@ -57,7 +57,6 @@ public:
     Q_INVOKABLE void playSound(const QString msg);
 
     Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
-    Q_PROPERTY (const QString puzzleWords READ getPuzzleWords WRITE setPuzzleWords NOTIFY puzzleWordsChanged);
     Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
     Q_PROPERTY (const QString totalWordsFound READ getTotalWordsFound NOTIFY totalWordsFoundChanged);
     Q_PROPERTY (bool soundOn READ getSound WRITE setSound NOTIFY soundChanged);
@@ -71,9 +70,6 @@ public:
 
     QString getCategory();
     void setCategory(const QString cat);
-
-    QString getPuzzleWords();
-    void setPuzzleWords(const QString words);
 
     QString getTime();
     QString getTotalWordsFound();
@@ -169,13 +165,13 @@ private:
 	int numberOfWordsFound;
 	int numberOfGames;
 	int puzzleDifficulty;
+	int wordDataValue;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
 	bool isPuzzleDisplayed;
 
     QString m_strCategory;
-    QString m_strPuzzleWords;
     QString m_strTime;
     QString m_strSeletedLetters;
     QList<int> tileNumbers;
@@ -184,6 +180,7 @@ private:
     GameSettings *settings;
     SoundManager *mSoundManager;
     QMap<QString, int> wordDataIndex;
+    QStringList listOfWords;
 
     RegistrationHandler *regHandler;
     ProfileBox *profileBox;

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Thu Dec 13 14:36:18 2012
+** Created: Sun Dec 16 15:17:37 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -24,7 +24,7 @@ static const uint qt_meta_data_WordsPlus[] = {
        0,       // classname
        0,    0, // classinfo
       36,   14, // methods
-      12,  194, // properties
+      11,  194, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -74,21 +74,19 @@ static const uint qt_meta_data_WordsPlus[] = {
 
  // properties: name, type, flags
      835,  827, 0x0a495103,
-     844,  827, 0x0a495103,
-     856,  827, 0x0a495001,
-     861,  827, 0x0a495001,
-     882,  877, 0x01495003,
-     890,  877, 0x01495003,
-     898,  877, 0x01495003,
-     911,  827, 0x0a495001,
-     584,  931, 0x02495103,
-     935,  931, 0x02495001,
-     947,  827, 0x0a495103,
-     963,  931, 0x02495103,
+     844,  827, 0x0a495001,
+     849,  827, 0x0a495001,
+     870,  865, 0x01495003,
+     878,  865, 0x01495003,
+     886,  865, 0x01495003,
+     899,  827, 0x0a495001,
+     584,  919, 0x02495103,
+     923,  919, 0x02495001,
+     935,  827, 0x0a495103,
+     951,  919, 0x02495103,
 
  // properties: notify_signal_id
        2,
-       3,
        4,
        5,
        6,
@@ -127,10 +125,10 @@ static const char qt_meta_stringdata_WordsPlus[] = {
     "scoreLoop()\0startTimer()\0stopTimer()\0"
     "resetTimer()\0state\0ControlsForBBM(int)\0"
     "msg\0playSound(QString)\0QString\0category\0"
-    "puzzleWords\0time\0totalWordsFound\0bool\0"
-    "soundOn\0musicOn\0profileBoxOn\0"
-    "puzzleCompletedTime\0int\0gamesPlayed\0"
-    "selectedLetters\0difficulty\0"
+    "time\0totalWordsFound\0bool\0soundOn\0"
+    "musicOn\0profileBoxOn\0puzzleCompletedTime\0"
+    "int\0gamesPlayed\0selectedLetters\0"
+    "difficulty\0"
 };
 
 void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -222,44 +220,42 @@ int WordsPlus::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< QString*>(_v) = getCategory(); break;
-        case 1: *reinterpret_cast< QString*>(_v) = getPuzzleWords(); break;
-        case 2: *reinterpret_cast< QString*>(_v) = getTime(); break;
-        case 3: *reinterpret_cast< QString*>(_v) = getTotalWordsFound(); break;
-        case 4: *reinterpret_cast< bool*>(_v) = getSound(); break;
-        case 5: *reinterpret_cast< bool*>(_v) = getMusic(); break;
-        case 6: *reinterpret_cast< bool*>(_v) = getProfileBox(); break;
-        case 7: *reinterpret_cast< QString*>(_v) = getPuzzleCompletedTime(); break;
-        case 8: *reinterpret_cast< int*>(_v) = getScore(); break;
-        case 9: *reinterpret_cast< int*>(_v) = getGamesPlayed(); break;
-        case 10: *reinterpret_cast< QString*>(_v) = getSelectedLetters(); break;
-        case 11: *reinterpret_cast< int*>(_v) = getDifficulty(); break;
+        case 1: *reinterpret_cast< QString*>(_v) = getTime(); break;
+        case 2: *reinterpret_cast< QString*>(_v) = getTotalWordsFound(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = getSound(); break;
+        case 4: *reinterpret_cast< bool*>(_v) = getMusic(); break;
+        case 5: *reinterpret_cast< bool*>(_v) = getProfileBox(); break;
+        case 6: *reinterpret_cast< QString*>(_v) = getPuzzleCompletedTime(); break;
+        case 7: *reinterpret_cast< int*>(_v) = getScore(); break;
+        case 8: *reinterpret_cast< int*>(_v) = getGamesPlayed(); break;
+        case 9: *reinterpret_cast< QString*>(_v) = getSelectedLetters(); break;
+        case 10: *reinterpret_cast< int*>(_v) = getDifficulty(); break;
         }
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
         case 0: setCategory(*reinterpret_cast< QString*>(_v)); break;
-        case 1: setPuzzleWords(*reinterpret_cast< QString*>(_v)); break;
-        case 4: setSound(*reinterpret_cast< bool*>(_v)); break;
-        case 5: setMusic(*reinterpret_cast< bool*>(_v)); break;
-        case 6: setProfileBox(*reinterpret_cast< bool*>(_v)); break;
-        case 8: setScore(*reinterpret_cast< int*>(_v)); break;
-        case 10: setSelectedLetters(*reinterpret_cast< QString*>(_v)); break;
-        case 11: setDifficulty(*reinterpret_cast< int*>(_v)); break;
+        case 3: setSound(*reinterpret_cast< bool*>(_v)); break;
+        case 4: setMusic(*reinterpret_cast< bool*>(_v)); break;
+        case 5: setProfileBox(*reinterpret_cast< bool*>(_v)); break;
+        case 7: setScore(*reinterpret_cast< int*>(_v)); break;
+        case 9: setSelectedLetters(*reinterpret_cast< QString*>(_v)); break;
+        case 10: setDifficulty(*reinterpret_cast< int*>(_v)); break;
         }
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 12;
+        _id -= 11;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 12;
+        _id -= 11;
     }
 #endif // QT_NO_PROPERTIES
     return _id;

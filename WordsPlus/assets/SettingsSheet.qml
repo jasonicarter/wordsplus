@@ -57,44 +57,44 @@ Page {
                     Divider {
                         opacity: 0
                     }
-                    Container { // music
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 720
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Music:"
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: settingsSheetBigBodyNormalBlue.style
-                            }
-                        }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
-                            ToggleButton {
-                                id: music
-                                enabled: false
-                                checked: false
-                                //checked: wordsPlus.musicOn
-                                onCheckedChanged: {
-                                    if (music.checked == true) {
-                                        wordsPlus.musicOn = true;
-                                    } else if (music.checked == false) {
-                                        wordsPlus.musicOn = false;
-                                    }
-                                }
-                            }
-                        }
-                    } // music
-                    Divider {
-                        opacity: 0
-                    }
+//                    Container { // music
+//                        layout: DockLayout {
+//                        }
+//                        background: Color.create("#272727")
+//                        preferredWidth: 720
+//                        preferredHeight: 100
+//                        leftPadding: 15
+//                        Label {
+//                            text: "Music:"
+//                            touchPropagationMode: TouchPropagationMode.None
+//                            verticalAlignment: VerticalAlignment.Center
+//                            horizontalAlignment: HorizontalAlignment.Left
+//                            textStyle {
+//                                base: settingsSheetBigBodyNormalBlue.style
+//                            }
+//                        }
+//                        Container {
+//                            rightPadding: 15
+//                            verticalAlignment: VerticalAlignment.Center
+//                            horizontalAlignment: HorizontalAlignment.Right
+//                            ToggleButton {
+//                                id: music
+//                                enabled: false
+//                                checked: false
+//                                //checked: wordsPlus.musicOn
+//                                onCheckedChanged: {
+//                                    if (music.checked == true) {
+//                                        wordsPlus.musicOn = true;
+//                                    } else if (music.checked == false) {
+//                                        wordsPlus.musicOn = false;
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    } // music
+//                    Divider {
+//                        opacity: 0
+//                    }
                     Container { // bbm
                         layout: DockLayout {
                         }
