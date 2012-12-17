@@ -8,13 +8,17 @@ Page {
         helpAction: HelpActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
-                helpSheet.open();
+                var mySheet = helpSheetDefinition.createObject();
+                mySheet.open();
+                //helpSheet.open();
             }
         }
         settingsAction: SettingsActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
-                settingsSheet.open();
+                var mySheet = settingsSheetDefinition.createObject();
+                mySheet.open();
+                //settingsSheet.open();
             }
         }
         actions: [
@@ -23,7 +27,9 @@ Page {
                 imageSource: "asset:///images/about.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    aboutSheet.open();
+                    var mySheet = aboutSheetDefinition.createObject();
+                    mySheet.open();
+                    //aboutSheet.open();
                 }
             },
             ActionItem {
@@ -31,7 +37,9 @@ Page {
                 imageSource: "asset:///images/category.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    categorySheet.open();
+                    var mySheet = categorySheetDefinition.createObject();
+                    mySheet.open();
+                    //categorySheet.open();
                 }
             },
             ActionItem {
@@ -39,35 +47,52 @@ Page {
                 imageSource: "asset:///images/trophy.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    statsSheet.open();
+                    var mySheet = statsSheetDefinition.createObject();
+                    mySheet.open();
+                    //statsSheet.open();
                 }
             }
         ]
     }
     attachedObjects: [
-        Sheet {
-            id: aboutSheet
-            AboutSheet {
+        ComponentDefinition {
+            id: aboutSheetDefinition
+            Sheet {
+                id: aboutSheet
+                AboutSheet {
+                }
             }
         },
-        Sheet {
-            id: helpSheet
-            HelpSheet {
+        ComponentDefinition {
+            id: helpSheetDefinition
+            Sheet {
+                id: helpSheet
+                HelpSheet {
+                }
             }
         },
-        Sheet {
-            id: settingsSheet
-            SettingsSheet {
+        ComponentDefinition {
+            id: settingsSheetDefinition
+            Sheet {
+                id: settingsSheet
+                SettingsSheet {
+                }
             }
         },
-        Sheet {
-            id: categorySheet
-            CategorySheet {
+        ComponentDefinition {
+            id: categorySheetDefinition
+            Sheet {
+                id: categorySheet
+                CategorySheet {
+                }
             }
         },
-        Sheet {
-            id: statsSheet
-            StatsSheet {
+        ComponentDefinition {
+            id: statsSheetDefinition
+            Sheet {
+                id: statsSheet
+                StatsSheet {
+                }
             }
         },
         SystemToast {

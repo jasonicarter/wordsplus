@@ -31,22 +31,33 @@ Container { // root Container
                 topPadding: 125
                 //background: Color.Green
                 preferredWidth: 720
-                Label {
-                    id: timerDisplay
-                    text: {
-                        if (wordsPlus.difficulty == 8) {
-                            "HARD: " + wordsPlus.time
-                        } else if (wordsPlus.difficulty == 4) {
-                            "MEDIUM: " + wordsPlus.time
-                        } else if (wordsPlus.difficulty == 2) {
-                            "EASY: " + wordsPlus.time
+                Container {
+                    Label {
+                        id: timerDisplay
+                        text: {
+                            if (wordsPlus.difficulty == 8) {
+                                "HARD: " + wordsPlus.time
+                            }else if (wordsPlus.difficulty == 4) {
+                                "MEDIUM: " + wordsPlus.time
+                            }else if (wordsPlus.difficulty == 2) {
+                                "EASY: " + wordsPlus.time
+                            }
+                        }
+                        //text: "TIME: 2:00"
+                        horizontalAlignment: HorizontalAlignment.Left
+                        textStyle {
+                            base: puzzlePageSubTitleBlue.style
                         }
                     }
-                    //text: "TIME: "
-                    horizontalAlignment: HorizontalAlignment.Left
-                    textStyle {
-                        base: puzzlePageSubTitleBlue.style
-                    }
+//                    Label {
+//                        id: reminderDisplay
+//                        text: "Hint: Rotate Me!"
+//                        horizontalAlignment: HorizontalAlignment.Left
+//                        textStyle {
+//                            base: puzzlePageSubTitleBlue.style
+//                            color: Color.create("#CC3F10")
+//                        }
+//                    }
                 }
                 Container {
                     layout: StackLayout {

@@ -31,7 +31,8 @@
 #define PRESONALMESSAGE 6
 #define STATUSMESSAGE 7
 #define INVITETODOWNLOAD 8
-#define HINT	9
+#define HINTREVEAL	9
+#define HINTROTATEUP	10
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
@@ -68,6 +69,7 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	numberOfWordsFound = 0;
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
+	wordDataValue = -1;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -148,10 +150,10 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(90);
 
-			QList<int> mapValues = wordDataIndex.values();
-			for (int i = 0; i < mapValues.count(); i++) {
-				HighlightSelectedTile(mapValues[i], HINT);
-			}
+			int r = rand() % listOfWords.count(); //list of words reduced once word is found
+			wordDataValue = wordDataIndex.value(listOfWords[r]);
+
+			HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else {
 			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
@@ -171,11 +173,7 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(0);
 
-			for (int i = 0; i < mNumTiles; i++) {
-				for (int ii = 0; ii < mNumTiles; ii++) {
-					mPlayField[i][ii]->setRotationZ(0);
-				}
-			}
+			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
 		else {
 			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
@@ -290,13 +288,11 @@ void WordsPlus::intializePlayArea() {
 		char** letter = createNewPuzzle((char*) cat.c_str(), getDifficulty());
 		QList<char*> puzzleWords = returnPuzzleWords();
 
-		QString listOfWords;
 		numberOfWords = returnNumberOfPuzzleWords();
 		wordDataIndex = returnPuzzleIndex();
 
 		for (int i = 0; i < numberOfWords; i++) {
 			listOfWords.append(puzzleWords[i]);
-			listOfWords.append(' ');
 
 			//LOG("word index: %i", wordDataList[listOfWords]);
 
@@ -337,8 +333,6 @@ void WordsPlus::intializePlayArea() {
 
 			mWordsToFindContainer->add(pContainer);
 		}
-
-		setPuzzleWords(listOfWords);
 
 		mNumTiles = 10; // Calculate the size of the tiles
 		mWantedSize = mPlayAreaContainer->preferredWidth() / mNumTiles;
@@ -552,28 +546,32 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 		QString letter = letterSrc[0]; //a.png
 
 		switch (stateOfLetter) {
-		case NORMAL:
-			//if(mPlayField[i][ii]->rotationZ() != 0) mPlayField[i][ii]->setRotationZ(0);
-			imageSource = QString("asset:///images/letters/%1").arg(
-					imageSrc[index]);
-			break;
-		case SELECTED:
-			imageSource = QString("asset:///images/letters/selected/%1").arg(
-					imageSrc[index]);
-			mPlayField[i][ii]->setObjectName("selected");
-			break;
-		case HIGHLIGHT:
-			imageSource = QString("asset:///images/letters/highlight/%1").arg(
-					imageSrc[index]);
-			playSound(SOUNDLETTERSELECTED);
-			setSelectedLetters(letter);
-			break;
-		case HINT:
-			mPlayField[i][ii]->setRotationZ(90);
-			imageSource = QString("asset:///images/letters/hints/%1").arg(
-					imageSrc[index]);
-			playSound(SOUNDLETTERSELECTED);
-			break;
+			case NORMAL:
+				imageSource = QString("asset:///images/letters/%1").arg(
+						imageSrc[index]);
+				break;
+			case SELECTED:
+				imageSource = QString("asset:///images/letters/selected/%1").arg(
+						imageSrc[index]);
+				mPlayField[i][ii]->setObjectName("selected");
+				break;
+			case HIGHLIGHT:
+				imageSource = QString("asset:///images/letters/highlight/%1").arg(
+						imageSrc[index]);
+				playSound(SOUNDLETTERSELECTED);
+				setSelectedLetters(letter);
+				break;
+			case HINTREVEAL:
+				mPlayField[i][ii]->setRotationZ(90);
+				imageSource = QString("asset:///images/letters/hints/%1").arg(
+						imageSrc[index]);
+				playSound(SOUNDLETTERSELECTED);
+				break;
+			case HINTROTATEUP:
+				imageSource = QString("asset:///images/letters/hints/%1").arg(
+						imageSrc[index]);
+				mPlayField[i][ii]->setRotationZ(0);
+				break;
 		}
 
 		mPlayField[i][ii]->setImage(Image(imageSource));
@@ -586,13 +584,9 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 	int i;
 	int ii;
 	QString selectedWord;
-	QStringList puzzleWords;
 
 	//whether word found or not blank out selectedLetters
 	setSelectedLetters("clear");
-
-	// get array of puzzle words
-	puzzleWords = getPuzzleWords().split(" ");
 
 	// get corresponding letters and make word
 	for (int j = 0; j < listOfNumbers.size(); j++) {
@@ -618,10 +612,10 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		}
 	}
 
-	if (puzzleWords.indexOf(selectedWord) >= 0) { // word found in puzzle words
+	if (listOfWords.indexOf(selectedWord) >= 0) { // word found in puzzle words
 
 		//remove word from list so it can't be selected a second time
-		puzzleWords.removeAll(selectedWord);
+		listOfWords.removeAll(selectedWord);
 
 		for (int j = 0; j < listOfNumbers.size(); j++) {
 			int pos = listOfNumbers.at(j);
@@ -750,15 +744,6 @@ void WordsPlus::setCategory(const QString cat) {
 	m_strCategory = cat;
 	settings->saveValueFor(CATEGORY, m_strCategory);
 	emit categoryChanged(m_strCategory);
-}
-
-QString WordsPlus::getPuzzleWords() {
-	return m_strPuzzleWords;
-}
-
-void WordsPlus::setPuzzleWords(const QString words) {
-	m_strPuzzleWords = words;
-	emit puzzleWordsChanged(m_strPuzzleWords);
 }
 
 QString WordsPlus::getTime() {
