@@ -7,18 +7,19 @@ Container { // root Container
         layout: DockLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center
-        background: Color.Black
+        //background: Color.Black
+        background: Color.create("#0098f0")
         preferredWidth: 768
         preferredHeight: 1280
-        Container {
-            id: title
-            verticalAlignment: VerticalAlignment.Top
-            background: Color.create("#00629C")
-            preferredWidth: 768
-            ImageView {
-                imageSource: "asset:///images/titles/withpuzzles.png"
-            }
-        }
+//        Container {
+//            id: title
+//            verticalAlignment: VerticalAlignment.Top
+//            background: Color.create("#00629C")
+//            preferredWidth: 768
+//            ImageView {
+//                imageSource: "asset:///images/titles/withpuzzles.png"
+//            }
+//        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
@@ -46,7 +47,7 @@ Container { // root Container
                         //text: "TIME: 2:00"
                         horizontalAlignment: HorizontalAlignment.Left
                         textStyle {
-                            base: puzzlePageSubTitleBlue.style
+                            base: puzzlePageSubTitleNormalWhite.style
                         }
                     }
 //                    Label {
