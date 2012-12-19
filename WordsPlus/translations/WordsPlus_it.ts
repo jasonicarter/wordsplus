@@ -2,13 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it_IT">
 <context>
-    <name>HomePage</name>
-    <message>
-        <source>Welcome</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>RegistrationHandler</name>
     <message>
         <source>Please wait while the application connects to BBM.</source>

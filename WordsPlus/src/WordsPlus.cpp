@@ -150,7 +150,7 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(90);
 
-			int r = rand() % listOfWords.count(); //list of words reduced once word is found
+			int r = rand() % listOfWords.count() - 1; //list of words reduced once word is found
 			wordDataValue = wordDataIndex.value(listOfWords[r]);
 
 			HighlightSelectedTile(wordDataValue, HINTREVEAL);
