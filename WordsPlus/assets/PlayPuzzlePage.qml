@@ -11,15 +11,6 @@ Container { // root Container
         background: Color.create("#0098f0")
         preferredWidth: 768
         preferredHeight: 1280
-//        Container {
-//            id: title
-//            verticalAlignment: VerticalAlignment.Top
-//            background: Color.create("#00629C")
-//            preferredWidth: 768
-//            ImageView {
-//                imageSource: "asset:///images/titles/withpuzzles.png"
-//            }
-//        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
@@ -29,9 +20,9 @@ Container { // root Container
                 id: puzzleInfo
                 layout: DockLayout {
                 }
-                topPadding: 125
                 //background: Color.Green
                 preferredWidth: 720
+                topPadding: 50
                 Container {
                     Label {
                         id: timerDisplay
@@ -83,16 +74,16 @@ Container { // root Container
             Container {
                 id: playAreaContainer
                 objectName: "playAreaContainer"
+                //background: Color.Gray
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 20
+                topMargin: 50
                 bottomPadding: 30
                 preferredWidth: 750
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Center
-                //background: Color.Gray
+                verticalAlignment: VerticalAlignment.Center             
             }
             Container { // Container for words to find
                 id: wordsToFind

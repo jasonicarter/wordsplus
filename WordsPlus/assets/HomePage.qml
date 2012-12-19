@@ -4,18 +4,20 @@ import bb.system 1.0
 Container {
     id: homePageContainer
     objectName: "homePageContainer"
+    //background: Color.Black
+    background: Color.create("#0098f0")
     Container {
+        property string scoreLoopUsername
+        property string btnName
         id: mainContainer
         layout: DockLayout {
         }
         preferredHeight: 1280
-        //background: Color.Black
-        background: Color.create("#0098f0")
         ImageView {
             objectName: "rotateImageMsg"
             opacity: 0
             verticalAlignment: VerticalAlignment.Center
-            imageSource: "asset:///images/hint_image.png"
+            //imageSource: "asset:///images/hint_image.png"
         }
         Container { //top
             Container { //love me container
@@ -24,9 +26,10 @@ Container {
                 }
                 horizontalAlignment: HorizontalAlignment.Center
                 Container {
+                    //background: Color.Green
                     layout: AbsoluteLayout {
                     }
-                    preferredWidth: 400
+                    preferredWidth: 300
                     ImageView {
                         id: redHeart
                         objectName: "rotateHeartImage"
@@ -34,34 +37,7 @@ Container {
                             positionX: -200
                             positionY: 0
                         }
-                        opacity: 1
                         imageSource: "asset:///images/heart_large.png"
-                    }
-                }
-                Container {
-                    layout: StackLayout {
-                        orientation: LayoutOrientation.LeftToRight
-                    }
-                    topPadding: 40
-                    rightPadding: 30
-                    //background: Color.Black
-                    ImageView {
-                        imageSource: "asset:///images/letters/l.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/o.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/v.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/e.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/m.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/e.png"
                     }
                 }
             } //end of love me
@@ -69,7 +45,7 @@ Container {
         Container { // center
             layout: DockLayout {
             }
-            topPadding: 200
+            topPadding: 250
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             ImageView {
@@ -85,7 +61,7 @@ Container {
             ImageView {
                 id: wImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_w.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_w_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -99,7 +75,7 @@ Container {
             ImageView {
                 id: oImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_o.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_o_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -113,7 +89,7 @@ Container {
             ImageView {
                 id: rImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_r.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_r_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -127,7 +103,7 @@ Container {
             ImageView {
                 id: dImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_d.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_d_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -139,7 +115,7 @@ Container {
             ImageView {
                 id: pImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_p.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_p_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -153,7 +129,7 @@ Container {
             ImageView {
                 id: lImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_l.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_l_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -167,7 +143,7 @@ Container {
             ImageView {
                 id: uImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_u.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_u_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -181,7 +157,7 @@ Container {
             ImageView {
                 id: sImageView
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_s.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_s_red.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -195,7 +171,7 @@ Container {
             ImageView {
                 id: by
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_by.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_by_white.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -209,7 +185,7 @@ Container {
             ImageView {
                 id: ji
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_ji.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_ji_white.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -223,7 +199,7 @@ Container {
             ImageView {
                 id: carter
                 opacity: 0
-                imageSource: "asset:///images/homeAnimation/mainPage_carter.png"
+                imageSource: "asset:///images/homeAnimation/mainPage_carter_white.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -237,8 +213,8 @@ Container {
             layout: StackLayout {
                 orientation: LayoutOrientation.LeftToRight
             }
-            leftPadding: 200
-            topPadding: 200
+            leftPadding: 270
+            topPadding: 50
             verticalAlignment: VerticalAlignment.Top
             horizontalAlignment: HorizontalAlignment.Center
             Container {
@@ -249,19 +225,20 @@ Container {
                     ImageView {
                         objectName: "rotateRotateImage"
                         horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/rotate.png"
+                        imageSource: "asset:///images/rotate_blk.png"
                     }
                     Label {
                         topMargin: 0
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "ROTATE ME"
                         textStyle {
-                            base: subTitleNormalWhite.style
+                            base: smallTxtNormalWhite.style
                         }
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            homeSysToast.body = "No, no, no...\nRotate the device, silly"
+                            homeSysToast.body = "Rotate the device, silly"
+                            btnName = "Got it!"
                             homeSysToast.show();
                         }
                     }
@@ -271,19 +248,20 @@ Container {
                     ImageView {
                         objectName: "rotateGuideImage"
                         horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/guide.png"
+                        imageSource: "asset:///images/guide_blk.png"
                     }
                     Label {
                         topMargin: 0
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "GUIDE ME"
                         textStyle {
-                            base: subTitleNormalWhite.style
+                            base: smallTxtNormalWhite.style
                         }
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top to see your options"
+                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top for your options"
+                            btnName = "Got it!"
                             homeSysToast.show();
                         }
                     }
@@ -293,14 +271,14 @@ Container {
                     ImageView {
                         objectName: "rotateReviewImage"
                         horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/review_big.png"
+                        imageSource: "asset:///images/review_blk.png"
                     }
                     Label {
                         topMargin: 0
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "REVIEW ME"
                         textStyle {
-                            base: subTitleNormalWhite.style
+                            base: smallTxtNormalWhite.style
                         }
                     }
                     onTouch: {
@@ -325,11 +303,11 @@ Container {
         }
         //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
         function onScoreloopLoaded(username) {
-            mainLoader.stop();
-            mainLoader.visible = false;
-            welcomeUserLabel.text = qsTr("Welcome") + " " + username + "! \n" + "Total Points Won: " + wordsPlus.score + "\n " + "Total # of Words Found: " + wordsPlus.totalWordsFound
+            scoreLoopUsername = username;
+            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
+            homeSysToast.show();
         }
-    } //main container
+    } //end of main container
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text
@@ -354,8 +332,8 @@ Container {
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {
-            id: subTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
+            id: smallTxtNormalWhite
+            base: SystemDefaults.TextStyles.SmallText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
@@ -374,12 +352,11 @@ Container {
                 uri: "appworld://content/19132685"
             }
         },
-        //        SystemToast {
-        //            id: homeSysToast
-        //            body: ""
-        //            //position: TopCenter //'TopCenter'not working
-        //            button.label: "Got it!"
-        //        },
+        SystemToast {
+            id: homeSysToast
+            body: ""
+            button.label: "Got it!" //btnName
+        },
         Sheet {
             id: aboutSheet
             AboutSheet {
