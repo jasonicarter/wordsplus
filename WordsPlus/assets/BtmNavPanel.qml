@@ -6,10 +6,16 @@ Container {
     property int bbm_invitetodownload: 8
     Container { // bottom panel
         background: Color.create("#0098f0")
-        verticalAlignment: VerticalAlignment.Bottom
+        //verticalAlignment: VerticalAlignment.Bottom
         preferredHeight: 150
         preferredWidth: 768
         layout: DockLayout {
+        }
+        Container {
+            preferredWidth: 768
+            preferredHeight: 45
+            background: Color.create("#262626")
+            verticalAlignment: VerticalAlignment.Bottom
         }
         Container { // profile
             preferredHeight: 150

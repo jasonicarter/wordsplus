@@ -13,12 +13,6 @@ Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
-        ImageView {
-            objectName: "rotateImageMsg"
-            opacity: 0
-            verticalAlignment: VerticalAlignment.Center
-            //imageSource: "asset:///images/hint_image.png"
-        }
         Container { //top
             Container { //love me container
                 layout: StackLayout {
@@ -34,7 +28,7 @@ Container {
                         id: redHeart
                         objectName: "rotateHeartImage"
                         layoutProperties: AbsoluteLayoutProperties {
-                            positionX: -200
+                            positionX: -190
                             positionY: 0
                         }
                         imageSource: "asset:///images/heart_large.png"
@@ -237,7 +231,7 @@ Container {
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            homeSysToast.body = "No, don't tap\nRotate 'Me' the device!"
+                            homeSysToast.body = "No, don't tap...\n\"Rotate\" me, the device"
                             homeSysToast.show();
                         }
                     }
@@ -350,11 +344,11 @@ Container {
                 uri: "appworld://content/19132685"
             }
         },
-//        SystemToast {
-//            id: homeSysToast
-//            body: ""
-//            button.label: "Got it!" //btnName
-//        },
+        SystemToast {
+            id: homeSysToast
+            body: ""
+            button.label: "Got it!" //btnName
+        },
         Sheet {
             id: aboutSheet
             AboutSheet {
