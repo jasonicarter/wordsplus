@@ -13511,3 +13511,144 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 
 !ENTRY com.qnx.tools.bbt.core 4 0 2012-12-19 15:19:37.613
 !MESSAGE Unable to determine the application exit code
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 16:35:39.823
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 16:35:39.867
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 16:35:48.080
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 16:35:48.124
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:36:10.738
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 17:45:34.091
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 17:45:34.138
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:49:08.068
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:49:19.547
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:49:47.210
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:51:23.123
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:51:26.451
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:51:40.424
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 17:51:57.173
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:01:11.575
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:01:15.235
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:01:26.344
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:01:48.201
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:01:54.682
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:12:40.831
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:12:44.503
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:15:15.629
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:15:31.020
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:15:34.918
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:17:35.818
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:18:49.090
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:18:52.586
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:19:27.205
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:23:42.642
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:24:55.887
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2012-12-19 18:25:33.597
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 18:31:51.666
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:31:51.717
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 18:35:12.985
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:35:13.034
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:35:25.228
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:35:32.541
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:38:47.301
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:45:11.128
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:50:20.271
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:52:40.101
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:53:52.695
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:56:19.186
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 18:59:02.160
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 18:59:02.377
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2012-12-19 19:04:14.111
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2012-12-19 19:04:14.159
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4

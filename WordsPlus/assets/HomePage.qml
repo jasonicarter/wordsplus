@@ -45,7 +45,7 @@ Container {
         Container { // center
             layout: DockLayout {
             }
-            topPadding: 250
+            topPadding: 150
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             ImageView {
@@ -237,8 +237,7 @@ Container {
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            homeSysToast.body = "Rotate the device, silly"
-                            btnName = "Got it!"
+                            homeSysToast.body = "No, don't tap\nRotate 'Me' the device!"
                             homeSysToast.show();
                         }
                     }
@@ -260,8 +259,7 @@ Container {
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top for your options"
-                            btnName = "Got it!"
+                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top to see your options"
                             homeSysToast.show();
                         }
                     }
@@ -352,11 +350,11 @@ Container {
                 uri: "appworld://content/19132685"
             }
         },
-        SystemToast {
-            id: homeSysToast
-            body: ""
-            button.label: "Got it!" //btnName
-        },
+//        SystemToast {
+//            id: homeSysToast
+//            body: ""
+//            button.label: "Got it!" //btnName
+//        },
         Sheet {
             id: aboutSheet
             AboutSheet {

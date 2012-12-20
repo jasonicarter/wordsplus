@@ -4,13 +4,18 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.Black
+        background: Color.create("#0098f0")
+        preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         Container {
-            background: Color.create("#00629C")
-            preferredWidth: 768
+            layout: AbsoluteLayout {
+            }
             ImageView {
-                imageSource: "asset:///images/titles/tobragabout.png"
+                layoutProperties: AbsoluteLayoutProperties {
+                    positionX: 500
+                    positionY: 0
+                }
+                imageSource: "asset:///images/heart_large.png"
             }
         }
         Container { //middle
@@ -244,13 +249,6 @@ Page {
                     } // time
                 }
             }
-        }
-        Container { //divider
-            preferredWidth: 768
-            preferredHeight: 50
-            background: Color.create("#00629C")
-            verticalAlignment: VerticalAlignment.Bottom
-            horizontalAlignment: HorizontalAlignment.Center
         }
     }
     actions: [

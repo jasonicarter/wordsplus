@@ -86,7 +86,8 @@ void ScoreLoopThread::run() {
 	} else {
 		//InformUser(&app, "Note", "Scoreloop Sample started...");
 
-		//used to initiate SC_Client_CreateUserController and provides username in signal RequestUserCompleted(login)
+		//used to initiate SC_Client_CreateUserController
+		//provides username in signal RequestUserCompleted(login) and user score
 		RequestUser(&app);
 	}
 
@@ -168,6 +169,8 @@ void ScoreLoopThread::RequestUserCompletionCallback(void *userData, SC_Error_t c
 
 	/* normal signal for emitting the username */
 	emit(instance()->RequestUserCompleted(login ? SC_String_GetData(login) : "<unknown>"));
+
+	LoadLeaderboardAroundUser(app, SC_SCORES_SEARCH_LIST_ALL,1);
 }
 
 void ScoreLoopThread::DisplayDialog(AppData_t *app, const char* title, const char* message) {
