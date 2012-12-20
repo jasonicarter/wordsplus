@@ -1,6 +1,7 @@
 <root>
     <item category="ANIMALS" filename="animals" image= "asset:///images/categoryList/elephant.png"/>
     <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
+    <item category="STAR TREK" filename="startrek" image= "asset:///images/categoryList/spaceship.png"/>
     <item category="COMMON WORDS" filename="common" image= "asset:///images/categoryList/books.png"/>
     <item category="JOBS + OCCUPATIONS" filename="jobs" image= "asset:///images/categoryList/jobs.png"/>
     <item category="GIRL NAMES" filename="girlnames" image= "asset:///images/categoryList/woman.png"/>

@@ -9,7 +9,7 @@ Container { // root Container
         horizontalAlignment: HorizontalAlignment.Center
         //background: Color.Black
         background: Color.create("#0098f0")
-        preferredWidth: 768
+        //preferredWidth: 720
         preferredHeight: 1280
         Container { // center container
             id: centerContainer
@@ -41,15 +41,6 @@ Container { // root Container
                             base: puzzlePageSubTitleNormalWhite.style
                         }
                     }
-//                    Label {
-//                        id: reminderDisplay
-//                        text: "Hint: Rotate Me!"
-//                        horizontalAlignment: HorizontalAlignment.Left
-//                        textStyle {
-//                            base: puzzlePageSubTitleBlue.style
-//                            color: Color.create("#CC3F10")
-//                        }
-//                    }
                 }
                 Container {
                     layout: StackLayout {
@@ -80,7 +71,7 @@ Container { // root Container
                 }
                 topMargin: 50
                 bottomPadding: 30
-                preferredWidth: 750
+                preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Center             

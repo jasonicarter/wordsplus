@@ -152,7 +152,7 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(90);
 
-			int r = rand() % listOfWords.count() - 1; //list of words reduced once word is found
+			int r = rand() % listOfWords.count(); //list of words reduced once word is found
 			wordDataValue = wordDataIndex.value(listOfWords[r]);
 
 			HighlightSelectedTile(wordDataValue, HINTREVEAL);
@@ -162,12 +162,12 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
-			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			//ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
 			rotateRotateImage->setRotationZ(90);
 			rotateGuideImage->setRotationZ(90);
-			rotateImageMsg->setOpacity(1);
+			//rotateImageMsg->setOpacity(1);
 		}
 	} // end of rightup
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
@@ -182,12 +182,12 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
-			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			//ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
 			rotateRotateImage->setRotationZ(0);
 			rotateGuideImage->setRotationZ(0);
-			rotateImageMsg->setOpacity(0);
+			//rotateImageMsg->setOpacity(0);
 		}
 	} //end of topup
 }
@@ -275,11 +275,9 @@ void WordsPlus::intializePlayArea() {
 	//try to divide up below into smaller methods passing control for each one
 
 	isPuzzleDisplayed = true;
-	mPlayAreaContainer = puzzlePageControl->findChild<Container*>(
-			"playAreaContainer");
+	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
-	mWordsToFindContainer = puzzlePageControl->findChild<Container*>(
-			"wordsToFind");
+	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
 	mWordsToFindContainer->removeAll();
 
 	Container* pContainer = new Container();
@@ -527,6 +525,14 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		WordCompleted(tileNumbers);
 		tileNumbers.clear();
 	} // isUp
+
+	if (event->isCancel()) {
+		//LOG("touch cancelled");
+		position = 0;
+		multiple = 1;
+		WordCompleted(tileNumbers);
+		tileNumbers.clear();
+	}
 
 }
 
@@ -933,7 +939,7 @@ void WordsPlus::ControlsForBBM(int state) {
 	case PROFILEBOXPUZZLECOMPLETED: {
 		if (getProfileBox()) {
 			QString msg = QString(
-					"Completed another puzzle! \nTime: %1 Score: %2").arg(
+					"More fun. More puzzles.\nCompleted Another One! \nTime: %1  Score: %2").arg(
 					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
 					getScore());
 
