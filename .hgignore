@@ -3,3 +3,4 @@ syntax: glob
 .metadata/.plugins/org.eclipse.cdt.core/WordsPlus.1353650728072.pdom
 syntax: regexp
 .metadata/.plugins/org.eclipse.core.resources/.history
+WordsPlus/assets/.preview

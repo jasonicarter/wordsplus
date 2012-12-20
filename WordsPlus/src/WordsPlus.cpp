@@ -114,6 +114,8 @@ void WordsPlus::show() {
 			QObject::connect(mScoreLoop,
 					SIGNAL(SubmitScoreCompleted(ScoreData_t*)), this,
 					SLOT(onSubmitScoreCompleted(ScoreData_t*)));
+			QObject::connect(mScoreLoop, SIGNAL(LoadLeaderboardCompleted(QVariantList)),
+					this, SLOT(onLoadLeaderboardCompleted(QVariantList)));
 
 			mOrientationSensor = new OrientationSensor(this);
 			QObject::connect(mOrientationSensor, SIGNAL(orientationChanged()),
@@ -206,11 +208,19 @@ void WordsPlus::submitScore(int score) {
 	}
 }
 
+void WordsPlus::onLoadLeaderboardCompleted(QVariantList data) {
+	if(data.count() == 1){
+		QMap<QString, QVariant> mapScore = data[0].toMap();
+		int score = mapScore.value("formattedScore").toInt();
+		settings->saveValueFor(SCORE, QString::number(score));
+		LOG("user score: %i", score);
+	}
+}
+
 void WordsPlus::loadLeaderboard() {
 	LOG("loadLeaderboard")
 	if (Global::instance()->getIsInternetAvailable()) {
-		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL,
-				20);
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 20);
 	}
 }
 
@@ -687,9 +697,7 @@ void WordsPlus::CrossOutPuzzleWord(QString wordFound) {
 
 void WordsPlus::showToast(QString msg) {
 
-	emit mainSysToastSignal(
-			msg
-					+ "\n\nClick PLAY to continue or...\nTap home below to return to Main page");
+	emit mainSysToastSignal(msg + "\n\nClick PLAY to continue or...\nTap home below to return to Main page");
 }
 
 void WordsPlus::onTick() {
@@ -849,11 +857,9 @@ int WordsPlus::getScore() {
 
 void WordsPlus::setScore(int puzzleTime) {
 
-	bool okScore;
-	QString strScore = settings->getValueFor(SCORE, "0");
-	int score = strScore.toInt(&okScore, 10);
+	int score = getScore();
+	score = score + (100000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
 
-	score = (score + 100000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
 	settings->saveValueFor(SCORE, QString::number(score));
 	submitScore(score);
 

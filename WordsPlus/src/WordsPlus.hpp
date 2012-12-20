@@ -112,7 +112,7 @@ private Q_SLOTS:
 	void onTick();
 	void onThumbnail();
 	void onFullscreen();
-
+	void onLoadLeaderboardCompleted(QVariantList data);
 
 Q_SIGNALS:
 	void categoryChanged(const QString);

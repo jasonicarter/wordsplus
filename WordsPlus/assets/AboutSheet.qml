@@ -4,11 +4,18 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.Black
+        background: Color.create("#0098f0")
+        preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         Container {
+            layout: AbsoluteLayout {
+            }
             ImageView {
-                imageSource: "asset:///images/titles/wordsplusversion.png"
+                layoutProperties: AbsoluteLayoutProperties {
+                    positionX: 500
+                    positionY: 0
+                }
+                imageSource: "asset:///images/heart_large.png"
             }
         }
         Container { //middle
@@ -70,58 +77,54 @@ Page {
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                rightPadding: 15
                 topPadding: 50
                 horizontalAlignment: HorizontalAlignment.Center
-                Container {
-                    rightPadding: 20
-                    //background: Color.Black
-                    ImageView {
-                        imageSource: "asset:///images/men_at_work.png"
-                    }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/i.png"
                 }
-                Container {
-                    layout: StackLayout {
-                        orientation: LayoutOrientation.LeftToRight
-                    }
-                    topPadding: 40
-                    //background: Color.Black
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/i.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/m.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/p.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/r.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/o.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/v.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/e.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/m.png"
-                    }
-                    ImageView {
-                        imageSource: "asset:///images/letters/selected/e.png"
-                    }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/m.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/p.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/r.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/o.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/v.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/e.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/m.png"
+                }
+                ImageView {
+                    preferredHeight: 75
+                    preferredWidth: 75
+                    imageSource: "asset:///images/letters/selected/e.png"
                 }
             }
-        }
-        Container { //divider
-            preferredWidth: 768
-            preferredHeight: 50
-            background: Color.create("#00629C")
-            verticalAlignment: VerticalAlignment.Bottom
-            horizontalAlignment: HorizontalAlignment.Center
         }
     }
     actions: [
