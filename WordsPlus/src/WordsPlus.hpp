@@ -156,6 +156,8 @@ private:
 	float initY;
 	int multiple;
 	int length;
+	int directionalBoundPos;
+	int directionalBoundNeg;
 	int upperbound;
 	int lowerbound;
 	int position;

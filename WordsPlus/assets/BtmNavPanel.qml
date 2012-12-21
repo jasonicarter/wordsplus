@@ -38,6 +38,11 @@ Container {
                         base: btmNavPanelSmallNormalWhite.style
                     }
                 }
+                onTouch: {
+                    if (event.isDown()) {
+                        wordsPlus.playSound("letterSelected");
+                    }
+                }
             }
             contextActions: [
                 ActionSet {
@@ -100,6 +105,7 @@ Container {
             onTouch: {
                 if (event.isDown()) {
                     isHome = true;
+                    wordsPlus.playSound("letterSelected");
                 }
                 if (event.isUp() && isHome) {
                     isHome = false;

@@ -230,7 +230,9 @@ Container {
                         }
                     }
                     onTouch: {
-                        if (event.isUp()) {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
                             homeSysToast.body = "No, don't tap...\n\"Rotate\" me, the device"
                             homeSysToast.show();
                         }
@@ -252,7 +254,9 @@ Container {
                         }
                     }
                     onTouch: {
-                        if (event.isUp()) {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
                             homeSysToast.body = "Looking for a menu?\nSwipe down from the top to see your options"
                             homeSysToast.show();
                         }
@@ -274,7 +278,9 @@ Container {
                         }
                     }
                     onTouch: {
-                        if (event.isUp()) {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
                             invokeLeaveReview.trigger("bb.action.OPEN");
                         }
                     }

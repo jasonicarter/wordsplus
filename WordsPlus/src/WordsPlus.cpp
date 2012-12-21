@@ -60,6 +60,8 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	deltaY = 0.0;
 	multiple = 1;
 	length = 0;
+	directionalBoundPos = 35;
+    directionalBoundNeg = -35;
 	upperbound = 100;
 	lowerbound = 0;
 	position = 0;
@@ -69,7 +71,7 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	numberOfWordsFound = 0;
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
-	wordDataValue = -1;
+	wordDataValue = 5;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -424,7 +426,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		deltaY = event->windowY() - initY;
 
 		//Y direction only
-		if (deltaX >= -25 && deltaX <= 25) {
+		if (deltaX >= directionalBoundNeg && deltaX <= directionalBoundPos) {
 			length = (int) deltaY;
 			//deltaY increases (+ve) when finger moves top to bottom
 			if (length / 60 == multiple && length > 0) {
@@ -445,7 +447,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 					multiple++;
 				}
 			}
-		} else if (deltaY >= -25 && deltaY <= 25) {
+		} else if (deltaY >= directionalBoundNeg && deltaY <= directionalBoundPos) {
 			length = (int) deltaX;
 			//deltaX increases (+ve) when finger moves left to right
 			if (length / 60 == multiple && length > 0) {
@@ -465,8 +467,8 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 					multiple++;
 				}
 			}
-		} else if (deltaX > 25) { //east
-			if (deltaY > 25) { // diagonal South East
+		} else if (deltaX > directionalBoundPos) { //east
+			if (deltaY > directionalBoundPos) { // diagonal South East
 				length = (int) deltaY;
 				if (length / 60 == multiple) {
 					position += 10; //x
@@ -478,7 +480,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 					}
 				}
 			}
-			if (deltaY < -25) { // diagonal North East
+			if (deltaY < directionalBoundNeg) { // diagonal North East
 				length = (int) deltaY;
 				if (length / 60 == -multiple) {
 					position += 10; //x
@@ -490,8 +492,8 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 					}
 				}
 			}
-		} else if (deltaX < -25) { // west
-			if (deltaY > 25) { // diagonal South West
+		} else if (deltaX < directionalBoundNeg) { // west
+			if (deltaY > directionalBoundPos) { // diagonal South West
 				length = (int) deltaY;
 				if (length / 60 == multiple) {
 					position -= 10; //x
@@ -503,7 +505,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 					}
 				}
 			}
-			if (deltaY < -25) { // diagonal North West
+			if (deltaY < directionalBoundNeg) { // diagonal North West
 				length = (int) deltaY;
 				if (length / 60 == -multiple) {
 					position -= 10; //x
@@ -555,8 +557,8 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 	QVariant v = mPlayField[i][ii]->imageSource();
 
 	if (v.canConvert<QString>()) {
-		QString objURL = v.value<QString>();
-		QStringList imageSrc = objURL.split("/");
+		//QString objURL = v.value<QString>();
+		QStringList imageSrc = v.value<QString>().split("/");
 		int index = imageSrc.size() - 1; // size gives count not last index
 		QStringList letterSrc = (imageSrc[index]).split(".");
 		QString letter = letterSrc[0]; //a.png
@@ -703,7 +705,7 @@ void WordsPlus::CrossOutPuzzleWord(QString wordFound) {
 
 void WordsPlus::showToast(QString msg) {
 
-	emit mainSysToastSignal(msg + "\n\nClick PLAY to continue or...\nTap home below to return to Main page");
+	emit mainSysToastSignal(msg);
 }
 
 void WordsPlus::onTick() {
@@ -811,8 +813,7 @@ void WordsPlus::setMusic(bool status) {
 
 bool WordsPlus::getProfileBox() {
 	bool okProfile;
-	QString strProfileBoxEnabled = settings->getValueFor(PROFILEBOXUPDATES,
-			"1");
+	QString strProfileBoxEnabled = settings->getValueFor(PROFILEBOXUPDATES,"1");
 	isProfileBoxEnabled = strProfileBoxEnabled.toInt(&okProfile, 10);
 	return isProfileBoxEnabled;
 }
@@ -949,7 +950,7 @@ void WordsPlus::ControlsForBBM(int state) {
 			//wordsPlus.png iconId = 1
 			//could use #define WORDSPLUSPROFILEBOX 1
 			//use 0 if you have no image
-			profileBox->addProfileBoxItem(msg, 1);
+			profileBox->addProfileBoxItem(msg, 2);
 		}
 		break;
 	}

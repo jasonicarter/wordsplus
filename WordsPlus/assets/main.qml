@@ -100,13 +100,14 @@ Page {
             body: "" //set in C++
             icon: "asset:///wordsplus.png"
             //position: TopCenter //'TopCenter'not working
-            button.label: "Play"
+            //button.label: "Play"
             onFinished: {
+                wordsPlus.intializePlayArea();
                 //mainSysToast.result = 1 for button selected
                 //mainSysToast.result = 4 for toast timed out
-                if (mainSysToast.result == 1) { //using 'ButtonSelection' - not working
-                    wordsPlus.intializePlayArea();
-                }
+//                if (mainSysToast.result == 1) { //using 'ButtonSelection' - not working
+//                    wordsPlus.intializePlayArea();
+//                }
             }
         }
     ]
