@@ -7,10 +7,20 @@ Container { // root Container
         layout: DockLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center
-        //background: Color.Black
         background: Color.create("#0098f0")
-        //preferredWidth: 720
         preferredHeight: 1280
+        Container {
+            layout: AbsoluteLayout {
+            }
+            ImageView {
+                layoutProperties: AbsoluteLayoutProperties {
+                    positionX: 500
+                    positionY: 0
+                }
+                objectName: "puzzleHeart"
+                imageSource: "asset:///images/heart_large.png"
+            }
+        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
@@ -21,17 +31,17 @@ Container { // root Container
                 layout: DockLayout {
                 }
                 //background: Color.Green
-                preferredWidth: 720
                 topPadding: 50
+                leftPadding: 20
                 Container {
                     Label {
                         id: timerDisplay
                         text: {
                             if (wordsPlus.difficulty == 8) {
                                 "HARD: " + wordsPlus.time
-                            }else if (wordsPlus.difficulty == 4) {
+                            } else if (wordsPlus.difficulty == 4) {
                                 "MEDIUM: " + wordsPlus.time
-                            }else if (wordsPlus.difficulty == 2) {
+                            } else if (wordsPlus.difficulty == 2) {
                                 "EASY: " + wordsPlus.time
                             }
                         }
@@ -46,16 +56,11 @@ Container { // root Container
                     layout: StackLayout {
                         orientation: LayoutOrientation.RightToLeft
                     }
-                    horizontalAlignment: HorizontalAlignment.Right
-                    ImageView {
-                        id: heart
-                        objectName: "puzzleHeart"
-                        imageSource: "asset:///images/heart.png"
-                    }
+                    topPadding: 50
                     Label {
                         id: letterDisplay
                         text: wordsPlus.selectedLetters
-                        horizontalAlignment: HorizontalAlignment.Right
+                        //text: "TEST"
                         textStyle {
                             base: puzzlePageBurntOrgange.style
                         }
@@ -69,21 +74,21 @@ Container { // root Container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 50
-                bottomPadding: 30
+                topMargin: 70
                 preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Center             
+                verticalAlignment: VerticalAlignment.Center
             }
             Container { // Container for words to find
                 id: wordsToFind
                 objectName: "wordsToFind"
-                //background: Color.Yellow
+                topMargin: 20
+                //leftPadding: 20
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                preferredWidth: 720
+                //preferredWidth: 720
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Bottom
             }

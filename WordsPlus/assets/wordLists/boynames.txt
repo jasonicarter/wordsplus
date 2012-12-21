@@ -1,11 +1,4 @@
 aaron
-abba
-abbe
-abbey
-abbie
-abbot
-abbott
-abby
 abdel
 abdul
 abe
@@ -895,7 +888,6 @@ darb
 darbee
 darby
 darcy
-d'arcy
 dare
 daren
 darill
@@ -1239,12 +1231,6 @@ eward
 ewart
 ewell
 ewen
-ezechiel
-ezekiel
-ezequiel
-eziechiele
-ezra
-ezri
 fabe
 faber
 fabian
@@ -1405,7 +1391,6 @@ gaile
 gal
 gale
 galen
-gallagher
 gallard
 galvan
 galven
@@ -1454,8 +1439,6 @@ gaspard
 gasparo
 gasper
 gaston
-gaultiero
-gauthier
 gav
 gavan
 gaven
@@ -1748,11 +1731,6 @@ hewett
 hewie
 hewitt
 heywood
-hi
-hieronymus
-hilario
-hilarius
-hilary
 hill
 hillard
 hillary
@@ -1823,7 +1801,6 @@ hurley
 husain
 husein
 hussein
-hy
 hyatt
 hyman
 hymie
@@ -2354,7 +2331,6 @@ lukas
 luke
 lutero
 luther
-ly
 lydon
 lyell
 lyle
@@ -2430,7 +2406,6 @@ marven
 marvin
 marwin
 mason
-massimiliano
 massimo
 mata
 mateo
@@ -2587,7 +2562,6 @@ murdock
 murray
 murry
 murvyn
-my
 myca
 mycah
 mychal
@@ -2634,7 +2608,6 @@ nero
 neron
 nester
 nestor
-nev
 nevil
 nevile
 neville
@@ -2763,7 +2736,6 @@ orren
 orrin
 orson
 orton
-orv
 orville
 osbert
 osborn
@@ -3104,7 +3076,6 @@ rog
 roger
 rogerio
 rogers
-roi
 roland
 rolando
 roldan
@@ -3221,7 +3192,6 @@ saunders
 saunderson
 saundra
 sauveur
-saw
 sawyer
 sawyere
 sax
@@ -3280,7 +3250,6 @@ shelby
 shelden
 shell
 shelley
-shellysheldon
 shelton
 shem
 shep
@@ -3302,7 +3271,6 @@ sholom
 shurlock
 shurlocke
 shurwood
-si
 sibyl
 sid
 sidnee
@@ -3404,7 +3372,6 @@ stillman
 stillmann
 stinky
 stirling
-stu
 stuart
 sullivan
 sully
@@ -3637,7 +3604,6 @@ urbain
 urban
 urbano
 urbanus
-uri
 uriah
 uriel
 urson
@@ -3809,7 +3775,6 @@ winny
 winslow
 winston
 winthrop
-wit
 wittie
 witty
 wolf
@@ -3838,7 +3803,6 @@ xenos
 xerxes
 xever
 ximenes
-ximenez
 xymenes
 yale
 yanaton
@@ -3856,7 +3820,6 @@ yorgos
 york
 yorke
 yorker
-yul
 yule
 yulma
 yuma
@@ -3880,8 +3843,6 @@ zak
 zane
 zared
 zeb
-zebadiah
-zebedee
 zebulen
 zebulon
 zechariah
