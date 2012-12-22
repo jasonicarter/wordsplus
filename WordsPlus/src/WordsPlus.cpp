@@ -277,6 +277,7 @@ void WordsPlus::intializePlayArea() {
 	//try to divide up below into smaller methods passing control for each one
 
 	isPuzzleDisplayed = true;
+	wordDataValue = -1;
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
 	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
