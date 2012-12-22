@@ -1,6 +1,7 @@
 // Tabbed Pane project template
 import bb.cascades 1.0
 import bb.system 1.0
+import bb.multimedia 1.0
 
 Page {
     id: mainPage
@@ -105,15 +106,39 @@ Page {
                 wordsPlus.intializePlayArea();
                 //mainSysToast.result = 1 for button selected
                 //mainSysToast.result = 4 for toast timed out
-//                if (mainSysToast.result == 1) { //using 'ButtonSelection' - not working
-//                    wordsPlus.intializePlayArea();
-//                }
+                //                if (mainSysToast.result == 1) {
+                //                    wordsPlus.intializePlayArea();
+                //                }
             }
+        },
+        MediaPlayer {
+            id: bgMusic
+            sourceUrl: "asset:///sounds/background.wav"
         }
     ]
     onCreationCompleted: {
+        if (wordsPlus.musicOn) {
+            bgMusic.setRepeatMode(1);
+            bgMusic.play();
+        } else bgMusic.stop();
+        Application.thumbnail.connect(onThumbnailed);
+        Application.fullscreen.connect(onFullscreen);
+        Application.asleep.connect(onAsleep);
         wordsPlus.mainSysToastSignal.connect(mainPage.handleToastSignal)
     }
+    function onThumbnailed() {
+        bgMusic.stop();
+    }
+    function onFullscreen() {
+        if (wordsPlus.musicOn) {
+            bgMusic.setRepeatMode(1);
+            bgMusic.play();
+        } else bgMusic.stop();
+    }
+    function onAsleep() {
+            bgMusic.stop();
+            wordsPlus.stopTimer();
+        }
     function handleToastSignal(toastMessage) {
         mainSysToast.body = toastMessage;
         wordsPlus.stopTimer();

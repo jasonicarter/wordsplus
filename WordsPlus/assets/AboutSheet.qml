@@ -42,6 +42,26 @@ Page {
                     }
                 }
             }
+            Container { //music section
+                topMargin: 50
+                Container {
+                    background: Color.create("#272727")
+                    TextArea {
+                        text: "Music:"
+                        editable: false
+                        touchPropagationMode: TouchPropagationMode.None
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
+                        }
+                    }
+                }
+                Label {
+                    text: "by plagasul via freesound.org"
+                    textStyle {
+                        base: aboutSheetSubTitleNormalWhite.style
+                    }
+                }
+            }
             Container { //website section
                 topMargin: 50
                 Container {

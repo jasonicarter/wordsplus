@@ -71,7 +71,7 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	numberOfWordsFound = 0;
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
-	wordDataValue = 5;
+	wordDataValue = -1;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -173,7 +173,7 @@ void WordsPlus::onOrientationChanged() {
 		}
 	} // end of rightup
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
-		if (isPuzzleDisplayed) {
+		if (isPuzzleDisplayed && wordDataValue != -1) {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(0);
 
