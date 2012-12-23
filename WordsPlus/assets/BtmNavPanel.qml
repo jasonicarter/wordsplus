@@ -25,6 +25,7 @@ Container {
             Container {
                 horizontalAlignment: HorizontalAlignment.Center
                 ImageView {
+                    objectName: "rotateProfileImage"
                     topMargin: 0
                     bottomMargin: 0
                     imageSource: "asset:///images/profileEdit_blk.png"
@@ -88,6 +89,7 @@ Container {
             Container {
                 horizontalAlignment: HorizontalAlignment.Center
                 ImageView {
+                    objectName: "rotateHomeImage"
                     topMargin: 0
                     bottomMargin: 0
                     imageSource: "asset:///images/home_blk.png"
