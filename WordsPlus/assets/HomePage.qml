@@ -13,6 +13,14 @@ Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
+        Container {
+         ImageView {
+          id: rotateImageMsg
+          objectName: "rotateImageMsg"
+          opacity: 0
+          imageSource: "asset:///images/hint.png"   
+         }   
+        }
         Container { //top
             Container { //love me container
                 layout: StackLayout {

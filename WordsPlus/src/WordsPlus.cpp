@@ -36,7 +36,7 @@
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
-#define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
+#define SOUNDLEVELCOMPLETED "puzzleCompleted.aiff"
 #define SOUNDLETTERSELECTED "letterSelected"
 #define SOUND "settingsSound"
 #define MUSIC "settingsMusic"
@@ -164,12 +164,12 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
-			//ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
 			rotateRotateImage->setRotationZ(90);
 			rotateGuideImage->setRotationZ(90);
-			//rotateImageMsg->setOpacity(1);
+			rotateImageMsg->setOpacity(1);
 		}
 	} // end of rightup
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
@@ -184,12 +184,12 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
-			//ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
 			rotateRotateImage->setRotationZ(0);
 			rotateGuideImage->setRotationZ(0);
-			//rotateImageMsg->setOpacity(0);
+			rotateImageMsg->setOpacity(0);
 		}
 	} //end of topup
 }
