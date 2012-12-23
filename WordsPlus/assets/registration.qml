@@ -30,36 +30,26 @@ Page {
                 imageSource: "asset:///images/splashScreen.png"
             }
         }
-//        Container {
-//            verticalAlignment: VerticalAlignment.Center
-//            horizontalAlignment: HorizontalAlignment.Center
-//            Label {
-//                text: qsTr("by Jason I. Carter")
-//                textStyle.base: SystemDefaults.TextStyles.BigText
-//                horizontalAlignment: HorizontalAlignment.Center
-//            }
-//        }
         Container {
-            verticalAlignment: VerticalAlignment.Center
+            bottomPadding: 200
+            verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
-                Label {
-                    topMargin: 200
-                    visible: _registrationHandler.temporaryError
-                    text: "BBM Status Message: \n" + _registrationHandler.statusMessage
-                    multiline: true
-                    textStyle.fontSize: FontSize.Small
-                    horizontalAlignment: HorizontalAlignment.Center
-                    textStyle.textAlign: TextAlign.Center
+            Button {
+                horizontalAlignment: HorizontalAlignment.Center
+                visible: _registrationHandler.temporaryError
+                text: qsTr("Connect to BBM")
+                onClicked: {
+                    _registrationHandler.registerApplication()
                 }
-                Button {
-                    topMargin: 200
-                    horizontalAlignment: HorizontalAlignment.Center
-                    visible: _registrationHandler.temporaryError
-                    text: qsTr("Connect to BBM")
-                    onClicked: {
-                        _registrationHandler.registerApplication()
-                    }
-                }
+            }
+            Label {
+                visible: _registrationHandler.temporaryError
+                text: "BBM Status Message: \n" + _registrationHandler.statusMessage
+                multiline: true
+                textStyle.fontSize: FontSize.Small
+                horizontalAlignment: HorizontalAlignment.Center
+                textStyle.textAlign: TextAlign.Center
+            }
         }
     } //end of mainContainer
 }

@@ -36,7 +36,7 @@
 #define WORDSFOUND "settingsWordsFound"
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
-#define SOUNDLEVELCOMPLETED "puzzleCompleted.aiff"
+#define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
 #define SOUNDLETTERSELECTED "letterSelected"
 #define SOUND "settingsSound"
 #define MUSIC "settingsMusic"
@@ -155,25 +155,31 @@ void WordsPlus::onOrientationChanged() {
 			redHeart->setRotationZ(90);
 
 			int r = rand() % listOfWords.count(); //list of words reduced once word is found
+			//LOG("list count: %i", listOfWords.count());
+			//LOG("hint word: %s",listOfWords[r].toStdString().c_str());
 			wordDataValue = wordDataIndex.value(listOfWords[r]);
-
-			HighlightSelectedTile(wordDataValue, HINTREVEAL);
+			//LOG("wordDataValue: %i", wordDataValue);
+			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else {
 			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
+			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
 			rotateRotateImage->setRotationZ(90);
 			rotateGuideImage->setRotationZ(90);
+			rotateProfileImage->setRotationZ(90);
+			rotateHomeImage->setRotationZ(90);
 			rotateImageMsg->setOpacity(1);
 		}
 	} // end of rightup
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
-		if (isPuzzleDisplayed && wordDataValue != -1) {
+		if (isPuzzleDisplayed && wordDataValue >= 0) {
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(0);
 
@@ -184,11 +190,15 @@ void WordsPlus::onOrientationChanged() {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
 			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
+			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
 			rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
 			rotateRotateImage->setRotationZ(0);
 			rotateGuideImage->setRotationZ(0);
+			rotateProfileImage->setRotationZ(0);
+			rotateHomeImage->setRotationZ(0);
 			rotateImageMsg->setOpacity(0);
 		}
 	} //end of topup
@@ -278,6 +288,7 @@ void WordsPlus::intializePlayArea() {
 
 	isPuzzleDisplayed = true;
 	wordDataValue = -1;
+	listOfWords.clear();
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
 	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
@@ -657,7 +668,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			setGamesPlayed();
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
-			playSound(SOUNDLEVELCOMPLETED);
+			//playSound(SOUNDLEVELCOMPLETED);
 			QString puzzleMsg = QString(
 					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
 					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
@@ -941,7 +952,7 @@ void WordsPlus::ControlsForBBM(int state) {
 	case PROFILEBOXPUZZLECOMPLETED: {
 		if (getProfileBox()) {
 			QString msg = QString(
-					"More fun. More puzzles.\nCompleted Another One! \nTime: %1  Score: %2").arg(
+					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
 					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
 					getScore());
 
@@ -951,7 +962,7 @@ void WordsPlus::ControlsForBBM(int state) {
 			//wordsPlus.png iconId = 1
 			//could use #define WORDSPLUSPROFILEBOX 1
 			//use 0 if you have no image
-			profileBox->addProfileBoxItem(msg, 2);
+			profileBox->addProfileBoxItem(msg, 3);
 		}
 		break;
 	}

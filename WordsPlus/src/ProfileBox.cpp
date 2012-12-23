@@ -29,7 +29,7 @@ ProfileBox::ProfileBox(bb::platform::bbm::ProfileBox* profileBox) :
 void ProfileBox::registerIcons()
 {
 	const QString imageDir(QDir::currentPath() + QLatin1String("/app/native/assets/images/"));
-	registerIcon(imageDir + QLatin1String("profileBox.png"), 2);
+	registerIcon(imageDir + QLatin1String("profileBox.png"), 3);
 
 	//register other icons that you might want to use
 	//registerIcon(imageDir + QLatin1String("wordsPlus2.png"), 2);

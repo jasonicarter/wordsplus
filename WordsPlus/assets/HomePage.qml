@@ -241,7 +241,7 @@ Container {
                         if (event.isDown()) {
                             wordsPlus.playSound("letterSelected");
                         } else if (event.isUp()) {
-                            homeSysToast.body = "No, don't tap...\n\"Rotate\" me, the device"
+                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
                             homeSysToast.show();
                         }
                     }
@@ -265,7 +265,7 @@ Container {
                         if (event.isDown()) {
                             wordsPlus.playSound("letterSelected");
                         } else if (event.isUp()) {
-                            homeSysToast.body = "Looking for a menu?\nSwipe down from the top to see your options"
+                            homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing finger)\nSwipe down from the top for options"
                             homeSysToast.show();
                         }
                     }
