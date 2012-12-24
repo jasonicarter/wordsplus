@@ -200,12 +200,14 @@ void ScoreLoopThread::HandleError(AppData_t *app, SC_Error_t error) {
 	/* Inform user with an alert dialog here - you would probably want to do a more intelligent error handling instead */
 	//InformUser(app, "Error", SC_MapErrorToStr(error));
 
-	if(error == SC_HTTP_SERVER_ERROR) {
-		// other errors could be caught related to connection issues
-		Global::instance()->setIsInternetAvailable(false);
-		LOG("Internet access not available");
-	}
+//	if(error == SC_HTTP_SERVER_ERROR) {
+//		// other errors could be caught related to connection issues
+//		Global::instance()->setIsInternetAvailable(false);
+//		LOG("Internet access not available");
+//	}
 
+	Global::instance()->setIsInternetAvailable(false);
+	emit(instance()->ConnectionError("DATA CONNECTION ERROR!\nInternet access could be an issue\nYour scores may not be saved"));
 	/* Also log the error */
 	LOG("%s", SC_MapErrorToStr(error));
 }

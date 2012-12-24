@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Fri Dec 21 15:37:32 2012
+** Created: Sun Dec 23 23:27:47 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

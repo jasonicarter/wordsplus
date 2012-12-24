@@ -56,3 +56,16 @@ mongul
 zod
 darkseid
 doomsday
+emma
+frost
+gambit
+supergirl
+punisher
+sabretooth
+conan
+polaris
+moonstar
+hercules
+juggernaut
+raven
+constantine

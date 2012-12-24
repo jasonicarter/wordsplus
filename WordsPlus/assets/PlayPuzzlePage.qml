@@ -21,6 +21,10 @@ Container { // root Container
                 imageSource: "asset:///images/heart_large.png"
             }
         }
+//        AdContainer {
+//            horizontalAlignment: HorizontalAlignment.Center
+//            verticalAlignment: VerticalAlignment.Top
+//        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
@@ -31,7 +35,7 @@ Container { // root Container
                 layout: DockLayout {
                 }
                 //background: Color.Green
-                topPadding: 50
+                topPadding: 100
                 leftPadding: 20
                 Container {
                     Label {

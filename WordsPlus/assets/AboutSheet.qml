@@ -56,7 +56,9 @@ Page {
                     }
                 }
                 Label {
-                    text: "by plagasul via freesound.org"
+                    multiline: true
+                    text: "arpeggio6lop by plagasul via freesound.org\n" +
+                    "sweetalertsound1 + 2 by kizilsungur via freesound.org"
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }

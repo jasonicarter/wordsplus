@@ -14,12 +14,12 @@ Container {
         }
         preferredHeight: 1280
         Container {
-         ImageView {
-          id: rotateImageMsg
-          objectName: "rotateImageMsg"
-          opacity: 0
-          imageSource: "asset:///images/hint.png"   
-         }   
+            ImageView {
+                id: rotateImageMsg
+                objectName: "rotateImageMsg"
+                opacity: 0
+                imageSource: "asset:///images/hint.png"
+            }
         }
         Container { //top
             Container { //love me container
@@ -295,6 +295,18 @@ Container {
                 }
             }
         } //end of rotate me
+        //        Container {
+        //            bottomPadding: 200
+        //            verticalAlignment: VerticalAlignment.Bottom
+        //            horizontalAlignment: HorizontalAlignment.Center
+        //            Label {
+        //                opacity: connectionError
+        //                text: "DATA CONNECTION ERROR!"
+        //                textStyle {
+        //                    base: smallTxtNormalWhite.style
+        //                }
+        //            }
+        //        }
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }

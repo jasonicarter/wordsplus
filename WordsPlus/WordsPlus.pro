@@ -13,6 +13,7 @@ LIBS += -lscoreloopcore -lbbsystem
 LIBS += -lbbmultimedia
 LIBS += -lOpenAL -lalut -lasound
 LIBS += -lbbplatformbbm
+LIBS += -lbbcascadesadvertisement
 
 lupdate_inclusion {
     SOURCES += ../assets/*.qml

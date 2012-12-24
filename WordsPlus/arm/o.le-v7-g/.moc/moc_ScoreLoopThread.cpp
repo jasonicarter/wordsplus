@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScoreLoopThread.hpp'
 **
-** Created: Thu Dec 20 17:20:22 2012
+** Created: Sun Dec 23 23:27:44 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,12 +23,12 @@ static const uint qt_meta_data_ScoreLoopThread[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       8,       // signalCount
+       9,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       21,   17,   16,   16, 0x05,
@@ -39,6 +39,7 @@ static const uint qt_meta_data_ScoreLoopThread[] = {
      247,   16,   16,   16, 0x05,
      271,   16,   16,   16, 0x05,
      298,   16,   16,   16, 0x05,
+     338,  325,   16,   16, 0x05,
 
        0        // eod
 };
@@ -52,7 +53,8 @@ static const char qt_meta_stringdata_ScoreLoopThread[] = {
     "achievementData\0LoadAchievementsCompleted(QVariantList)\0"
     "AchieveAwardCompleted()\0"
     "AcceptChallengeCompleted()\0"
-    "SubmitChallengeCompleted()\0"
+    "SubmitChallengeCompleted()\0toastMessage\0"
+    "ConnectionError(QString)\0"
 };
 
 void ScoreLoopThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -69,6 +71,7 @@ void ScoreLoopThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 5: _t->AchieveAwardCompleted(); break;
         case 6: _t->AcceptChallengeCompleted(); break;
         case 7: _t->SubmitChallengeCompleted(); break;
+        case 8: _t->ConnectionError((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -106,9 +109,9 @@ int ScoreLoopThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }
@@ -164,5 +167,12 @@ void ScoreLoopThread::AcceptChallengeCompleted()
 void ScoreLoopThread::SubmitChallengeCompleted()
 {
     QMetaObject::activate(this, &staticMetaObject, 7, 0);
+}
+
+// SIGNAL 8
+void ScoreLoopThread::ConnectionError(QString _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 8, _a);
 }
 QT_END_MOC_NAMESPACE

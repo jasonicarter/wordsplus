@@ -5,6 +5,7 @@ import bb.multimedia 1.0
 
 Page {
     id: mainPage
+    property int connectionError: 0
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
@@ -99,16 +100,16 @@ Page {
         SystemToast {
             id: mainSysToast
             body: "" //set in C++
-            icon: "asset:///wordsplus.png"
-            //position: TopCenter //'TopCenter'not working
-            //button.label: "Play"
             onFinished: {
                 wordsPlus.intializePlayArea();
-                //mainSysToast.result = 1 for button selected
-                //mainSysToast.result = 4 for toast timed out
-                //                if (mainSysToast.result == 1) {
-                //                    wordsPlus.intializePlayArea();
-                //                }
+            }
+        },
+        SystemToast {
+            id: connectionToast
+            body: "" //set in C++
+            button.label: "OK"
+            onFinished: {
+                connectionError = 1;
             }
         },
         MediaPlayer {
@@ -120,11 +121,16 @@ Page {
         if (wordsPlus.musicOn) {
             bgMusic.setRepeatMode(1);
             bgMusic.play();
-        } else bgMusic.stop();
+        } else {
+            //doing this to initialize player - hack i'm sure
+            bgMusic.play();
+            bgMusic.stop();
+        }
         Application.thumbnail.connect(onThumbnailed);
         Application.fullscreen.connect(onFullscreen);
         Application.asleep.connect(onAsleep);
         wordsPlus.mainSysToastSignal.connect(mainPage.handleToastSignal)
+        wordsPlus.scoreLoop().ConnectionError.connect(mainPage.handleConnectionToastSignal)
     }
     function onThumbnailed() {
         bgMusic.stop();
@@ -136,12 +142,16 @@ Page {
         } else bgMusic.stop();
     }
     function onAsleep() {
-            bgMusic.stop();
-            wordsPlus.stopTimer();
-        }
+        bgMusic.stop();
+        wordsPlus.stopTimer();
+    }
     function handleToastSignal(toastMessage) {
         mainSysToast.body = toastMessage;
         wordsPlus.stopTimer();
         mainSysToast.show();
+    }
+    function handleConnectionToastSignal(toastMessage) {
+        connectionToast.body = toastMessage;
+        connectionToast.show();
     }
 }// Page
