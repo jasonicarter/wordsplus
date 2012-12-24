@@ -22,6 +22,7 @@
 #include <bb/system/SystemToast>
 #include <bb/multimedia/SystemSound>
 #include <bb/cascades/FadeTransition>
+#include <bb/cascades/advertisement/Banner>
 
 #define NORMAL		1
 #define SELECTED	2
@@ -37,6 +38,7 @@
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
+#define SOUNDWORDFOUND "wordFound.wav"
 #define SOUNDLETTERSELECTED "letterSelected"
 #define SOUND "settingsSound"
 #define MUSIC "settingsMusic"
@@ -51,6 +53,7 @@
 using namespace bb::cascades;
 using namespace bb::system;
 using namespace bb::multimedia;
+using namespace bb::cascades::advertisement;
 
 WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 		QObject(parent), m_context(&context) {
@@ -83,6 +86,9 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 
 	//score loop stuff - need to register to make it work - investigate
 	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
+
+	// Registers the banner for QML
+	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
 
 }
 
@@ -647,11 +653,13 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 		//remove word from list so it can't be selected a second time
 		listOfWords.removeAll(selectedWord);
 
+		//highlight word
 		for (int j = 0; j < listOfNumbers.size(); j++) {
 			int pos = listOfNumbers.at(j);
 			HighlightSelectedTile(pos, SELECTED);
 		}
 
+		//update variable, cross off list
 		numberOfWordsFound++;
 		CrossOutPuzzleWord(selectedWord);
 
@@ -668,7 +676,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			setGamesPlayed();
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
-			//playSound(SOUNDLEVELCOMPLETED);
+			playSound(SOUNDLEVELCOMPLETED);
 			QString puzzleMsg = QString(
 					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
 					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
@@ -676,6 +684,10 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 		}
+		else {
+			playSound(SOUNDWORDFOUND); //puzzle not completed, single word found
+		}
+
 	} else {
 		for (int j = 0; j < listOfNumbers.size(); j++) { //word not found in puzzle words
 			int pos = listOfNumbers.at(j);
@@ -787,9 +799,7 @@ void WordsPlus::playSound(const QString msg) {
 	if (getSound()) { // if true play sound
 		if (msg == SOUNDLETTERSELECTED)
 			SystemSound::play(SystemSound::InputKeypress);
-		if (msg == SOUNDLEVELCOMPLETED)
-			mSoundManager->play(msg);
-		if (msg == SOUNDBACKGROUNDMUSIC)
+		else
 			mSoundManager->play(msg);
 	}
 

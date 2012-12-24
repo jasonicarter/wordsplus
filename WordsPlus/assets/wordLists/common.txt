@@ -30,7 +30,6 @@ amy
 analog
 anchor
 andrea
-andromache
 andy
 angela
 angerine
@@ -42,7 +41,6 @@ anna
 anne
 annette
 answer
-anthropogenic
 anvils
 anything
 april
@@ -95,7 +93,6 @@ betty
 beverly
 bicameral
 bishop
-bitch
 bob
 bradley
 brandi
@@ -416,7 +413,6 @@ larry
 laura
 lazarus
 leah
-lebesgue
 lee
 leland
 leroy
@@ -632,7 +628,6 @@ sensor
 serenity
 service
 sesame
-sex
 shannon
 sharc
 shark
@@ -643,7 +638,6 @@ sheldon
 shell
 sherri
 shirley
-shit
 shiva
 shivers
 shuttle
@@ -772,7 +766,6 @@ whitney
 wholesale
 will
 william
-williamsburg
 willie
 wilma
 winston

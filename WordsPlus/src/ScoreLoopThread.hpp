@@ -90,6 +90,7 @@ signals:
 	/* @TODO arguments & implementation */
 	void SubmitChallengeCompleted();
 
+	void ConnectionError(QString toastMessage); //catch all - any error called connection error and inform user no data will be saved
 
 protected:
     /*
