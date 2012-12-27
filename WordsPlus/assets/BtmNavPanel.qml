@@ -248,7 +248,8 @@ Container {
         Invocation {
             id: invokeLeaveReview
             query: InvokeQuery {
-                mimeType: "application/x-bb-appworld"
+                invokeTargetId: "sys.appworld"
+                //mimeType: "application/x-bb-appworld"
                 uri: "appworld://content/19132685"
             }
         }
