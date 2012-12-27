@@ -55,8 +55,11 @@ using namespace bb::system;
 using namespace bb::multimedia;
 using namespace bb::cascades::advertisement;
 
-WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
-		QObject(parent), m_context(&context) {
+//WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
+//		QObject(parent), m_context(&context) {
+
+WordsPlus::WordsPlus(QObject *parent) :
+		QObject(parent){
 
 	//set default values
 	deltaX = 0.0;
@@ -89,6 +92,9 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 
 	// Registers the banner for QML
 	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
+
+	//REMOVE ME
+	show();
 
 }
 
@@ -954,43 +960,43 @@ void WordsPlus::setDifficulty(int difficulty) {
 
 void WordsPlus::ControlsForBBM(int state) {
 
-	// Create the user profile and profile box objects
-	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
-	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
-
-	switch (state) {
-	case PROFILEBOXPUZZLECOMPLETED: {
-		if (getProfileBox()) {
-			QString msg = QString(
-					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
-					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-					getScore());
-
-			//register icons
-			profileBox = new ProfileBox(m_profileBox);
-
-			//wordsPlus.png iconId = 1
-			//could use #define WORDSPLUSPROFILEBOX 1
-			//use 0 if you have no image
-			profileBox->addProfileBoxItem(msg, 3);
-		}
-		break;
-	}
-	case PRESONALMESSAGE: {
-		updateProfile = new UpdateProfile(m_userProfile);
-		updateProfile->savePersonalMessage();
-		break;
-	}
-	case STATUSMESSAGE: {
-		updateProfile = new UpdateProfile(m_userProfile);
-		updateProfile->saveStatus();
-		break;
-	}
-	case INVITETODOWNLOAD: {
-		inviteToDownload = new InviteToDownload(m_context);
-		inviteToDownload->sendInvite();
-		break;
-	}
-	}
+//	// Create the user profile and profile box objects
+//	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
+//	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
+//
+//	switch (state) {
+//	case PROFILEBOXPUZZLECOMPLETED: {
+//		if (getProfileBox()) {
+//			QString msg = QString(
+//					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
+//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+//					getScore());
+//
+//			//register icons
+//			profileBox = new ProfileBox(m_profileBox);
+//
+//			//wordsPlus.png iconId = 1
+//			//could use #define WORDSPLUSPROFILEBOX 1
+//			//use 0 if you have no image
+//			profileBox->addProfileBoxItem(msg, 3);
+//		}
+//		break;
+//	}
+//	case PRESONALMESSAGE: {
+//		updateProfile = new UpdateProfile(m_userProfile);
+//		updateProfile->savePersonalMessage();
+//		break;
+//	}
+//	case STATUSMESSAGE: {
+//		updateProfile = new UpdateProfile(m_userProfile);
+//		updateProfile->saveStatus();
+//		break;
+//	}
+//	case INVITETODOWNLOAD: {
+//		inviteToDownload = new InviteToDownload(m_context);
+//		inviteToDownload->sendInvite();
+//		break;
+//	}
+//	}
 
 }
