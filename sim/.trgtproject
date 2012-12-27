@@ -5,16 +5,16 @@
 <qconnport value="8000"/>
 <qconnguid value="d39926a4-1464-4202-b1ff-e7c0de92ba6e"/>
 <qconnostype value="nto"/>
-<qconnhostname value="192.168.204.129"/>
+<qconnhostname value="192.168.204.130"/>
 <qconn>
 <core>
 <show_warning value="true"/>
 </core>
 </qconn>
-<targettmpdir value="/var/tmp"/>
 <project>
 <name value="sim"/>
 </project>
+<targettmpdir value="/var/tmp"/>
 </item>
 </data>
 </trgtproject>
