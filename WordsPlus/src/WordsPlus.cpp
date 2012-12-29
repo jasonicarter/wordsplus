@@ -24,6 +24,8 @@
 #include <bb/cascades/FadeTransition>
 #include <bb/cascades/advertisement/Banner>
 
+
+//should probably all be static const and not #define as this makes them global
 #define NORMAL		1
 #define SELECTED	2
 #define HIGHLIGHT	3
@@ -49,6 +51,25 @@
 #define DIFFICULTY "settingsDifficulty"
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
+
+//global - to be accessed from wordsPlus to set awards
+static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
+static const char SCORELOOP_TESTTWO[]	= "wordsplus.testaward2";
+static const char SCORELOOP_TESTTHREE[] = "wordsplus.testaward3";
+static const char SCORELOOP_BBMPERSONALMSG[] = "wordsplus.bbmpersonalmsg";
+static const char SCORELOOP_BBMSTATUSMSG[] = "wordsplus.bbmstatusmsg";
+static const char SCORELOOP_FIRSTGAME[] = "wordsplus.firstgame";
+static const char SCORELOOP_USEAHINT[] = "wordsplus.usehint";
+static const char SCORELOOP_BACKTWOBACK[] = "wordsplus.backtwoback";
+static const char SCORELOOP_THREESOME[] = "wordsplus.threesome";
+static const char SCORELOOP_NOHINTATHARD[] = "wordsplus.nohintathard";
+static const char SCORELOOP_UNDERTHIRTYATEAS[] = "wordsplus.underthirtyateasy";
+static const char SCORELOOP_JUSTAVERAGE[] = "wordsplus.overthreeminsatmedium";
+static const char SCORELOOP_OVERTENMINS[] = "wordsplus.overtenmins";
+static const char SCORELOOP_NINETOFIVE[] = "wordsplus.ninetofive";
+static const char SCORELOOP_UNDERONEMIN[] = "wordsplus.underonemin";
+static const char SCORELOOP_OVERTENK[] = "wordsplus.overtenthousand";
+static const char SCORELOOP_UNTOUCHABLE[] = "wordsplus.untouchable";
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -78,6 +99,10 @@ WordsPlus::WordsPlus(QObject *parent) :
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
 	wordDataValue = -1;
+	continuousGameAward = 0;
+	puzzleTimeAward = 0;
+	scoreAward = 0;
+	achievedAward = 0;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -130,6 +155,8 @@ void WordsPlus::show() {
 					SLOT(onSubmitScoreCompleted(ScoreData_t*)));
 			QObject::connect(mScoreLoop, SIGNAL(LoadLeaderboardCompleted(QVariantList)),
 					this, SLOT(onLoadLeaderboardCompleted(QVariantList)));
+			QObject::connect(mScoreLoop, SIGNAL(AchieveAwardCompleted()),
+								this, SLOT(onAchievedAward()));
 
 			mOrientationSensor = new OrientationSensor(this);
 			QObject::connect(mOrientationSensor, SIGNAL(orientationChanged()),
@@ -154,6 +181,7 @@ void WordsPlus::show() {
 
 void WordsPlus::onThumbnail() {
 	stopTimer();
+	continuousGameAward = 0;
 }
 
 void WordsPlus::onFullscreen() {
@@ -266,6 +294,46 @@ void WordsPlus::LoadAchievementsAwards() {
 	if (Global::instance()->getIsInternetAvailable()) {
 		ScoreLoopThread::LoadAchievements(mAppData);
 	}
+}
+
+void WordsPlus::SetAwardVariables() {
+	//set all global or qsetting variables related to awards
+
+	//isFirstGameAward - don't need anything for this guy
+	//continuousGameAward - increase by 1 each time, reset when thumbnailed (multiple awards)
+	//scoreAward - check if score is past 10,000
+	//puzzleTimeAward - depends on time (multiple awards)
+
+	continuousGameAward++;
+	puzzleTimeAward = timeSec;
+	scoreAward = getScore();
+
+	ProcessAwards();
+}
+
+void WordsPlus::ProcessAwards() {
+
+	//may not need to check internet - local achieve first and then syncs
+	//wrap sync around internet check???
+	if (Global::instance()->getIsInternetAvailable()) {
+
+		if(continuousGameAward == 3){
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+		}
+		if(continuousGameAward == 2) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
+		}
+
+	}
+}
+
+void WordsPlus::onAchievedAward() {
+	achievedAward = 1;
+	emit achievedAwardChanged();
+}
+
+int WordsPlus::getAchievedAward() {
+	return achievedAward;
 }
 
 ScoreLoopThread* WordsPlus::scoreLoop() {
@@ -413,6 +481,7 @@ void WordsPlus::intializePlayArea() {
 
 void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 
+	//get initial position of tile touched
 	if (event->isDown()) {
 		// Find who sent it.
 		ImageView* senderImage = dynamic_cast<ImageView*>(sender());
@@ -466,9 +535,17 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			if (length / 60 == -multiple && length < 0) {
 				position -= 1;
 				if (position > lowerbound) {
-					HighlightSelectedTile(position, HIGHLIGHT);
-					tileNumbers.append(position);
-					multiple++;
+
+//					if(isHighlighted(position)){
+//						HighlightSelectedTile(position, NORMAL);
+//						tileNumbers.removeLast();
+//						setSelectedLetters("removeLast");
+//						multiple--;
+//					}else {
+						HighlightSelectedTile(position, HIGHLIGHT);
+						tileNumbers.append(position);
+						multiple++;
+//					}
 				}
 			}
 		} else if (deltaY >= directionalBoundNeg && deltaY <= directionalBoundPos) {
@@ -562,6 +639,36 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 
 }
 
+bool WordsPlus::isHighlighted(int pos) {
+	bool isTileHighlighted = false;
+
+	int i;
+	int ii;
+	QString imageSource;
+
+	if (pos <= 9) {
+		i = 0;
+		ii = pos;
+	}
+	if (pos >= 10) {
+		i = pos / 10;
+		ii = pos % 10;
+	}
+
+	// Get the object name (actually the image name which is easy to identify).
+	QVariant v = mPlayField[i][ii]->imageSource();
+
+	if (v.canConvert<QString>()) {
+		QString objName = v.value<QString>(); // entire path of image letter ../highlight/a.png
+
+		if (!objName.contains("highlight", Qt::CaseInsensitive)) {
+			isTileHighlighted = true;
+		}
+	}
+
+return 	isTileHighlighted;
+}
+
 void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 	int i;
@@ -623,6 +730,10 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
+	//TODO REMOVE ME
+	SetAwardVariables();
+	emit puzzleCompleted();
+
 	int i;
 	int ii;
 	QString selectedWord;
@@ -683,12 +794,14 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
-			QString puzzleMsg = QString(
-					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
-					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-					getScore());
-			showToast(puzzleMsg); // add icon url to pass to function
+//			QString puzzleMsg = QString(
+//					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
+//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+//					getScore());
+//			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
+			//emit lastPuzzleTimeChanged();
+			emit puzzleCompleted();
 		}
 		else {
 			playSound(SOUNDWORDFOUND); //puzzle not completed, single word found
@@ -863,6 +976,12 @@ QString WordsPlus::getPuzzleCompletedTime() {
 
 }
 
+QString WordsPlus::getLastPuzzleTime() {
+
+	//no setter used. Emit signal whenever puzzle is completed. Sheet picks up value
+	return (QDateTime::fromTime_t(timeSec)).toString("mm':'ss");
+}
+
 void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
 
 	bool okTime;
@@ -929,6 +1048,8 @@ void WordsPlus::setSelectedLetters(QString letter) {
 
 	if (letter == "clear") {
 		m_strSeletedLetters = "";
+	} else if (letter == "removeLast") {
+		m_strSeletedLetters.chop(1);
 	} else {
 		m_strSeletedLetters = m_strSeletedLetters.append(letter.toUpper());
 	}

@@ -24,7 +24,7 @@
 <coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -33,10 +33,21 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.cpp" partName="WordsPlus.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/WordsPlus.cpp" title="WordsPlus.cpp" tooltip="WordsPlus/src/WordsPlus.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/WordsPlus.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11286" selectionTopPixel="4320"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/src/main.cpp" title="main.cpp" tooltip="WordsPlus/src/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlus/src/main.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="648" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProgressView" partName="Progress">
@@ -125,7 +136,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -172,18 +183,27 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="navArea">&#x0A;<folder activePageID="com.qnx.tools.ide.target.internal.ui.targetview" appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.target.internal.ui.targetview" label="Target Navigator"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<layout>
+<mainWindow>
+<info folder="true" part="navArea">
+<folder activePageID="com.qnx.tools.ide.target.internal.ui.targetview" appearance="2" expanded="2">
+<page content="com.qnx.tools.ide.target.internal.ui.targetview" label="Target Navigator"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="navArea">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="navArea">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="navArea"/>
-<info folder="true" part="belowEditor" ratio="0.24884081" ratioLeft="161" ratioRight="486" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.qnx.tools.ide.sysinfo.internal.ui.systemview" appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.sysinfo.internal.ui.systemview" label="System Summary"/>
+<info folder="true" part="belowEditor" ratio="0.24884081" ratioLeft="161" ratioRight="486" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.qnx.tools.ide.sysinfo.internal.ui.systemview" appearance="2" expanded="2">
+<page content="com.qnx.tools.ide.sysinfo.internal.ui.systemview" label="System Summary"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.processview" label="Process Information"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.memview" label="Memory Information"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" label="Malloc Information"/>
@@ -194,7 +214,8 @@
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.coidview" label="LabelNotFound"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.signalview" label="LabelNotFound"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.usageview" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -204,7 +225,9 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="belowSysViews" ratio="0.74897116" ratioLeft="364" ratioRight="122" relationship="4" relative="belowEditor">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<info folder="true" part="belowSysViews" ratio="0.74897116" ratioLeft="364" ratioRight="122" relationship="4" relative="belowEditor">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 </folder>
 </info>
 <info part="com.qnx.tools.ide.sysinfo.log.ui.historyView" ratio="0.4992272" ratioLeft="323" ratioRight="324" relationship="4" relative="navArea"/>
@@ -456,6 +479,7 @@
 <alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
 <show_view_action id="org.eclipse.ui.views.ContentOutline"/>
@@ -484,18 +508,18 @@
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
 <fastViews>
-<view id="com.rim.tad.tools.builder.view.properties" ratio="0.295479"/>
+<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19913886"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.25240642"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.21962096"/>
 <view id="org.eclipse.ui.views.ProgressView" ratio="0.29839572"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="lefttop" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
 <fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.14854683"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.14693218"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="leftbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.palette" style="0">
@@ -543,6 +567,12 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d78412" ratio="0.5" ratioLeft="441" ratioRight="441" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
 <info folder="true" part="leftbottom" ratio="0.49944258" ratioLeft="448" ratioRight="449" relationship="4" relative="lefttop">
 <folder appearance="2" expanded="2">
 <page content="com.rim.tad.tools.builder.view.palette" label="LabelNotFound"/>
@@ -555,7 +585,168 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/ScoreLoopThread.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/WordsPlus.cpp"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\scoreloop\sc_local_achievements_controller.h" project="WordsPlus"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlus/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/PuzzleCompletedSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/AchievementList.qml"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\qt4\QtCore\qthread.h" project="CascadesScoreloopSample"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
+</editors>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11594" y="19"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11514" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11718" y="0"/>
+</item>
+<item historyLabel="sc_local_achievements_controller.h" index="2">
+<position info="not_deleted" x="11734" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11725" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="3">
+<position info="not_deleted" x="284" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11594" y="19"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11594" y="19"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="1904" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="1904" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="1904" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="1987" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="2054" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="2126" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="2204" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="3008" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="3">
+<position info="not_deleted" x="284" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="3008" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="4">
+<position info="not_deleted" x="7677" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="3008" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="3">
+<position info="not_deleted" x="648" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="3008" y="0"/>
+</item>
+<item historyLabel="AchievementList.qml" index="5">
+<position/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="4">
+<position/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="qthread.h" index="6">
+<position info="not_deleted" x="3215" y="3"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="4">
+<position info="not_deleted" x="6730" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11205" y="0"/>
+</item>
+<item historyLabel="AchievementList.qml" index="5">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11310" y="0"/>
+</item>
+<item historyLabel="AchievementList.qml" index="5">
+<position/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="4">
+<position info="not_deleted" x="513" y="0"/>
+</item>
+<item historyLabel="AchievementList.qml" index="5">
+<position/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11310" y="0"/>
+</item>
+<item historyLabel="ScoreLoopThread.cpp" index="0">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11307" y="0"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11307" y="0"/>
+</item>
+<item historyLabel="AchievementList.qml" index="5">
+<position info="not_deleted" x="752" y="0"/>
+</item>
+<item active="true" historyLabel="WordsPlus.cpp" index="1">
+<position info="not_deleted" x="11307" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -581,47 +772,44 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="UI_Test/src/main.cpp">
-<persistable path="/UI_Test/src/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AchievementList.qml" tooltip="WordsPlus/assets/AchievementList.qml">
+<persistable path="/WordsPlus/assets/AchievementList.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="registration.qml" tooltip="WordsPlus/assets/registration.qml">
-<persistable path="/WordsPlus/assets/registration.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlus/assets/PlayPuzzlePage.qml">
+<persistable path="/WordsPlus/assets/PlayPuzzlePage.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.hpp" tooltip="WordsPlus/src/WordsPlus.hpp">
-<persistable path="/WordsPlus/src/WordsPlus.hpp"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="qthread.h" tooltip="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\qt4\QtCore\qthread.h">
+<persistable path="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\qt4\QtCore\qthread.h" project="CascadesScoreloopSample"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlus.cpp" tooltip="WordsPlus/src/WordsPlus.cpp">
-<persistable path="/WordsPlus/src/WordsPlus.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Info.json" tooltip="WordsPlus/assets/scoreloop/SLAwards.bundle/Info.json">
+<persistable path="/WordsPlus/assets/scoreloop/SLAwards.bundle/Info.json"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="WordsPlus/src/main.cpp">
-<persistable path="/WordsPlus/src/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" tooltip="WordsPlus/assets/PuzzleCompletedSheet.qml">
+<persistable path="/WordsPlus/assets/PuzzleCompletedSheet.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" tooltip="WordsPlus/assets/BtmNavPanel.qml">
-<persistable path="/WordsPlus/assets/BtmNavPanel.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ScoreLoopThread.hpp" tooltip="WordsPlus/src/ScoreLoopThread.hpp">
+<persistable path="/WordsPlus/src/ScoreLoopThread.hpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PaymentServiceControl.hpp" tooltip="paymentservice/src/PaymentServiceControl.hpp">
-<persistable path="/paymentservice/src/PaymentServiceControl.hpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Localizable.strings" tooltip="WordsPlus/assets/scoreloop/SLAwards.bundle/en.lproj/Localizable.strings">
+<persistable path="/WordsPlus/assets/scoreloop/SLAwards.bundle/en.lproj/Localizable.strings"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PaymentServiceControl.cpp" tooltip="paymentservice/src/PaymentServiceControl.cpp">
-<persistable path="/paymentservice/src/PaymentServiceControl.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Global.hpp" tooltip="WordsPlus/src/Global.hpp">
+<persistable path="/WordsPlus/src/Global.hpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="paymentservice/assets/main.qml">
-<persistable path="/paymentservice/assets/main.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Global.cpp" tooltip="WordsPlus/src/Global.cpp">
+<persistable path="/WordsPlus/src/Global.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="DigitalGood.qml" tooltip="paymentservice/assets/DigitalGood.qml">
-<persistable path="/paymentservice/assets/DigitalGood.qml"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sc_client.h" tooltip="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\scoreloop\sc_client.h">
+<persistable path="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\scoreloop\sc_client.h" project="WordsPlus"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="MessageBox.qml" tooltip="paymentservice/assets/MessageBox.qml">
-<persistable path="/paymentservice/assets/MessageBox.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Achievements.hpp" tooltip="WordsPlus/src/Achievements.hpp">
+<persistable path="/WordsPlus/src/Achievements.hpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="paymentservice/src/main.cpp">
-<persistable path="/paymentservice/src/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Achievements.cpp" tooltip="WordsPlus/src/Achievements.cpp">
+<persistable path="/WordsPlus/src/Achievements.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlus/bar-descriptor.xml">
-<persistable path="/WordsPlus/bar-descriptor.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="device-assets.xml" tooltip="WordsPlus/device-assets.xml">
-<persistable path="/WordsPlus/device-assets.xml"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sc_achievement_list.h" tooltip="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\scoreloop\sc_achievement_list.h">
+<persistable path="C:\bbndk\target_10_0_9_1673\qnx6\usr\include\scoreloop\sc_achievement_list.h" project="WordsPlus"/>
 </file>
 </mruList>
 </workbench>

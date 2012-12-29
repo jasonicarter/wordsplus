@@ -3,7 +3,8 @@ import bb.cascades.advertisement 1.0
 
 Container {
     Banner {
-        zoneId: 117145
+        //zoneId: 117145 //test id
+        zoneId: 155255
         refreshRate: 60
         preferredWidth: 768
         preferredHeight: 100

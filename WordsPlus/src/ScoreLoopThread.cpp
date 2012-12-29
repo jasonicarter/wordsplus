@@ -25,9 +25,10 @@ static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAX
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
-static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
+//static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
 
 static ScoreLoopThread* _pinstance = NULL;
+
 
 ScoreLoopThread::ScoreLoopThread(QObject* parent) :
 		QThread(parent), m_quit(false) {
@@ -450,32 +451,33 @@ void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) 
 		return;
 	}
 
-	/* Set the award with the given identifier to be achieved */
-	rc = SC_LocalAchievementsController_SetAchievedValueForAwardIdentifier(app->achievementsController, awardIdentifier, &achieved);
-	if (rc != SC_OK) {
-		SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
-		HandleError(app, rc);
-		return;
-	}
-
-	/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
-	 * after every setting of an achievement.
-	 */
-	if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
-		rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+	if(!SC_LocalAchievementsController_IsAchievedForAwardIdentifier(app->achievementsController, awardIdentifier)){
+		/* Set the award with the given identifier to be achieved */
+		rc = SC_LocalAchievementsController_SetAchievedValueForAwardIdentifier(app->achievementsController, awardIdentifier, &achieved);
 		if (rc != SC_OK) {
 			SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
 			HandleError(app, rc);
 			return;
 		}
-		qDebug() << "Synchronizing Achievements...";
-	} else {
-		/* Cleanup Controller */
-		SC_LocalAchievementsController_Release(app->achievementsController);
 
-		/* Load Achievement here just for demonstration purposes */
-		//LoadAchievements(app);
+		/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
+		 * after every setting of an achievement.
+		 */
+		if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
+			rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+			if (rc != SC_OK) {
+				SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
+				HandleError(app, rc);
+				return;
+			}
+			qDebug() << "Synchronizing Achievements...";
+		}
+
+		emit(instance()->AchieveAwardCompleted());
 	}
+
+	/* Cleanup Controller */
+	SC_LocalAchievementsController_Release(app->achievementsController);
 }
 
 void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t completionStatus) {
