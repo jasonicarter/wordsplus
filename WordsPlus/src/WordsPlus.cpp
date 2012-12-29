@@ -63,7 +63,7 @@ static const char SCORELOOP_USEAHINT[] = "wordsplus.usehint";
 static const char SCORELOOP_BACKTWOBACK[] = "wordsplus.backtwoback";
 static const char SCORELOOP_THREESOME[] = "wordsplus.threesome";
 static const char SCORELOOP_NOHINTATHARD[] = "wordsplus.nohintathard";
-static const char SCORELOOP_UNDERTHIRTYATEAS[] = "wordsplus.underthirtyateasy";
+static const char SCORELOOP_UNDERTHIRTYATEASY[] = "wordsplus.underthirtyateasy";
 static const char SCORELOOP_JUSTAVERAGE[] = "wordsplus.overthreeminsatmedium";
 static const char SCORELOOP_OVERTENMINS[] = "wordsplus.overtenmins";
 static const char SCORELOOP_NINETOFIVE[] = "wordsplus.ninetofive";
@@ -307,6 +307,7 @@ void WordsPlus::SetAwardVariables() {
 	continuousGameAward++;
 	puzzleTimeAward = timeSec;
 	scoreAward = getScore();
+	difficultyAward = getDifficulty();
 
 	ProcessAwards();
 }
@@ -317,12 +318,66 @@ void WordsPlus::ProcessAwards() {
 	//wrap sync around internet check???
 	if (Global::instance()->getIsInternetAvailable()) {
 
-		if(continuousGameAward == 3){
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+		if( (puzzleTimeAward <= 120) && (difficultyAward == 2) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTONE);
 		}
-		if(continuousGameAward == 2) {
+		if(continuousGameAward == 3) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTWO);
+		}
+		if(scoreAward > 500) {
 			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
 		}
+
+/*
+		//beginner's luck
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
+
+		//two games straight
+		if (continuousGameAward == 2) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
+		}
+
+		//three games straight
+		if (continuousGameAward == 3) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+		}
+
+		//TODO spread the love
+		//TODO tell them your busy
+		//TODO use a hint
+		//TODO use no hints
+		//TODO nine to five
+
+		//under 30 secs at easy
+		if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+		}
+
+		//over 3 mins at medium
+		if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
+		}
+
+		//under 1 min at hard
+		if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+		}
+
+		//over 10 mins
+		if (puzzleTimeAward > 600) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
+		}
+
+		//over 10K points
+		if (scoreAward > 10000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
+		}
+
+		//20 games straight
+		if (continuousGameAward == 20) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
+		}
+*/
 
 	}
 }
@@ -730,9 +785,9 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
-	//TODO REMOVE ME
-	SetAwardVariables();
-	emit puzzleCompleted();
+//	//TODO REMOVE ME
+//	SetAwardVariables();
+//	emit puzzleCompleted();
 
 	int i;
 	int ii;
@@ -801,6 +856,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 //			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			//emit lastPuzzleTimeChanged();
+			SetAwardVariables();
 			emit puzzleCompleted();
 		}
 		else {

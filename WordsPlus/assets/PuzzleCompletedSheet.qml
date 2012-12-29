@@ -18,15 +18,15 @@ Page {
                 imageSource: "asset:///images/heart_large.png"
             }
         }
-                AdContainer {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Top
-                }
-//                Container {
-//                    preferredHeight: 100
-//                    preferredWidth: 768
-//                    background: Color.White
-//                }
+        AdContainer {
+            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Top
+        }
+        //                Container {
+        //                    preferredHeight: 100
+        //                    preferredWidth: 768
+        //                    background: Color.White
+        //                }
         Container { //middle
             topPadding: 100
             preferredWidth: 720
@@ -115,7 +115,7 @@ Page {
                     Divider {
                         opacity: 0
                     }
-                    Container { // position
+                    Container { // ranking
                         background: Color.create("#272727")
                         preferredWidth: 720
                         preferredHeight: 650
@@ -162,10 +162,24 @@ Page {
                             preferredWidth: 720
                             //preferredHeight: 500
                         }
-                    }
+                    } // end of ranking
                 }
             }
         } // end of middle container
+        //        Container {
+        //            preferredWidth: 720
+        //            bottomPadding: 200
+        //            rightPadding: 15
+        //            verticalAlignment: VerticalAlignment.Center
+        //            horizontalAlignment: HorizontalAlignment.Center
+        //            //background: Color.create("#22fafafa")
+        //            //visible: wordsplus.getAchievedAward
+        //            overlapTouchPolicy: OverlapTouchPolicy.Allow
+        //            ImageView {
+        //                horizontalAlignment: HorizontalAlignment.Right
+        //                imageSource: "asset:///images/awardNotification.png"
+        //            }
+        //        }
     } // end of page
     onCreationCompleted: {
         var positionContainer = positionDef.createObject();
