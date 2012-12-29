@@ -184,6 +184,7 @@ private:
 	int puzzleTimeAward;
 	int achievedAward;
 	int scoreAward;
+	int difficultyAward;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
