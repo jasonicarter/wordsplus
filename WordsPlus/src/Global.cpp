@@ -15,8 +15,6 @@
 
 #include "Global.hpp"
 
-//bb::cascades::NavigationPane* g_navPane;
-
 static Global* _pinstance = NULL;
 
 Global* Global::instance() {

@@ -83,7 +83,6 @@ signals:
 	void SubmitScoreCompleted(ScoreData_t *scoreData);
 	void LoadLeaderboardCompleted(QVariantList leaderboardData);
 	void LoadAchievementsCompleted(QVariantList achievementData);
-	/* @TODO arguments & implementation */
 	void AchieveAwardCompleted();
 	/* @TODO arguments & implementation */
 	void AcceptChallengeCompleted();

@@ -30,7 +30,6 @@ public:
 
 private:
 	bb::platform::bbm::Context * m_context;
-	QString m_uuid;
 	bool isInternetAvailable; //currently not implemented
 };
 
