@@ -21,15 +21,6 @@ Container { // root Container
                 imageSource: "asset:///images/heart_large.png"
             }
         }
-                AdContainer {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Top
-                }
-//        Container {
-//            preferredHeight: 100
-//            preferredWidth: 768
-//            background: Color.White
-//        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"

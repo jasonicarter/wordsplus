@@ -70,6 +70,8 @@ static const char SCORELOOP_NINETOFIVE[] = "wordsplus.ninetofive";
 static const char SCORELOOP_UNDERONEMIN[] = "wordsplus.underonemin";
 static const char SCORELOOP_OVERTENK[] = "wordsplus.overtenthousand";
 static const char SCORELOOP_UNTOUCHABLE[] = "wordsplus.untouchable";
+static const char SCORELOOP_RUSHHOUR[] = "wordsplus.rushhour";
+
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -100,9 +102,8 @@ WordsPlus::WordsPlus(QObject *parent) :
 	isPuzzleDisplayed = false;
 	wordDataValue = -1;
 	continuousGameAward = 0;
-	puzzleTimeAward = 0;
-	scoreAward = 0;
 	achievedAward = 0;
+
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -191,6 +192,9 @@ void WordsPlus::onFullscreen() {
 void WordsPlus::onOrientationChanged() {
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::RightUp) {
 		if (isPuzzleDisplayed) {
+			//used for achievements
+			hintUsedAward = true;
+
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(90);
 
@@ -296,23 +300,34 @@ void WordsPlus::LoadAchievementsAwards() {
 	}
 }
 
-void WordsPlus::SetAwardVariables() {
-	//set all global or qsetting variables related to awards
+void WordsPlus::ProcessAwards() {
 
-	//isFirstGameAward - don't need anything for this guy
-	//continuousGameAward - increase by 1 each time, reset when thumbnailed (multiple awards)
-	//scoreAward - check if score is past 10,000
-	//puzzleTimeAward - depends on time (multiple awards)
+	int puzzleTimeAward = 0;
+	int scoreAward = 0;
+	int difficultyAward = 0;
+	bool nineTofiveAward = false;
+	bool rushhourAward = false;
 
 	continuousGameAward++;
 	puzzleTimeAward = timeSec;
 	scoreAward = getScore();
 	difficultyAward = getDifficulty();
 
-	ProcessAwards();
-}
+	QDate today;
+	int day = today.dayOfWeek();
+	if(day < 6) {
+		//find out the time
+		int hourOfDay = QTime::currentTime().hour();
 
-void WordsPlus::ProcessAwards() {
+		if( (hourOfDay > 8) && (hourOfDay < 17) ) {
+			nineTofiveAward = true;
+		} else if ( (hourOfDay > 5) and (hourOfDay < 9) ) {
+			rushhourAward = true;
+		} else if ( (hourOfDay > 16) and (hourOfDay < 20) ) {
+			rushhourAward = true;
+		}
+	}
+
 
 	//may not need to check internet - local achieve first and then syncs
 	//wrap sync around internet check???
@@ -344,9 +359,26 @@ void WordsPlus::ProcessAwards() {
 
 		//TODO spread the love
 		//TODO tell them your busy
-		//TODO use a hint
-		//TODO use no hints
-		//TODO nine to five
+
+		//rush hour
+		if(rushhour) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
+		}
+
+		//nine to five
+		if(nineTofiveAward) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
+		}
+
+		//no hint at hard
+		if( !hintUsedAward && difficultyAward == 8) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
+		}
+
+		//use a hint
+		if( hintUsedAward ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
+		}
 
 		//under 30 secs at easy
 		if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
@@ -399,6 +431,7 @@ ScoreLoopThread* WordsPlus::scoreLoop() {
 void WordsPlus::InitializeHomePage() {
 
 	isPuzzleDisplayed = false;
+	continuousGameAward = 0;
 	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
@@ -418,12 +451,13 @@ void WordsPlus::InitializePuzzlePage() {
 
 void WordsPlus::intializePlayArea() {
 
-	//need to do id for timer, then get container to setup timer
-	//try to divide up below into smaller methods passing control for each one
-
+	hintUsedAward = false;
+	achievedAward = 0;
 	isPuzzleDisplayed = true;
 	wordDataValue = -1;
 	listOfWords.clear();
+
+	//need to do id for timer, then get container to setup timer
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
 	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
@@ -786,7 +820,7 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
 //	//TODO REMOVE ME
-//	SetAwardVariables();
+//	ProcessAwards();
 //	emit puzzleCompleted();
 
 	int i;
@@ -856,7 +890,7 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 //			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			//emit lastPuzzleTimeChanged();
-			SetAwardVariables();
+			ProcessAwards();
 			emit puzzleCompleted();
 		}
 		else {

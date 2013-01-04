@@ -35,7 +35,6 @@ captain
 cardiologist
 caregiver
 carpenter
-carpenter
 cartographer
 cartoonist
 cashier
@@ -81,19 +80,16 @@ drycleaner
 ecologist
 economist
 editor
-editor
 educator
 electrician
 emperor
 empress
-engineer
 engineer
 entertainer
 entomologist
 entrepreneur
 executive
 explorer
-exporter
 exterminator
 falconer
 farmer
@@ -137,7 +133,6 @@ landscaper
 laundress
 lawyer
 lecturer
-legal aide
 librarian
 librettist
 lifeguard
@@ -152,7 +147,6 @@ manufacturer
 marine
 marketer
 mason
-mathematician
 mayor
 mechanic
 mechanic
@@ -165,16 +159,12 @@ muralist
 musician
 nurse
 painter
-paleontologist
 paralegal
 pastor
 pathologist
 pawnbroker
 peddler
-pediatrician
-percussionist
 performer
-pharmacist
 pharmacist
 philanthropist
 philosopher
@@ -191,7 +181,6 @@ police
 policeman
 policewoman
 politician
-politician
 president
 priest
 prince
@@ -201,21 +190,16 @@ printer
 private
 producer
 professor
-professor
 programmer
-psychiatrist
 publisher
 rabbi
 radiologist
 rancher
 ranger
-receptionist
 referee
 registrar
 reporter
-representative
 researcher
-restauranteur
 retailer
 retiree
 sailor
@@ -228,7 +212,6 @@ scientist
 scout
 scuba
 seamstress
-security 
 senator
 sheriff
 shoemaker
@@ -245,31 +228,21 @@ surgeon
 surveyor
 swimmer
 tailor
-tax collector
-taxi 
 taxidermist
 teacher
-teacher
 technician
-tennis 
 tiler
 toolmaker
 trader
 trainer
 translator
-travel agent
 treasurer
-truck driver
 tutor
 typist
-veterinarian
 waiter
-waiter
-waitress
 waitress
 warden
 warrior
-watchmaker
 watchmaker
 weaver
 welder

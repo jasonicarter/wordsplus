@@ -18,15 +18,6 @@ Page {
                 imageSource: "asset:///images/heart_large.png"
             }
         }
-        AdContainer {
-            horizontalAlignment: HorizontalAlignment.Center
-            verticalAlignment: VerticalAlignment.Top
-        }
-        //                Container {
-        //                    preferredHeight: 100
-        //                    preferredWidth: 768
-        //                    background: Color.White
-        //                }
         Container { //middle
             topPadding: 100
             preferredWidth: 720
@@ -36,17 +27,47 @@ Page {
             //background: Color.Gray
             Container {
                 Container {
-                    id: localStats
-                    //visible: false
-                    Label {
-                        text: "PUZZLE COMPLETED!"
-                        touchPropagationMode: TouchPropagationMode.None
-                        verticalAlignment: VerticalAlignment.Center
+                    layout: DockLayout {
+                    }
+                    preferredWidth: 768
+                    preferredHeight: 70
+                    bottomMargin: 20
+                    //background: Color.Black
+                    Container {
+                        preferredWidth: 768
+                        preferredHeight: 70
+                        //background: Color.create("#FFD700")
                         horizontalAlignment: HorizontalAlignment.Center
-                        textStyle {
-                            base: statsSheetBigBodyNormalWhite.style
+                        Label {
+                            id: puzzleCompleted
+                            text: "Puzzle Completed!"
+                            horizontalAlignment: HorizontalAlignment.Center
+                            textStyle {
+                                base: statsSheetBigBodyNormalWhite.style
+                            }
                         }
                     }
+                    Container {
+                        opacity: wordsPlus.achievedAward
+                        preferredWidth: 768
+                        preferredHeight: 70
+                        background: Color.create("#FFD700")
+                        horizontalAlignment: HorizontalAlignment.Center
+                        Label {
+                            id: achievementWon
+                            text: "Achievement Won!"
+                            horizontalAlignment: HorizontalAlignment.Center
+                            textStyle {
+                                base: statsSheetBigBodyNormalWhite.style
+                            }
+                        }
+                    }
+                }
+                //                Divider {
+                //                    opacity: 0
+                //                }
+                Container {
+                    id: localStats
                     Container { // time
                         layout: DockLayout {
                         }
@@ -166,20 +187,6 @@ Page {
                 }
             }
         } // end of middle container
-        //        Container {
-        //            preferredWidth: 720
-        //            bottomPadding: 200
-        //            rightPadding: 15
-        //            verticalAlignment: VerticalAlignment.Center
-        //            horizontalAlignment: HorizontalAlignment.Center
-        //            //background: Color.create("#22fafafa")
-        //            //visible: wordsplus.getAchievedAward
-        //            overlapTouchPolicy: OverlapTouchPolicy.Allow
-        //            ImageView {
-        //                horizontalAlignment: HorizontalAlignment.Right
-        //                imageSource: "asset:///images/awardNotification.png"
-        //            }
-        //        }
     } // end of page
     onCreationCompleted: {
         var positionContainer = positionDef.createObject();
@@ -187,11 +194,20 @@ Page {
     }
     actions: [
         ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
+            title: "Play Again"
+            imageSource: "asset:///images/play.png"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
                 wordsPlus.intializePlayArea();
+                puzzleCompletedSheet.close();
+            }
+        },
+        ActionItem {
+            title: "Home"
+            imageSource: "asset:///images/home.png"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                wordsPlus.InitializeHomePage();
                 puzzleCompletedSheet.close();
             }
         }

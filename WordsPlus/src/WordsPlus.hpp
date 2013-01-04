@@ -146,7 +146,6 @@ private:
 	void CrossOutPuzzleWord(QString wordFound);
 	void showToast(QString msg);
 	void SaveBestPuzzleTime(int puzzleTime);
-	void SetAwardVariables();
 	void ProcessAwards();
 
     Page *appPage;
@@ -181,10 +180,8 @@ private:
 	int puzzleDifficulty;
 	int wordDataValue;
 	int continuousGameAward;
-	int puzzleTimeAward;
 	int achievedAward;
-	int scoreAward;
-	int difficultyAward;
+	bool hintUsedAward;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
