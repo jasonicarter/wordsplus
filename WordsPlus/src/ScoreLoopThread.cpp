@@ -212,9 +212,8 @@ void ScoreLoopThread::RequestUserCompletionCallback(void *userData, SC_Error_t c
 
 	LoadLeaderboardAroundUser(app, SC_SCORES_SEARCH_LIST_ALL,1);
 
-
-	RequestGameData(app);
-	SubmitGameData(app);
+//	RequestGameData(app);
+//	SubmitGameData(app);
 }
 
 void ScoreLoopThread::RequestGameData(AppData_t *app) {
