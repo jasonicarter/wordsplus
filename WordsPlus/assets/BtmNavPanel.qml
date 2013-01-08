@@ -5,7 +5,7 @@ Container {
     property int bbm_statusmessage: 7
     property int bbm_invitetodownload: 8
     Container { // bottom panel
-        background: Color.create("#0098f0")
+        //background: Color.create("#0098f0")
         //verticalAlignment: VerticalAlignment.Bottom
         preferredHeight: 150
         preferredWidth: 768
@@ -25,6 +25,7 @@ Container {
             Container {
                 horizontalAlignment: HorizontalAlignment.Center
                 ImageView {
+                    id: profileImage
                     objectName: "rotateProfileImage"
                     topMargin: 0
                     bottomMargin: 0
@@ -41,8 +42,15 @@ Container {
                 }
                 onTouch: {
                     if (event.isDown()) {
+                        profileImage.imageSource = "asset:///images/profileEdit_white.png"
                         wordsPlus.playSound("letterSelected");
                     }
+                    if (event.isUp()) {
+                        profileImage.imageSource = "asset:///images/profileEdit_blk.png"
+                    }
+                }
+                onTouchExit: {
+                    profileImage.imageSource = "asset:///images/profileEdit_blk.png"
                 }
             }
             contextActions: [
@@ -89,6 +97,7 @@ Container {
             Container {
                 horizontalAlignment: HorizontalAlignment.Center
                 ImageView {
+                    id: homeImage
                     objectName: "rotateHomeImage"
                     topMargin: 0
                     bottomMargin: 0
@@ -107,13 +116,18 @@ Container {
             onTouch: {
                 if (event.isDown()) {
                     isHome = true;
+                    homeImage.imageSource = "asset:///images/home_white.png"
                     wordsPlus.playSound("letterSelected");
                 }
                 if (event.isUp() && isHome) {
                     isHome = false;
+                    homeImage.imageSource = "asset:///images/home_blk.png"
                     wordsPlus.stopTimer();
                     wordsPlus.InitializeHomePage();
                 }
+            }
+            onTouchExit: {
+                homeImage.imageSource = "asset:///images/home_blk.png"
             }
         } // end of home
         Container {
