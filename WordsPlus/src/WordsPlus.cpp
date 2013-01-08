@@ -206,17 +206,17 @@ void WordsPlus::onOrientationChanged() {
 			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else {
-			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateReviewImage->setRotationZ(90);
+			//rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
-			rotateRotateImage->setRotationZ(90);
-			rotateGuideImage->setRotationZ(90);
+			//rotateRotateImage->setRotationZ(90);
+			//rotateGuideImage->setRotationZ(90);
 			rotateProfileImage->setRotationZ(90);
 			rotateHomeImage->setRotationZ(90);
 			rotateImageMsg->setOpacity(1);
@@ -230,17 +230,17 @@ void WordsPlus::onOrientationChanged() {
 			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
 		else {
-			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateReviewImage->setRotationZ(0);
+			//rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
-			rotateRotateImage->setRotationZ(0);
-			rotateGuideImage->setRotationZ(0);
+			//rotateRotateImage->setRotationZ(0);
+			//rotateGuideImage->setRotationZ(0);
 			rotateProfileImage->setRotationZ(0);
 			rotateHomeImage->setRotationZ(0);
 			rotateImageMsg->setOpacity(0);
@@ -820,8 +820,8 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
 //	//TODO REMOVE ME
-//	ProcessAwards();
-//	emit puzzleCompleted();
+	ProcessAwards();
+	emit puzzleCompleted();
 
 	int i;
 	int ii;
