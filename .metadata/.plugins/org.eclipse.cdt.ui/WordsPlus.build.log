@@ -1,7 +1,7 @@
 
-**** Build of configuration Device-Debug for project WordsPlus ****
+**** Build of configuration Simulator-Debug for project WordsPlus ****
 
-make Device-Debug 
+make Simulator-Debug 
 C:/bbndk/host_10_0_9_404/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
 C:/bbndk/host_10_0_9_404/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
 make -C ./translations -f Makefile update release
@@ -40,13 +40,13 @@ Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/tra
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 12 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make -C ./x86 -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/x86'
 make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/x86'
 make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/x86'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/x86'
 Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
 
 **** Build Finished ****

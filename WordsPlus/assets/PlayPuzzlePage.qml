@@ -21,10 +21,6 @@ Container { // root Container
                 imageSource: "asset:///images/heart_large.png"
             }
         }
-//        AdContainer {
-//            horizontalAlignment: HorizontalAlignment.Center
-//            verticalAlignment: VerticalAlignment.Top
-//        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
@@ -105,6 +101,15 @@ Container { // root Container
             }
         }
     } // main container
+    onCreationCompleted: {
+        wordsPlus.puzzleCompleted.connect(playPuzzleRootContainer.handleSignal)
+    }
+    function handleSignal() {
+        wordsPlus.stopTimer();
+        var mySheet = puzzleCompletedSheetDefinition.createObject();
+        mySheet.open();
+        //puzzleCompletedSheet.open();
+    }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text
@@ -150,6 +155,14 @@ Container { // root Container
         Sheet {
             id: settingsSheet
             SettingsSheet {
+            }
+        },
+        ComponentDefinition {
+            id: puzzleCompletedSheetDefinition
+            Sheet {
+                id: puzzleCompletedSheet
+                PuzzleCompletedSheet {
+                }
             }
         }
     ]

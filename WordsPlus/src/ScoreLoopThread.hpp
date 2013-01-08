@@ -44,6 +44,12 @@ public:
 	static void RequestUser(AppData_t *app);
 	static void RequestUserCompletionCallback(void *userData, SC_Error_t completionStatus);
 
+	static void RequestGameData(AppData_t *app);
+	static void RequestGameDataCompletionCallback(void *userData, SC_Error_t completionStatus);
+
+	static void SubmitGameData(AppData_t *app);
+	static void SubmitGameDataCompletionCallback(void *userData, SC_Error_t completionStatus);
+
 	static void SubmitScore(AppData_t *app, double result, unsigned int mode);
 	static void SubmitScoreCompletionCallback(void *userData, SC_Error_t completionStatus);
 
@@ -83,7 +89,6 @@ signals:
 	void SubmitScoreCompleted(ScoreData_t *scoreData);
 	void LoadLeaderboardCompleted(QVariantList leaderboardData);
 	void LoadAchievementsCompleted(QVariantList achievementData);
-	/* @TODO arguments & implementation */
 	void AchieveAwardCompleted();
 	/* @TODO arguments & implementation */
 	void AcceptChallengeCompleted();

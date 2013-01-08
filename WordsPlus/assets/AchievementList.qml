@@ -31,13 +31,15 @@ Container {
                         layout: StackLayout {
                             orientation: LayoutOrientation.LeftToRight
                         }
-                        preferredHeight: 50
                         ImageView {
+                            preferredHeight: 100
+                            preferredWidth: 100
                             imageSource: "asset:///scoreloop/SLAwards.bundle/" + ListItemData.image
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
                         }
                         Container {
+                            preferredWidth: 550
                             horizontalAlignment: HorizontalAlignment.Left
                             verticalAlignment: VerticalAlignment.Center
                             Label {
@@ -47,6 +49,8 @@ Container {
                             Label {
                                 text: ListItemData.description
                                 textStyle.base: SystemDefaults.TextStyles.SubtitleText
+                                textStyle.color: Color.create("#b1b1b1")
+                                multiline: true
                             }
                         }
                     }
