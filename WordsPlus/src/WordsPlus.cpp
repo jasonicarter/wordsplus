@@ -24,6 +24,8 @@
 #include <bb/cascades/FadeTransition>
 #include <bb/cascades/advertisement/Banner>
 
+
+//should probably all be static const and not #define as this makes them global
 #define NORMAL		1
 #define SELECTED	2
 #define HIGHLIGHT	3
@@ -50,13 +52,37 @@
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
+//global - to be accessed from wordsPlus to set awards
+static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
+static const char SCORELOOP_TESTTWO[]	= "wordsplus.testaward2";
+static const char SCORELOOP_TESTTHREE[] = "wordsplus.testaward3";
+static const char SCORELOOP_BBMPERSONALMSG[] = "wordsplus.bbmpersonalmsg";
+static const char SCORELOOP_BBMSTATUSMSG[] = "wordsplus.bbmstatusmsg";
+static const char SCORELOOP_FIRSTGAME[] = "wordsplus.firstgame";
+static const char SCORELOOP_USEAHINT[] = "wordsplus.usehint";
+static const char SCORELOOP_BACKTWOBACK[] = "wordsplus.backtwoback";
+static const char SCORELOOP_THREESOME[] = "wordsplus.threesome";
+static const char SCORELOOP_NOHINTATHARD[] = "wordsplus.nohintathard";
+static const char SCORELOOP_UNDERTHIRTYATEASY[] = "wordsplus.underthirtyateasy";
+static const char SCORELOOP_JUSTAVERAGE[] = "wordsplus.overthreeminsatmedium";
+static const char SCORELOOP_OVERTENMINS[] = "wordsplus.overtenmins";
+static const char SCORELOOP_NINETOFIVE[] = "wordsplus.ninetofive";
+static const char SCORELOOP_UNDERONEMIN[] = "wordsplus.underonemin";
+static const char SCORELOOP_OVERTENK[] = "wordsplus.overtenthousand";
+static const char SCORELOOP_UNTOUCHABLE[] = "wordsplus.untouchable";
+static const char SCORELOOP_RUSHHOUR[] = "wordsplus.rushhour";
+
+
 using namespace bb::cascades;
 using namespace bb::system;
 using namespace bb::multimedia;
 using namespace bb::cascades::advertisement;
 
-WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
-		QObject(parent), m_context(&context) {
+//WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
+//		QObject(parent), m_context(&context) {
+
+WordsPlus::WordsPlus(QObject *parent) :
+		QObject(parent){
 
 	//set default values
 	deltaX = 0.0;
@@ -75,6 +101,9 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
 	wordDataValue = -1;
+	continuousGameAward = 0;
+	achievedAward = 0;
+
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -89,6 +118,9 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 
 	// Registers the banner for QML
 	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
+
+	//REMOVE ME
+	show();
 
 }
 
@@ -124,6 +156,8 @@ void WordsPlus::show() {
 					SLOT(onSubmitScoreCompleted(ScoreData_t*)));
 			QObject::connect(mScoreLoop, SIGNAL(LoadLeaderboardCompleted(QVariantList)),
 					this, SLOT(onLoadLeaderboardCompleted(QVariantList)));
+			QObject::connect(mScoreLoop, SIGNAL(AchieveAwardCompleted()),
+								this, SLOT(onAchievedAward()));
 
 			mOrientationSensor = new OrientationSensor(this);
 			QObject::connect(mOrientationSensor, SIGNAL(orientationChanged()),
@@ -148,6 +182,7 @@ void WordsPlus::show() {
 
 void WordsPlus::onThumbnail() {
 	stopTimer();
+	continuousGameAward = 0;
 }
 
 void WordsPlus::onFullscreen() {
@@ -157,6 +192,9 @@ void WordsPlus::onFullscreen() {
 void WordsPlus::onOrientationChanged() {
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::RightUp) {
 		if (isPuzzleDisplayed) {
+			//used for achievements
+			hintUsedAward = true;
+
 			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
 			redHeart->setRotationZ(90);
 
@@ -168,17 +206,17 @@ void WordsPlus::onOrientationChanged() {
 			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else {
-			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateReviewImage->setRotationZ(90);
+			//rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
-			rotateRotateImage->setRotationZ(90);
-			rotateGuideImage->setRotationZ(90);
+			//rotateRotateImage->setRotationZ(90);
+			//rotateGuideImage->setRotationZ(90);
 			rotateProfileImage->setRotationZ(90);
 			rotateHomeImage->setRotationZ(90);
 			rotateImageMsg->setOpacity(1);
@@ -192,17 +230,17 @@ void WordsPlus::onOrientationChanged() {
 			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
 		else {
-			ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
+			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
+			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
+			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateReviewImage->setRotationZ(0);
+			//rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
-			rotateRotateImage->setRotationZ(0);
-			rotateGuideImage->setRotationZ(0);
+			//rotateRotateImage->setRotationZ(0);
+			//rotateGuideImage->setRotationZ(0);
 			rotateProfileImage->setRotationZ(0);
 			rotateHomeImage->setRotationZ(0);
 			rotateImageMsg->setOpacity(0);
@@ -262,6 +300,129 @@ void WordsPlus::LoadAchievementsAwards() {
 	}
 }
 
+void WordsPlus::ProcessAwards() {
+
+	int puzzleTimeAward = 0;
+	int scoreAward = 0;
+	int difficultyAward = 0;
+	bool nineTofiveAward = false;
+	bool rushhourAward = false;
+
+	continuousGameAward++;
+	puzzleTimeAward = timeSec;
+	scoreAward = getScore();
+	difficultyAward = getDifficulty();
+
+	QDate today;
+	int day = today.dayOfWeek();
+	if(day < 6) {
+		//find out the time
+		int hourOfDay = QTime::currentTime().hour();
+
+		if( (hourOfDay > 8) && (hourOfDay < 17) ) {
+			nineTofiveAward = true;
+		} else if ( (hourOfDay > 5) and (hourOfDay < 9) ) {
+			rushhourAward = true;
+		} else if ( (hourOfDay > 16) and (hourOfDay < 20) ) {
+			rushhourAward = true;
+		}
+	}
+
+
+	//may not need to check internet - local achieve first and then syncs
+	//wrap sync around internet check???
+	if (Global::instance()->getIsInternetAvailable()) {
+
+		if( (puzzleTimeAward <= 120) && (difficultyAward == 2) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTONE);
+		}
+		if(continuousGameAward == 3) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTWO);
+		}
+		if(scoreAward > 500) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
+		}
+
+/*
+		//beginner's luck
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
+
+		//two games straight
+		if (continuousGameAward == 2) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
+		}
+
+		//three games straight
+		if (continuousGameAward == 3) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+		}
+
+		//TODO spread the love
+		//TODO tell them your busy
+
+		//rush hour
+		if(rushhour) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
+		}
+
+		//nine to five
+		if(nineTofiveAward) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
+		}
+
+		//no hint at hard
+		if( !hintUsedAward && difficultyAward == 8) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
+		}
+
+		//use a hint
+		if( hintUsedAward ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
+		}
+
+		//under 30 secs at easy
+		if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+		}
+
+		//over 3 mins at medium
+		if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
+		}
+
+		//under 1 min at hard
+		if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+		}
+
+		//over 10 mins
+		if (puzzleTimeAward > 600) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
+		}
+
+		//over 10K points
+		if (scoreAward > 10000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
+		}
+
+		//20 games straight
+		if (continuousGameAward == 20) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
+		}
+*/
+
+	}
+}
+
+void WordsPlus::onAchievedAward() {
+	achievedAward = 1;
+	emit achievedAwardChanged();
+}
+
+int WordsPlus::getAchievedAward() {
+	return achievedAward;
+}
+
 ScoreLoopThread* WordsPlus::scoreLoop() {
 	return ScoreLoopThread::instance();
 }
@@ -270,6 +431,7 @@ ScoreLoopThread* WordsPlus::scoreLoop() {
 void WordsPlus::InitializeHomePage() {
 
 	isPuzzleDisplayed = false;
+	continuousGameAward = 0;
 	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
@@ -289,12 +451,13 @@ void WordsPlus::InitializePuzzlePage() {
 
 void WordsPlus::intializePlayArea() {
 
-	//need to do id for timer, then get container to setup timer
-	//try to divide up below into smaller methods passing control for each one
-
+	hintUsedAward = false;
+	achievedAward = 0;
 	isPuzzleDisplayed = true;
 	wordDataValue = -1;
 	listOfWords.clear();
+
+	//need to do id for timer, then get container to setup timer
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
 	mWordsToFindContainer = puzzlePageControl->findChild<Container*>("wordsToFind");
@@ -407,6 +570,7 @@ void WordsPlus::intializePlayArea() {
 
 void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 
+	//get initial position of tile touched
 	if (event->isDown()) {
 		// Find who sent it.
 		ImageView* senderImage = dynamic_cast<ImageView*>(sender());
@@ -460,9 +624,17 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			if (length / 60 == -multiple && length < 0) {
 				position -= 1;
 				if (position > lowerbound) {
-					HighlightSelectedTile(position, HIGHLIGHT);
-					tileNumbers.append(position);
-					multiple++;
+
+//					if(isHighlighted(position)){
+//						HighlightSelectedTile(position, NORMAL);
+//						tileNumbers.removeLast();
+//						setSelectedLetters("removeLast");
+//						multiple--;
+//					}else {
+						HighlightSelectedTile(position, HIGHLIGHT);
+						tileNumbers.append(position);
+						multiple++;
+//					}
 				}
 			}
 		} else if (deltaY >= directionalBoundNeg && deltaY <= directionalBoundPos) {
@@ -556,6 +728,36 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 
 }
 
+bool WordsPlus::isHighlighted(int pos) {
+	bool isTileHighlighted = false;
+
+	int i;
+	int ii;
+	QString imageSource;
+
+	if (pos <= 9) {
+		i = 0;
+		ii = pos;
+	}
+	if (pos >= 10) {
+		i = pos / 10;
+		ii = pos % 10;
+	}
+
+	// Get the object name (actually the image name which is easy to identify).
+	QVariant v = mPlayField[i][ii]->imageSource();
+
+	if (v.canConvert<QString>()) {
+		QString objName = v.value<QString>(); // entire path of image letter ../highlight/a.png
+
+		if (!objName.contains("highlight", Qt::CaseInsensitive)) {
+			isTileHighlighted = true;
+		}
+	}
+
+return 	isTileHighlighted;
+}
+
 void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 	int i;
@@ -617,6 +819,10 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
+//	//TODO REMOVE ME
+	ProcessAwards();
+	emit puzzleCompleted();
+
 	int i;
 	int ii;
 	QString selectedWord;
@@ -677,12 +883,15 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
-			QString puzzleMsg = QString(
-					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
-					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-					getScore());
-			showToast(puzzleMsg); // add icon url to pass to function
+//			QString puzzleMsg = QString(
+//					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
+//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+//					getScore());
+//			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
+			//emit lastPuzzleTimeChanged();
+			ProcessAwards();
+			emit puzzleCompleted();
 		}
 		else {
 			playSound(SOUNDWORDFOUND); //puzzle not completed, single word found
@@ -857,6 +1066,12 @@ QString WordsPlus::getPuzzleCompletedTime() {
 
 }
 
+QString WordsPlus::getLastPuzzleTime() {
+
+	//no setter used. Emit signal whenever puzzle is completed. Sheet picks up value
+	return (QDateTime::fromTime_t(timeSec)).toString("mm':'ss");
+}
+
 void WordsPlus::SaveBestPuzzleTime(int puzzleTime) {
 
 	bool okTime;
@@ -923,6 +1138,8 @@ void WordsPlus::setSelectedLetters(QString letter) {
 
 	if (letter == "clear") {
 		m_strSeletedLetters = "";
+	} else if (letter == "removeLast") {
+		m_strSeletedLetters.chop(1);
 	} else {
 		m_strSeletedLetters = m_strSeletedLetters.append(letter.toUpper());
 	}
@@ -954,43 +1171,43 @@ void WordsPlus::setDifficulty(int difficulty) {
 
 void WordsPlus::ControlsForBBM(int state) {
 
-	// Create the user profile and profile box objects
-	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
-	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
-
-	switch (state) {
-	case PROFILEBOXPUZZLECOMPLETED: {
-		if (getProfileBox()) {
-			QString msg = QString(
-					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
-					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-					getScore());
-
-			//register icons
-			profileBox = new ProfileBox(m_profileBox);
-
-			//wordsPlus.png iconId = 1
-			//could use #define WORDSPLUSPROFILEBOX 1
-			//use 0 if you have no image
-			profileBox->addProfileBoxItem(msg, 3);
-		}
-		break;
-	}
-	case PRESONALMESSAGE: {
-		updateProfile = new UpdateProfile(m_userProfile);
-		updateProfile->savePersonalMessage();
-		break;
-	}
-	case STATUSMESSAGE: {
-		updateProfile = new UpdateProfile(m_userProfile);
-		updateProfile->saveStatus();
-		break;
-	}
-	case INVITETODOWNLOAD: {
-		inviteToDownload = new InviteToDownload(m_context);
-		inviteToDownload->sendInvite();
-		break;
-	}
-	}
+//	// Create the user profile and profile box objects
+//	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
+//	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
+//
+//	switch (state) {
+//	case PROFILEBOXPUZZLECOMPLETED: {
+//		if (getProfileBox()) {
+//			QString msg = QString(
+//					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
+//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+//					getScore());
+//
+//			//register icons
+//			profileBox = new ProfileBox(m_profileBox);
+//
+//			//wordsPlus.png iconId = 1
+//			//could use #define WORDSPLUSPROFILEBOX 1
+//			//use 0 if you have no image
+//			profileBox->addProfileBoxItem(msg, 3);
+//		}
+//		break;
+//	}
+//	case PRESONALMESSAGE: {
+//		updateProfile = new UpdateProfile(m_userProfile);
+//		updateProfile->savePersonalMessage();
+//		break;
+//	}
+//	case STATUSMESSAGE: {
+//		updateProfile = new UpdateProfile(m_userProfile);
+//		updateProfile->saveStatus();
+//		break;
+//	}
+//	case INVITETODOWNLOAD: {
+//		inviteToDownload = new InviteToDownload(m_context);
+//		inviteToDownload->sendInvite();
+//		break;
+//	}
+//	}
 
 }

@@ -25,9 +25,10 @@ static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAX
 static const char SCORELOOP_GAME_VERSION[] = "1.0";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
-static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
+//static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
 
 static ScoreLoopThread* _pinstance = NULL;
+
 
 ScoreLoopThread::ScoreLoopThread(QObject* parent) :
 		QThread(parent), m_quit(false) {
@@ -117,6 +118,45 @@ void ScoreLoopThread::run() {
 	LOG("ScoreloopThread run() finished");
 }
 
+void ScoreLoopThread::DisplayDialog(AppData_t *app, const char* title, const char* message) {
+	/* Close a former dialog - if any */
+	if (app->dialog) {
+		dialog_destroy(app->dialog);
+		app->dialog = 0;
+	}
+
+	/* Open a new alert dialog here - you would probably want to do something more elaborate */
+	dialog_create_alert(&app->dialog);
+	dialog_set_title_text(app->dialog, title);
+	dialog_set_alert_message_text(app->dialog, message);
+	dialog_add_button(app->dialog, DIALOG_OK_LABEL, true, NULL, true);
+	dialog_show(app->dialog);
+}
+
+void ScoreLoopThread::InformUser(AppData_t *app, const char* title, const char* message) {
+	/* Inform user by displaying a simple dialog here */
+	DisplayDialog(app, title, message);
+
+	/* Also log title and message */
+	LOG("%s: %s", title, message);
+}
+
+void ScoreLoopThread::HandleError(AppData_t *app, SC_Error_t error) {
+	/* Inform user with an alert dialog here - you would probably want to do a more intelligent error handling instead */
+	//InformUser(app, "Error", SC_MapErrorToStr(error));
+
+//	if(error == SC_HTTP_SERVER_ERROR) {
+//		// other errors could be caught related to connection issues
+//		Global::instance()->setIsInternetAvailable(false);
+//		LOG("Internet access not available");
+//	}
+
+	Global::instance()->setIsInternetAvailable(false);
+	emit(instance()->ConnectionError("DATA CONNECTION ERROR!\nInternet access could be an issue\nYour scores may not be saved"));
+	/* Also log the error */
+	LOG("%s", SC_MapErrorToStr(error));
+}
+
 void ScoreLoopThread::RequestUser(AppData_t *app) {
 	/* Create a UserController */
 	SC_Error_t rc = SC_Client_CreateUserController(app->client, &app->userController, RequestUserCompletionCallback, app);
@@ -171,45 +211,124 @@ void ScoreLoopThread::RequestUserCompletionCallback(void *userData, SC_Error_t c
 	emit(instance()->RequestUserCompleted(login ? SC_String_GetData(login) : "<unknown>"));
 
 	LoadLeaderboardAroundUser(app, SC_SCORES_SEARCH_LIST_ALL,1);
+
+//	RequestGameData(app);
+//	SubmitGameData(app);
 }
 
-void ScoreLoopThread::DisplayDialog(AppData_t *app, const char* title, const char* message) {
-	/* Close a former dialog - if any */
-	if (app->dialog) {
-		dialog_destroy(app->dialog);
-		app->dialog = 0;
+void ScoreLoopThread::RequestGameData(AppData_t *app) {
+
+//	SC_String_h points;
+//	SC_Error_t errCode;
+//	SC_Context_h myContext;
+
+	/* Create a UserController */
+	SC_Error_t rc = SC_Client_CreateUserController(app->client, &app->userController, RequestGameDataCompletionCallback, app);
+	if (rc != SC_OK) {
+		LOG("RequestUser Error");
+		HandleError(app, rc);
+		return;
 	}
 
-	/* Open a new alert dialog here - you would probably want to do something more elaborate */
-	dialog_create_alert(&app->dialog);
-	dialog_set_title_text(app->dialog, title);
-	dialog_set_alert_message_text(app->dialog, message);
-	dialog_add_button(app->dialog, DIALOG_OK_LABEL, true, NULL, true);
-	dialog_show(app->dialog);
+	/* Make the asynchronous request */
+	rc = SC_UserController_LoadUserContext(app->userController);
+	if (rc != SC_OK) {
+		LOG("LoadUser Error");
+		SC_UserController_Release(app->userController);
+		HandleError(app, rc);
+		return;
+	}
+	LOG("Requesting User...");
 }
 
-void ScoreLoopThread::InformUser(AppData_t *app, const char* title, const char* message) {
-	/* Inform user by displaying a simple dialog here */
-	DisplayDialog(app, title, message);
+void ScoreLoopThread::RequestGameDataCompletionCallback(void *userData, SC_Error_t completionStatus) {
 
-	/* Also log title and message */
-	LOG("%s: %s", title, message);
+	SC_String_h points;
+	SC_Context_h myContext;
+	SC_Error_t errCode;
+
+	/* Get the application from userData argument */
+	AppData_t *app = (AppData_t *) userData;
+
+	/* Check completion status */
+	if (completionStatus != SC_OK) {
+		SC_UserController_Release(app->userController); /* Cleanup Controller */
+		HandleError(app, completionStatus);
+		return;
+	}
+	LOG("Done requesting game data");
+
+	/* Get the session from the client. */
+	SC_Session_h session = SC_Client_GetSession(app->client);
+	/* Get the session user from the session. */
+	SC_User_h user = SC_Session_GetUser(session);
+
+	myContext = SC_User_GetContext(user);
+
+	errCode = SC_Context_Get(myContext, "points", &points);
+
+	LOG("game data: %s", SC_String_GetData(points));
+
+	//SC_UserController_Release(app->userController);
+
 }
 
-void ScoreLoopThread::HandleError(AppData_t *app, SC_Error_t error) {
-	/* Inform user with an alert dialog here - you would probably want to do a more intelligent error handling instead */
-	//InformUser(app, "Error", SC_MapErrorToStr(error));
+void ScoreLoopThread::SubmitGameData(AppData_t *app) {
 
-//	if(error == SC_HTTP_SERVER_ERROR) {
-//		// other errors could be caught related to connection issues
-//		Global::instance()->setIsInternetAvailable(false);
-//		LOG("Internet access not available");
-//	}
+	SC_String_h points;
+	SC_Error_t errCode;
+	SC_Context_h myContext;
 
-	Global::instance()->setIsInternetAvailable(false);
-	emit(instance()->ConnectionError("DATA CONNECTION ERROR!\nInternet access could be an issue\nYour scores may not be saved"));
-	/* Also log the error */
-	LOG("%s", SC_MapErrorToStr(error));
+	errCode = SC_String_New(&points, "1240");
+
+	errCode = SC_Context_New(&myContext);
+	// points is the const char string to which we assign the experience points
+	SC_Context_Put(myContext, "points", points);
+
+	/* Create a UserController */
+	SC_Error_t rc = SC_Client_CreateUserController(app->client, &app->userController, SubmitGameDataCompletionCallback, app);
+	if (rc != SC_OK) {
+		LOG("RequestUser Error");
+		HandleError(app, rc);
+		return;
+	}
+
+	/* Get the session from the client. */
+	SC_Session_h session = SC_Client_GetSession(app->client);
+
+	/* Get the session user from the session. */
+	SC_User_h user = SC_Session_GetUser(session);
+
+	// myContext
+	errCode = SC_User_SetContext(user, myContext);
+	errCode = SC_UserController_SetUser(app->userController, user);
+	/* Make the asynchronous request */
+	errCode = SC_UserController_UpdateUserContext(app->userController);
+
+	if (errCode != SC_OK) {
+		LOG("GameData Error");
+		SC_UserController_Release(app->userController);
+		HandleError(app, rc);
+		return;
+	}
+	LOG("Submitting game data...");
+}
+
+void ScoreLoopThread::SubmitGameDataCompletionCallback(void *userData, SC_Error_t completionStatus) {
+	/* Get the application from userData argument */
+	AppData_t *app = (AppData_t *) userData;
+
+	/* Check completion status */
+	if (completionStatus != SC_OK) {
+		LOG("Context Error???");
+		SC_UserController_Release(app->userController); /* Cleanup Controller */
+		HandleError(app, completionStatus);
+		return;
+	}
+	LOG("Done submitting game data");
+	SC_UserController_Release(app->userController);
+
+	RequestGameData(app);
 }
 
 void ScoreLoopThread::SubmitScore(AppData_t *app, double result, unsigned int mode) {
@@ -450,32 +569,33 @@ void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) 
 		return;
 	}
 
-	/* Set the award with the given identifier to be achieved */
-	rc = SC_LocalAchievementsController_SetAchievedValueForAwardIdentifier(app->achievementsController, awardIdentifier, &achieved);
-	if (rc != SC_OK) {
-		SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
-		HandleError(app, rc);
-		return;
-	}
-
-	/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
-	 * after every setting of an achievement.
-	 */
-	if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
-		rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+	if(!SC_LocalAchievementsController_IsAchievedForAwardIdentifier(app->achievementsController, awardIdentifier)){
+		/* Set the award with the given identifier to be achieved */
+		rc = SC_LocalAchievementsController_SetAchievedValueForAwardIdentifier(app->achievementsController, awardIdentifier, &achieved);
 		if (rc != SC_OK) {
 			SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
 			HandleError(app, rc);
 			return;
 		}
-		qDebug() << "Synchronizing Achievements...";
-	} else {
-		/* Cleanup Controller */
-		SC_LocalAchievementsController_Release(app->achievementsController);
 
-		/* Load Achievement here just for demonstration purposes */
-		//LoadAchievements(app);
+		/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
+		 * after every setting of an achievement.
+		 */
+		if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
+			rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+			if (rc != SC_OK) {
+				SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
+				HandleError(app, rc);
+				return;
+			}
+			qDebug() << "Synchronizing Achievements...";
+		}
+
+		emit(instance()->AchieveAwardCompleted());
 	}
+
+	/* Cleanup Controller */
+	SC_LocalAchievementsController_Release(app->achievementsController);
 }
 
 void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t completionStatus) {

@@ -70,20 +70,20 @@ Page {
                             }
                         }
                     }
-//                    Option {
-//                        id: dropDwnYourAchievements
-//                        text: "ACHIEVEMENTS"
-//                        description: "Get them all!"
-//                        onSelectedChanged: {
-//                            if (selected == true) {
-//                                leaderBoard.removeAll();
-//                                var achievementContainer = achievementDef.createObject();
-//                                leaderBoard.add(achievementContainer);
-//                                localStats.visible = false;
-//                                leaderBoard.visible = true;
-//                            }
-//                        }
-//                    }
+                    Option {
+                        id: dropDwnYourAchievements
+                        text: "ACHIEVEMENTS"
+                        description: "Get them all!"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var achievementContainer = achievementDef.createObject();
+                                leaderBoard.add(achievementContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
                 }
             } //diff buttons
             Divider {

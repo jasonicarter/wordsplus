@@ -36,7 +36,8 @@ class WordsPlus : public QObject
 {
     Q_OBJECT
 public:
-    WordsPlus(bb::platform::bbm::Context &context, QObject *parent = 0);
+//    WordsPlus(bb::platform::bbm::Context &context, QObject *parent = 0);
+    WordsPlus(QObject *parent = 0);
     virtual ~WordsPlus();
 
     Q_INVOKABLE void intializePlayArea();
@@ -63,10 +64,12 @@ public:
     Q_PROPERTY (bool musicOn READ getMusic WRITE setMusic NOTIFY musicChanged);
     Q_PROPERTY (bool profileBoxOn READ getProfileBox WRITE setProfileBox NOTIFY profileBoxChanged);
     Q_PROPERTY (const QString puzzleCompletedTime READ getPuzzleCompletedTime NOTIFY puzzleCompletedTimeChanged);
+    Q_PROPERTY (const QString lastPuzzleTime READ getLastPuzzleTime NOTIFY lastPuzzleTimeChanged);
     Q_PROPERTY (int score READ getScore WRITE setScore NOTIFY scoreChanged);
     Q_PROPERTY (int gamesPlayed READ getGamesPlayed NOTIFY gamesPlayedChanged);
     Q_PROPERTY (const QString selectedLetters READ getSelectedLetters WRITE setSelectedLetters NOTIFY selectedLettersChanged);
     Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
+    Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
 
     QString getCategory();
     void setCategory(const QString cat);
@@ -87,6 +90,7 @@ public:
     void setGamesPlayed();
 
     QString getPuzzleCompletedTime();
+    QString getLastPuzzleTime();
 
     int getScore();
     void setScore(int puzzleTime);
@@ -97,6 +101,8 @@ public:
     int getDifficulty();
     void setDifficulty(int difficulty);
 
+    int getAchievedAward();
+
 public Q_SLOTS:
     void show();
 	void scoreLoopLoaded(AppData_t *data);
@@ -106,6 +112,7 @@ public Q_SLOTS:
 Q_SIGNALS:
 	void submitScoreCompleted();
 	void mainSysToastSignal(QString toastMessage);
+	void puzzleCompleted();
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -113,6 +120,7 @@ private Q_SLOTS:
 	void onThumbnail();
 	void onFullscreen();
 	void onLoadLeaderboardCompleted(QVariantList data);
+	void onAchievedAward();
 
 Q_SIGNALS:
 	void categoryChanged(const QString);
@@ -123,18 +131,22 @@ Q_SIGNALS:
 	void musicChanged();
 	void profileBoxChanged();
 	void puzzleCompletedTimeChanged();
+	void lastPuzzleTimeChanged();
 	void scoreChanged();
 	void gamesPlayedChanged();
 	void selectedLettersChanged();
 	void difficultyChanged();
+	void achievedAwardChanged();
 
 private:
 	void initTimer();
 	void HighlightSelectedTile(int pos, int stateOfLetter);
+	bool isHighlighted(int pos);
 	void WordCompleted(QList<int> listOfLetters);
 	void CrossOutPuzzleWord(QString wordFound);
 	void showToast(QString msg);
 	void SaveBestPuzzleTime(int puzzleTime);
+	void ProcessAwards();
 
     Page *appPage;
     TabbedPane *tabs;
@@ -165,9 +177,11 @@ private:
 	int timeSec;
 	int numberOfWords;
 	int numberOfWordsFound;
-	int numberOfGames;
 	int puzzleDifficulty;
 	int wordDataValue;
+	int continuousGameAward;
+	int achievedAward;
+	bool hintUsedAward;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;

@@ -4,8 +4,7 @@ import bb.system 1.0
 Container {
     id: homePageContainer
     objectName: "homePageContainer"
-    //background: Color.Black
-    background: Color.create("#0098f0")
+    //background: Color.create("#0098f0")
     Container {
         property string scoreLoopUsername
         property string btnName
@@ -21,7 +20,77 @@ Container {
                 imageSource: "asset:///images/hint.png"
             }
         }
-        Container { //top
+        Container { //container background image
+            ImageView {
+                imageSource: "asset:///images/tabs.png"
+            }
+        }
+        Container {
+            id: tabHints
+            opacity: 0
+            ImageView {
+                imageSource: "asset:///images/tabHints.png"
+            }
+        }
+        Container {
+            id: tabHelp
+            opacity: 0
+            ImageView {
+                imageSource: "asset:///images/tabHelp.png"
+            }
+        }
+        Container {
+            layout: DockLayout {
+            }
+            topPadding: 25
+            preferredWidth: 768
+            preferredHeight: 250
+            //background: Color.White
+            Container {
+                id: help
+                horizontalAlignment: HorizontalAlignment.Right
+                verticalAlignment: VerticalAlignment.Top
+                preferredHeight: 100
+                preferredWidth: 175
+                //background: Color.White
+                onTouch: {
+                    if (event.isDown()) {
+                        tabHelp.opacity = 1;
+                        wordsPlus.playSound("letterSelected");
+                    } else if (event.isUp()) {
+                        tabHelp.opacity = 0;
+                        homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
+                        homeSysToast.show();
+                    }
+                }
+                onTouchExit: {
+                    tabHelp.opacity = 0;
+                }
+            }
+            Container {
+                id: hint
+                horizontalAlignment: HorizontalAlignment.Right
+                verticalAlignment: VerticalAlignment.Bottom
+                preferredHeight: 100
+                preferredWidth: 175
+                //background: Color.White
+                onTouch: {
+                    if (event.isDown()) {
+                        tabHints.opacity = 1;
+                        wordsPlus.playSound("letterSelected");
+                    } else if (event.isUp()) {
+                        tabHints.opacity = 0;
+                        homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
+                        homeSysToast.show();
+                    }
+                }
+                onTouchExit: {
+                    tabHints.opacity = 0;
+                }
+            }
+        }
+        Container {
+            //background: Color.Gray //top
             Container { //love me container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
@@ -50,6 +119,7 @@ Container {
             topPadding: 150
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
+            //background: Color.Gray
             ImageView {
                 id: puzzleLetters
                 opacity: 1
@@ -211,102 +281,91 @@ Container {
                 }
             }
         }
-        Container { //rotate me container
-            layout: StackLayout {
-                orientation: LayoutOrientation.LeftToRight
-            }
-            leftPadding: 270
-            topPadding: 50
-            verticalAlignment: VerticalAlignment.Top
-            horizontalAlignment: HorizontalAlignment.Center
-            Container {
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
-                }
-                Container {
-                    ImageView {
-                        objectName: "rotateRotateImage"
-                        horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/rotate_blk.png"
-                    }
-                    Label {
-                        topMargin: 0
-                        horizontalAlignment: HorizontalAlignment.Center
-                        text: "ROTATE ME"
-                        textStyle {
-                            base: smallTxtNormalWhite.style
-                        }
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
-                            homeSysToast.show();
-                        }
-                    }
-                }
-                Container {
-                    leftMargin: 50
-                    ImageView {
-                        objectName: "rotateGuideImage"
-                        horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/guide_blk.png"
-                    }
-                    Label {
-                        topMargin: 0
-                        horizontalAlignment: HorizontalAlignment.Center
-                        text: "GUIDE ME"
-                        textStyle {
-                            base: smallTxtNormalWhite.style
-                        }
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing finger)\nSwipe down from the top for options"
-                            homeSysToast.show();
-                        }
-                    }
-                }
-                Container {
-                    leftMargin: 50
-                    ImageView {
-                        objectName: "rotateReviewImage"
-                        horizontalAlignment: HorizontalAlignment.Center
-                        imageSource: "asset:///images/review_blk.png"
-                    }
-                    Label {
-                        topMargin: 0
-                        horizontalAlignment: HorizontalAlignment.Center
-                        text: "REVIEW ME"
-                        textStyle {
-                            base: smallTxtNormalWhite.style
-                        }
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            invokeLeaveReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                }
-            }
-        } //end of rotate me
-        //        Container {
-        //            bottomPadding: 200
-        //            verticalAlignment: VerticalAlignment.Bottom
+        //        Container { //rotate me container
+        //            layout: StackLayout {
+        //                orientation: LayoutOrientation.LeftToRight
+        //            }
+        //            opacity: 0
+        //            leftPadding: 270
+        //            topPadding: 50
+        //            verticalAlignment: VerticalAlignment.Top
         //            horizontalAlignment: HorizontalAlignment.Center
-        //            Label {
-        //                opacity: connectionError
-        //                text: "DATA CONNECTION ERROR!"
-        //                textStyle {
-        //                    base: smallTxtNormalWhite.style
+        //            Container {
+        //                layout: StackLayout {
+        //                    orientation: LayoutOrientation.LeftToRight
+        //                }
+        //                Container {
+        //                    ImageView {
+        //                        objectName: "rotateRotateImage"
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        imageSource: "asset:///images/rotate_blk.png"
+        //                    }
+        //                    Label {
+        //                        topMargin: 0
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        text: "ROTATE ME"
+        //                        textStyle {
+        //                            base: smallTxtNormalWhite.style
+        //                        }
+        //                    }
+        //                    onTouch: {
+        //                        if (event.isDown()) {
+        //                            wordsPlus.playSound("letterSelected");
+        //                        } else if (event.isUp()) {
+        //                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
+        //                            homeSysToast.show();
+        //                        }
+        //                    }
+        //                }
+        //                Container {
+        //                    leftMargin: 50
+        //                    ImageView {
+        //                        objectName: "rotateGuideImage"
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        imageSource: "asset:///images/guide_blk.png"
+        //                    }
+        //                    Label {
+        //                        topMargin: 0
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        text: "GUIDE ME"
+        //                        textStyle {
+        //                            base: smallTxtNormalWhite.style
+        //                        }
+        //                    }
+        //                    onTouch: {
+        //                        if (event.isDown()) {
+        //                            wordsPlus.playSound("letterSelected");
+        //                        } else if (event.isUp()) {
+        //                            homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing finger)\nSwipe down from the top for options"
+        //                            homeSysToast.show();
+        //                        }
+        //                    }
+        //                }
+        //                Container {
+        //                    leftMargin: 50
+        //                    ImageView {
+        //                        objectName: "rotateReviewImage"
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        imageSource: "asset:///images/review_blk.png"
+        //                    }
+        //                    Label {
+        //                        topMargin: 0
+        //                        horizontalAlignment: HorizontalAlignment.Center
+        //                        text: "REVIEW ME"
+        //                        textStyle {
+        //                            base: smallTxtNormalWhite.style
+        //                        }
+        //                    }
+        //                    onTouch: {
+        //                        if (event.isDown()) {
+        //                            wordsPlus.playSound("letterSelected");
+        //                        } else if (event.isUp()) {
+        //                            invokeLeaveReview.trigger("bb.action.OPEN");
+        //                        }
+        //                    }
         //                }
         //            }
-        //        }
+        //        } //end of rotate me
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }
@@ -370,11 +429,11 @@ Container {
                 uri: "appworld://content/19132685"
             }
         },
-        SystemToast {
-            id: homeSysToast
-            body: ""
-            button.label: "Got it!" //btnName
-        },
+                SystemToast {
+                    id: homeSysToast
+                    body: ""
+                    button.label: "Got it!" //btnName
+                },
         Sheet {
             id: aboutSheet
             AboutSheet {

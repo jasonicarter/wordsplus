@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wholeword"/>
-		<item value="directionalBoundNeg" key="selection"/>
+		<item value="requestUpdate" key="selection"/>
 		<list key="findhistory">
+			<item value="requestUpdate"/>
+			<item value="request"/>
+			<item value="numberOfGames"/>
 			<item value="25"/>
 			<item value="mainLoader"/>
 			<item value="m_strPuzzleWords"/>
 			<item value="getPuzzleWords"/>
 			<item value="setPuzzleWords"/>
-			<item value="mainTab"/>
-			<item value="leaderboardList"/>
-			<item value="leaderboardModel"/>
 		</list>
 		<list key="replacehistory">
 			<item value="directionalBoundNeg"/>
