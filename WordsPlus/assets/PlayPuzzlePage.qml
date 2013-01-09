@@ -106,9 +106,8 @@ Container { // root Container
     }
     function handleSignal() {
         wordsPlus.stopTimer();
-        var mySheet = puzzleCompletedSheetDefinition.createObject();
-        mySheet.open();
-        //puzzleCompletedSheet.open();
+        var completedSheet = puzzleCompletedSheetDefinition.createObject();
+        completedSheet.open();
     }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
