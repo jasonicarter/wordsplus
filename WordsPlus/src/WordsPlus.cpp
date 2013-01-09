@@ -78,11 +78,62 @@ using namespace bb::system;
 using namespace bb::multimedia;
 using namespace bb::cascades::advertisement;
 
-//WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
-//		QObject(parent), m_context(&context) {
+WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
+		QObject(parent), m_context(&context)
+{
+	show();
+}
 
-WordsPlus::WordsPlus(QObject *parent) :
-		QObject(parent){
+//WordsPlus::WordsPlus(QObject *parent) :
+//		QObject(parent){
+//
+//	//set default values
+//	deltaX = 0.0;
+//	deltaY = 0.0;
+//	multiple = 1;
+//	length = 0;
+//	directionalBoundPos = 35;
+//  directionalBoundNeg = -35;
+//	upperbound = 100;
+//	lowerbound = 0;
+//	position = 0;
+//	tileSize = 50;
+//	timeSec = 0;
+//	stopWatch = NULL;
+//	numberOfWordsFound = 0;
+//	m_strSeletedLetters = "";
+//	isPuzzleDisplayed = false;
+//	wordDataValue = -1;
+//	continuousGameAward = 0;
+//	achievedAward = 0;
+//
+//
+//	// Initialize for local storage settings
+//	settings = new GameSettings();
+//	Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
+//
+//	// Initialize the sound manager with a directory that resides in the
+//	// assets directory which only contains playable files.
+//	mSoundManager = new SoundManager("sounds/");
+//
+//	//score loop stuff - need to register to make it work - investigate
+//	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
+//
+//	// Registers the banner for QML
+//	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
+//
+//	//REMOVE ME
+//	show();
+//
+//}
+
+// Look into what else to destroy if nescessary
+WordsPlus::~WordsPlus() {
+	// Destroy the sound manager.
+	delete mSoundManager;
+}
+
+void WordsPlus::show() {
 
 	//set default values
 	deltaX = 0.0;
@@ -118,19 +169,6 @@ WordsPlus::WordsPlus(QObject *parent) :
 
 	// Registers the banner for QML
 	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
-
-	//REMOVE ME
-	show();
-
-}
-
-// Look into what else to destroy if nescessary
-WordsPlus::~WordsPlus() {
-	// Destroy the sound manager.
-	delete mSoundManager;
-}
-
-void WordsPlus::show() {
 
 	mQmlDocument = QmlDocument::create("asset:///main.qml");
 	mQmlDocument->setParent(this);
@@ -819,10 +857,6 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 
-//	//TODO REMOVE ME
-	ProcessAwards();
-	emit puzzleCompleted();
-
 	int i;
 	int ii;
 	QString selectedWord;
@@ -889,7 +923,6 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 //					getScore());
 //			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
-			//emit lastPuzzleTimeChanged();
 			ProcessAwards();
 			emit puzzleCompleted();
 		}
@@ -1171,43 +1204,43 @@ void WordsPlus::setDifficulty(int difficulty) {
 
 void WordsPlus::ControlsForBBM(int state) {
 
-//	// Create the user profile and profile box objects
-//	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
-//	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
-//
-//	switch (state) {
-//	case PROFILEBOXPUZZLECOMPLETED: {
-//		if (getProfileBox()) {
-//			QString msg = QString(
-//					"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
-//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-//					getScore());
-//
-//			//register icons
-//			profileBox = new ProfileBox(m_profileBox);
-//
-//			//wordsPlus.png iconId = 1
-//			//could use #define WORDSPLUSPROFILEBOX 1
-//			//use 0 if you have no image
-//			profileBox->addProfileBoxItem(msg, 3);
-//		}
-//		break;
-//	}
-//	case PRESONALMESSAGE: {
-//		updateProfile = new UpdateProfile(m_userProfile);
-//		updateProfile->savePersonalMessage();
-//		break;
-//	}
-//	case STATUSMESSAGE: {
-//		updateProfile = new UpdateProfile(m_userProfile);
-//		updateProfile->saveStatus();
-//		break;
-//	}
-//	case INVITETODOWNLOAD: {
-//		inviteToDownload = new InviteToDownload(m_context);
-//		inviteToDownload->sendInvite();
-//		break;
-//	}
-//	}
+	// Create the user profile and profile box objects
+	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
+	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
+
+	switch (state) {
+		case PROFILEBOXPUZZLECOMPLETED: {
+			if (getProfileBox()) {
+				QString msg = QString(
+						"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
+						(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+						getScore());
+
+				//register icons
+				profileBox = new ProfileBox(m_profileBox);
+
+				//wordsPlus.png iconId = 1
+				//could use #define WORDSPLUSPROFILEBOX 1
+				//use 0 if you have no image
+				profileBox->addProfileBoxItem(msg, 3);
+			}
+			break;
+		}
+		case PRESONALMESSAGE: {
+			updateProfile = new UpdateProfile(m_userProfile);
+			updateProfile->savePersonalMessage();
+			break;
+		}
+		case STATUSMESSAGE: {
+			updateProfile = new UpdateProfile(m_userProfile);
+			updateProfile->saveStatus();
+			break;
+		}
+		case INVITETODOWNLOAD: {
+			inviteToDownload = new InviteToDownload(m_context);
+			inviteToDownload->sendInvite();
+			break;
+		}
+	}
 
 }

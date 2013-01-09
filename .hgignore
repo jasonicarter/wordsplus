@@ -4,3 +4,4 @@ syntax: glob
 syntax: regexp
 .metadata/.plugins/org.eclipse.core.resources/.history
 WordsPlus/assets/.preview
+.pdom
