@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlus/assets/models/Copy of categories.xml&apos; to &apos;all.xml&apos;" description="Rename resource &apos;Copy of categories.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/models/Copy of categories.xml" name="all.xml" stamp="1357841967746" updateReferences="true"/>
+</session>

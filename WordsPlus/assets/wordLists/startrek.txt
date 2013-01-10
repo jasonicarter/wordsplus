@@ -27,7 +27,6 @@ trekkie
 turbolift
 vulcans
 worf
-ds9
 ezri
 jadzia
 benjamin

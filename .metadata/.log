@@ -7385,3 +7385,561 @@ Caused by: org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 73 more
+!SESSION 2013-01-09 10:33:04.799 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.634
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.780
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.782
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.784
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.786
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.789
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.796
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.798
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.805
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.808
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.810
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.815
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [loadEffect, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.819
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.822
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.825
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [appearance, branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.827
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.834
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.840
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.873
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders, devicePixelRatio, defaultFontSizeFollowsSystemFontSize]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.876
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.877
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.880
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.882
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.886
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.891
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.899
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, invokerIncluded, fileTransferMode, metadata]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.901
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.904
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.906
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.907
+!MESSAGE Cannot find PVInfo for: bb::cascades::AbstractContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.910
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.912
+!MESSAGE Cannot find PVInfo for: bb::cascades::ContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.914
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.915
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.917
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.921
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.923
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.924
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.926
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.933
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.935
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.936
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.938
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.943
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.945
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.946
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.948
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.950
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.951
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.952
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RenderFence PropertyInfoList: [raised]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.954
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.955
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.958
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, maximumLength, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.959
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.965
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.969
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.973
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.976
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.981
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.985
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.988
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, query.metadata, query.invokerIncluded, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.994
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:20.997
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:21.000
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:21.002
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-09 10:33:21.003
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.013
+!MESSAGE Cannot resolve ValueType variant: double
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.014
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.015
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.019
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.021
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.023
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-09 10:33:21.025
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2013-01-09 10:33:25.298
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-09 10:33:31.133
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-09 10:33:34.250
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-09 10:33:34.250
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@18facfb),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18facfb)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@18facfb),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18facfb)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-09 12:20:53.408
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-09 12:21:07.242
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-09 12:46:39.031
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-09 12:47:02.278
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-09 12:50:23.759
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.debug.core 4 125 2013-01-09 12:52:53.572
+!MESSAGE Error logged from Debug Core: 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Target not available.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:114)
+	at org.eclipse.cdt.dsf.debug.sourcelookup.DsfSourceLookupParticipant.getSourceName(DsfSourceLookupParticipant.java:196)
+	at org.eclipse.cdt.dsf.debug.sourcelookup.DsfSourceLookupParticipant.findSourceElements(DsfSourceLookupParticipant.java:87)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:490)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:758)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:201)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:184)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2013-01-09 12:52:53.573
+!MESSAGE Target not available.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-09 12:52:57.695
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.ui 4 4 2013-01-09 12:59:46.694
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-09 12:59:46.742
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-09 13:00:10.592
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2013-01-09 14:14:43.599
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-09 14:14:43.649
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY org.eclipse.ui 4 4 2013-01-09 14:42:52.815
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-09 14:42:52.863
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+!SESSION 2013-01-10 10:02:08.452 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-10 10:02:16.288
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-10 10:02:16.288
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cf1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cf1)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1429cf1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1429cf1)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-10 12:56:51.594
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.667
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.667
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.722
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.723
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.725
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.726
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.731
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.732
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.737
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.738
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.739
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.743
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [loadEffect, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.745
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.747
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.750
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [appearance, branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.752
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.754
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.754
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.767
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders, devicePixelRatio, defaultFontSizeFollowsSystemFontSize]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.769
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.770
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.772
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.773
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.775
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.777
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.782
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, invokerIncluded, fileTransferMode, metadata]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.784
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.786
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.788
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.788
+!MESSAGE Cannot find PVInfo for: bb::cascades::AbstractContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.789
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.789
+!MESSAGE Cannot find PVInfo for: bb::cascades::ContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.790
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.790
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.791
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.793
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.794
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.795
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.795
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.799
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.800
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.801
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.802
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.805
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.807
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.808
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.808
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.809
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.810
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.810
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RenderFence PropertyInfoList: [raised]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.811
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.812
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.814
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, maximumLength, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.815
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.819
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.820
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.822
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.823
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.826
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.827
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.829
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, query.metadata, query.invokerIncluded, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.832
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.833
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.835
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.836
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-10 12:56:58.837
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.844
+!MESSAGE Cannot resolve ValueType variant: double
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.845
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.846
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.846
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.847
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.848
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-10 12:56:58.848
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2013-01-10 12:56:59.385
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-10 12:57:01.011
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-10 13:08:36.408
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui 4 4 2013-01-10 14:10:06.579
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-10 14:10:06.633
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-10 14:10:25.074
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-10 14:10:38.179
+!MESSAGE Build version: 21691548daf2eeb5cc287066008d1b4a0137d4a4

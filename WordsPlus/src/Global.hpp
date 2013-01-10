@@ -26,11 +26,11 @@ public:
 	bb::platform::bbm::Context* getContext();
 	void setContext(bb::platform::bbm::Context *context);
 	bool getIsInternetAvailable();
-	void setIsInternetAvailable(bool isAvailable);
+	//void setIsInternetAvailable(bool isAvailable);
 
 private:
 	bb::platform::bbm::Context * m_context;
-	bool isInternetAvailable; //currently not implemented
+	//bool isInternetAvailable; //currently not implemented
 };
 
 #endif /* GLOBAL_HPP_ */

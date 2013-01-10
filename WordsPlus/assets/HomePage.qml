@@ -12,17 +12,17 @@ Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
+        Container { //container background image
+            ImageView {
+                imageSource: "asset:///images/tabs.png"
+            }
+        }
         Container {
             ImageView {
                 id: rotateImageMsg
                 objectName: "rotateImageMsg"
                 opacity: 0
                 imageSource: "asset:///images/hint.png"
-            }
-        }
-        Container { //container background image
-            ImageView {
-                imageSource: "asset:///images/tabs.png"
             }
         }
         Container {
@@ -80,7 +80,7 @@ Container {
                         wordsPlus.playSound("letterSelected");
                     } else if (event.isUp()) {
                         tabHints.opacity = 0;
-                        homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
+                        homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
                         homeSysToast.show();
                     }
                 }
@@ -281,91 +281,6 @@ Container {
                 }
             }
         }
-        //        Container { //rotate me container
-        //            layout: StackLayout {
-        //                orientation: LayoutOrientation.LeftToRight
-        //            }
-        //            opacity: 0
-        //            leftPadding: 270
-        //            topPadding: 50
-        //            verticalAlignment: VerticalAlignment.Top
-        //            horizontalAlignment: HorizontalAlignment.Center
-        //            Container {
-        //                layout: StackLayout {
-        //                    orientation: LayoutOrientation.LeftToRight
-        //                }
-        //                Container {
-        //                    ImageView {
-        //                        objectName: "rotateRotateImage"
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        imageSource: "asset:///images/rotate_blk.png"
-        //                    }
-        //                    Label {
-        //                        topMargin: 0
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        text: "ROTATE ME"
-        //                        textStyle {
-        //                            base: smallTxtNormalWhite.style
-        //                        }
-        //                    }
-        //                    onTouch: {
-        //                        if (event.isDown()) {
-        //                            wordsPlus.playSound("letterSelected");
-        //                        } else if (event.isUp()) {
-        //                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate\" Me"
-        //                            homeSysToast.show();
-        //                        }
-        //                    }
-        //                }
-        //                Container {
-        //                    leftMargin: 50
-        //                    ImageView {
-        //                        objectName: "rotateGuideImage"
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        imageSource: "asset:///images/guide_blk.png"
-        //                    }
-        //                    Label {
-        //                        topMargin: 0
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        text: "GUIDE ME"
-        //                        textStyle {
-        //                            base: smallTxtNormalWhite.style
-        //                        }
-        //                    }
-        //                    onTouch: {
-        //                        if (event.isDown()) {
-        //                            wordsPlus.playSound("letterSelected");
-        //                        } else if (event.isUp()) {
-        //                            homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing finger)\nSwipe down from the top for options"
-        //                            homeSysToast.show();
-        //                        }
-        //                    }
-        //                }
-        //                Container {
-        //                    leftMargin: 50
-        //                    ImageView {
-        //                        objectName: "rotateReviewImage"
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        imageSource: "asset:///images/review_blk.png"
-        //                    }
-        //                    Label {
-        //                        topMargin: 0
-        //                        horizontalAlignment: HorizontalAlignment.Center
-        //                        text: "REVIEW ME"
-        //                        textStyle {
-        //                            base: smallTxtNormalWhite.style
-        //                        }
-        //                    }
-        //                    onTouch: {
-        //                        if (event.isDown()) {
-        //                            wordsPlus.playSound("letterSelected");
-        //                        } else if (event.isUp()) {
-        //                            invokeLeaveReview.trigger("bb.action.OPEN");
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        } //end of rotate me
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }
@@ -429,11 +344,11 @@ Container {
                 uri: "appworld://content/19132685"
             }
         },
-                SystemToast {
-                    id: homeSysToast
-                    body: ""
-                    button.label: "Got it!" //btnName
-                },
+        SystemToast {
+            id: homeSysToast
+            body: ""
+            button.label: "Got it!" //btnName
+        },
         Sheet {
             id: aboutSheet
             AboutSheet {

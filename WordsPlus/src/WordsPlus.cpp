@@ -22,7 +22,6 @@
 #include <bb/system/SystemToast>
 #include <bb/multimedia/SystemSound>
 #include <bb/cascades/FadeTransition>
-#include <bb/cascades/advertisement/Banner>
 
 
 //should probably all be static const and not #define as this makes them global
@@ -53,11 +52,12 @@
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlus.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
 //global - to be accessed from wordsPlus to set awards
-static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
-static const char SCORELOOP_TESTTWO[]	= "wordsplus.testaward2";
-static const char SCORELOOP_TESTTHREE[] = "wordsplus.testaward3";
+//static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
+//static const char SCORELOOP_TESTTWO[]	= "wordsplus.testaward2";
+//static const char SCORELOOP_TESTTHREE[] = "wordsplus.testaward3";
 static const char SCORELOOP_BBMPERSONALMSG[] = "wordsplus.bbmpersonalmsg";
 static const char SCORELOOP_BBMSTATUSMSG[] = "wordsplus.bbmstatusmsg";
+static const char SCORELOOP_BBMINVITE[] = "wordsplus.bbminvitetodownload";
 static const char SCORELOOP_FIRSTGAME[] = "wordsplus.firstgame";
 static const char SCORELOOP_USEAHINT[] = "wordsplus.usehint";
 static const char SCORELOOP_BACKTWOBACK[] = "wordsplus.backtwoback";
@@ -71,70 +71,17 @@ static const char SCORELOOP_UNDERONEMIN[] = "wordsplus.underonemin";
 static const char SCORELOOP_OVERTENK[] = "wordsplus.overtenthousand";
 static const char SCORELOOP_UNTOUCHABLE[] = "wordsplus.untouchable";
 static const char SCORELOOP_RUSHHOUR[] = "wordsplus.rushhour";
+static const char SCORELOOP_OVERFIFTYK[] = "wordsplus.overfiftythousand";
+static const char SCORELOOP_OVERONETHOUSANDK[] = "wordsplus.overonethousandk";
 
 
 using namespace bb::cascades;
 using namespace bb::system;
 using namespace bb::multimedia;
-using namespace bb::cascades::advertisement;
 
 WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 		QObject(parent), m_context(&context)
 {
-	show();
-}
-
-//WordsPlus::WordsPlus(QObject *parent) :
-//		QObject(parent){
-//
-//	//set default values
-//	deltaX = 0.0;
-//	deltaY = 0.0;
-//	multiple = 1;
-//	length = 0;
-//	directionalBoundPos = 35;
-//  directionalBoundNeg = -35;
-//	upperbound = 100;
-//	lowerbound = 0;
-//	position = 0;
-//	tileSize = 50;
-//	timeSec = 0;
-//	stopWatch = NULL;
-//	numberOfWordsFound = 0;
-//	m_strSeletedLetters = "";
-//	isPuzzleDisplayed = false;
-//	wordDataValue = -1;
-//	continuousGameAward = 0;
-//	achievedAward = 0;
-//
-//
-//	// Initialize for local storage settings
-//	settings = new GameSettings();
-//	Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
-//
-//	// Initialize the sound manager with a directory that resides in the
-//	// assets directory which only contains playable files.
-//	mSoundManager = new SoundManager("sounds/");
-//
-//	//score loop stuff - need to register to make it work - investigate
-//	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
-//
-//	// Registers the banner for QML
-//	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
-//
-//	//REMOVE ME
-//	show();
-//
-//}
-
-// Look into what else to destroy if nescessary
-WordsPlus::~WordsPlus() {
-	// Destroy the sound manager.
-	delete mSoundManager;
-}
-
-void WordsPlus::show() {
-
 	//set default values
 	deltaX = 0.0;
 	deltaY = 0.0;
@@ -154,11 +101,14 @@ void WordsPlus::show() {
 	wordDataValue = -1;
 	continuousGameAward = 0;
 	achievedAward = 0;
+	bbmLoveAward = false;
+	bbmBusyAward = false;
+	bbmInviteAward = false;
 
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
-	Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
+	//Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
 
 	// Initialize the sound manager with a directory that resides in the
 	// assets directory which only contains playable files.
@@ -167,8 +117,15 @@ void WordsPlus::show() {
 	//score loop stuff - need to register to make it work - investigate
 	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
 
-	// Registers the banner for QML
-	qmlRegisterType<bb::cascades::advertisement::Banner>("bb.cascades.advertisement", 1, 0, "Banner");
+}
+
+// Look into what else to destroy if nescessary
+WordsPlus::~WordsPlus() {
+	// Destroy the sound manager.
+	delete mSoundManager;
+}
+
+void WordsPlus::show() {
 
 	mQmlDocument = QmlDocument::create("asset:///main.qml");
 	mQmlDocument->setParent(this);
@@ -197,6 +154,7 @@ void WordsPlus::show() {
 			QObject::connect(mScoreLoop, SIGNAL(AchieveAwardCompleted()),
 								this, SLOT(onAchievedAward()));
 
+			// orientation sensor
 			mOrientationSensor = new OrientationSensor(this);
 			QObject::connect(mOrientationSensor, SIGNAL(orientationChanged()),
 					this, SLOT(onOrientationChanged()));
@@ -209,7 +167,6 @@ void WordsPlus::show() {
 
 			InitializeHomePage();
 			InitializePuzzlePage();
-			//playSound(SOUNDBACKGROUNDMUSIC);
 			Application::instance()->setScene(appPage);
 
 			mScoreLoop->start();
@@ -244,17 +201,11 @@ void WordsPlus::onOrientationChanged() {
 			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else {
-			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			//rotateReviewImage->setRotationZ(90);
 			rotateHeartImage->setRotationZ(90);
-			//rotateRotateImage->setRotationZ(90);
-			//rotateGuideImage->setRotationZ(90);
 			rotateProfileImage->setRotationZ(90);
 			rotateHomeImage->setRotationZ(90);
 			rotateImageMsg->setOpacity(1);
@@ -268,17 +219,11 @@ void WordsPlus::onOrientationChanged() {
 			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
 		else {
-			//ImageView *rotateReviewImage = homePageControl->findChild<ImageView*>("rotateReviewImage");
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			//ImageView *rotateRotateImage = homePageControl->findChild<ImageView*>("rotateRotateImage");
-			//ImageView *rotateGuideImage = homePageControl->findChild<ImageView*>("rotateGuideImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
 			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			//rotateReviewImage->setRotationZ(0);
 			rotateHeartImage->setRotationZ(0);
-			//rotateRotateImage->setRotationZ(0);
-			//rotateGuideImage->setRotationZ(0);
 			rotateProfileImage->setRotationZ(0);
 			rotateHomeImage->setRotationZ(0);
 			rotateImageMsg->setOpacity(0);
@@ -314,7 +259,7 @@ void WordsPlus::onLoadLeaderboardCompleted(QVariantList data) {
 void WordsPlus::loadLeaderboard() {
 	LOG("loadLeaderboard")
 	if (Global::instance()->getIsInternetAvailable()) {
-		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 20);
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 50);
 	}
 }
 
@@ -344,7 +289,7 @@ void WordsPlus::ProcessAwards() {
 	int scoreAward = 0;
 	int difficultyAward = 0;
 	bool nineTofiveAward = false;
-	bool rushhourAward = false;
+	bool rushHourAward = false;
 
 	continuousGameAward++;
 	puzzleTimeAward = timeSec;
@@ -360,96 +305,96 @@ void WordsPlus::ProcessAwards() {
 		if( (hourOfDay > 8) && (hourOfDay < 17) ) {
 			nineTofiveAward = true;
 		} else if ( (hourOfDay > 5) and (hourOfDay < 9) ) {
-			rushhourAward = true;
+			rushHourAward = true;
 		} else if ( (hourOfDay > 16) and (hourOfDay < 20) ) {
-			rushhourAward = true;
+			rushHourAward = true;
 		}
 	}
 
+//	if( (puzzleTimeAward <= 120) && (difficultyAward == 2) ) {
+//		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTONE);
+//	}
+//	if(continuousGameAward == 3) {
+//		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTWO);
+//	}
+//	if(scoreAward > 500) {
+//		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
+//	}
 
-	//may not need to check internet - local achieve first and then syncs
-	//wrap sync around internet check???
-	if (Global::instance()->getIsInternetAvailable()) {
 
-		if( (puzzleTimeAward <= 120) && (difficultyAward == 2) ) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTONE);
-		}
-		if(continuousGameAward == 3) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTWO);
-		}
-		if(scoreAward > 500) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
-		}
+	//beginner's luck
+	ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
 
-/*
-		//beginner's luck
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
-
-		//two games straight
-		if (continuousGameAward == 2) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
-		}
-
-		//three games straight
-		if (continuousGameAward == 3) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
-		}
-
-		//TODO spread the love
-		//TODO tell them your busy
-
-		//rush hour
-		if(rushhour) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
-		}
-
-		//nine to five
-		if(nineTofiveAward) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
-		}
-
-		//no hint at hard
-		if( !hintUsedAward && difficultyAward == 8) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
-		}
-
-		//use a hint
-		if( hintUsedAward ) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
-		}
-
-		//under 30 secs at easy
-		if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
-		}
-
-		//over 3 mins at medium
-		if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
-		}
-
-		//under 1 min at hard
-		if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
-		}
-
-		//over 10 mins
-		if (puzzleTimeAward > 600) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
-		}
-
-		//over 10K points
-		if (scoreAward > 10000) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
-		}
-
-		//20 games straight
-		if (continuousGameAward == 20) {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
-		}
-*/
-
+	//two games straight
+	if (continuousGameAward == 2) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
 	}
+
+	//three games straight
+	if (continuousGameAward == 3) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+	}
+
+	//rush hour
+	if(rushHourAward) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
+	}
+
+	//nine to five
+	if(nineTofiveAward) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
+	}
+
+	//no hint at hard
+	if( !hintUsedAward && difficultyAward == 8) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
+	}
+
+	//use a hint
+	if( hintUsedAward ) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
+	}
+
+	//under 30 secs at easy
+	if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+	}
+
+	//over 3 mins at medium
+	if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
+	}
+
+	//under 1 min at hard
+	if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERONEMIN);
+	}
+
+	//over 10 mins
+	if (puzzleTimeAward > 600) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
+	}
+
+	//over 10K points
+	if (scoreAward > 10000) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
+	}
+
+	//over 50K points
+	if (scoreAward > 50000) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERFIFTYK);
+	}
+
+	//over 100K points
+	if (scoreAward > 100000) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONETHOUSANDK);
+	}
+
+	//20 games straight
+	if (continuousGameAward == 20) {
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
+	}
+
 }
 
 void WordsPlus::onAchievedAward() {
@@ -754,10 +699,11 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		multiple = 1;
 		WordCompleted(tileNumbers);
 		tileNumbers.clear();
+		//LOG("touch event->isUp");
 	} // isUp
 
 	if (event->isCancel()) {
-		//LOG("touch cancelled");
+		//LOG("touch event->isCancelled");
 		position = 0;
 		multiple = 1;
 		WordCompleted(tileNumbers);
@@ -856,6 +802,9 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 }
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
+//	LOG("wordCompleted");
+//	ProcessAwards();
+//	emit puzzleCompleted();
 
 	int i;
 	int ii;
@@ -1208,11 +1157,13 @@ void WordsPlus::ControlsForBBM(int state) {
 	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
 	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
 
+	//BBM Awards - if already awarded, nothing happens in AchieveAward();
+
 	switch (state) {
 		case PROFILEBOXPUZZLECOMPLETED: {
 			if (getProfileBox()) {
 				QString msg = QString(
-						"More Puzzles. More Fun.\nCompleted Another One! \nTime: %1  Score: %2").arg(
+						"Completed Another One! \nTime: %1  Score: %2").arg(
 						(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
 						getScore());
 
@@ -1227,16 +1178,19 @@ void WordsPlus::ControlsForBBM(int state) {
 			break;
 		}
 		case PRESONALMESSAGE: {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMPERSONALMSG);
 			updateProfile = new UpdateProfile(m_userProfile);
 			updateProfile->savePersonalMessage();
 			break;
 		}
 		case STATUSMESSAGE: {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMSTATUSMSG);
 			updateProfile = new UpdateProfile(m_userProfile);
 			updateProfile->saveStatus();
 			break;
 		}
 		case INVITETODOWNLOAD: {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMINVITE);
 			inviteToDownload = new InviteToDownload(m_context);
 			inviteToDownload->sendInvite();
 			break;
