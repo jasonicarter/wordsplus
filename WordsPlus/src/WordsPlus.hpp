@@ -182,6 +182,9 @@ private:
 	int continuousGameAward;
 	int achievedAward;
 	bool hintUsedAward;
+	bool bbmLoveAward;
+	bool bbmBusyAward;
+	bool bbmInviteAward;
 	bool isSoundEnabled;
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;

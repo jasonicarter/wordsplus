@@ -9,7 +9,7 @@ arm
 artery
 back
 belly
-big toe
+bigtoe
 bladder
 blood
 vessels

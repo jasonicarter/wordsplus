@@ -45,7 +45,7 @@ Page {
                     Option {
                         id: dropDwnTopLeaders
                         text: "TOP LEADERS"
-                        description: "All-time top notch word finders. "
+                        description: "All-time top notch word finders."
                         onSelectedChanged: {
                             if (selected == true) {
                                 leaderBoard.removeAll();

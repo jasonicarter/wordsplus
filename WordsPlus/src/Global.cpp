@@ -14,6 +14,7 @@
  */
 
 #include "Global.hpp"
+#include <bps/netstatus.h>
 
 static Global* _pinstance = NULL;
 
@@ -33,9 +34,12 @@ void Global::setContext(bb::platform::bbm::Context *context) {
 }
 
 bool Global::getIsInternetAvailable() {
-	return isInternetAvailable;
+	bool is_available;
+	netstatus_get_availability(&is_available);
+
+	return is_available;
 }
 
-void Global::setIsInternetAvailable(bool isAvailable) {
-	isInternetAvailable = isAvailable;
-}
+//void Global::setIsInternetAvailable(bool isAvailable) {
+//	isInternetAvailable = isAvailable;
+//}

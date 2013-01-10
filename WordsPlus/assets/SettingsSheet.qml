@@ -88,6 +88,7 @@ Page {
                                 onCheckedChanged: {
                                     if (music.checked == true) {
                                         wordsPlus.musicOn = true;
+                                        bgMusic.setRepeatMode(1);
                                         bgMusic.play();
                                     } else if (music.checked == false) {
                                         wordsPlus.musicOn = false;

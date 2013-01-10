@@ -151,7 +151,7 @@ void ScoreLoopThread::HandleError(AppData_t *app, SC_Error_t error) {
 //		LOG("Internet access not available");
 //	}
 
-	Global::instance()->setIsInternetAvailable(false);
+	//Global::instance()->setIsInternetAvailable(false);
 	emit(instance()->ConnectionError("DATA CONNECTION ERROR!\nInternet access could be an issue\nYour scores may not be saved"));
 	/* Also log the error */
 	LOG("%s", SC_MapErrorToStr(error));
@@ -578,17 +578,20 @@ void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) 
 			return;
 		}
 
-		/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
-		 * after every setting of an achievement.
-		 */
-		if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
-			rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
-			if (rc != SC_OK) {
-				SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
-				HandleError(app, rc);
-				return;
+		if(Global::instance()->getIsInternetAvailable()) {
+			/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
+			 * after every setting of an achievement.
+			 */
+			if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
+				rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+				if (rc != SC_OK) {
+					SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
+					HandleError(app, rc);
+					return;
+				}
+				qDebug() << "Synchronizing Achievements...";
+				LOG("Synchronizing Achievements...");
 			}
-			qDebug() << "Synchronizing Achievements...";
 		}
 
 		emit(instance()->AchieveAwardCompleted());
