@@ -395,6 +395,9 @@ void WordsPlus::ProcessAwards() {
 		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
 	}
 
+	//internet status checked on other side
+	ScoreLoopThread::SyncAwards(mAppData);
+
 }
 
 void WordsPlus::onAchievedAward() {
@@ -802,7 +805,7 @@ void WordsPlus::HighlightSelectedTile(int pos, int stateOfLetter) {
 }
 
 void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
-//	LOG("wordCompleted");
+//TODO comment out
 //	ProcessAwards();
 //	emit puzzleCompleted();
 

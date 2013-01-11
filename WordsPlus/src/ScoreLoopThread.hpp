@@ -60,6 +60,7 @@ public:
 
 	static void AchieveAward(AppData_t *app, const char *awardIdentifier);
 	static void AchieveAwardCompletionCallback(void *userData, SC_Error_t completionStatus);
+	static void SyncAwards(AppData_t *app);
 
 	static void LoadAchievements(AppData_t *app);
 	static void LoadAchievementsCompletionCallback(void *userData, SC_Error_t completionStatus);
