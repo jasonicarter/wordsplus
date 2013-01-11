@@ -20,9 +20,10 @@
 //static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
 //static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
 
+//TODO change version to 1.4
 static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
 static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
-static const char SCORELOOP_GAME_VERSION[] = "1.0";
+static const char SCORELOOP_GAME_VERSION[] = "1.4";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
 //static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
@@ -212,15 +213,12 @@ void ScoreLoopThread::RequestUserCompletionCallback(void *userData, SC_Error_t c
 
 	LoadLeaderboardAroundUser(app, SC_SCORES_SEARCH_LIST_ALL,1);
 
+	SyncAwards(app);
 //	RequestGameData(app);
 //	SubmitGameData(app);
 }
 
 void ScoreLoopThread::RequestGameData(AppData_t *app) {
-
-//	SC_String_h points;
-//	SC_Error_t errCode;
-//	SC_Context_h myContext;
 
 	/* Create a UserController */
 	SC_Error_t rc = SC_Client_CreateUserController(app->client, &app->userController, RequestGameDataCompletionCallback, app);
@@ -578,32 +576,40 @@ void ScoreLoopThread::AchieveAward(AppData_t *app, const char *awardIdentifier) 
 			return;
 		}
 
-		if(Global::instance()->getIsInternetAvailable()) {
-			/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
-			 * after every setting of an achievement.
-			 */
-			if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
-				rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
-				if (rc != SC_OK) {
-					SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
-					HandleError(app, rc);
-					return;
-				}
-				qDebug() << "Synchronizing Achievements...";
-				LOG("Synchronizing Achievements...");
-			}
-		}
-
 		emit(instance()->AchieveAwardCompleted());
 	}
 
-	/* Cleanup Controller */
-	SC_LocalAchievementsController_Release(app->achievementsController);
+}
+
+void ScoreLoopThread::SyncAwards(AppData_t *app) {
+	/* Create an Achievements Controller */
+	SC_Error_t rc = SC_Client_CreateLocalAchievementsController(app->client, &app->achievementsController, AchieveAwardCompletionCallback, app);
+	if (rc != SC_OK) {
+		HandleError(app, rc);
+		return;
+	}
+
+	if(Global::instance()->getIsInternetAvailable()) {
+		/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
+		 * after every setting of an achievement.
+		 */
+		if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
+			rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+			if (rc != SC_OK) {
+				SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
+				HandleError(app, rc);
+				return;
+			}
+			qDebug() << "Synchronizing Achievements...";
+			LOG("Synchronizing Achievements...%i", rc);
+		}
+	}
 }
 
 void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t completionStatus) {
 	/* Get the application from userData argument */
 	AppData_t *app = (AppData_t *) userData;
+	//LOG("Done1 synchronizing Achievements");
 
 	/* Check completion status */
 	if (completionStatus != SC_OK) {
@@ -612,7 +618,7 @@ void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t 
 		return;
 	}
 	qDebug() << "Done synchronizing Achievements";
-
+	LOG("Done2 synchronizing Achievements");
 	/* Cleanup Controller */
 	SC_LocalAchievementsController_Release(app->achievementsController);
 
@@ -629,6 +635,7 @@ void ScoreLoopThread::LoadAchievements(AppData_t *app) {
 	}
 
 	/* Load the achievements */
+	// callback isn't called for some reason, so it's called manually - code from sample
 	LOG("Loading Achievements...");
 	LoadAchievementsCompletionCallback(app, SC_OK);
 }
