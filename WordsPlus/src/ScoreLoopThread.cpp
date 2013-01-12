@@ -20,9 +20,12 @@
 //static const char SCORELOOP_GAME_ID[] = "5d01c386-ed3a-11dd-bc21-0017f2031122"; //scoreloop demo
 //static const char SCORELOOP_GAME_SECRET[] = "V3jc99ubdm5MLnha5r9QzWiA89cywfoNCiHSqBDTfIyKRzob9Ra0bA==";  //scoreloop demo
 
+//static const char SCORELOOP_GAME_ID[] = "daca41e8-24ed-4aa0-86e6-3169a32cb92d"; //game test
+//static const char SCORELOOP_GAME_SECRET[] = "Go2uSPAUmvXY6CKu4v1hVxcI3jMgkATn2+tZ8e3qUovlU6UQaVXjGw==";  //game test
+
 //TODO change version to 1.4
-static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //mine
-static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //mine
+static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //live
+static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //live
 static const char SCORELOOP_GAME_VERSION[] = "1.4";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
