@@ -62,7 +62,7 @@ static const char SCORELOOP_FIRSTGAME[] = "wordsplus.firstgame";
 static const char SCORELOOP_USEAHINT[] = "wordsplus.usehint";
 static const char SCORELOOP_BACKTWOBACK[] = "wordsplus.backtwoback";
 static const char SCORELOOP_THREESOME[] = "wordsplus.threesome";
-static const char SCORELOOP_NOHINTATHARD[] = "wordsplus.nohintathard";
+static const char SCORELOOP_NOHINTATHARD[] = "wordsplus.nohintsathard";
 static const char SCORELOOP_UNDERTHIRTYATEASY[] = "wordsplus.underthirtyateasy";
 static const char SCORELOOP_JUSTAVERAGE[] = "wordsplus.overthreeminsatmedium";
 static const char SCORELOOP_OVERTENMINS[] = "wordsplus.overtenmins";
@@ -178,6 +178,9 @@ void WordsPlus::show() {
 void WordsPlus::onThumbnail() {
 	stopTimer();
 	continuousGameAward = 0;
+	//instead of postponing at exit, look to sync when thumbnailed
+	//no exit, user must thumbnail to exit
+	//ScoreLoopThread::SyncAwards(mAppData);
 }
 
 void WordsPlus::onFullscreen() {
