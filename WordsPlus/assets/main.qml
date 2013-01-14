@@ -10,17 +10,13 @@ Page {
         helpAction: HelpActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
-                var mySheet = helpSheetDefinition.createObject();
-                mySheet.open();
-                //helpSheet.open();
+                helpSheet.open();
             }
         }
         settingsAction: SettingsActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
-                var mySheet = settingsSheetDefinition.createObject();
-                mySheet.open();
-                //settingsSheet.open();
+                settingsSheet.open();
             }
         }
         actions: [
@@ -29,9 +25,7 @@ Page {
                 imageSource: "asset:///images/about.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    var mySheet = aboutSheetDefinition.createObject();
-                    mySheet.open();
-                    //aboutSheet.open();
+                    aboutSheet.open();
                 }
             },
             ActionItem {
@@ -39,9 +33,7 @@ Page {
                 imageSource: "asset:///images/category.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    var mySheet = categorySheetDefinition.createObject();
-                    mySheet.open();
-                    //categorySheet.open();
+                    categorySheet.open();
                 }
             },
             ActionItem {
@@ -49,54 +41,37 @@ Page {
                 imageSource: "asset:///images/trophy.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
-                    var mySheet = statsSheetDefinition.createObject();
-                    mySheet.open();
-                    //statsSheet.open();
+                    statsSheet.open();
                 }
             }
         ]
     }
     attachedObjects: [
-        ComponentDefinition {
-            id: aboutSheetDefinition
             Sheet {
                 id: aboutSheet
                 AboutSheet {
                 }
-            }
-        },
-        ComponentDefinition {
-            id: helpSheetDefinition
+            },
             Sheet {
                 id: helpSheet
                 HelpSheet {
                 }
-            }
-        },
-        ComponentDefinition {
-            id: settingsSheetDefinition
+            },
             Sheet {
                 id: settingsSheet
                 SettingsSheet {
                 }
-            }
-        },
-        ComponentDefinition {
-            id: categorySheetDefinition
+            },
             Sheet {
                 id: categorySheet
                 CategorySheet {
                 }
-            }
-        },
-        ComponentDefinition {
-            id: statsSheetDefinition
+            },
             Sheet {
                 id: statsSheet
                 StatsSheet {
                 }
-            }
-        },
+            },
         SystemToast {
             id: mainSysToast
             body: "" //set in C++

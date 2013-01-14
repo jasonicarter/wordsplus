@@ -53,7 +53,7 @@ public:
 	static void SubmitScore(AppData_t *app, double result, unsigned int mode);
 	static void SubmitScoreCompletionCallback(void *userData, SC_Error_t completionStatus);
 
-	static void LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count);
+	static void LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count, bool includeBuddyList);
 	static void LoadLeaderboardAroundScore(AppData_t *app, SC_Score_h score, SC_ScoresSearchList_t searchList, unsigned int count);
 	static void LoadLeaderboardAroundUser(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count);
 	static void LoadLeaderboardCompletionCallback(void *userData, SC_Error_t completionStatus);

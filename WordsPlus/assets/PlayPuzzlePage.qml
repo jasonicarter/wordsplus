@@ -137,9 +137,10 @@ Container { // root Container
         TextStyleDefinition {
             id: puzzlePageBurntOrgange
             base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
+            //fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
             color: Color.create("#CC3F10")
+            fontSize: FontSize.Large
         },
         Sheet {
             id: aboutSheet

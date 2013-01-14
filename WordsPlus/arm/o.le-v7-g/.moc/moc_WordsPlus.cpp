@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlus.hpp'
 **
-** Created: Thu Jan 10 22:10:22 2013
+** Created: Sun Jan 13 22:03:39 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -66,31 +66,31 @@ static const uint qt_meta_data_WordsPlus[] = {
      664,   10,   10,   10, 0x02,
      685,   10,   10,   10, 0x02,
      714,  708,   10,   10, 0x02,
-     731,   10,   10,   10, 0x02,
-     749,   10,   10,   10, 0x02,
-     782,   10,   10,   10, 0x02,
-     810,   10,   10,   10, 0x02,
-     852,   10,  835,   10, 0x02,
-     864,   10,   10,   10, 0x02,
-     877,   10,   10,   10, 0x02,
-     889,   10,   10,   10, 0x02,
-     908,  902,   10,   10, 0x02,
-     932,  928,   10,   10, 0x02,
+     748,  731,   10,   10, 0x02,
+     770,   10,   10,   10, 0x02,
+     803,   10,   10,   10, 0x02,
+     831,   10,   10,   10, 0x02,
+     873,   10,  856,   10, 0x02,
+     885,   10,   10,   10, 0x02,
+     898,   10,   10,   10, 0x02,
+     910,   10,   10,   10, 0x02,
+     929,  923,   10,   10, 0x02,
+     953,  949,   10,   10, 0x02,
 
  // properties: name, type, flags
-     959,  951, 0x0a495103,
-     968,  951, 0x0a495001,
-     973,  951, 0x0a495001,
-     994,  989, 0x01495003,
-    1002,  989, 0x01495003,
-    1010,  989, 0x01495003,
-    1023,  951, 0x0a495001,
-    1043,  951, 0x0a495001,
-     708, 1058, 0x02495103,
-    1062, 1058, 0x02495001,
-    1074,  951, 0x0a495103,
-    1090, 1058, 0x02495103,
-    1101, 1058, 0x02495001,
+     980,  972, 0x0a495103,
+     989,  972, 0x0a495001,
+     994,  972, 0x0a495001,
+    1015, 1010, 0x01495003,
+    1023, 1010, 0x01495003,
+    1031, 1010, 0x01495003,
+    1044,  972, 0x0a495001,
+    1064,  972, 0x0a495001,
+     708, 1079, 0x02495103,
+    1083, 1079, 0x02495001,
+    1095,  972, 0x0a495103,
+    1111, 1079, 0x02495103,
+    1122, 1079, 0x02495001,
 
  // properties: notify_signal_id
        3,
@@ -129,7 +129,8 @@ static const char qt_meta_stringdata_WordsPlus[] = {
     "onLoadLeaderboardCompleted(QVariantList)\0"
     "onAchievedAward()\0intializePlayArea()\0"
     "InitializeHomePage()\0InitializePuzzlePage()\0"
-    "score\0submitScore(int)\0loadLeaderboard()\0"
+    "score\0submitScore(int)\0includeBuddyList\0"
+    "loadLeaderboard(bool)\0"
     "loadLeaderboardAroundLastScore()\0"
     "loadLeaderboardAroundUser()\0"
     "LoadAchievementsAwards()\0ScoreLoopThread*\0"
@@ -179,7 +180,7 @@ void WordsPlus::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 28: _t->InitializeHomePage(); break;
         case 29: _t->InitializePuzzlePage(); break;
         case 30: _t->submitScore((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 31: _t->loadLeaderboard(); break;
+        case 31: _t->loadLeaderboard((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 32: _t->loadLeaderboardAroundLastScore(); break;
         case 33: _t->loadLeaderboardAroundUser(); break;
         case 34: _t->LoadAchievementsAwards(); break;
