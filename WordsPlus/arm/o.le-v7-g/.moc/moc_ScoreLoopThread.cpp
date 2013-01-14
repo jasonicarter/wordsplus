@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScoreLoopThread.hpp'
 **
-** Created: Thu Jan 10 22:10:20 2013
+** Created: Sun Jan 13 22:03:36 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

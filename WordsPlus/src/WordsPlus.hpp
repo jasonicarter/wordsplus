@@ -45,7 +45,7 @@ public:
     Q_INVOKABLE void InitializePuzzlePage();
 
     Q_INVOKABLE void submitScore(int score);
-    Q_INVOKABLE void loadLeaderboard();
+    Q_INVOKABLE void loadLeaderboard(bool includeBuddyList);
     Q_INVOKABLE void loadLeaderboardAroundLastScore();
     Q_INVOKABLE void loadLeaderboardAroundUser();
     Q_INVOKABLE void LoadAchievementsAwards();

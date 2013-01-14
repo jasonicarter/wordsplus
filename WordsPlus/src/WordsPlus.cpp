@@ -108,7 +108,6 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
-	//Global::instance()->setIsInternetAvailable(true); //initialize setting - implement real check later
 
 	// Initialize the sound manager with a directory that resides in the
 	// assets directory which only contains playable files.
@@ -259,10 +258,10 @@ void WordsPlus::onLoadLeaderboardCompleted(QVariantList data) {
 	}
 }
 
-void WordsPlus::loadLeaderboard() {
+void WordsPlus::loadLeaderboard(bool includeBuddyList) {
 	LOG("loadLeaderboard")
 	if (Global::instance()->getIsInternetAvailable()) {
-		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 50);
+		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 50, includeBuddyList);
 	}
 }
 
@@ -324,83 +323,83 @@ void WordsPlus::ProcessAwards() {
 //		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
 //	}
 
+	if (Global::instance()->getIsInternetAvailable()) {
+		//beginner's luck
+		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
 
-	//beginner's luck
-	ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
+		//two games straight
+		if (continuousGameAward == 2) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
+		}
 
-	//two games straight
-	if (continuousGameAward == 2) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BACKTWOBACK);
+		//three games straight
+		if (continuousGameAward == 3) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
+		}
+
+		//rush hour
+		if(rushHourAward) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
+		}
+
+		//nine to five
+		if(nineTofiveAward) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
+		}
+
+		//no hint at hard
+		if( !hintUsedAward && difficultyAward == 8) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
+		}
+
+		//use a hint
+		if( hintUsedAward ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
+		}
+
+		//under 30 secs at easy
+		if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
+		}
+
+		//over 3 mins at medium
+		if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
+		}
+
+		//under 1 min at hard
+		if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERONEMIN);
+		}
+
+		//over 10 mins
+		if (puzzleTimeAward > 600) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
+		}
+
+		//over 10K points
+		if (scoreAward > 10000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
+		}
+
+		//over 50K points
+		if (scoreAward > 50000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERFIFTYK);
+		}
+
+		//over 100K points
+		if (scoreAward > 100000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONETHOUSANDK);
+		}
+
+		//20 games straight
+		if (continuousGameAward == 20) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
+		}
+
+
+		ScoreLoopThread::SyncAwards(mAppData);
 	}
-
-	//three games straight
-	if (continuousGameAward == 3) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_THREESOME);
-	}
-
-	//rush hour
-	if(rushHourAward) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_RUSHHOUR);
-	}
-
-	//nine to five
-	if(nineTofiveAward) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
-	}
-
-	//no hint at hard
-	if( !hintUsedAward && difficultyAward == 8) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NOHINTATHARD);
-	}
-
-	//use a hint
-	if( hintUsedAward ) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_USEAHINT);
-	}
-
-	//under 30 secs at easy
-	if( (puzzleTimeAward <= 30) && (difficultyAward == 2) ) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERTHIRTYATEASY);
-	}
-
-	//over 3 mins at medium
-	if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
-	}
-
-	//under 1 min at hard
-	if( (puzzleTimeAward <= 60) && (difficultyAward == 8) ) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNDERONEMIN);
-	}
-
-	//over 10 mins
-	if (puzzleTimeAward > 600) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENMINS);
-	}
-
-	//over 10K points
-	if (scoreAward > 10000) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERTENK);
-	}
-
-	//over 50K points
-	if (scoreAward > 50000) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERFIFTYK);
-	}
-
-	//over 100K points
-	if (scoreAward > 100000) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONETHOUSANDK);
-	}
-
-	//20 games straight
-	if (continuousGameAward == 20) {
-		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_UNTOUCHABLE);
-	}
-
-	//internet status checked on other side
-	ScoreLoopThread::SyncAwards(mAppData);
-
 }
 
 void WordsPlus::onAchievedAward() {
@@ -613,17 +612,9 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			if (length / 60 == -multiple && length < 0) {
 				position -= 1;
 				if (position > lowerbound) {
-
-//					if(isHighlighted(position)){
-//						HighlightSelectedTile(position, NORMAL);
-//						tileNumbers.removeLast();
-//						setSelectedLetters("removeLast");
-//						multiple--;
-//					}else {
-						HighlightSelectedTile(position, HIGHLIGHT);
-						tileNumbers.append(position);
-						multiple++;
-//					}
+					HighlightSelectedTile(position, HIGHLIGHT);
+					tileNumbers.append(position);
+					multiple++;
 				}
 			}
 		} else if (deltaY >= directionalBoundNeg && deltaY <= directionalBoundPos) {
@@ -872,11 +863,6 @@ void WordsPlus::WordCompleted(QList<int> listOfNumbers) {
 			SaveBestPuzzleTime(timeSec);
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
-//			QString puzzleMsg = QString(
-//					"PUZZLE COMPLETED! \nTime: %1 Score: %2").arg(
-//					(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-//					getScore());
-//			showToast(puzzleMsg); // add icon url to pass to function
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			ProcessAwards();
 			emit puzzleCompleted();
@@ -1088,9 +1074,10 @@ int WordsPlus::getScore() {
 }
 
 void WordsPlus::setScore(int puzzleTime) {
-
+//TODO
 	int score = getScore();
-	score = score + (100000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
+	//score = score + (100000 / puzzleTime) * (getDifficulty() / 2); //had user get over 1billion in a day
+	score = score + (50000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
 
 	settings->saveValueFor(SCORE, QString::number(score));
 	submitScore(score);

@@ -404,7 +404,7 @@ void ScoreLoopThread::SubmitScoreCompletionCallback(void *userData, SC_Error_t c
 	SC_Score_Release(app->score);
 }
 
-void ScoreLoopThread::LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count) {
+void ScoreLoopThread::LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t searchList, unsigned int count, bool includeBuddyList) {
 	/* Create a ScoresController */
 	SC_Error_t rc = SC_Client_CreateScoresController(app->client, &app->scoresController, LoadLeaderboardCompletionCallback, app);
 	if (rc != SC_OK) {
@@ -412,7 +412,21 @@ void ScoreLoopThread::LoadLeaderboard(AppData_t *app, SC_ScoresSearchList_t sear
 		return;
 	}
 
-	/* Configure the Controller */
+	if(includeBuddyList) {
+		/* Get the session from the client. */
+		SC_Session_h session = SC_Client_GetSession(app->client);
+
+		/* Get the session user from the session. */
+		SC_User_h user = SC_Session_GetUser(session);
+
+		/* Configure the Controller */
+		searchList.timeInterval = SC_TIME_INTERVAL_ALL;
+		searchList.countrySelector = SC_COUNTRY_SELECTOR_ALL;
+		searchList.country = NULL;
+		searchList.usersSelector = SC_USERS_SELECTOR_BUDDYHOOD;
+		searchList.buddyhoodUser = user;
+	}
+
 	rc = SC_ScoresController_SetSearchList(app->scoresController, searchList);
 	if (rc != SC_OK) {
 		SC_ScoresController_Release(app->scoresController); /* Cleanup Controller */
@@ -442,6 +456,7 @@ void ScoreLoopThread::LoadLeaderboardAroundScore(AppData_t *app, SC_Score_h scor
 	}
 
 	/* Configure the Controller */
+	//only mode 0 probably remove next line
 	SC_ScoresController_SetMode(app->scoresController, SC_Score_GetMode(score));
 	rc = SC_ScoresController_SetSearchList(app->scoresController, searchList);
 	if (rc != SC_OK) {
@@ -470,6 +485,7 @@ void ScoreLoopThread::LoadLeaderboardAroundUser(AppData_t *app, SC_ScoresSearchL
 	}
 
 	/* Configure the Controller */
+	//only mode 0 probably remove next line
 	SC_ScoresController_SetMode(app->scoresController, 0);
 	rc = SC_ScoresController_SetSearchList(app->scoresController, searchList);
 	if (rc != SC_OK) {
@@ -592,27 +608,24 @@ void ScoreLoopThread::SyncAwards(AppData_t *app) {
 		return;
 	}
 
-	if(Global::instance()->getIsInternetAvailable()) {
-		/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
-		 * after every setting of an achievement.
-		 */
-		if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
-			rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
-			if (rc != SC_OK) {
-				SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
-				HandleError(app, rc);
-				return;
-			}
-			qDebug() << "Synchronizing Achievements...";
-			LOG("Synchronizing Achievements...%i", rc);
+	/* Synchronize achievement if indicated - this can be done at some other point in time and does not have to come
+	 * after every setting of an achievement.
+	 */
+	if (SC_LocalAchievementsController_ShouldSynchronize(app->achievementsController) == SC_TRUE) {
+		rc = SC_LocalAchievementsController_Synchronize(app->achievementsController);
+		if (rc != SC_OK) {
+			SC_LocalAchievementsController_Release(app->achievementsController); /* Cleanup Controller */
+			HandleError(app, rc);
+			return;
 		}
+		qDebug() << "Synchronizing Achievements...";
+		LOG("Synchronizing Achievements...");
 	}
 }
 
 void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t completionStatus) {
 	/* Get the application from userData argument */
 	AppData_t *app = (AppData_t *) userData;
-	//LOG("Done1 synchronizing Achievements");
 
 	/* Check completion status */
 	if (completionStatus != SC_OK) {
@@ -621,7 +634,7 @@ void ScoreLoopThread::AchieveAwardCompletionCallback(void *userData, SC_Error_t 
 		return;
 	}
 	qDebug() << "Done synchronizing Achievements";
-	LOG("Done2 synchronizing Achievements");
+	LOG("Done synchronizing Achievements");
 	/* Cleanup Controller */
 	SC_LocalAchievementsController_Release(app->achievementsController);
 

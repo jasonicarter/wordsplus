@@ -2,7 +2,7 @@ import bb.cascades 1.0
 
 Container {
     id: topLeaderboardPage
-    property bool includeBuddyList: false
+    property bool includeBuddyList: true
     Leaderboard {
         id: leaderboard
     }

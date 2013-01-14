@@ -348,21 +348,6 @@ Container {
             id: homeSysToast
             body: ""
             button.label: "Got it!" //btnName
-        },
-        Sheet {
-            id: aboutSheet
-            AboutSheet {
-            }
-        },
-        Sheet {
-            id: helpSheet
-            HelpSheet {
-            }
-        },
-        Sheet {
-            id: settingsSheet
-            SettingsSheet {
-            }
         }
     ]
 }//root container

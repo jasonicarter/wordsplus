@@ -43,8 +43,22 @@ Page {
                         }
                     }
                     Option {
+                        id: dropDwnYourAchievements
+                        text: "ACHIEVEMENTS"
+                        description: "Get them all!"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var achievementContainer = achievementDef.createObject();
+                                leaderBoard.add(achievementContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
+                    Option {
                         id: dropDwnTopLeaders
-                        text: "TOP LEADERS"
+                        text: "TOP 50 LEADERS"
                         description: "All-time top notch word finders."
                         onSelectedChanged: {
                             if (selected == true) {
@@ -71,14 +85,14 @@ Page {
                         }
                     }
                     Option {
-                        id: dropDwnYourAchievements
-                        text: "ACHIEVEMENTS"
-                        description: "Get them all!"
+                        id: dropDwnBuddyPosition
+                        text: "YOUR FRIENDS"
+                        description: "See how your friends are doing."
                         onSelectedChanged: {
                             if (selected == true) {
                                 leaderBoard.removeAll();
-                                var achievementContainer = achievementDef.createObject();
-                                leaderBoard.add(achievementContainer);
+                                var buddyContainer = buddyListDef.createObject();
+                                leaderBoard.add(buddyContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
                             }
@@ -108,12 +122,16 @@ Page {
                         ComponentDefinition {
                             id: achievementDef
                             source: "Achievements.qml"
+                        },
+                        ComponentDefinition {
+                            id: buddyListDef
+                            source: "BuddyListLeaderboard.qml"
                         }
                     ]
                 }
                 Container {
                     id: localStats
-                    //visible: false
+                    preferredHeight: 800
                     Container { // points
                         layout: DockLayout {
                         }
@@ -247,7 +265,7 @@ Page {
                             }
                         }
                     } // time
-                }
+                } // local stats
             }
         }
     }
