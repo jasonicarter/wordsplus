@@ -86,7 +86,7 @@ Page {
                     }
                     Option {
                         id: dropDwnBuddyPosition
-                        text: "YOUR FRIENDS"
+                        text: "FRIENDS"
                         description: "See how your friends are doing."
                         onSelectedChanged: {
                             if (selected == true) {
@@ -129,143 +129,146 @@ Page {
                         }
                     ]
                 }
-                Container {
-                    id: localStats
-                    preferredHeight: 800
-                    Container { // points
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 720
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Points Won: "
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalBlue.style
+                ScrollView {
+                    touchPropagationMode: TouchPropagationMode.None //prevent user from scrolling the local stats
+                    Container {
+                        id: localStats
+                        //preferredHeight: 800
+                        Container { // points
+                            layout: DockLayout {
                             }
-                        }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
+                            background: Color.create("#272727")
+                            preferredWidth: 720
+                            preferredHeight: 100
+                            leftPadding: 15
                             Label {
-                                text: wordsPlus.score
+                                text: "Points Won: "
                                 touchPropagationMode: TouchPropagationMode.None
                                 verticalAlignment: VerticalAlignment.Center
                                 horizontalAlignment: HorizontalAlignment.Left
                                 textStyle {
-                                    base: statsSheetBigBodyNormalWhite.style
+                                    base: statsSheetBigBodyNormalBlue.style
                                 }
                             }
-                        }
-                    } // points
-                    Divider {
-                        opacity: 0
-                    }
-                    Container { // found
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 720
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Total # of Words Found: "
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalBlue.style
+                            Container {
+                                rightPadding: 15
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Right
+                                Label {
+                                    text: wordsPlus.score
+                                    touchPropagationMode: TouchPropagationMode.None
+                                    verticalAlignment: VerticalAlignment.Center
+                                    horizontalAlignment: HorizontalAlignment.Left
+                                    textStyle {
+                                        base: statsSheetBigBodyNormalWhite.style
+                                    }
+                                }
                             }
+                        } // points
+                        Divider {
+                            opacity: 0
                         }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
+                        Container { // found
+                            layout: DockLayout {
+                            }
+                            background: Color.create("#272727")
+                            preferredWidth: 720
+                            preferredHeight: 100
+                            leftPadding: 15
                             Label {
-                                text: wordsPlus.totalWordsFound
+                                text: "Total # of Words Found: "
                                 touchPropagationMode: TouchPropagationMode.None
                                 verticalAlignment: VerticalAlignment.Center
                                 horizontalAlignment: HorizontalAlignment.Left
                                 textStyle {
-                                    base: statsSheetBigBodyNormalWhite.style
+                                    base: statsSheetBigBodyNormalBlue.style
                                 }
                             }
-                        }
-                    } // found
-                    Divider {
-                        opacity: 0
-                    }
-                    Container { // played
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 720
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Total # of Games Played: "
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalBlue.style
+                            Container {
+                                rightPadding: 15
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Right
+                                Label {
+                                    text: wordsPlus.totalWordsFound
+                                    touchPropagationMode: TouchPropagationMode.None
+                                    verticalAlignment: VerticalAlignment.Center
+                                    horizontalAlignment: HorizontalAlignment.Left
+                                    textStyle {
+                                        base: statsSheetBigBodyNormalWhite.style
+                                    }
+                                }
                             }
+                        } // found
+                        Divider {
+                            opacity: 0
                         }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
+                        Container { // played
+                            layout: DockLayout {
+                            }
+                            background: Color.create("#272727")
+                            preferredWidth: 720
+                            preferredHeight: 100
+                            leftPadding: 15
                             Label {
-                                text: wordsPlus.gamesPlayed
+                                text: "Total # of Games Played: "
                                 touchPropagationMode: TouchPropagationMode.None
                                 verticalAlignment: VerticalAlignment.Center
                                 horizontalAlignment: HorizontalAlignment.Left
                                 textStyle {
-                                    base: statsSheetBigBodyNormalWhite.style
+                                    base: statsSheetBigBodyNormalBlue.style
                                 }
                             }
-                        }
-                    } // played
-                    Divider {
-                        opacity: 0
-                    }
-                    Container { // time
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 720
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Best Puzzle Time: "
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: statsSheetBigBodyNormalBlue.style
+                            Container {
+                                rightPadding: 15
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Right
+                                Label {
+                                    text: wordsPlus.gamesPlayed
+                                    touchPropagationMode: TouchPropagationMode.None
+                                    verticalAlignment: VerticalAlignment.Center
+                                    horizontalAlignment: HorizontalAlignment.Left
+                                    textStyle {
+                                        base: statsSheetBigBodyNormalWhite.style
+                                    }
+                                }
                             }
+                        } // played
+                        Divider {
+                            opacity: 0
                         }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
+                        Container { // time
+                            layout: DockLayout {
+                            }
+                            background: Color.create("#272727")
+                            preferredWidth: 720
+                            preferredHeight: 100
+                            leftPadding: 15
                             Label {
-                                text: wordsPlus.puzzleCompletedTime
+                                text: "Best Puzzle Time: "
                                 touchPropagationMode: TouchPropagationMode.None
                                 verticalAlignment: VerticalAlignment.Center
                                 horizontalAlignment: HorizontalAlignment.Left
                                 textStyle {
-                                    base: statsSheetBigBodyNormalWhite.style
+                                    base: statsSheetBigBodyNormalBlue.style
                                 }
                             }
-                        }
-                    } // time
-                } // local stats
+                            Container {
+                                rightPadding: 15
+                                verticalAlignment: VerticalAlignment.Center
+                                horizontalAlignment: HorizontalAlignment.Right
+                                Label {
+                                    text: wordsPlus.puzzleCompletedTime
+                                    touchPropagationMode: TouchPropagationMode.None
+                                    verticalAlignment: VerticalAlignment.Center
+                                    horizontalAlignment: HorizontalAlignment.Left
+                                    textStyle {
+                                        base: statsSheetBigBodyNormalWhite.style
+                                    }
+                                }
+                            }
+                        } // time
+                    } // local stats
+                }
             }
         }
     }
