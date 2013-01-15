@@ -73,6 +73,9 @@ static const char SCORELOOP_UNTOUCHABLE[] = "wordsplus.untouchable";
 static const char SCORELOOP_RUSHHOUR[] = "wordsplus.rushhour";
 static const char SCORELOOP_OVERFIFTYK[] = "wordsplus.overfiftythousand";
 static const char SCORELOOP_OVERONETHOUSANDK[] = "wordsplus.overonethousandk";
+static const char SCORELOOP_MIDNIGHT[] = "wordsplus.midnightrun";
+static const char SCORELOOP_OVERONEBILLION[] = "wordsplus.overonemillion";
+static const char SCORELOOP_OVERONEMILLION[] = "wordsplus.overonebillion";
 
 
 using namespace bb::cascades;
@@ -92,7 +95,7 @@ WordsPlus::WordsPlus(bb::platform::bbm::Context &context, QObject *parent) :
 	upperbound = 100;
 	lowerbound = 0;
 	position = 0;
-	tileSize = 50;
+	tileSize = 68;
 	timeSec = 0;
 	stopWatch = NULL;
 	numberOfWordsFound = 0;
@@ -286,12 +289,13 @@ void WordsPlus::LoadAchievementsAwards() {
 }
 
 void WordsPlus::ProcessAwards() {
-
+//TODO
 	int puzzleTimeAward = 0;
 	int scoreAward = 0;
 	int difficultyAward = 0;
 	bool nineTofiveAward = false;
 	bool rushHourAward = false;
+	bool midnightAward = false;
 
 	continuousGameAward++;
 	puzzleTimeAward = timeSec;
@@ -300,10 +304,8 @@ void WordsPlus::ProcessAwards() {
 
 	QDate today;
 	int day = today.dayOfWeek();
+	int hourOfDay = QTime::currentTime().hour();
 	if(day < 6) {
-		//find out the time
-		int hourOfDay = QTime::currentTime().hour();
-
 		if( (hourOfDay > 8) && (hourOfDay < 17) ) {
 			nineTofiveAward = true;
 		} else if ( (hourOfDay > 5) and (hourOfDay < 9) ) {
@@ -311,6 +313,10 @@ void WordsPlus::ProcessAwards() {
 		} else if ( (hourOfDay > 16) and (hourOfDay < 20) ) {
 			rushHourAward = true;
 		}
+	}
+
+	if( (hourOfDay > 22) && (hourOfDay < 1) ) {
+		midnightAward = true;
 	}
 
 //	if( (puzzleTimeAward <= 120) && (difficultyAward == 2) ) {
@@ -345,6 +351,11 @@ void WordsPlus::ProcessAwards() {
 		//nine to five
 		if(nineTofiveAward) {
 			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_NINETOFIVE);
+		}
+
+		//midnight run
+		if(midnightAward) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_MIDNIGHT);
 		}
 
 		//no hint at hard
@@ -390,6 +401,16 @@ void WordsPlus::ProcessAwards() {
 		//over 100K points
 		if (scoreAward > 100000) {
 			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONETHOUSANDK);
+		}
+
+		//over 1Million points
+		if (scoreAward > 1000000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONEMILLION);
+		}
+
+		//over 1Billion points
+		if (scoreAward > 1000000000) {
+			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_OVERONEBILLION);
 		}
 
 		//20 games straight
@@ -599,7 +620,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		if (deltaX >= directionalBoundNeg && deltaX <= directionalBoundPos) {
 			length = (int) deltaY;
 			//deltaY increases (+ve) when finger moves top to bottom
-			if (length / 60 == multiple && length > 0) {
+			if (length / tileSize == multiple && length > 0) {
 				position += 1;
 				//LOG("%i", position);
 				if (position < upperbound) {
@@ -609,7 +630,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 				}
 			}
 			//deltaY decreases (-ve) when finger moves bottom to top
-			if (length / 60 == -multiple && length < 0) {
+			if (length / tileSize == -multiple && length < 0) {
 				position -= 1;
 				if (position > lowerbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
@@ -620,7 +641,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		} else if (deltaY >= directionalBoundNeg && deltaY <= directionalBoundPos) {
 			length = (int) deltaX;
 			//deltaX increases (+ve) when finger moves left to right
-			if (length / 60 == multiple && length > 0) {
+			if (length / tileSize == multiple && length > 0) {
 				position += 10;
 				if (position < upperbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
@@ -629,7 +650,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 				}
 			}
 			//deltaX decreases (-ve) when finger moves right to left
-			if (length / 60 == -multiple && length < 0) {
+			if (length / tileSize == -multiple && length < 0) {
 				position -= 10;
 				if (position > lowerbound) {
 					HighlightSelectedTile(position, HIGHLIGHT);
@@ -640,7 +661,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		} else if (deltaX > directionalBoundPos) { //east
 			if (deltaY > directionalBoundPos) { // diagonal South East
 				length = (int) deltaY;
-				if (length / 60 == multiple) {
+				if (length / tileSize == multiple) {
 					position += 10; //x
 					position += 1; //y
 					if (position < upperbound) {
@@ -652,7 +673,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			}
 			if (deltaY < directionalBoundNeg) { // diagonal North East
 				length = (int) deltaY;
-				if (length / 60 == -multiple) {
+				if (length / tileSize == -multiple) {
 					position += 10; //x
 					position -= 1; //y
 					if (position < upperbound) {
@@ -665,7 +686,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 		} else if (deltaX < directionalBoundNeg) { // west
 			if (deltaY > directionalBoundPos) { // diagonal South West
 				length = (int) deltaY;
-				if (length / 60 == multiple) {
+				if (length / tileSize == multiple) {
 					position -= 10; //x
 					position += 1; //y
 					if (position > lowerbound) {
@@ -677,7 +698,7 @@ void WordsPlus::onTileTouch(bb::cascades::TouchEvent *event) {
 			}
 			if (deltaY < directionalBoundNeg) { // diagonal North West
 				length = (int) deltaY;
-				if (length / 60 == -multiple) {
+				if (length / tileSize == -multiple) {
 					position -= 10; //x
 					position -= 1; //y
 					if (position > lowerbound) {
