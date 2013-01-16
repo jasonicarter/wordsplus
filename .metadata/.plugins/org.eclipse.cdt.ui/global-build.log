@@ -1325,3 +1325,221 @@ make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackb
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
 
 **** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlus ****
+
+make Device-Debug 
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
+make -C ./translations -f Makefile update release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lupdate WordsPlus.pro
+Updating 'WordsPlus_en_GB.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_fr.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_it.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_de.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_es.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lrelease WordsPlus.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_en_GB.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_fr.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_it.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_de.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_es.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlus ****
+
+make Device-Debug 
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
+make -C ./translations -f Makefile update release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lupdate WordsPlus.pro
+Updating 'WordsPlus_en_GB.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_fr.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_it.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_de.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_es.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lrelease WordsPlus.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_en_GB.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_fr.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_it.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_de.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_es.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7-g/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/WordsPlus.o ../src/WordsPlus.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -o o.le-v7-g/WordsPlus o.le-v7-g/.obj/ActiveFrame.o o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/Global.o o.le-v7-g/.obj/InviteToDownload.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/OrientationSensor.o o.le-v7-g/.obj/ProfileBox.o o.le-v7-g/.obj/RegistrationHandler.o o.le-v7-g/.obj/ScoreLoopThread.o o.le-v7-g/.obj/soundmanager.o o.le-v7-g/.obj/timer.o o.le-v7-g/.obj/UpdateProfile.o o.le-v7-g/.obj/wordsearch.o o.le-v7-g/.obj/WordsPlus.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_InviteToDownload.o o.le-v7-g/.obj/moc_OrientationSensor.o o.le-v7-g/.obj/moc_ProfileBox.o o.le-v7-g/.obj/moc_RegistrationHandler.o o.le-v7-g/.obj/moc_ScoreLoopThread.o o.le-v7-g/.obj/moc_timer.o o.le-v7-g/.obj/moc_UpdateProfile.o o.le-v7-g/.obj/moc_WordsPlus.o o.le-v7-g/.obj/moc_ActiveFrame.o    -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_0_9_2318/qnx6//usr/lib/qt4/lib -lscoreloopcore -lbbsystem -lbbmultimedia -lOpenAL -lalut -lasound -lbbplatformbbm -lbbcascadesadvertisement -LC:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/lib -lQtSensors -lbb -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtXml -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlus ****
+
+make Device-Debug 
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
+make -C ./translations -f Makefile update release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lupdate WordsPlus.pro
+Updating 'WordsPlus_en_GB.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_fr.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_it.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_de.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_es.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lrelease WordsPlus.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_en_GB.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_fr.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_it.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_de.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_es.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
+
+**** Build Finished ****
+
+**** Build of configuration Device-Release for project WordsPlus ****
+
+make Device-Release 
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
+make -C ./translations -f Makefile update release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lupdate WordsPlus.pro
+Updating 'WordsPlus_en_GB.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_fr.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_it.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_de.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus_es.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+Updating 'WordsPlus.ts'...
+    Found 12 source text(s) (0 new and 12 already existing)
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lrelease WordsPlus.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_en_GB.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_fr.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_it.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_de.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_es.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make -f Makefile.Release
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -O2 -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -O2 -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ScoreLoopThread.o ../src/ScoreLoopThread.cpp
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR../src/ScoreLoopThread.cpp:148:6: warning: unused parameter 'app' [-Wunused-parameter]
+../src/ScoreLoopThread.cpp: In static member function 'static void ScoreLoopThread::RequestGameDataCompletionCallback(void*, SC_Error_t)':
+../src/ScoreLoopThread.cpp:249:13: warning: variable 'errCode' set but not used [-Wunused-but-set-variable]
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -O2 -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/WordsPlus.o ../src/WordsPlus.cpp
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ScoreLoopThread.hpp -o o.le-v7/.moc/moc_ScoreLoopThread.cpp
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -O2 -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_ScoreLoopThread.o o.le-v7/.moc/moc_ScoreLoopThread.cpp
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/WordsPlus.hpp -o o.le-v7/.moc/moc_WordsPlus.cpp
+qcc -Vgcc_ntoarmv7le -c -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -O2 -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/unsupported/blackberry-armv7le-qcc -I../../WordsPlus -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtNetwork -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtGui -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXml -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtXmlPatterns -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSql -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSvg -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtScript -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_WordsPlus.o o.le-v7/.moc/moc_WordsPlus.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -Wl,-O1 -o o.le-v7/WordsPlus o.le-v7/.obj/ActiveFrame.o o.le-v7/.obj/GameSettings.o o.le-v7/.obj/Global.o o.le-v7/.obj/InviteToDownload.o o.le-v7/.obj/main.o o.le-v7/.obj/OrientationSensor.o o.le-v7/.obj/ProfileBox.o o.le-v7/.obj/RegistrationHandler.o o.le-v7/.obj/ScoreLoopThread.o o.le-v7/.obj/soundmanager.o o.le-v7/.obj/timer.o o.le-v7/.obj/UpdateProfile.o o.le-v7/.obj/wordsearch.o o.le-v7/.obj/WordsPlus.o o.le-v7/.obj/moc_GameSettings.o o.le-v7/.obj/moc_InviteToDownload.o o.le-v7/.obj/moc_OrientationSensor.o o.le-v7/.obj/moc_ProfileBox.o o.le-v7/.obj/moc_RegistrationHandler.o o.le-v7/.obj/moc_ScoreLoopThread.o o.le-v7/.obj/moc_timer.o o.le-v7/.obj/moc_UpdateProfile.o o.le-v7/.obj/moc_WordsPlus.o o.le-v7/.obj/moc_ActiveFrame.o    -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_0_9_2318/qnx6//usr/lib/qt4/lib -lscoreloopcore -lbbsystem -lbbmultimedia -lOpenAL -lalut -lasound -lbbplatformbbm -lbbcascadesadvertisement -LC:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/lib -lQtSensors -lbb -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtXml -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+
+**** Build Finished ****

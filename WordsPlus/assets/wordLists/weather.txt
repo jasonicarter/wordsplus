@@ -124,7 +124,6 @@ swell
 whiteout
 ionosphere
 isobar
-know
 lake
 sandstorm
 laminar
