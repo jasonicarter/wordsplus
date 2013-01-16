@@ -51,8 +51,16 @@ Container {
                                 textStyle.base: SystemDefaults.TextStyles.TitleText
                             }
                             Label {
-                                text: ListItemData.formattedScore
+                                text: {
+                                    var x = ListItemData.formattedScore;
+                                    var rgx = /(\d+)(\d{3})/;
+                                    while (rgx.test(x)) {
+                                        x = x.replace(rgx, '$1' + ',' + '$2');
+                                    }
+                                    x;
+                                }
                                 textStyle.base: SystemDefaults.TextStyles.SubtitleText
+                                textStyle.color: Color.create("#555555")
                             }
                         }
                     }

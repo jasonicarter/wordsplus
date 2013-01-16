@@ -49,7 +49,7 @@ Container {
                             Label {
                                 text: ListItemData.description
                                 textStyle.base: SystemDefaults.TextStyles.SubtitleText
-                                textStyle.color: Color.create("#b1b1b1")
+                                textStyle.color: Color.create("#555555")
                                 multiline: true
                             }
                         }
