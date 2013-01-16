@@ -315,7 +315,12 @@ void WordsPlus::ProcessAwards() {
 		}
 	}
 
-	if( (hourOfDay > 22) && (hourOfDay < 1) ) {
+	// time between 11pm and 1am
+	if( hourOfDay > 22) {
+		midnightAward = true;
+	}
+
+	if( hourOfDay < 1 ) {
 		midnightAward = true;
 	}
 
