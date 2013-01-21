@@ -257,6 +257,7 @@ void WordsPlus::onLoadLeaderboardCompleted(QVariantList data) {
 		QMap<QString, QVariant> mapScore = data[0].toMap();
 		int score = mapScore.value("formattedScore").toInt();
 		settings->saveValueFor(SCORE, QString::number(score));
+		emit scoreChanged();
 		LOG("user score: %i", score);
 	}
 }

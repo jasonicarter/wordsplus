@@ -284,11 +284,6 @@ anitra
 anjanette
 anjela
 ann
-ann-marie
-anna
-anna-diana
-anna-diane
-anna-maria
 annabal
 annabel
 annabela
@@ -303,9 +298,6 @@ annalise
 annamaria
 annamarie
 anne
-anne-corinne
-anne-marie
-annecorinne
 anneliese
 annelise
 annemarie
@@ -474,10 +466,7 @@ bamby
 barb
 barbabra
 barbara
-barbara-anne
-barbaraanne
 barbe
-barbee
 barbette
 barbey
 barbi
@@ -573,8 +562,6 @@ betsey
 betsy
 betta
 bette
-bette-ann
-betteann
 betteanne
 betti
 bettina
@@ -809,13 +796,6 @@ carmita
 carmon
 caro
 carol
-carol-jean
-carola
-carolan
-carolann
-carole
-carolee
-carolin
 carolina
 caroline
 caroljean
@@ -1276,8 +1256,6 @@ dawn
 dawna
 dayle
 dayna
-ddene
-de
 deana
 deane
 deanna
@@ -1307,7 +1285,6 @@ dehlia
 deidre
 deina
 deirdre
-del
 dela
 delcina
 delcine
@@ -1355,14 +1332,11 @@ devondra
 devonna
 devonne
 devora
-di
 diahann
 dian
 diana
 diandra
 diane
-diane-marie
-dianemarie
 diann
 dianna
 dianne
@@ -1746,7 +1720,6 @@ fae
 faina
 faith
 fallon
-fan
 fanchette
 fanchon
 fancie
@@ -2130,25 +2103,15 @@ hazel
 heath
 heather
 heda
-hedda
 heddi
-heddie
-hedi
-hedvig
-hedvige
 hedwig
-hedwiga
 hedy
 heida
 heidi
 heidie
 helaina
-helaine
 helen
-helen-elizabeth
 helena
-helene
-helenelizabeth
 helenka
 helga
 helge
@@ -2191,7 +2154,6 @@ hinda
 holli
 hollie
 holly
-holly-anne
 hollyanne
 honey
 honor
@@ -2445,8 +2407,6 @@ jilly
 jinny
 jo
 joann
-jo-ann
-jo-anne
 joan
 joana
 joane
@@ -2604,7 +2564,6 @@ kandy
 kania
 kanya
 kara
-kara-lynn
 karalee
 karalynn
 kare
@@ -2839,7 +2798,6 @@ kylynn
 kym
 kynthia
 kyrstin
-l;urette
 laverne
 lacee
 lacey
@@ -3115,7 +3073,6 @@ louisa
 louise
 louisette
 loutitia
-lu
 luce
 luci
 lucia
@@ -3308,8 +3265,6 @@ maribeth
 marice
 maridel
 marie
-marie-ann
-marie-jeanne
 marieann
 mariejeanne
 mariel
@@ -4228,7 +4183,6 @@ sandye
 sapphira
 sapphire
 sara
-sara-ann
 saraann
 sarah
 sarajane
@@ -4324,9 +4278,7 @@ sheelah
 sheena
 sheeree
 sheila
-sheila-kathryn
 sheilah
-sheilakathryn
 shel
 shela
 shelagh
@@ -4364,7 +4316,6 @@ shoshana
 shoshanna
 siana
 sianna
-sib
 sibbie
 sibby
 sibeal
@@ -4561,7 +4512,6 @@ teri
 teriann
 terra
 terri
-terri-jo
 terrie
 terrijo
 terry
@@ -4630,7 +4580,6 @@ tobye
 toinette
 toma
 tomasina
-tomasine
 tomi
 tommi
 tommie
@@ -4749,7 +4698,6 @@ veronika
 veronike
 veronique
 vevay
-vi
 vicki
 vickie
 vicky
@@ -4758,7 +4706,6 @@ vida
 viki
 vikki
 vikky
-vilhelmina
 vilma
 vin
 vina
@@ -4780,7 +4727,6 @@ vita
 vitia
 vitoria
 vittoria
-viv
 viva
 vivi
 vivia
@@ -4798,7 +4744,6 @@ vivyanne
 vonni
 vonnie
 vonny
-vyky
 wallie
 wallis
 walliw
@@ -4898,7 +4843,6 @@ zorah
 zorana
 zorina
 zorine
-zsazsa
 zsazsa
 zulema
 zuzana

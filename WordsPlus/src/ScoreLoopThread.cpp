@@ -23,10 +23,10 @@
 //static const char SCORELOOP_GAME_ID[] = "daca41e8-24ed-4aa0-86e6-3169a32cb92d"; //game test
 //static const char SCORELOOP_GAME_SECRET[] = "Go2uSPAUmvXY6CKu4v1hVxcI3jMgkATn2+tZ8e3qUovlU6UQaVXjGw==";  //game test
 
-//TODO change version to 1.4
+//TODO change version to 1.5
 static const char SCORELOOP_GAME_ID[] = "acb55270-30e0-47b2-9d27-564f7bb163a6"; //live
 static const char SCORELOOP_GAME_SECRET[] = "lQh1gNf3W9LJ53kAklF5x/YOLx1JJbSwsAXI7OBxWegNoYWaT/GRNA=="; //live
-static const char SCORELOOP_GAME_VERSION[] = "1.4";
+static const char SCORELOOP_GAME_VERSION[] = "1.5";
 static const char SCORELOOP_GAME_CURRENCY[] = "GRL";
 static const char SCORELOOP_GAME_LANGUAGE[] = "en";
 //static const char SCORELOOP_AN_AWARD_ID[] = "wordsplus.testaward";
