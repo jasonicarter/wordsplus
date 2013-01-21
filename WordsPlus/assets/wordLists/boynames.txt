@@ -920,7 +920,6 @@ davin
 davis
 davon
 davy
-de witt
 dean
 deane
 decca
@@ -1142,7 +1141,6 @@ elwin
 elwood
 elwyn
 ely
-em
 emanuel
 emanuele
 emelen
@@ -1182,7 +1180,6 @@ erick
 erie
 erik
 erin
-erl
 ermanno
 ermin
 ernest
@@ -1216,7 +1213,6 @@ eugene
 eugenio
 eugenius
 eustace
-ev
 evan
 evelin
 evelyn
@@ -1627,7 +1623,6 @@ hale
 haleigh
 haley
 hall
-hallsy
 halsey
 halsy
 ham
@@ -1941,7 +1936,6 @@ jeffrey
 jeffry
 jeffy
 jehu
-jeno 
 jens
 jephthah
 jerad
@@ -2157,7 +2151,6 @@ knox
 koenraad
 konrad
 konstantin
-konstantine
 korey
 kort
 kory
@@ -2206,7 +2199,6 @@ laurens
 laurent
 laurie
 lauritz
-law
 lawrence
 lawry
 lawton
@@ -2324,7 +2316,6 @@ lucio
 lucius
 ludovico
 ludvig
-ludwig
 luigi
 luis
 lukas
@@ -2437,7 +2428,6 @@ max
 maxie
 maxim
 maximilian
-maximilianus
 maximilien
 maximo
 maxwell
@@ -2629,13 +2619,9 @@ nickolai
 nickolas
 nickolaus
 nicky
-nico
 nicol
 nicola
 nicolai
-nicolais
-nicolas
-nicolis
 niel
 niels
 nigel
@@ -2694,7 +2680,6 @@ obediah
 oberon
 obidiah
 obie
-oby
 octavius
 ode
 odell
@@ -2950,7 +2935,6 @@ raviv
 rawley
 ray
 raymond
-raymund
 raynard
 rayner
 raynor
@@ -3022,7 +3006,6 @@ rick
 rickard
 rickert
 rickey
-ricki
 rickie
 ricky
 ricoriki
@@ -3158,9 +3141,6 @@ saleem
 salem
 salim
 salmon
-salomo
-salomon
-salomone
 salvador
 salvatore
 salvidor
@@ -3214,7 +3194,6 @@ sean
 sebastian
 sebastiano
 sebastien
-see
 selby
 selig
 serge
@@ -3590,7 +3569,6 @@ tyson
 udale
 udall
 udell
-ugo
 ulberto
 ulick
 ulises
@@ -3609,8 +3587,6 @@ uriel
 urson
 vachel
 vaclav
-vail
-val
 valdemar
 vale
 valentijn
@@ -3700,7 +3676,6 @@ washington
 wat
 waverley
 waverly
-way
 waylan
 wayland
 waylen
@@ -3764,7 +3739,6 @@ wilmar
 wilmer
 wilt
 wilton
-win
 windham
 winfield
 winfred

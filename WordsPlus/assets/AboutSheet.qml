@@ -69,7 +69,7 @@ Page {
                 Container {
                     background: Color.create("#272727")
                     TextArea {
-                        text: "Website & Email Support:"
+                        text: "Website, Twitter & Email Support:"
                         touchPropagationMode: TouchPropagationMode.None
                         editable: false
                         textStyle {
@@ -80,13 +80,15 @@ Page {
                 Label {
                     leftPadding: 25
                     multiline: true
-                    text: "Having problems? Want to see a new feature added? \n\n" + "Help improve WordsPlus by sending any requests, suggestions or issues to: " + "twocasualcoders@gmail.com"
+                    text: "Having problems? Want to see a new feature added? \n\n" + 
+                    "Help improve WordsPlus by sending any requests, suggestions or issues to: " + 
+                    "@jasonicarter"
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }
                 }
-                TextArea {
-                    text: "www.twocasualcoders.com"
+                TextArea { 
+                    text: "http://twocasualcoders.com/contact"
                     leftPadding: 0
                     editable: false
                     inputMode: TextAreaInputMode.Text
