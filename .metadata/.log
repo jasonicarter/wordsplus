@@ -10718,3 +10718,1175 @@ org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or 
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-21 11:23:35.686
 !MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!SESSION 2013-01-21 11:31:22.438 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:31:31.923
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:31:32.921
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:31:33.186
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-21 11:31:40.877
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-21 11:31:40.877
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c2ec05),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c2ec05)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c2ec05),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c2ec05)),sourcePriority=16640)
+
+!ENTRY org.eclipse.osgi 2 0 2013-01-21 11:31:55.339
+!MESSAGE While loading class "com.qnx.tools.ide.target.qconn.core.QConnCorePlugin$TargetDeltaVisitor", thread "Thread[Worker-0,5,main]" timed out waiting (5008ms) for thread "Thread[Worker-8,5,main]" to finish starting bundle "com.qnx.tools.ide.target.qconn.core_5.0.0.v201212072306 [660]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "com.qnx.tools.ide.target.qconn.core.QConnCorePlugin$TargetDeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.qnx.tools.ide.target.qconn.core_5.0.0.v201212072306.jar" by thread "Worker-8".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.qnx.tools.ide.target.qconn.core.QConnCorePlugin$TargetResourceListener.resourceChanged(QConnCorePlugin.java:81)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 22 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.qnx.tools.ide.target.qconn.core.QConnCorePlugin$TargetResourceListener.resourceChanged(QConnCorePlugin.java:81)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-01-21 11:32:00.331
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-21 11:32:00.331
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-01-21 11:32:00.346
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-21 11:32:00.346
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!SESSION 2013-01-21 11:43:29.750 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-01-21 11:43:32.452
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:43:36.674
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:43:37.533
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-21 11:43:37.717
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-21 11:43:44.775
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-21 11:43:44.775
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@12f195),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12f195)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@12f195),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12f195)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-01-21 11:44:06.403
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-21 11:44:06.404
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-01-21 11:44:06.407
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.bbt.target.ui.internal.actions.ConnectBBTTargetAction$1.run(ConnectBBTTargetAction.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-21 11:44:06.407
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!SESSION 2013-01-22 11:17:58.957 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 11:18:02.923
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 11:18:03.437
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 11:18:03.684
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-22 11:18:09.508
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-22 11:18:09.508
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@3c86e9),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@3c86e9)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@3c86e9),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@3c86e9)),sourcePriority=16640)
+!SESSION 2013-01-22 17:26:09.393 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 17:26:31.405
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 17:26:39.017
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-22 17:26:39.329
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-22 17:27:15.412
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-22 17:27:15.412
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@5861),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@5861)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@5861),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@5861)),sourcePriority=16640)
+!SESSION 2013-01-23 17:39:14.501 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-23 17:39:21.926
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-23 17:39:22.886
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-23 17:39:22.886
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1b35ece),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1b35ece)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1b35ece),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1b35ece)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-23 17:52:06.874
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-23 17:52:06.898
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 17:52:37.653
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 368 2013-01-23 17:55:52.963
+!MESSAGE Resource '/Words_Plus' does not exist.
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 17:55:52.964
+!MESSAGE Config not written down.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/Words_Plus/config.pri' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:357)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at com.rim.tad.tools.qml.core.ProjectConfigMonitor$2.run(ProjectConfigMonitor.java:245)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:55:52.965
+!MESSAGE Resource '/Words_Plus/config.pri' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:55:52.966
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:55:52.966
+!MESSAGE Resource '/Words_Plus' does not exist.
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-23 17:55:52.970
+!MESSAGE An internal error occurred during: "project build settings update job".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.managedbuilder.internal.core.BuildSettingsUtil.synchBuildInfo(BuildSettingsUtil.java:175)
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateBuildInfo(ManagedBuildManager.java:1390)
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.updateCoreSettings(ManagedBuildManager.java:1526)
+	at org.eclipse.cdt.managedbuilder.core.ResourceChangeHandler2$1.run(ResourceChangeHandler2.java:201)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:55:52.997
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:55:52.997
+!MESSAGE Resource '/Words_Plus' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:55:53.000
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:55:53.001
+!MESSAGE Resource '/Words_Plus' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:55:53.004
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:55:53.004
+!MESSAGE Resource '/Words_Plus' does not exist.
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-23 17:55:53.016
+!MESSAGE An internal error occurred during: "QML file indexing".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.events.BuildManager.getCommand(BuildManager.java:620)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:316)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at com.rim.tad.tools.qml.core.QMLNature$1.run(QMLNature.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 17:56:35.371
+!MESSAGE Config not written down.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/test/config.pri' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:357)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at com.rim.tad.tools.qml.core.ProjectConfigMonitor$2.run(ProjectConfigMonitor.java:245)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:56:35.371
+!MESSAGE Resource '/test/config.pri' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:56:35.371
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:56:35.371
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:56:35.373
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:56:35.373
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:56:35.373
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:56:35.373
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:56:35.374
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:56:35.374
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2013-01-23 17:57:21.967
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:57:21.968
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:57:21.968
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 17:57:21.968
+!MESSAGE Config not written down.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/test/config.pri' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:357)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at com.rim.tad.tools.qml.core.ProjectConfigMonitor$2.run(ProjectConfigMonitor.java:245)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:57:21.968
+!MESSAGE Resource '/test/config.pri' does not exist.
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-01-23 17:57:21.977
+!MESSAGE An internal error occurred during: "QML file indexing".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.events.BuildManager.getCommand(BuildManager.java:620)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:316)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at com.rim.tad.tools.qml.core.QMLNature$1.run(QMLNature.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:57:21.993
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:57:21.993
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:57:22.005
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:57:22.005
+!MESSAGE Resource '/test' does not exist.
+
+!ENTRY com.qnx.tools.ide.qde.managedbuilder.core 4 0 2013-01-23 17:57:22.010
+!MESSAGE Failed to update C/C++ configuration problem markers.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-01-23 17:57:22.010
+!MESSAGE Resource '/test' does not exist.
+!SESSION 2013-01-23 18:23:56.483 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-23 18:24:18.743
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-01-23 18:24:19.305
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-01-23 18:24:19.305
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@473996),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@473996)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@473996),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@473996)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.project.ui 2 -1 2013-01-23 18:24:51.231
+!MESSAGE Project category Executable has no associated project types
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.273
+!MESSAGE Cannot find PVInfo for: QCoreApplication
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.293
+!MESSAGE Cannot find propertyID for PVCellInfo: ComponentID: bb::cascades::Control PropertyID: focusRetentionPolicy
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.294
+!MESSAGE Removing invalid PVRowInfo for componentID: bb::cascades::Control RowInfo: Focus Retention
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.294
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Control PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.295
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.312
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Button PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.314
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.320
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.322
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlScrollView PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.327
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled, bufferedScrollingEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.329
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlListView PropertyInfoList: [flickMode, leadingVisualSnapThreshold, focusAutoShow, implicitLayoutAnimationsEnabled, bufferedScrollingEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.330
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Header PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.334
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageView PropertyInfoList: [loadEffect, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.337
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.339
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.342
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TitleBar PropertyInfoList: [appearance, branded]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.344
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlAnimationRepeatCount
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.345
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::StandardListItem PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.346
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextTriggeredEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.350
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebSettings PropertyInfoList: [cookiesEnabled, customHttpHeaders, devicePixelRatio, defaultFontSizeFollowsSystemFontSize]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.352
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::WebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.353
+!MESSAGE Cannot find PVInfo for: bb::cascades::WebCookieJar
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.355
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DropDown PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.356
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenu
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.358
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractTextControl PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.360
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Slider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.363
+!MESSAGE Cannot find PVInfo for: bb::cascades::AbstractTextFilter
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.366
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeQuery PropertyInfoList: [perimeter, invokerIncluded, fileTransferMode, metadata]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.367
+!MESSAGE Cannot find PVInfo for: bb::cascades::SingleLineTextFilter
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.369
+!MESSAGE Cannot find PVInfo for: QEvent
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.370
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Container PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.372
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Label PropertyInfoList: [textFormat, focusAutoShow, implicitLayoutAnimationsEnabled, activeTextHandler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.373
+!MESSAGE Cannot find PVInfo for: bb::cascades::AbstractContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.374
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::AbstractContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.375
+!MESSAGE Cannot find PVInfo for: bb::cascades::ContentSecurity
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.376
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ContentSecurity PropertyInfoList: [defaultPerimeter]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.376
+!MESSAGE Cannot find PVInfo for: bb::cascades::InvokeHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.377
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlWebView PropertyInfoList: [settings.devicePixelRatio, settings.customHttpHeaders, focusAutoShow, settings.defaultFontSizeFollowsSystemFontSize, implicitLayoutAnimationsEnabled, settings.cookiesEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.379
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ProgressIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.380
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlMenuAttached
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.381
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlMenuAttached PropertyInfoList: [definition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.381
+!MESSAGE Cannot find PVInfo for: QDeclarativeParserStatus
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.385
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextInputProperties PropertyInfoList: [masking, flags, submitKeyFocusBehavior]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.386
+!MESSAGE Cannot find PVInfo for: bb::cascades::TextEditor
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.387
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextEditor PropertyInfoList: [cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.388
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextField PropertyInfoList: [input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.392
+!MESSAGE Cannot find PVInfo for: bb::cascades::ListScrollStateHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.392
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ListScrollStateHandler PropertyInfoList: [firstVisibleItem]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.394
+!MESSAGE Cannot find PVInfo for: bb::cascades::ImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.395
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.395
+!MESSAGE Cannot find PVInfo for: bb::cascades::QmlImageAnimator
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.396
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlImageAnimator PropertyInfoList: [playing, started, animatedImage]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.397
+!MESSAGE Cannot find PVInfo for: bb::cascades::RenderFence
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.397
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RenderFence PropertyInfoList: [raised]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.399
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::Divider PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.400
+!MESSAGE Cannot find PVInfo for: bb::cascades::ThemeSupport
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.402
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::TextArea PropertyInfoList: [scrollMode, input.submitKeyFocusBehavior, textFormat, focusHighlightEnabled, input.masking, focusAutoShow, textFilter, implicitLayoutAnimationsEnabled, input.flags, activeTextHandler, maximumLength, editor.cursorPosition]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.402
+!MESSAGE Cannot find PVInfo for: bb::cascades::ActiveTextHandler
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.407
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::SegmentedControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.408
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CustomControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.409
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::QmlControlDelegate PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.410
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ToggleButton PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.413
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ForeignWindowControl PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.415
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::RadioGroup PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.417
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::InvokeActionItem PropertyInfoList: [query.fileTransferMode, query.perimeter, query.metadata, query.invokerIncluded, handler]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.420
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::ActivityIndicator PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.421
+!MESSAGE Cannot find PVInfo for: bb::cascades::Theme
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.423
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::DateTimePicker PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.424
+!MESSAGE The following propertyIDs are not described by PVRegistry: ComponentID: bb::cascades::CheckBox PropertyInfoList: [focusAutoShow, implicitLayoutAnimationsEnabled]
+
+!ENTRY com.rim.tad.tools.qml.ui 2 0 2013-01-23 18:31:11.425
+!MESSAGE Cannot find PVInfo for: bb::cascades::ColorTheme
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.596
+!MESSAGE Cannot resolve ValueType variant: double
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.597
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.598
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.599
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::FocusRetentionPolicy::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.600
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::WindowProperty::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.601
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextContentFlag::Type>
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-01-23 18:31:11.601
+!MESSAGE Cannot resolve ValueType variant: QFlags<bb::cascades::TextInputFlag::Type>
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 18:31:12.037
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 18:31:12.306
+!MESSAGE C:\bbndk\ide\win32\x86\eclipse\jre\bin\java.exe -cp C:\bbndk\ide\win32\x86\eclipse\plugins\com.rim.tad.tools.qml.simulator_10.0.9.201212070504\ com.rim.tad.tools.qml.sim.check.RenderingCheck -target C:\bbndk\target_10_0_9_2318\qnx6
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 18:31:17.642
+!MESSAGE QML Preview compatibility check log.
+CASCADES_BUILD::d09d41e40547656c51aa6dc2cbe5939e479396fd
+ES shim 0
+HLP: OpenGL ES vendor info:
+  vendor:     ATI Technologies Inc.
+  renderer:   AMD Radeon HD 6550D
+  version:    OpenGL ES 2.0 - GlesDesktopShim running on 4.1.10834 Compatibility Profile Context
+OpenGL has ES2 compatibility
+OrientationSupportPrivate::getSupportedDisplayOrientation:   
+OrientationSupportPrivate::initDirectionAndOrientation: 
+   isCardOrViewer:  false 
+   manifestDisplayOrientation: All 
+   displayOrientation: All 
+   uiOrientation: Portrait 
+   displayDirection: North 
+   nativeDisplayOrientation: Portrait 
+  extensions: GL_OES_get_program_binaryGL_AMDX_debug_output GL_AMDX_vertex_shader_tessellator GL_AMD_conservative_depth GL_AMD_debug_output GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_multi_draw_indirect GL_AMD_name_gen_delete GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_sample_positions GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trace GL_AMD_texture_cube_map_array GL_AMD_texture_texture4 GL_AMD_transform_feedback3_lines_triangles GL_AMD_vertex_shader_tessellator GL_ARB_ES2_compatibility GL_ARB_blend_func_extended GL_ARB_color_buffer_float GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_provoking_vertex GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_subroutine GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shadow GL_ARB_shadow_ambient GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_snorm GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_envmap_bumpmap GL_ATI_fragment_shader GL_ATI_meminfo GL_ATI_separate_stencil GL_ATI_texture_compression_3dc GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_copy_buffer GL_EXT_copy_texture GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_histogram GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_specular_color GL_EXT_shader_image_load_store GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_EXT_subtexture GL_EXT_texgen_reflection GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_bptc GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_add GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_texture_mirrored_repeat GL_KTX_buffer_region GL_NV_blend_square GL_NV_conditional_render GL_NV_copy_depth_to_color GL_NV_explicit_multisample GL_NV_float_buffer GL_NV_half_float GL_NV_primitive_restart GL_NV_texgen_reflection GL_NV_texture_barrier GL_SGIS_generate_mipmap GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_SUN_multi_draw_arrays GL_WIN_swap_hint WGL_EXT_swap_control
+
+ServerContext::Orientation init. angle: 0, orientation: Portrait
+QObject::installEventFilter(): Cannot filter events for objects in a different thread.
+Please use bb::cascades::Application to instantiate application
+ERROR:: EngineDocumentManager::loadDictionary() failed to load any emojis dictionary
+ERROR:: EngineDocumentManager::loadDictionary() failed to load any emoticons dictionary
+QObject::installEventFilter(): Cannot filter events for objects in a different thread.
+Please use bb::cascades::Application to instantiate application
+file:///C:/Users/Jason/AppData/Local/Temp/previewTest.qml:25: ReferenceError: Can't find variable: ListItemData
+file:///C:/Users/Jason/AppData/Local/Temp/previewTest.qml:16: ReferenceError: Can't find variable: ListItemData
+
+Process exited with code: 0
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-01-23 18:31:31.249
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-01-23 18:32:08.577
+!MESSAGE Indexed 'test' (2 sources, 581 headers) in 36.87 sec: 78,579 declarations; 109,033 references; 0 unresolved inclusions; 0 syntax errors; 26 unresolved names (0.01%)
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 4 2013-01-23 18:33:07.440
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.target.core.TargetConnection.connect(TargetConnection.java:76)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut.getTargetArch(QConnShortcut.java:486)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut$1.run(QConnShortcut.java:394)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-23 18:33:07.442
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 18:33:15.442
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 18:35:59.139
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 18:35:59.191
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-01-23 18:36:39.781
+!MESSAGE Indexed 'Words_Plus' (2 sources, 581 headers) in 30.71 sec: 78,579 declarations; 109,033 references; 0 unresolved inclusions; 0 syntax errors; 26 unresolved names (0.01%)
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 4 2013-01-23 18:38:13.489
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.target.core.TargetConnection.connect(TargetConnection.java:76)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut.getTargetArch(QConnShortcut.java:486)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut$1.run(QConnShortcut.java:394)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-23 18:38:13.489
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 18:38:19.274
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 18:45:48.510
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 18:45:48.553
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-01-23 18:46:27.429
+!MESSAGE Indexed 'WordsPlusGame' (2 sources, 581 headers) in 27.84 sec: 78,579 declarations; 109,033 references; 0 unresolved inclusions; 0 syntax errors; 26 unresolved names (0.01%)
+
+!ENTRY com.qnx.tools.ide.qde.ui 4 4 2013-01-23 19:07:05.794
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetConnectionDelegate.connect(QconnTargetConnectionDelegate.java:109)
+	at com.qnx.tools.ide.target.core.TargetConnection.connect(TargetConnection.java:76)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut.getTargetArch(QConnShortcut.java:486)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QConnShortcut$1.run(QConnShortcut.java:394)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.qnx.tools.ide.target.core 4 0 2013-01-23 19:07:05.795
+!MESSAGE Unable to connect.  Ensure USB cable or Wi-Fi is connected, IP address is correct, and development mode is enabled.
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 19:07:12.117
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 0 2013-01-23 19:13:43.229
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1209)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:405)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:70)
+	at org.eclipse.swt.widgets.Table.imageIndex(Table.java:2930)
+	at org.eclipse.swt.widgets.Table.wmNotifyChild(Table.java:6791)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5534)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1896)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5086)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4584)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2425)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:564)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:430)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4623)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5893)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2531)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-01-23 19:13:43.252
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1209)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:405)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:70)
+	at org.eclipse.swt.widgets.Table.imageIndex(Table.java:2930)
+	at org.eclipse.swt.widgets.Table.wmNotifyChild(Table.java:6791)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5534)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1896)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5086)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4584)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2425)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:564)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:430)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4623)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5893)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2531)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 19:15:11.119
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:15:11.178
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 19:16:49.949
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-23 19:17:09.202
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 19:23:15.415
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:23:15.455
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 19:29:00.606
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:29:00.648
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:29:36.230
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:29:42.748
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:34:55.396
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:35:35.651
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 19:35:59.755
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY org.eclipse.ui 4 0 2013-01-23 19:42:33.676
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1209)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:405)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:70)
+	at org.eclipse.swt.widgets.Table.imageIndex(Table.java:2930)
+	at org.eclipse.swt.widgets.Table.wmNotifyChild(Table.java:6791)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5534)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1896)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5086)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4584)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2425)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:564)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:430)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4623)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5893)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2531)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 0 2013-01-23 19:42:33.706
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4282)
+	at org.eclipse.swt.SWT.error(SWT.java:4197)
+	at org.eclipse.swt.SWT.error(SWT.java:4168)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1209)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:405)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:70)
+	at org.eclipse.swt.widgets.Table.imageIndex(Table.java:2930)
+	at org.eclipse.swt.widgets.Table.wmNotifyChild(Table.java:6791)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5534)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1896)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5086)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4584)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2425)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:564)
+	at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:430)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4623)
+	at org.eclipse.swt.widgets.Table.windowProc(Table.java:5893)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4985)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2531)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2013-01-23 19:46:41.494
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\arm\o.le-v7-g\WordsPlusGame not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:123)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.checkBinaryDetails(QDELaunchUtils.java:988)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.getLaunch(QDEDSFLaunchConfigurationDelegate.java:283)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:784)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2013-01-23 19:46:41.494
+!MESSAGE C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\arm\o.le-v7-g\WordsPlusGame not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\arm\o.le-v7-g\WordsPlusGame not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:123)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.checkBinaryDetails(QDELaunchUtils.java:988)
+	at com.qnx.tools.ide.qde.internal.ui.launch.dsf.QDEDSFLaunchConfigurationDelegate.getLaunch(QDEDSFLaunchConfigurationDelegate.java:283)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:784)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 19:48:19.237
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\scoreloop\SLAwards.bundle\Award.wordsplus.overonemillion.unachieved.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/scoreloop/SLAwards.bundle/Award.wordsplus.overonemillion.unachieved.png' failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\scoreloop\SLAwards.bundle\Award.wordsplus.overonemillion.unachieved.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/scoreloop/SLAwards.bundle/Award.wordsplus.overonemillion.unachieved.png' failed.
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:582)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:676)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:621)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	... 23 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-01-23 19:48:19.237
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\scoreloop\SLAwards.bundle\Award.wordsplus.overonemillion.unachieved.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/scoreloop/SLAwards.bundle/Award.wordsplus.overonemillion.unachieved.png' failed.
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:676)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:621)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-23 19:48:45.556
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-01-23 19:53:33.475
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:514)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:264)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:185)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-01-23 19:53:55.522
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.ui 4 4 2013-01-23 20:00:30.216
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-01-23 20:00:30.257
+!MESSAGE QML Preview compatibility check log.
+
