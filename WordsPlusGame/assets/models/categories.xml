@@ -1,0 +1,8 @@
+<root>
+    <item category="ANIMALS" filename="animals" image= "asset:///images/categoryList/elephant.png"/>
+    <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
+    <item category="THE BODY" filename="body" image= "asset:///images/categoryList/nurse.png"/>
+    <item category="COMMON WORDS" filename="common" image= "asset:///images/categoryList/books.png"/>
+    <item category="JOBS + OCCUPATIONS" filename="jobs" image= "asset:///images/categoryList/jobs.png"/>
+    <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
+</root>
