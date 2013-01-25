@@ -99,7 +99,6 @@ horse
 hydra
 hyena
 hyrax
-hyrax
 iguana
 impala
 insect

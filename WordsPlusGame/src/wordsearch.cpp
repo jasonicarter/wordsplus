@@ -275,7 +275,7 @@ int longest(const void *first, const void *second) {
 char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 	hardness = difficulity;
 	Grid *grid = NULL;
-	char s[1000];
+	char s[5000];
 
 	FILE *pFile;
 	std::string strFilePath("app//native//assets//wordLists//");
@@ -284,7 +284,7 @@ char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
 
 	if (pFile == NULL) perror ("Error opening file");
 	   else {
-			while (fgets(s, 3000, pFile) != NULL) {
+			while (fgets(s, 5000, pFile) != NULL) {
 				if (strlen(s) - 1 < GRID_SIZE) //string has newline char at end
 				{
 					add_word(s, words);
