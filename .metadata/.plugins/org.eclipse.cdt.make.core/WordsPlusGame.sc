@@ -7,7 +7,6 @@
 <includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include"/>
 <includePath path="C:/bbndk/host_10_0_9_529/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
 <includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include/cpp/c"/>
-<includePath path="#undef __ARMEB__" removed="true"/>
 <includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include/cpp"/>
 <definedSymbol symbol="__cplusplus"/>
 <definedSymbol symbol="__cplusplus=1"/>
