@@ -8,14 +8,26 @@ Page {
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         Container {
-            layout: AbsoluteLayout {
+            layout: DockLayout {
             }
-            ImageView {
-                layoutProperties: AbsoluteLayoutProperties {
-                    positionX: 500
-                    positionY: 0
+            Container {
+                id: theme
+                ImageView {
+                    imageSource: "theme/" + "space" + "/theme_background.jpg"
                 }
-                imageSource: "asset:///images/heart_large.png"
+            }
+            Container {
+                layout: AbsoluteLayout {
+                }
+                ImageView {
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 500
+                        positionY: 0
+                    }
+                    objectName: "puzzleHeart"
+                    //imageSource: "asset:///images/heart_large.png"
+                    imageSource: "theme/" + "space" + "/theme_icon.png"
+                }
             }
         }
         Container { //middle

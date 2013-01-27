@@ -36,8 +36,8 @@ class WordsPlusGame : public QObject
 {
     Q_OBJECT
 public:
-    WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent = 0);
-	//WordsPlus(QObject *parent = 0);
+    //WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent = 0);
+    WordsPlusGame(QObject *parent = 0);
 	virtual ~WordsPlusGame();
 
 	Q_INVOKABLE void intializePlayArea();

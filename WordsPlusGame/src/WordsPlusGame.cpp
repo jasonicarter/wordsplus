@@ -83,8 +83,11 @@ using namespace bb::system;
 using namespace bb::multimedia;
 
 
-WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent) :
-		QObject(parent), m_context(&context)
+//WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent) :
+//		QObject(parent), m_context(&context)
+
+WordsPlusGame::WordsPlusGame(QObject *parent)
+    : QObject(parent)
 {
 	//set default values
 	deltaX = 0.0;
@@ -119,6 +122,10 @@ WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *paren
 
 	//score loop stuff - need to register to make it work - investigate
 	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
+
+
+	//TODO REMOVE SHOW() WHEN ENABLING BBM
+	show();
 
 }
 

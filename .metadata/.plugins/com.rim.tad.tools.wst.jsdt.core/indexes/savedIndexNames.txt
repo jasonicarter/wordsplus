@@ -1,5 +1,4 @@
 INDEX VERSION 1.122+C:\Users\Jason\Documents\blackberry-workspace\blackberry\.metadata\.plugins\com.rim.tad.tools.wst.jsdt.core\indexes
-3713790560.index
 406722202.index
 2307749942.index
 3503550472.index

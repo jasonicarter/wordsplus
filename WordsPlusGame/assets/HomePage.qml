@@ -1,6 +1,6 @@
 import bb.cascades 1.0
 import bb.system 1.0
-import bb.multimedia 1.0
+//import bb.multimedia 1.0
 
 Container {
     id: homePageContainer
@@ -13,11 +13,11 @@ Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
-        Container { //container background image
-            ImageView {
-                imageSource: "asset:///images/tabs.png"
-            }
-        }
+        //        Container { //container background image
+        //            ImageView {
+        //                imageSource: "asset:///images/tabs.png"
+        //            }
+        //        }
         Container {
             ImageView {
                 id: rotateImageMsg
@@ -43,77 +43,135 @@ Container {
         Container {
             layout: DockLayout {
             }
-            topPadding: 25
-            preferredWidth: 768
-            preferredHeight: 250
-            //background: Color.White
+            //topPadding: 25
+            //preferredWidth: 768
+            //preferredHeight: 250
+            //background: Color.Blue
             Container {
-                id: help
-                horizontalAlignment: HorizontalAlignment.Right
-                verticalAlignment: VerticalAlignment.Top
-                preferredHeight: 100
-                preferredWidth: 175
-                //background: Color.White
-                onTouch: {
-                    if (event.isDown()) {
-                        tabHelp.opacity = 1;
-                        wordsPlus.playSound("letterSelected");
-                    } else if (event.isUp()) {
-                        tabHelp.opacity = 0;
-                        homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
-                        homeSysToast.show();
-                    }
-                }
-                onTouchExit: {
-                    tabHelp.opacity = 0;
+                id: theme
+                ImageView {
+                    imageSource: "theme/" + "space" + "/theme_background.jpg"
                 }
             }
             Container {
-                id: hint
-                horizontalAlignment: HorizontalAlignment.Right
-                verticalAlignment: VerticalAlignment.Bottom
-                preferredHeight: 100
-                preferredWidth: 175
-                //background: Color.White
-                onTouch: {
-                    if (event.isDown()) {
-                        tabHints.opacity = 1;
-                        wordsPlus.playSound("letterSelected");
-                    } else if (event.isUp()) {
-                        tabHints.opacity = 0;
-                        homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
-                        homeSysToast.show();
-                    }
+                //background: Color.Green
+                layout: AbsoluteLayout {
                 }
-                onTouchExit: {
-                    tabHints.opacity = 0;
+                preferredWidth: 500
+                ImageView {
+                    id: redHeart
+                    objectName: "rotateHeartImage"
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: -190
+                        positionY: 0
+                    }
+                    //imageSource: "asset:///images/heart_large.png"
+                    imageSource: "theme/" + "space" + "/theme_icon.png"
                 }
             }
-        }
-        Container {
-            //background: Color.Gray //top
-            Container { //love me container
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
+            Container {
+                ImageView {
+                    imageSource: "asset:///images/tabs.png"
                 }
-                horizontalAlignment: HorizontalAlignment.Center
+            }
+            Container {
+                layout: AbsoluteLayout {
+                }
                 Container {
-                    //background: Color.Green
-                    layout: AbsoluteLayout {
+                    id: help
+                    preferredHeight: 100
+                    preferredWidth: 175
+                    //background: Color.Gray
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 600
+                        positionY: 0
                     }
-                    preferredWidth: 300
-                    ImageView {
-                        id: redHeart
-                        objectName: "rotateHeartImage"
-                        layoutProperties: AbsoluteLayoutProperties {
-                            positionX: -190
-                            positionY: 0
+                    onTouch: {
+                        if (event.isDown()) {
+                            tabHelp.opacity = 1;
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            tabHelp.opacity = 0;
+                            homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
+                            homeSysToast.show();
                         }
-                        imageSource: "asset:///images/heart_large.png"
+                    }
+                    onTouchExit: {
+                        tabHelp.opacity = 0;
                     }
                 }
-            } //end of love me
-        }
+                Container {
+                    id: hint
+                    preferredHeight: 100
+                    preferredWidth: 175
+                    //background: Color.Blue
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 600
+                        positionY: 120
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            tabHints.opacity = 1;
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            tabHints.opacity = 0;
+                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
+                            homeSysToast.show();
+                        }
+                    }
+                    onTouchExit: {
+                        tabHints.opacity = 0;
+                    }
+                }
+                Container {
+                    id: themes
+                    preferredHeight: 100
+                    preferredWidth: 175
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 600
+                        positionY: 230
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            tabHints.opacity = 1;
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            tabHints.opacity = 0;
+                            homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
+                            homeSysToast.show();
+                        }
+                    }
+                    onTouchExit: {
+                        tabHints.opacity = 0;
+                    }
+                }
+            } //tab buttons
+        } //background dock container
+        //        Container {
+        //            //background: Color.Gray //top
+        //            Container { //love me container
+        //                layout: StackLayout {
+        //                    orientation: LayoutOrientation.LeftToRight
+        //                }
+        //                horizontalAlignment: HorizontalAlignment.Center
+        //                Container {
+        //                    //background: Color.Green
+        //                    layout: AbsoluteLayout {
+        //                    }
+        //                    preferredWidth: 300
+        //                    ImageView {
+        //                        id: redHeart
+        //                        objectName: "rotateHeartImage"
+        //                        layoutProperties: AbsoluteLayoutProperties {
+        //                            positionX: -190
+        //                            positionY: 0
+        //                        }
+        //                        imageSource: "asset:///images/heart_large.png"
+        //                    }
+        //                }
+        //            } //end of love me
+        //        }
         Container { // center
             layout: DockLayout {
             }
@@ -344,11 +402,12 @@ Container {
                 mimeType: "application/x-bb-appworld"
                 uri: "appworld://content/19132685"
             }
-        },
-        SystemToast {
-            id: homeSysToast
-            body: ""
-            button.label: "Got it!" //btnName
         }
+            ,
+            SystemToast {
+                    id: homeSysToast
+                    body: ""
+                    button.label: "Got it!" //btnName
+                }
     ]
 }//root container
