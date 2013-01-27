@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlus/assets/Achievements.qml&apos; to &apos;AchievementList.qml&apos;" description="Rename resource &apos;Achievements.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/Achievements.qml" name="AchievementList.qml" stamp="1354762159842" updateReferences="true"/>
+</session>

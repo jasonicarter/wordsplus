@@ -1,0 +1,19 @@
+
+**** Build of configuration Default for project paymentservice ****
+
+make Device-Debug 
+C:/bbndk/host_10_0_9_404/win32/x86/usr/bin/qmake -spec blackberry-armv7le-qcc -o arm/Makefile paymentservice.pro CONFIG+=device
+WARNING: Failure to find: ../src/*.h
+WARNING: Failure to find: ../src/*.h
+C:/bbndk/host_10_0_9_404/win32/x86/usr/bin/qmake -spec blackberry-x86-qcc -o x86/Makefile paymentservice.pro CONFIG+=simulator
+WARNING: Failure to find: ../src/*.h
+WARNING: Failure to find: ../src/*.h
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/paymentservice/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/paymentservice/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/paymentservice/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/paymentservice/arm'
+
+**** Build Finished ****

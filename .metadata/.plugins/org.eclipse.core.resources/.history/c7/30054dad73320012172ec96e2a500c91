@@ -1,0 +1,71 @@
+// Navigation pane project template
+#include "WebView.hpp"
+
+#include <bb/cascades/Application>
+#include <bb/cascades/QmlDocument>
+#include <bb/cascades/AbstractPane>
+
+using namespace bb::cascades;
+using namespace bb::system;
+using namespace bb::platform;
+
+WebView::WebView(bb::cascades::Application *app)
+: QObject(app)
+{
+    // create scene document from main.qml asset
+    // set parent to created document to ensure it exists for the whole application lifetime
+    QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+
+    // Register SystemDialog classes to use them in QML
+    qmlRegisterType<SystemPrompt>("my.systemPrompts",1,0,"SystemPrompt");
+
+    // create root object for the UI
+    AbstractPane *root = qml->createRootObject<AbstractPane>();
+    // set created root object as a scene
+    app->setScene(root);
+}
+
+
+// A public function to display a SystemPrompt in your UI
+void WebView::showPrompt() {
+
+    // Set up the prompt with a title, a label for your inputField, and some
+    // text to present to the user to remind them to enter text.
+    // This prompt will dismiss automatically when the button is clicked.
+
+    prompt = new SystemPrompt();
+    prompt->setTitle("My System Prompt Title");
+    prompt->setDismissAutomatically(true);
+    prompt->inputField()->setDefaultText("Find:");
+    prompt->inputField()->setEmptyText("Search");
+
+    // Connect your functions to handle the predefined signals for the
+    // two standard buttons, OK (accepted) and Cancel (rejected).
+
+    bool success = connect(prompt,
+            SIGNAL(finished(SystemUiResult *result)),
+            this,
+            SLOT(onPromptFinished(SystemUiResult *result)));
+
+    Q_ASSERT(success);
+    // Indicate that the variable success isn't used in the rest of the app,
+    // to prevent a compiler warning
+    Q_UNUSED(success);
+
+    // Now show the prompt in your UI
+
+    prompt->show();
+}
+
+void WebView::onPromptFinished(SystemUiResult *result) {
+    if (result != SystemUiResult::ConfirmButtonSelection)
+        {
+        qDebug() << "Prompt Accepted:" << text;
+        pane->setProperty("textProp", QVariant("Prompt Accepted:" + text));
+            }
+    else {
+        qDebug() << "Prompt Rejected";
+        pane->setProperty("textProp", QVariant("Prompt Rejected"));
+        }
+    prompt->deleteLater();
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlus/assets/Copy of TopLeaderboard.qml&apos; to &apos;BuddyListLeaderboard.qml&apos;" description="Rename resource &apos;Copy of TopLeaderboard.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/Copy of TopLeaderboard.qml" name="BuddyListLeaderboard.qml" stamp="1358132940604" updateReferences="true"/>
+</session>

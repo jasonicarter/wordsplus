@@ -1,0 +1,29 @@
+/*
+ * TestPage.cpp
+ *
+ *  Created on: 2012-11-07
+ *      Author: Jason
+ */
+
+#include "TestPage.hpp"
+
+#include <bb/cascades/QmlDocument>
+#include <bb/cascades/controls>
+
+#define LOG(fmt, args...)   do { fprintf(stdout, "[TestPage.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
+
+using namespace bb::cascades;
+
+TestPage::TestPage()
+{
+	LOG("TestPage");
+	QmlDocument* qmlContent = QmlDocument::create("asset:///Test.qml");
+
+	if(qmlContent)
+	{
+		LOG("qmlContent");
+		Control* content = qmlContent->createRootObject<Control>();
+		//this->setContent(content);
+	}
+
+}
