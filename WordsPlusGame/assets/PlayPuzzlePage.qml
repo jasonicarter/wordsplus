@@ -9,12 +9,21 @@ Container { // root Container
         horizontalAlignment: HorizontalAlignment.Center
         //background: Color.create("#0098f0")
         preferredHeight: 1280
-        Container {
-            layout: DockLayout {
-            }
-            ThemeOtherPages {
-            }
+        ThemeOtherPages {
         }
+//            Container {
+//                layout: AbsoluteLayout {
+//                }
+//                ImageView {
+//                    layoutProperties: AbsoluteLayoutProperties {
+//                        positionX: 500
+//                        positionY: 0
+//                    }
+//                    objectName: "puzzleHeart"
+//                    //imageSource: "asset:///images/heart_large.png"
+//                    imageSource: "theme/" + "words" + "/theme_icon.png"
+//                }
+//            }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"

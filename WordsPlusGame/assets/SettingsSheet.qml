@@ -4,19 +4,9 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.create("#0098f0")
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
-        Container {
-            layout: AbsoluteLayout {
-            }
-            ImageView {
-                layoutProperties: AbsoluteLayoutProperties {
-                    positionX: 500
-                    positionY: 0
-                }
-                imageSource: "asset:///images/heart_large.png"
-            }
+        ThemeOtherPages {
         }
         ScrollView {
             preferredWidth: 720
