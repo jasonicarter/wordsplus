@@ -6,7 +6,7 @@ Container {
     Container {
         id: theme
         ImageView {
-            imageSource: "theme/" + "space" + "/theme_background.jpg"
+            imageSource: "theme/" + "words" + "/theme_background.jpg"
         }
     }
     Container {
@@ -19,7 +19,7 @@ Container {
             }
             objectName: "puzzleHeart"
             //imageSource: "asset:///images/heart_large.png"
-            imageSource: "theme/" + "space" + "/theme_icon.png"
+            imageSource: "theme/" + "words" + "/theme_icon.png"
         }
     }
 }
