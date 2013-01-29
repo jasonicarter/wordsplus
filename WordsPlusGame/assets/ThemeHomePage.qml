@@ -21,7 +21,6 @@ Container {
                 positionX: -190
                 positionY: 0
             }
-            //imageSource: "asset:///images/heart_large.png"
             imageSource: "theme/" + "words" + "/theme_icon.png"
         }
     }
