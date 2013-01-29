@@ -47,31 +47,31 @@ Page {
         ]
     }
     attachedObjects: [
-            Sheet {
-                id: aboutSheet
-                AboutSheet {
-                }
-            },
-            Sheet {
-                id: helpSheet
-                HelpSheet {
-                }
-            },
-            Sheet {
-                id: settingsSheet
-                SettingsSheet {
-                }
-            },
-            Sheet {
-                id: categorySheet
-                CategorySheet {
-                }
-            },
-            Sheet {
-                id: statsSheet
-                StatsSheet {
-                }
-            },
+        Sheet {
+            id: aboutSheet
+            AboutSheet {
+            }
+        },
+        Sheet {
+            id: helpSheet
+            HelpSheet {
+            }
+        },
+        Sheet {
+            id: settingsSheet
+            SettingsSheet {
+            }
+        },
+        Sheet {
+            id: categorySheet
+            CategorySheet {
+            }
+        },
+        Sheet {
+            id: statsSheet
+            StatsSheet {
+            }
+        },
         SystemToast {
             id: mainSysToast
             body: "" //set in C++

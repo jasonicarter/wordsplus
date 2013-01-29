@@ -101,8 +101,7 @@ Container {
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
                     tabHints.opacity = 0;
-                    homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
-                    homeSysToast.show();
+                    themeSheet.open();
                 }
             }
             onTouchExit: {

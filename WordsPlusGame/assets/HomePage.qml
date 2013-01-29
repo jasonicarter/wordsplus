@@ -5,7 +5,6 @@ import bb.multimedia 1.0
 Container {
     id: homePageContainer
     objectName: "homePageContainer"
-    //background: Color.create("#0098f0")
     Container {
         property string scoreLoopUsername
         property string btnName
@@ -264,6 +263,11 @@ Container {
             id: homeSysToast
             body: ""
             button.label: "Got it!" //btnName
+        },
+        Sheet {
+            id: themeSheet
+            ThemeSheet {
+            }
         }
     ]
 }//root container
