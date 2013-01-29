@@ -7,11 +7,7 @@ Page {
         background: Color.create("#0098f0")
         //preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
-        Container {         
-            layout: DockLayout {
-            }
-            ThemeOtherPages {
-            }
+        ThemeOtherPages {
         }
         Container { //middle
             preferredWidth: 720

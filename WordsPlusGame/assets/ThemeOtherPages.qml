@@ -18,7 +18,6 @@ Container {
                 positionY: 0
             }
             objectName: "puzzleHeart"
-            //imageSource: "asset:///images/heart_large.png"
             imageSource: "theme/" + "words" + "/theme_icon.png"
         }
     }
