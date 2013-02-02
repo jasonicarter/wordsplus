@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Page {
     Container {
@@ -18,113 +19,78 @@ Page {
                 preferredWidth: 768
                 preferredHeight: 70
                 horizontalAlignment: HorizontalAlignment.Center
+                background: Color.create("#272727")
                 Label {
                     id: themeSwitch
-                    text: "A Change of Heart"
+                    text: "A CHANGE OF HEART"
                     horizontalAlignment: HorizontalAlignment.Center
                     textStyle {
-                        base: statsSheetBigTextNormalWhite.style
+                        base: statsSheetBigBodyNormalBlue.style
                     }
                 }
             }
             Divider {
                 opacity: 0
             }
-            Container { // details
-                background: Color.create("#272727")
-                preferredWidth: 720
-                leftPadding: 15
-                Label {
-                    text: "Click a damn theme to switch to, it's that simple. " + "Also, you may have to pay $0.99 per bundle (theme + categories). " + "This is the third line which is the most I'll have."
-                    multiline: true
-                    touchPropagationMode: TouchPropagationMode.None
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Left
-                    textStyle {
-                        base: statsSheetSubTitleNormalBlue.style
-                    }
-                }
-            } // details
             Divider {
                 opacity: 0
             }
             Container {
-                background: Color.create("#272727")
-                ScrollView { //imagescroller
-                    scrollViewProperties.scrollMode: ScrollMode.Horizontal
-                    Container {
-                        layout: StackLayout {
-                            orientation: LayoutOrientation.LeftToRight
-                        }
-                        preferredHeight: 750
-                        Container {
-                            rightPadding: 5
-                            Container {
-                                topPadding: 5
-                                rightPadding: 5
-                                leftPadding: 5
-                                bottomPadding: 5
-                                background: Color.create("#fafafa")
-                                ImageView {
-                                    imageSource: "theme/words/theme_sample.jpg"
-                                }
-                                Label {
-                                    text: "FREE!\n"
-                                    multiline: true
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    textStyle {
-                                        base: statsSheetSubTitleNormalBlue.style
-                                    }
-                                }
-                            }
-                        }
-                        Container {
-                            rightPadding: 5
-                            Container {
-                                topPadding: 5
-                                rightPadding: 5
-                                leftPadding: 5
-                                bottomPadding: 5
-                                background: Color.create("#fafafa")
-                                ImageView {
-                                    imageSource: "theme/space/theme_sample.jpg"
-                                }
-                                Label {
-                                    text: "Outer Limits + \n" + "5 Categories"
-                                    multiline: true
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    textStyle {
-                                        base: statsSheetSubTitleNormalBlue.style
-                                    }
-                                }
-                            }
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
-                        ImageView {
-                            imageSource: "images/heart.png"
-                        }
+                //background: Color.create("#272727")
+                preferredHeight: 700
+                property string seletedTheme
+                ListView {                 
+                    dataModel: XmlDataModel {
+                        source: "models/themes.xml"
                     }
-                } //imagescroller
+                    scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
+                    horizontalAlignment: HorizontalAlignment.Center
+                    layout: StackListLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    // Add appearance definitions for the list items using the
+                    // listItemComponents list
+                    listItemComponents: [
+                        ListItemComponent {
+                            type: "item"
+                            Container {
+                                rightPadding: 30
+                                Container {
+                                    layout: StackLayout {
+                                        orientation: LayoutOrientation.LeftToRight
+                                    }
+                                    topPadding: 2
+                                    rightPadding: 2
+                                    leftPadding: 2
+                                    bottomPadding: 2
+                                    background: Color.Black
+                                    ImageView {
+                                        imageSource: ListItemData.image
+                                    }
+                                }
+                            }
+                        }
+                    ] //end of components
+                    onTriggered: {
+                        var selectedItem = dataModel.data(indexPath);
+                        seletedTheme = selectedItem.name;
+                        themeSwitch.text = seletedTheme;
+                        themeDialog.show();
+//                        if (seletedItem.price == "free") {
+//                            themeDialog.show();
+//                        }
+                    }
+                    attachedObjects: [
+                        SystemDialog {
+                            id: themeDialog
+                            title: seletedTheme
+                            body: "You are about to switch your theme to " + selectedTheme
+                            onFinished: {
+                                //if (myQmlDialog.result == CancelButtonSelection) myQmlToast.show();
+                            }
+                        }
+                    ]
+                } //end of listview
             }
         } // end of middle container
     } // end of page
