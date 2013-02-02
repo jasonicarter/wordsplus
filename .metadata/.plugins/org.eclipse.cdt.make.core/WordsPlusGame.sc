@@ -4,10 +4,11 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="com.qnx.qcc.toolChain.1780767108">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include"/>
-<includePath path="C:/bbndk/host_10_0_9_529/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
-<includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include/cpp/c"/>
-<includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include/cpp"/>
+<includePath path="#undef __ARMEB__" removed="true"/>
+<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include"/>
+<includePath path="C:/bbndk/host_10_0_10_534/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
+<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/cpp/c"/>
+<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/cpp"/>
 <definedSymbol symbol="__cplusplus"/>
 <definedSymbol symbol="__cplusplus=1"/>
 <definedSymbol symbol="__QNX__"/>

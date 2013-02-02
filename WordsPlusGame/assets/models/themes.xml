@@ -1,8 +1,6 @@
 <root>
-    <item category="ANIMALS" filename="animals" image= "asset:///images/categoryList/elephant.png"/>
-    <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
-    <item category="THE BODY" filename="body" image= "asset:///images/categoryList/nurse.png"/>
-    <item category="EARTH" filename="earth" image= "asset:///images/categoryList/earth.png"/>
-    <item category="JOBS + OCCUPATIONS" filename="jobs" image= "asset:///images/categoryList/jobs.png"/>
-    <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
+    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="free"/>
+    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
+    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="pay"/>
+    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
 </root>
