@@ -57,6 +57,7 @@ public:
 	Q_INVOKABLE void ControlsForBBM(int state);
 	Q_INVOKABLE void playSound(const QString msg);
 
+	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
 	Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
 	Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
 	Q_PROPERTY (const QString totalWordsFound READ getTotalWordsFound NOTIFY totalWordsFoundChanged);
@@ -73,6 +74,9 @@ public:
 
 	QString getCategory();
 	void setCategory(const QString cat);
+
+	QString getTheme();
+	void setTheme(const QString themeName);
 
 	QString getTime();
 	QString getTotalWordsFound();
@@ -123,6 +127,7 @@ private Q_SLOTS:
 	void onAchievedAward();
 
 Q_SIGNALS:
+	void themeChanged();
 	void categoryChanged(const QString);
 	void puzzleWordsChanged(const QString);
 	void timeChanged();

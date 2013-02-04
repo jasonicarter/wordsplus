@@ -6,7 +6,7 @@ Container {
     Container {
         id: theme
         ImageView {
-            imageSource: "theme/" + "words" + "/theme_background.jpg"
+            imageSource: "theme/" + wordsPlus.theme + "/theme_background.jpg"
         }
     }
     Container {
@@ -21,7 +21,7 @@ Container {
                 positionX: -190
                 positionY: 0
             }
-            imageSource: "theme/" + "words" + "/theme_icon.png"
+            imageSource: "theme/" + wordsPlus.theme + "/theme_icon.png"
         }
     }
     Container {

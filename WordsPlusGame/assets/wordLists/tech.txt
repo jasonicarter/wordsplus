@@ -85,7 +85,7 @@ graphics
 hack
 hacker
 hardware
-home page
+homepage
 host
 html
 hyperlink
@@ -107,7 +107,7 @@ keyword
 laptop
 link
 login
-log out
+logout
 logic
 lurking
 mainframe
@@ -177,7 +177,7 @@ software
 spam
 spammer
 spreadsheet
-status bar
+statusbar
 storage
 spyware
 surf

@@ -36,6 +36,7 @@
 #define HINTREVEAL	9
 #define HINTROTATEUP	10
 #define WORDSFOUND "settingsWordsFound"
+#define THEME "settingsTheme"
 #define CATEGORY "settingsCategory"
 #define SOUNDBACKGROUNDMUSIC "X.WAV"
 #define SOUNDLEVELCOMPLETED "puzzleCompleted.wav"
@@ -115,7 +116,10 @@ WordsPlusGame::WordsPlusGame(QObject *parent)
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
+	//TODO look into area app runs for first time
 
+
+	//TODO do i use this still?
 	// Initialize the sound manager with a directory that resides in the
 	// assets directory which only contains playable files.
 	mSoundManager = new SoundManager("sounds/");
@@ -991,6 +995,15 @@ void WordsPlusGame::resetTimer() {
 		timeSec = 0;
 		stopWatch->start();
 	}
+}
+
+QString WordsPlusGame::getTheme() {
+	return settings->getValueFor(THEME, "wordsPlus");
+}
+
+void WordsPlusGame::setTheme(const QString themeName) {
+	settings->saveValueFor(THEME, themeName);
+	emit themeChanged();
 }
 
 QString WordsPlusGame::getCategory() {
