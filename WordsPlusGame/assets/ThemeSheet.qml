@@ -2,6 +2,7 @@ import bb.cascades 1.0
 import bb.system 1.0
 
 Page {
+    property string seletedTheme
     Container {
         layout: DockLayout {
         }
@@ -32,14 +33,12 @@ Page {
             Divider {
                 opacity: 0
             }
-            Divider {
-                opacity: 0
-            }
             Container {
                 //background: Color.create("#272727")
-                preferredHeight: 700
-                property string seletedTheme
-                ListView {                 
+                preferredHeight: 720
+                ListView {
+                    id: myList
+                    //property string seletedTheme
                     dataModel: XmlDataModel {
                         source: "models/themes.xml"
                     }
@@ -72,21 +71,27 @@ Page {
                         }
                     ] //end of components
                     onTriggered: {
-                        var selectedItem = dataModel.data(indexPath);
+                        var selectedItem = myList.dataModel.data(indexPath);
                         seletedTheme = selectedItem.name;
-                        themeSwitch.text = seletedTheme;
-                        themeDialog.show();
-//                        if (seletedItem.price == "free") {
-//                            themeDialog.show();
-//                        }
+                        if (selectedItem.price == "free") {
+                            themeDialog.show();
+                        } else if (selectedItem.price == "pay") {
+                            //themeDialog.show();
+                        }
                     }
                     attachedObjects: [
                         SystemDialog {
                             id: themeDialog
-                            title: seletedTheme
-                            body: "You are about to switch your theme to " + selectedTheme
+                            title: "Switching Themes"
+                            body: "You are about to switch your theme to " + seletedTheme
                             onFinished: {
-                                //if (myQmlDialog.result == CancelButtonSelection) myQmlToast.show();
+                                if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
+                                    //on cancel do nothing
+                                }
+                                if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
+                                    //on confirm set c++ property
+                                    wordsPlus.theme = seletedTheme;
+                                }
                             }
                         }
                     ]

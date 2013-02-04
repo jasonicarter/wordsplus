@@ -1,6 +1,6 @@
 <root>
-    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="free"/>
-    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
-    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="pay"/>
-    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
+    <item image= "theme/wordsPlus/theme_sample.jpg"	name="wordsPlus"	price="free"/>
+    <item image= "theme/space/theme_sample.jpg"	name="space"	price="free"/>
+    <item image= "theme/wordsPlus/theme_sample.jpg"	name="wordsPlus"	price="pay"/>
+    <item image= "theme/space/theme_sample.jpg"	name="spacing"	price="free"/>
 </root>

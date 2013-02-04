@@ -4,19 +4,9 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.create("#0098f0")
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
-        Container {
-            layout: AbsoluteLayout {
-            }
-            ImageView {
-                layoutProperties: AbsoluteLayoutProperties {
-                    positionX: 500
-                    positionY: 0
-                }
-                imageSource: "asset:///images/heart_large.png"
-            }
+        ThemeOtherPages {
         }
         Container { //middle container
             preferredWidth: 720
@@ -26,6 +16,7 @@ Page {
             Container {
                 topPadding: 50
                 preferredWidth: 720
+                property string category
                 Container {
                     property int settingHard: 8
                     property int settingMedium: 4
@@ -82,7 +73,63 @@ Page {
                 Divider {
                     opacity: 0
                 }
-                CategoryList {
+                Container {
+                    preferredWidth: 720
+                    DropDown {
+                        id: catDropDown
+                        title: "Theme Category:"
+                        Option {
+                            id: defaultCat
+                            text: "WordsPlus"
+                            description: "Included Categories"
+                            value: "categories"
+                        }
+                        Option {
+                            id: spacingOut
+                            text: "Spacing Out"
+                            description: "5 categories"
+                            value: "spacingout"
+                        }
+                        onSelectedOptionChanged: {
+                            if (selectedValue == "spacingout") {
+                                catList.dataModel.source = "models/spacingout.xml";
+                            } else if (selectedValue == "categories") {
+                                catList.dataModel.source = "models/categories.xml";
+                            }
+                        }
+                    }
+                    onCreationCompleted: {
+                        defaultCat.selected = true;
+                    }
+                } //category dropdown
+                Divider {
+                    opacity: 0
+                }
+                Container {
+                    layout: DockLayout {
+                    }
+                    ListView {
+                        id: catList
+                        dataModel: XmlDataModel {
+                            //source: "models/categories.xml"
+                        }
+                        listItemComponents: [
+                            ListItemComponent {
+                                type: "item"
+                                StandardListItem {
+                                    imageSpaceReserved: true
+                                    title: ListItemData.category
+                                    imageSource: ListItemData.image
+                                }
+                            }
+                        ]
+                        onTriggered: {
+                            var selectedItem = dataModel.data(indexPath);
+                            wordsPlus.category = selectedItem.filename;
+                            wordsPlus.intializePlayArea();
+                            categorySheet.close();
+                        }
+                    } //listview
                 }
             }
         } //middle container
