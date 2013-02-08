@@ -84,11 +84,11 @@ using namespace bb::system;
 using namespace bb::multimedia;
 
 
-//WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent) :
-//		QObject(parent), m_context(&context)
+WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *parent) :
+		QObject(parent), m_context(&context)
 
-WordsPlusGame::WordsPlusGame(QObject *parent)
-    : QObject(parent)
+//WordsPlusGame::WordsPlusGame(QObject *parent)
+//    : QObject(parent)
 {
 	//set default values
 	deltaX = 0.0;
@@ -129,7 +129,7 @@ WordsPlusGame::WordsPlusGame(QObject *parent)
 
 
 	//TODO REMOVE SHOW() WHEN ENABLING BBM
-	show();
+	//show();
 
 }
 
