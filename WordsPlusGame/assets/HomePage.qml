@@ -38,7 +38,7 @@ Container {
             ImageView {
                 id: puzzleLetters
                 opacity: 1
-                imageSource: "asset:///images/homeAnimation/mainPage_full.png"
+                imageSource: "theme/" + wordsPlus.theme + "/theme_home.png"
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
@@ -244,20 +244,6 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
-        },
-        Invocation {
-            id: invokeWebSite
-            query: InvokeQuery {
-                mimeType: "text/html"
-                uri: "http://www.twocasualcoders.com"
-            }
-        },
-        Invocation {
-            id: invokeLeaveReview
-            query: InvokeQuery {
-                mimeType: "application/x-bb-appworld"
-                uri: "appworld://content/19132685"
-            }
         },
         SystemToast {
             id: homeSysToast

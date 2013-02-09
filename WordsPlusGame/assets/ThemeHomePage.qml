@@ -10,7 +10,6 @@ Container {
         }
     }
     Container {
-        //background: Color.Green
         layout: AbsoluteLayout {
         }
         preferredWidth: 500
@@ -47,7 +46,7 @@ Container {
             //background: Color.Gray
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 600
-                positionY: 0
+                positionY: 20
             }
             onTouch: {
                 if (event.isDown()) {
@@ -70,7 +69,7 @@ Container {
             //background: Color.Blue
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 600
-                positionY: 120
+                positionY: 140
             }
             onTouch: {
                 if (event.isDown()) {
@@ -93,7 +92,7 @@ Container {
             //background: Color.Green
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 600
-                positionY: 230
+                positionY: 250
             }
             onTouch: {
                 if (event.isDown()) {
@@ -109,4 +108,83 @@ Container {
             }
         }
     } //tab buttons
+    Container {
+        preferredHeight: 300
+        preferredWidth: 720
+        //background: Color.Black
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Bottom
+        Container {
+            layout: DockLayout {
+            }
+            //not using button image to keep image and app size down
+            ImageView {
+                imageSource: "images/social.png"
+            }
+            //        ImageButton {
+            //            defaultImageSource: "images/social.png"
+            //        }
+            Container {
+                layout: AbsoluteLayout {
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 100
+                        positionY: 0
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            wordsPlus.Share("Facebook", "home");
+                        }
+                    }
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 300
+                        positionY: 0
+                    }
+                    attachedObjects: [
+                        Invocation {
+                            id: invokeReview
+                            query: InvokeQuery {
+                                invokeTargetId: "sys.appworld"
+                                uri: "appworld://content/21931881"
+                            }
+                        }
+                    ]
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            invokeReview.trigger("bb.action.OPEN");
+                        }
+                    }
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 500
+                        positionY: 0
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            wordsPlus.Share("Twitter", "home");
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
