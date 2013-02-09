@@ -20,6 +20,7 @@
 #include <bb/cascades/Container>
 #include <bb/cascades/Application>
 #include <bb/cascades/ImageView>
+#include <bb/cascades/Invocation>
 
 #include <bb/platform/bbm/Context>
 #include <bb/platform/bbm/UserProfile>
@@ -56,6 +57,7 @@ public:
 	Q_INVOKABLE void resetTimer();
 	Q_INVOKABLE void ControlsForBBM(int state);
 	Q_INVOKABLE void playSound(const QString msg);
+	Q_INVOKABLE void Share(QString target, QString section);
 
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
 	Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
@@ -125,6 +127,7 @@ private Q_SLOTS:
 	void onFullscreen();
 	void onLoadLeaderboardCompleted(QVariantList data);
 	void onAchievedAward();
+	void onArmed();
 
 Q_SIGNALS:
 	void themeChanged();
@@ -213,6 +216,8 @@ private:
 	bb::platform::bbm::ProfileBox* m_profileBox;
 	bb::platform::bbm::UserProfile* m_userProfile;
 	bb::platform::bbm::Context* m_context;
+
+	Invocation* m_pInvocation;
 
 	AppData_t *mAppData;
 	ScoreLoopThread *mScoreLoop;

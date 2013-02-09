@@ -12,12 +12,14 @@ Container {
     Container {
         layout: AbsoluteLayout {
         }
+        //preferredWidth: 500
         ImageView {
+            id: puzzleHeart
+            objectName: "puzzleHeart"
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 500
                 positionY: 0
-            }
-            objectName: "puzzleHeart"
+            }          
             imageSource: "theme/" + wordsPlus.theme + "/theme_icon.png"
         }
     }

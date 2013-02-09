@@ -2,8 +2,8 @@ import bb.cascades 1.0
 
 Container { // root Container
     id: playPuzzleRootContainer
+    objectName: "playPuzzleRootContainer"
     Container { //main container
-        id: mainContainer
         layout: DockLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center

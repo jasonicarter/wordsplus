@@ -22,6 +22,7 @@
 #include <bb/system/SystemToast>
 #include <bb/multimedia/SystemSound>
 #include <bb/cascades/FadeTransition>
+#include <bb/cascades/InvokeQuery>
 
 
 //should probably all be static const and not #define as this makes them global
@@ -112,6 +113,7 @@ WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *paren
 	bbmLoveAward = false;
 	bbmBusyAward = false;
 	bbmInviteAward = false;
+	hintUsedAward = false;
 
 
 	// Initialize for local storage settings
@@ -207,8 +209,8 @@ void WordsPlusGame::onOrientationChanged() {
 			//used for achievements
 			hintUsedAward = true;
 
-			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
-			redHeart->setRotationZ(90);
+			ImageView *redHeartImage = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
+			redHeartImage->setRotationZ(90);
 
 			int r = rand() % listOfWords.count(); //list of words reduced once word is found
 			//LOG("list count: %i", listOfWords.count());
@@ -468,8 +470,7 @@ void WordsPlusGame::InitializeHomePage() {
 
 void WordsPlusGame::InitializePuzzlePage() {
 
-	QmlDocument* qmlContent = QmlDocument::create(
-			"asset:///PlayPuzzlePage.qml");
+	QmlDocument* qmlContent = QmlDocument::create("asset:///PlayPuzzlePage.qml");
 	qmlContent->setContextProperty("wordsPlus", this);
 	puzzlePageControl = qmlContent->createRootObject<Control>();
 	//setContent performed in InitializePlayArea
@@ -566,8 +567,8 @@ void WordsPlusGame::intializePlayArea() {
 				imageView->setPreferredSize(mWantedSize, mWantedSize);
 
 				QString imageSource =
-						QString("asset:///images/letters/%1.png").arg(
-								QString(letter[i][ii]).toLower());
+						QString("asset:///theme/%1/letters/%2.png").arg(getTheme(),QString(letter[i][ii]).toLower());
+						//QString("asset:///images/letters/%1.png").arg(QString(letter[i][ii]).toLower());
 				imageView->setImage(Image(imageSource));
 
 				// We are connecting all our tiles to the same slot, we can later identify them by sender().
@@ -805,29 +806,24 @@ void WordsPlusGame::HighlightSelectedTile(int pos, int stateOfLetter) {
 
 		switch (stateOfLetter) {
 			case NORMAL:
-				imageSource = QString("asset:///images/letters/%1").arg(
-						imageSrc[index]);
+				imageSource = QString("asset:///theme/%1/letters/%2").arg(getTheme(),imageSrc[index]);
 				break;
 			case SELECTED:
-				imageSource = QString("asset:///images/letters/selected/%1").arg(
-						imageSrc[index]);
+				imageSource = QString("asset:///theme/%1/letters/selected/%2").arg(getTheme(),imageSrc[index]);
 				mPlayField[i][ii]->setObjectName("selected");
 				break;
 			case HIGHLIGHT:
-				imageSource = QString("asset:///images/letters/highlight/%1").arg(
-						imageSrc[index]);
+				imageSource = QString("asset:///theme/%1/letters/highlight/%2").arg(getTheme(),imageSrc[index]);
 				playSound(SOUNDLETTERSELECTED);
 				setSelectedLetters(letter);
 				break;
 			case HINTREVEAL:
 				mPlayField[i][ii]->setRotationZ(90);
-				imageSource = QString("asset:///images/letters/hints/%1").arg(
-						imageSrc[index]);
+				imageSource = QString("asset:///theme/%1/letters/hints/%2").arg(getTheme(),imageSrc[index]);
 				playSound(SOUNDLETTERSELECTED);
 				break;
 			case HINTROTATEUP:
-				imageSource = QString("asset:///images/letters/hints/%1").arg(
-						imageSrc[index]);
+				imageSource = QString("asset:///theme/%1/letters/hints/%2").arg(getTheme(),imageSrc[index]);
 				mPlayField[i][ii]->setRotationZ(0);
 				break;
 		}
@@ -1190,6 +1186,36 @@ void WordsPlusGame::setDifficulty(int difficulty) {
 	settings->saveValueFor(DIFFICULTY, QString::number(difficulty));
 	emit difficultyChanged();
 
+}
+
+void WordsPlusGame::Share(QString target, QString section) {
+
+	// Declare an Invocation* called m_pInvocation somewhere.
+	QString msg;
+	if(section == "home") {
+		msg = QString("Love word games? - https://appworld.blackberry.com/webstore/content/21931881 - You'll love #WordsPlus.\n\n");
+	}
+	else if (section == "puzzle") {
+		msg = QString("Another great game of #WordsPlus - https://appworld.blackberry.com/webstore/content/21931881 - \nTime: %1  Score: %2\n\n")
+				.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
+	}
+
+	  m_pInvocation = Invocation::create(
+			InvokeQuery::create()
+	  	  	  .parent(this)
+			  .mimeType("text/plain")
+			  .invokeTargetId(target)
+			  .invokeActionId("bb.action.SHARE")
+			  .data(msg.toUtf8())
+		  );
+
+	  QObject::connect(m_pInvocation, SIGNAL(armed()), this, SLOT(onArmed()));
+	  QObject::connect(m_pInvocation, SIGNAL(finished()), m_pInvocation, SLOT(deleteLater()));
+
+}
+
+void WordsPlusGame::onArmed() {
+	  m_pInvocation->trigger("bb.action.SHARE");
 }
 
 void WordsPlusGame::ControlsForBBM(int state) {
