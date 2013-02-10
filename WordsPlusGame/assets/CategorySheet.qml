@@ -8,18 +8,7 @@ Page {
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
-        Container { //highlight word list only for school theme
-            ImageView {
-                id: highlightWords
-                //imageSource: "theme/" + "school" + "/highlight_list.png"
-                imageSource: {
-                    if (wordsPlus.theme == "school") {
-                        "theme/" + wordsPlus.theme + "/highlight_list.png"
-                    } else {
-                        ""
-                    }
-                }
-            }
+        ThemeSchoolHighlight {
         }
         Container { //middle container
             preferredWidth: 720
@@ -95,19 +84,27 @@ Page {
                             id: defaultCat
                             text: "WordsPlus"
                             description: "Included Categories"
-                            value: "categories"
+                            value: "wordsplus"
                         }
                         Option {
                             id: spacingOut
                             text: "Spacing Out"
-                            description: "5 categories"
+                            description: "Tech, Star Trek and everything nerdy"
                             value: "spacingout"
+                        }
+                        Option {
+                            id: schoolTime
+                            text: "School Time"
+                            description: "A little nostalgia, a little deja vu"
+                            value: "schooltime"
                         }
                         onSelectedOptionChanged: {
                             if (selectedValue == "spacingout") {
                                 catList.dataModel.source = "models/spacingout.xml";
-                            } else if (selectedValue == "categories") {
-                                catList.dataModel.source = "models/categories.xml";
+                            } else if (selectedValue == "wordsplus") {
+                                catList.dataModel.source = "models/wordsplus.xml";
+                            } else if (selectedValue == "schooltime") {
+                                catList.dataModel.source = "models/schooltime.xml";
                             }
                         }
                     }
@@ -124,7 +121,7 @@ Page {
                     ListView {
                         id: catList
                         dataModel: XmlDataModel {
-                            //source: "models/categories.xml"
+                            //source: "models/wordsplus.xml"
                         }
                         listItemComponents: [
                             ListItemComponent {

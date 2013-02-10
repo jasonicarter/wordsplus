@@ -4,10 +4,11 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.create("#0098f0")
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
+        }
+        ThemeSchoolHighlight {
         }
         Container { //middle
             preferredWidth: 720
