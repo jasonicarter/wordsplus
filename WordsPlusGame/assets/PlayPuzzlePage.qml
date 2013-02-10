@@ -24,7 +24,7 @@ Container { // root Container
             }
         }
         Container { //highlight word list only for school theme
-            bottomPadding: 150
+            bottomPadding: 120
             verticalAlignment: VerticalAlignment.Bottom
             ImageView {
                 id: highlightWords

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="36" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" maximized="true" width="960" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -17,13 +17,13 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -38,8 +38,6 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -56,17 +54,8 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1906" selectionTopPixel="521"/>
 </editor>
-<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" partName="PlayPuzzlePage.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/PlayPuzzlePage.qml" title="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/PlayPuzzlePage.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/PlayPuzzlePage.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="656" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="StatsSheet.qml" partName="StatsSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/StatsSheet.qml" title="StatsSheet.qml" tooltip="WordsPlusGame/assets/StatsSheet.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/StatsSheet.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="710" selectionTopPixel="0"/>
-</editor>
-<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CategorySheet.qml" partName="CategorySheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/CategorySheet.qml" title="CategorySheet.qml" tooltip="WordsPlusGame/assets/CategorySheet.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/CategorySheet.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="340" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" partName="bar-descriptor.xml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/bar-descriptor.xml" title="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/bar-descriptor.xml"/>
 </editor>
 </editors>
 <views>
@@ -156,7 +145,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePart="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -582,168 +571,172 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeSheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeHomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/PlayPuzzlePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeOtherPages.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/StatsSheet.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/CategorySheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/Leaderboard.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/Achievements.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/AchievementList.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/BuddyListLeaderboard.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WordsPlusGame/assets/models/schooltime.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WordsPlusGame/assets/models/themes.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/SettingsSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeSchoolHighlight.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/SettingsSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WordsPlusGame/assets/models/schooltime.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/CategorySheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/AboutSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/StatsSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WordsPlusGame/assets/models/spacingout.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WordsPlusGame/assets/models/themes.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/AboutSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/HelpSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/PlayPuzzlePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusGame/bar-descriptor.xml"/>
 </editors>
-<item historyLabel="ThemeOtherPages.qml" index="4">
-<position/>
+<item historyLabel="ThemeSheet.qml" index="3">
+<position info="not_deleted" x="3066" y="10"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="330" y="0"/>
+<item historyLabel="themes.xml" index="2">
+<position info="not_deleted" x="319" y="0"/>
 </item>
-<item historyLabel="ThemeOtherPages.qml" index="4">
-<position/>
+<item historyLabel="ThemeSheet.qml" index="3">
+<position info="not_deleted" x="3066" y="10"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="1355" y="32"/>
+<item historyLabel="themes.xml" index="2">
+<position info="not_deleted" x="60" y="10"/>
 </item>
-<item historyLabel="ThemeHomePage.qml" index="2">
-<position info="not_deleted" x="157" y="15"/>
+<item historyLabel="ThemeSheet.qml" index="3">
+<position info="not_deleted" x="3145" y="0"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position/>
+<item historyLabel="themes.xml" index="2">
+<position info="not_deleted" x="60" y="10"/>
 </item>
-<item historyLabel="ThemeHomePage.qml" index="2">
-<position info="not_deleted" x="157" y="15"/>
+<item historyLabel="ThemeSheet.qml" index="3">
+<position info="not_deleted" x="3669" y="0"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position/>
+<item historyLabel="themes.xml" index="2">
+<position info="not_deleted" x="60" y="10"/>
 </item>
-<item historyLabel="ThemeHomePage.qml" index="2">
-<position info="not_deleted" x="157" y="15"/>
+<item historyLabel="ThemeSheet.qml" index="3">
+<position info="not_deleted" x="3669" y="0"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="4009" y="0"/>
+<item historyLabel="schooltime.xml" index="1">
+<position info="not_deleted" x="482" y="0"/>
 </item>
-<item historyLabel="ThemeHomePage.qml" index="2">
-<position info="not_deleted" x="157" y="15"/>
+<item historyLabel="CategorySheet.qml" index="0">
+<position info="not_deleted" x="216" y="490"/>
 </item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="615" y="0"/>
+<item historyLabel="SettingsSheet.qml" index="4">
+<position info="not_deleted" x="257" y="0"/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="1">
-<position info="not_deleted" x="565" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="1907" y="0"/>
-</item>
-<item historyLabel="WordsPlusGame.cpp" index="0">
-<position info="not_deleted" x="29918" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="748" y="567"/>
-</item>
-<item historyLabel="ThemeOtherPages.qml" index="4">
-<position info="not_deleted" x="618" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="748" y="567"/>
-</item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="CategorySheet.qml" index="6">
-<position/>
-</item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="CategorySheet.qml" index="6">
+<item historyLabel="ThemeSchoolHighlight.qml" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="168" y="0"/>
+<item historyLabel="SettingsSheet.qml" index="4">
+<position info="not_deleted" x="259" y="0"/>
 </item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="2380" y="0"/>
+<item historyLabel="ThemeSchoolHighlight.qml" index="5">
+<position info="not_deleted" x="189" y="0"/>
 </item>
-<item historyLabel="Achievements.qml" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SettingsSheet.qml" index="6">
+<position info="not_deleted" x="257" y="0"/>
 </item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="2380" y="0"/>
-</item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="2230" y="0"/>
-</item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="2415" y="304"/>
-</item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="1892" y="0"/>
-</item>
-<item historyLabel="BuddyListLeaderboard.qml" index="10">
+<item historyLabel="ThemeSheet.qml" index="7">
 <position/>
 </item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="1892" y="0"/>
+<item historyLabel="schooltime.xml" index="8">
+<position info="not_deleted" x="482" y="0"/>
 </item>
-<item historyLabel="BuddyListLeaderboard.qml" index="10">
+<item historyLabel="CategorySheet.qml" index="9">
+<position info="not_deleted" x="257" y="0"/>
+</item>
+<item historyLabel="ThemeSchoolHighlight.qml" index="5">
+<position info="not_deleted" x="390" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="10">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="CategorySheet.qml" index="9">
+<position info="not_deleted" x="257" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="6">
+<position info="not_deleted" x="216" y="41"/>
+</item>
+<item historyLabel="StatsSheet.qml" index="11">
+<position info="not_deleted" x="306" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="6">
+<position info="not_deleted" x="216" y="41"/>
+</item>
+<item historyLabel="ThemeSchoolHighlight.qml" index="5">
+<position info="not_deleted" x="57" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="6">
+<position info="not_deleted" x="464" y="34"/>
+</item>
+<item historyLabel="CategorySheet.qml" index="9">
+<position info="not_deleted" x="4053" y="0"/>
+</item>
+<item historyLabel="schooltime.xml" index="8">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="spacingout.xml" index="12">
+<position info="not_deleted" x="324" y="0"/>
+</item>
+<item historyLabel="themes.xml" index="13">
+<position/>
+</item>
+<item historyLabel="spacingout.xml" index="12">
+<position info="not_deleted" x="324" y="0"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="7">
+<position/>
+</item>
+<item historyLabel="themes.xml" index="13">
+<position info="not_deleted" x="60" y="10"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="7">
+<position/>
+</item>
+<item historyLabel="AboutSheet.qml" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="1892" y="0"/>
+<item historyLabel="HelpSheet.qml" index="15">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="285" y="0"/>
+<item historyLabel="AboutSheet.qml" index="14">
+<position info="not_deleted" x="216" y="41"/>
 </item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="2415" y="304"/>
+<item historyLabel="HelpSheet.qml" index="15">
+<position info="not_deleted" x="169" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="710" y="0"/>
+<item historyLabel="ThemeSheet.qml" index="7">
+<position/>
 </item>
-<item historyLabel="CategorySheet.qml" index="6">
-<position info="not_deleted" x="261" y="0"/>
+<item historyLabel="themes.xml" index="13">
+<position info="not_deleted" x="60" y="10"/>
 </item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="2415" y="304"/>
+<item historyLabel="ThemeSheet.qml" index="7">
+<position/>
 </item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="1892" y="0"/>
+<item historyLabel="spacingout.xml" index="12">
+<position info="not_deleted" x="324" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="328" y="0"/>
+<item historyLabel="schooltime.xml" index="8">
+<position info="not_deleted" x="482" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="6">
-<position info="not_deleted" x="340" y="0"/>
+<item historyLabel="main.cpp" index="16">
+<position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="AchievementList.qml" index="9">
-<position info="not_deleted" x="477" y="0"/>
+<item historyLabel="PlayPuzzlePage.qml" index="17">
+<position info="not_deleted" x="922" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="6">
-<position info="not_deleted" x="340" y="0"/>
+<item historyLabel="main.cpp" index="16">
+<position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="Leaderboard.qml" index="7">
-<position info="not_deleted" x="807" y="0"/>
+<item historyLabel="bar-descriptor.xml" index="18"/>
+<item historyLabel="ThemeSheet.qml" index="7">
+<position info="not_deleted" x="184" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="6">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="710" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="3">
-<position info="not_deleted" x="656" y="0"/>
-</item>
-<item historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="710" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="2">
-<position info="not_deleted" x="198" y="0"/>
-</item>
-<item active="true" historyLabel="StatsSheet.qml" index="5">
-<position info="not_deleted" x="710" y="0"/>
-</item>
+<item active="true" historyLabel="bar-descriptor.xml" index="18"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -770,6 +763,42 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeSheet.qml" tooltip="WordsPlusGame/assets/ThemeSheet.qml">
+<persistable path="/WordsPlusGame/assets/ThemeSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml">
+<persistable path="/WordsPlusGame/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HelpSheet.qml" tooltip="WordsPlusGame/assets/HelpSheet.qml">
+<persistable path="/WordsPlusGame/assets/HelpSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="WordsPlusGame/assets/AboutSheet.qml">
+<persistable path="/WordsPlusGame/assets/AboutSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="themes.xml" tooltip="WordsPlusGame/assets/models/themes.xml">
+<persistable path="/WordsPlusGame/assets/models/themes.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="StatsSheet.qml" tooltip="WordsPlusGame/assets/StatsSheet.qml">
+<persistable path="/WordsPlusGame/assets/StatsSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeSchoolHighlight.qml" tooltip="WordsPlusGame/assets/ThemeSchoolHighlight.qml">
+<persistable path="/WordsPlusGame/assets/ThemeSchoolHighlight.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="WordsPlusGame/assets/SettingsSheet.qml">
+<persistable path="/WordsPlusGame/assets/SettingsSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="spacingout.xml" tooltip="WordsPlusGame/assets/models/spacingout.xml">
+<persistable path="/WordsPlusGame/assets/models/spacingout.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="wordsplus.xml" tooltip="WordsPlusGame/assets/models/wordsplus.xml">
+<persistable path="/WordsPlusGame/assets/models/wordsplus.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="all.xml" tooltip="WordsPlusGame/assets/models/all.xml">
+<persistable path="/WordsPlusGame/assets/models/all.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="schooltime.xml" tooltip="WordsPlusGame/assets/models/schooltime.xml">
+<persistable path="/WordsPlusGame/assets/models/schooltime.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CategorySheet.qml" tooltip="WordsPlusGame/assets/CategorySheet.qml">
 <persistable path="/WordsPlusGame/assets/CategorySheet.qml"/>
 </file>
@@ -778,42 +807,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AchievementList.qml" tooltip="WordsPlusGame/assets/AchievementList.qml">
 <persistable path="/WordsPlusGame/assets/AchievementList.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="Achievements.qml" tooltip="WordsPlusGame/assets/Achievements.qml">
-<persistable path="/WordsPlusGame/assets/Achievements.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="Leaderboard.qml" tooltip="WordsPlusGame/assets/Leaderboard.qml">
-<persistable path="/WordsPlusGame/assets/Leaderboard.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="StatsSheet.qml" tooltip="WordsPlusGame/assets/StatsSheet.qml">
-<persistable path="/WordsPlusGame/assets/StatsSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeOtherPages.qml" tooltip="WordsPlusGame/assets/ThemeOtherPages.qml">
-<persistable path="/WordsPlusGame/assets/ThemeOtherPages.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeSheet.qml" tooltip="WordsPlusGame/assets/ThemeSheet.qml">
-<persistable path="/WordsPlusGame/assets/ThemeSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/PlayPuzzlePage.qml">
-<persistable path="/WordsPlusGame/assets/PlayPuzzlePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.MultiEditor" name="social.png" tooltip="WordsPlusGame/assets/images/social.png">
-<persistable path="/WordsPlusGame/assets/images/social.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.MultiEditor" name="theme_sample.jpg" tooltip="WordsPlusGame/assets/theme/school/theme_sample.jpg">
-<persistable path="/WordsPlusGame/assets/theme/school/theme_sample.jpg"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="themes.xml" tooltip="WordsPlusGame/assets/models/themes.xml">
-<persistable path="/WordsPlusGame/assets/models/themes.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="spacingout.xml" tooltip="WordsPlusGame/assets/models/spacingout.xml">
-<persistable path="/WordsPlusGame/assets/models/spacingout.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.hpp" tooltip="WordsPlusGame/src/WordsPlusGame.hpp">
-<persistable path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" tooltip="WordsPlusGame/assets/BtmNavPanel.qml">
-<persistable path="/WordsPlusGame/assets/BtmNavPanel.qml"/>
 </file>
 </mruList>
 </workbench>

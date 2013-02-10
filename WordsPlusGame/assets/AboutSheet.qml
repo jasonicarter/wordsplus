@@ -4,10 +4,11 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.create("#0098f0")
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
+        }
+        ThemeSchoolHighlight {
         }
         Container { //middle
             preferredWidth: 720
@@ -48,8 +49,7 @@ Page {
                 }
                 Label {
                     multiline: true
-                    text: "arpeggio6lop by plagasul via freesound.org\n" +
-                    "sweetalertsound1 + 2 by kizilsungur via freesound.org"
+                    text: "arpeggio6lop by plagasul via freesound.org\n" + "sweetalertsound1 + 2 by kizilsungur via freesound.org"
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }
@@ -70,24 +70,21 @@ Page {
                 }
                 Label {
                     leftPadding: 25
-                    multiline: true                  
-                    text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + 
-                    "Twitter: @jasonicarter\n" + 
-                    "http://twocasualcoders.com/contact\n"+ 
-                    "http://facebook.com/WordsPlusGame"
+                    multiline: true
+                    text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" + "http://twocasualcoders.com/contact\n" + "http://facebook.com/WordsPlusGame"
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }
                 }
-//                TextArea { 
-//                    text: "http://twocasualcoders.com/contact"
-//                    leftPadding: 0
-//                    editable: false
-//                    inputMode: TextAreaInputMode.Text
-//                    textStyle {
-//                        base: aboutSheetSubTitleNormalWhite.style
-//                    }
-//                }
+                //                TextArea {
+                //                    text: "http://twocasualcoders.com/contact"
+                //                    leftPadding: 0
+                //                    editable: false
+                //                    inputMode: TextAreaInputMode.Text
+                //                    textStyle {
+                //                        base: aboutSheetSubTitleNormalWhite.style
+                //                    }
+                //                }
             }
             Container {
                 layout: StackLayout {

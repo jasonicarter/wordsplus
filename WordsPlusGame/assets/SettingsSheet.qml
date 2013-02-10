@@ -8,6 +8,8 @@ Page {
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
+        ThemeSchoolHighlight {
+        }
         ScrollView {
             preferredWidth: 720
             preferredHeight: 900

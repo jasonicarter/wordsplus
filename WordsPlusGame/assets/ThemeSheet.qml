@@ -2,7 +2,8 @@ import bb.cascades 1.0
 import bb.system 1.0
 
 Page {
-    property string seletedTheme
+    property string selectedThemeFolder
+    property string selectedThemeName
     Container {
         layout: DockLayout {
         }
@@ -17,6 +18,7 @@ Page {
             verticalAlignment: VerticalAlignment.Top
             horizontalAlignment: HorizontalAlignment.Center
             Container {
+                topPadding: 10
                 preferredWidth: 768
                 preferredHeight: 70
                 horizontalAlignment: HorizontalAlignment.Center
@@ -72,7 +74,8 @@ Page {
                     ] //end of components
                     onTriggered: {
                         var selectedItem = myList.dataModel.data(indexPath);
-                        seletedTheme = selectedItem.name;
+                        selectedThemeFolder = selectedItem.folderName;
+                        selectedThemeName = selectedItem.themeName;
                         if (selectedItem.price == "free") {
                             themeDialog.show();
                         } else if (selectedItem.price == "pay") {
@@ -83,14 +86,14 @@ Page {
                         SystemDialog {
                             id: themeDialog
                             title: "Switching Themes"
-                            body: "You are about to switch your theme to " + seletedTheme
+                            body: "You are about to switch your theme to:\n" + selectedThemeName
                             onFinished: {
                                 if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
                                     //on cancel do nothing
                                 }
                                 if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
                                     //on confirm set c++ property
-                                    wordsPlus.theme = seletedTheme;
+                                    wordsPlus.theme = selectedThemeFolder;
                                 }
                             }
                         }
