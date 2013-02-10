@@ -4,10 +4,23 @@ Page {
     Container {
         layout: DockLayout {
         }
-        background: Color.create("#0098f0")
+        //background: Color.create("#0098f0")
         //preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
+        }
+        Container { //highlight word list only for school theme
+            ImageView {
+                id: highlightWords
+                //imageSource: "theme/" + "school" + "/highlight_list.png"
+                imageSource: {
+                    if (wordsPlus.theme == "school") {
+                        "theme/" + wordsPlus.theme + "/highlight_list.png"
+                    } else {
+                        ""
+                    }
+                }
+            }
         }
         Container { //middle
             preferredWidth: 720

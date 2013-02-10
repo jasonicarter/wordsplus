@@ -8,6 +8,19 @@ Page {
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
+        Container { //highlight word list only for school theme
+            ImageView {
+                id: highlightWords
+                //imageSource: "theme/" + "school" + "/highlight_list.png"
+                imageSource: {
+                    if (wordsPlus.theme == "school") {
+                        "theme/" + wordsPlus.theme + "/highlight_list.png"
+                    } else {
+                        ""
+                    }
+                }
+            }
+        }
         Container { //middle container
             preferredWidth: 720
             preferredHeight: 1000
