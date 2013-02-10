@@ -10,6 +10,34 @@ Container { // root Container
         preferredHeight: 1280
         ThemeOtherPages {
         }
+        Container { //highlight timer only for school theme
+            topPadding: 60
+            ImageView {
+                id: highlightTime
+                imageSource: {
+                    if (wordsPlus.theme == "school") {
+                        "theme/" + wordsPlus.theme + "/highlight_time.png"
+                    } else {
+                        ""
+                    }
+                }
+            }
+        }
+        Container { //highlight word list only for school theme
+            bottomPadding: 150
+            verticalAlignment: VerticalAlignment.Bottom
+            ImageView {
+                id: highlightWords
+                //imageSource: "theme/" + "school" + "/highlight_words.png"
+                imageSource: {
+                    if (wordsPlus.theme == "school") {
+                        "theme/" + wordsPlus.theme + "/highlight_words.png"
+                    } else {
+                        ""
+                    }
+                }
+            }
+        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
