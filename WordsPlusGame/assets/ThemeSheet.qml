@@ -112,7 +112,6 @@ Page {
             imageSource: "asset:///images/close.png"
             ActionBar.placement: ActionBarPlacement.OnBar
             onTriggered: {
-                wordsPlus.InitializeHomePage();
                 themeSheet.close();
             }
         }

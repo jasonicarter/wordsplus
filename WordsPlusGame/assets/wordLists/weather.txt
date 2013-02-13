@@ -67,7 +67,6 @@ average
 solar
 pellets
 heat
-wave
 compass
 cold
 forecasting
