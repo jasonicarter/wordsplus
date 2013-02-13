@@ -50,10 +50,8 @@ Container {
             }
             onTouch: {
                 if (event.isDown()) {
-                    tabHelp.opacity = 1;
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
-                    tabHelp.opacity = 0;
                     homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
                     homeSysToast.show();
                 }
@@ -73,10 +71,8 @@ Container {
             }
             onTouch: {
                 if (event.isDown()) {
-                    tabHints.opacity = 1;
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
-                    tabHints.opacity = 0;
                     homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
                     homeSysToast.show();
                 }
@@ -96,10 +92,8 @@ Container {
             }
             onTouch: {
                 if (event.isDown()) {
-                    tabHints.opacity = 1;
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
-                    tabHints.opacity = 0;
                     themeSheet.open();
                 }
             }

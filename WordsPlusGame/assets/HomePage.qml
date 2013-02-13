@@ -12,20 +12,6 @@ Container {
         layout: DockLayout {
         }
         preferredHeight: 1280
-        Container {
-            id: tabHints
-            opacity: 0
-            ImageView {
-                imageSource: "asset:///images/tabHints.png"
-            }
-        }
-        Container {
-            id: tabHelp
-            opacity: 0
-            ImageView {
-                imageSource: "asset:///images/tabHelp.png"
-            }
-        }
         ThemeHomePage {
         }
         Container { // center

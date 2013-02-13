@@ -89,7 +89,6 @@ gym
 numbers
 grade
 principal
-office
 bus
 progres
 writer
@@ -171,3 +170,13 @@ cheer
 varsity
 easel
 flag
+organizer
+sanitizer
+planner
+marker
+kleenex
+bottle
+washable
+blocks
+ziplock
+gloves

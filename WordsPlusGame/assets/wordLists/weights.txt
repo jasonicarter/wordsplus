@@ -65,7 +65,7 @@ megaparsec
 megapixel
 megaton
 meter
-metric system
+metric
 microgram
 microliter
 micron
@@ -76,7 +76,6 @@ millimeter
 minute
 mole
 nanometer
-nautical mile
 nose
 octad
 octant
