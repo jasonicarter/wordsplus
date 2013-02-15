@@ -1192,12 +1192,11 @@ void WordsPlusGame::Share(QString target, QString section) {
 
 	// Declare an Invocation* called m_pInvocation somewhere.
 	QString msg;
-	if(section == "home") {
-		msg = QString("Love word games? - https://appworld.blackberry.com/webstore/content/21931881 - You'll love #WordsPlus.\n\n");
+	if(target.toLower() == "facebook") {
+		msg = QString("On top of my game: %1 pts, with WordsPlus - https://appworld.blackberry.com/webstore/content/21931881\n\n").arg(getScore());
 	}
-	else if (section == "puzzle") {
-		msg = QString("Another great game of #WordsPlus - https://appworld.blackberry.com/webstore/content/21931881 - \nTime: %1  Score: %2\n\n")
-				.arg((QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(getScore());
+	else if (target.toLower() == "twitter") {
+		msg = QString("Another great game: %1 pts, of #WordsPlus - https://appworld.blackberry.com/webstore/content/21931881\n\n").arg(getScore());
 	}
 
 	  m_pInvocation = Invocation::create(

@@ -105,7 +105,6 @@ Container {
     Container {
         preferredHeight: 300
         preferredWidth: 720
-        //background: Color.Black
         horizontalAlignment: HorizontalAlignment.Center
         verticalAlignment: VerticalAlignment.Bottom
         Container {
@@ -115,9 +114,6 @@ Container {
             ImageView {
                 imageSource: "images/social.png"
             }
-            //        ImageButton {
-            //            defaultImageSource: "images/social.png"
-            //        }
             Container {
                 layout: AbsoluteLayout {
                 }
@@ -180,5 +176,5 @@ Container {
                 }
             }
         }
-    }
+    } //end of social block
 }
