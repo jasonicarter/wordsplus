@@ -18,9 +18,6 @@ Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./arm -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
-c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
 make[2]: Nothing to be done for `first'.
