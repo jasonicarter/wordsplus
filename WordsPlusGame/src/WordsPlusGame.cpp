@@ -1219,48 +1219,58 @@ void WordsPlusGame::onArmed() {
 
 void WordsPlusGame::ControlsForBBM(int state) {
 
-	// Create the user profile and profile box objects
-	m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
-	m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
+	if(m_context->registrationState() == bb::platform::bbm::RegistrationState::Allowed) {
+		// Create the user profile and profile box objects
+		m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
+		m_profileBox = new bb::platform::bbm::ProfileBox(m_context, this);
 
-	//BBM Awards - if already awarded, nothing happens in AchieveAward();
+		//BBM Awards - if already awarded, nothing happens in AchieveAward();
 
-	switch (state) {
-		case PROFILEBOXPUZZLECOMPLETED: {
-			if (getProfileBox()) {
-				QString msg = QString(
-						"Completed Another One! \nTime: %1  Score: %2").arg(
-						(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
-						getScore());
+		switch (state) {
+			case PROFILEBOXPUZZLECOMPLETED: {
+				if (getProfileBox()) {
+					QString msg = QString(
+							"Completed Another One! \nTime: %1  Score: %2").arg(
+							(QDateTime::fromTime_t(timeSec)).toString("mm':'ss")).arg(
+							getScore());
 
-				//register icons
-				profileBox = new ProfileBox(m_profileBox);
+					//register icons
+					profileBox = new ProfileBox(m_profileBox);
 
-				//WordsPlusGame.png iconId = 1
-				//could use #define WORDSPLUSPROFILEBOX 1
-				//use 0 if you have no image
-				profileBox->addProfileBoxItem(msg, 3);
+					//WordsPlusGame.png iconId = 1
+					//could use #define WORDSPLUSPROFILEBOX 1
+					//use 0 if you have no image
+					profileBox->addProfileBoxItem(msg, 3);
+				}
+				break;
 			}
-			break;
+			case PRESONALMESSAGE: {
+				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMPERSONALMSG);
+				updateProfile = new UpdateProfile(m_userProfile);
+				updateProfile->savePersonalMessage();
+				break;
+			}
+			case STATUSMESSAGE: {
+				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMSTATUSMSG);
+				updateProfile = new UpdateProfile(m_userProfile);
+				updateProfile->saveStatus();
+				break;
+			}
+			case INVITETODOWNLOAD: {
+				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMINVITE);
+				inviteToDownload = new InviteToDownload(m_context);
+				inviteToDownload->sendInvite();
+				break;
+			}
 		}
-		case PRESONALMESSAGE: {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMPERSONALMSG);
-			updateProfile = new UpdateProfile(m_userProfile);
-			updateProfile->savePersonalMessage();
-			break;
-		}
-		case STATUSMESSAGE: {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMSTATUSMSG);
-			updateProfile = new UpdateProfile(m_userProfile);
-			updateProfile->saveStatus();
-			break;
-		}
-		case INVITETODOWNLOAD: {
-			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMINVITE);
-			inviteToDownload = new InviteToDownload(m_context);
-			inviteToDownload->sendInvite();
-			break;
-		}
+	}
+	else {
+		SystemDialog *bbmDialog = new SystemDialog("OK");
+		bbmDialog->setTitle("BBM Connection Error");
+		bbmDialog->setBody("BBM is not currently connected. Please setup / sign-in to BBM to remove this message.");
+		connect(bbmDialog, SIGNAL(finished(bb::system::SystemUiResult::Type)), this, SLOT(dialogFinished(bb::system::SystemUiResult::Type)));
+		bbmDialog->show();
+		return;
 	}
 
 }

@@ -4,8 +4,8 @@
 <context>
     <name>registration</name>
     <message>
-        <location filename="../assets/registration.qml" line="40"/>
-        <source>Connect to BBM</source>
+        <location filename="../assets/registration.qml" line="55"/>
+        <source>Continue without BBM</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
