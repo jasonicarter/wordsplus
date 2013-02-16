@@ -31,20 +31,37 @@ Page {
             }
         }
         Container {
+            //background: Color.Red
+            preferredWidth: 720
+            preferredHeight: 500
+            visible: !_registrationHandler.temporaryError
+            verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
+            ActivityIndicator {
+                id: appLoad
+                preferredHeight: 500
+                horizontalAlignment: HorizontalAlignment.Right
+                running: true
+            }
+        }
+        Container {
             bottomPadding: 200
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
+            visible: _registrationHandler.temporaryError
             Button {
                 horizontalAlignment: HorizontalAlignment.Center
                 visible: _registrationHandler.temporaryError
-                text: qsTr("Connect to BBM")
+                text: qsTr("Continue without BBM")
                 onClicked: {
-                    _registrationHandler.registerApplication()
+                    //_registrationHandler.registerApplication()
+                    _registrationHandler.finishRegistration()
                 }
             }
             Label {
                 visible: _registrationHandler.temporaryError
-                text: "BBM Status Message: \n" + _registrationHandler.statusMessage
+                text: "Cannot connect to BBM at the moment.\n But please 'CONTINUE WITHOUT BBM' and enjoy WordsPlus!"
+                //text: "BBM Status Message: \n" + _registrationHandler.statusMessage
                 multiline: true
                 textStyle.fontSize: FontSize.Small
                 horizontalAlignment: HorizontalAlignment.Center

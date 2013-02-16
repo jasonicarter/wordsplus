@@ -144,14 +144,14 @@ void RegistrationHandler::registrationFinished()
     case RegistrationState::BlockedByRIM:
         m_statusMessage = tr("Disconnected by RIM. RIM is preventing this "
                              "application from connecting to BBM.");
-        m_temporaryError = false;
+        m_temporaryError = true;
         break;
 
     case RegistrationState::BlockedByUser:
         m_statusMessage = tr("Disconnected. Go to Settings -> Security and "
                              "Privacy -> Application Permissions and "
                              "connect this application to BBM.");
-        m_temporaryError = false;
+        m_temporaryError = true;
         break;
 
     case RegistrationState::InvalidUuid:
@@ -165,14 +165,14 @@ void RegistrationHandler::registrationFinished()
         m_statusMessage = tr("Too many applications are connected to BBM. "
                              "Uninstall one or more applications and try "
                              "again.");
-        m_temporaryError = false;
+        m_temporaryError = true;
         break;
 
     case RegistrationState::Expired:
     case RegistrationState::MaxDownloadsReached:
         m_statusMessage = tr("Cannot connect to BBM. Download this "
                              "application from AppWorld to keep using it.");
-        m_temporaryError = false;
+        m_temporaryError = true;
         break;
 
     case RegistrationState::NoDataConnection:
