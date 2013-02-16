@@ -9775,3 +9775,12 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 
 !ENTRY org.eclipse.cdt.core 1 0 2013-02-16 15:15:52.615
 !MESSAGE Indexed 'CascadesScoreloopSample' (3 sources, 658 headers) in 31.47 sec: 81,158 declarations; 111,932 references; 0 unresolved inclusions; 0 syntax errors; 30 unresolved names (0.02%)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-16 15:17:37.809
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-16 15:17:37.832
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-16 15:19:10.286
+!MESSAGE Error: Code signing request failed because this version of the application or package has been previously signed. Please increment the version(s) and try signing again.
