@@ -89,7 +89,7 @@ Page {
                         Option {
                             id: spacingOut
                             text: "Spacing Out"
-                            description: "Technology, Star Trek and everything scifi"
+                            description: "Technology, Star Trek and everything nerdy"
                             value: "spacingout"
                         }
                         Option {
