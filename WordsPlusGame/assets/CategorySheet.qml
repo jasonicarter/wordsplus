@@ -89,13 +89,13 @@ Page {
                         Option {
                             id: spacingOut
                             text: "Spacing Out"
-                            description: "Tech, Star Trek and everything nerdy"
+                            description: "Technology, Star Trek and everything scifi"
                             value: "spacingout"
                         }
                         Option {
                             id: schoolTime
                             text: "School Time"
-                            description: "A little nostalgia, a little deja vu"
+                            description: "Recess, H2 pencils, gym class and more"
                             value: "schooltime"
                         }
                         onSelectedOptionChanged: {

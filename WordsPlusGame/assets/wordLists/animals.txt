@@ -80,7 +80,6 @@ flatworm
 fly
 fox
 frog
-frog
 gazelle
 giraffe
 goat
