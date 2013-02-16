@@ -32,7 +32,7 @@ Page {
         }
         Container {
             //background: Color.Red
-            preferredWidth: 720
+            preferredWidth: 768
             preferredHeight: 500
             visible: !_registrationHandler.temporaryError
             verticalAlignment: VerticalAlignment.Bottom

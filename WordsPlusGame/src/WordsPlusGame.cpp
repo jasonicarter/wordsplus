@@ -394,7 +394,7 @@ void WordsPlusGame::ProcessAwards() {
 		}
 
 		//over 3 mins at medium
-		if( (puzzleTimeAward > 240) && (difficultyAward == 5) ) {
+		if( (puzzleTimeAward > 180) && (difficultyAward == 4) ) {
 			ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_JUSTAVERAGE);
 		}
 
