@@ -7,6 +7,8 @@
 
 #include "ActiveFrame.h"
 
+#include <bb/cascades/ImageView>
+
 ActiveFrame::ActiveFrame() :
 		SceneCover(this) {
 
@@ -35,6 +37,11 @@ void ActiveFrame::update() {
 	//You can update AF every 1 sec but BB10 platform will update UI every 30sec
 	//QTimer::singleShot(1000, this, SLOT(update()));
 	Label* label_cat = mMainContainer->findChild<Label*>("label_category");
+//	ImageView* imageFrame = mMainContainer->findChild<ImageView*>("activeImage");
+//	GameSettings* settings = new GameSettings();
+//
+//	QString imageSource = QString("asset:///theme/%1/theme_activeFrame.png").arg(settings->getValueFor("settingsTheme", "wordsPlus"));
+//	imageFrame->setImage(Image(imageSource));
 
 	if (label_cat) {
 		label_cat->setText(" " + settings->getValueFor("settingsCategory", "WEATHER").toUpper());

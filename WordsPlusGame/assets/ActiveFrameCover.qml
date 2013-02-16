@@ -5,7 +5,8 @@ Container {
     layout: DockLayout {
     }
     ImageView {
-        imageSource: "asset:///images/cover.png"
+        objectName: "activeImage"
+        imageSource:  "theme/" + "wordsPlus" + "/theme_activeFrame.png"
         verticalAlignment: VerticalAlignment.Top
         horizontalAlignment: HorizontalAlignment.Center
     }
