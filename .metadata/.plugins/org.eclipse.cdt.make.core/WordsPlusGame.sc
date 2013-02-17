@@ -4,6 +4,7 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="com.qnx.qcc.toolChain.1780767108">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc"/>
 <includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include"/>
 <includePath path="C:/bbndk/host_10_0_9_529/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
 <includePath path="C:/bbndk/target_10_0_9_2318/qnx6/usr/include/cpp/c"/>
@@ -38,6 +39,13 @@
 <definedSymbol symbol="__ARMEL__"/>
 <definedSymbol symbol="__ARMEL__=1"/>
 <definedSymbol symbol="_MUDFLAPTH"/>
+<definedSymbol symbol="_REENTRANT=1"/>
+<definedSymbol symbol="QT_NO_IMPORT_QT47_QML=1"/>
+<definedSymbol symbol="Q_OS_BLACKBERRY=1"/>
+<definedSymbol symbol="QT_DECLARATIVE_DEBUG=1"/>
+<definedSymbol symbol="QT_DECLARATIVE_LIB=1"/>
+<definedSymbol symbol="QT_CORE_LIB=1"/>
+<definedSymbol symbol="QT_SHARED=1"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__VERSION__=&quot;4.6.3&quot;"/>

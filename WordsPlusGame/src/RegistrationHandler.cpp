@@ -28,6 +28,8 @@ using namespace bb::cascades;
 using namespace bb::platform::bbm;
 using namespace bb::system;
 
+#define LOG(fmt, args...)   do { fprintf(stdout, "[RegistrationHandler.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
+
 
 RegistrationHandler::RegistrationHandler(const QUuid &uuid, QObject *parent)
     : QObject(parent)
@@ -135,11 +137,11 @@ void RegistrationHandler::registrationFinished()
         break;
 
 // This error code is not yet available in the NDK.
-//    case RegistrationState::BbmDisabled:
-//        m_statusMessage = tr("Cannot connect to BBM. BBM is not setup. "
-//                             "Open BBM to set it up and try again.");
-//        m_temporaryError = false;
-//        break;
+    case RegistrationState::BbmDisabled:
+        m_statusMessage = tr("Cannot connect to BBM. BBM is not setup. "
+                             "Open BBM to set it up and try again.");
+        m_temporaryError = true;
+        break;
 
     case RegistrationState::BlockedByRIM:
         m_statusMessage = tr("Disconnected by RIM. RIM is preventing this "
@@ -197,10 +199,12 @@ void RegistrationHandler::registrationFinished()
     case RegistrationState::TemporaryError:
     case RegistrationState::CancelledByUser:
     default:
+    	LOG("inside default:");
         // If new error codes are added, treat them as temporary errors.
         m_statusMessage = tr("Would you like to connect the application to "
                              "BBM?");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+        m_temporaryError = false;
         break;
     }
 
@@ -211,7 +215,9 @@ void RegistrationHandler::registrationFinished()
     }
     qDebug() << "Finished BBM Social Platform registration, success="
         << m_isAllowed << "temporaryError=" << m_temporaryError;
+
     emit stateChanged();
+
 }
 
 void RegistrationHandler::dialogFinished(bb::system::SystemUiResult::Type value) {

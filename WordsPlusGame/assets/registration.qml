@@ -49,19 +49,20 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             horizontalAlignment: HorizontalAlignment.Center
             visible: _registrationHandler.temporaryError
-            Button {
-                horizontalAlignment: HorizontalAlignment.Center
-                visible: _registrationHandler.temporaryError
-                text: qsTr("Continue without BBM")
-                onClicked: {
-                    //_registrationHandler.registerApplication()
-                    _registrationHandler.finishRegistration()
-                }
-            }
+//            Button {
+//                horizontalAlignment: HorizontalAlignment.Center
+//                visible: _registrationHandler.temporaryError
+//                text: qsTr("Continue without BBM")
+//                onClicked: {
+//                    //_registrationHandler.registerApplication()
+//                    //_registrationHandler.finishRegistration()
+//                    Application.exit();
+//                }
+//            }
             Label {
                 visible: _registrationHandler.temporaryError
-                text: "Cannot connect to BBM at the moment.\n But please 'CONTINUE WITHOUT BBM' and enjoy WordsPlus!"
-                //text: "BBM Status Message: \n" + _registrationHandler.statusMessage
+                //text: "Cannot connect to BBM at the moment.\n But please 'CONTINUE WITHOUT BBM' and enjoy WordsPlus!"
+                text: "BBM Status Message: \n" + _registrationHandler.statusMessage
                 multiline: true
                 textStyle.fontSize: FontSize.Small
                 horizontalAlignment: HorizontalAlignment.Center
