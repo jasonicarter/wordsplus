@@ -39,19 +39,7 @@ RegistrationHandler::RegistrationHandler(const QUuid &uuid, QObject *parent)
     , m_temporaryError(false)
     , m_statusMessage(tr("Please wait while the application connects to BBM."))
 {
-    QmlDocument* qml = QmlDocument::create("asset:///registration.qml")
-                       .parent(this);
-    qml->setContextProperty("_registrationHandler", this);
-    AbstractPane *root = qml->createRootObject<AbstractPane>();
-    Application::instance()->setScene(root);
-    if (uuid.isNull()) {
-    	SystemDialog *uuidDialog = new SystemDialog("OK");
-    	uuidDialog->setTitle("UUID Error");
-        uuidDialog->setBody("Invalid/Empty UUID, please set correctly in main.cpp");
-        connect(uuidDialog, SIGNAL(finished(bb::system::SystemUiResult::Type)), this, SLOT(dialogFinished(bb::system::SystemUiResult::Type)));
-        uuidDialog->show();
-        return;
-    }
+
     connect(&m_context,
             SIGNAL(registrationStateUpdated(
                    bb::platform::bbm::RegistrationState::Type)),
@@ -140,46 +128,60 @@ void RegistrationHandler::registrationFinished()
     case RegistrationState::BbmDisabled:
         m_statusMessage = tr("Cannot connect to BBM. BBM is not setup. "
                              "Open BBM to set it up and try again.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::BlockedByRIM:
         m_statusMessage = tr("Disconnected by RIM. RIM is preventing this "
                              "application from connecting to BBM.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::BlockedByUser:
         m_statusMessage = tr("Disconnected. Go to Settings -> Security and "
                              "Privacy -> Application Permissions and "
                              "connect this application to BBM.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::InvalidUuid:
         // You should be resolving this error at development time.
         m_statusMessage = tr("Invalid UUID. Report this error to the "
                              "vendor.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::MaxAppsReached:
         m_statusMessage = tr("Too many applications are connected to BBM. "
                              "Uninstall one or more applications and try "
                              "again.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::Expired:
     case RegistrationState::MaxDownloadsReached:
         m_statusMessage = tr("Cannot connect to BBM. Download this "
                              "application from AppWorld to keep using it.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::NoDataConnection:
         m_statusMessage = tr("Check your Internet connection and try again.");
-        m_temporaryError = true;
+        //m_temporaryError = true;
+		m_temporaryError = false;
+		finishRegistration();
         break;
 
     case RegistrationState::Pending:
@@ -187,11 +189,13 @@ void RegistrationHandler::registrationFinished()
         // displays a "Connecting" dialog.
         m_statusMessage = tr("Connecting to BBM. Please wait.");
         m_temporaryError = false;
+        finishRegistration();
         break;
 
     case RegistrationState::Unknown:
         m_statusMessage = tr("Determining the status. Please wait.");
         m_temporaryError = false;
+        finishRegistration();
         break;
 
     case RegistrationState::Unregistered:
@@ -204,7 +208,8 @@ void RegistrationHandler::registrationFinished()
         m_statusMessage = tr("Would you like to connect the application to "
                              "BBM?");
         //m_temporaryError = true;
-        m_temporaryError = false;
+		m_temporaryError = false;
+		finishRegistration();
         break;
     }
 

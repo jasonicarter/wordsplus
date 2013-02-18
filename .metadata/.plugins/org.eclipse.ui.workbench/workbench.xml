@@ -17,7 +17,7 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -38,17 +38,18 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/src/main.cpp" title="main.cpp" tooltip="WordsPlusGame/src/main.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="388" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="705" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.cpp" partName="WordsPlusGame.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/src/WordsPlusGame.cpp" title="WordsPlusGame.cpp" tooltip="WordsPlusGame/src/WordsPlusGame.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="119" selectionOffset="1738" selectionTopPixel="1934"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="843" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.hpp" partName="WordsPlusGame.hpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/src/WordsPlusGame.hpp" title="WordsPlusGame.hpp" tooltip="WordsPlusGame/src/WordsPlusGame.hpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
@@ -56,6 +57,10 @@
 </editor>
 <editor activePart="true" focus="true" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" partName="bar-descriptor.xml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/bar-descriptor.xml" title="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/bar-descriptor.xml"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.cpp" partName="RegistrationHandler.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/src/RegistrationHandler.cpp" title="RegistrationHandler.cpp" tooltip="WordsPlusGame/src/RegistrationHandler.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/RegistrationHandler.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1575" selectionTopPixel="365"/>
 </editor>
 </editors>
 <views>
@@ -497,16 +502,10 @@
 <perspective_action id="com.qnx.tools.ide.sysinfo.perspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1d78412" orientation="512" selectedTabId="org.eclipse.debug.ui.DebugView" style="0">
 <fastViews>
 <view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
@@ -514,10 +513,20 @@
 <view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
 </fastViews>
 </fastViewBar>
+<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.27272728"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.27090302"/>
 <view id="org.eclipse.ui.views.ProgressView" ratio="0.29839572"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="lefttop" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.2992465"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="leftbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.palette" style="0">
@@ -530,12 +539,10 @@
 <layout>
 <mainWindow>
 <info folder="true" part="lefttop">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7494331" ratioLeft="661" ratioRight="221" relationship="2" relative="lefttop">
@@ -587,153 +594,157 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/RegistrationHandler.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/registration.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/main.cpp"/>
-<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\bbndk\target_10_0_9_2318\qnx6\usr\include\bb\platform\bbm\Context.hpp" project="WordsPlusGame"/>
 <editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="C:\bbndk\target_10_0_9_2318\qnx6\usr\include\bb\platform\bbm\Enums.hpp" project="WordsPlusGame"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/HomePage.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusGame/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/RegistrationHandler.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
 </editors>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="8354" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="388" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="8194" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="388" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="8377" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="1672" y="0"/>
-</item>
-<item historyLabel="WordsPlusGame.cpp" index="0">
-<position info="not_deleted" x="1738" y="119"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="8007" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="451" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="7947" y="0"/>
-</item>
-<item historyLabel="Context.hpp" index="4">
-<position info="not_deleted" x="3650" y="15"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="7947" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="451" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="7838" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="480" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
-<position info="not_deleted" x="7838" y="0"/>
-</item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position/>
 </item>
-<item historyLabel="main.cpp" index="3">
+<item historyLabel="main.cpp" index="2">
 <position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="6069" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="3">
+<item historyLabel="main.cpp" index="2">
 <position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5124" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5124" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5124" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5124" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="3">
+<item historyLabel="main.cpp" index="2">
 <position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2251" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="2482" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2511" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5109" y="5"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="1856" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="3">
+<item historyLabel="main.cpp" index="2">
 <position info="not_deleted" x="388" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5242" y="11"/>
 </item>
-<item historyLabel="Enums.hpp" index="5">
+<item historyLabel="Enums.hpp" index="3">
 <position info="not_deleted" x="4385" y="11"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="5429" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2272" y="0"/>
 </item>
-<item historyLabel="HomePage.qml" index="6">
+<item historyLabel="HomePage.qml" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2272" y="0"/>
 </item>
-<item historyLabel="main.qml" index="7">
+<item historyLabel="main.qml" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="registration.qml" index="2">
+<item historyLabel="registration.qml" index="1">
 <position info="not_deleted" x="2337" y="0"/>
 </item>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="2732" y="0"/>
 </item>
-<item historyLabel="bar-descriptor.xml" index="8"/>
-<item historyLabel="RegistrationHandler.cpp" index="1">
+<item historyLabel="bar-descriptor.xml" index="6"/>
+<item historyLabel="RegistrationHandler.cpp" index="0">
 <position info="not_deleted" x="2732" y="0"/>
 </item>
-<item active="true" historyLabel="bar-descriptor.xml" index="8"/>
+<item historyLabel="bar-descriptor.xml" index="6"/>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="853" y="0"/>
+</item>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="8156" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="853" y="0"/>
+</item>
+<item historyLabel="WordsPlusGame.cpp" index="9">
+<position info="not_deleted" x="4366" y="0"/>
+</item>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="7358" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="1235" y="0"/>
+</item>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="7166" y="0"/>
+</item>
+<item historyLabel="WordsPlusGame.cpp" index="9">
+<position info="not_deleted" x="843" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="6"/>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="1379" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="970" y="0"/>
+</item>
+<item historyLabel="WordsPlusGame.cpp" index="9">
+<position info="not_deleted" x="843" y="0"/>
+</item>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="1575" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="6"/>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="1575" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="705" y="0"/>
+</item>
+<item historyLabel="RegistrationHandler.cpp" index="7">
+<position info="not_deleted" x="1575" y="0"/>
+</item>
+<item active="true" historyLabel="bar-descriptor.xml" index="6"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -742,6 +753,7 @@
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="leftbottom"/>
+<trimItem IMemento.internal.id="lefttop"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="righttop"/>
@@ -760,6 +772,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.cpp" tooltip="WordsPlusGame/src/RegistrationHandler.cpp">
+<persistable path="/WordsPlusGame/src/RegistrationHandler.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="WordsPlusGame/assets/main.qml">
 <persistable path="/WordsPlusGame/assets/main.qml"/>
 </file>
@@ -777,9 +792,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="registration.qml" tooltip="WordsPlusGame/assets/registration.qml">
 <persistable path="/WordsPlusGame/assets/registration.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.cpp" tooltip="WordsPlusGame/src/RegistrationHandler.cpp">
-<persistable path="/WordsPlusGame/src/RegistrationHandler.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.MultiEditor" name="cover.png" tooltip="WordsPlusGame/assets/images/cover.png">
 <persistable path="/WordsPlusGame/assets/images/cover.png"/>
