@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;WordsPlusGame/assets/registration.qml&apos;" deleteContents="false" description="Delete resource &apos;WordsPlusGame/assets/registration.qml&apos;" element1="/WordsPlusGame/assets/registration.qml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1361200213353"/>
+</session>
