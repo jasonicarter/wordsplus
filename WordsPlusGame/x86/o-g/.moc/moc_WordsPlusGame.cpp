@@ -1,8 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WordsPlusGame.hpp'
 **
-** Created: Mon Feb 4 15:11:57 2013
-**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -23,8 +22,8 @@ static const uint qt_meta_data_WordsPlusGame[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      42,   14, // methods
-      14,  224, // properties
+      44,   14, // methods
+      14,  234, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -61,38 +60,40 @@ static const uint qt_meta_data_WordsPlusGame[] = {
      589,   14,   14,   14, 0x08,
      604,  418,   14,   14, 0x08,
      645,   14,   14,   14, 0x08,
+     663,   14,   14,   14, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     663,   14,   14,   14, 0x02,
-     683,   14,   14,   14, 0x02,
-     704,   14,   14,   14, 0x02,
-     733,  727,   14,   14, 0x02,
-     767,  750,   14,   14, 0x02,
-     789,   14,   14,   14, 0x02,
-     822,   14,   14,   14, 0x02,
-     850,   14,   14,   14, 0x02,
-     892,   14,  875,   14, 0x02,
-     904,   14,   14,   14, 0x02,
-     917,   14,   14,   14, 0x02,
-     929,   14,   14,   14, 0x02,
-     948,  942,   14,   14, 0x02,
-     972,  968,   14,   14, 0x02,
+     673,   14,   14,   14, 0x02,
+     693,   14,   14,   14, 0x02,
+     714,   14,   14,   14, 0x02,
+     743,  737,   14,   14, 0x02,
+     777,  760,   14,   14, 0x02,
+     799,   14,   14,   14, 0x02,
+     832,   14,   14,   14, 0x02,
+     860,   14,   14,   14, 0x02,
+     902,   14,  885,   14, 0x02,
+     914,   14,   14,   14, 0x02,
+     927,   14,   14,   14, 0x02,
+     939,   14,   14,   14, 0x02,
+     958,  952,   14,   14, 0x02,
+     982,  978,   14,   14, 0x02,
+    1016, 1001,   14,   14, 0x02,
 
  // properties: name, type, flags
-     999,  991, 0x0a495103,
-    1005,  991, 0x0a495103,
-    1014,  991, 0x0a495001,
-    1019,  991, 0x0a495001,
-    1040, 1035, 0x01495003,
-    1048, 1035, 0x01495003,
-    1056, 1035, 0x01495003,
-    1069,  991, 0x0a495001,
-    1089,  991, 0x0a495001,
-     727, 1104, 0x02495103,
-    1108, 1104, 0x02495001,
-    1120,  991, 0x0a495103,
-    1136, 1104, 0x02495103,
-    1147, 1104, 0x02495001,
+    1047, 1039, 0x0a495103,
+    1053, 1039, 0x0a495103,
+    1062, 1039, 0x0a495001,
+    1067, 1039, 0x0a495001,
+    1088, 1083, 0x01495003,
+    1096, 1083, 0x01495003,
+    1104, 1083, 0x01495003,
+    1117, 1039, 0x0a495001,
+    1137, 1039, 0x0a495001,
+     737, 1152, 0x02495103,
+    1156, 1152, 0x02495001,
+    1168, 1039, 0x0a495103,
+    1184, 1152, 0x02495103,
+    1195, 1152, 0x02495001,
 
  // properties: notify_signal_id
        3,
@@ -131,16 +132,18 @@ static const char qt_meta_stringdata_WordsPlusGame[] = {
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "onTick()\0onThumbnail()\0onFullscreen()\0"
     "onLoadLeaderboardCompleted(QVariantList)\0"
-    "onAchievedAward()\0intializePlayArea()\0"
-    "InitializeHomePage()\0InitializePuzzlePage()\0"
-    "score\0submitScore(int)\0includeBuddyList\0"
+    "onAchievedAward()\0onArmed()\0"
+    "intializePlayArea()\0InitializeHomePage()\0"
+    "InitializePuzzlePage()\0score\0"
+    "submitScore(int)\0includeBuddyList\0"
     "loadLeaderboard(bool)\0"
     "loadLeaderboardAroundLastScore()\0"
     "loadLeaderboardAroundUser()\0"
     "LoadAchievementsAwards()\0ScoreLoopThread*\0"
     "scoreLoop()\0startTimer()\0stopTimer()\0"
     "resetTimer()\0state\0ControlsForBBM(int)\0"
-    "msg\0playSound(QString)\0QString\0theme\0"
+    "msg\0playSound(QString)\0target,section\0"
+    "Share(QString,QString)\0QString\0theme\0"
     "category\0time\0totalWordsFound\0bool\0"
     "soundOn\0musicOn\0profileBoxOn\0"
     "puzzleCompletedTime\0lastPuzzleTime\0"
@@ -182,21 +185,23 @@ void WordsPlusGame::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 25: _t->onFullscreen(); break;
         case 26: _t->onLoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
         case 27: _t->onAchievedAward(); break;
-        case 28: _t->intializePlayArea(); break;
-        case 29: _t->InitializeHomePage(); break;
-        case 30: _t->InitializePuzzlePage(); break;
-        case 31: _t->submitScore((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 32: _t->loadLeaderboard((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 33: _t->loadLeaderboardAroundLastScore(); break;
-        case 34: _t->loadLeaderboardAroundUser(); break;
-        case 35: _t->LoadAchievementsAwards(); break;
-        case 36: { ScoreLoopThread* _r = _t->scoreLoop();
+        case 28: _t->onArmed(); break;
+        case 29: _t->intializePlayArea(); break;
+        case 30: _t->InitializeHomePage(); break;
+        case 31: _t->InitializePuzzlePage(); break;
+        case 32: _t->submitScore((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 33: _t->loadLeaderboard((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 34: _t->loadLeaderboardAroundLastScore(); break;
+        case 35: _t->loadLeaderboardAroundUser(); break;
+        case 36: _t->LoadAchievementsAwards(); break;
+        case 37: { ScoreLoopThread* _r = _t->scoreLoop();
             if (_a[0]) *reinterpret_cast< ScoreLoopThread**>(_a[0]) = _r; }  break;
-        case 37: _t->startTimer(); break;
-        case 38: _t->stopTimer(); break;
-        case 39: _t->resetTimer(); break;
-        case 40: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 41: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 38: _t->startTimer(); break;
+        case 39: _t->stopTimer(); break;
+        case 40: _t->resetTimer(); break;
+        case 41: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 42: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 43: _t->Share((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         default: ;
         }
     }
@@ -234,9 +239,9 @@ int WordsPlusGame::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 42)
+        if (_id < 44)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 42;
+        _id -= 44;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {

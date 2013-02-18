@@ -1,8 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'timer.hpp'
 **
-** Created: Sat Jan 26 20:36:31 2013
-**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/

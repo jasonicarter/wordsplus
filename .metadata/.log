@@ -10137,3 +10137,899 @@ com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
 	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
 	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-02-18 10:27:24.360 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:27:28.410
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:27:28.875
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:27:29.173
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 10:27:33.322
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 10:27:33.322
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@3c86e9),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@3c86e9)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@3c86e9),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@3c86e9)),sourcePriority=16640)
+!SESSION 2013-02-18 10:30:12.484 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:30:21.105
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:30:21.404
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 10:30:21.523
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 10:30:25.711
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 10:30:25.711
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@12ef4c6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12ef4c6)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@12ef4c6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@12ef4c6)),sourcePriority=16640)
+!SESSION 2013-02-18 12:31:43.118 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 12:31:50.575
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 12:31:50.575
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@11b50a1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@11b50a1)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@11b50a1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@11b50a1)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.sdk.manager.core 4 -1 2013-02-18 12:33:05.658
+!MESSAGE Error refreshing available SDKs
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.doRefresh(SDKManager.java:476)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.refresh(SDKManager.java:386)
+	at com.qnx.tools.ide.sdkmanager.ui.internal.SDKManagerWizard$InstallPage$12.run(SDKManagerWizard.java:429)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 12:33:05.658
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 12:33:05.658
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+!SESSION 2013-02-18 12:54:13.032 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 12:54:19.867
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 12:54:19.868
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1957a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1957a34)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1957a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1957a34)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 12:55:07.694
+!MESSAGE No category "null" is defined in the library descriptors.
+!SESSION 2013-02-18 12:59:53.642 -----------------------------------------------
+eclipse.buildId=10.0.9
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 13:00:02.250
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 13:00:02.250
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@11b50a1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@11b50a1)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@11b50a1),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@11b50a1)),sourcePriority=16640)
+!SESSION 2013-02-18 13:21:30.146 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 13:22:03.187
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 13:22:03.187
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1e2d159),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e2d159)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1e2d159),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1e2d159)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:06.488
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:06.489
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:06.490
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:06.491
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:06.492
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:10.739
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:11.032
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:11.559
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:11.868
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:22:11.953
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.qnx.tools.ide.sdk.manager.core 4 -1 2013-02-18 13:22:19.145
+!MESSAGE Error refreshing available SDKs
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.doRefresh(SDKManager.java:483)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.refresh(SDKManager.java:393)
+	at com.qnx.tools.ide.sdkmanager.ui.internal.SDKManagerWizard$InstallPage$12.run(SDKManagerWizard.java:433)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 13:22:19.146
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 13:22:19.146
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+
+!ENTRY com.qnx.tools.ide.sdk.manager.core 4 -1 2013-02-18 13:22:45.215
+!MESSAGE Error refreshing available SDKs
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:393)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:636)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.doRefresh(SDKManager.java:483)
+	at com.qnx.tools.ide.sdk.manager.core.internal.SDKManager.refresh(SDKManager.java:393)
+	at com.qnx.tools.ide.sdkmanager.ui.internal.SDKManagerWizard$InstallPage$12.run(SDKManagerWizard.java:433)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 13:22:45.215
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2013-02-18 13:22:45.215
+!MESSAGE No repository found at http://downloads.blackberry.com/upr/developers/update/bbndk/iderepo.
+!SESSION 2013-02-18 13:24:03.860 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-02-18 13:24:18.465
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-02-18 13:24:18.465
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6b29e6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6b29e6)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@6b29e6),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@6b29e6)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.069
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.071
+!MESSAGE Cannot resolve ValueType variant: QLocale
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.071
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.072
+!MESSAGE Cannot resolve ValueType variant: bb::device::CellularService::Types
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.073
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.074
+!MESSAGE Cannot resolve ValueType variant:  bb::system::SystemUiButton 
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:21.112
+!MESSAGE Issues while loading Components Definition:
+Duplicate Signal in: ComponentID: bb::cascades::InvokeActionItem, Signal: handlerChanged
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:22.591
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:23.109
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:24.150
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:24.169
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:24:24.306
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY org.eclipse.ui 4 4 2013-02-18 13:25:12.265
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:25:12.619
+!MESSAGE C:\bbndk\ide\win32\x86\eclipse\jre\bin\java.exe -cp C:\bbndk\ide\win32\x86\eclipse\plugins\com.rim.tad.tools.qml.simulator_10.1.0.201302011933\ com.rim.tad.tools.qml.sim.check.RenderingCheck -target C:\bbndk\target_10_1_0_338\qnx6
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:25:19.347
+!MESSAGE QML Preview compatibility check log.
+CASCADES_BUILD::38e80ec0eb946463031b21f78e9ca1a633e23804
+ES shim 0
+HLP: OpenGL ES vendor info:
+  vendor:     ATI Technologies Inc.
+  renderer:   AMD Radeon HD 6550D
+  version:    OpenGL ES 2.0 - GlesDesktopShim running on 4.1.10834 Compatibility Profile Context
+  extensions: GL_OES_get_program_binaryGL_AMDX_debug_output GL_AMDX_vertex_shader_tessellator GL_AMD_conservative_depth GL_AMD_debug_output GL_AMD_depth_clamp_separate GL_AMD_draw_buffers_blend GL_AMD_multi_draw_indirect GL_AMD_name_gen_delete GL_AMD_performance_monitor GL_AMD_pinned_memory GL_AMD_sample_positions GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_stencil_export GL_AMD_shader_trace GL_AMD_texture_cube_map_array GL_AMD_texture_texture4 GL_AMD_transform_feedback3_lines_triangles GL_AMD_vertex_shader_tessellator GL_ARB_ES2_compatibility GL_ARB_blend_func_extended GL_ARB_color_buffer_float GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_indirect GL_ARB_draw_instanced GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_provoking_vertex GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_stencil_export GL_ARB_shader_subroutine GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shadow GL_ARB_shadow_ambient GL_ARB_sync GL_ARB_tessellation_shader GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_snorm GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_envmap_bumpmap GL_ATI_fragment_shader GL_ATI_meminfo GL_ATI_separate_stencil GL_ATI_texture_compression_3dc GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_copy_buffer GL_EXT_copy_texture GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_histogram GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_specular_color GL_EXT_shader_image_load_store GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_EXT_subtexture GL_EXT_texgen_reflection GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_bptc GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_add GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_texture_mirrored_repeat GL_KTX_buffer_region GL_NV_blend_square GL_NV_conditional_render GL_NV_copy_depth_to_color GL_NV_explicit_multisample GL_NV_float_buffer GL_NV_half_float GL_NV_primitive_restart GL_NV_texgen_reflection GL_NV_texture_barrier GL_SGIS_generate_mipmap GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_SUN_multi_draw_arrays GL_WIN_swap_hint WGL_EXT_swap_control
+
+ServerContext::Orientation init. angle: 0, orientation: Portrait
+Warning: WARNING: QApplication was not created in the main() thread.
+OpenGL has ES2 compatibility
+Warning: OrientationSupportPrivate::getSupportedDisplayOrientation:   
+Warning: OrientationSupportPrivate::initDirectionAndOrientation: 
+   isCardOrViewer:  false 
+   manifestDisplayOrientation: All 
+   displayOrientation: All 
+   uiOrientation: Portrait 
+   displayDirection: North 
+   nativeDisplayOrientation: Portrait 
+Warning: QObject::installEventFilter(): Cannot filter events for objects in a different thread.
+Warning: Please use bb::cascades::Application to instantiate application
+ERROR:: EngineDocumentManager::loadDictionary() failed to load any emojis dictionary
+ERROR:: EngineDocumentManager::loadDictionary() failed to load any emoticons dictionary
+
+Process exited with code: 0
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:25:20.146
+!MESSAGE SDK version used 10.1.0.338 with capabilities: [[CHANGE_ORIENTATION, UI_ADAPTABILITY, CHANGE_THEME, ZOOM_CHANGE]]
+
+!ENTRY org.eclipse.ui 4 4 2013-02-18 13:25:46.165
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:25:46.244
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 4 0 2013-02-18 13:32:15.212
+!MESSAGE  No indexer for project P/sim
+
+!ENTRY org.eclipse.core.resources 4 2 2013-02-18 13:32:15.213
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.RuntimeException:  No indexer for project P/sim
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:296)
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:280)
+	at com.rim.tad.tools.qml.core.internal.indexer.FileIndexerManager$1$1.visit(FileIndexerManager.java:89)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at com.rim.tad.tools.qml.core.internal.indexer.FileIndexerManager$1.resourceChanged(FileIndexerManager.java:67)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:365)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:464)
+	at com.qnx.tools.ide.target.qconn.internal.core.TargetStore.save(TargetStore.java:210)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetDescriptor.save(QconnTargetDescriptor.java:119)
+	at com.qnx.tools.ide.target.qconn.internal.core.QconnTargetDescriptor.setQconnHostName(QconnTargetDescriptor.java:62)
+	at com.qnx.tools.ide.bbt.target.core.internal.BBTTargetDescriptor.setHostname(BBTTargetDescriptor.java:83)
+	at com.qnx.tools.bbt.internal.ui.setupwizard.DeviceSetupPage$DeviceSection$7.run(DeviceSetupPage.java:781)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 13:32:44.895
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 13:32:44.930
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-02-18 13:32:44.959
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui 4 4 2013-02-18 13:33:12.629
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:33:12.717
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:33:37.236
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:34:12.869
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:34:12.920
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:39:13.997
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 13:39:14.050
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:42:34.690
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:42:44.544
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:43:15.947
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:43:27.556
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 13:51:56.305
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-02-18 13:59:28.116
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:515)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTDSFFinalLaunchSequence.stepPrepareAndDownloadBinariesRemote(BBTDSFFinalLaunchSequence.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:155)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:452)
+	at org.eclipse.cdt.dsf.concurrent.Sequence.access$2(Sequence.java:366)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:413)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:353)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:298)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface 2 0 2013-02-18 13:59:49.276
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-02-18 13:59:49.276
+!MESSAGE A conflict occurred for CTRL+SHIFT+3:
+Binding(CTRL+SHIFT+3,
+	ParameterizedCommand(Command(com.rim.tad.tools.ui.editor.vertical_split_view_mode,VerticalSplitViewMode,
+		Vertical Split View Mode,
+		Category(com.rim.tad.tools.ui.category.source,com.rim.tad.tools.ui,com.rim.tad.tools.ui,true),
+		LegacyHandlerWrapper(ActionHandler(action=com.rim.tad.tools.qml.core.internal.editor.SwitchViewModeAction@b3c7b1)),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.rim.tad.tools.qml.core.internal.editor.QMLEditorScope,,,system)
+Binding(CTRL+SHIFT+3,
+	ParameterizedCommand(Command(com.rim.tad.tools.wst.jsdt.debug.ui.script.opensource,Open Source,
+		Shows the JavaScript source for the selected script element,
+		Category(com.rim.tad.tools.wst.jsdt.debug.ui.category,JavaScript Debug,Tooling for debugging JavaScript,true),
+		com.rim.tad.tools.wst.jsdt.debug.internal.ui.actions.OpenSourceAction,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-02-18 13:59:54.469
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-02-18 14:00:40.495
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:01:02.959
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:01:03.921
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:01:06.986
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:01:08.852
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:03:50.441
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:03:53.314
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:03:59.522
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:13:36.753
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:13:43.825
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 14:13:45.017
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:07:04.280
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:07:04.330
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:08:10.707
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:08:10.757
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:08:29.031
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:08:29.083
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-02-18 15:09:10.043
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\splashScreen.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/splashScreen.png' failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\splashScreen.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/splashScreen.png' failed.
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:582)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	... 7 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-02-18 15:09:10.043
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\splashScreen.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/splashScreen.png' failed.
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:13:36.215
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:13:37.859
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:13:38.344
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:19:04.454
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:20:02.451
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:20:02.493
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:20:02.990
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:27:54.262
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:27:55.429
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:27:56.777
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:28:39.077
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:28:39.127
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:28:43.239
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:28:43.371
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:28:44.244
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:29:35.745
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:29:35.788
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:29:39.850
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-02-18 15:29:56.195
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\qml\ThemeHomePage.qml' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/qml/ThemeHomePage.qml' failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\qml\ThemeHomePage.qml' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/qml/ThemeHomePage.qml' failed.
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:582)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	... 7 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-02-18 15:29:56.196
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\qml\ThemeHomePage.qml' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/qml/ThemeHomePage.qml' failed.
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:34:41.879
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:34:50.718
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:34:50.718
+!MESSAGE We reached safe limit of opened QML preview windows. Please close some of them and try again.
+!STACK 0
+java.lang.IndexOutOfBoundsException: Number of active previews exceeded allowed maximum (6 out of 5 requested).
+	at com.rim.tad.tools.qml.sim.CsCanvas.create(CsCanvas.java:151)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.createCanvasView(SimpleQMLPreview.java:177)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.handleEvent(SimpleQMLPreview.java:479)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3733)
+	at org.eclipse.ui.internal.LayoutPart.setVisible(LayoutPart.java:279)
+	at org.eclipse.ui.internal.PartSashContainer.setVisible(PartSashContainer.java:630)
+	at org.eclipse.ui.internal.Perspective.onActivate(Perspective.java:956)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3713)
+	at org.eclipse.ui.internal.WorkbenchPage.busySetPerspective(WorkbenchPage.java:1115)
+	at org.eclipse.ui.internal.WorkbenchPage.access$16(WorkbenchPage.java:1099)
+	at org.eclipse.ui.internal.WorkbenchPage$19.run(WorkbenchPage.java:3814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3812)
+	at org.eclipse.ui.internal.PerspectiveBarContributionItem.select(PerspectiveBarContributionItem.java:124)
+	at org.eclipse.ui.internal.PerspectiveBarContributionItem$1.widgetSelected(PerspectiveBarContributionItem.java:93)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:34:50.720
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:34:50.741
+!MESSAGE We reached safe limit of opened QML preview windows. Please close some of them and try again.
+!STACK 0
+java.lang.IndexOutOfBoundsException: Number of active previews exceeded allowed maximum (6 out of 5 requested).
+	at com.rim.tad.tools.qml.sim.CsCanvas.create(CsCanvas.java:151)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.createCanvasView(SimpleQMLPreview.java:177)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.handleEvent(SimpleQMLPreview.java:479)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:3733)
+	at org.eclipse.ui.internal.LayoutPart.setVisible(LayoutPart.java:279)
+	at org.eclipse.ui.internal.PartPane.setVisible(PartPane.java:316)
+	at org.eclipse.ui.internal.presentations.PresentablePart.setVisible(PresentablePart.java:180)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.setVisible(TabbedStackPresentation.java:381)
+	at org.eclipse.ui.internal.PartStack.setVisible(PartStack.java:1047)
+	at org.eclipse.ui.internal.PartSashContainer.setVisible(PartSashContainer.java:635)
+	at org.eclipse.ui.internal.Perspective.onActivate(Perspective.java:956)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3713)
+	at org.eclipse.ui.internal.WorkbenchPage.busySetPerspective(WorkbenchPage.java:1115)
+	at org.eclipse.ui.internal.WorkbenchPage.access$16(WorkbenchPage.java:1099)
+	at org.eclipse.ui.internal.WorkbenchPage$19.run(WorkbenchPage.java:3814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3812)
+	at org.eclipse.ui.internal.PerspectiveBarContributionItem.select(PerspectiveBarContributionItem.java:124)
+	at org.eclipse.ui.internal.PerspectiveBarContributionItem$1.widgetSelected(PerspectiveBarContributionItem.java:93)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:40:15.000
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:40:15.040
+!MESSAGE We reached safe limit of opened QML preview windows. Please close some of them and try again.
+!STACK 0
+java.lang.IndexOutOfBoundsException: Number of active previews exceeded allowed maximum (6 out of 5 requested).
+	at com.rim.tad.tools.qml.sim.CsCanvas.create(CsCanvas.java:151)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.createCanvasView(SimpleQMLPreview.java:177)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.createDisplay(SimpleQMLPreview.java:149)
+	at com.rim.tad.tools.qml.sim.SimpleQMLPreview.<init>(SimpleQMLPreview.java:106)
+	at com.rim.tad.tools.qml.sim.VisualEditorFactory.create(VisualEditorFactory.java:88)
+	at com.rim.tad.tools.qml.core.internal.editor.VisualEditor.createVisualEditorDisplay(VisualEditor.java:58)
+	at com.rim.tad.tools.qml.core.internal.editor.VisualEditor.access$3(VisualEditor.java:43)
+	at com.rim.tad.tools.qml.core.internal.editor.VisualEditor$2.run(VisualEditor.java:124)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4140)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3757)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:16.004
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:16.048
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:29.591
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:29.631
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:42.020
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:40:42.061
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:41:05.328
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:41:05.368
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:42:10.546
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:42:10.585
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:42:20.758
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:42:20.799
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-02-18 15:42:59.066
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\images\profileEdit_blk.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/images/profileEdit_blk.png' failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\images\profileEdit_blk.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/images/profileEdit_blk.png' failed.
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:582)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	... 7 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-02-18 15:42:59.066
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\WordsPlusGame\assets\720x720\images\profileEdit_blk.png' to '/apps/com.example.WordsPlusGame.testDev_rdsPlusGame1f17f424/native/assets/720x720/images/profileEdit_blk.png' failed.
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:576)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:677)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:622)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:44:29.708
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:44:31.176
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:44:31.973
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:44:45.786
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:45:15.032
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:45:15.073
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:45:40.804
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-02-18 15:45:40.845
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-02-18 15:45:41.165
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:49:04.638
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:49:06.194
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 15:49:07.084
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:03:31.685
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:03:32.824
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:03:34.023
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:16:43.591
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:16:43.925
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:16:45.467
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-02-18 16:16:45.774
+!MESSAGE Unable to determine the application exit code

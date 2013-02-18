@@ -180,13 +180,6 @@ Page {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
-        },
-        Invocation {
-            id: invokeLeaveReview
-            query: InvokeQuery {
-                mimeType: "application/x-bb-appworld"
-                uri: "appworld://content/19132685"
-            }
         }
     ]
 }
