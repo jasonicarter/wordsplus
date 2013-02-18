@@ -144,7 +144,7 @@ Container {
                     attachedObjects: [
                         Invocation {
                             id: invokeReview
-                            query: InvokeQuery {
+                            query {
                                 invokeTargetId: "sys.appworld"
                                 uri: "appworld://content/21931881"
                             }
