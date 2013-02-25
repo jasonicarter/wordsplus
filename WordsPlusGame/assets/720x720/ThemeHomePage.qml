@@ -31,11 +31,11 @@ Container {
             imageSource: "asset:///images/hint.png"
         }
     }
-    Container {
-        ImageView {
-            imageSource: "asset:///images/tabs.png"
-        }
-    }
+//    Container {
+//        ImageView {
+//            imageSource: "asset:///images/tabs.png"
+//        }
+//    }
     Container {
         layout: AbsoluteLayout {
         }

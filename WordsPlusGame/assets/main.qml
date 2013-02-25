@@ -6,6 +6,64 @@ import bb.multimedia 1.0
 Page {
     id: mainPage
     property int connectionError: 0
+    shortcuts: [
+        Shortcut {
+            key: qsTr("h")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                wordsPlus.InitializeHomePage();
+            }
+        },
+        Shortcut {
+            key: qsTr("p")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                wordsPlus.intializePlayArea();
+            }
+        },
+        Shortcut {
+            key: qsTr("b")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                wordsPlus.intializePlayArea();
+            }
+        },
+        Shortcut {
+            key: qsTr("m")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                Application.menuEnabled = true;
+            }
+        },
+        Shortcut {
+            key: qsTr("c")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                categorySheet.open();
+            }
+        },
+        Shortcut {
+            key: qsTr("s")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                statsSheet.open();
+            }
+        },
+        Shortcut {
+            key: qsTr("t")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                wordsPlus.intializePlayArea();
+            }
+        },
+        Shortcut {
+            key: qsTr("r")
+            onTriggered: {
+                wordsPlus.stopTimer();
+                wordsPlus.intializePlayArea();
+            }
+        }
+    ]
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
