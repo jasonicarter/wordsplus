@@ -6,7 +6,7 @@ make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
 Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
+    Found 2 source text(s) (0 new and 2 already existing)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C .//translations -f Makefile release
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
@@ -14,6 +14,7 @@ C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
 The directory name is invalid.
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 2 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
@@ -36,7 +37,7 @@ make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
 Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
+    Found 2 source text(s) (0 new and 2 already existing)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C .//translations -f Makefile release
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
@@ -44,6 +45,7 @@ C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
 The directory name is invalid.
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 2 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
@@ -66,7 +68,7 @@ make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
 Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
+    Found 4 source text(s) (2 new and 2 already existing)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C .//translations -f Makefile release
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
@@ -74,6 +76,7 @@ C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
 The directory name is invalid.
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
@@ -96,7 +99,8 @@ make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
 Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
+    Found 2 source text(s) (0 new and 2 already existing)
+    Kept 2 obsolete entries
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C .//translations -f Makefile release
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
@@ -104,6 +108,7 @@ C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
 The directory name is invalid.
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 2 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
@@ -126,7 +131,7 @@ make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
 Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
+    Found 8 source text(s) (6 new and 2 already existing)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C .//translations -f Makefile release
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
@@ -134,6 +139,7 @@ C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
 The directory name is invalid.
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 8 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
@@ -143,188 +149,8 @@ make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/black
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
 make[2]: Nothing to be done for `first'.
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
 make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
-
-**** Build Finished ****
-
-**** Build of configuration Simulator-Debug for project WordsPlusGame ****
-
-make Simulator-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lupdate WordsPlusGame.pro
-Updating 'WordsPlusGame.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-C:/bbndk/host_10_1_0_1/win32/x86/usr/bin/lrelease WordsPlusGame.pro
-The directory name is invalid.
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
-make -C ./x86 -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-c:/bbndk/host_10_1_0_1/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc CONFIG+=debug_and_release CONFIG+=simulator -o Makefile ../WordsPlusGame.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[2]: Nothing to be done for `first'.
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
 
 **** Build Finished ****

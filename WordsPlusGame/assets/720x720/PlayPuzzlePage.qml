@@ -7,27 +7,12 @@ Container { // root Container
         layout: DockLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center
-        preferredHeight: 1280
         ThemeOtherPages {
-        }
-        Container { //highlight timer only for school theme
-            visible: false
-            topPadding: 60
-            ImageView {
-                id: highlightTime
-                imageSource: {
-                    if (wordsPlus.theme == "school") {
-                        "theme/" + wordsPlus.theme + "/highlight_time.png"
-                    } else {
-                        ""
-                    }
-                }
-            }
         }
         Container { //highlight word list only for school theme
             visible: false
             bottomPadding: 120
-            verticalAlignment: VerticalAlignment.Bottom
+            verticalAlignment: VerticalAlignment.Top
             ImageView {
                 id: highlightWords
                 //imageSource: "theme/" + "school" + "/highlight_words.png"
@@ -40,88 +25,98 @@ Container { // root Container
                 }
             }
         }
+        Container { // Container for words to find
+            id: wordsToFind
+            objectName: "wordsToFind"
+            layout: StackLayout {
+                orientation: LayoutOrientation.LeftToRight
+            }
+            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Top
+        }
+        Container {
+            id: puzzleInfo
+            layout: StackLayout {
+                orientation: LayoutOrientation.LeftToRight
+            }
+            opacity: 0
+            leftPadding: 10
+            //preferredWidth: 720
+            Container {
+                Label {
+                    id: timerDisplay
+                    text: {
+                        if (wordsPlus.difficulty == 8) {
+                            "HARD: " + wordsPlus.time
+                        } else if (wordsPlus.difficulty == 4) {
+                            "MEDIUM: " + wordsPlus.time
+                        } else if (wordsPlus.difficulty == 2) {
+                            "EASY: " + wordsPlus.time
+                        }
+                    }
+                    //text: "TIME: 2:00"
+                    horizontalAlignment: HorizontalAlignment.Left
+                    textStyle {
+                        base: puzzlePageSubTitleNormalWhite.style
+                    }
+                }
+            }
+            Container {
+                layout: StackLayout {
+                    orientation: LayoutOrientation.RightToLeft
+                }
+                leftPadding: 20
+                horizontalAlignment: HorizontalAlignment.Right
+                Label {
+                    id: letterDisplay
+                    text: wordsPlus.selectedLetters
+                    //text: "TEST"
+                    textStyle {
+                        base: puzzlePageBurntOrgange.style
+                    }
+                    onTextChanged: {
+                        if(wordsPlus.selectedLetters != "") {
+                            puzzleInfo.opacity = 1
+                            wordsToFind.opacity = 0.3
+                        } else if (wordsPlus.selectedLetters == "") {
+                            puzzleInfo.opacity = 0
+                            wordsToFind.opacity = 1
+                        }
+                        
+                    }
+                }
+            }
+        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
             //background: Color.Green
             horizontalAlignment: HorizontalAlignment.Center
-            Container {
-                id: puzzleInfo
-                layout: DockLayout {
-                }
-                //background: Color.Green
-                //topPadding: 100
-                leftPadding: 20
-                Container {
-                    visible: false
-                    Label {
-                        id: timerDisplay
-//                        text: {
-//                            if (wordsPlus.difficulty == 8) {
-//                                "HARD: " + wordsPlus.time
-//                            } else if (wordsPlus.difficulty == 4) {
-//                                "MEDIUM: " + wordsPlus.time
-//                            } else if (wordsPlus.difficulty == 2) {
-//                                "EASY: " + wordsPlus.time
-//                            }
-//                        }
-                        text: "TIME: 2:00"
-                        horizontalAlignment: HorizontalAlignment.Left
-                        textStyle {
-                            base: puzzlePageSubTitleNormalWhite.style
-                        }
-                    }
-                }
-                Container {
-                    visible: false
-                    layout: StackLayout {
-                        orientation: LayoutOrientation.RightToLeft
-                    }
-                    topPadding: 50
-                    Label {
-                        id: letterDisplay
-                        //text: wordsPlus.selectedLetters
-                        text: "TEST"
-                        textStyle {
-                            base: puzzlePageBurntOrgange.style
-                        }
-                    }
-                }
+            Divider {
+                opacity: 0
             }
             Container {
                 id: playAreaContainer
                 objectName: "playAreaContainer"
                 //background: Color.Gray
+                topMargin: 100
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 70
+
                 preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Center
             }
-            Container { // Container for words to find
-                visible: false
-                id: wordsToFind
-                objectName: "wordsToFind"
-                topMargin: 20
-                //leftPadding: 20
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
-                }
-                //preferredWidth: 720
-                horizontalAlignment: HorizontalAlignment.Center
-                verticalAlignment: VerticalAlignment.Bottom
-            }
         } //center container
-//        Container {
-//            id: btmNav
-//            verticalAlignment: VerticalAlignment.Bottom
-//            BtmNavPanel {
-//                verticalAlignment: VerticalAlignment.Bottom
-//            }
-//        }
+        //        Container {
+        //            id: btmNav
+        //            verticalAlignment: VerticalAlignment.Bottom
+        //            BtmNavPanel {
+        //                verticalAlignment: VerticalAlignment.Bottom
+        //            }
+        //        }
     } // main container
     onCreationCompleted: {
         wordsPlus.puzzleCompleted.connect(playPuzzleRootContainer.handleSignal)
@@ -153,8 +148,9 @@ Container { // root Container
             id: puzzlePageSubTitleNormalWhite
             base: SystemDefaults.TextStyles.SubtitleText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
+            fontSize: FontSize.XLarge
         },
         TextStyleDefinition {
             id: puzzlePageBurntOrgange
@@ -162,7 +158,7 @@ Container { // root Container
             //fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
             color: Color.create("#CC3F10")
-            fontSize: FontSize.Large
+            fontSize: FontSize.XLarge
         },
         Sheet {
             id: aboutSheet

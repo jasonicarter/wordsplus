@@ -4,19 +4,12 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="com.qnx.qcc.toolChain.789823379">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/qt4/QtCore"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/qt4/QtDeclarative"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/qt4"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/freetype2"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc"/>
-<includePath path="C:/bbndk/host_10_0_10_534/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/cpp/c"/>
-<includePath path="C:/bbndk/target_10_0_10_261/qnx6/usr/include/cpp"/>
-<definedSymbol symbol="__LANGUAGE_C"/>
-<definedSymbol symbol="__LANGUAGE_C=1"/>
-<definedSymbol symbol="_LANGUAGE_C"/>
-<definedSymbol symbol="_LANGUAGE_C=1"/>
+<includePath path="C:/bbndk/target_10_1_0_338/qnx6/usr/include"/>
+<includePath path="C:/bbndk/host_10_1_0_1/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/include"/>
+<includePath path="C:/bbndk/target_10_1_0_338/qnx6/usr/include/cpp/c"/>
+<includePath path="C:/bbndk/target_10_1_0_338/qnx6/usr/include/cpp"/>
+<definedSymbol symbol="__cplusplus"/>
+<definedSymbol symbol="__cplusplus=1"/>
 <definedSymbol symbol="__QNX__"/>
 <definedSymbol symbol="__QNX__=1"/>
 <definedSymbol symbol="__QNXNTO__"/>
@@ -24,6 +17,12 @@
 <definedSymbol symbol="__GNUC__=4"/>
 <definedSymbol symbol="__GNUC_MINOR__=6"/>
 <definedSymbol symbol="__GNUC_PATCHLEVEL__=3"/>
+<definedSymbol symbol="__NO_INLINE__"/>
+<definedSymbol symbol="__NO_INLINE__=1"/>
+<definedSymbol symbol="__DEPRECATED"/>
+<definedSymbol symbol="__DEPRECATED=1"/>
+<definedSymbol symbol="__EXCEPTIONS"/>
+<definedSymbol symbol="__EXCEPTIONS=1"/>
 <definedSymbol symbol="__unix__"/>
 <definedSymbol symbol="__unix__=1"/>
 <definedSymbol symbol="__unix"/>
@@ -59,6 +58,7 @@
 <definedSymbol symbol="__BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__"/>
 <definedSymbol symbol="__FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__"/>
 <definedSymbol symbol="__SIZEOF_POINTER__=4"/>
+<definedSymbol symbol="__GNUG__=4"/>
 <definedSymbol symbol="__SIZE_TYPE__=unsigned int"/>
 <definedSymbol symbol="__PTRDIFF_TYPE__=int"/>
 <definedSymbol symbol="__WCHAR_TYPE__=unsigned int"/>
@@ -94,6 +94,8 @@
 <definedSymbol symbol="__UINT_FAST64_TYPE__=long long unsigned int"/>
 <definedSymbol symbol="__INTPTR_TYPE__=int"/>
 <definedSymbol symbol="__UINTPTR_TYPE__=unsigned int"/>
+<definedSymbol symbol="__GXX_WEAK__=1"/>
+<definedSymbol symbol="__GXX_RTTI=1"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1002"/>
 <definedSymbol symbol="__SCHAR_MAX__=127"/>
 <definedSymbol symbol="__SHRT_MAX__=32767"/>
@@ -170,13 +172,9 @@
 <definedSymbol symbol="__DBL_MAX_EXP__=1024"/>
 <definedSymbol symbol="__DBL_MAX_10_EXP__=308"/>
 <definedSymbol symbol="__DBL_DECIMAL_DIG__=17"/>
-<definedSymbol symbol="__DBL_MAX__=((double)1.7976931348623157e+308L)"/>
 <definedSymbol symbol="__DBL_MAX__=double(1.7976931348623157e+308L)"/>
-<definedSymbol symbol="__DBL_MIN__=((double)2.2250738585072014e-308L)"/>
 <definedSymbol symbol="__DBL_MIN__=double(2.2250738585072014e-308L)"/>
-<definedSymbol symbol="__DBL_EPSILON__=((double)2.2204460492503131e-16L)"/>
 <definedSymbol symbol="__DBL_EPSILON__=double(2.2204460492503131e-16L)"/>
-<definedSymbol symbol="__DBL_DENORM_MIN__=((double)4.9406564584124654e-324L)"/>
 <definedSymbol symbol="__DBL_DENORM_MIN__=double(4.9406564584124654e-324L)"/>
 <definedSymbol symbol="__DBL_HAS_DENORM__=1"/>
 <definedSymbol symbol="__DBL_HAS_INFINITY__=1"/>
@@ -219,7 +217,7 @@
 <definedSymbol symbol="__REGISTER_PREFIX__="/>
 <definedSymbol symbol="__USER_LABEL_PREFIX__="/>
 <definedSymbol symbol="__GNUC_GNU_INLINE__=1"/>
-<definedSymbol symbol="__NO_INLINE__=1"/>
+<definedSymbol symbol="__WCHAR_UNSIGNED__=1"/>
 <definedSymbol symbol="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_1=1"/>
 <definedSymbol symbol="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_2=1"/>
 <definedSymbol symbol="__GCC_HAVE_SYNC_COMPARE_AND_SWAP_4=1"/>
@@ -240,20 +238,6 @@
 <definedSymbol symbol="__GXX_TYPEINFO_EQUALITY_INLINE=0"/>
 <definedSymbol symbol="__PRAGMA_PACK_PUSH_POP__=1"/>
 <definedSymbol symbol="__GNU_INDIRECT_FUNCTION__=1"/>
-<definedSymbol symbol="_REENTRANT=1"/>
-<definedSymbol symbol="QT_NO_IMPORT_QT47_QML=1"/>
-<definedSymbol symbol="Q_OS_BLACKBERRY=1"/>
-<definedSymbol symbol="QT_DECLARATIVE_DEBUG=1"/>
-<definedSymbol symbol="QT_DECLARATIVE_LIB=1"/>
-<definedSymbol symbol="QT_CORE_LIB=1"/>
-<definedSymbol symbol="QT_SHARED=1"/>
-<definedSymbol symbol="__cplusplus=1"/>
-<definedSymbol symbol="__GNUG__=4"/>
-<definedSymbol symbol="__GXX_WEAK__=1"/>
-<definedSymbol symbol="__DEPRECATED=1"/>
-<definedSymbol symbol="__GXX_RTTI=1"/>
-<definedSymbol symbol="__EXCEPTIONS=1"/>
-<definedSymbol symbol="__WCHAR_UNSIGNED__=1"/>
 </collector>
 </instance>
 <instance id="com.qnx.qcc.toolChain.1668083487">
