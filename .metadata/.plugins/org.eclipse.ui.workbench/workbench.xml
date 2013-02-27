@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="38" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" maximized="true" width="960" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -37,17 +37,22 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" partName="main.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/main.qml" title="main.qml" tooltip="WordsPlusGame/assets/main.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/main.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="969" selectionTopPixel="90"/>
-</editor>
 <editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" partName="BtmNavPanel.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/720x720/BtmNavPanel.qml" title="BtmNavPanel.qml" tooltip="WordsPlusGame/assets/720x720/BtmNavPanel.qml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3186" selectionTopPixel="1029"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="498" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" partName="HomePage.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/720x720/HomePage.qml" title="HomePage.qml" tooltip="WordsPlusGame/assets/720x720/HomePage.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="504" selectionTopPixel="0"/>
+</editor>
+<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" partName="PlayPuzzlePage.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/assets/720x720/PlayPuzzlePage.qml" title="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/720x720/PlayPuzzlePage.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/assets/720x720/PlayPuzzlePage.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="291" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -473,16 +478,10 @@
 <perspective_action id="com.qnx.tools.ide.sysinfo.perspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1d78412" orientation="512" selectedTabId="org.eclipse.debug.ui.DebugView" style="0">
 <fastViews>
 <view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
-<fastViews>
-<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
@@ -490,10 +489,20 @@
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
+<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
+<fastViews>
+<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.21293199"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.20320855"/>
 <view id="org.eclipse.ui.views.ProgressView" ratio="0.29839572"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="lefttop" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="leftbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.palette" style="0">
@@ -506,12 +515,10 @@
 <layout>
 <mainWindow>
 <info folder="true" part="lefttop">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7494331" ratioLeft="661" ratioRight="221" relationship="2" relative="lefttop">
@@ -563,167 +570,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/ThemeHomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/WordsPlusGame/assets/720x720/images/profileEdit_blk.png"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/WordsPlusGame/assets/images/homeAnimation/mainPage_w_red.png"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/PlayPuzzlePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/BtmNavPanel.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusGame/bar-descriptor.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/HomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/ThemeHomePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/SocialLinks.qml"/>
 </editors>
-<item historyLabel="profileEdit_blk.png" index="3"/>
-<item historyLabel="HomePage.qml" index="1">
-<position info="not_deleted" x="504" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="2">
-<position info="not_deleted" x="10793" y="0"/>
-</item>
-<item historyLabel="HomePage.qml" index="1">
-<position info="not_deleted" x="504" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="2">
-<position info="not_deleted" x="866" y="0"/>
-</item>
-<item historyLabel="HomePage.qml" index="1">
-<position info="not_deleted" x="504" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="0">
-<position info="not_deleted" x="809" y="113"/>
-</item>
-<item historyLabel="main.cpp" index="4">
-<position info="not_deleted" x="480" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="873" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="2626" y="112"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="246" y="832"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="7">
-<position/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="12324" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="5897" y="17"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="7">
-<position/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="5897" y="17"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="529" y="0"/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="8"/>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="60" y="0"/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="5897" y="17"/>
-</item>
-<item historyLabel="HomePage.qml" index="9">
-<position/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="5897" y="17"/>
-</item>
-<item historyLabel="HomePage.qml" index="10">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="60" y="0"/>
-</item>
-<item historyLabel="HomePage.qml" index="10">
-<position info="not_deleted" x="464" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position/>
-</item>
-<item historyLabel="PlayPuzzlePage.qml" index="5">
-<position info="not_deleted" x="5897" y="17"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position/>
-</item>
-<item historyLabel="HomePage.qml" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="7">
-<position info="not_deleted" x="9784" y="30"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="1336" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="7">
-<position info="not_deleted" x="5083" y="31"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="1076" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="7">
-<position info="not_deleted" x="5083" y="31"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="6">
-<position info="not_deleted" x="1125" y="0"/>
-</item>
-<item historyLabel="main.qml" index="11">
-<position info="not_deleted" x="805" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="12">
-<position info="not_deleted" x="1498" y="0"/>
-</item>
-<item historyLabel="main.qml" index="13">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.qml" index="13">
-<position info="not_deleted" x="1637" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.qml" index="13">
-<position info="not_deleted" x="1142" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.qml" index="13">
-<position info="not_deleted" x="1073" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.qml" index="13">
-<position info="not_deleted" x="1245" y="0"/>
-</item>
-<item historyLabel="BtmNavPanel.qml" index="14">
+<item historyLabel="BtmNavPanel.qml" index="1">
 <position info="not_deleted" x="3186" y="0"/>
 </item>
-<item active="true" historyLabel="main.qml" index="13">
-<position info="not_deleted" x="1245" y="0"/>
+<item historyLabel="main.qml" index="0">
+<position info="not_deleted" x="969" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="2862" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="main.qml" index="0">
+<position info="not_deleted" x="969" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="4587" y="57"/>
+</item>
+<item historyLabel="mainPage_w_red.png" index="4"/>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="9069" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="613" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="395" y="39"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="1984" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="274" y="504"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="859" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="859" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3341" y="86"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="4868" y="0"/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position info="not_deleted" x="67" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="4868" y="0"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="291" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="554" y="0"/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position info="not_deleted" x="66" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="3192" y="0"/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position info="not_deleted" x="66" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3024" y="2837"/>
+</item>
+<item historyLabel="SocialLinks.qml" index="8">
+<position info="not_deleted" x="66" y="0"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="455" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3428" y="2395"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="3192" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3428" y="2395"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3428" y="2395"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="514" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3225" y="46"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="575" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3225" y="46"/>
+</item>
+<item historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="504" y="0"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="291" y="0"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="498" y="0"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="7">
+<position info="not_deleted" x="3225" y="46"/>
+</item>
+<item historyLabel="BtmNavPanel.qml" index="2">
+<position info="not_deleted" x="498" y="0"/>
+</item>
+<item historyLabel="PlayPuzzlePage.qml" index="5">
+<position info="not_deleted" x="291" y="0"/>
+</item>
+<item active="true" historyLabel="HomePage.qml" index="3">
+<position info="not_deleted" x="504" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -733,11 +736,13 @@
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="leftbottom"/>
+<trimItem IMemento.internal.id="lefttop"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="righttop"/>
 <trimItem IMemento.internal.id="rightbottom"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1d78412"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -751,6 +756,24 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SocialLinks.qml" tooltip="WordsPlusGame/assets/SocialLinks.qml">
+<persistable path="/WordsPlusGame/assets/SocialLinks.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusGame/assets/ThemeHomePage.qml">
+<persistable path="/WordsPlusGame/assets/ThemeHomePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusGame/assets/HomePage.qml">
+<persistable path="/WordsPlusGame/assets/HomePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/720x720/PlayPuzzlePage.qml">
+<persistable path="/WordsPlusGame/assets/720x720/PlayPuzzlePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="mainPage_w_red.png" tooltip="WordsPlusGame/assets/images/homeAnimation/mainPage_w_red.png">
+<persistable path="/WordsPlusGame/assets/images/homeAnimation/mainPage_w_red.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusGame/assets/720x720/HomePage.qml">
+<persistable path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" tooltip="WordsPlusGame/assets/720x720/BtmNavPanel.qml">
 <persistable path="/WordsPlusGame/assets/720x720/BtmNavPanel.qml"/>
 </file>
@@ -760,17 +783,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" tooltip="WordsPlusGame/assets/BtmNavPanel.qml">
 <persistable path="/WordsPlusGame/assets/BtmNavPanel.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusGame/assets/HomePage.qml">
-<persistable path="/WordsPlusGame/assets/HomePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusGame/assets/720x720/HomePage.qml">
-<persistable path="/WordsPlusGame/assets/720x720/HomePage.qml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml">
 <persistable path="/WordsPlusGame/bar-descriptor.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/720x720/PlayPuzzlePage.qml">
-<persistable path="/WordsPlusGame/assets/720x720/PlayPuzzlePage.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="profileEdit_blk.png" tooltip="WordsPlusGame/assets/720x720/images/profileEdit_blk.png">
 <persistable path="/WordsPlusGame/assets/720x720/images/profileEdit_blk.png"/>
@@ -786,15 +800,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusGame/assets/720x720/qml/ThemeHomePage.qml">
 <persistable path="/WordsPlusGame/assets/720x720/qml/ThemeHomePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusGame/assets/720x720/images/ThemeHomePage.qml">
-<persistable path="/WordsPlusGame/assets/720x720/images/ThemeHomePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusGame/assets/720x720/ThemeHomePage.qml">
-<persistable path="/WordsPlusGame/assets/720x720/ThemeHomePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="theme_home.png" tooltip="WordsPlusGame/assets/theme/space/theme_home.png">
-<persistable path="/WordsPlusGame/assets/theme/space/theme_home.png"/>
 </file>
 </mruList>
 </workbench>

@@ -13,25 +13,95 @@ Container {
         }
         //preferredHeight: 1280
         ThemeHomePage {
-            
+
         }
         BtmNavPanel { // bottom panel
-        	preferredHeight: 200
+        }
+        Container {
+            verticalAlignment: VerticalAlignment.Bottom
+            layout: DockLayout {
+            }
+            ImageView {
+                verticalAlignment: VerticalAlignment.Bottom
+                imageSource: "images/social.png"
+            }
+            Container {
+                layout: AbsoluteLayout {
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 100
+                        positionY: 0
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            wordsPlus.Share("Facebook", "home");
+                        }
+                    }
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 300
+                        positionY: 0
+                    }
+                    attachedObjects: [
+                        Invocation {
+                            id: invokeReview
+                            query {
+                                invokeTargetId: "sys.appworld"
+                                uri: "appworld://content/21931881"
+                            }
+                        }
+                    ]
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            invokeReview.trigger("bb.action.OPEN");
+                        }
+                    }
+                }
+                Container {
+                    preferredHeight: 100
+                    preferredWidth: 100
+                    //background: Color.Green
+                    layoutProperties: AbsoluteLayoutProperties {
+                        positionX: 500
+                        positionY: 0
+                    }
+                    onTouch: {
+                        if (event.isDown()) {
+                            wordsPlus.playSound("letterSelected");
+                        } else if (event.isUp()) {
+                            wordsPlus.Share("Twitter", "home");
+                        }
+                    }
+                }
+            }
+
         }
         Container { // center
             layout: DockLayout {
             }
             //topPadding: 150
             horizontalAlignment: HorizontalAlignment.Center
-            verticalAlignment: VerticalAlignment.Bottom
+            verticalAlignment: VerticalAlignment.Center
             //background: Color.Gray
             ImageView {
                 id: puzzleLetters
                 opacity: 1
                 //imageSource: "theme/" + wordsPlus.theme + "/theme_home.png"
                 imageSource: "theme/" + "wordsPlus" + "/theme_home.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: puzzleLettersAnimation
                 }
@@ -40,8 +110,8 @@ Container {
                 id: wImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_w_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: wAnimation
                     onStarted: {
@@ -54,8 +124,8 @@ Container {
                 id: oImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_o_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: oAnimation
                     onStarted: {
@@ -68,8 +138,8 @@ Container {
                 id: rImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_r_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: rAnimation
                     onStarted: {
@@ -82,8 +152,8 @@ Container {
                 id: dImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_d_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: dAnimation
                     onStarted: {
@@ -94,8 +164,8 @@ Container {
                 id: pImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_p_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: pAnimation
                     onStarted: {
@@ -108,8 +178,8 @@ Container {
                 id: lImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_l_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: lAnimation
                     onStarted: {
@@ -122,8 +192,8 @@ Container {
                 id: uImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_u_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: uAnimation
                     onStarted: {
@@ -136,8 +206,8 @@ Container {
                 id: sImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_s_red.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: sAnimation
                     onStarted: {
@@ -150,8 +220,8 @@ Container {
                 id: by
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_by_white.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: byAnimation
                     onStarted: {
@@ -164,8 +234,8 @@ Container {
                 id: ji
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_ji_white.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: jiAnimation
                     onStarted: {
@@ -178,8 +248,8 @@ Container {
                 id: carter
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_carter_white.png"
-                preferredWidth: 620
-                preferredHeight: 620
+                preferredWidth: 500
+                preferredHeight: 500
                 animations: HomePageAnimation {
                     id: carterAnimation
                     onStarted: {
@@ -232,16 +302,16 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
-        }//,
-//        SystemToast {
-//            id: homeSysToast
-//            body: ""
-//            button.label: "Got it!" //btnName
-//        },
-//        Sheet {
-//            id: themeSheet
-//            ThemeSheet {
-//            }
-//        }
+        } //,
+    //        SystemToast {
+    //            id: homeSysToast
+    //            body: ""
+    //            button.label: "Got it!" //btnName
+    //        },
+    //        Sheet {
+    //            id: themeSheet
+    //            ThemeSheet {
+    //            }
+    //        }
     ]
 }//root container
