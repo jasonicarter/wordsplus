@@ -34,15 +34,27 @@ Container { // root Container
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Top
         }
+        Container{
+            id: puzzleShortcuts
+            opacity: 0
+            leftPadding: 10
+            Label {
+                text: "<html><span style='font-size:xx-small'><b>SHORTCUTS:</b> p [play] h [home]</span></html>" + "<html><span style='font-size:xx-small'> menu [Swipe down from the top]</span></html>"
+                textStyle {
+                    base: btmNavPanelSmallNormalWhite.style
+                }
+            }
+        }
         Container {
             id: puzzleInfo
             layout: StackLayout {
                 orientation: LayoutOrientation.LeftToRight
             }
             opacity: 0
+            topPadding: 10
             leftPadding: 10
             //preferredWidth: 720
-            Container {
+            Container {          
                 Label {
                     id: timerDisplay
                     text: {
@@ -77,9 +89,11 @@ Container { // root Container
                     onTextChanged: {
                         if(wordsPlus.selectedLetters != "") {
                             puzzleInfo.opacity = 1
+                            puzzleShortcuts.opacity = 1
                             wordsToFind.opacity = 0.3
                         } else if (wordsPlus.selectedLetters == "") {
                             puzzleInfo.opacity = 0
+                            puzzleShortcuts.opacity = 0
                             wordsToFind.opacity = 1
                         }
                         

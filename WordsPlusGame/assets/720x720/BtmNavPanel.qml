@@ -3,33 +3,22 @@ import bb.cascades 1.0
 Container {
     preferredWidth: 720
     Container { // bottom panel
-        layout: DockLayout {
-        }
+//        layout: DockLayout {
+//        }
         //background: Color.create("#272727")
         preferredWidth: 600
         horizontalAlignment: HorizontalAlignment.Center
-        Label {
-            horizontalAlignment: HorizontalAlignment.Left
-            text: "Play - p\n" + "Home - h\n" + "BBM - b"
-            multiline: true
-            textStyle {
-                base: btmNavPanelSmallNormalWhite.style
-            }
-        }
 
         Label {
             horizontalAlignment: HorizontalAlignment.Center
-            text: "Category - c\n" + "Stats - s\n" + "Menu - m"
-            multiline: true
+            text: "<html><b>SHORTCUTS:</b> p [play] h [home]</html>"
             textStyle {
                 base: btmNavPanelSmallNormalWhite.style
             }
         }
-
         Label {
-            horizontalAlignment: HorizontalAlignment.Right
-            text: "Theme - t\n" + "Review - r\n" //+ "BBM - b"
-            multiline: true
+            horizontalAlignment: HorizontalAlignment.Center
+            text: "<html><b>MENU:</b> swipe down from the top</html>"
             textStyle {
                 base: btmNavPanelSmallNormalWhite.style
             }
