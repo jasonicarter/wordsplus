@@ -4,138 +4,142 @@ Page {
     Container {
         layout: DockLayout {
         }
-        preferredWidth: 768
-        horizontalAlignment: HorizontalAlignment.Center
+        //preferredWidth: 768         
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
         }
-        Container { //middle
-            preferredWidth: 720
-            preferredHeight: 900
-            verticalAlignment: VerticalAlignment.Center
+        ScrollView {
             horizontalAlignment: HorizontalAlignment.Center
-            Container { //developer section
-                Container {
-                    background: Color.create("#272727")
-                    TextArea {
-                        text: "Game Design & Programming:"
-                        editable: false
-                        touchPropagationMode: TouchPropagationMode.None
-                        textStyle {
-                            base: aboutSheetBigBodyNormalBlue.style
-                        }
-                    }
-                }
-                Label {
-                    text: "by Jason I. Carter"
-                    textStyle {
-                        base: aboutSheetSubTitleNormalWhite.style
-                    }
-                }
-            }
-            Container { //music section
-                topMargin: 50
-                Container {
-                    background: Color.create("#272727")
-                    TextArea {
-                        text: "Music:"
-                        editable: false
-                        touchPropagationMode: TouchPropagationMode.None
-                        textStyle {
-                            base: aboutSheetBigBodyNormalBlue.style
-                        }
-                    }
-                }
-                Label {
-                    multiline: true
-                    text: "arpeggio6lop by plagasul via freesound.org\n" + "sweetalertsound1 + 2 by kizilsungur via freesound.org"
-                    textStyle {
-                        base: aboutSheetSubTitleNormalWhite.style
-                    }
-                }
-            }
-            Container { //website section
-                topMargin: 50
-                Container {
-                    background: Color.create("#272727")
-                    TextArea {
-                        text: "Website, Twitter & Email Support:"
-                        touchPropagationMode: TouchPropagationMode.None
-                        editable: false
-                        textStyle {
-                            base: aboutSheetBigBodyNormalBlue.style
-                        }
-                    }
-                }
-                Label {
-                    leftPadding: 25
-                    multiline: true
-                    text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" + "http://twocasualcoders.com/contact\n" + "http://facebook.com/WordsPlusGame"
-                    textStyle {
-                        base: aboutSheetSubTitleNormalWhite.style
-                    }
-                }
-                //                TextArea {
-                //                    text: "http://twocasualcoders.com/contact"
-                //                    leftPadding: 0
-                //                    editable: false
-                //                    inputMode: TextAreaInputMode.Text
-                //                    textStyle {
-                //                        base: aboutSheetSubTitleNormalWhite.style
-                //                    }
-                //                }
-            }
-            Container {
-                layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
-                }
-                topPadding: 50
+            Container { //middle
+                preferredWidth: 700
+                preferredHeight: 900
+                topPadding: 100
+                //background: Color.create("#272727")
+                verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/i.png"
+                Container { //developer section
+                    Container {
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "Game Design & Programming:"
+                            editable: false
+                            touchPropagationMode: TouchPropagationMode.None
+                            textStyle {
+                                base: aboutSheetBigBodyNormalBlue.style
+                            }
+                        }
+                    }
+                    Label {
+                        text: "by Jason I. Carter"
+                        textStyle {
+                            base: aboutSheetSubTitleNormalWhite.style
+                        }
+                    }
                 }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/m.png"
+                Container { //music section
+                    topMargin: 50
+                    Container {
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "Music:"
+                            editable: false
+                            touchPropagationMode: TouchPropagationMode.None
+                            textStyle {
+                                base: aboutSheetBigBodyNormalBlue.style
+                            }
+                        }
+                    }
+                    Label {
+                        multiline: true
+                        text: "arpeggio6lop by plagasul via freesound.org\n" + "sweetalertsound1 + 2 by kizilsungur via freesound.org"
+                        textStyle {
+                            base: aboutSheetSubTitleNormalWhite.style
+                        }
+                    }
                 }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/p.png"
+                Container { //website section
+                    topMargin: 50
+                    Container {
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "Website, Twitter & Email Support:"
+                            touchPropagationMode: TouchPropagationMode.None
+                            editable: false
+                            textStyle {
+                                base: aboutSheetBigBodyNormalBlue.style
+                            }
+                        }
+                    }
+                    Label {
+                        leftPadding: 25
+                        multiline: true
+                        text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" + "http://twocasualcoders.com/contact\n" + "http://facebook.com/WordsPlusGame"
+                        textStyle {
+                            base: aboutSheetSubTitleNormalWhite.style
+                        }
+                    }
+                    //                TextArea {
+                    //                    text: "http://twocasualcoders.com/contact"
+                    //                    leftPadding: 0
+                    //                    editable: false
+                    //                    inputMode: TextAreaInputMode.Text
+                    //                    textStyle {
+                    //                        base: aboutSheetSubTitleNormalWhite.style
+                    //                    }
+                    //                }
                 }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/r.png"
-                }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/o.png"
-                }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/v.png"
-                }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/e.png"
-                }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/m.png"
-                }
-                ImageView {
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    imageSource: "asset:///images/letters/selected/e.png"
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    topPadding: 50
+                    horizontalAlignment: HorizontalAlignment.Center
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/i.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/p.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/r.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/o.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/v.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
                 }
             }
         }
