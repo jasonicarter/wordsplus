@@ -1,0 +1,5 @@
+<root>
+    <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
+    <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
+    <item category="WEIGHTS + MEASURES" filename="weights" image= "asset:///images/categoryList/scale.png"/>
+</root>
