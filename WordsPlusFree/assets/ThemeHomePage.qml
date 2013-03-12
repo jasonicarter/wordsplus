@@ -46,7 +46,7 @@ Container {
             //background: Color.Gray
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 600
-                positionY: 20
+                positionY: 25 //changed theme tab removed
             }
             onTouch: {
                 if (event.isDown()) {
@@ -67,7 +67,7 @@ Container {
             //background: Color.Blue
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 600
-                positionY: 140
+                positionY: 140 //changed theme tab removed
             }
             onTouch: {
                 if (event.isDown()) {
@@ -94,7 +94,7 @@ Container {
                 if (event.isDown()) {
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
-//                    themeSheet.open();
+                   themeSheet.open();
                 }
             }
             onTouchExit: {
@@ -146,7 +146,7 @@ Container {
                             id: invokeReview
                             query: InvokeQuery {
                                 invokeTargetId: "sys.appworld"
-                                uri: "appworld://content/21931881"
+                                uri: "appworld://content/24752875"
                             }
                         }
                     ]

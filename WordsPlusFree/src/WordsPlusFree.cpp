@@ -1177,7 +1177,7 @@ QString WordsPlusFree::getSelectedLetters() {
 int WordsPlusFree::getDifficulty() {
 
 	bool okDiff;
-	QString strDiff = settings->getValueFor(DIFFICULTY, "2");
+	QString strDiff = settings->getValueFor(DIFFICULTY, "4");
 	puzzleDifficulty = strDiff.toInt(&okDiff, 10);
 
 	//LOG("%i", puzzleDifficulty);

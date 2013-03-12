@@ -117,14 +117,8 @@ guarantee
 gear
 geese
 genie
-gleam
-glean
-grease
-glee
 greed
 green
-greet
-guarantee
 increase
 indeed
 jeans
@@ -141,7 +135,6 @@ lead
 lee
 leaf
 league
-leak
 leak
 lean
 leap

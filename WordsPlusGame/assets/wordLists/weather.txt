@@ -34,7 +34,7 @@ extreme
 cool
 meteorology
 balmy
-servere
+severe
 stormtrack
 sunny
 partly

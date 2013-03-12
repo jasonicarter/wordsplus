@@ -10,6 +10,8 @@ Page {
         }
         ThemeSchoolHighlight {
         }
+        AdWordsPlusPaid {
+        }
         Container { //middle
             preferredWidth: 720
             preferredHeight: 900

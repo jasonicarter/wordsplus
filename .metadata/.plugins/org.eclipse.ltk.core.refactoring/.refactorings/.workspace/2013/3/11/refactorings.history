@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 12 resources" deleteContents="false" description="Delete 12 resources" element1="/WordsPlusFree/assets/wordLists/animals.txt" element10="/WordsPlusFree/assets/wordLists/startrek.txt" element11="/WordsPlusFree/assets/wordLists/superheroes.txt" element12="/WordsPlusFree/assets/wordLists/tech.txt" element2="/WordsPlusFree/assets/wordLists/body.txt" element3="/WordsPlusFree/assets/wordLists/boynames.txt" element4="/WordsPlusFree/assets/wordLists/earth.txt" element5="/WordsPlusFree/assets/wordLists/girlnames.txt" element6="/WordsPlusFree/assets/wordLists/jobs.txt" element7="/WordsPlusFree/assets/wordLists/school.txt" element8="/WordsPlusFree/assets/wordLists/scifi.txt" element9="/WordsPlusFree/assets/wordLists/space.txt" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="12" stamp="1363047782660"/>
+</session>

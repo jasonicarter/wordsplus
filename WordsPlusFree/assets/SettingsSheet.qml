@@ -10,6 +10,8 @@ Page {
         }
         ThemeSchoolHighlight {
         }
+        AdWordsPlusPaid {
+        }
         ScrollView {
             preferredWidth: 720
             preferredHeight: 900

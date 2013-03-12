@@ -8,27 +8,11 @@ Container {
     Container {
         layout: DockLayout {
         }
-        preferredWidth: 720
-        preferredHeight: 100
         background: Color.Transparent
         horizontalAlignment: HorizontalAlignment.Center
 
         ImageView {
-            preferredWidth: 720
-            preferredHeight: 100
-            imageSource: "images/wordsPlus_AdBanner.jpg"
-            onTouch: {
-                invokeReview.trigger("bb.action.OPEN");
-            }
-            attachedObjects: [
-                Invocation {
-                    id: invokeReview
-                    query: InvokeQuery {
-                        invokeTargetId: "sys.appworld"
-                        uri: "appworld://content/21931881"
-                    }
-                }
-            ]
+            imageSource: "images/AdBanner.png"
         }
         Banner {
             //zoneId: 117145 //test ID
@@ -45,12 +29,6 @@ Container {
             horizontalAlignment: HorizontalAlignment.Center
             touchPropagationMode: TouchPropagationMode.Full
         }
-
-        //		Container {
-        //            preferredWidth: 720
-        //            preferredHeight: 100
-        //            background: Color.Blue
-        //        }
     }
 
 

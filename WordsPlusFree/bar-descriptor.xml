@@ -54,6 +54,7 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <author>Jason I. Carter</author>
+    <authorId>gYAAgIkV5XIFWiolvJjFDcSN46c</authorId>
     
     <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
     <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
@@ -66,7 +67,6 @@
     </initialWindow>
     
     <!--  The category where the application appears. Either core.games or core.media. -->
-    <category>core.games</category>
     <splashScreens>
        <image>splashScreen.png</image>
     </splashScreens>

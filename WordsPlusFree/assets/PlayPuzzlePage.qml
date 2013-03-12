@@ -96,7 +96,7 @@ Container { // root Container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 50
+                topMargin: 15
                 preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center

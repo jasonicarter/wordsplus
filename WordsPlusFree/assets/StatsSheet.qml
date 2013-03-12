@@ -11,6 +11,8 @@ Page {
         }
         ThemeSchoolHighlight {
         }
+        AdWordsPlusPaid {
+        }
         Container { //middle
             preferredWidth: 720
             preferredHeight: 900
@@ -35,20 +37,21 @@ Page {
                             }
                         }
                     }
-//                    Option {
-//                        id: dropDwnYourAchievements
-//                        text: "ACHIEVEMENTS"
-//                        description: "Get them all!"
-//                        onSelectedChanged: {
-//                            if (selected == true) {
-//                                leaderBoard.removeAll();
-//                                var achievementContainer = achievementDef.createObject();
-//                                leaderBoard.add(achievementContainer);
-//                                localStats.visible = false;
-//                                leaderBoard.visible = true;
-//                            }
-//                        }
-//                    }
+                    Option {
+                        id: dropDwnYourAchievements
+                        text: "ACHIEVEMENTS"
+                        enabled: false
+                        description: "Get them all!"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var achievementContainer = achievementDef.createObject();
+                                leaderBoard.add(achievementContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
                     Option {
                         id: dropDwnTopLeaders
                         text: "TOP 50 LEADERS"
@@ -63,34 +66,36 @@ Page {
                             }
                         }
                     }
-//                    Option {
-//                        id: dropDwnYourPosition
-//                        text: "YOUR POSITION"
-//                        description: "How do you measure up against the rest?"
-//                        onSelectedChanged: {
-//                            if (selected == true) {
-//                                leaderBoard.removeAll();
-//                                var positionContainer = positionDef.createObject();
-//                                leaderBoard.add(positionContainer);
-//                                localStats.visible = false;
-//                                leaderBoard.visible = true;
-//                            }
-//                        }
-//                    }
-//                    Option {
-//                        id: dropDwnBuddyPosition
-//                        text: "FRIENDS"
-//                        description: "See how your friends are doing."
-//                        onSelectedChanged: {
-//                            if (selected == true) {
-//                                leaderBoard.removeAll();
-//                                var buddyContainer = buddyListDef.createObject();
-//                                leaderBoard.add(buddyContainer);
-//                                localStats.visible = false;
-//                                leaderBoard.visible = true;
-//                            }
-//                        }
-//                    }
+                    Option {
+                        id: dropDwnYourPosition
+                        text: "YOUR POSITION"
+                        enabled: false
+                        description: "How do you measure up against the rest?"
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var positionContainer = positionDef.createObject();
+                                leaderBoard.add(positionContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
+                    Option {
+                        id: dropDwnBuddyPosition
+                        text: "FRIENDS"
+                        enabled: false
+                        description: "See how your friends are doing."
+                        onSelectedChanged: {
+                            if (selected == true) {
+                                leaderBoard.removeAll();
+                                var buddyContainer = buddyListDef.createObject();
+                                leaderBoard.add(buddyContainer);
+                                localStats.visible = false;
+                                leaderBoard.visible = true;
+                            }
+                        }
+                    }
                 }
             } //diff buttons
             Divider {
