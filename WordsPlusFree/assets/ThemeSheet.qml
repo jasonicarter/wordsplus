@@ -85,16 +85,22 @@ Page {
                     attachedObjects: [
                         SystemDialog {
                             id: themeDialog
-                            title: "Switching Themes"
-                            body: "You are about to switch your theme to:\n" + selectedThemeName
+                            title: "Premium Feature"
+                            body: "To switch themes, gain access to more categories and Scoreloop features" + " you'll need the premium version of WordsPlus. Please upgrade now."
                             onFinished: {
                                 if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
                                     //on cancel do nothing
                                 }
                                 if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
-                                    //on confirm set c++ property
-//                                    wordsPlus.theme = selectedThemeFolder;
+                                    invokePaid.trigger("bb.action.OPEN");
                                 }
+                            }
+                        },
+                        Invocation {
+                            id: invokePaid
+                            query: InvokeQuery {
+                                invokeTargetId: "sys.appworld"
+                                uri: "appworld://content/21931881"
                             }
                         }
                     ]

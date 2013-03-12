@@ -10,6 +10,9 @@ Page {
         }
         ThemeSchoolHighlight {
         }
+        AdWordsPlusPaid {
+
+        }
         Container { //middle container
             preferredWidth: 720
             preferredHeight: 1000
@@ -30,6 +33,7 @@ Page {
                         Option {
                             id: hard
                             text: "Hard"
+                            enabled: false
                             description: "Now we're talking!"
                             value: settingHard
                             onSelectedChanged: {
@@ -52,6 +56,7 @@ Page {
                         Option {
                             id: easy
                             text: "Easy"
+                            enabled: false
                             description: "Don't pick me, I'm too easy"
                             value: settingEasy
                             onSelectedChanged: {
@@ -62,14 +67,14 @@ Page {
                         }
                     }
                     onCreationCompleted: {
-                        //diffDropDown.setSelectedOption(easy);
-                        if (wordsPlus.difficulty == 2) {
-                            diffDropDown.setSelectedOption(easy);
-                        } else if (wordsPlus.difficulty == 4) {
-                            diffDropDown.setSelectedOption(medium);
-                        } else if (wordsPlus.difficulty == 8) {
-                            diffDropDown.setSelectedOption(hard);
-                        }
+                        diffDropDown.setSelectedOption(medium);
+//                        if (wordsPlus.difficulty == 2) {
+//                            diffDropDown.setSelectedOption(easy);
+//                        } else if (wordsPlus.difficulty == 4) {
+//                            diffDropDown.setSelectedOption(medium);
+//                        } else if (wordsPlus.difficulty == 8) {
+//                            diffDropDown.setSelectedOption(hard);
+//                        }
                     }
                 } //diff buttons
                 Divider {
@@ -86,18 +91,20 @@ Page {
                             description: "Included Categories"
                             value: "wordsplus"
                         }
-//                        Option {
-//                            id: spacingOut
-//                            text: "Spacing Out"
-//                            description: "Technology, Star Trek and everything nerdy"
-//                            value: "spacingout"
-//                        }
-//                        Option {
-//                            id: schoolTime
-//                            text: "School Time"
-//                            description: "Recess, H2 pencils, gym class and more"
-//                            value: "schooltime"
-//                        }
+                        Option {
+                            id: spacingOut
+                            text: "Spacing Out"
+                            enabled: false
+                            description: "Technology, Star Trek and everything nerdy"
+                            value: "spacingout"
+                        }
+                        Option {
+                            id: schoolTime
+                            text: "School Time"
+                            enabled: false
+                            description: "Recess, H2 pencils, gym class and more"
+                            value: "schooltime"
+                        }
                         onSelectedOptionChanged: {
                             if (selectedValue == "spacingout") {
                                 catList.dataModel.source = "models/spacingout.xml";

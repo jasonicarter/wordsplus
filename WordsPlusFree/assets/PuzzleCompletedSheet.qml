@@ -9,22 +9,24 @@ Page {
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
-        Container {
-            opacity: wordsPlus.achievedAward
-            preferredWidth: 768
-            preferredHeight: 70
-            topPadding: 10
-            background: Color.create("#FFD700")
-            horizontalAlignment: HorizontalAlignment.Center
-            Label {
-                id: achievementWon
-                text: "Achievement Won!"
-                horizontalAlignment: HorizontalAlignment.Center
-                textStyle {
-                    base: statsSheetBigBodyNormalBlue.style
-                }
-            }
+        AdWordsPlusPaid {
         }
+//        Container {
+//            opacity: wordsPlus.achievedAward
+//            preferredWidth: 768
+//            preferredHeight: 70
+//            topPadding: 10
+//            background: Color.create("#FFD700")
+//            horizontalAlignment: HorizontalAlignment.Center
+//            Label {
+//                id: achievementWon
+//                text: "Achievement Won!"
+//                horizontalAlignment: HorizontalAlignment.Center
+//                textStyle {
+//                    base: statsSheetBigBodyNormalBlue.style
+//                }
+//            }
+//        }
         Container { //middle
             topPadding: 100
             preferredWidth: 720
@@ -85,7 +87,7 @@ Page {
                                         id: invokeReview
                                         query: InvokeQuery {
                                             invokeTargetId: "sys.appworld"
-                                            uri: "appworld://content/21931881"
+                                            uri: "appworld://content/24752875"
                                         }
                                     }
                                 ]
@@ -127,7 +129,7 @@ Page {
                     preferredHeight: 100
                     leftPadding: 15
                     Label {
-                        text: "Puzzle Time: "
+                        text: "Total Points: "
                         touchPropagationMode: TouchPropagationMode.None
                         verticalAlignment: VerticalAlignment.Center
                         horizontalAlignment: HorizontalAlignment.Left
@@ -140,7 +142,7 @@ Page {
                         verticalAlignment: VerticalAlignment.Center
                         horizontalAlignment: HorizontalAlignment.Right
                         Label {
-                            text: wordsPlus.lastPuzzleTime
+                            text: wordsPlus.score
                             touchPropagationMode: TouchPropagationMode.None
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
@@ -188,9 +190,25 @@ Page {
                     opacity: 0
                 }
                 Container { // ranking
-                    background: Color.create("#272727")
+                    //background: Color.create("#272727")
                     preferredWidth: 720
-                    preferredHeight: 650
+                    preferredHeight: 630
+                    ImageView {
+                        imageSource: "images/upgrade.png"
+                        onTouch: {
+                            invokeBuy.trigger("bb.action.OPEN");
+                        }
+
+                        attachedObjects: [
+                            Invocation {
+                                id: invokeBuy
+                                query: InvokeQuery {
+                                    invokeTargetId: "sys.appworld"
+                                    uri: "appworld://content/21931881"
+                                }
+                            }
+                        ]
+                    }
                     //leftPadding: 15
 //                    SegmentedControl {
 //                        id: segmentedRankingCrtl

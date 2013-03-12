@@ -52,7 +52,7 @@ Container {
                 preferredWidth: 500
                 preferredHeight: 500
                 animations: HomePageAnimation {
-                    id: oAnimation                  
+                    id: oAnimation
                     onStarted: {
                         rAnimation.delay = 1000
                         rAnimation.play();
