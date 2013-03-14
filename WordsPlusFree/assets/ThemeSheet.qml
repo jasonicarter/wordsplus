@@ -86,7 +86,7 @@ Page {
                         SystemDialog {
                             id: themeDialog
                             title: "Premium Feature"
-                            body: "To switch themes, gain access to more categories and Scoreloop features" + " you'll need the premium version of WordsPlus. Please upgrade now."
+                            body: "To switch themes, gain access to more categories and Scoreloop features" + " you'll need the premium version of WordsPlus.\n\nPlease upgrade now."
                             onFinished: {
                                 if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
                                     //on cancel do nothing
@@ -108,6 +108,7 @@ Page {
             }
         } // end of middle container
     } // end of page
+    
     onCreationCompleted: {
         //        var positionContainer = positionDef.createObject();
         //        position.add(positionContainer);
