@@ -103,6 +103,25 @@ Container {
         }
     } //tab buttons
     Container {
+        topPadding: 50
+        ImageView {
+            imageSource: "images/upgrade_small.png"
+            onTouch: {
+                invokeBuy.trigger("bb.action.OPEN");
+            }
+
+            attachedObjects: [
+                Invocation {
+                    id: invokeBuy
+                    query: InvokeQuery {
+                        invokeTargetId: "sys.appworld"
+                        uri: "appworld://content/21931881"
+                    }
+                }
+            ]
+        }
+    }
+    Container {
         preferredHeight: 300
         preferredWidth: 720
         horizontalAlignment: HorizontalAlignment.Center

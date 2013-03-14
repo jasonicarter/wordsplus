@@ -15,7 +15,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
   
--->
+-->
+
+
 <qnx xmlns="http://www.qnx.com/schemas/application/1.0">
 
 <!-- BlackBerry Tablet OS application descriptor file.
@@ -32,11 +34,14 @@
          May have multiple values for each language. See samples or xsd schema file. Optional. -->
     <name>WordsPlus Free</name>
     <cascadesTheme>dark</cascadesTheme>
+    <splashScreens>
+       <image>splashScreen.png</image>
+    </splashScreens>
     
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
          An updated version of application must have a versionNumber value higher than the previous version. Required. -->
-    <versionNumber>1.0.0</versionNumber>
+    <versionNumber>1.1.0</versionNumber>
 
     <!-- Fourth digit segment of the package version. First three segments are taken from the 
          <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
@@ -67,9 +72,6 @@
     </initialWindow>
     
     <!--  The category where the application appears. Either core.games or core.media. -->
-    <splashScreens>
-       <image>splashScreen.png</image>
-    </splashScreens>
     <icon>
        <image>icon.png</image>
     </icon>
@@ -100,8 +102,8 @@
         <include name="*.qm"/>
     </asset>
     <asset path="assets/images/icon.png">icon.png</asset>
-    <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
     <asset path="assets/scoreloop">scoreloop</asset>
+    <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

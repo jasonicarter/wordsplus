@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="51" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" maximized="true" width="960" x="403" y="37">
 <fastViewData fastViewLocation="1024"/>
@@ -21,9 +21,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -49,9 +49,8 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusFree/src/WordsPlusFree.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="35094" selectionTopPixel="17234"/>
 </editor>
-<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" partName="PuzzleCompletedSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusFree/assets/PuzzleCompletedSheet.qml" title="PuzzleCompletedSheet.qml" tooltip="WordsPlusFree/assets/PuzzleCompletedSheet.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6124" selectionTopPixel="1767"/>
+<editor activePart="true" focus="true" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" partName="bar-descriptor.xml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusFree/bar-descriptor.xml" title="bar-descriptor.xml" tooltip="WordsPlusFree/bar-descriptor.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusFree/bar-descriptor.xml"/>
 </editor>
 </editors>
 <views>
@@ -141,7 +140,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePart="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -512,14 +511,14 @@
 <view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
 </fastViews>
 </fastViewBar>
-<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
 <fastViews>
 <view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
@@ -595,15 +594,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/CategorySheet.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusFree/src/WordsPlusFree.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/AdWordsPlusPaid.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusFree/bar-descriptor.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusFree/src/WordsPlusFree.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/HomePage.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/ThemeSheet.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/SettingsSheet.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/CategorySheet.qml"/>
@@ -611,153 +602,156 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/AdWordsPlusPaid.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusFree/src/WordsPlusFree.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusFree/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/ThemeSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusFree/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/HomePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/WordsPlusFree/assets/images/tabs.png"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusFree/assets/AdContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/WordsPlusFree/bar-descriptor.xml"/>
 </editors>
-<item historyLabel="CategorySheet.qml" index="1">
-<position info="not_deleted" x="2538" y="0"/>
-</item>
-<item historyLabel="WordsPlusFree.cpp" index="2">
-<position info="not_deleted" x="34778" y="0"/>
-</item>
-<item historyLabel="CategorySheet.qml" index="1">
-<position info="not_deleted" x="2538" y="0"/>
-</item>
-<item historyLabel="WordsPlusFree.cpp" index="2">
-<position info="not_deleted" x="34778" y="0"/>
-</item>
-<item historyLabel="CategorySheet.qml" index="1">
-<position info="not_deleted" x="2080" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="0">
-<position info="not_deleted" x="2396" y="0"/>
-</item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="3">
-<position info="not_deleted" x="8920" y="0"/>
-</item>
-<item historyLabel="AdWordsPlusPaid.qml" index="4">
-<position info="not_deleted" x="315" y="269"/>
-</item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="3">
-<position info="not_deleted" x="9379" y="0"/>
-</item>
-<item historyLabel="AdWordsPlusPaid.qml" index="4">
-<position info="not_deleted" x="251" y="39"/>
-</item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="3">
-<position info="not_deleted" x="8730" y="0"/>
-</item>
-<item historyLabel="AdWordsPlusPaid.qml" index="4">
-<position info="not_deleted" x="251" y="39"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="0">
-<position info="not_deleted" x="4867" y="0"/>
-</item>
-<item historyLabel="CategorySheet.qml" index="1">
-<position info="not_deleted" x="2080" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="0">
-<position info="not_deleted" x="4867" y="0"/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="5"/>
-<item historyLabel="ThemeHomePage.qml" index="6">
-<position info="not_deleted" x="4826" y="0"/>
-</item>
-<item historyLabel="WordsPlusFree.cpp" index="7">
-<position info="not_deleted" x="34778" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="6">
-<position info="not_deleted" x="4826" y="0"/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="5"/>
-<item historyLabel="ThemeHomePage.qml" index="6">
-<position info="not_deleted" x="824" y="0"/>
-</item>
-<item historyLabel="HomePage.qml" index="8">
-<position info="not_deleted" x="377" y="0"/>
-</item>
-<item historyLabel="ThemeHomePage.qml" index="6">
-<position info="not_deleted" x="2580" y="0"/>
-</item>
-<item historyLabel="WordsPlusFree.cpp" index="7">
-<position info="not_deleted" x="35094" y="0"/>
-</item>
-<item historyLabel="ThemeSheet.qml" index="9">
-<position info="not_deleted" x="3426" y="0"/>
-</item>
-<item historyLabel="SettingsSheet.qml" index="10">
+<item historyLabel="SettingsSheet.qml" index="2">
 <position/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="9">
+<item historyLabel="ThemeSheet.qml" index="1">
 <position info="not_deleted" x="3426" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="11">
+<item historyLabel="CategorySheet.qml" index="3">
 <position info="not_deleted" x="4322" y="0"/>
 </item>
-<item historyLabel="SettingsSheet.qml" index="10">
+<item historyLabel="SettingsSheet.qml" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="11">
+<item historyLabel="CategorySheet.qml" index="3">
 <position info="not_deleted" x="4322" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="12">
+<item historyLabel="StatsSheet.qml" index="4">
 <position info="not_deleted" x="3731" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="13">
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
 <position info="not_deleted" x="686" y="0"/>
 </item>
-<item historyLabel="StatsSheet.qml" index="12">
+<item historyLabel="StatsSheet.qml" index="4">
 <position info="not_deleted" x="3731" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="13">
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
 <position info="not_deleted" x="686" y="0"/>
 </item>
-<item historyLabel="CategorySheet.qml" index="11">
+<item historyLabel="CategorySheet.qml" index="3">
 <position info="not_deleted" x="4322" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="13">
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
 <position info="not_deleted" x="686" y="0"/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="9">
+<item historyLabel="ThemeSheet.qml" index="1">
 <position info="not_deleted" x="3782" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="13">
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
 <position info="not_deleted" x="276" y="0"/>
 </item>
-<item historyLabel="AdWordsPlusPaid.qml" index="14">
+<item historyLabel="AdWordsPlusPaid.qml" index="6">
 <position info="not_deleted" x="315" y="269"/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="9">
+<item historyLabel="ThemeSheet.qml" index="1">
 <position info="not_deleted" x="4336" y="0"/>
 </item>
-<item historyLabel="AdWordsPlusPaid.qml" index="14">
+<item historyLabel="AdWordsPlusPaid.qml" index="6">
 <position info="not_deleted" x="251" y="39"/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="9">
+<item historyLabel="ThemeSheet.qml" index="1">
 <position info="not_deleted" x="3713" y="0"/>
 </item>
-<item historyLabel="AdWordsPlusPaid.qml" index="14">
+<item historyLabel="AdWordsPlusPaid.qml" index="6">
 <position info="not_deleted" x="251" y="39"/>
 </item>
-<item historyLabel="ThemeSheet.qml" index="9">
+<item historyLabel="ThemeSheet.qml" index="1">
 <position info="not_deleted" x="4491" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedSheet.qml" index="13">
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
 <position info="not_deleted" x="6442" y="1"/>
 </item>
-<item historyLabel="WordsPlusFree.hpp" index="15">
+<item historyLabel="WordsPlusFree.hpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="1">
+<position info="not_deleted" x="4491" y="0"/>
+</item>
+<item historyLabel="WordsPlusFree.cpp" index="0">
+<position info="not_deleted" x="35094" y="0"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="1">
+<position info="not_deleted" x="4491" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
+<position info="not_deleted" x="9350" y="22"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="8"/>
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
+<position info="not_deleted" x="9446" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="8"/>
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
+<position info="not_deleted" x="9452" y="0"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="9">
+<position/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="5">
+<position info="not_deleted" x="9452" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="10">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="ThemeSheet.qml" index="9">
-<position info="not_deleted" x="4491" y="0"/>
+<position info="not_deleted" x="3487" y="0"/>
 </item>
-<item historyLabel="WordsPlusFree.cpp" index="7">
-<position info="not_deleted" x="35094" y="0"/>
+<item historyLabel="HomePage.qml" index="12">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="ThemeSheet.qml" index="9">
-<position info="not_deleted" x="4491" y="0"/>
+<position info="not_deleted" x="4726" y="0"/>
 </item>
-<item active="true" historyLabel="PuzzleCompletedSheet.qml" index="13">
-<position info="not_deleted" x="6442" y="1"/>
+<item historyLabel="bar-descriptor.xml" index="8"/>
+<item historyLabel="ThemeSheet.qml" index="9">
+<position info="not_deleted" x="4726" y="0"/>
 </item>
+<item historyLabel="ThemeHomePage.qml" index="13">
+<position/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="11">
+<position info="not_deleted" x="8723" y="649"/>
+</item>
+<item historyLabel="ThemeHomePage.qml" index="13">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="tabs.png" index="14"/>
+<item historyLabel="ThemeHomePage.qml" index="13">
+<position info="not_deleted" x="4712" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="11">
+<position info="not_deleted" x="8347" y="0"/>
+</item>
+<item historyLabel="ThemeSheet.qml" index="9">
+<position info="not_deleted" x="4726" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="11">
+<position info="not_deleted" x="8347" y="0"/>
+</item>
+<item historyLabel="AdContainer.qml" index="15">
+<position info="not_deleted" x="420" y="0"/>
+</item>
+<item historyLabel="PuzzleCompletedSheet.qml" index="11">
+<position info="not_deleted" x="9372" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="10">
+<position info="not_deleted" x="388" y="0"/>
+</item>
+<item active="true" historyLabel="bar-descriptor.xml" index="16"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -784,14 +778,32 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusFree/bar-descriptor.xml">
+<persistable path="/WordsPlusFree/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AdContainer.qml" tooltip="WordsPlusFree/assets/AdContainer.qml">
+<persistable path="/WordsPlusFree/assets/AdContainer.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="tabs.png" tooltip="WordsPlusFree/assets/images/tabs.png">
+<persistable path="/WordsPlusFree/assets/images/tabs.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusFree/assets/ThemeHomePage.qml">
+<persistable path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusFree/assets/HomePage.qml">
+<persistable path="/WordsPlusFree/assets/HomePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeSheet.qml" tooltip="WordsPlusFree/assets/ThemeSheet.qml">
+<persistable path="/WordsPlusFree/assets/ThemeSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" tooltip="WordsPlusFree/assets/PuzzleCompletedSheet.qml">
+<persistable path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusFree.hpp" tooltip="WordsPlusFree/src/WordsPlusFree.hpp">
 <persistable path="/WordsPlusFree/src/WordsPlusFree.hpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AdWordsPlusPaid.qml" tooltip="WordsPlusFree/assets/AdWordsPlusPaid.qml">
 <persistable path="/WordsPlusFree/assets/AdWordsPlusPaid.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" tooltip="WordsPlusFree/assets/PuzzleCompletedSheet.qml">
-<persistable path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="StatsSheet.qml" tooltip="WordsPlusFree/assets/StatsSheet.qml">
 <persistable path="/WordsPlusFree/assets/StatsSheet.qml"/>
@@ -802,18 +814,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CategorySheet.qml" tooltip="WordsPlusFree/assets/CategorySheet.qml">
 <persistable path="/WordsPlusFree/assets/CategorySheet.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeSheet.qml" tooltip="WordsPlusFree/assets/ThemeSheet.qml">
-<persistable path="/WordsPlusFree/assets/ThemeSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusFree/assets/HomePage.qml">
-<persistable path="/WordsPlusFree/assets/HomePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusFree/bar-descriptor.xml">
-<persistable path="/WordsPlusFree/bar-descriptor.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusFree/assets/ThemeHomePage.qml">
-<persistable path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="WordsPlusFree.pro" tooltip="WordsPlusFree/WordsPlusFree.pro">
 <persistable path="/WordsPlusFree/WordsPlusFree.pro"/>
 </file>
@@ -822,12 +822,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml">
 <persistable path="/WordsPlusGame/bar-descriptor.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="puzzleCompleted.wav" tooltip="WordsPlusFree/assets/sounds/puzzleCompleted.wav">
-<persistable path="/WordsPlusFree/assets/sounds/puzzleCompleted.wav"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="wordFound.wav" tooltip="WordsPlusFree/assets/sounds/wordFound.wav">
-<persistable path="/WordsPlusFree/assets/sounds/wordFound.wav"/>
 </file>
 </mruList>
 </workbench>
