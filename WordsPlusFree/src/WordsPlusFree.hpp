@@ -73,6 +73,7 @@ public:
 	Q_PROPERTY (const QString selectedLetters READ getSelectedLetters WRITE setSelectedLetters NOTIFY selectedLettersChanged);
 	Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
 	Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
+	Q_PROPERTY (bool review READ getReview WRITE setReview NOTIFY reviewChanged);
 
 	QString getCategory();
 	void setCategory(const QString cat);
@@ -100,6 +101,9 @@ public:
 
 	int getScore();
 	void setScore(int puzzleTime);
+
+	bool getReview();
+	void setReview(bool review);
 
 	QString getSelectedLetters();
 	void setSelectedLetters(QString letter);
@@ -145,6 +149,7 @@ Q_SIGNALS:
 	void selectedLettersChanged();
 	void difficultyChanged();
 	void achievedAwardChanged();
+	void reviewChanged();
 
 private:
 	void initTimer();

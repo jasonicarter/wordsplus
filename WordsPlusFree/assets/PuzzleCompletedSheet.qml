@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Page {
     Container {
@@ -28,97 +29,11 @@ Page {
 //            }
 //        }
         Container { //middle
-            topPadding: 100
+            topPadding: 110
             preferredWidth: 720
             verticalAlignment: VerticalAlignment.Top
             horizontalAlignment: HorizontalAlignment.Center
-            //background: Color.Gray
-            Container {
-                layout: DockLayout {
-                }
-                preferredWidth: 768
-                preferredHeight: 100
-                bottomMargin: 20
-                //background: Color.create("#272727")
-                horizontalAlignment: HorizontalAlignment.Center
-                Container {
-                    //preferredHeight: 300
-                    preferredWidth: 720
-                    horizontalAlignment: HorizontalAlignment.Right
-                    //background: Color.Yellow
-                    Container {
-                        layout: DockLayout {
-                        }
-                        //not using button image to keep image and app size down
-                        ImageView {
-                            imageSource: "images/social.png"
-                            //scaleX: 0.7
-                            //scaleY: 0.7
-                        }
-                        Container {
-                            layout: AbsoluteLayout {
-                            }
-                            Container {
-                                preferredHeight: 100
-                                preferredWidth: 100
-                                //background: Color.Green
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 100
-                                    positionY: 0
-                                }
-                                onTouch: {
-                                    if (event.isDown()) {
-                                        wordsPlus.playSound("letterSelected");
-                                    } else if (event.isUp()) {
-                                        wordsPlus.Share("Facebook", "home");
-                                    }
-                                }
-                            }
-                            Container {
-                                preferredHeight: 100
-                                preferredWidth: 100
-                                //background: Color.Green
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 300
-                                    positionY: 0
-                                }
-                                attachedObjects: [
-                                    Invocation {
-                                        id: invokeReview
-                                        query: InvokeQuery {
-                                            invokeTargetId: "sys.appworld"
-                                            uri: "appworld://content/24752875"
-                                        }
-                                    }
-                                ]
-                                onTouch: {
-                                    if (event.isDown()) {
-                                        wordsPlus.playSound("letterSelected");
-                                    } else if (event.isUp()) {
-                                        invokeReview.trigger("bb.action.OPEN");
-                                    }
-                                }
-                            }
-                            Container {
-                                preferredHeight: 100
-                                preferredWidth: 100
-                                //background: Color.Green
-                                layoutProperties: AbsoluteLayoutProperties {
-                                    positionX: 500
-                                    positionY: 0
-                                }
-                                onTouch: {
-                                    if (event.isDown()) {
-                                        wordsPlus.playSound("letterSelected");
-                                    } else if (event.isUp()) {
-                                        wordsPlus.Share("Twitter", "home");
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } //end of social block
-            }
+            //background: Color.Gray      
             Container {
                 id: localStats
                 Container { // time
@@ -163,7 +78,7 @@ Page {
                     preferredHeight: 100
                     leftPadding: 15
                     Label {
-                        text: "Your Best Time: "
+                        text: "Your Time/Best Time: "
                         touchPropagationMode: TouchPropagationMode.None
                         verticalAlignment: VerticalAlignment.Center
                         horizontalAlignment: HorizontalAlignment.Left
@@ -176,7 +91,8 @@ Page {
                         verticalAlignment: VerticalAlignment.Center
                         horizontalAlignment: HorizontalAlignment.Right
                         Label {
-                            text: wordsPlus.puzzleCompletedTime
+                            text: wordsPlus.lastPuzzleTime + " / "+ wordsPlus.puzzleCompletedTime
+                            //text: "11:59 / 09:34"
                             touchPropagationMode: TouchPropagationMode.None
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
@@ -188,6 +104,90 @@ Page {
                 } // time
                 Divider {
                     opacity: 0
+                }
+                Container {
+                    layout: DockLayout {
+                    }
+                    preferredWidth: 768
+                    preferredHeight: 100
+                    bottomMargin: 20
+                    //background: Color.create("#272727")
+                    horizontalAlignment: HorizontalAlignment.Center
+                    Container {
+                        //preferredHeight: 300
+                        preferredWidth: 720
+                        horizontalAlignment: HorizontalAlignment.Right
+                        //background: Color.Yellow
+                        Container {
+                            layout: DockLayout {
+                            }
+                            //not using button image to keep image and app size down
+                            ImageView {
+                                imageSource: "images/social.png"
+                            }
+                            Container {
+                                layout: AbsoluteLayout {
+                                }
+                                Container {
+                                    preferredHeight: 100
+                                    preferredWidth: 100
+                                    //background: Color.Green
+                                    layoutProperties: AbsoluteLayoutProperties {
+                                        positionX: 100
+                                        positionY: 0
+                                    }
+                                    onTouch: {
+                                        if (event.isDown()) {
+                                            wordsPlus.playSound("letterSelected");
+                                        } else if (event.isUp()) {
+                                            wordsPlus.Share("Facebook", "home");
+                                        }
+                                    }
+                                }
+                                Container {
+                                    preferredHeight: 100
+                                    preferredWidth: 100
+                                    //background: Color.Green
+                                    layoutProperties: AbsoluteLayoutProperties {
+                                        positionX: 300
+                                        positionY: 0
+                                    }
+                                    attachedObjects: [
+                                        Invocation {
+                                            id: invokeReview
+                                            query: InvokeQuery {
+                                                invokeTargetId: "sys.appworld"
+                                                uri: "appworld://content/24752875"
+                                            }
+                                        }
+                                    ]
+                                    onTouch: {
+                                        if (event.isDown()) {
+                                            wordsPlus.playSound("letterSelected");
+                                        } else if (event.isUp()) {
+                                            invokeReview.trigger("bb.action.OPEN");
+                                        }
+                                    }
+                                }
+                                Container {
+                                    preferredHeight: 100
+                                    preferredWidth: 100
+                                    //background: Color.Green
+                                    layoutProperties: AbsoluteLayoutProperties {
+                                        positionX: 500
+                                        positionY: 0
+                                    }
+                                    onTouch: {
+                                        if (event.isDown()) {
+                                            wordsPlus.playSound("letterSelected");
+                                        } else if (event.isUp()) {
+                                            wordsPlus.Share("Twitter", "home");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } //end of social block
                 }
                 Container { // ranking
                     //background: Color.create("#272727")
@@ -208,7 +208,7 @@ Page {
                                 }
                             }
                         ]
-                    }
+                    }                  
                     //leftPadding: 15
 //                    SegmentedControl {
 //                        id: segmentedRankingCrtl
@@ -259,6 +259,10 @@ Page {
     onCreationCompleted: {
 //        var positionContainer = positionDef.createObject();
 //        position.add(positionContainer);
+
+        if (!wordsPlus.review) {
+            reviewDialog.show();
+        }
     }
     actions: [
         ActionItem {
@@ -324,6 +328,27 @@ Page {
         ComponentDefinition {
             id: positionDef
             source: "PositionLeaderboard.qml"
+        },
+        SystemDialog {
+            id: reviewDialog
+            title: "Improve Me"
+            body: "Love WordsPlus? Leave A Review!\n\n" + "As a team of one, your feedback is wanted and appreciated. Help improve WordsPlus, leave a review today!"
+            onFinished: {
+                if (reviewDialog.result == SystemUiResult.CancelButtonSelection) {
+                    //on cancel do nothing
+                }
+                if (reviewDialog.result == SystemUiResult.ConfirmButtonSelection) {
+                    wordsPlus.review = true;
+                    invokeUserReview.trigger("bb.action.OPEN");
+                }
+            }
+        },
+        Invocation {
+            id: invokeUserReview
+            query: InvokeQuery {
+                invokeTargetId: "sys.appworld"
+                uri: "appworld://content/24752875"
+            }
         }
     ]
 }
