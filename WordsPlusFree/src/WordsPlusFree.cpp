@@ -51,6 +51,7 @@
 #define SCORE "settingsScore"
 #define GAMESPLAYED "settingsGamesPlayed"
 #define DIFFICULTY "settingsDifficulty"
+#define USERREVIEW "settingsUserReview"
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlusGame.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -1190,6 +1191,20 @@ void WordsPlusFree::setDifficulty(int difficulty) {
 	//LOG("Set Difficulty: %i", difficulty);
 	settings->saveValueFor(DIFFICULTY, QString::number(difficulty));
 	emit difficultyChanged();
+
+}
+
+bool WordsPlusFree::getReview() {
+
+	QString strReview = settings->getValueFor(USERREVIEW, "0");
+	return strReview.toInt();
+
+}
+
+void WordsPlusFree::setReview(bool review) {
+
+	settings->saveValueFor(USERREVIEW, QString::number(review));
+	emit reviewChanged();
 
 }
 
