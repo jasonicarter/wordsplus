@@ -33,21 +33,65 @@ Container {
     }
     Container {
         horizontalAlignment: HorizontalAlignment.Right
-        rightPadding: 40
+        //rightPadding: 40
         ImageView {
-            imageSource: "images/tools.png"
+            imageSource: "images/tabs.png"
         }
     }
-    Container{
-        layout: StackLayout {
-        	orientation: LayoutOrientation.LeftToRight
+    Container {
+        layout: AbsoluteLayout {
         }
-        horizontalAlignment: HorizontalAlignment.Right
-        rightPadding: 40
         Container {
-            preferredHeight: 75
+            id: help
+            preferredHeight: 100
             preferredWidth: 175
             //background: Color.Gray
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 600
+                positionY: 20
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    wordsPlus.playSound("letterSelected");
+                } else if (event.isUp()) {
+                    homeSysToast.body = "Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
+                    homeSysToast.show();
+                }
+            }
+            onTouchExit: {
+                tabHelp.opacity = 0;
+            }
+        }
+        Container {
+            id: hint
+            preferredHeight: 100
+            preferredWidth: 175
+            //background: Color.Blue
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 600
+                positionY: 140
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    wordsPlus.playSound("letterSelected");
+                } else if (event.isUp()) {
+                    homeSysToast.body = "Be still my heart. Don't tap me...\n\"Rotate Me\""
+                    homeSysToast.show();
+                }
+            }
+            onTouchExit: {
+                tabHints.opacity = 0;
+            }
+        }
+        Container {
+            id: themes
+            preferredHeight: 100
+            preferredWidth: 175
+            //background: Color.Green
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 600
+                positionY: 250
+            }
             onTouch: {
                 if (event.isDown()) {
                     wordsPlus.playSound("letterSelected");
@@ -56,27 +100,10 @@ Container {
                 }
             }
             onTouchExit: {
-                tabHelp.opacity = 0;
-            }
-        }
-        Container {            
-            preferredHeight: 75
-            preferredWidth: 175
-            //background: Color.Blue
-            leftMargin: 20
-            onTouch: {
-                if (event.isDown()) {
-                    wordsPlus.playSound("letterSelected");
-                } else if (event.isUp()) {
-                    homeSysToast.body = "MENU:\nSwipe down from the top\n\nHINTS:\nRotate device counter-clockwise"
-                    homeSysToast.show();
-                }
-            }
-            onTouchExit: {
                 tabHints.opacity = 0;
             }
         }
-    }
+    } //tab buttons
     Container {
         topPadding: 50
         ImageView {

@@ -23,7 +23,6 @@ Container {
             transitionsEnabled: true
             placeHolderURL: "images/AdBanner.png"
             horizontalAlignment: HorizontalAlignment.Center
-            touchPropagationMode: TouchPropagationMode.Full
         }
     }
 
