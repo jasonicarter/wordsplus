@@ -2,7 +2,6 @@ acadamy
 bajoran
 bilana
 biomolecular
-cardassian
 data
 dilithium
 enterpise

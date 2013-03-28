@@ -18,7 +18,6 @@ falcon
 flash
 hawkman
 hellboy
-hercules
 hancock
 iceman
 ironman

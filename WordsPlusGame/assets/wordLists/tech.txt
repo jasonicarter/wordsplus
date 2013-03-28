@@ -80,8 +80,6 @@ frame
 freeware
 gigabyte
 graphics
-gigabyte
-graphics
 hack
 hacker
 hardware
@@ -195,7 +193,6 @@ trash
 Trojan
 typeface
 undo
-Unix
 upload
 gui
 username
