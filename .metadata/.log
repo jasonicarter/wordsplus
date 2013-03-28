@@ -6244,3 +6244,109 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-26 20:06:07.794
 !MESSAGE QML Preview compatibility check log.
 
+!SESSION 2013-03-27 21:06:02.838 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-03-27 21:06:07.023
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-03-27 21:06:07.677
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-03-27 21:06:07.903
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-03-27 21:06:07.936
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-03-27 21:06:16.379
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-03-27 21:06:16.379
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f11e0f),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f11e0f)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f11e0f),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f11e0f)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:18.927
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:18.945
+!MESSAGE Cannot resolve ValueType variant: bb::system::FileTransferMode::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:18.945
+!MESSAGE Cannot resolve ValueType variant: bb::system::SecurityPerimeter::Type
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:18.946
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:18.947
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:20.416
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:23.987
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:24.120
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:24.331
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:24.355
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:06:24.659
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:27:09.417
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-03-27 21:27:09.466
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-03-27 21:49:40.154
+!MESSAGE No such file or directory
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.open(TargetServiceFile.java:246)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:515)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:265)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:186)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2013-03-27 21:53:38.916
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-27 21:53:40.208
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-27 21:53:41.279
+!MESSAGE SDK version used 10.0.9.2318 with capabilities: [[ZOOM_CHANGE, CHANGE_ORIENTATION]]
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-27 21:54:27.424
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY org.eclipse.ui 4 4 2013-03-27 21:56:01.665
+!MESSAGE Plug-in 'com.rim.tad.tools.qml.javascript.debug.internal.ui' contributed an invalid Menu Extension (Group: 'jsdebug' is invalid): com.rim.tad.tools.wst.jsdt.debug.ui.jsunit.popup.evaluate
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-27 21:56:01.746
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-03-27 21:58:22.904
+!MESSAGE QML Preview compatibility check log.
+
