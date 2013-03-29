@@ -197,6 +197,7 @@ private:
 	bool isMusicEnabled;
 	bool isProfileBoxEnabled;
 	bool isPuzzleDisplayed;
+	bool isHomePageDisplayed;
 
 	QString m_strCategory;
 	QString m_strTime;
