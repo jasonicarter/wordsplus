@@ -27,7 +27,6 @@ objects
 Theoretical
 models 
 discoveries
-discovery
 xray
 radio
 infrared
@@ -87,7 +86,6 @@ milkyway
 andromeda
 omega
 centauri
-dwarf
 atlantis
 challenger
 columbia

@@ -44,7 +44,6 @@ cellist
 chaplain
 chauffeur
 chef
-chef
 chemist
 clergyman
 clergywoman
@@ -149,7 +148,6 @@ marketer
 mason
 mayor
 mechanic
-mechanic
 messenger
 midwife
 miner
@@ -175,7 +173,6 @@ pianist
 pilot
 pitcher
 plumber
-poet
 poet
 police
 policeman

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlusFree/assets/images/1280x768_v5_upgrade.png&apos; to &apos;splashScreen.png&apos;" description="Rename resource &apos;1280x768_v5_upgrade.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/images/1280x768_v5_upgrade.png" name="splashScreen.png" stamp="1363217297318" updateReferences="true"/>
+</session>

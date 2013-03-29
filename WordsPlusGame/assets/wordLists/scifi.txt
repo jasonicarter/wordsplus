@@ -14,7 +14,6 @@ serenity
 spaceship
 pioneer
 alliance
-fox
 canceled
 series
 bushwhacked
@@ -110,7 +109,6 @@ fringe
 olivia
 dunham
 peter
-bishop
 walter
 astrid
 nina
