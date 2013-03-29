@@ -107,6 +107,7 @@ WordsPlusGame::WordsPlusGame(bb::platform::bbm::Context &context, QObject *paren
 	numberOfWordsFound = 0;
 	m_strSeletedLetters = "";
 	isPuzzleDisplayed = false;
+	isHomePageDisplayed = false;
 	wordDataValue = -1;
 	continuousGameAward = 0;
 	achievedAward = 0;
@@ -219,7 +220,7 @@ void WordsPlusGame::onOrientationChanged() {
 			//LOG("wordDataValue: %i", wordDataValue);
 			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
-		else {
+		else if(isHomePageDisplayed) {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
@@ -237,7 +238,7 @@ void WordsPlusGame::onOrientationChanged() {
 
 			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
-		else {
+		else if(isHomePageDisplayed) {
 			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
 			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
 			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
@@ -460,6 +461,7 @@ ScoreLoopThread* WordsPlusGame::scoreLoop() {
 void WordsPlusGame::InitializeHomePage() {
 
 	isPuzzleDisplayed = false;
+	isHomePageDisplayed = true;
 	continuousGameAward = 0;
 	stopWatch = NULL;
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomePage.qml");
@@ -482,6 +484,7 @@ void WordsPlusGame::intializePlayArea() {
 	hintUsedAward = false;
 	achievedAward = 0;
 	isPuzzleDisplayed = true;
+	isHomePageDisplayed = false;
 	wordDataValue = -1;
 	listOfWords.clear();
 
@@ -900,6 +903,7 @@ void WordsPlusGame::WordCompleted(QList<int> listOfNumbers) {
 			playSound(SOUNDLEVELCOMPLETED);
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
 			ProcessAwards();
+			isPuzzleDisplayed = false;
 			emit puzzleCompleted();
 		}
 		else {
