@@ -1,0 +1,35 @@
+
+**** Build of configuration Device-Debug for project Filipino ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lupdate Filipino.pro
+Updating 'Filipino.ts'...
+    Found 4 source text(s) (0 new and 4 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/translations'
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/lrelease Filipino.pro
+The directory name is invalid.
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/translations/Filipino.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../Filipino.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/Filipino -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../Filipino -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/ActiveFrame.o ../src/ActiveFrame.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/Filipino -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../Filipino -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/Filipino.o ../src/Filipino.cpp
+C:/bbndk/host_10_0_9_529/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../Filipino -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ActiveFrame.h -o o.le-v7-g/.moc/moc_ActiveFrame.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/Filipino -Wno-psabi -lang-c++ -fstack-protector-strong -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../Filipino -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_ActiveFrame.o o.le-v7-g/.moc/moc_ActiveFrame.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/Filipino o.le-v7-g/.obj/ActiveFrame.o o.le-v7-g/.obj/Filipino.o o.le-v7-g/.obj/InviteToDownload.o o.le-v7-g/.obj/ProfileBox.o o.le-v7-g/.obj/RegistrationHandler.o o.le-v7-g/.obj/UpdateProfile.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_ActiveFrame.o o.le-v7-g/.obj/moc_Filipino.o o.le-v7-g/.obj/moc_InviteToDownload.o o.le-v7-g/.obj/moc_ProfileBox.o o.le-v7-g/.obj/moc_RegistrationHandler.o o.le-v7-g/.obj/moc_UpdateProfile.o    -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_0_9_2318/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_0_9_2318/qnx6//usr/lib/qt4/lib -lbbmultimedia -lbb -lbbdata -lbbcascadesadvertisement -lbbplatformbbm -lbbsystem -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/Filipino/arm'
+Could not find qmake configuration directoryCould not find qmake configuration fileUsing OS scope before setting MAKEFILE_GENERATOR
+
+**** Build Finished ****

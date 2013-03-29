@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="6" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
-<window height="1040" width="960" x="0" y="0">
+<window height="1040" maximized="true" width="960" x="430" y="-12">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="205"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="189" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.qnx.tools.ide.phab.ui.PhabActionSet" itemType="typeToolBarContribution" x="38" y="22"/>
-<coolItem id="com.qnx.tools.ide.ui" itemType="typeToolBarContribution" x="252" y="22"/>
+<coolItem id="com.qnx.tools.ide.ui" itemType="typeToolBarContribution" x="331" y="22"/>
 <coolItem id="org.eclipse.cdt.dsf.debug.ui.updateModes" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -39,13 +39,24 @@
 </editorArea>
 </editors>
 <views>
-<view id="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" partName="Malloc Information"/>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" partName="Malloc Information">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
-<view id="com.qnx.tools.ide.target.internal.ui.targetview" partName="Target Navigator"/>
-<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
-<view id="com.qnx.tools.ide.sysinfo.internal.ui.memview" partName="Memory Information"/>
+<view id="com.qnx.tools.ide.target.internal.ui.targetview" partName="Target Navigator">
+<viewState auto_refresh="1" group_type="0" refresh_interval="5" sort_reverse="0" sort_type="0"/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
+<view id="com.qnx.tools.ide.sysinfo.internal.ui.memview" partName="Memory Information">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
 <columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
@@ -73,17 +84,30 @@
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" currentWorkingSetName="Aggregate for window 1351793851052" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="com.qnx.tools.ide.sysinfo.internal.ui.systemview" partName="System Summary"/>
-<view id="com.qnx.tools.ide.target.fsys" partName="Target File System Navigator"/>
-<view id="com.qnx.tools.ide.sysinfo.internal.ui.processview" partName="Process Information"/>
+<view id="com.qnx.tools.ide.sysinfo.internal.ui.systemview" partName="System Summary">
+<viewState system.highlight="0"/>
+</view>
+<view id="com.qnx.tools.ide.target.fsys" partName="Target File System Navigator">
+<viewState showfiles="no" showtable="yes" sorter="filename" sortorder="1024" weightl="30">
+<columns IMemento.internal.id="filename" widths="363"/>
+<columns IMemento.internal.id="size" widths="80"/>
+<columns IMemento.internal.id="date" widths="110"/>
+<columns IMemento.internal.id="owner" widths="70"/>
+<columns IMemento.internal.id="group" widths="70"/>
+<columns IMemento.internal.id="permission" widths="80"/>
+</viewState>
+</view>
+<view id="com.qnx.tools.ide.sysinfo.internal.ui.processview" partName="Process Information">
+<viewState categorize="1" items="124,117,102,108,109,115,125" process.highlight="0"/>
+</view>
 <view id="com.rim.tad.tools.builder.view.palette" partName="Components">
 <viewState com.rim.tad.tools.qml.ui.internal.palette.ComponentsViewPart.iconViewMode="true" com.rim.tad.tools.qml.ui.internal.palette.ComponentsViewPart.largeIconMode="true"/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings (12 items)"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="401"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -101,7 +125,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -114,6 +138,7 @@
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="com.qnx.tools.ide.target.internal.ui.targetview"/>
 <show_view_action id="com.qnx.tools.ide.sysinfo.internal.ui.systemview"/>
 <show_view_action id="com.qnx.tools.ide.sysinfo.internal.ui.processview"/>
@@ -144,8 +169,12 @@
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.memview"/>
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.mallocview"/>
 <view id="com.qnx.tools.ide.target.fsys"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="navArea">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.target.internal.ui.targetview" label="Target Navigator"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="navArea">&#x0A;<folder activePageID="com.qnx.tools.ide.target.internal.ui.targetview" appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.target.internal.ui.targetview" label="Target Navigator"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="navArea">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -154,15 +183,25 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="navArea"/>
-<info folder="true" part="belowEditor" ratio="0.24884081" ratioLeft="161" ratioRight="486" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.sysinfo.internal.ui.systemview" label="System Summary"/>
+<info folder="true" part="belowEditor" ratio="0.24884081" ratioLeft="161" ratioRight="486" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.qnx.tools.ide.sysinfo.internal.ui.systemview" appearance="2" expanded="2">&#x0A;<page content="com.qnx.tools.ide.sysinfo.internal.ui.systemview" label="System Summary"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.processview" label="Process Information"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.memview" label="Memory Information"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" label="Malloc Information"/>
 <page content="com.qnx.tools.ide.target.fsys" label="Target File System Navigator"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.blockedview" label="LabelNotFound"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.coidview" label="LabelNotFound"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.signalview" label="LabelNotFound"/>
 <page content="com.qnx.tools.ide.sysinfo.internal.ui.usageview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="belowSysViews" ratio="0.74897116" ratioLeft="364" ratioRight="122" relationship="4" relative="belowEditor">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -235,7 +274,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.77069354" ratioLeft="689" ratioRight="205" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7306867" ratioLeft="681" ratioRight="251" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -250,8 +289,8 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.44948453" ratioLeft="218" ratioRight="267" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info part="org.eclipse.ui.editorss" ratio="0.30110496" ratioLeft="218" ratioRight="506" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.81665796" ratioLeft="1559" ratioRight="350" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
@@ -401,6 +440,7 @@
 <alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
 <show_view_action id="org.eclipse.ui.views.ContentOutline"/>
@@ -421,41 +461,45 @@
 <perspective_action id="com.qnx.tools.ide.sysinfo.perspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1d78412" orientation="512" selectedTabId="org.eclipse.debug.ui.DebugView" style="0">
+<fastViews>
+<view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
 <fastViews>
-<view id="com.rim.tad.tools.builder.view.properties" ratio="0.2981701"/>
+<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.28762543"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="lefttop" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
-<fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.27437642"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.27058825"/>
+<view id="org.eclipse.ui.views.ProgressView" ratio="0.29839572"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="16384" id="leftbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.palette" style="0">
 <fastViews>
 <view id="com.rim.tad.tools.builder.view.palette" ratio="0.2992465"/>
-<view id="com.rim.tad.tools.builder.view.assets" ratio="0.3"/>
+<view id="com.rim.tad.tools.builder.view.assets" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="lefttop">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7494331" ratioLeft="661" ratioRight="221" relationship="2" relative="lefttop">
@@ -465,7 +509,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2494331" ratioLeft="220" ratioRight="662" relationship="2" relative="lefttop"/>
+<info part="org.eclipse.ui.editorss" ratio="0.14285715" ratioLeft="265" ratioRight="1590" relationship="2" relative="lefttop"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1f44736" ratio="0.74916387" ratioLeft="672" ratioRight="225" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -484,6 +528,12 @@
 <info folder="true" part="rightbottom" ratio="0.49944258" ratioLeft="448" ratioRight="449" relationship="4" relative="righttop">
 <folder appearance="2" expanded="2">
 <page content="com.rim.tad.tools.builder.view.properties" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d78412" ratio="0.5" ratioLeft="441" ratioRight="441" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
@@ -506,12 +556,12 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="lefttop"/>
 <trimItem IMemento.internal.id="leftbottom"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="righttop"/>
 <trimItem IMemento.internal.id="rightbottom"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1d78412"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -525,32 +575,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wordsearch.cpp" tooltip="WordsPlus/src/wordsearch.cpp">
-<persistable path="/WordsPlus/src/wordsearch.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusGame/bar-descriptor.xml">
+<persistable path="/WordsPlusGame/bar-descriptor.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="WordsPlus/assets/SettingsSheet.qml">
-<persistable path="/WordsPlus/assets/SettingsSheet.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.hpp" tooltip="WordsPlusGame/src/WordsPlusGame.hpp">
+<persistable path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wordsearch.h" tooltip="WordsPlus/src/wordsearch.h">
-<persistable path="/WordsPlus/src/wordsearch.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.cpp" tooltip="WordsPlusGame/src/WordsPlusGame.cpp">
+<persistable path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="soundmanager.h" tooltip="WordsPlus/src/soundmanager.h">
-<persistable path="/WordsPlus/src/soundmanager.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" tooltip="WordsPlusFree/assets/PuzzleCompletedSheet.qml">
+<persistable path="/WordsPlusFree/assets/PuzzleCompletedSheet.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="soundmanager.cpp" tooltip="WordsPlus/src/soundmanager.cpp">
-<persistable path="/WordsPlus/src/soundmanager.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedSheet.qml" tooltip="WordsPlusGame/assets/PuzzleCompletedSheet.qml">
+<persistable path="/WordsPlusGame/assets/PuzzleCompletedSheet.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavPanel.qml" tooltip="WordsPlus/assets/BtmNavPanel.qml">
-<persistable path="/WordsPlus/assets/BtmNavPanel.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusFree/assets/ThemeHomePage.qml">
+<persistable path="/WordsPlusFree/assets/ThemeHomePage.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="BtmNavAnimation.qml" tooltip="WordsPlus/assets/BtmNavAnimation.qml">
-<persistable path="/WordsPlus/assets/BtmNavAnimation.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="ThemeHomePage.qml" tooltip="WordsPlusGame/assets/ThemeHomePage.qml">
+<persistable path="/WordsPlusGame/assets/ThemeHomePage.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UpdateProfilePage.cpp" tooltip="WordsPlus/src/UpdateProfilePage.cpp">
-<persistable path="/WordsPlus/src/UpdateProfilePage.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="wordsplus.xml" tooltip="WordsPlusGame/assets/models/wordsplus.xml">
+<persistable path="/WordsPlusGame/assets/models/wordsplus.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RegistrationHandler.cpp" tooltip="WordsPlus/src/RegistrationHandler.cpp">
-<persistable path="/WordsPlus/src/RegistrationHandler.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AdContainer.qml" tooltip="WordsPlusFree/assets/AdContainer.qml">
+<persistable path="/WordsPlusFree/assets/AdContainer.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="WordsPlusFree/bar-descriptor.xml">
+<persistable path="/WordsPlusFree/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomePage.qml" tooltip="WordsPlusGame/assets/HomePage.qml">
+<persistable path="/WordsPlusGame/assets/HomePage.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="tabs.png" tooltip="WordsPlusFree/assets/images/tabs.png">
+<persistable path="/WordsPlusFree/assets/images/tabs.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusFree.cpp" tooltip="WordsPlusFree/src/WordsPlusFree.cpp">
+<persistable path="/WordsPlusFree/src/WordsPlusFree.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="social.png" tooltip="WordsPlusFree/assets/images/social.png">
+<persistable path="/WordsPlusFree/assets/images/social.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusFree.hpp" tooltip="WordsPlusFree/src/WordsPlusFree.hpp">
+<persistable path="/WordsPlusFree/src/WordsPlusFree.hpp"/>
 </file>
 </mruList>
 </workbench>

@@ -52,7 +52,7 @@ Container {
                 if (event.isDown()) {
                     wordsPlus.playSound("letterSelected");
                 } else if (event.isUp()) {
-                    homeSysToast.body = "Need a menu? Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
+                    homeSysToast.body = "Follow your heart\n(...or the pointing arrow)\nSwipe down from the top for options"
                     homeSysToast.show();
                 }
             }
@@ -102,79 +102,4 @@ Container {
             }
         }
     } //tab buttons
-    Container {
-        preferredHeight: 300
-        preferredWidth: 720
-        horizontalAlignment: HorizontalAlignment.Center
-        verticalAlignment: VerticalAlignment.Bottom
-        Container {
-            layout: DockLayout {
-            }
-            //not using button image to keep image and app size down
-            ImageView {
-                imageSource: "images/social.png"
-            }
-            Container {
-                layout: AbsoluteLayout {
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 100
-                        positionY: 0
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            wordsPlus.Share("Facebook", "home");
-                        }
-                    }
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 300
-                        positionY: 0
-                    }
-                    attachedObjects: [
-                        Invocation {
-                            id: invokeReview
-                            query {
-                                invokeTargetId: "sys.appworld"
-                                uri: "appworld://content/21931881"
-                            }
-                        }
-                    ]
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            invokeReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 500
-                        positionY: 0
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            wordsPlus.Share("Twitter", "home");
-                        }
-                    }
-                }
-            }
-        }
-    } //end of social block
 }
