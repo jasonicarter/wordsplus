@@ -15,83 +15,12 @@ Container {
         ThemeHomePage {
 
         }
-        BtmNavPanel { // bottom panel
-        }
-        Container {
-            verticalAlignment: VerticalAlignment.Bottom
-            layout: DockLayout {
-            }
-            ImageView {
-                verticalAlignment: VerticalAlignment.Bottom
-                imageSource: "images/social.png"
-            }
-            Container {
-                layout: AbsoluteLayout {
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 100
-                        positionY: 0
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            wordsPlus.Share("Facebook", "home");
-                        }
-                    }
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 300
-                        positionY: 0
-                    }
-                    attachedObjects: [
-                        Invocation {
-                            id: invokeReview
-                            query {
-                                invokeTargetId: "sys.appworld"
-                                uri: "appworld://content/21931881"
-                            }
-                        }
-                    ]
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            invokeReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                }
-                Container {
-                    preferredHeight: 100
-                    preferredWidth: 100
-                    //background: Color.Green
-                    layoutProperties: AbsoluteLayoutProperties {
-                        positionX: 500
-                        positionY: 0
-                    }
-                    onTouch: {
-                        if (event.isDown()) {
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            wordsPlus.Share("Twitter", "home");
-                        }
-                    }
-                }
-            }
-
+        TopNavPanel { // bottom panel
         }
         Container { // center
             layout: DockLayout {
             }
-            //topPadding: 150
+            bottomPadding: 110
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             //background: Color.Gray
@@ -257,22 +186,15 @@ Container {
                 }
             }
         }
+        BtmNav {
+            verticalAlignment: VerticalAlignment.Bottom
+        }
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
-            //because score()->start is called after qml creation
-            //scoreloop instance created, calls run() which does requestUserCompleted
-            //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
-            //if you do that, don't need this connnection in qml
-            //wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
-        }
-        //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
-        function onScoreloopLoaded(username) {
-            scoreLoopUsername = username;
-            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
-            homeSysToast.show();
         }
     } //end of main container
+
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text
@@ -302,16 +224,6 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
-        } //,
-    //        SystemToast {
-    //            id: homeSysToast
-    //            body: ""
-    //            button.label: "Got it!" //btnName
-    //        },
-    //        Sheet {
-    //            id: themeSheet
-    //            ThemeSheet {
-    //            }
-    //        }
+        }
     ]
 }//root container
