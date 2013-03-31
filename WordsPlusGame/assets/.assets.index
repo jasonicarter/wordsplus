@@ -1,10 +1,11 @@
 1
-485
-720x720/BtmNavPanel.qml
+490
+720x720/BtmNav.qml
 720x720/HomePage.qml
 720x720/images/splash.png
 720x720/PlayPuzzlePage.qml
 720x720/ThemeHomePage.qml
+720x720/TopNavPanel.qml
 AboutSheet.qml
 AchievementList.qml
 Achievements.qml
@@ -24,6 +25,7 @@ images/categoryList/books.png
 images/categoryList/comics.png
 images/categoryList/desktop.png
 images/categoryList/earth.png
+images/categoryList/eiffeltower.png
 images/categoryList/elephant.png
 images/categoryList/ewords.png
 images/categoryList/jobs.png
@@ -86,6 +88,7 @@ models/wordsplus.xml
 PlayPuzzlePage.qml
 PositionLeaderboard.qml
 PuzzleCompletedSheet.qml
+PuzzleCompletedSheet.qml.orig
 scoreloop/SLAwards.bundle/Award.wordsplus.backtwoback.achieved.png
 scoreloop/SLAwards.bundle/Award.wordsplus.backtwoback.unachieved.png
 scoreloop/SLAwards.bundle/Award.wordsplus.bbminvitetodownload.achieved.png
@@ -466,6 +469,7 @@ theme/wordsPlus/theme_home.png
 theme/wordsPlus/theme_icon.png
 theme/wordsPlus/theme_sample.jpg
 ThemeHomePage.qml
+ThemeHomePage.qml.orig
 ThemeOtherPages.qml
 ThemeSchoolHighlight.qml
 ThemeSheet.qml
@@ -475,6 +479,7 @@ wordLists/body.txt
 wordLists/boynames.txt
 wordLists/earth.txt
 wordLists/ewords.txt
+wordLists/french.txt
 wordLists/girlnames.txt
 wordLists/jobs.txt
 wordLists/school.txt

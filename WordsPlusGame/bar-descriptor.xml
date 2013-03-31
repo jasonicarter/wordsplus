@@ -70,6 +70,7 @@
     <category>core.games</category>
     <splashScreens>
        <image>splashScreen.png</image>
+       <image>splash.png</image>
     </splashScreens>
     <icon>
        <image>icon.png</image>
@@ -103,6 +104,7 @@
     <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
     <asset path="assets/images/icon.png">icon.png</asset>
     <asset path="assets/scoreloop">scoreloop</asset>
+    <asset path="assets/720x720/images/splash.png">splash.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

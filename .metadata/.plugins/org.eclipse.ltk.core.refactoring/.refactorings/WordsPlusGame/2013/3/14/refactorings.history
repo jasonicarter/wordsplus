@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlusGame/assets/720x720/BtmNavPanel.qml&apos; to &apos;TopNavPanel.qml&apos;" description="Rename resource &apos;BtmNavPanel.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/720x720/BtmNavPanel.qml" name="TopNavPanel.qml" stamp="1364691456145" updateReferences="true"/>
+</session>
