@@ -4,17 +4,17 @@ Page {
     Container {
         layout: DockLayout {
         }
-        preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
         }
         ScrollView {
+            preferredWidth: 700
+            topPadding: 100
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle
-                preferredWidth: 700
-                topPadding: 100
+                //background: Color.Gray
                 Container {
                     Container { // sound
                         layout: DockLayout {
@@ -56,7 +56,7 @@ Page {
                         layout: DockLayout {
                         }
                         background: Color.create("#272727")
-                        preferredWidth: 700
+                        preferredWidth: 720
                         preferredHeight: 100
                         leftPadding: 15
                         Label {
@@ -95,7 +95,7 @@ Page {
                         layout: DockLayout {
                         }
                         background: Color.create("#272727")
-                        preferredWidth: 700
+                        preferredWidth: 720
                         preferredHeight: 100
                         leftPadding: 15
                         Label {

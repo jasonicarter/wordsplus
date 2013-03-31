@@ -77,6 +77,67 @@ Page {
                             base: aboutSheetSubTitleNormalWhite.style
                         }
                     }
+                    //                TextArea {
+                    //                    text: "http://twocasualcoders.com/contact"
+                    //                    leftPadding: 0
+                    //                    editable: false
+                    //                    inputMode: TextAreaInputMode.Text
+                    //                    textStyle {
+                    //                        base: aboutSheetSubTitleNormalWhite.style
+                    //                    }
+                    //                }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    topPadding: 50
+                    horizontalAlignment: HorizontalAlignment.Center
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/i.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/p.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/r.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/o.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/v.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/m.png"
+                    }
+                    ImageView {
+                        preferredHeight: 75
+                        preferredWidth: 75
+                        imageSource: "asset:///images/letters/selected/e.png"
+                    }
                 }
             }
         }

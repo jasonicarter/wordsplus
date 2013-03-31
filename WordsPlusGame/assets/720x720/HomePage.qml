@@ -186,7 +186,7 @@ Container {
                 }
             }
         }
-        BtmNav {
+        BtmNavPanel {
             verticalAlignment: VerticalAlignment.Bottom
         }
         onCreationCompleted: {

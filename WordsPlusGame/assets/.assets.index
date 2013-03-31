@@ -1,7 +1,8 @@
 1
-490
+489
 720x720/BtmNav.qml
 720x720/HomePage.qml
+720x720/images/activeFrame.png
 720x720/images/splash.png
 720x720/PlayPuzzlePage.qml
 720x720/ThemeHomePage.qml
@@ -19,6 +20,7 @@ HelpSheet.qml
 HomePage.qml
 HomePageAnimation.qml
 images/about.png
+images/activeFrame.png
 images/busy.png
 images/category.png
 images/categoryList/books.png
@@ -245,7 +247,6 @@ theme/school/letters/w.png
 theme/school/letters/x.png
 theme/school/letters/y.png
 theme/school/letters/z.png
-theme/school/theme_activeFrame.png
 theme/school/theme_background.jpg
 theme/school/theme_home.png
 theme/school/theme_icon.png
@@ -354,7 +355,6 @@ theme/space/letters/w.png
 theme/space/letters/x.png
 theme/space/letters/y.png
 theme/space/letters/z.png
-theme/space/theme_activeFrame.png
 theme/space/theme_background.jpg
 theme/space/theme_home.png
 theme/space/theme_icon.png
@@ -463,7 +463,6 @@ theme/wordsPlus/letters/w.png
 theme/wordsPlus/letters/x.png
 theme/wordsPlus/letters/y.png
 theme/wordsPlus/letters/z.png
-theme/wordsPlus/theme_activeFrame.png
 theme/wordsPlus/theme_background.jpg
 theme/wordsPlus/theme_home.png
 theme/wordsPlus/theme_icon.png
