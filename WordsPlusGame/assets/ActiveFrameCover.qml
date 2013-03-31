@@ -6,7 +6,7 @@ Container {
     }
     ImageView {
         objectName: "activeImage"
-        imageSource:  "theme/" + "wordsPlus" + "/theme_activeFrame.png"
+        imageSource:  "images/activeFrame.png"
         verticalAlignment: VerticalAlignment.Top
         horizontalAlignment: HorizontalAlignment.Center
     }

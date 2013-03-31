@@ -17,8 +17,8 @@ Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
 make -C ./x86 -f Makefile debug
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
-make[1]: *** No rule to make target `c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc/qmake.conf', needed by `Makefile'.  Stop.
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/x86'
+make[1]: *** No rule to make target `c:/bbndk/target_10_1_0_338/qnx6/usr/share/qt4/mkspecs/blackberry-x86-qcc/qmake.conf', needed by `Makefile'.  Stop.
 make: *** [Simulator-Debug] Error 2
 
 **** Build Finished ****

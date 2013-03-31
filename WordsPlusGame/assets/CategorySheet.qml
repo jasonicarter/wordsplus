@@ -4,26 +4,22 @@ Page {
     Container {
         layout: DockLayout {
         }
-        preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
         }
         Container { //middle container
-            preferredWidth: 720
-            preferredHeight: 1000
-            verticalAlignment: VerticalAlignment.Center
-            horizontalAlignment: HorizontalAlignment.Center
+            preferredWidth: 700
+            topPadding: 100
             Container {
-                topPadding: 50
-                preferredWidth: 720
+                preferredWidth: 700
                 property string category
                 Container {
                     property int settingHard: 8
                     property int settingMedium: 4
                     property int settingEasy: 2
-                    preferredWidth: 720
+                    preferredWidth: 700
                     DropDown {
                         id: diffDropDown
                         title: "Difficulty:"

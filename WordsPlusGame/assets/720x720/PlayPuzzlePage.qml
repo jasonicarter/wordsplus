@@ -69,7 +69,7 @@ Container { // root Container
                     //text: "TIME: 2:00"
                     horizontalAlignment: HorizontalAlignment.Left
                     textStyle {
-                        base: puzzlePageSubTitleNormalWhite.style
+                        base: puzzlePagePuzzleInfoText.style
                     }
                 }
             }
@@ -124,13 +124,6 @@ Container { // root Container
                 verticalAlignment: VerticalAlignment.Center
             }
         } //center container
-        //        Container {
-        //            id: btmNav
-        //            verticalAlignment: VerticalAlignment.Bottom
-        //            BtmNavPanel {
-        //                verticalAlignment: VerticalAlignment.Bottom
-        //            }
-        //        }
     } // main container
     onCreationCompleted: {
         wordsPlus.puzzleCompleted.connect(playPuzzleRootContainer.handleSignal)
@@ -159,12 +152,12 @@ Container { // root Container
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleNormalWhite
+            id: puzzlePagePuzzleInfoText
             base: SystemDefaults.TextStyles.SubtitleText
             fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
-            fontSize: FontSize.XLarge
+            fontSize: FontSize.Large
         },
         TextStyleDefinition {
             id: puzzlePageBurntOrgange
@@ -172,7 +165,7 @@ Container { // root Container
             //fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
             color: Color.create("#CC3F10")
-            fontSize: FontSize.XLarge
+            fontSize: FontSize.Large
         },
         Sheet {
             id: aboutSheet
