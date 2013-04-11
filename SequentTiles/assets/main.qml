@@ -39,7 +39,12 @@ Page {
         ]
     }
     Container {
+        background: Color.create("#272727")
         layout: DockLayout {
+        }
+        ImageView {
+            horizontalAlignment: HorizontalAlignment.Center
+            imageSource: "images/background.png"
         }
         Label {
             text: qsTr("Hello World")
