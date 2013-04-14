@@ -1,8 +1,11 @@
 1
-12
+16
 AboutSheet.qml
 CategorySheet.qml
 HelpSheet.qml
+HomeBtmNavContainer.qml
+HomeCenterContainer.qml
+HomeContainer.qml
 images/about.png
 images/background.png
 images/category.png
@@ -12,3 +15,4 @@ images/trophy.png
 main.qml
 SettingsSheet.qml
 StatsSheet.qml
+TopNavContainer.qml
