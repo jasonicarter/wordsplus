@@ -38,9 +38,10 @@ Page {
             }
         ]
     }
-    Container {
-        background: Color.create("#272727")
-        layout: DockLayout {
+    //Container {
+        //horizontalAlignment: HorizontalAlignment.Center
+        //background: Color.create("#272727")
+/*        layout: DockLayout {
         }
         ImageView {
             horizontalAlignment: HorizontalAlignment.Center
@@ -51,8 +52,10 @@ Page {
             textStyle.base: SystemDefaults.TextStyles.BigText
             verticalAlignment: VerticalAlignment.Center
             horizontalAlignment: HorizontalAlignment.Center
+        }*/
+        HomeContainer {
         }
-    }
+    //}
     attachedObjects: [
         Sheet {
             id: aboutSheet

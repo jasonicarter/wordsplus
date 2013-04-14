@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SequentTiles/assets/BtmNavContainer.qml&apos; to &apos;HomeBtmNavContainer.qml&apos;" description="Rename resource &apos;BtmNavContainer.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/BtmNavContainer.qml" name="HomeBtmNavContainer.qml" stamp="1365882720771" updateReferences="true"/>
+</session>
