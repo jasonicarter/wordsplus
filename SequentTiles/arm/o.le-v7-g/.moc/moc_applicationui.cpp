@@ -22,26 +22,34 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+      21,   15,   14,   14, 0x08,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_ApplicationUI[] = {
-    "ApplicationUI\0"
+    "ApplicationUI\0\0event\0"
+    "onTileTouch(bb::cascades::TouchEvent*)\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ApplicationUI *_t = static_cast<ApplicationUI *>(_o);
+        switch (_id) {
+        case 0: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObjectExtraData ApplicationUI::staticMetaObjectExtraData = {
@@ -75,6 +83,11 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

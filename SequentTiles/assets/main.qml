@@ -38,24 +38,8 @@ Page {
             }
         ]
     }
-    //Container {
-        //horizontalAlignment: HorizontalAlignment.Center
-        //background: Color.create("#272727")
-/*        layout: DockLayout {
-        }
-        ImageView {
-            horizontalAlignment: HorizontalAlignment.Center
-            imageSource: "images/background.png"
-        }
-        Label {
-            text: qsTr("Hello World")
-            textStyle.base: SystemDefaults.TextStyles.BigText
-            verticalAlignment: VerticalAlignment.Center
-            horizontalAlignment: HorizontalAlignment.Center
-        }*/
-        HomeContainer {
-        }
-    //}
+    HomeContainer {
+    }
     attachedObjects: [
         Sheet {
             id: aboutSheet
@@ -96,4 +80,3 @@ Page {
     }
 
 }
-

@@ -12,13 +12,13 @@ Container {
         verticalAlignment: VerticalAlignment.Top
         preferredHeight: 100
         preferredWidth: 700
-        //background: Color.Black
+        background: Color.Black
     }
 
     Container {
-        objectName: "homePlayContainer"
+        objectName: homePlayContainer
         horizontalAlignment: HorizontalAlignment.Center
-        verticalAlignment: VerticalAlignment.Center
+        verticalAlignment: VerticalAlignment.Bottom
         preferredHeight: 700
         preferredWidth: 700
         //background: Color.Black
