@@ -38,8 +38,15 @@ Page {
             }
         ]
     }
-    HomeContainer {
-    }
+    //    HomeContainer {
+    //    }
+//    Container {
+//        background: Color.create("#272727")
+//        ImageView {
+//            horizontalAlignment: HorizontalAlignment.Center
+//            imageSource: "images/background_home.png"
+//        }
+//    }
     attachedObjects: [
         Sheet {
             id: aboutSheet
