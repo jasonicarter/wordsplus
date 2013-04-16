@@ -22,18 +22,22 @@ public:
     ApplicationUI(bb::cascades::Application *app);
     virtual ~ApplicationUI() {}
 
+    Q_INVOKABLE void NewGame();
+    Q_INVOKABLE void Home();
+
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
 
 private:
-    void InitializePlayArea();
     void InitializeHomeContainer();
+    void InitializePuzzleContainer();
 
     float wantedSize;
     float numTiles;
 
 	Page *appPage;
     Control *puzzleControl;
+    Control *homeControl;
     Container *playContainer;
     ImageView* playField[4][4];
 };

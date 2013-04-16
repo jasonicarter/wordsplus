@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SequentTiles/assets/HomeCenterContainer.qml&apos; to &apos;PuzzleCenterContainer.qml&apos;" description="Rename resource &apos;HomeCenterContainer.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/HomeCenterContainer.qml" name="PuzzleCenterContainer.qml" stamp="1366130709407" updateReferences="true"/>
+</session>

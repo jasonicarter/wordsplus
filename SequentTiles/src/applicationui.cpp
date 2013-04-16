@@ -24,24 +24,36 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 
     appPage = qml->createRootObject<Page>();
     InitializeHomeContainer();
+    InitializePuzzleContainer();
     app->setScene(appPage);
 }
 
+void ApplicationUI::Home()
+{
+	InitializeHomeContainer();
+}
 
 void ApplicationUI::InitializeHomeContainer() {
 
 	QmlDocument* qmlContent = QmlDocument::create("asset:///HomeContainer.qml");
-	qmlContent->setContextProperty("seqentTiles", this);
-	puzzleControl = qmlContent->createRootObject<Control>();
-	InitializePlayArea();
+	qmlContent->setContextProperty("sequentTiles", this);
+	homeControl = qmlContent->createRootObject<Control>();
+	appPage->setContent(homeControl);
+}
 
+void ApplicationUI::InitializePuzzleContainer() {
+
+	QmlDocument* qmlContent = QmlDocument::create("asset:///PuzzleContainer.qml");
+	qmlContent->setContextProperty("sequentTiles", this);
+	puzzleControl = qmlContent->createRootObject<Control>();
+	//appPage->setContent(puzzleControl);
 }
 
 
-void ApplicationUI::InitializePlayArea() {
+void ApplicationUI::NewGame() {
 
-	playContainer = puzzleControl->findChild<Container*>("homePlayContainer");
-	//playContainer->removeAll();
+	playContainer = puzzleControl->findChild<Container*>("puzzlePlayContainer");
+	playContainer->removeAll();
 
 	Container* pContainer = new Container();
 	AbsoluteLayout *pAbsoluteLayout = new AbsoluteLayout();
