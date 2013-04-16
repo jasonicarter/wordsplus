@@ -20,6 +20,7 @@ Container {
             }
             if (event.isUp()) {
                 btnHome.opacity = 0;
+                sequentTiles.Home();
             }
         }
         onTouchExit: {

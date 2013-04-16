@@ -6,7 +6,7 @@ Container {
     background: Color.create("#272727")
     ImageView {
         horizontalAlignment: HorizontalAlignment.Center
-        imageSource: "images/background_home.png"
+        imageSource: "images/background.png"
     }
     Container {
         preferredHeight: 1280
@@ -14,8 +14,8 @@ Container {
         TopNavContainer {
             horizontalAlignment: HorizontalAlignment.Center
         }
-        Container {
-            preferredHeight: 980
+        PuzzleCenterContainer {
+            horizontalAlignment: HorizontalAlignment.Center
         }
         HomeBtmNavContainer {
             horizontalAlignment: HorizontalAlignment.Center

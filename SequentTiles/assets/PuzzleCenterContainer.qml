@@ -16,7 +16,7 @@ Container {
     }
 
     Container {
-        objectName: "homePlayContainer"
+        objectName: "puzzlePlayContainer"
         horizontalAlignment: HorizontalAlignment.Center
         verticalAlignment: VerticalAlignment.Center
         preferredHeight: 700
