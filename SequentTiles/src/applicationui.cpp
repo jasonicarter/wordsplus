@@ -95,6 +95,9 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 
 	//get initial position of tile touched
 	if (event->isDown()) {
+	} // isDown
+
+	if (event->isUp()) {
 		// Find who sent it.
 		ImageView* senderImage = dynamic_cast<ImageView*>(sender());
 		if (senderImage != NULL) {
@@ -108,14 +111,11 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 				QStringList letterSrc = (imageSrc[index]).split(".");
 				QString letter = letterSrc[0]; //a.png
 
-				QString imageSource = QString("asset:///images/%1.png").arg("1");
+				QString imageSource = QString("asset:///images/%1.png").arg("selected");
 				senderImage->setImage(Image(imageSource));
 			}
 
 		} // if statement
-	} // isDown
-
-	if (event->isUp()) {
 	}
 
 	if (event->isCancel()) {
