@@ -22,7 +22,7 @@ public:
     ApplicationUI(bb::cascades::Application *app);
     virtual ~ApplicationUI() {}
 
-    Q_INVOKABLE void NewGame();
+    Q_INVOKABLE void NewGame(int pkg=1, int level=1);
     Q_INVOKABLE void Home();
 
 private Q_SLOTS:
@@ -34,12 +34,14 @@ private:
 
     float wantedSize;
     float numTiles;
+    QList<int> selectTiles;
 
 	Page *appPage;
     Control *puzzleControl;
     Control *homeControl;
     Container *playContainer;
     ImageView* playField[4][4];
+
 };
 
 #endif /* ApplicationUI_HPP_ */
