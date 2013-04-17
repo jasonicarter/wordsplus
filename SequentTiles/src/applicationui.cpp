@@ -50,7 +50,7 @@ void ApplicationUI::InitializePuzzleContainer() {
 }
 
 
-void ApplicationUI::NewGame() {
+void ApplicationUI::NewGame(int pkg, int level) {
 
 	playContainer = puzzleControl->findChild<Container*>("puzzlePlayContainer");
 	playContainer->removeAll();
@@ -61,39 +61,43 @@ void ApplicationUI::NewGame() {
 
 	numTiles = 2; // Calculate the size of the tiles
 	wantedSize = 300; //playContainer->preferredWidth() / numTiles;
+	QList<int> tileNumber;
+	tileNumber << 0 << 1 << 2 << 3;
 
 	for (int i = 0; i < 4; i++) {
 		//listOfWords.append(puzzleWords[i]);
 
 		//LOG("word index: %i", wordDataList[listOfWords]);
 
-		ImageView *imageView = ImageView::create(); //.bottomMargin(0).topMargin(0).leftMargin(0).rightMargin(0);
+		ImageView *imageView = ImageView::create().bottomMargin(0).topMargin(0).leftMargin(0).rightMargin(0);
 		imageView->setPreferredSize(wantedSize, wantedSize);
 
-		QString imageSource = QString("asset:///images/%1.png").arg("0");
+
+		int r = rand() % tileNumber.count(); //list of words reduced once word is found
+		//LOG("list count: %i", listOfWords.count());
+		//LOG("hint word: %s",listOfWords[r].toStdString().c_str());
+
+		QString imageSource = QString("asset:///packages/pkg_%1/level_%2/%3.png").arg(pkg).arg(level).arg(tileNumber[r]);
 		imageView->setImage(Image(imageSource));
+		tileNumber.removeAt(r);
 
 		if (i < 2) {
 			AbsoluteLayoutProperties* pProperties = AbsoluteLayoutProperties::create();
-			pProperties->setPositionX(350.0 * i);
+			pProperties->setPositionX(337.0 * i);
 			pProperties->setPositionY(0.0);
 			imageView->setLayoutProperties(pProperties);
 			pContainer->add(imageView);
 		}
 		if (i >= 2) {
 			AbsoluteLayoutProperties* pProperties = AbsoluteLayoutProperties::create();
-			pProperties->setPositionX(350.0 * (i - 2));
-			pProperties->setPositionY(350.0);
+			pProperties->setPositionX(337.0 * (i - 2));
+			pProperties->setPositionY(337.0);
 			imageView->setLayoutProperties(pProperties);
 			pContainer->add(imageView);
 		}
 
 		// We are connecting all our tiles to the same slot, we can later identify them by sender().
 		connect(imageView, SIGNAL(touch(bb::cascades::TouchEvent *)),this, SLOT(onTileTouch(bb::cascades::TouchEvent *)));
-
-		// Keep track of the ImageView.
-		//playField[i][ii] = imageView;
-		//playField[i][ii]->setObjectName("about");
 
 		playContainer->add(pContainer);
 	}
@@ -120,10 +124,17 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 			if (v.canConvert<QString>()) {
 				QStringList imageSrc = v.value<QString>().split("/");
 				int index = imageSrc.size() - 1; // size gives count not last index
-				QStringList letterSrc = (imageSrc[index]).split(".");
-				QString letter = letterSrc[0]; //a.png
+				QStringList numberSrc = (imageSrc[index]).split(".");
+				QString numberSelected = numberSrc[0]; //a.png
 
-				QString imageSource = QString("asset:///images/%1.png").arg("selected");
+				if(selectTiles.indexOf(numberSelected.toInt())) {
+					//-1 is not found
+					selectTiles.append(numberSelected.toInt());
+				}
+
+
+
+				QString imageSource = QString("asset:///packages/selected.png");
 				senderImage->setImage(Image(imageSource));
 			}
 

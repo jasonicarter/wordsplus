@@ -5,7 +5,7 @@ Container {
     preferredWidth: 720
     //background: Color.Gray
     layout: DockLayout {
-        
+
     }
     Container {
         horizontalAlignment: HorizontalAlignment.Center
@@ -16,11 +16,16 @@ Container {
     }
 
     Container {
-        objectName: "puzzlePlayContainer"
         horizontalAlignment: HorizontalAlignment.Center
         verticalAlignment: VerticalAlignment.Center
-        preferredHeight: 700
-        preferredWidth: 700
-        //background: Color.Black
+        bottomPadding: 10
+        Container {
+            objectName: "puzzlePlayContainer"
+            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Center
+            preferredHeight: 638
+            preferredWidth: 638     
+            //background: Color.Black
+        }
     }
 }
