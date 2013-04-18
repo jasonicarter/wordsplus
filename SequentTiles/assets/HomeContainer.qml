@@ -11,7 +11,7 @@ Container {
     Container {
         preferredHeight: 1280
         preferredWidth: 768
-        TopNavContainer {
+        HomeTopNavContainer {
             horizontalAlignment: HorizontalAlignment.Center
         }
         Container {
