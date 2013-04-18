@@ -11,7 +11,7 @@ Container {
     Container {
         preferredHeight: 1280
         preferredWidth: 768
-        TopNavContainer {
+        PuzzleTopNavContainer {
             horizontalAlignment: HorizontalAlignment.Center
         }
         PuzzleCenterContainer {

@@ -9,13 +9,13 @@ Container {
     //background: Color.LightGray
     ImageButton {
         horizontalAlignment: HorizontalAlignment.Left
-        defaultImageSource: "images/buttons/play.png"
-        pressedImageSource: "images/buttons/play_selected.png"
+        defaultImageSource: "images/buttons/home.png"
+        pressedImageSource: "images/buttons/home_selected.png"
         onTouch: {
             //            if (event.isDown()) {
             //            }
             if (event.isUp()) {
-                sequentTiles.NewGame();
+                sequentTiles.Home();
             }
         }
         onTouchExit: {
@@ -24,8 +24,8 @@ Container {
     }
     ImageButton {
         horizontalAlignment: HorizontalAlignment.Right
-        defaultImageSource: "images/buttons/help.png"
-        pressedImageSource: "images/buttons/help_selected.png"
+        defaultImageSource: "images/buttons/skip.png"
+        pressedImageSource: "images/buttons/skip_selected.png"
         onTouch: {
             //            if (event.isDown()) {
             //            }
