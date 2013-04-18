@@ -13,6 +13,10 @@ Container {
         preferredHeight: 100
         preferredWidth: 700
         //background: Color.Black
+//        Label {
+//            //opacity: opacityStatus;
+//            text: "Sdfsd"
+//        }
     }
 
     Container {
@@ -24,7 +28,7 @@ Container {
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             preferredHeight: 638
-            preferredWidth: 638     
+            preferredWidth: 638
             //background: Color.Black
         }
     }

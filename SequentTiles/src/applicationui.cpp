@@ -49,6 +49,25 @@ void ApplicationUI::InitializePuzzleContainer() {
 	//appPage->setContent(puzzleControl);
 }
 
+//needs to have a property to emit value
+bool ApplicationUI::Submit() {
+
+	bool answer = true;
+
+	if( (selectTiles.count() == 0) or (selectTiles.count() < 4)){
+		//no nothing
+	}
+	else {
+		for(int i = 0; i < 4; i++){
+			if(selectTiles[i] != i){
+				 answer = false;
+			}
+		}
+	}
+
+	return answer;
+}
+
 
 void ApplicationUI::NewGame(int pkg, int level) {
 
@@ -63,6 +82,7 @@ void ApplicationUI::NewGame(int pkg, int level) {
 	wantedSize = 300; //playContainer->preferredWidth() / numTiles;
 	QList<int> tileNumber;
 	tileNumber << 0 << 1 << 2 << 3;
+	selectTiles.clear(); //reset selection tracker
 
 	for (int i = 0; i < 4; i++) {
 		//listOfWords.append(puzzleWords[i]);
@@ -127,15 +147,15 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 				QStringList numberSrc = (imageSrc[index]).split(".");
 				QString numberSelected = numberSrc[0]; //a.png
 
-				if(selectTiles.indexOf(numberSelected.toInt())) {
+				if(selectTiles.indexOf(numberSelected.toInt()) <= 0) {
 					//-1 is not found
 					selectTiles.append(numberSelected.toInt());
+					QString imageSource = QString("asset:///packages/selected.png");
+					senderImage->setImage(Image(imageSource));
 				}
 
-
-
-				QString imageSource = QString("asset:///packages/selected.png");
-				senderImage->setImage(Image(imageSource));
+//				QString imageSource = QString("asset:///packages/selected.png");
+//				senderImage->setImage(Image(imageSource));
 			}
 
 		} // if statement
@@ -145,3 +165,7 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 	}
 
 }
+
+
+
+

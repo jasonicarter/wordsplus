@@ -24,6 +24,7 @@ public:
 
     Q_INVOKABLE void NewGame(int pkg=1, int level=1);
     Q_INVOKABLE void Home();
+    Q_INVOKABLE bool Submit();
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
