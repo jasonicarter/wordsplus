@@ -17,7 +17,7 @@ Container {
         PuzzleCenterContainer {
             horizontalAlignment: HorizontalAlignment.Center
         }
-        HomeBtmNavContainer {
+        PuzzleBtmNavContainer {
             horizontalAlignment: HorizontalAlignment.Center
         }
     }

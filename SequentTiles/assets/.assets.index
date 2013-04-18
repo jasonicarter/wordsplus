@@ -1,5 +1,5 @@
 1
-26
+31
 AboutSheet.qml
 CategorySheet.qml
 HelpSheet.qml
@@ -8,6 +8,10 @@ HomeContainer.qml
 images/about.png
 images/background.png
 images/background_home.png
+images/buttons/done.png
+images/buttons/done_selected.png
+images/buttons/reset.png
+images/buttons/reset_selected.png
 images/category.png
 images/close.png
 images/help.png
@@ -21,6 +25,7 @@ packages/pkg_1/level_1/3.png
 packages/pkg_1/level_2/0.png
 packages/pkg_1/level_2/1.png
 packages/selected.png
+PuzzleBtmNavContainer.qml
 PuzzleCenterContainer.qml
 PuzzleContainer.qml
 SettingsSheet.qml
