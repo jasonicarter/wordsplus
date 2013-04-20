@@ -1,5 +1,5 @@
 1
-43
+44
 AboutSheet.qml
 CategorySheet.qml
 HelpSheet.qml
@@ -25,6 +25,7 @@ images/category.png
 images/close.png
 images/correct_answer.png
 images/help.png
+images/incorrect_answer.png
 images/selected.png
 images/trophy.png
 main.qml

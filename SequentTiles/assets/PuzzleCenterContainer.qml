@@ -20,7 +20,7 @@ Container {
         }
     }
     Container {
-        layout: DockLayout {
+        layout: AbsoluteLayout {
         }
         horizontalAlignment: HorizontalAlignment.Center
         verticalAlignment: VerticalAlignment.Center
@@ -34,23 +34,22 @@ Container {
             imageSource: "images/correct_answer.png"
         }
         Container {
-            preferredHeight: 980
-            preferredWidth: 720
-            topPadding: 160
-            leftPadding: 40
-            //background: Color.Green
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 42
+                positionY: 161
+            }
             Container {
-                id: testContainer
+                id: nextCorrect
                 preferredHeight: 300
                 preferredWidth: 300
                 //background: Color.Gray
             }
             onTouch: {
                 if (event.isDown()) {
-                    testContainer.background = Color.Green
+                    nextCorrect.background = Color.Green
                 }
                 if (event.isUp()) {
-                    testContainer.background = Color.Transparent
+                    nextCorrect.background = Color.Transparent
                     sequentTiles.NextGame();
                 }
             }
@@ -58,30 +57,93 @@ Container {
                 //do nothing
             }
         }
-
         Container {
-            preferredHeight: 980
-            preferredWidth: 720
-            topPadding: 500
-            leftPadding: 380
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 380
+                positionY: 500
+            }
             Container {
+                id: resetCorrect
                 preferredHeight: 300
                 preferredWidth: 300
                 //background: Color.Gray
             }
             onTouch: {
                 if (event.isDown()) {
-                    testContainer.background = Color.Green
+                    resetCorrect.background = Color.Blue
                 }
                 if (event.isUp()) {
-                    testContainer.background = Color.Transparent
-                    //sequentTiles.RedoGame();
+                    resetCorrect.background = Color.Transparent
+                    sequentTiles.RedoGame();
                 }
             }
             onTouchExit: {
                 //do nothing
             }
         }
-    }
+    } //correct answer
+    Container {
+        layout: AbsoluteLayout {
+        }
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Center
+        //background: Color.Gray
+        visible: if (sequentTiles.showRetry) {
+            1
+        } else {
+            0
+        }
+        ImageView {
+            imageSource: "images/incorrect_answer.png"
+        }
+        Container {
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 42
+                positionY: 161
+            }
+            Container {
+                id: homeIncorrect
+                preferredHeight: 300
+                preferredWidth: 300
+                //background: Color.Gray
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    homeIncorrect.background = Color.DarkGreen
+                }
+                if (event.isUp()) {
+                    homeIncorrect.background = Color.Transparent
+                    sequentTiles.Home();
+                }
+            }
+            onTouchExit: {
+                //do nothing
+            }
+        }
+        Container {
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 380
+                positionY: 500
+            }
+            Container {
+                id: resetHome
+                preferredHeight: 300
+                preferredWidth: 300
+                //background: Color.Gray
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    resetHome.background = Color.DarkRed
+                }
+                if (event.isUp()) {
+                    resetHome.background = Color.Transparent
+                    sequentTiles.RedoGame();
+                }
+            }
+            onTouchExit: {
+                //do nothing
+            }
+        }
+    } //incorrect answer
 
 }

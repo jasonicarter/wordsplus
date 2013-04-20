@@ -27,6 +27,8 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     //initialize stuff
     showNext = false;
     showRetry = false;
+    level = 1;
+    package = 1;
 
     InitializeHomeContainer();
     InitializePuzzleContainer();
@@ -59,26 +61,27 @@ void ApplicationUI::Submit() {
 
 	bool answer = true;
 
-	if( (selectTiles.count() == 0) or (selectTiles.count() < 4)){
-		answer = false;
-	}
-	else {
-		for(int i = 0; i < 4; i++){
-			if(selectTiles[i] != i){
-				 answer = false;
+	if (selectTiles.count() != 0) {
+
+		if (selectTiles.count() < 4) {
+			answer = false;
+		} else {
+			for (int i = 0; i < 4; i++) {
+				if (selectTiles[i] != i) {
+					answer = false;
+				}
 			}
 		}
-	}
+		if (answer) {
+			//emit signal correctSignal
+			setShowNext(true);
+			emit showNextChanged();
+		} else {
+			//emit signal incorrectSignal
+			setShowRetry(true);
+			emit ShowRetryChanged();
+		}
 
-	if(answer){
-		//emit signal correctSignal
-		setShowNext(true);
-		emit showNextChanged();
-	}
-	else{
-		//emit signal incorrectSignal
-		setShowRetry(true);
-		emit ShowRetryChanged();
 	}
 }
 
@@ -98,8 +101,13 @@ void ApplicationUI::setShowRetry(bool status){
 
 
 void ApplicationUI::NextGame(){
+	//should actually increase level up to x and then increase package
 	NewGame(1,2);
 }
+void ApplicationUI::RedoGame(){
+	NewGame(package,level);
+}
+
 
 void ApplicationUI::NewGame(int pkg, int level) {
 
@@ -123,8 +131,6 @@ void ApplicationUI::NewGame(int pkg, int level) {
 	selectTiles.clear(); //reset selection tracker
 
 	for (int i = 0; i < 4; i++) {
-		//listOfWords.append(puzzleWords[i]);
-
 		//LOG("word index: %i", wordDataList[listOfWords]);
 
 		ImageView *imageView = ImageView::create().bottomMargin(0).topMargin(0).leftMargin(0).rightMargin(0);
@@ -191,9 +197,6 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 					QString imageSource = QString("asset:///packages/selected.png");
 					senderImage->setImage(Image(imageSource));
 				}
-
-//				QString imageSource = QString("asset:///packages/selected.png");
-//				senderImage->setImage(Image(imageSource));
 			}
 
 		} // if statement

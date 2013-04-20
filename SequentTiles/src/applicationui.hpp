@@ -24,6 +24,7 @@ public:
 
     Q_INVOKABLE void NewGame(int pkg=1, int level=1);
     Q_INVOKABLE void NextGame();
+    Q_INVOKABLE void RedoGame();
     Q_INVOKABLE void Home();
     Q_INVOKABLE void Submit();
     Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
@@ -50,6 +51,8 @@ private:
 
     float wantedSize;
     float numTiles;
+    int level;
+    int package;
     QList<int> selectTiles;
 
 	Page *appPage;
