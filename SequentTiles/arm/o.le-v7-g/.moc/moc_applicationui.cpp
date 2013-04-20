@@ -22,32 +22,46 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
-       0,    0, // properties
+       9,   14, // methods
+       2,   59, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       2,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      15,   14,   14,   14, 0x05,
+      33,   14,   14,   14, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      21,   15,   14,   14, 0x08,
+      58,   52,   14,   14, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-      70,   60,   14,   14, 0x02,
-      91,   87,   14,   14, 0x22,
-     104,   14,   14,   14, 0x22,
-     114,   14,   14,   14, 0x02,
-     126,   14,  121,   14, 0x02,
+     107,   97,   14,   14, 0x02,
+     128,  124,   14,   14, 0x22,
+     141,   14,   14,   14, 0x22,
+     151,   14,   14,   14, 0x02,
+     162,   14,   14,   14, 0x02,
+     169,   14,   14,   14, 0x02,
+
+ // properties: name, type, flags
+     183,  178, 0x01495103,
+     192,  178, 0x01495103,
+
+ // properties: notify_signal_id
+       0,
+       1,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ApplicationUI[] = {
-    "ApplicationUI\0\0event\0"
+    "ApplicationUI\0\0showNextChanged()\0"
+    "ShowRetryChanged()\0event\0"
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "pkg,level\0NewGame(int,int)\0pkg\0"
-    "NewGame(int)\0NewGame()\0Home()\0bool\0"
-    "Submit()\0"
+    "NewGame(int)\0NewGame()\0NextGame()\0"
+    "Home()\0Submit()\0bool\0showNext\0showRetry\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -56,13 +70,15 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_ASSERT(staticMetaObject.cast(_o));
         ApplicationUI *_t = static_cast<ApplicationUI *>(_o);
         switch (_id) {
-        case 0: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 1: _t->NewGame((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 2: _t->NewGame((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->NewGame(); break;
-        case 4: _t->Home(); break;
-        case 5: { bool _r = _t->Submit();
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+        case 0: _t->showNextChanged(); break;
+        case 1: _t->ShowRetryChanged(); break;
+        case 2: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 3: _t->NewGame((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->NewGame((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->NewGame(); break;
+        case 6: _t->NextGame(); break;
+        case 7: _t->Home(); break;
+        case 8: _t->Submit(); break;
         default: ;
         }
     }
@@ -100,10 +116,51 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< bool*>(_v) = getShowNext(); break;
+        case 1: *reinterpret_cast< bool*>(_v) = getShowRetry(); break;
+        }
+        _id -= 2;
+    } else if (_c == QMetaObject::WriteProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: setShowNext(*reinterpret_cast< bool*>(_v)); break;
+        case 1: setShowRetry(*reinterpret_cast< bool*>(_v)); break;
+        }
+        _id -= 2;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 2;
+    }
+#endif // QT_NO_PROPERTIES
     return _id;
+}
+
+// SIGNAL 0
+void ApplicationUI::showNextChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
+}
+
+// SIGNAL 1
+void ApplicationUI::ShowRetryChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, 0);
 }
 QT_END_MOC_NAMESPACE

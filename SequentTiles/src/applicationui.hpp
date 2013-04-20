@@ -23,8 +23,15 @@ public:
     virtual ~ApplicationUI() {}
 
     Q_INVOKABLE void NewGame(int pkg=1, int level=1);
+    Q_INVOKABLE void NextGame();
     Q_INVOKABLE void Home();
-    Q_INVOKABLE bool Submit();
+    Q_INVOKABLE void Submit();
+    Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
+    Q_PROPERTY (bool showRetry READ getShowRetry WRITE setShowRetry NOTIFY ShowRetryChanged);
+
+    Q_SIGNALS:
+    	void showNextChanged();
+    	void ShowRetryChanged();
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -32,6 +39,14 @@ private Q_SLOTS:
 private:
     void InitializeHomeContainer();
     void InitializePuzzleContainer();
+
+    bool showNext;
+	bool getShowNext();
+	void setShowNext(bool status);
+
+    bool showRetry;
+	bool getShowRetry();
+	void setShowRetry(bool status);
 
     float wantedSize;
     float numTiles;

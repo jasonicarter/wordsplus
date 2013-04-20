@@ -15,7 +15,7 @@ Container {
             //            if (event.isDown()) {
             //            }
             if (event.isUp()) {
-                //sequentTiles.NewGame();
+                sequentTiles.Submit();
             }
         }
         onTouchExit: {
