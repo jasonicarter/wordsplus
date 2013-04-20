@@ -10,7 +10,7 @@ Container {
     ImageButton {
         horizontalAlignment: HorizontalAlignment.Left
         defaultImageSource: "images/buttons/home.png"
-        pressedImageSource: "images/buttons/home_selected.png"
+        pressedImageSource: "images/buttons/home_selected.png"      
         onTouch: {
             //            if (event.isDown()) {
             //            }
@@ -30,7 +30,7 @@ Container {
             //            if (event.isDown()) {
             //            }
             if (event.isUp()) {
-                //sequentTiles.NewGame();
+                sequentTiles.NextGame();
             }
         }
         onTouchExit: {

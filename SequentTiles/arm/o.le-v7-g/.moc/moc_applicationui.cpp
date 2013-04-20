@@ -22,8 +22,8 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
-       2,   59, // properties
+      10,   14, // methods
+       2,   64, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -42,11 +42,12 @@ static const uint qt_meta_data_ApplicationUI[] = {
      141,   14,   14,   14, 0x22,
      151,   14,   14,   14, 0x02,
      162,   14,   14,   14, 0x02,
-     169,   14,   14,   14, 0x02,
+     173,   14,   14,   14, 0x02,
+     180,   14,   14,   14, 0x02,
 
  // properties: name, type, flags
-     183,  178, 0x01495103,
-     192,  178, 0x01495103,
+     194,  189, 0x01495103,
+     203,  189, 0x01495103,
 
  // properties: notify_signal_id
        0,
@@ -61,7 +62,8 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "pkg,level\0NewGame(int,int)\0pkg\0"
     "NewGame(int)\0NewGame()\0NextGame()\0"
-    "Home()\0Submit()\0bool\0showNext\0showRetry\0"
+    "RedoGame()\0Home()\0Submit()\0bool\0"
+    "showNext\0showRetry\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -77,8 +79,9 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 4: _t->NewGame((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->NewGame(); break;
         case 6: _t->NextGame(); break;
-        case 7: _t->Home(); break;
-        case 8: _t->Submit(); break;
+        case 7: _t->RedoGame(); break;
+        case 8: _t->Home(); break;
+        case 9: _t->Submit(); break;
         default: ;
         }
     }
@@ -116,9 +119,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
