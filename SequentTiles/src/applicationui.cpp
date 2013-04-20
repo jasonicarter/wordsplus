@@ -23,6 +23,11 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 
 
     appPage = qml->createRootObject<Page>();
+
+    //initialize stuff
+    showNext = false;
+    showRetry = false;
+
     InitializeHomeContainer();
     InitializePuzzleContainer();
     app->setScene(appPage);
@@ -50,12 +55,12 @@ void ApplicationUI::InitializePuzzleContainer() {
 }
 
 //needs to have a property to emit value
-bool ApplicationUI::Submit() {
+void ApplicationUI::Submit() {
 
 	bool answer = true;
 
 	if( (selectTiles.count() == 0) or (selectTiles.count() < 4)){
-		//no nothing
+		answer = false;
 	}
 	else {
 		for(int i = 0; i < 4; i++){
@@ -65,11 +70,44 @@ bool ApplicationUI::Submit() {
 		}
 	}
 
-	return answer;
+	if(answer){
+		//emit signal correctSignal
+		setShowNext(true);
+		emit showNextChanged();
+	}
+	else{
+		//emit signal incorrectSignal
+		setShowRetry(true);
+		emit ShowRetryChanged();
+	}
 }
 
 
+bool ApplicationUI::getShowNext(){
+	return showNext;
+}
+void ApplicationUI::setShowNext(bool status){
+	showNext = status;
+}
+bool ApplicationUI::getShowRetry(){
+	return showRetry;
+}
+void ApplicationUI::setShowRetry(bool status){
+	showRetry = status;
+}
+
+
+void ApplicationUI::NextGame(){
+	NewGame(1,2);
+}
+
 void ApplicationUI::NewGame(int pkg, int level) {
+
+	//rest puzzleCenterContainer.qml
+	setShowRetry(false);
+	setShowNext(false);
+	emit ShowRetryChanged();
+	emit showNextChanged();
 
 	playContainer = puzzleControl->findChild<Container*>("puzzlePlayContainer");
 	playContainer->removeAll();

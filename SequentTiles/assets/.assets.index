@@ -1,5 +1,5 @@
 1
-40
+43
 AboutSheet.qml
 CategorySheet.qml
 HelpSheet.qml
@@ -23,6 +23,7 @@ images/buttons/skip.png
 images/buttons/skip_selected.png
 images/category.png
 images/close.png
+images/correct_answer.png
 images/help.png
 images/selected.png
 images/trophy.png
@@ -33,6 +34,8 @@ packages/pkg_1/level_1/2.png
 packages/pkg_1/level_1/3.png
 packages/pkg_1/level_2/0.png
 packages/pkg_1/level_2/1.png
+packages/pkg_1/level_2/2.png
+packages/pkg_1/level_2/3.png
 packages/selected.png
 PuzzleBtmNavContainer.qml
 PuzzleCenterContainer.qml
