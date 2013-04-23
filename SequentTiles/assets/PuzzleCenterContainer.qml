@@ -6,17 +6,85 @@ Container {
     //background: Color.Gray
     layout: DockLayout {
     }
+    PuzzleBackgroundContainer {
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Center
+    }
     Container {
         horizontalAlignment: HorizontalAlignment.Center
         verticalAlignment: VerticalAlignment.Center
         bottomPadding: 10
         Container {
+            layout: AbsoluteLayout {
+            }
             objectName: "puzzlePlayContainer"
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             preferredHeight: 638
             preferredWidth: 638
             //background: Color.Black
+        }
+    }
+    Container {
+        layout: DockLayout {
+        }
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Bottom
+        ImageView {
+            imageSource: "images/buttons/hint_skip.png"
+        }
+        ImageView {
+            id: hint_selected
+            visible: false
+            imageSource: "images/buttons/hint_selected.png"
+        }
+        ImageView {
+            id: skip_selected
+            visible: false
+            imageSource: "images/buttons/skip_selected.png"
+        }
+        Container {
+            layout: StackLayout {
+                orientation: LayoutOrientation.LeftToRight
+            }
+            preferredHeight: 100
+            preferredWidth: 500
+            //background: Color.Red
+            horizontalAlignment: HorizontalAlignment.Center
+            Container {
+                preferredHeight: 100
+                preferredWidth: 250
+                //background: Color.Green
+                onTouch: {
+                    if (event.isDown()) {
+                        hint_selected.visible = true
+                    }
+                    if (event.isUp()) {
+                        hint_selected.visible = false
+                        sequentTiles.NextGame()
+                    }
+                }
+                onTouchExit: {
+                    hint_selected.visible = false
+                }
+            }
+            Container {
+                preferredHeight: 100
+                preferredWidth: 250
+                //background: Color.Black
+                onTouch: {
+                    if (event.isDown()) {
+                        skip_selected.visible = true
+                    }
+                    if (event.isUp()) {
+                        skip_selected.visible = false
+                        sequentTiles.NextGame()
+                    }
+                }
+                onTouchExit: {
+                    skip_selected.visible = false
+                }
+            }
         }
     }
     Container {
@@ -36,17 +104,17 @@ Container {
         Container {
             layoutProperties: AbsoluteLayoutProperties {
                 positionX: 42
-                positionY: 161
+                positionY: 162
             }
             Container {
                 id: nextCorrect
                 preferredHeight: 300
                 preferredWidth: 300
-                //background: Color.Gray
+                //background: Color.Red
             }
             onTouch: {
                 if (event.isDown()) {
-                    nextCorrect.background = Color.Green
+                    nextCorrect.background = Color.Red
                 }
                 if (event.isUp()) {
                     nextCorrect.background = Color.Transparent
@@ -59,18 +127,18 @@ Container {
         }
         Container {
             layoutProperties: AbsoluteLayoutProperties {
-                positionX: 380
-                positionY: 500
+                positionX: 379
+                positionY: 502
             }
             Container {
                 id: resetCorrect
                 preferredHeight: 300
                 preferredWidth: 300
-                //background: Color.Gray
+                //background: Color.Red
             }
             onTouch: {
                 if (event.isDown()) {
-                    resetCorrect.background = Color.Blue
+                    resetCorrect.background = Color.Red
                 }
                 if (event.isUp()) {
                     resetCorrect.background = Color.Transparent
@@ -83,10 +151,8 @@ Container {
         }
     } //correct answer
     Container {
-        layout: AbsoluteLayout {
-        }
         horizontalAlignment: HorizontalAlignment.Center
-        verticalAlignment: VerticalAlignment.Center
+        verticalAlignment: VerticalAlignment.Top
         //background: Color.Gray
         visible: if (sequentTiles.showRetry) {
             1
@@ -96,54 +162,7 @@ Container {
         ImageView {
             imageSource: "images/incorrect_answer.png"
         }
-        Container {
-            layoutProperties: AbsoluteLayoutProperties {
-                positionX: 42
-                positionY: 161
-            }
-            Container {
-                id: homeIncorrect
-                preferredHeight: 300
-                preferredWidth: 300
-                //background: Color.Gray
-            }
-            onTouch: {
-                if (event.isDown()) {
-                    homeIncorrect.background = Color.DarkGreen
-                }
-                if (event.isUp()) {
-                    homeIncorrect.background = Color.Transparent
-                    sequentTiles.Home();
-                }
-            }
-            onTouchExit: {
-                //do nothing
-            }
-        }
-        Container {
-            layoutProperties: AbsoluteLayoutProperties {
-                positionX: 380
-                positionY: 500
-            }
-            Container {
-                id: resetHome
-                preferredHeight: 300
-                preferredWidth: 300
-                //background: Color.Gray
-            }
-            onTouch: {
-                if (event.isDown()) {
-                    resetHome.background = Color.DarkRed
-                }
-                if (event.isUp()) {
-                    resetHome.background = Color.Transparent
-                    sequentTiles.RedoGame();
-                }
-            }
-            onTouchExit: {
-                //do nothing
-            }
-        }
+
     } //incorrect answer
 
 }

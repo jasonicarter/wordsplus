@@ -27,8 +27,8 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     //initialize stuff
     showNext = false;
     showRetry = false;
-    level = 1;
-    package = 1;
+    currentLevel = 1;
+    currentPackage = 1;
 
     InitializeHomeContainer();
     InitializePuzzleContainer();
@@ -79,6 +79,7 @@ void ApplicationUI::Submit() {
 		} else {
 			//emit signal incorrectSignal
 			setShowRetry(true);
+			//NewGame();
 			emit ShowRetryChanged();
 		}
 
@@ -102,10 +103,12 @@ void ApplicationUI::setShowRetry(bool status){
 
 void ApplicationUI::NextGame(){
 	//should actually increase level up to x and then increase package
-	NewGame(1,2);
+	//TODO
+	if(currentLevel != 19){currentLevel++;} //just so it wont crash during testing
+	NewGame(currentPackage,currentLevel);
 }
 void ApplicationUI::RedoGame(){
-	NewGame(package,level);
+	NewGame(currentPackage,currentLevel);
 }
 
 
@@ -184,6 +187,12 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 
 			// Get the object name (actually the image name which is easy to identify).
 			QVariant v = senderImage->imageSource();
+
+//			AbsoluteLayoutProperties* pProperties = AbsoluteLayoutProperties::create();
+//			pProperties->setPositionX(337.0 * 1);
+//			pProperties->setPositionY(0.0);
+//			senderImage->setLayoutProperties(pProperties);
+//			playContainer->add(senderImage);
 
 			if (v.canConvert<QString>()) {
 				QStringList imageSrc = v.value<QString>().split("/");
