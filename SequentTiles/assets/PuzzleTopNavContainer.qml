@@ -22,19 +22,19 @@ Container {
             //do nothing
         }
     }
-    ImageButton {
-        horizontalAlignment: HorizontalAlignment.Right
-        defaultImageSource: "images/buttons/skip.png"
-        pressedImageSource: "images/buttons/skip_selected.png"
-        onTouch: {
-            //            if (event.isDown()) {
-            //            }
-            if (event.isUp()) {
-                sequentTiles.NextGame();
-            }
-        }
-        onTouchExit: {
-            //do nothing
-        }
-    }
+//    ImageButton {
+//        horizontalAlignment: HorizontalAlignment.Right
+//        defaultImageSource: "images/buttons/skip.png"
+//        pressedImageSource: "images/buttons/skip_selected.png"
+//        onTouch: {
+//            //            if (event.isDown()) {
+//            //            }
+//            if (event.isUp()) {
+//                sequentTiles.NextGame();
+//            }
+//        }
+//        onTouchExit: {
+//            //do nothing
+//        }
+//    }
 }

@@ -51,8 +51,8 @@ private:
 
     float wantedSize;
     float numTiles;
-    int level;
-    int package;
+    int currentLevel;
+    int currentPackage;
     QList<int> selectTiles;
 
 	Page *appPage;

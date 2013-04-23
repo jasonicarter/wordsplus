@@ -1,0 +1,112 @@
+import bb.cascades 1.0
+
+Container {
+    preferredHeight: 980
+    preferredWidth: 720
+    background: Color.Gray
+    layout: DockLayout {
+    }
+    PuzzleBackgroundContainer {
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Center
+    }
+    Container {
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Center
+        bottomPadding: 10
+        Container {
+            layout: AbsoluteLayout {
+            }
+            objectName: "puzzlePlayContainer"
+            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Center
+            preferredHeight: 638
+            preferredWidth: 638
+            //background: Color.Black
+        }
+    }
+    Container{
+        verticalAlignment: VerticalAlignment.Bottom
+        ImageView {     
+            imageSource: "images/buttons/hint_skip.png"
+        }
+    }
+    Container {
+        layout: AbsoluteLayout {
+        }
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Center
+        //background: Color.Gray
+        visible: if (sequentTiles.showNext) {
+            1
+        } else {
+            0
+        }
+        ImageView {
+            imageSource: "images/correct_answer.png"
+        }
+        Container {
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 42
+                positionY: 162
+            }
+            Container {
+                id: nextCorrect
+                preferredHeight: 300
+                preferredWidth: 300
+                //background: Color.Red
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    nextCorrect.background = Color.Red
+                }
+                if (event.isUp()) {
+                    nextCorrect.background = Color.Transparent
+                    sequentTiles.NextGame();
+                }
+            }
+            onTouchExit: {
+                //do nothing
+            }
+        }
+        Container {
+            layoutProperties: AbsoluteLayoutProperties {
+                positionX: 379
+                positionY: 502
+            }
+            Container {
+                id: resetCorrect
+                preferredHeight: 300
+                preferredWidth: 300
+                //background: Color.Red
+            }
+            onTouch: {
+                if (event.isDown()) {
+                    resetCorrect.background = Color.Red
+                }
+                if (event.isUp()) {
+                    resetCorrect.background = Color.Transparent
+                    sequentTiles.RedoGame();
+                }
+            }
+            onTouchExit: {
+                //do nothing
+            }
+        }
+    } //correct answer
+    Container {
+        horizontalAlignment: HorizontalAlignment.Center
+        verticalAlignment: VerticalAlignment.Top
+        //background: Color.Gray
+        visible: if (sequentTiles.showRetry) {
+            1
+        } else {
+            0
+        }
+        ImageView {
+            imageSource: "images/incorrect_answer.png"
+        }
+
+    } //incorrect answer
+
+}
