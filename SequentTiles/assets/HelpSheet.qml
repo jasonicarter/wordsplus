@@ -4,8 +4,8 @@ Page {
     Container {
         layout: DockLayout {
         }
+        background: Color.create("#272727")
         horizontalAlignment: HorizontalAlignment.Center
-
         ScrollView {
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle

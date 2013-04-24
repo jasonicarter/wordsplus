@@ -21,4 +21,22 @@ Container {
             horizontalAlignment: HorizontalAlignment.Center
         }
     }
+    attachedObjects: [
+        Sheet {
+            id: aboutSheet
+            AboutSheet {
+            }
+        },
+        Sheet {
+            id: helpSheet
+            HelpSheet {
+            }
+        },
+        Sheet {
+            id: settingsSheet
+            SettingsSheet {
+            }
+        }
+    ]
 }
+

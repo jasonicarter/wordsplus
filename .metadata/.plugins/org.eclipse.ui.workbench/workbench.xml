@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="35" version="2.0">
+<workbench progressCount="36" version="2.0">
 <workbenchAdvisor/>
 <window height="1040" maximized="true" width="960" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -40,6 +40,9 @@
 <part id="2"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
@@ -56,17 +59,29 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="37" selectionOffset="1237" selectionTopPixel="2565"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.cpp" partName="applicationui.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.cpp" title="applicationui.cpp" tooltip="SequentTiles/src/applicationui.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.cpp" partName="applicationui.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.cpp" title="applicationui.cpp" tooltip="SequentTiles/src/applicationui.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/applicationui.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5034" selectionTopPixel="2321"/>
 </editor>
 <editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeContainer.qml" partName="HomeContainer.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/HomeContainer.qml" title="HomeContainer.qml" tooltip="SequentTiles/assets/HomeContainer.qml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/HomeContainer.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="338" selectionTopPixel="0"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="337" selectionTopPixel="0"/>
 </editor>
-<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" partName="PuzzleCenterContainer.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/PuzzleCenterContainer.qml" title="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="837" selectionTopPixel="0"/>
+<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" partName="AboutSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/AboutSheet.qml" title="AboutSheet.qml" tooltip="SequentTiles/assets/AboutSheet.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/AboutSheet.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="735" selectionTopPixel="0"/>
+</editor>
+<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HelpSheet.qml" partName="HelpSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/HelpSheet.qml" title="HelpSheet.qml" tooltip="SequentTiles/assets/HelpSheet.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/HelpSheet.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="190" selectionTopPixel="0"/>
+</editor>
+<editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" partName="SettingsSheet.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/SettingsSheet.qml" title="SettingsSheet.qml" tooltip="SequentTiles/assets/SettingsSheet.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/SettingsSheet.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="3" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="550" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeTopNavContainer.qml" partName="HomeTopNavContainer.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/HomeTopNavContainer.qml" title="HomeTopNavContainer.qml" tooltip="SequentTiles/assets/HomeTopNavContainer.qml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/HomeTopNavContainer.qml"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1772" selectionTopPixel="607"/>
 </editor>
 </editors>
 <views>
@@ -156,7 +171,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -499,14 +514,14 @@
 <view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
 </fastViews>
 </fastViewBar>
-<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
 <fastViews>
 <view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
@@ -582,13 +597,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleContainer.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleTopNavContainer.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeContainer.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeBtmNavContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/images/buttons/play_big.png"/>
@@ -598,152 +606,153 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeTopNavContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/main.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/AboutSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HelpSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/SettingsSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/images/selected.png"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/SequentTiles/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/icon.png"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeTopNavContainer.qml"/>
 </editors>
-<item historyLabel="PuzzleCenterContainer.qml" index="1">
-<position info="not_deleted" x="3391" y="0"/>
-</item>
-<item historyLabel="PuzzleTopNavContainer.qml" index="2">
-<position info="not_deleted" x="563" y="0"/>
-</item>
-<item historyLabel="PuzzleContainer.qml" index="0">
-<position info="not_deleted" x="336" y="0"/>
-</item>
-<item historyLabel="PuzzleContainer.qml" index="0">
-<position info="not_deleted" x="361" y="0"/>
-</item>
-<item historyLabel="PuzzleContainer.qml" index="0">
-<position info="not_deleted" x="640" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="3">
-<position info="not_deleted" x="2213" y="0"/>
-</item>
-<item historyLabel="applicationui.hpp" index="4">
-<position info="not_deleted" x="762" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="3">
-<position info="not_deleted" x="904" y="46"/>
-</item>
-<item historyLabel="applicationui.hpp" index="4">
-<position info="not_deleted" x="1508" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="3">
-<position info="not_deleted" x="904" y="46"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="5">
-<position info="not_deleted" x="489" y="0"/>
-</item>
-<item historyLabel="applicationui.hpp" index="6">
-<position info="not_deleted" x="1508" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="511" y="0"/>
 </item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
-<position info="not_deleted" x="35" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
-<position info="not_deleted" x="116" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
-<position info="not_deleted" x="123" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="HomeContainer.qml" index="7">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
+<item historyLabel="HomeBtmNavContainer.qml" index="1">
 <position info="not_deleted" x="273" y="0"/>
 </item>
-<item historyLabel="play_big.png" index="9"/>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
+<item historyLabel="play_big.png" index="2"/>
+<item historyLabel="HomeBtmNavContainer.qml" index="1">
 <position info="not_deleted" x="273" y="0"/>
 </item>
-<item historyLabel="play_selected.png" index="10"/>
-<item historyLabel="HomeBtmNavContainer.qml" index="8">
+<item historyLabel="play_selected.png" index="3"/>
+<item historyLabel="HomeBtmNavContainer.qml" index="1">
 <position info="not_deleted" x="123" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="345" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="11">
+<item historyLabel="HomeTopNavContainer.qml" index="4">
 <position info="not_deleted" x="123" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="345" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="11">
+<item historyLabel="HomeTopNavContainer.qml" index="4">
 <position info="not_deleted" x="1460" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="345" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="11">
+<item historyLabel="HomeTopNavContainer.qml" index="4">
 <position info="not_deleted" x="1934" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="345" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="11">
+<item historyLabel="HomeTopNavContainer.qml" index="4">
 <position info="not_deleted" x="972" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="604" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="11">
+<item historyLabel="HomeTopNavContainer.qml" index="4">
 <position info="not_deleted" x="151" y="2168"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="604" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="12">
+<item historyLabel="applicationui.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="PuzzleContainer.qml" index="13">
+<item historyLabel="PuzzleContainer.qml" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="12">
+<item historyLabel="applicationui.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="14">
+<item historyLabel="PuzzleCenterContainer.qml" index="7">
 <position/>
 </item>
-<item historyLabel="applicationui.cpp" index="12">
+<item historyLabel="applicationui.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="14">
+<item historyLabel="PuzzleCenterContainer.qml" index="7">
 <position/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="338" y="0"/>
 </item>
-<item historyLabel="HomeTopNavContainer.qml" index="15">
+<item historyLabel="HomeTopNavContainer.qml" index="8">
 <position info="not_deleted" x="281" y="0"/>
 </item>
-<item historyLabel="HomeContainer.qml" index="7">
+<item historyLabel="HomeContainer.qml" index="0">
 <position info="not_deleted" x="338" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="14">
+<item historyLabel="PuzzleCenterContainer.qml" index="7">
 <position info="not_deleted" x="837" y="0"/>
 </item>
-<item active="true" historyLabel="applicationui.cpp" index="12">
+<item historyLabel="applicationui.cpp" index="5">
 <position/>
+</item>
+<item historyLabel="main.qml" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HomeContainer.qml" index="10">
+<position info="not_deleted" x="338" y="0"/>
+</item>
+<item historyLabel="WordsPlusGame.hpp" index="11">
+<position info="not_deleted" x="1237" y="37"/>
+</item>
+<item historyLabel="HomeContainer.qml" index="10">
+<position info="not_deleted" x="911" y="0"/>
+</item>
+<item historyLabel="main.qml" index="9">
+<position info="not_deleted" x="454" y="0"/>
+</item>
+<item historyLabel="HomeContainer.qml" index="10">
+<position info="not_deleted" x="76" y="35"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="32" y="0"/>
+</item>
+<item historyLabel="HelpSheet.qml" index="13">
+<position info="not_deleted" x="190" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PuzzleCenterContainer.qml" index="15">
+<position info="not_deleted" x="3733" y="0"/>
+</item>
+<item historyLabel="selected.png" index="16"/>
+<item historyLabel="PuzzleCenterContainer.qml" index="15">
+<position info="not_deleted" x="5320" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="17"/>
+<item historyLabel="icon.png" index="18"/>
+<item historyLabel="bar-descriptor.xml" index="17"/>
+<item historyLabel="PuzzleCenterContainer.qml" index="15">
+<position info="not_deleted" x="5320" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="14">
+<position info="not_deleted" x="550" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="32" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="17"/>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="735" y="0"/>
+</item>
+<item historyLabel="HomeContainer.qml" index="10">
+<position info="not_deleted" x="337" y="0"/>
+</item>
+<item active="true" historyLabel="HomeTopNavContainer.qml" index="19">
+<position info="not_deleted" x="277" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -774,6 +783,27 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeTopNavContainer.qml" tooltip="SequentTiles/assets/HomeTopNavContainer.qml">
 <persistable path="/SequentTiles/assets/HomeTopNavContainer.qml"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml">
+<persistable path="/SequentTiles/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="icon.png" tooltip="SequentTiles/icon.png">
+<persistable path="/SequentTiles/icon.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="selected.png" tooltip="SequentTiles/assets/images/selected.png">
+<persistable path="/SequentTiles/assets/images/selected.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="SequentTiles/assets/SettingsSheet.qml">
+<persistable path="/SequentTiles/assets/SettingsSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HelpSheet.qml" tooltip="SequentTiles/assets/HelpSheet.qml">
+<persistable path="/SequentTiles/assets/HelpSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="SequentTiles/assets/AboutSheet.qml">
+<persistable path="/SequentTiles/assets/AboutSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="SequentTiles/assets/main.qml">
+<persistable path="/SequentTiles/assets/main.qml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml">
 <persistable path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 </file>
@@ -794,27 +824,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleTopNavContainer.qml" tooltip="SequentTiles/assets/PuzzleTopNavContainer.qml">
 <persistable path="/SequentTiles/assets/PuzzleTopNavContainer.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="TopNavContainer.qml" tooltip="SequentTiles/assets/TopNavContainer.qml">
-<persistable path="/SequentTiles/assets/TopNavContainer.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PlayPuzzlePage.qml" tooltip="WordsPlusGame/assets/PlayPuzzlePage.qml">
-<persistable path="/WordsPlusGame/assets/PlayPuzzlePage.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="StatsSheet.qml" tooltip="WordsPlusGame/assets/StatsSheet.qml">
-<persistable path="/WordsPlusGame/assets/StatsSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="WordsPlusGame/assets/SettingsSheet.qml">
-<persistable path="/WordsPlusGame/assets/SettingsSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SequentTiles/src/main.cpp">
-<persistable path="/SequentTiles/src/main.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleBtmNavContainer.qml" tooltip="SequentTiles/assets/PuzzleBtmNavContainer.qml">
-<persistable path="/SequentTiles/assets/PuzzleBtmNavContainer.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="2.png" tooltip="SequentTiles/assets/packages/pkg_1/level_1/2.png">
-<persistable path="/SequentTiles/assets/packages/pkg_1/level_1/2.png"/>
 </file>
 </mruList>
 </workbench>
