@@ -1,9 +1,10 @@
 import bb.cascades 1.0
 
-Page {
+Page { 
     Container {
         layout: DockLayout {
-        }       
+        }
+        background: Color.create("#272727")
         ScrollView {
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle

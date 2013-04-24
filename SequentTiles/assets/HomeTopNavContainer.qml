@@ -41,6 +41,23 @@ Container {
             Container {
                 preferredHeight: 100
                 preferredWidth: 250
+                //background: Color.Gray
+                onTouch: {
+                    if (event.isDown()) {
+                        about_selected.visible = true
+                    }
+                    if (event.isUp()) {
+                        about_selected.visible = false
+                        aboutSheet.open();
+                    }
+                }
+                onTouchExit: {
+                    about_selected.visible = false
+                }
+            }
+            Container {
+                preferredHeight: 100
+                preferredWidth: 250
                 //background: Color.Green
                 onTouch: {
                     if (event.isDown()) {
@@ -72,23 +89,7 @@ Container {
                     tools_selected.visible = false
                 }
             }
-            Container {
-                preferredHeight: 100
-                preferredWidth: 250
-                //background: Color.Gray
-                onTouch: {
-                    if (event.isDown()) {
-                        about_selected.visible = true
-                    }
-                    if (event.isUp()) {
-                        about_selected.visible = false
-                        aboutSheet.open();
-                    }
-                }
-                onTouchExit: {
-                    about_selected.visible = false
-                }
-            }
+
         }
     }
 }

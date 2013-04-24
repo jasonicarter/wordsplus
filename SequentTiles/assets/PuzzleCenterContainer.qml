@@ -107,17 +107,22 @@ Container {
                 positionY: 162
             }
             Container {
-                id: nextCorrect
+                //id: nextCorrect
                 preferredHeight: 300
                 preferredWidth: 300
                 //background: Color.Red
+                ImageView {
+                    id: nextCorrect
+                    visible: false
+                    imageSource: "images/buttons/selected.png"
+                }
             }
             onTouch: {
                 if (event.isDown()) {
-                    nextCorrect.background = Color.Red
+                    nextCorrect.visible = true
                 }
                 if (event.isUp()) {
-                    nextCorrect.background = Color.Transparent
+                    nextCorrect.visible = false
                     sequentTiles.NextGame();
                 }
             }
@@ -131,17 +136,22 @@ Container {
                 positionY: 502
             }
             Container {
-                id: resetCorrect
+                //id: resetCorrect
                 preferredHeight: 300
                 preferredWidth: 300
                 //background: Color.Red
+                ImageView {
+                    id: resetCorrect
+                    visible: false
+                    imageSource: "images/buttons/selected.png"
+                }
             }
             onTouch: {
                 if (event.isDown()) {
-                    resetCorrect.background = Color.Red
+                    resetCorrect.visible = true
                 }
                 if (event.isUp()) {
-                    resetCorrect.background = Color.Transparent
+                    resetCorrect.visible = false
                     sequentTiles.RedoGame();
                 }
             }
