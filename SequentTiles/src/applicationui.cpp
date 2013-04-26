@@ -24,11 +24,15 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 
     appPage = qml->createRootObject<Page>();
 
+	// Initialize for local storage settings
+	settings = new GameSettings();
+
     //initialize stuff
     showNext = false;
     showRetry = false;
-    currentLevel = 1;
+    currentLevel = getCurrentLevel();
     currentPackage = 1;
+
 
     InitializeHomeContainer();
     InitializePuzzleContainer();
@@ -99,18 +103,41 @@ bool ApplicationUI::getShowRetry(){
 void ApplicationUI::setShowRetry(bool status){
 	showRetry = status;
 }
+int ApplicationUI::getCurrentLevel(){
+	return (settings->getValueFor("CurrentLevel", "1")).toInt();
+}
+void ApplicationUI::setCurrentLevel(int level){
+	settings->saveValueFor("CurrentLevel", QString::number(level));
+}
+void ApplicationUI::ResetAll(){
+	setCurrentLevel(1);
+}
+int ApplicationUI::getCoinCount(){
+	return (settings->getValueFor("Coins", "100")).toInt();
+}
+void ApplicationUI::setCoinCount(int coins){
+	settings->saveValueFor("Coins", QString::number(coins));
+	emit coinCountChanged();
+}
 
 
 void ApplicationUI::NextGame(){
-	//should actually increase level up to x and then increase package
 	//TODO
-	if(currentLevel != 19){currentLevel++;} //just so it wont crash during testing
+	if(currentLevel != 19){ //just so it wont crash during testing
+		currentLevel = getCurrentLevel() + 1;
+		setCurrentLevel(currentLevel);
+	}
+
 	NewGame(currentPackage,currentLevel);
 }
 void ApplicationUI::RedoGame(){
 	NewGame(currentPackage,currentLevel);
 }
 
+void ApplicationUI::StartGame(){
+	//int i = getCurrentLevel();
+	NewGame(1, getCurrentLevel());
+}
 
 void ApplicationUI::NewGame(int pkg, int level) {
 

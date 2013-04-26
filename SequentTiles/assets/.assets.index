@@ -1,5 +1,5 @@
 1
-107
+108
 AboutSheet.qml
 HelpSheet.qml
 HomeBtmNavContainer.qml
@@ -33,6 +33,7 @@ images/buttons/tools_selected.png
 images/category.png
 images/close.png
 images/correct_answer.png
+images/gold.png
 images/help.png
 images/incorrect_answer.png
 images/trophy.png

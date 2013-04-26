@@ -5,11 +5,15 @@
 #include <QTranslator>
 #include "applicationui.hpp"
 
+#include "PaymentServiceControl.hpp"
+#include <bb/platform/PaymentManager>
+
 // include JS Debugger / CS Profiler enabler
 // this feature is enabled by default in the debug build only
 #include <Qt/qdeclarativedebug.h>
 
 using namespace bb::cascades;
+using namespace bb::platform;
 
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
@@ -23,6 +27,13 @@ Q_DECL_EXPORT int main(int argc, char **argv)
     if (translator.load(filename, "app/native/qm")) {
         app.installTranslator( &translator );
     }
+
+    //PaymentManager::setConnectionMode(PaymentConnectionMode::Production);
+    PaymentManager::setConnectionMode(PaymentConnectionMode::Test);
+
+    // Register our class that wraps the C++ PaymentService interface with QML so that we
+    // can make calls into the PaymentService and get results, through QML.
+    qmlRegisterType<PaymentServiceControl>("com.sample.payment", 1, 0, "PaymentServiceControl");
 
     new ApplicationUI(&app);
 

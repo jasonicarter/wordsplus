@@ -116,6 +116,12 @@ Page {
                             base: settingsSheetSubTitleNormalWhite.style
                         }
                     }
+                    Button {
+                        text:"RESET ALL"
+                        onClicked: {
+                            sequentTiles.ResetAll();
+                        }
+                    }
                 }
             } // middle container
         }
