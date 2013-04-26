@@ -2,6 +2,8 @@ APP_NAME = SequentTiles
 
 CONFIG += qt warn_on cascades10
 
+LIBS += -lbbplatform
+
 include(config.pri)
 
 device {
