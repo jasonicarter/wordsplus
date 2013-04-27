@@ -13,8 +13,6 @@ Container {
         defaultImageSource: "images/buttons/home.png"
         pressedImageSource: "images/buttons/home_selected.png"
         onTouch: {
-            //            if (event.isDown()) {
-            //            }
             if (event.isUp()) {
                 sequentTiles.Home();
             }
@@ -30,13 +28,11 @@ Container {
         preferredHeight: 150
         //background: Color.Gray
         horizontalAlignment: HorizontalAlignment.Right
-        //verticalAlignment: VerticalAlignment.Center
         ImageView {
             verticalAlignment: VerticalAlignment.Center
             imageSource: "images/gold.png"
         }
         Label {
-            id: coinCount
             verticalAlignment: VerticalAlignment.Center
             text: sequentTiles.coinCount
             textStyle {
@@ -47,51 +43,15 @@ Container {
         }
         onTouch: {
             if (event.isUp()) {
-                paymentControl.id = "123456789"
-                paymentControl.sku = "SKU-1"
-                paymentControl.name = "200 Coins"
-                paymentControl.metadata = "200 Coins"
-                paymentControl.getPrice(paymentControl.id, paymentControl.sku)
-                paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
+                paymentSheet.open();
             }
         }
     }
     attachedObjects: [
-
-        //! [3]
-        // The custom payment element for holding item data
-        // and used for method invocation and receiving events as a
-        // result of those invocations
-        PaymentServiceControl {
-            id: paymentControl
-            property string id
-            property string sku
-            property string name
-            property string metadata
-            onPriceResponseSuccess: {
-
-            }
-
-            onPurchaseResponseSuccess: {
-                var coins = Number(coinCount.text);
-                //coinCount.text = coins + 200;
-                sequentTiles.coinCount = coins + 200;
-            }
-            onExistingPurchasesResponseSuccess: {
-
-            }
-            onSubscriptionTermsResponseSuccess: {
-
-            }
-            onCancelSubscriptionResponseSuccess: {
-
-            }
-            onCheckStatusResponseSuccess: {
-
-            }
-            onInfoResponseError: {
+        Sheet {
+            id: paymentSheet
+            PaymentContainer {
             }
         }
-    //! [3]
     ]
 }
