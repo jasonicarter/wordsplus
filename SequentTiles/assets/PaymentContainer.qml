@@ -196,24 +196,14 @@ Page {
                 property string name
                 property string metadata
                 onPriceResponseSuccess: {
-
                 }
-
                 onPurchaseResponseSuccess: {
                     var coinsBought = Number(metadata);
                     sequentTiles.coinCount = sequentTiles.coinCount + coinsBought;
                 }
                 onExistingPurchasesResponseSuccess: {
-
-                }
-                onSubscriptionTermsResponseSuccess: {
-
-                }
-                onCancelSubscriptionResponseSuccess: {
-
                 }
                 onCheckStatusResponseSuccess: {
-
                 }
                 onInfoResponseError: {
                 }

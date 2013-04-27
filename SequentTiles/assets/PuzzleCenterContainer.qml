@@ -110,9 +110,7 @@ Container {
                 }
             }
         }
-
         attachedObjects: [
-
             CustomDialogBox {
                 id: customDialog
                 onOpened: {

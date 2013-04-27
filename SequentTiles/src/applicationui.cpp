@@ -107,6 +107,7 @@ int ApplicationUI::getCurrentLevel(){
 	return (settings->getValueFor("CurrentLevel", "1")).toInt();
 }
 void ApplicationUI::setCurrentLevel(int level){
+	currentLevel = level;
 	settings->saveValueFor("CurrentLevel", QString::number(level));
 }
 void ApplicationUI::ResetAll(){

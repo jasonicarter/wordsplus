@@ -13,70 +13,6 @@ Page {
                 preferredWidth: 700
                 topPadding: 100
                 Container {
-                    Container { // sound
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 700
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Sound Effects:"
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: settingsSheetBigBodyNormalBlue.style
-                            }
-                        }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
-                            ToggleButton {
-                                id: soundEffects
-                                checked: wordsPlus.soundOn
-                                onCheckedChanged: {
-
-                                }
-                            }
-                        }
-                    } // sound
-                    Divider {
-                        opacity: 0
-                    }
-                    Container { // music
-                        layout: DockLayout {
-                        }
-                        background: Color.create("#272727")
-                        preferredWidth: 700
-                        preferredHeight: 100
-                        leftPadding: 15
-                        Label {
-                            text: "Background Music:"
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: settingsSheetBigBodyNormalBlue.style
-                            }
-                        }
-                        Container {
-                            rightPadding: 15
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Right
-                            ToggleButton {
-                                id: music
-                                checked: true
-                                onCheckedChanged: {
-
-                                }
-                            }
-                        }
-                    } // music
-                    Divider {
-                        opacity: 0
-                    }
                     Container { // bbm
                         layout: DockLayout {
                         }
@@ -85,7 +21,7 @@ Page {
                         preferredHeight: 100
                         leftPadding: 15
                         Label {
-                            text: "BBM App Updates:"
+                            text: "Enable Reset Button:"
                             touchPropagationMode: TouchPropagationMode.None
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Left
@@ -98,16 +34,24 @@ Page {
                             verticalAlignment: VerticalAlignment.Center
                             horizontalAlignment: HorizontalAlignment.Right
                             ToggleButton {
-                                id: profileBox
+                                id: resetToggle
                                 checked: false
                                 onCheckedChanged: {
-
+                                	if(resetToggle.checked == true){
+                                	    btnReset.enabled = true;
+                                	} else {
+                                        btnReset.enabled = false;
+                                    }
                                 }
                             }
                         }
-                    } // bbm
+                    }
+                    Divider {
+                        
+                    }
                     Label {
-                        text: "Updates occur whenever you completed a puzzle, beat your best time " + "or during other important in-game accomplishments. It's strongly recommended that you leave this feature on."
+                        text: "1) Enable reset button.\n 2) Click button 'Reset Game'\n\n" 
+                        + "All progress will be lost. Coins will be saved."
                         multiline: true
                         touchPropagationMode: TouchPropagationMode.None
                         verticalAlignment: VerticalAlignment.Center
@@ -117,9 +61,12 @@ Page {
                         }
                     }
                     Button {
-                        text:"RESET ALL"
+                        id: btnReset
+                        text:"RESET GAME"
+                        enabled: false;
                         onClicked: {
-                            sequentTiles.ResetAll();
+                            resetToggle.checked = false;
+                            sequentTiles.ResetAll();                      
                         }
                     }
                 }

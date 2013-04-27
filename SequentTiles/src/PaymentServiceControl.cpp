@@ -63,6 +63,9 @@ PaymentServiceControl::PaymentServiceControl(QObject *parent)
     // Get the window group ID and pass it to the PaymentService instance.
     const QString windowGroupId = bb::cascades::Application::instance()->mainWindow()->groupId();
     m_paymentManager->setWindowGroupId(windowGroupId);
+
+    // Set the application name so that it shows up in the purchase banner.
+    m_paymentManager->setApplicationName("The Awesome Store");
 }
 
 PaymentServiceControl::~PaymentServiceControl()
