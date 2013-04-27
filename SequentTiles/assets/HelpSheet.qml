@@ -4,6 +4,7 @@ Page {
     Container {
         layout: DockLayout {
         }
+        preferredWidth: 768
         background: Color.create("#272727")
         horizontalAlignment: HorizontalAlignment.Center
         ScrollView {
@@ -13,48 +14,18 @@ Page {
                 topPadding: 100
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
-                Container { //points section
-                    Container {
-                        background: Color.create("#272727")
-                        TextArea {
-                            text: "Points:"
-                            editable: false
-                            touchPropagationMode: TouchPropagationMode.None
-                            textStyle {
-                                base: helpSheetBigBodyNormalBlue.style
-                            }
-                        }
-                    }
-                }
                 Label {
-                    text: "You gain points by completing puzzles. The higher the difficulty level " + "and the faster the time completed, the more points you'll be rewarded. Different categories to not provide more points."
-                    multiline: true
-                    touchPropagationMode: TouchPropagationMode.None
-                    verticalAlignment: VerticalAlignment.Center
-                    horizontalAlignment: HorizontalAlignment.Left
+                    text: "Help:"
                     textStyle {
-                        base: helpSheetSubTitleNormalWhite.style
+                        base: helpSheetBigBodyNormalBlue.style
                     }
                 }
                 Divider {
-                    opacity: 0
-                }
-                Container { //pausing section
-                    Container {
-                        background: Color.create("#272727")
-                        TextArea {
-                            text: "Pausing:"
-                            editable: false
-                            touchPropagationMode: TouchPropagationMode.None
-                            textStyle {
-                                base: helpSheetBigBodyNormalBlue.style
-                            }
-                        }
-                    }
+
                 }
                 Label {
-                    bottomMargin: 50
-                    text: "During your hours of continuous game play you may feel the need to use the rest room. " + "For such occasions, you can pause your intense game by 'minimizing' or 'thumbnailing' WordsPlus. " + "When you return, just re-open and your game will resume where you left off."
+                    text: "Here's an easy one - follows succession\n" 
+                    + "1, 2, 3 (ascending base 10)\n" + "or even 3, 9, 12 (ascending multiples of 3)"
                     multiline: true
                     touchPropagationMode: TouchPropagationMode.None
                     verticalAlignment: VerticalAlignment.Center
@@ -63,7 +34,130 @@ Page {
                         base: helpSheetSubTitleNormalWhite.style
                     }
                 }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/0.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/1.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/2.png"
+                        }
+                    }
+                }
+                Label {
+                    text: "Write stuff here\n" + "up and to the right\n" + "add some images"
+                    multiline: true
+                    touchPropagationMode: TouchPropagationMode.None
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Left
+                    textStyle {
+                        base: helpSheetSubTitleNormalWhite.style
+                    }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/0.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/1.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/2.png"
+                        }
+                    }
+                }
+                Label {
+                    text: "Write stuff here\n" + "up and to the right\n" + "add some images"
+                    multiline: true
+                    touchPropagationMode: TouchPropagationMode.None
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Left
+                    textStyle {
+                        base: helpSheetSubTitleNormalWhite.style
+                    }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/0.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/1.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/pkg_1/example_1/2.png"
+                        }
+                    }
+                }
             }
+            
         }
     }
     actions: [

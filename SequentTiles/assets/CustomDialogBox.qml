@@ -31,7 +31,7 @@ Dialog {
             layout: DockLayout {
             }
             ImageView {
-                imageSource: "images/test.png"
+                imageSource: "images/background_dialog.png"
             }
             ImageView {
                 imageSource: "images/gold.png"

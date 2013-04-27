@@ -8,22 +8,21 @@ Page {
         ScrollView {
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle
+                preferredHeight: 1280
                 preferredWidth: 700
                 topPadding: 100
                 //background: Color.create("#272727")
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
                 Container { //developer section
-                    Container {
-                        background: Color.create("#272727")
-                        TextArea {
-                            text: "Game Design & Programming:"
-                            editable: false
-                            touchPropagationMode: TouchPropagationMode.None
-                            textStyle {
-                                base: aboutSheetBigBodyNormalBlue.style
-                            }
+                    Label {
+                        text: "Game Design & Programming:"
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
                         }
+                    }
+                    Divider {
+                        
                     }
                     Label {
                         text: "by Jason I. Carter"
@@ -32,18 +31,37 @@ Page {
                         }
                     }
                 }
+                Container { //website section
+                    topMargin: 50
+                    Label {
+                        text: "Website, Twitter & Email Support:"
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
+                        }
+                    }
+                    Divider {
+
+                    }
+                    Label {
+                        leftPadding: 25
+                        multiline: true
+                        text: "Help improve Sequent by sending any requests, suggestions or issues to: \n\n" 
+                        + "Twitter: @jasonicarter\n" + "Email: jason.ian.carter@hotmail.com" 
+                        textStyle {
+                            base: aboutSheetSubTitleNormalWhite.style
+                        }
+                    }
+                }
                 Container { //music section
                     topMargin: 50
-                    Container {
-                        background: Color.create("#272727")
-                        TextArea {
-                            text: "Music:"
-                            editable: false
-                            touchPropagationMode: TouchPropagationMode.None
-                            textStyle {
-                                base: aboutSheetBigBodyNormalBlue.style
-                            }
+                    Label {
+                        text: "Music:"
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
                         }
+                    }
+                    Divider {
+
                     }
                     Label {
                         multiline: true
@@ -53,29 +71,30 @@ Page {
                         }
                     }
                 }
-                Container { //website section
+                Container { //images section
                     topMargin: 50
-                    Container {
-                        background: Color.create("#272727")
-                        TextArea {
-                            text: "Website, Twitter & Email Support:"
-                            touchPropagationMode: TouchPropagationMode.None
-                            editable: false
-                            textStyle {
-                                base: aboutSheetBigBodyNormalBlue.style
-                            }
+
+                    Label {
+                        text: "Attribution:"
+                        textStyle {
+                            base: aboutSheetBigBodyNormalBlue.style
                         }
                     }
+                    Divider {
+
+                    }
                     Label {
-                        leftPadding: 25
                         multiline: true
-                        text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" + "http://twocasualcoders.com/contact\n" + "http://facebook.com/WordsPlusGame"
+                        text: "The Noun Project\n" 
+                        + "Other people here\n" + "Other people here\n" + "Other people here\n" 
+                        + "Other people here\n" + "Other people here\n" + "Other people here\n"
                         textStyle {
                             base: aboutSheetSubTitleNormalWhite.style
                         }
                     }
                 }
             }
+            
         }
     }
     actions: [
