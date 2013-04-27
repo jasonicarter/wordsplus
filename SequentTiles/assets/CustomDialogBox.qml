@@ -84,6 +84,7 @@ Dialog {
                                 sequentTiles.NextGame();
                                 customDialog.close();
                             } else if (dialogType == "hint") {
+                                //hintShown = true;
                                 btnOk.enabled = false;
                                 txtMsg.text = "Here's your hint"
                                 //sequentTiles.GetHint();

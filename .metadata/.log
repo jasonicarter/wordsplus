@@ -609,3 +609,417 @@ java.lang.NullPointerException
 	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:86)
 	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-04-27 10:04:10.044 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-04-27 10:04:17.890
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-04-27 10:04:18.858
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-27 10:04:18.858
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@128215d),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@128215d)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@128215d),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@128215d)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.061
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.062
+!MESSAGE Cannot resolve ValueType variant: QLocale
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.063
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.064
+!MESSAGE Cannot resolve ValueType variant: bb::device::CellularService::Types
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.065
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.065
+!MESSAGE Cannot resolve ValueType variant:  bb::system::SystemUiButton 
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:22.074
+!MESSAGE Issues while loading Components Definition:
+Duplicate Signal in: ComponentID: bb::cascades::InvokeActionItem, Signal: handlerChanged
+
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 10:04:22.090
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 10:04:22.102
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 10:04:22.112
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 10:04:22.120
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 10:04:22.132
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:23.894
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.254
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.257
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.258
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.264
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.265
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.266
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.355
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.356
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.358
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.359
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.366
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.367
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.368
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.369
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.408
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.411
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.520
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.528
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.948
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.950
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.951
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.952
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.958
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.959
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.960
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:24.962
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:25.134
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:25.340
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:25.387
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:25.598
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.268
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.269
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.271
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.272
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.277
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.278
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.279
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.280
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.388
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.434
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.438
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.491
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.492
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.494
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.497
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.498
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.500
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.647
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-04-27 10:04:26.650
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-04-27 11:31:00.131
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-04-27 11:31:00.167
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-04-27 11:31:00.200
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:48:08.828
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:48:31.853
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:48:46.701
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:48:55.283
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:50:16.206
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2013-04-27 11:50:40.641
+!MESSAGE Unable to locate file: ../src/main.cpp
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-04-27 14:17:00.990
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-04-27 14:17:02.079
+!MESSAGE SDK version used 10.1.0.1483 with capabilities: [[CHANGE_ORIENTATION, ZOOM_CHANGE, UI_ADAPTABILITY, CHANGE_THEME]]
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-04-27 14:19:36.073
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-04-27 14:59:02.915
+!MESSAGE Exception while formatting pasted code
+!STACK 0
+java.lang.RuntimeException: java.lang.RuntimeException: Invalid space: 3175 <= 3153
+	at com.rim.tad.tools.qml.parser.ast.ASTUtils.getFormatEdits(ASTUtils.java:346)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLAutoEditStrategy.smartPaste(QMLAutoEditStrategy.java:399)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLAutoEditStrategy.customizeDocumentCommand(QMLAutoEditStrategy.java:66)
+	at org.eclipse.jface.text.TextViewer.customizeDocumentCommand(TextViewer.java:3745)
+	at org.eclipse.jface.text.TextViewer.handleVerifyEvent(TextViewer.java:3782)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.handleVerifyEvent(ProjectionViewer.java:1278)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLProjectionViewer.handleVerifyEvent(QMLProjectionViewer.java:85)
+	at org.eclipse.jface.text.TextViewer$TextVerifyListener.verifyText(TextViewer.java:435)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7148)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:7994)
+	at org.eclipse.swt.custom.StyledText.paste(StyledText.java:7236)
+	at org.eclipse.jface.text.TextViewer.paste(TextViewer.java:4052)
+	at org.eclipse.jface.text.TextViewer.doOperation(TextViewer.java:3990)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:1016)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1535)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLProjectionViewer.doOperation(QMLProjectionViewer.java:69)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:128)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:126)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1262)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1104)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1100)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1509)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4640)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4528)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2531)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+Caused by: java.lang.RuntimeException: Invalid space: 3175 <= 3153
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:97)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:496)
+	at com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression.format(ASTBinaryExpression.java:216)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTIf.format(ASTIf.java:225)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTBlock.format(ASTBlock.java:134)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTIf.format(ASTIf.java:228)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTIf.format(ASTIf.java:232)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTBlock.format(ASTBlock.java:134)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTStatementExpression.format(ASTStatementExpression.java:108)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLNamedValue.format(ASTQMLNamedValue.java:297)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTList.format(ASTList.java:459)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQMLObject.format(ASTQMLObject.java:179)
+	at com.rim.tad.tools.qml.parser.ast.FormatterContext.resolve(FormatterContext.java:510)
+	at com.rim.tad.tools.qml.parser.ast.ASTQML.format(ASTQML.java:243)
+	at com.rim.tad.tools.qml.parser.ast.ASTUtils.getFormatEdits(ASTUtils.java:341)
+	... 72 more
+
+!ENTRY com.qnx.tools.ide.bbt.debug.core 4 0 2013-04-27 15:35:44.336
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\SequentTiles\assets\packages\pkg_1\level_27\0.png' to '/apps/com.example.SequentTiles.testDev_equentTilesaf53afc1/native/assets/packages/pkg_1/level_27/0.png' failed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\SequentTiles\assets\packages\pkg_1\level_27\0.png' to '/apps/com.example.SequentTiles.testDev_equentTilesaf53afc1/native/assets/packages/pkg_1/level_27/0.png' failed.
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:583)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:688)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:633)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:276)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:190)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:577)
+	... 7 more
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-04-27 15:35:44.337
+!MESSAGE Transfer of 'C:\Users\Jason\Documents\blackberry-workspace\blackberry\SequentTiles\assets\packages\pkg_1\level_27\0.png' to '/apps/com.example.SequentTiles.testDev_equentTilesaf53afc1/native/assets/packages/pkg_1/level_27/0.png' failed.
+!STACK 0
+com.qnx.tools.ide.utils.target.RemoteIOException: No such file or directory
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.connect(TargetServiceFile.java:363)
+	at com.qnx.tools.ide.utils.target.TargetServiceFile.creat(TargetServiceFile.java:260)
+	at com.qnx.tools.ide.utils.target.TargetFileDownload.download(TargetFileDownload.java:57)
+	at com.qnx.tools.ide.qde.debug.core.QDELaunchUtils.transferFile(QDELaunchUtils.java:577)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.uploadFile(BBTLauncher.java:688)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.syncFiles(BBTLauncher.java:633)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.doLaunch(BBTLauncher.java:276)
+	at com.qnx.tools.ide.bbt.debug.core.internal.launch.BBTLauncher.launch(BBTLauncher.java:190)
+	at com.qnx.tools.ide.bbt.debug.ui.internal.launch.BBTLaunchConfigurationDelegate$1.doRun(BBTLaunchConfigurationDelegate.java:75)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(QDELaunchConfigurationDelegate.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
