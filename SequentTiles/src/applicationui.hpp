@@ -64,6 +64,7 @@ private:
     float numTiles;
     int currentLevel;
     int currentPackage;
+    int tilesAvailable;
     QList<int> selectTiles;
 
     GameSettings *settings;

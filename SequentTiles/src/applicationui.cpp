@@ -9,6 +9,8 @@
 
 using namespace bb::cascades;
 
+#define LOG(fmt, args...)   do { fprintf(stdout, "[Sequent ] " fmt "\n", ##args); fflush(stdout); } while (0);
+
 ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 : QObject(app)
 {
@@ -30,6 +32,7 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     //initialize stuff
     showNext = false;
     showRetry = false;
+    tilesAvailable = 4;
     currentLevel = getCurrentLevel();
     currentPackage = 1;
 
@@ -67,10 +70,10 @@ void ApplicationUI::Submit() {
 
 	if (selectTiles.count() != 0) {
 
-		if (selectTiles.count() < 4) {
+		if (selectTiles.count() < tilesAvailable) {
 			answer = false;
 		} else {
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < tilesAvailable; i++) {
 				if (selectTiles[i] != i) {
 					answer = false;
 				}
@@ -124,7 +127,7 @@ void ApplicationUI::setCoinCount(int coins){
 
 void ApplicationUI::NextGame(){
 	//TODO
-	if(currentLevel != 19){ //just so it wont crash during testing
+	if(currentLevel <= 30){ //just so it wont crash during testing
 		currentLevel = getCurrentLevel() + 1;
 		setCurrentLevel(currentLevel);
 	}
@@ -136,7 +139,6 @@ void ApplicationUI::RedoGame(){
 }
 
 void ApplicationUI::StartGame(){
-	//int i = getCurrentLevel();
 	NewGame(1, getCurrentLevel());
 }
 
@@ -157,22 +159,31 @@ void ApplicationUI::NewGame(int pkg, int level) {
 
 	numTiles = 2; // Calculate the size of the tiles
 	wantedSize = 300; //playContainer->preferredWidth() / numTiles;
+	tilesAvailable = 4;
 	QList<int> tileNumber;
 	tileNumber << 0 << 1 << 2 << 3;
 	selectTiles.clear(); //reset selection tracker
 
 	for (int i = 0; i < 4; i++) {
-		//LOG("word index: %i", wordDataList[listOfWords]);
 
 		ImageView *imageView = ImageView::create().bottomMargin(0).topMargin(0).leftMargin(0).rightMargin(0);
 		imageView->setPreferredSize(wantedSize, wantedSize);
 
 
-		int r = rand() % tileNumber.count(); //list of words reduced once word is found
-		//LOG("list count: %i", listOfWords.count());
-		//LOG("hint word: %s",listOfWords[r].toStdString().c_str());
+		int r = rand() % tileNumber.count();
 
+		//"app//native//assets//wordLists//"
 		QString imageSource = QString("asset:///packages/pkg_%1/level_%2/%3.png").arg(pkg).arg(level).arg(tileNumber[r]);
+
+		LOG("r.png Value: %i, File Exist? %i File Path: %s",tileNumber[r], QFile::exists(imageSource),imageSource.toStdString().c_str());
+		if(tileNumber[r] == 3){
+			if(!QFile::exists(QString("app/native/assets/packages/pkg_%1/level_%2/%3.png").arg(pkg).arg(level).arg(tileNumber[r]))){
+				//LOG("Doesn't Exist: %s",imageSource.toStdString().c_str())
+				tilesAvailable = 3;
+				imageSource = QString("asset:///packages/selected.png");
+			}
+		}
+
 		imageView->setImage(Image(imageSource));
 		tileNumber.removeAt(r);
 
