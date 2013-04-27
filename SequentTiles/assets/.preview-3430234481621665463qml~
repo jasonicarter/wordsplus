@@ -64,13 +64,11 @@ Container {
                         if (sequentTiles.coinCount >= 75) {
                             customDialog.dialogType = "hint"
                             customDialog.dialogTitle = "Need a Hint?"
-                            customDialog.dialogMsg = "75 Coins required for a hint"
                             customDialog.coinToSubtract = 75
                             customDialog.open();
                         } else {
                             customDialog.dialogType = "coins"
-                            customDialog.dialogTitle = "Coins Required!"
-                            customDialog.dialogMsg = "Would you like to buy more?"
+                            customDialog.dialogTitle = "Need More Coins"
                             customDialog.coinToSubtract = 0
                             customDialog.open();
                         }
@@ -93,13 +91,11 @@ Container {
                         if (sequentTiles.coinCount >= 150) {
                             customDialog.dialogType = "skip"
                             customDialog.dialogTitle = "Skip a Level?"
-                            customDialog.dialogMsg = "150 Coins required to skip"
                             customDialog.coinToSubtract = 150
                             customDialog.open();
                         } else {
                             customDialog.dialogType = "coins"
-                            customDialog.dialogTitle = "Coins Required!"
-                            customDialog.dialogMsg = "Would you like to buy more?"
+                            customDialog.dialogTitle = "Need More Coins"
                             customDialog.coinToSubtract = 0
                             customDialog.open();
                         }
