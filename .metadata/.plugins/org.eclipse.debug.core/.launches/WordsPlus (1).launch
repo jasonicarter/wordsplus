@@ -29,12 +29,12 @@
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
 <stringAttribute key="org.eclipse.cdt.launch.PLATFFORM" value="qnxbbt"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_ARGUMENTS" value=""/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="arm\o.le-v7-g\WordsPlus"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="WordsPlus"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.qnx.qcc.toolChain.1725070319"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="arm\o.le-v7-g\countly-sdk-example"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="countly-sdk-example"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.qnx.qcc.toolChain.174038436"/>
 <booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/WordsPlus"/>
+<listEntry value="/countly-sdk-example"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
