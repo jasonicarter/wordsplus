@@ -84,7 +84,7 @@ Container { // root Container
                     text: wordsPlus.selectedLetters
                     //text: "TEST"
                     textStyle {
-                        base: puzzlePageBurntOrgange.style
+                        base: puzzlePageBodyBlack.style
                     }
                     onTextChanged: {
                         if(wordsPlus.selectedLetters != "") {
@@ -145,11 +145,12 @@ Container { // root Container
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleBlue
-            base: SystemDefaults.TextStyles.SubtitleText
+            id: puzzlePageBodyBlack
+            base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
-            color: Color.create("#0098f0")
+            color: Color.create("#272727")
+            fontSize: FontSize.Large
         },
         TextStyleDefinition {
             id: puzzlePagePuzzleInfoText

@@ -167,3 +167,414 @@ make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackb
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 
 **** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project WordsPlusGame ****
+
+make Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[2]: Nothing to be done for `first'.
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Release for project WordsPlusGame ****
+
+make Device-Release 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lupdate WordsPlusGame.pro
+Updating 'WordsPlusGame.ts'...
+    Found 20 source text(s) (0 new and 20 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/lrelease WordsPlusGame.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations/WordsPlusGame.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 20 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/translations'
+make -C ./arm -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+c:/bbndk/host_10_0_9_529/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlusGame.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make -f Makefile.Release
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ActiveFrame.h -o o.le-v7/.moc/moc_ActiveFrame.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/GameSettings.hpp -o o.le-v7/.moc/moc_GameSettings.cpp
+qcc -Vgcc_ntoarmv7le -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -x c++-header -c ../precompiled.h -o o.le-v7/.obj/WordsPlusGame.gch/c++
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/InviteToDownload.hpp -o o.le-v7/.moc/moc_InviteToDownload.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/OrientationSensor.hpp -o o.le-v7/.moc/moc_OrientationSensor.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ProfileBox.hpp -o o.le-v7/.moc/moc_ProfileBox.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/RegistrationHandler.hpp -o o.le-v7/.moc/moc_RegistrationHandler.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/ScoreLoopThread.hpp -o o.le-v7/.moc/moc_ScoreLoopThread.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/UpdateProfile.hpp -o o.le-v7/.moc/moc_UpdateProfile.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_WordsPlusGame.o o.le-v7/.moc/moc_WordsPlusGame.cpp
+C:/bbndk/host_10_1_0_132/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/timer.hpp -o o.le-v7/.moc/moc_timer.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ActiveFrame.o ../src/ActiveFrame.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/GameSettings.o ../src/GameSettings.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/Global.o ../src/Global.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/InviteToDownload.o ../src/InviteToDownload.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/OrientationSensor.o ../src/OrientationSensor.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ProfileBox.o ../src/ProfileBox.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/RegistrationHandler.o ../src/RegistrationHandler.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/ScoreLoopThread.o ../src/ScoreLoopThread.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/UpdateProfile.o ../src/UpdateProfile.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/WordsPlusGame.o ../src/WordsPlusGame.cpp
+../src/ScoreLoopThread.cpp:148:6: warning: unused parameter 'app' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/main.o ../src/main.cpp
+../src/ScoreLoopThread.cpp: In static member function 'static void ScoreLoopThread::RequestGameDataCompletionCallback(void*, SC_Error_t)':
+../src/ScoreLoopThread.cpp:249:13: warning: variable 'errCode' set but not used [-Wunused-but-set-variable]
+../src/RegistrationHandler.cpp:228:6: warning: unused parameter 'value' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/soundmanager.o ../src/soundmanager.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/timer.o ../src/timer.cpp
+../src/WordsPlusGame.cpp:1195:6: warning: unused parameter 'section' [-Wunused-parameter]
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/wordsearch.o ../src/wordsearch.cpp
+../src/wordsearch.cpp:19:0: warning: "TRUE" redefined [enabled by default]
+c:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore/qglobal.h:1016:0: note: this is the location of the previous definition
+../src/wordsearch.cpp:20:0: warning: "FALSE" redefined [enabled by default]
+c:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore/qglobal.h:1017:0: note: this is the location of the previous definition
+../src/wordsearch.cpp: In function 'void add_word(char*, char**)':
+../src/wordsearch.cpp:255:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/wordsearch.cpp:263:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_ActiveFrame.o o.le-v7/.moc/moc_ActiveFrame.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_GameSettings.o o.le-v7/.moc/moc_GameSettings.cpp
+../src/wordsearch.cpp: In member function 'void Grid::stuff(int, char*, int, int, int)':
+../src/wordsearch.cpp:210:34: warning: 'position' may be used uninitialized in this function [-Wuninitialized]
+../src/wordsearch.cpp: In member function 'int Grid::fit(char*)':
+../src/wordsearch.cpp:188:30: warning: 'dd' may be used uninitialized in this function [-Wuninitialized]
+../src/wordsearch.cpp:188:30: warning: 'jj' may be used uninitialized in this function [-Wuninitialized]
+../src/wordsearch.cpp:188:30: warning: 'ii' may be used uninitialized in this function [-Wuninitialized]
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_InviteToDownload.o o.le-v7/.moc/moc_InviteToDownload.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_OrientationSensor.o o.le-v7/.moc/moc_OrientationSensor.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_ProfileBox.o o.le-v7/.moc/moc_ProfileBox.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_RegistrationHandler.o o.le-v7/.moc/moc_RegistrationHandler.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_ScoreLoopThread.o o.le-v7/.moc/moc_ScoreLoopThread.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_UpdateProfile.o o.le-v7/.moc/moc_UpdateProfile.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/WordsPlusGame -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_0_9_2318/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../WordsPlusGame -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtSensors -I../src -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4 -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/qt4/QtMobility -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1020/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_timer.o o.le-v7/.moc/moc_timer.cpp
+rm -f libWordsPlusGame.so.1.0.0 libWordsPlusGame.so libWordsPlusGame.so.1 libWordsPlusGame.so.1.0
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1020/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1020/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_1_0_1020/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,WordsPlusGame.so -shared -Wl,-z,relro -Wl,-z,now -o libWordsPlusGame.so.1.0.0 o.le-v7/.obj/ActiveFrame.o o.le-v7/.obj/GameSettings.o o.le-v7/.obj/Global.o o.le-v7/.obj/InviteToDownload.o o.le-v7/.obj/OrientationSensor.o o.le-v7/.obj/ProfileBox.o o.le-v7/.obj/RegistrationHandler.o o.le-v7/.obj/ScoreLoopThread.o o.le-v7/.obj/UpdateProfile.o o.le-v7/.obj/WordsPlusGame.o o.le-v7/.obj/main.o o.le-v7/.obj/soundmanager.o o.le-v7/.obj/timer.o o.le-v7/.obj/wordsearch.o o.le-v7/.obj/moc_ActiveFrame.o o.le-v7/.obj/moc_GameSettings.o o.le-v7/.obj/moc_InviteToDownload.o o.le-v7/.obj/moc_OrientationSensor.o o.le-v7/.obj/moc_ProfileBox.o o.le-v7/.obj/moc_RegistrationHandler.o o.le-v7/.obj/moc_ScoreLoopThread.o o.le-v7/.obj/moc_UpdateProfile.o o.le-v7/.obj/moc_WordsPlusGame.o o.le-v7/.obj/moc_timer.o   -LC:/bbndk/target_10_1_0_1020/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1020/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1020/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1020/qnx6//usr/lib/qt4/lib -lscoreloopcore -lbbsystem -lbbmultimedia -lOpenAL -lalut -lasound -lbbplatformbbm -LC:/bbndk/target_10_1_0_1020/qnx6/usr/share/qt4/lib -lQtSensors -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
+ln -s libWordsPlusGame.so.1.0.0 libWordsPlusGame.so
+ln -s libWordsPlusGame.so.1.0.0 libWordsPlusGame.so.1
+ln -s libWordsPlusGame.so.1.0.0 libWordsPlusGame.so.1.0
+rm -f o.le-v7/libWordsPlusGame.so.1.0.0
+rm -f o.le-v7/libWordsPlusGame.so
+rm -f o.le-v7/libWordsPlusGame.so.1
+rm -f o.le-v7/libWordsPlusGame.so.1.0
+mv -f libWordsPlusGame.so.1.0.0 libWordsPlusGame.so libWordsPlusGame.so.1 libWordsPlusGame.so.1.0 o.le-v7/
+echo && ntoarm-objcopy --only-keep-debug o.le-v7/libWordsPlusGame.so.1.0.0 o.le-v7/WordsPlusGame.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/WordsPlusGame.so.sym o.le-v7/libWordsPlusGame.so.1.0.0 o.le-v7/WordsPlusGame.so
+
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlusGame/arm'
+
+**** Build Finished ****
