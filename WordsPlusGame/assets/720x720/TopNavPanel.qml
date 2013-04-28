@@ -3,20 +3,8 @@ import bb.cascades 1.0
 Container {
     preferredWidth: 720
     Container { // bottom panel
-//        layout: DockLayout {
-//        }
-        //background: Color.create("#272727")
         preferredWidth: 600
         horizontalAlignment: HorizontalAlignment.Center
-
-//        Label {
-//            horizontalAlignment: HorizontalAlignment.Center
-//            text: "<html><b>SHORTCUTS:</b> p [play] h [home] \n<b>MENU:</b> swipe down from the top</html>"
-//            multiline: true
-//            textStyle {
-//                base: btmNavPanelSmallNormalWhite.style
-//            }
-//        }
         Label {
             horizontalAlignment: HorizontalAlignment.Center
             text: "<html><span style='font-size:xx-small'><b>SHORTCUTS:</b> p [play] h [home]</span></html>" + "<html><span style='font-size:xx-small'> menu [Swipe down from the top]</span></html>"
@@ -25,13 +13,6 @@ Container {
                 base: btmNavPanelSmallNormalWhite.style
             }
         }
-        //        Label {
-//            horizontalAlignment: HorizontalAlignment.Center
-//            text: "<html><b>MENU:</b> swipe down from the top</html>"
-//            textStyle {
-//                base: btmNavPanelSmallNormalWhite.style
-//            }
-//        }
     } // bottom panel
     // NEED TO REMOVE BOTTOM - BUT OBJECT NAMES USED IN C++, NEED TO MOVE THEM
     Container { // bottom panel

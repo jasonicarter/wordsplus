@@ -1,10 +1,11 @@
 DEVELOPER_CERTIFICATE_PATH=C\:\\Users\\Jason\\AppData\\Local\\Research In Motion\\author.p12
 VERIFY_DEBUG_TOKEN_DURING_APP_INSTALL=true
-debugToken_0=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken1.bar
-debugToken_1=C\:\\Users\\Jason\\AppData\\Local\\Research In Motion\\usbdebugtoken.bar
+debugToken_0=C\:\\Users\\Jason\\AppData\\Local\\Research In Motion\\usbdebugtoken.bar
+debugToken_1=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken1.bar
 debugToken_2=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken4.bar
-debugToken_3=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken3.bar
-debugToken_4=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken5.bar
-debugToken_5=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken2.bar
-debugToken_6=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken6.bar
+debugToken_3=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken7.bar
+debugToken_4=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken3.bar
+debugToken_5=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken5.bar
+debugToken_6=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken2.bar
+debugToken_7=\\\\JASON-PC\\Users\\Jason\\AppData\\Local\\Research In Motion\\debugtoken6.bar
 eclipse.preferences.version=1
