@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Container {
     preferredHeight: 980
@@ -61,24 +62,37 @@ Container {
                     }
                     if (event.isUp()) {
                         hint_selected.visible = false
-                        if (sequentTiles.coinCount >= 75) {
-                            customDialog.dialogType = "hint"
-                            customDialog.dialogTitle = "Need a Hint?"
-                            customDialog.dialogMsg = "75 Coins required for a hint"
-                            customDialog.coinToSubtract = 75
-                            customDialog.open();
+                        if (!sequentTiles.hintShown) {
+                            if (sequentTiles.coinCount >= 75) {
+                                customDialog.dialogType = "hint"
+                                customDialog.dialogTitle = "Need a Hint?"
+                                customDialog.dialogMsg = "75 Coins required for a hint"
+                                customDialog.coinToSubtract = 75
+                                customDialog.open();
+                            } else {
+                                customDialog.dialogType = "coins"
+                                customDialog.dialogTitle = "Coins Required!"
+                                customDialog.dialogMsg = "Would you like to buy more?"
+                                customDialog.coinToSubtract = 0
+                                customDialog.open();
+                            }
                         } else {
-                            customDialog.dialogType = "coins"
-                            customDialog.dialogTitle = "Coins Required!"
-                            customDialog.dialogMsg = "Would you like to buy more?"
-                            customDialog.coinToSubtract = 0
-                            customDialog.open();
+                            hintToast.show();
+
                         }
                     }
                 }
                 onTouchExit: {
                     hint_selected.visible = false
                 }
+                attachedObjects: [
+                    SystemToast {
+                        id: hintToast
+                        body: sequentTiles.levelHint
+                        onFinished: {
+                        }
+                    }
+                ]
             }
             Container { //skip
                 preferredHeight: 100

@@ -22,38 +22,44 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
-       3,   64, // properties
+      12,   14, // methods
+       5,   74, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       5,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       15,   14,   14,   14, 0x05,
       33,   14,   14,   14, 0x05,
       52,   14,   14,   14, 0x05,
+      71,   14,   14,   14, 0x05,
+      90,   14,   14,   14, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      77,   71,   14,   14, 0x08,
+     115,  109,   14,   14, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     116,   14,   14,   14, 0x02,
-     128,   14,   14,   14, 0x02,
-     139,   14,   14,   14, 0x02,
-     150,   14,   14,   14, 0x02,
-     161,   14,   14,   14, 0x02,
-     168,   14,   14,   14, 0x02,
+     154,   14,   14,   14, 0x02,
+     166,   14,   14,   14, 0x02,
+     177,   14,   14,   14, 0x02,
+     188,   14,   14,   14, 0x02,
+     199,   14,   14,   14, 0x02,
+     206,   14,   14,   14, 0x02,
 
  // properties: name, type, flags
-     182,  177, 0x01495103,
-     191,  177, 0x01495103,
-     205,  201, 0x02495103,
+     220,  215, 0x01495103,
+     229,  215, 0x01495103,
+     243,  239, 0x02495103,
+     253,  215, 0x01495103,
+     271,  263, 0x0a495001,
 
  // properties: notify_signal_id
        0,
        1,
        2,
+       3,
+       4,
 
        0        // eod
 };
@@ -61,10 +67,12 @@ static const uint qt_meta_data_ApplicationUI[] = {
 static const char qt_meta_stringdata_ApplicationUI[] = {
     "ApplicationUI\0\0showNextChanged()\0"
     "ShowRetryChanged()\0coinCountChanged()\0"
+    "hintShownChanged()\0levelHintChanged()\0"
     "event\0onTileTouch(bb::cascades::TouchEvent*)\0"
     "StartGame()\0NextGame()\0RedoGame()\0"
     "ResetAll()\0Home()\0Submit()\0bool\0"
     "showNext\0showRetry\0int\0coinCount\0"
+    "hintShown\0QString\0levelHint\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -76,13 +84,15 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 0: _t->showNextChanged(); break;
         case 1: _t->ShowRetryChanged(); break;
         case 2: _t->coinCountChanged(); break;
-        case 3: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 4: _t->StartGame(); break;
-        case 5: _t->NextGame(); break;
-        case 6: _t->RedoGame(); break;
-        case 7: _t->ResetAll(); break;
-        case 8: _t->Home(); break;
-        case 9: _t->Submit(); break;
+        case 3: _t->hintShownChanged(); break;
+        case 4: _t->levelHintChanged(); break;
+        case 5: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 6: _t->StartGame(); break;
+        case 7: _t->NextGame(); break;
+        case 8: _t->RedoGame(); break;
+        case 9: _t->ResetAll(); break;
+        case 10: _t->Home(); break;
+        case 11: _t->Submit(); break;
         default: ;
         }
     }
@@ -120,9 +130,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -131,28 +141,31 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: *reinterpret_cast< bool*>(_v) = getShowNext(); break;
         case 1: *reinterpret_cast< bool*>(_v) = getShowRetry(); break;
         case 2: *reinterpret_cast< int*>(_v) = getCoinCount(); break;
+        case 3: *reinterpret_cast< bool*>(_v) = getHintShown(); break;
+        case 4: *reinterpret_cast< QString*>(_v) = getLevelHint(); break;
         }
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
         case 0: setShowNext(*reinterpret_cast< bool*>(_v)); break;
         case 1: setShowRetry(*reinterpret_cast< bool*>(_v)); break;
         case 2: setCoinCount(*reinterpret_cast< int*>(_v)); break;
+        case 3: setHintShown(*reinterpret_cast< bool*>(_v)); break;
         }
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 3;
+        _id -= 5;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -174,5 +187,17 @@ void ApplicationUI::ShowRetryChanged()
 void ApplicationUI::coinCountChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, 0);
+}
+
+// SIGNAL 3
+void ApplicationUI::hintShownChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, 0);
+}
+
+// SIGNAL 4
+void ApplicationUI::levelHintChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, 0);
 }
 QT_END_MOC_NAMESPACE

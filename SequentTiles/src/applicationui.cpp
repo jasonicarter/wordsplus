@@ -29,9 +29,13 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 	// Initialize for local storage settings
 	settings = new GameSettings();
 
-    //initialize stuff
+	// Initialize hint class
+	hints = new LevelHints();
+
+    // Initialize other stuff
     showNext = false;
     showRetry = false;
+    hintShown = false;
     tilesAvailable = 4;
     currentLevel = getCurrentLevel();
     currentPackage = 1;
@@ -123,6 +127,16 @@ void ApplicationUI::setCoinCount(int coins){
 	settings->saveValueFor("Coins", QString::number(coins));
 	emit coinCountChanged();
 }
+bool ApplicationUI::getHintShown(){
+	return hintShown;
+}
+void ApplicationUI::setHintShown(bool status){
+	hintShown = status;
+}
+QString ApplicationUI::getLevelHint(){
+	return 	hints->getHint(getCurrentLevel());
+}
+
 
 
 void ApplicationUI::NextGame(){
@@ -130,6 +144,8 @@ void ApplicationUI::NextGame(){
 	if(currentLevel <= 30){ //just so it wont crash during testing
 		currentLevel = getCurrentLevel() + 1;
 		setCurrentLevel(currentLevel);
+		setHintShown(false);
+		emit levelHintChanged(); //so QML will update system toast with new message
 	}
 
 	NewGame(currentPackage,currentLevel);
@@ -175,7 +191,7 @@ void ApplicationUI::NewGame(int pkg, int level) {
 		//"app//native//assets//wordLists//"
 		QString imageSource = QString("asset:///packages/pkg_%1/level_%2/%3.png").arg(pkg).arg(level).arg(tileNumber[r]);
 
-		LOG("r.png Value: %i, File Exist? %i File Path: %s",tileNumber[r], QFile::exists(imageSource),imageSource.toStdString().c_str());
+		//LOG("r.png Value: %i, File Exist? %i File Path: %s",tileNumber[r], QFile::exists(imageSource),imageSource.toStdString().c_str());
 		if(tileNumber[r] == 3){
 			if(!QFile::exists(QString("app/native/assets/packages/pkg_%1/level_%2/%3.png").arg(pkg).arg(level).arg(tileNumber[r]))){
 				//LOG("Doesn't Exist: %s",imageSource.toStdString().c_str())

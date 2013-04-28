@@ -12,8 +12,6 @@
 // this feature is enabled by default in the debug build only
 #include <Qt/qdeclarativedebug.h>
 
-#include "Countly.hpp"
-
 using namespace bb::cascades;
 using namespace bb::platform;
 
@@ -21,7 +19,6 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 {
     // this is where the server is started etc
     Application app(argc, argv);
-    countly::CountlyInit(&app, "http://192.168.204.135/", "3233509b50176ee613180f6d8e6c5cab8860a7c4");
 
     // localization support
     QTranslator translator;
