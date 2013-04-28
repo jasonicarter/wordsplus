@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="36" version="2.0">
 <workbenchAdvisor/>
-<window height="1040" maximized="true" width="960" x="0" y="0">
+<window height="1040" maximized="true" width="960" x="753" y="211">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="205"/>
@@ -21,7 +21,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -39,33 +39,29 @@
 <part id="2"/>
 <part id="4"/>
 <part id="3"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.hpp" partName="applicationui.hpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.hpp" title="applicationui.hpp" tooltip="SequentTiles/src/applicationui.hpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/applicationui.hpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1862" selectionTopPixel="296"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="677" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.cpp" partName="applicationui.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.cpp" title="applicationui.cpp" tooltip="SequentTiles/src/applicationui.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/applicationui.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4572" selectionTopPixel="2239"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/main.cpp" title="main.cpp" tooltip="SequentTiles/src/main.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/main.cpp" title="main.cpp" tooltip="SequentTiles/src/main.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="805" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="650" selectionTopPixel="0"/>
 </editor>
 <editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CustomDialogBox.qml" partName="CustomDialogBox.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/CustomDialogBox.qml" title="CustomDialogBox.qml" tooltip="SequentTiles/assets/CustomDialogBox.qml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/CustomDialogBox.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3152" selectionTopPixel="336"/>
+<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3152" selectionTopPixel="345"/>
 </editor>
 <editor id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" partName="PuzzleCenterContainer.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/PuzzleCenterContainer.qml" title="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 <editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="500" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3460" selectionTopPixel="990"/>
-</editor>
-<editor activePart="true" focus="true" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" partName="bar-descriptor.xml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/bar-descriptor.xml" title="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/bar-descriptor.xml"/>
 </editor>
 </editors>
 <views>
@@ -155,7 +151,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePart="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -597,156 +593,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/CustomDialogBox.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HelpSheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/packages/selected.png"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/packages/pkg_1/level_2/3.png"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/packages/selected.png"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/images/buttons/selected.png"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WordsPlusGame/src/wordsearch.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" path="/SequentTiles/assets/packages/pkg_1/level_5/3.png"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/CustomDialogBox.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/SequentTiles/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/Countly.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-bb10/src/Countly.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/Countly.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/CountlyEvent.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/countly-sdk-example/countly_sdk_example.pro"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/CountlyDatabase.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/countly-sdk-example/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/countly-sdk-example/countly_sdk_example.pro"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/SequentTiles/SequentTiles.pro"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/SequentTiles/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/countly-sdk-example/assets/main.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/countly-sdk-example/src/CountlySdkExample.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeBtmNavContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/CustomDialogBox.qml"/>
 </editors>
-<item historyLabel="selected.png" index="3"/>
-<item historyLabel="HelpSheet.qml" index="2">
-<position/>
-</item>
-<item historyLabel="CustomDialogBox.qml" index="0">
-<position info="not_deleted" x="2287" y="130"/>
-</item>
-<item historyLabel="HelpSheet.qml" index="2">
-<position info="not_deleted" x="781" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="2875" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="5224" y="0"/>
-</item>
-<item historyLabel="applicationui.hpp" index="4">
-<position info="not_deleted" x="1862" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="3.png" index="5"/>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="selected.png" index="6"/>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="selected.png" index="7"/>
-<item historyLabel="selected.png" index="6"/>
-<item historyLabel="selected.png" index="7"/>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position info="not_deleted" x="536" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4908" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position info="not_deleted" x="486" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="409" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position info="not_deleted" x="570" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="WordsPlusGame.cpp" index="9">
-<position info="not_deleted" x="1738" y="119"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4947" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4407" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="8">
-<position info="not_deleted" x="805" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="wordsearch.cpp" index="10">
-<position info="not_deleted" x="5205" y="34"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4656" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4935" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4656" y="0"/>
-</item>
-<item historyLabel="wordsearch.cpp" index="10">
-<position info="not_deleted" x="5205" y="34"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="4656" y="0"/>
-</item>
-<item historyLabel="wordsearch.cpp" index="10">
-<position info="not_deleted" x="5205" y="34"/>
-</item>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="5057" y="0"/>
-</item>
-<item historyLabel="3.png" index="11"/>
-<item historyLabel="applicationui.cpp" index="1">
-<position info="not_deleted" x="5226" y="0"/>
-</item>
-<item historyLabel="CustomDialogBox.qml" index="12">
-<position info="not_deleted" x="607" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CustomDialogBox.qml" index="12">
-<position info="not_deleted" x="3169" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="13">
+<item historyLabel="PuzzleCenterContainer.qml" index="2">
 <position info="not_deleted" x="3460" y="0"/>
 </item>
-<item historyLabel="CustomDialogBox.qml" index="12">
+<item historyLabel="CustomDialogBox.qml" index="1">
 <position info="not_deleted" x="3152" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="1">
+<item historyLabel="applicationui.cpp" index="0">
 <position info="not_deleted" x="4572" y="0"/>
 </item>
-<item active="true" historyLabel="bar-descriptor.xml" index="14"/>
+<item historyLabel="bar-descriptor.xml" index="3"/>
+<item historyLabel="Countly.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="3"/>
+<item historyLabel="Countly.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="Countly.cpp" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Countly.cpp" index="4">
+<position/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="3"/>
+<item historyLabel="Countly.cpp" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Countly.hpp" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CountlyEvent.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Countly.hpp" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Countly.cpp" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="3"/>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="countly_sdk_example.pro" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="CountlyDatabase.hpp" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="11"/>
+<item historyLabel="main.cpp" index="8">
+<position info="not_deleted" x="1112" y="0"/>
+</item>
+<item historyLabel="applicationui.hpp" index="12">
+<position info="not_deleted" x="677" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="935" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="251" y="22"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="438" y="91"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="698" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="438" y="91"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="698" y="0"/>
+</item>
+<item historyLabel="countly_sdk_example.pro" index="15">
+<position info="not_deleted" x="65" y="45"/>
+</item>
+<item historyLabel="SequentTiles.pro" index="16">
+<position info="not_deleted" x="62" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="11"/>
+<item historyLabel="bar-descriptor.xml" index="17"/>
+<item historyLabel="bar-descriptor.xml" index="11"/>
+<item historyLabel="SequentTiles.pro" index="16">
+<position info="not_deleted" x="62" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="650" y="0"/>
+</item>
+<item historyLabel="main.qml" index="18">
+<position info="not_deleted" x="474" y="38"/>
+</item>
+<item historyLabel="CountlySdkExample.cpp" index="19">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HomeBtmNavContainer.qml" index="20">
+<position info="not_deleted" x="487" y="0"/>
+</item>
+<item historyLabel="CountlySdkExample.cpp" index="19">
+<position info="not_deleted" x="776" y="147"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="650" y="0"/>
+</item>
+<item historyLabel="HomeBtmNavContainer.qml" index="20">
+<position info="not_deleted" x="487" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="650" y="0"/>
+</item>
+<item historyLabel="main.qml" index="18">
+<position info="not_deleted" x="377" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="650" y="0"/>
+</item>
+<item historyLabel="CustomDialogBox.qml" index="21">
+<position info="not_deleted" x="3152" y="0"/>
+</item>
+<item active="true" historyLabel="main.cpp" index="14">
+<position info="not_deleted" x="650" y="0"/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -773,8 +776,41 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeBtmNavContainer.qml" tooltip="SequentTiles/assets/HomeBtmNavContainer.qml">
+<persistable path="/SequentTiles/assets/HomeBtmNavContainer.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CountlySdkExample.cpp" tooltip="countly-sdk-example/src/CountlySdkExample.cpp">
+<persistable path="/countly-sdk-example/src/CountlySdkExample.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="countly-sdk-example/assets/main.qml">
+<persistable path="/countly-sdk-example/assets/main.qml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml">
 <persistable path="/SequentTiles/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="countly-sdk-example/bar-descriptor.xml">
+<persistable path="/countly-sdk-example/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="SequentTiles.pro" tooltip="SequentTiles/SequentTiles.pro">
+<persistable path="/SequentTiles/SequentTiles.pro"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="countly_sdk_example.pro" tooltip="countly-sdk-example/countly_sdk_example.pro">
+<persistable path="/countly-sdk-example/countly_sdk_example.pro"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="countly-sdk-example/src/main.cpp">
+<persistable path="/countly-sdk-example/src/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CountlyEvent.cpp" tooltip="countly-sdk-example/src/CountlyEvent.cpp">
+<persistable path="/countly-sdk-example/src/CountlyEvent.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Countly.hpp" tooltip="countly-sdk-example/src/Countly.hpp">
+<persistable path="/countly-sdk-example/src/Countly.hpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Countly.cpp" tooltip="countly-sdk-example/src/Countly.cpp">
+<persistable path="/countly-sdk-example/src/Countly.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Countly.cpp" tooltip="countly-sdk-bb10/src/Countly.cpp">
+<persistable path="/countly-sdk-bb10/src/Countly.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml">
 <persistable path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
@@ -784,39 +820,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="3.png" tooltip="SequentTiles/assets/packages/pkg_1/level_5/3.png">
 <persistable path="/SequentTiles/assets/packages/pkg_1/level_5/3.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="wordsearch.cpp" tooltip="WordsPlusGame/src/wordsearch.cpp">
-<persistable path="/WordsPlusGame/src/wordsearch.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.cpp" tooltip="WordsPlusGame/src/WordsPlusGame.cpp">
-<persistable path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="selected.png" tooltip="SequentTiles/assets/packages/selected.png">
-<persistable path="/SequentTiles/assets/packages/selected.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="selected.png" tooltip="SequentTiles/assets/images/buttons/selected.png">
-<persistable path="/SequentTiles/assets/images/buttons/selected.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="3.png" tooltip="SequentTiles/assets/packages/pkg_1/level_2/3.png">
-<persistable path="/SequentTiles/assets/packages/pkg_1/level_2/3.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HelpSheet.qml" tooltip="SequentTiles/assets/HelpSheet.qml">
-<persistable path="/SequentTiles/assets/HelpSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleBtmNavContainer.qml" tooltip="SequentTiles/assets/PuzzleBtmNavContainer.qml">
-<persistable path="/SequentTiles/assets/PuzzleBtmNavContainer.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.ui.internal.imageviewer.ImageViewer" name="icon.png" tooltip="SequentTiles/icon.png">
-<persistable path="/SequentTiles/icon.png"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="SequentTiles/assets/SettingsSheet.qml">
-<persistable path="/SequentTiles/assets/SettingsSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="SequentTiles/assets/AboutSheet.qml">
-<persistable path="/SequentTiles/assets/AboutSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PaymentContainer.qml" tooltip="SequentTiles/assets/PaymentContainer.qml">
-<persistable path="/SequentTiles/assets/PaymentContainer.qml"/>
 </file>
 </mruList>
 </workbench>

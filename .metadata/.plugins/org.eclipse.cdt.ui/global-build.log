@@ -5,6 +5,60 @@ make -j4 Device-Debug
 make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
 C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
+cd arm && C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake -spec blackberry-armv7le-qcc ../SequentTiles.pro CONFIG+=debug_and_release CONFIG+=device
+Updating 'SequentTiles.ts'...
+    Found 0 source text(s) (0 new and 0 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/Countly.o ../src/Countly.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyDatabase.o ../src/CountlyDatabase.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyEvent.o ../src/CountlyEvent.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyLog.o ../src/CountlyLog.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyLogStream.o ../src/CountlyLogStream.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyMetrics.o ../src/CountlyMetrics.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyQueue.o ../src/CountlyQueue.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyQueueProcessor.o ../src/CountlyQueueProcessor.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlyQueuedUrl.o ../src/CountlyQueuedUrl.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlySdkExample.o ../src/CountlySdkExample.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/CountlySentry.o ../src/CountlySentry.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/Countly.hpp -o o.le-v7-g/.moc/moc_Countly.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyDatabase.hpp -o o.le-v7-g/.moc/moc_CountlyDatabase.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyEvent.hpp -o o.le-v7-g/.moc/moc_CountlyEvent.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyLog.hpp -o o.le-v7-g/.moc/moc_CountlyLog.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyQueue.hpp -o o.le-v7-g/.moc/moc_CountlyQueue.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyQueueProcessor.hpp -o o.le-v7-g/.moc/moc_CountlyQueueProcessor.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlyQueuedUrl.hpp -o o.le-v7-g/.moc/moc_CountlyQueuedUrl.cpp
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/CountlySdkExample.hpp -o o.le-v7-g/.moc/moc_CountlySdkExample.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyDatabase.o o.le-v7-g/.moc/moc_CountlyDatabase.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyEvent.o o.le-v7-g/.moc/moc_CountlyEvent.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyLog.o o.le-v7-g/.moc/moc_CountlyLog.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyQueue.o o.le-v7-g/.moc/moc_CountlyQueue.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyQueueProcessor.o o.le-v7-g/.moc/moc_CountlyQueueProcessor.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlyQueuedUrl.o o.le-v7-g/.moc/moc_CountlyQueuedUrl.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_CountlySdkExample.o o.le-v7-g/.moc/moc_CountlySdkExample.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_Countly.o o.le-v7-g/.moc/moc_Countly.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/Countly.o o.le-v7-g/.obj/CountlyDatabase.o o.le-v7-g/.obj/CountlyEvent.o o.le-v7-g/.obj/CountlyLog.o o.le-v7-g/.obj/CountlyLogStream.o o.le-v7-g/.obj/CountlyMetrics.o o.le-v7-g/.obj/CountlyQueue.o o.le-v7-g/.obj/CountlyQueueProcessor.o o.le-v7-g/.obj/CountlyQueuedUrl.o o.le-v7-g/.obj/CountlySdkExample.o o.le-v7-g/.obj/CountlySentry.o o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_Countly.o o.le-v7-g/.obj/moc_CountlyDatabase.o o.le-v7-g/.obj/moc_CountlyEvent.o o.le-v7-g/.obj/moc_CountlyLog.o o.le-v7-g/.obj/moc_CountlyQueue.o o.le-v7-g/.obj/moc_CountlyQueueProcessor.o o.le-v7-g/.obj/moc_CountlyQueuedUrl.o o.le-v7-g/.obj/moc_CountlySdkExample.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbb -lbbdata -lbbplatform -lbbdevice -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
+
+**** Build Finished ****
+
+**** Build of configuration Device-Debug for project SequentTiles ****
+
+make -j4 Device-Debug 
+make -C .//translations -f Makefile update
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
 Updating 'SequentTiles.ts'...
     Found 0 source text(s) (0 new and 0 already existing)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
@@ -21,8 +75,8 @@ make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackb
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/Countly.o o.le-v7-g/.obj/CountlyDatabase.o o.le-v7-g/.obj/CountlyEvent.o o.le-v7-g/.obj/CountlyLog.o o.le-v7-g/.obj/CountlyLogStream.o o.le-v7-g/.obj/CountlyMetrics.o o.le-v7-g/.obj/CountlyQueue.o o.le-v7-g/.obj/CountlyQueueProcessor.o o.le-v7-g/.obj/CountlyQueuedUrl.o o.le-v7-g/.obj/CountlySdkExample.o o.le-v7-g/.obj/CountlySentry.o o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_Countly.o o.le-v7-g/.obj/moc_CountlyDatabase.o o.le-v7-g/.obj/moc_CountlyEvent.o o.le-v7-g/.obj/moc_CountlyLog.o o.le-v7-g/.obj/moc_CountlyQueue.o o.le-v7-g/.obj/moc_CountlyQueueProcessor.o o.le-v7-g/.obj/moc_CountlyQueuedUrl.o o.le-v7-g/.obj/moc_CountlySdkExample.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbb -lbbdata -lbbplatform -lbbdevice -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
 make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 
@@ -78,8 +132,8 @@ make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackb
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/Countly.o o.le-v7-g/.obj/CountlyDatabase.o o.le-v7-g/.obj/CountlyEvent.o o.le-v7-g/.obj/CountlyLog.o o.le-v7-g/.obj/CountlyLogStream.o o.le-v7-g/.obj/CountlyMetrics.o o.le-v7-g/.obj/CountlyQueue.o o.le-v7-g/.obj/CountlyQueueProcessor.o o.le-v7-g/.obj/CountlyQueuedUrl.o o.le-v7-g/.obj/CountlySdkExample.o o.le-v7-g/.obj/CountlySentry.o o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_Countly.o o.le-v7-g/.obj/moc_CountlyDatabase.o o.le-v7-g/.obj/moc_CountlyEvent.o o.le-v7-g/.obj/moc_CountlyLog.o o.le-v7-g/.obj/moc_CountlyQueue.o o.le-v7-g/.obj/moc_CountlyQueueProcessor.o o.le-v7-g/.obj/moc_CountlyQueuedUrl.o o.le-v7-g/.obj/moc_CountlySdkExample.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbb -lbbdata -lbbplatform -lbbdevice -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
 make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 
@@ -107,383 +161,8 @@ make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackb
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-../src/applicationui.cpp: In member function 'void ApplicationUI::NewGame(int, int)':
-../src/applicationui.cpp:181:3: error: cannot pass objects of non-trivially-copyable type 'class QString' through '...'
-../src/applicationui.cpp:181:3: warning: format '%s' expects argument of type 'char*', but argument 5 has type 'QString' [-Wformat]
-cc: C:/bbndk/host_10_1_0_212/win32/x86/usr/lib/gcc/arm-unknown-nto-qnx8.0.0eabi/4.6.3/cc1plus caught signal 1
-make[2]: *** [o.le-v7-g/.obj/applicationui.o] Error 1
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: *** [debug] Error 2
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make: *** [Device-Debug] Error 2
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Debug for project SequentTiles ****
-
-make -j4 Device-Debug 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile debug
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Debug
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
-make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-
-**** Build Finished ****
-
-**** Build of configuration Device-Release for project SequentTiles ****
-
-make -j4 Device-Release 
-make -C .//translations -f Makefile update
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate SequentTiles.pro
-Updating 'SequentTiles.ts'...
-    Found 0 source text(s) (0 new and 0 already existing)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C .//translations -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease SequentTiles.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations/SequentTiles.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/translations'
-make -C ./arm -f Makefile release
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../SequentTiles.pro
-make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-make -f Makefile.Release
-make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/GameSettings.hpp -o o.le-v7/.moc/moc_GameSettings.cpp
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/PaymentServiceControl.hpp -o o.le-v7/.moc/moc_PaymentServiceControl.cpp
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/applicationui.hpp -o o.le-v7/.moc/moc_applicationui.cpp
-qcc -Vgcc_ntoarmv7le -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -x c++-header -c ../precompiled.h -o o.le-v7/.obj/SequentTiles.gch/c++
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/GameSettings.o ../src/GameSettings.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/PaymentServiceControl.o ../src/PaymentServiceControl.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/applicationui.o ../src/applicationui.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/main.o ../src/main.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_GameSettings.o o.le-v7/.moc/moc_GameSettings.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_PaymentServiceControl.o o.le-v7/.moc/moc_PaymentServiceControl.cpp
-qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -O2 -Wno-psabi -fstack-protector-strong -fvisibility=hidden -mthumb -Os -Wall -W -D_REENTRANT -fPIC -shared -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -D_FORTIFY_SOURCE=2 -DQT_NO_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7/.obj/moc_applicationui.o o.le-v7/.moc/moc_applicationui.cpp
-rm -f libSequentTiles.so.1.0.0 libSequentTiles.so libSequentTiles.so.1 libSequentTiles.so.1.0
-qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-O1 -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -Wl,-z,relro -Wl,-soname,SequentTiles.so -shared -Wl,-z,relro -Wl,-z,now -o libSequentTiles.so.1.0.0 o.le-v7/.obj/GameSettings.o o.le-v7/.obj/PaymentServiceControl.o o.le-v7/.obj/applicationui.o o.le-v7/.obj/main.o o.le-v7/.obj/moc_GameSettings.o o.le-v7/.obj/moc_PaymentServiceControl.o o.le-v7/.obj/moc_applicationui.o   -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbplatform -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps  
-ln -s libSequentTiles.so.1.0.0 libSequentTiles.so
-ln -s libSequentTiles.so.1.0.0 libSequentTiles.so.1
-ln -s libSequentTiles.so.1.0.0 libSequentTiles.so.1.0
-rm -f o.le-v7/libSequentTiles.so.1.0.0
-rm -f o.le-v7/libSequentTiles.so
-rm -f o.le-v7/libSequentTiles.so.1
-rm -f o.le-v7/libSequentTiles.so.1.0
-mv -f libSequentTiles.so.1.0.0 libSequentTiles.so libSequentTiles.so.1 libSequentTiles.so.1.0 o.le-v7/
-echo && ntoarm-objcopy --only-keep-debug o.le-v7/libSequentTiles.so.1.0.0 o.le-v7/SequentTiles.so.sym && ntoarm-objcopy --strip-all -R.ident --add-gnu-debuglink o.le-v7/SequentTiles.so.sym o.le-v7/libSequentTiles.so.1.0.0 o.le-v7/SequentTiles.so
-
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/SequentTiles -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../SequentTiles -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/SequentTiles o.le-v7-g/.obj/Countly.o o.le-v7-g/.obj/CountlyDatabase.o o.le-v7-g/.obj/CountlyEvent.o o.le-v7-g/.obj/CountlyLog.o o.le-v7-g/.obj/CountlyLogStream.o o.le-v7-g/.obj/CountlyMetrics.o o.le-v7-g/.obj/CountlyQueue.o o.le-v7-g/.obj/CountlyQueueProcessor.o o.le-v7-g/.obj/CountlyQueuedUrl.o o.le-v7-g/.obj/CountlySdkExample.o o.le-v7-g/.obj/CountlySentry.o o.le-v7-g/.obj/GameSettings.o o.le-v7-g/.obj/PaymentServiceControl.o o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_Countly.o o.le-v7-g/.obj/moc_CountlyDatabase.o o.le-v7-g/.obj/moc_CountlyEvent.o o.le-v7-g/.obj/moc_CountlyLog.o o.le-v7-g/.obj/moc_CountlyQueue.o o.le-v7-g/.obj/moc_CountlyQueueProcessor.o o.le-v7-g/.obj/moc_CountlyQueuedUrl.o o.le-v7-g/.obj/moc_CountlySdkExample.o o.le-v7-g/.obj/moc_GameSettings.o o.le-v7-g/.obj/moc_PaymentServiceControl.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbb -lbbdata -lbbplatform -lbbdevice -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
 make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/arm'
 
