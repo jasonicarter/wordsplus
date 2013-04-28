@@ -3,6 +3,7 @@
 #define ApplicationUI_HPP_
 
 #include "GameSettings.hpp"
+#include "LevelHints.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -34,11 +35,15 @@ public:
     Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
     Q_PROPERTY (bool showRetry READ getShowRetry WRITE setShowRetry NOTIFY ShowRetryChanged);
     Q_PROPERTY (int coinCount READ getCoinCount WRITE setCoinCount NOTIFY coinCountChanged);
+    Q_PROPERTY (bool hintShown READ getHintShown WRITE setHintShown NOTIFY hintShownChanged);
+    Q_PROPERTY (const QString levelHint READ getLevelHint NOTIFY levelHintChanged);
 
     Q_SIGNALS:
     	void showNextChanged();
     	void ShowRetryChanged();
     	void coinCountChanged();
+    	void hintShownChanged();
+    	void levelHintChanged();
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -51,14 +56,22 @@ private:
     bool showNext;
 	bool getShowNext();
 	void setShowNext(bool status);
+
 	int getCurrentLevel();
 	void setCurrentLevel(int level);
+
 	int getCoinCount();
 	void setCoinCount(int coins);
+
+	bool hintShown;
+	bool getHintShown();
+	void setHintShown(bool status);
 
     bool showRetry;
 	bool getShowRetry();
 	void setShowRetry(bool status);
+
+	QString getLevelHint();
 
     float wantedSize;
     float numTiles;
@@ -67,6 +80,7 @@ private:
     int tilesAvailable;
     QList<int> selectTiles;
 
+    LevelHints *hints;
     GameSettings *settings;
 	Page *appPage;
     Control *puzzleControl;

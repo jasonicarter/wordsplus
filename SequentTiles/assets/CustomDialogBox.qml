@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 // This is a Dialog. It is a custom built overlay
 // illustrating an alarm with a toggle button for dismissal.
@@ -84,9 +85,11 @@ Dialog {
                                 sequentTiles.NextGame();
                                 customDialog.close();
                             } else if (dialogType == "hint") {
-                                //hintShown = true;
-                                btnOk.enabled = false;
-                                txtMsg.text = "Here's your hint"
+                                sequentTiles.hintShown = true;
+                                hintToast.button.label = "OK"
+                                hintToast.show();
+                                customDialog.close();
+                                
                                 //sequentTiles.GetHint();
                             } else if (dialogType == "coins") {
                                 customDialog.close();
@@ -103,6 +106,12 @@ Dialog {
         Sheet {
             id: paymentSheet
             PaymentContainer {
+            }
+        },
+        SystemToast {
+            id: hintToast
+            body: sequentTiles.levelHint;    
+            onFinished: {
             }
         }
     ]

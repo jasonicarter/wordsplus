@@ -3,69 +3,27 @@ BASEDIR =  $$quote($$_PRO_FILE_PWD_)
 
 device {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/Countly.cpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.cpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
-                 $$quote($$BASEDIR/src/GameSettings.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/GameSettings.cpp) \
+                 $$quote($$BASEDIR/src/LevelHints.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/Countly.hpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.hpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
-                 $$quote($$BASEDIR/src/GameSettings.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/GameSettings.hpp) \
+                 $$quote($$BASEDIR/src/LevelHints.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp)
     }
 
     CONFIG(release, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/Countly.cpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.cpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
-                 $$quote($$BASEDIR/src/GameSettings.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/GameSettings.cpp) \
+                 $$quote($$BASEDIR/src/LevelHints.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/Countly.hpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.hpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
-                 $$quote($$BASEDIR/src/GameSettings.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/GameSettings.hpp) \
+                 $$quote($$BASEDIR/src/LevelHints.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp)
     }
@@ -73,35 +31,14 @@ device {
 
 simulator {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/Countly.cpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.cpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
-                 $$quote($$BASEDIR/src/GameSettings.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/GameSettings.cpp) \
+                 $$quote($$BASEDIR/src/LevelHints.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/Countly.hpp) \
-                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
-                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
-                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
-                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
-                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
-                 $$quote($$BASEDIR/src/CountlySdkExample.hpp) \
-                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
-                 $$quote($$BASEDIR/src/GameSettings.hpp) \
+        HEADERS +=  $$quote($$BASEDIR/src/GameSettings.hpp) \
+                 $$quote($$BASEDIR/src/LevelHints.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp)
     }
