@@ -146,13 +146,13 @@ Container {
                     preferredWidth: 75
                     rightMargin: 0
                     leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/p.png"
+                    imageSource: "theme/" + "wordsPlus" + "/letters/p.png"
                     onTouch: {
                         if (event.isDown()) {
-                            pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/highlight/p.png"
+                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/p.png"
                             wordsPlus.playSound("letterSelected");
                         } else if (event.isUp()) {
-                            pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/p.png"
+                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
                         }
                     }
                 }
@@ -162,17 +162,17 @@ Container {
                     preferredWidth: 75
                     rightMargin: 0
                     leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/l.png"
+                    imageSource: "theme/" + "wordsPlus" + "/letters/l.png"
                     onTouchEnter: {
-                        if (pLetter.imageSource == "asset:///theme/" + "wordsPlus" + "/letters/highlight/p.png") {
-                            lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/highlight/l.png"
+                        if (pLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/p.png") {
+                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/l.png"
                             wordsPlus.playSound("letterSelected");
                         }
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/p.png"
-                            lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
+                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
+                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
                         }
                     }
                 }
@@ -182,18 +182,18 @@ Container {
                     preferredWidth: 75
                     rightMargin: 0
                     leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/a.png"
+                    imageSource: "theme/" + "wordsPlus" + "/letters/a.png"
                     onTouchEnter: {
-                        if (lLetter.imageSource == "asset:///theme/" + "wordsPlus" + "/letters/highlight/l.png") {
-                            aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/highlight/a.png"
+                        if (lLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/l.png") {
+                            aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/a.png"
                             wordsPlus.playSound("letterSelected");
                         }
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/p.png"
-                            lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
-                            aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/a.png"
+                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
+                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
+                            aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
                         }
                     }
                 }
@@ -203,27 +203,27 @@ Container {
                     preferredWidth: 75
                     rightMargin: 0
                     leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/y.png"
+                    imageSource: "theme/" + "wordsPlus" + "/letters/y.png"
                     onTouchEnter: {
-                        if (aLetter.imageSource == "asset:///theme/" + "wordsPlus" + "/letters/highlight/a.png") {
-                            yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/highlight/y.png"
+                        if (aLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/a.png") {
+                            yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/y.png"
                             wordsPlus.playSound("letterSelected");
                         }
                     }
                     onTouchExit: {
-                        pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/p.png"
-                        lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
-                        aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/a.png"
-                        yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/y.png"
+                        pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
+                        lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
+                        aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
+                        yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/y.png"
                         wordsPlus.intializePlayArea();
                     }
                     onTouch: {
                         if (event.isUp()) {
-                            if (yLetter.imageSource == "asset:///theme/" + "wordsPlus" + "/letters/highlight/y.png") {
-                                pLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/p.png"
-                                lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
-                                aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/a.png"
-                                yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/y.png"
+                            if (yLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/y.png") {
+                                pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
+                                lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
+                                aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
+                                yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/y.png"
                                 wordsPlus.intializePlayArea();
                             }
                         }

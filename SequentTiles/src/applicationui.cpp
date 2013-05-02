@@ -141,7 +141,15 @@ QString ApplicationUI::getLevelHint(){
 
 void ApplicationUI::NextGame(){
 	//TODO
-	if(currentLevel <= 30){ //just so it wont crash during testing
+
+	QDir packagesDir("app/native/assets/packages/pkg_1");
+	int levelCount = packagesDir.count(); //returns extra stuff in directory needs to be filtered
+	QStringList filters;
+	filters << "level*";
+	QStringList levelNames = packagesDir.entryList(filters);
+	levelCount = levelNames.count();
+
+	if(currentLevel <= levelCount){ //just so it wont crash during testing
 		currentLevel = getCurrentLevel() + 1;
 		setCurrentLevel(currentLevel);
 		setHintShown(false);

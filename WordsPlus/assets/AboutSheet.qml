@@ -194,9 +194,9 @@ Page {
         },
         Invocation {
             id: invokeLeaveReview
-            query: InvokeQuery {
-                mimeType: "application/x-bb-appworld"
-                uri: "appworld://content/19132685"
+            query {
+                invokeTargetId: "sys.appworld"
+                uri: "appworld://content/21931881"
             }
         }
     ]

@@ -12,19 +12,20 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
-		<item value="true" key="wholeword"/>
-		<item value=".insert" key="selection"/>
+		<item value="false" key="wholeword"/>
+		<item value="Toast" key="selection"/>
 		<list key="findhistory">
+			<item value="toast"/>
+			<item value="asset:///theme/"/>
 			<item value=".Add"/>
 			<item value="levelHint"/>
 			<item value="getselectedletters"/>
 			<item value="getselectedletter"/>
 			<item value="getselected*"/>
 			<item value="getse"/>
-			<item value="setApplicationName"/>
-			<item value="puzzleCompleted"/>
 		</list>
 		<list key="replacehistory">
+			<item value="theme/"/>
 			<item value=".insert"/>
 			<item value="WordsPlusFree"/>
 			<item value="WordsPlusGame"/>
