@@ -140,14 +140,14 @@ Page {
         SystemToast {
             id: connectionToast
             body: "" //set in C++
-            button.label: "OK"
+            //button.label: "OK"
             onFinished: {
                 connectionError = 1;
             }
         },
         MediaPlayer {
             id: bgMusic
-            sourceUrl: "asset:///sounds/background.wav"
+            sourceUrl: "sounds/background.wav"
         }
     ]
     onCreationCompleted: {
@@ -180,6 +180,7 @@ Page {
     }
     function handleToastSignal(toastMessage) {
         mainSysToast.body = toastMessage;
+        mainSysToast.button.label = "OK";
         wordsPlus.stopTimer();
         mainSysToast.show();
     }

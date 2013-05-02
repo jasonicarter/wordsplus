@@ -41,9 +41,9 @@ images/help.png
 images/incorrect_answer.png
 images/trophy.png
 main.qml
-packages/pkg_1/example_1/0.png
-packages/pkg_1/example_1/1.png
-packages/pkg_1/example_1/2.png
+packages/example_1/0.png
+packages/example_1/1.png
+packages/example_1/2.png
 packages/pkg_1/level_1/0.png
 packages/pkg_1/level_1/1.png
 packages/pkg_1/level_1/2.png

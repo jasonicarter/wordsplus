@@ -198,6 +198,7 @@ Container {
         function onScoreloopLoaded(username) {
             scoreLoopUsername = username;
             homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
+            homeSysToast.button.label = "Got it!"
             homeSysToast.show();
         }
     } //end of main container
@@ -234,7 +235,7 @@ Container {
         SystemToast {
             id: homeSysToast
             body: ""
-            button.label: "Got it!" //btnName
+           //button.label: "Got it!" //btnName
         },
         Sheet {
             id: themeSheet
