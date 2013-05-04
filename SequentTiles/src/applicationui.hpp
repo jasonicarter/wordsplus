@@ -44,6 +44,7 @@ public:
     	void coinCountChanged();
     	void hintShownChanged();
     	void levelHintChanged();
+    	void gameCompletedSignal(); //used in qml
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);

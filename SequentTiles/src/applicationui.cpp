@@ -149,14 +149,16 @@ void ApplicationUI::NextGame(){
 	QStringList levelNames = packagesDir.entryList(filters);
 	levelCount = levelNames.count();
 
-	if(currentLevel <= levelCount){ //just so it wont crash during testing
+	if(currentLevel < levelCount){ //just so it wont crash during testing
 		currentLevel = getCurrentLevel() + 1;
 		setCurrentLevel(currentLevel);
 		setHintShown(false);
 		emit levelHintChanged(); //so QML will update system toast with new message
+		NewGame(currentPackage,currentLevel);
+	}else {
+		emit gameCompletedSignal();
 	}
 
-	NewGame(currentPackage,currentLevel);
 }
 void ApplicationUI::RedoGame(){
 	NewGame(currentPackage,currentLevel);
@@ -165,6 +167,8 @@ void ApplicationUI::RedoGame(){
 void ApplicationUI::StartGame(){
 	NewGame(1, getCurrentLevel());
 }
+
+
 
 void ApplicationUI::NewGame(int pkg, int level) {
 

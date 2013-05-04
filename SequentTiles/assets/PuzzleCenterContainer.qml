@@ -62,7 +62,7 @@ Container {
                     }
                     if (event.isUp()) {
                         hint_selected.visible = false
-                        if (!sequentTiles.hintShown) {
+                        if (! sequentTiles.hintShown) {
                             if (sequentTiles.coinCount >= 75) {
                                 customDialog.dialogType = "hint"
                                 customDialog.dialogTitle = "Need a Hint?"
@@ -221,5 +221,19 @@ Container {
         }
 
     } //incorrect answer
-
+    onCreationCompleted: {
+        sequentTiles.gameCompletedSignal.connect(onGameCompletedSignal)
+    }
+    function onGameCompletedSignal() {
+        puzzleCompletedDialog.open();
+    }
+    attachedObjects: [
+        PuzzleCompletedDialog {
+            id: puzzleCompletedDialog
+            onOpened: {
+            }
+            onClosed: {
+            }
+        }
+    ]
 }

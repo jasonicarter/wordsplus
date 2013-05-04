@@ -1,5 +1,5 @@
 1
-157
+158
 AboutSheet.qml
 CustomDialogBox.qml
 HelpSheet.qml
@@ -154,6 +154,7 @@ PaymentContainer.qml
 PuzzleBackgroundContainer.qml
 PuzzleBtmNavContainer.qml
 PuzzleCenterContainer.qml
+PuzzleCompletedDialog.qml
 PuzzleContainer.qml
 PuzzleTopNavContainer.qml
 SettingsSheet.qml

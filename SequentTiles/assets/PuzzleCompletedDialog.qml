@@ -1,7 +1,8 @@
 import bb.cascades 1.0
 
-Page {
+Dialog {
     Container {
+        //preferredHeight: 980
         layout: DockLayout {
         }
         background: Color.create("#272727")
@@ -15,7 +16,7 @@ Page {
             horizontalAlignment: HorizontalAlignment.Center
             Label {
                 horizontalAlignment: HorizontalAlignment.Center
-                text: "Get More Coins! " //+ sequentTiles.coinCount
+                text: "CONGRATULATIONS!"
                 textStyle {
                     textAlign: TextAlign.Center
                     base: SystemDefaults.TextStyles.BigText
@@ -31,7 +32,7 @@ Page {
             verticalAlignment: VerticalAlignment.Bottom
             Label {
                 horizontalAlignment: HorizontalAlignment.Center
-                text: "Guess the Sequent"
+                text: "HOME"
                 textStyle {
                     textAlign: TextAlign.Center
                     base: SystemDefaults.TextStyles.BigText
@@ -76,10 +77,10 @@ Page {
                         verticalAlignment: VerticalAlignment.Bottom
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "Review It!"
-//                        preferredHeight: 100
-//                        preferredWidth: 200
+                        //                        preferredHeight: 100
+                        //                        preferredWidth: 200
                         onClicked: {
-                            
+
                         }
                     }
                 }
@@ -129,10 +130,10 @@ Page {
                         verticalAlignment: VerticalAlignment.Bottom
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "Get It Now!"
-//                        preferredHeight: 200
-//                        preferredWidth: 200
+                        //                        preferredHeight: 200
+                        //                        preferredWidth: 200
                         onClicked: {
-                            
+
                         }
                     }
                 }
