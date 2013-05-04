@@ -6157,3 +6157,286 @@ Duplicate Signal in: ComponentID: bb::cascades::InvokeActionItem, Signal: handle
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-02 19:06:43.121
 !MESSAGE QML Preview compatibility check log.
 
+!SESSION 2013-05-03 12:25:43.470 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.358
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.494
+!MESSAGE Cannot resolve ValueType variant: QLocale
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.495
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.496
+!MESSAGE Cannot resolve ValueType variant: bb::device::CellularService::Types
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.497
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.498
+!MESSAGE Cannot resolve ValueType variant:  bb::system::SystemUiButton 
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:47.507
+!MESSAGE Issues while loading Components Definition:
+Duplicate Signal in: ComponentID: bb::cascades::InvokeActionItem, Signal: handlerChanged
+
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-05-03 12:25:47.533
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-05-03 12:25:47.542
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-05-03 12:25:47.553
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-05-03 12:25:47.565
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-05-03 12:25:47.590
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:25:49.296
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-05-03 12:25:49.525
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-03 12:25:53.712
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-03 12:25:53.712
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1a01e8a),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1a01e8a)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1a01e8a),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1a01e8a)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:25:54.069
+!MESSAGE SDK version used 10.1.0.1483 with capabilities: [[UI_ADAPTABILITY, CHANGE_ORIENTATION, CHANGE_THEME, ZOOM_CHANGE]]
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:55.828
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.565
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.566
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.568
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.569
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.600
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.601
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.602
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:56.603
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.199
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.202
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.628
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.635
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.973
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.975
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.976
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.982
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.983
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:57.984
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.080
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.082
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.083
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.085
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.092
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.095
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.096
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.098
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.421
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:58.576
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.068
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.183
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.715
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.716
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.717
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.720
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.721
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.722
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.776
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.777
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.779
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.780
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.787
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.788
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.789
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.791
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.832
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.834
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.835
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.838
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.839
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.840
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.863
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.929
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.932
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.987
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-05-03 12:25:59.992
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:27:37.640
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:29:02.875
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:29:19.443
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:31:49.034
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:31:58.493
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:32:04.544
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:34:23.704
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-03 12:39:37.700
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-05-03 12:51:48.540
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-05-03 12:51:48.590
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-05-03 12:51:48.615
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-05-03 13:03:47.296
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-05-03 13:03:48.560
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-05-03 13:03:48.646
+!MESSAGE Unable to determine the application exit code
