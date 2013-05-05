@@ -10468,3 +10468,7 @@ Caused by: java.lang.ClassCastException: com.rim.tad.tools.qml.parser.ast.ASTUna
 	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.analyze(SemanticAnalyzer.java:129)
 	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:491)
 	... 9 more
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-05-05 02:13:12.045
+!MESSAGE QML Preview compatibility check log.
+

@@ -21,9 +21,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,17 +36,21 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.cpp" partName="applicationui.cpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.cpp" title="applicationui.cpp" tooltip="SequentTiles/src/applicationui.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/applicationui.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="945" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5208" selectionTopPixel="2475"/>
 </editor>
-<editor activePart="true" focus="true" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" partName="PuzzleCenterContainer.qml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/assets/PuzzleCenterContainer.qml" title="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
-<editorState com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.activePageIndex="0" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.horizontalWeight1="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalSwap="false" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight0="1" com.rim.tad.tools.qml.core.internal.editor.SplitViewComposite.verticalWeight1="1" selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7720" selectionTopPixel="2940"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.hpp" partName="applicationui.hpp" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/src/applicationui.hpp" title="applicationui.hpp" tooltip="SequentTiles/src/applicationui.hpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/src/applicationui.hpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2226" selectionTopPixel="450"/>
+</editor>
+<editor activePart="true" focus="true" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" partName="bar-descriptor.xml" path="C:/Users/Jason/Documents/blackberry-workspace/blackberry/SequentTiles/bar-descriptor.xml" title="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SequentTiles/bar-descriptor.xml"/>
 </editor>
 </editors>
 <views>
@@ -134,7 +138,7 @@
 <viewState PropertiesView.contentMode="true" PropertiesView.displayType="true" PropertiesView.sectionExpansion.APPEARANCE="true" PropertiesView.sectionExpansion.GENERAL="true" PropertiesView.sectionExpansion.IMAGESOURCE="false" PropertiesView.sectionExpansion.LAYOUT="false" PropertiesView.sectionExpansion.MARGINS="true" PropertiesView.sectionExpansion.MISCELLANEOUS="true" PropertiesView.sectionExpansion.MULTISELECTION="false" PropertiesView.sectionExpansion.SETTINGS="false" PropertiesView.sectionExpansion.TRANSFORMS="false"/>
 </view>
 </views>
-<perspectives activePart="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
+<perspectives activePart="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" activePerspective="com.rim.tad.tools.qml.core.perspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.sysinfo.internal.ui.SysInfoPerspective" id="com.qnx.tools.ide.sysinfo.perspective" label="QNX System Information"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -477,14 +481,14 @@
 <view id="org.eclipse.debug.ui.DebugView" ratio="0.2981701"/>
 </fastViews>
 </fastViewBar>
-<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
-<fastViews>
-<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="righttop" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.29978472"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="rightbottom" orientation="512" selectedTabId="com.rim.tad.tools.builder.view.properties" style="0">
+<fastViews>
+<view id="com.rim.tad.tools.builder.view.properties" ratio="0.19537137"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1f44736" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
@@ -561,16 +565,7 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/CustomDialogBox.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCompletedDialog.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HelpSheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCompletedDialog.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/SettingsSheet.qml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/WordsPlusGame/assets/main.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/SequentTiles/SequentTiles.pro"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/SequentTiles/bar-descriptor.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/AboutSheet.qml"/>
@@ -578,153 +573,159 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PuzzleCompletedDialog.qml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PaymentContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/HomeContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/PaymentContainer.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/AboutSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SequentTiles/src/applicationui.hpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/SettingsSheet.qml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" path="/SequentTiles/bar-descriptor.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" path="/SequentTiles/assets/SettingsSheet.qml"/>
 </editors>
-<item historyLabel="applicationui.cpp" index="5">
-<position info="not_deleted" x="4282" y="0"/>
-</item>
-<item historyLabel="applicationui.hpp" index="4">
-<position info="not_deleted" x="1585" y="0"/>
-</item>
-<item historyLabel="applicationui.cpp" index="5">
-<position info="not_deleted" x="4286" y="0"/>
-</item>
-<item historyLabel="main.qml" index="2">
-<position info="not_deleted" x="4533" y="59"/>
-</item>
-<item historyLabel="CustomDialogBox.qml" index="1">
-<position info="not_deleted" x="158" y="9"/>
-</item>
-<item historyLabel="main.qml" index="2">
-<position info="not_deleted" x="4533" y="59"/>
-</item>
 <item historyLabel="PuzzleCenterContainer.qml" index="0">
-<position info="not_deleted" x="7519" y="0"/>
-</item>
-<item historyLabel="PuzzleCompletedDialog.qml" index="3">
-<position info="not_deleted" x="1113" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="0">
-<position info="not_deleted" x="7519" y="0"/>
-</item>
-<item historyLabel="PuzzleCompletedDialog.qml" index="3">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="0">
-<position info="not_deleted" x="7519" y="0"/>
-</item>
-<item historyLabel="HelpSheet.qml" index="6">
-<position info="not_deleted" x="970" y="0"/>
-</item>
-<item historyLabel="PuzzleCompletedDialog.qml" index="7">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="6721" y="0"/>
-</item>
-<item historyLabel="SettingsSheet.qml" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="6721" y="0"/>
-</item>
-<item historyLabel="main.qml" index="10">
-<position info="not_deleted" x="79" y="24"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="68" y="0"/>
-</item>
-<item historyLabel="main.qml" index="10">
-<position info="not_deleted" x="3802" y="108"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="8198" y="0"/>
-</item>
-<item historyLabel="main.qml" index="10">
-<position info="not_deleted" x="4003" y="1"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="8183" y="0"/>
-</item>
-<item historyLabel="main.qml" index="10">
-<position info="not_deleted" x="4003" y="1"/>
-</item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
-<position info="not_deleted" x="7720" y="0"/>
-</item>
-<item historyLabel="SequentTiles.pro" index="11">
-<position info="not_deleted" x="133" y="0"/>
-</item>
-<item historyLabel="bar-descriptor.xml" index="12"/>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
 <position info="not_deleted" x="8059" y="0"/>
 </item>
-<item historyLabel="bar-descriptor.xml" index="12"/>
-<item historyLabel="SequentTiles.pro" index="11">
+<item historyLabel="bar-descriptor.xml" index="3"/>
+<item historyLabel="SequentTiles.pro" index="2">
 <position info="not_deleted" x="133" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6521" y="0"/>
 </item>
-<item historyLabel="AboutSheet.qml" index="13">
+<item historyLabel="AboutSheet.qml" index="4">
 <position/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="AboutSheet.qml" index="13">
+<item historyLabel="AboutSheet.qml" index="4">
 <position info="not_deleted" x="2526" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="HelpSheet.qml" index="14">
+<item historyLabel="HelpSheet.qml" index="5">
 <position/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="PuzzleCompletedDialog.qml" index="15">
+<item historyLabel="PuzzleCompletedDialog.qml" index="6">
 <position info="not_deleted" x="980" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="SettingsSheet.qml" index="9">
+<item historyLabel="SettingsSheet.qml" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="16">
+<item historyLabel="applicationui.cpp" index="7">
 <position info="not_deleted" x="3076" y="0"/>
 </item>
-<item historyLabel="HelpSheet.qml" index="14">
+<item historyLabel="HelpSheet.qml" index="5">
 <position info="not_deleted" x="4500" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="16">
+<item historyLabel="applicationui.cpp" index="7">
 <position info="not_deleted" x="3076" y="0"/>
 </item>
-<item historyLabel="PaymentContainer.qml" index="17">
+<item historyLabel="PaymentContainer.qml" index="8">
 <position info="not_deleted" x="5482" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="16">
+<item historyLabel="applicationui.cpp" index="7">
 <position info="not_deleted" x="2875" y="0"/>
 </item>
-<item historyLabel="PaymentContainer.qml" index="17">
+<item historyLabel="PaymentContainer.qml" index="8">
 <position info="not_deleted" x="5482" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="16">
+<item historyLabel="applicationui.cpp" index="7">
 <position info="not_deleted" x="2875" y="0"/>
 </item>
-<item historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
 <position info="not_deleted" x="6686" y="0"/>
 </item>
-<item historyLabel="applicationui.cpp" index="16">
+<item historyLabel="applicationui.cpp" index="7">
 <position info="not_deleted" x="945" y="0"/>
 </item>
-<item active="true" historyLabel="PuzzleCenterContainer.qml" index="8">
+<item historyLabel="PuzzleCenterContainer.qml" index="0">
+<position info="not_deleted" x="7720" y="0"/>
+</item>
+<item historyLabel="HomeContainer.qml" index="9">
+<position info="not_deleted" x="1019" y="0"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
+<item historyLabel="HomeContainer.qml" index="9">
+<position info="not_deleted" x="1019" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="4659" y="0"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
+<position info="not_deleted" x="815" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="3892" y="1083"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
+<position/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="3892" y="1083"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
+<position/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="3892" y="1083"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
+<position info="not_deleted" x="8849" y="0"/>
+</item>
+<item historyLabel="AboutSheet.qml" index="12">
+<position info="not_deleted" x="3892" y="1083"/>
+</item>
+<item historyLabel="PaymentContainer.qml" index="10">
+<position info="not_deleted" x="8849" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="4587" y="22"/>
+</item>
+<item historyLabel="applicationui.hpp" index="13">
+<position info="not_deleted" x="2226" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="4587" y="22"/>
+</item>
+<item historyLabel="applicationui.hpp" index="13">
+<position info="not_deleted" x="2226" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="4587" y="22"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="1050" y="0"/>
+</item>
+<item historyLabel="SettingsSheet.qml" index="14">
+<position info="not_deleted" x="2350" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="1050" y="0"/>
+</item>
+<item historyLabel="applicationui.cpp" index="11">
+<position info="not_deleted" x="5208" y="0"/>
+</item>
+<item historyLabel="applicationui.hpp" index="13">
+<position info="not_deleted" x="2226" y="0"/>
+</item>
+<item historyLabel="bar-descriptor.xml" index="15"/>
+<item historyLabel="SettingsSheet.qml" index="16">
+<position info="not_deleted" x="2327" y="0"/>
+</item>
+<item active="true" historyLabel="bar-descriptor.xml" index="15"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -733,7 +734,6 @@
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="leftbottom"/>
-<trimItem IMemento.internal.id="lefttop"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="righttop"/>
@@ -752,11 +752,26 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml">
-<persistable path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="SequentTiles/assets/SettingsSheet.qml">
+<persistable path="/SequentTiles/assets/SettingsSheet.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml">
+<persistable path="/SequentTiles/bar-descriptor.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.hpp" tooltip="SequentTiles/src/applicationui.hpp">
+<persistable path="/SequentTiles/src/applicationui.hpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="SequentTiles/assets/AboutSheet.qml">
+<persistable path="/SequentTiles/assets/AboutSheet.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PaymentContainer.qml" tooltip="SequentTiles/assets/PaymentContainer.qml">
 <persistable path="/SequentTiles/assets/PaymentContainer.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeContainer.qml" tooltip="SequentTiles/assets/HomeContainer.qml">
+<persistable path="/SequentTiles/assets/HomeContainer.qml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCenterContainer.qml" tooltip="SequentTiles/assets/PuzzleCenterContainer.qml">
+<persistable path="/SequentTiles/assets/PuzzleCenterContainer.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HelpSheet.qml" tooltip="SequentTiles/assets/HelpSheet.qml">
 <persistable path="/SequentTiles/assets/HelpSheet.qml"/>
@@ -764,20 +779,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="PuzzleCompletedDialog.qml" tooltip="SequentTiles/assets/PuzzleCompletedDialog.qml">
 <persistable path="/SequentTiles/assets/PuzzleCompletedDialog.qml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="AboutSheet.qml" tooltip="SequentTiles/assets/AboutSheet.qml">
-<persistable path="/SequentTiles/assets/AboutSheet.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.qnx.tools.bbt.xml.internal.ui.editor.bbtxml.BBTXMLEditor" name="bar-descriptor.xml" tooltip="SequentTiles/bar-descriptor.xml">
-<persistable path="/SequentTiles/bar-descriptor.xml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="SequentTiles.pro" tooltip="SequentTiles/SequentTiles.pro">
 <persistable path="/SequentTiles/SequentTiles.pro"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="main.qml" tooltip="WordsPlusGame/assets/main.qml">
 <persistable path="/WordsPlusGame/assets/main.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="SettingsSheet.qml" tooltip="SequentTiles/assets/SettingsSheet.qml">
-<persistable path="/SequentTiles/assets/SettingsSheet.qml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.cpp" tooltip="SequentTiles/src/applicationui.cpp">
 <persistable path="/SequentTiles/src/applicationui.cpp"/>
@@ -785,17 +791,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.cpp" tooltip="WordsPlusGame/src/WordsPlusGame.cpp">
 <persistable path="/WordsPlusGame/src/WordsPlusGame.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="applicationui.hpp" tooltip="SequentTiles/src/applicationui.hpp">
-<persistable path="/SequentTiles/src/applicationui.hpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WordsPlusGame.hpp" tooltip="WordsPlusGame/src/WordsPlusGame.hpp">
 <persistable path="/WordsPlusGame/src/WordsPlusGame.hpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="CustomDialogBox.qml" tooltip="SequentTiles/assets/CustomDialogBox.qml">
 <persistable path="/SequentTiles/assets/CustomDialogBox.qml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rim.tad.tools.qml.core.internal.editor.QMLEditor" name="HomeContainer.qml" tooltip="SequentTiles/assets/HomeContainer.qml">
-<persistable path="/SequentTiles/assets/HomeContainer.qml"/>
 </file>
 </mruList>
 </workbench>

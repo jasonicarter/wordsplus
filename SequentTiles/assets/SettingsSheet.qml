@@ -54,7 +54,7 @@ Page {
                     Label {
                         text: 
                         "1) Enable reset button.\n"
-                        + "2) Check 'Guest Mode' on to reset guest levels\n"
+                        + "2) Optional: Check 'Guest Mode' to reset guest levels\n"
                         + "3) Press 'Reset Game' button\n\n"
                         + "All progress will be lost. Coins will be saved."
                         multiline: true
