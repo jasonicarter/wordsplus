@@ -64,7 +64,14 @@ void ApplicationUI::InitializePuzzleContainer() {
 	QmlDocument* qmlContent = QmlDocument::create("asset:///PuzzleContainer.qml");
 	qmlContent->setContextProperty("sequentTiles", this);
 	puzzleControl = qmlContent->createRootObject<Control>();
-	//appPage->setContent(puzzleControl);
+
+	QDir packagesDir("app/native/assets/packages/pkg_1");
+	levelCount = packagesDir.count(); //returns extra stuff in directory needs to be filtered
+	QStringList filters;
+	filters << "level_*";
+	QStringList levelNames = packagesDir.entryList(filters);
+	levelCount = levelNames.count();
+
 }
 
 //needs to have a property to emit value
@@ -120,8 +127,11 @@ void ApplicationUI::setCurrentLevel(int level){
 void ApplicationUI::ResetAll(){
 	setCurrentLevel(1);
 }
+void ApplicationUI::SkipToEnd(){
+	setCurrentLevel(levelCount);
+}
 int ApplicationUI::getCoinCount(){
-	return (settings->getValueFor("Coins", "100")).toInt();
+	return (settings->getValueFor("Coins", "600")).toInt();
 }
 void ApplicationUI::setCoinCount(int coins){
 	settings->saveValueFor("Coins", QString::number(coins));
@@ -136,24 +146,21 @@ void ApplicationUI::setHintShown(bool status){
 QString ApplicationUI::getLevelHint(){
 	return 	hints->getHint(getCurrentLevel());
 }
+int ApplicationUI::getUserLevel(){
+	return getCurrentLevel();
+}
 
 
 
 void ApplicationUI::NextGame(){
-	//TODO
-
-	QDir packagesDir("app/native/assets/packages/pkg_1");
-	int levelCount = packagesDir.count(); //returns extra stuff in directory needs to be filtered
-	QStringList filters;
-	filters << "level*";
-	QStringList levelNames = packagesDir.entryList(filters);
-	levelCount = levelNames.count();
 
 	if(currentLevel < levelCount){ //just so it wont crash during testing
 		currentLevel = getCurrentLevel() + 1;
 		setCurrentLevel(currentLevel);
 		setHintShown(false);
+
 		emit levelHintChanged(); //so QML will update system toast with new message
+		emit userLevelChanged();
 		NewGame(currentPackage,currentLevel);
 	}else {
 		emit gameCompletedSignal();

@@ -30,6 +30,7 @@ public:
     Q_INVOKABLE void NextGame();
     Q_INVOKABLE void RedoGame();
     Q_INVOKABLE void ResetAll();
+    Q_INVOKABLE void SkipToEnd();
     Q_INVOKABLE void Home();
     Q_INVOKABLE void Submit();
     Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
@@ -37,6 +38,7 @@ public:
     Q_PROPERTY (int coinCount READ getCoinCount WRITE setCoinCount NOTIFY coinCountChanged);
     Q_PROPERTY (bool hintShown READ getHintShown WRITE setHintShown NOTIFY hintShownChanged);
     Q_PROPERTY (const QString levelHint READ getLevelHint NOTIFY levelHintChanged);
+    Q_PROPERTY (int userLevel READ getUserLevel NOTIFY userLevelChanged);
 
     Q_SIGNALS:
     	void showNextChanged();
@@ -44,6 +46,7 @@ public:
     	void coinCountChanged();
     	void hintShownChanged();
     	void levelHintChanged();
+    	void userLevelChanged();
     	void gameCompletedSignal(); //used in qml
 
 private Q_SLOTS:
@@ -73,12 +76,14 @@ private:
 	void setShowRetry(bool status);
 
 	QString getLevelHint();
+	int getUserLevel();
 
     float wantedSize;
     float numTiles;
     int currentLevel;
     int currentPackage;
     int tilesAvailable;
+    int levelCount;
     QList<int> selectTiles;
 
     LevelHints *hints;

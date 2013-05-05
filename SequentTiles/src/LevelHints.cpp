@@ -62,6 +62,8 @@ QString LevelHints::getHint(int level) {
 	QString hint;
 	if (level <= levelHint.count()) {
 		hint = levelHint[level];
+	}else {
+		hint = "Hint doesn't exist for this level";
 	}
 
 	return hint;

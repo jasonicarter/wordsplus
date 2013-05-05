@@ -63,7 +63,7 @@ Page {
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         verticalAlignment: VerticalAlignment.Top
-                        text: "200 COINS\n$0.99"
+                        text: "600 COINS\n$0.99"
                         multiline: true
                         textStyle {
                             textAlign: TextAlign.Center
@@ -79,10 +79,10 @@ Page {
                         preferredHeight: 100
                         preferredWidth: 200
                         onClicked: {
-                            paymentControl.id = "123456789"
-                            paymentControl.sku = "SKU-1"
-                            paymentControl.name = "200 Coins"
-                            paymentControl.metadata = "200"
+                            paymentControl.id = "28015175"
+                            paymentControl.sku = "600_coins"
+                            paymentControl.name = "600 Coins"
+                            paymentControl.metadata = "600"
                             paymentControl.getPrice(paymentControl.id, paymentControl.sku)
                             paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
                         }
@@ -103,7 +103,7 @@ Page {
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         verticalAlignment: VerticalAlignment.Top
-                        text: "550 COINS\n$1.99"
+                        text: "1500 COINS\n$1.99"
                         multiline: true
                         textStyle {
                             textAlign: TextAlign.Center
@@ -119,10 +119,10 @@ Page {
                         preferredHeight: 100
                         preferredWidth: 200
                         onClicked: {
-                            paymentControl.id = "123456789"
-                            paymentControl.sku = "SKU-1"
-                            paymentControl.name = "200 Coins"
-                            paymentControl.metadata = "550"
+                            paymentControl.id = "28015176"
+                            paymentControl.sku = "1500_coins"
+                            paymentControl.name = "1500 Coins"
+                            paymentControl.metadata = "1500"
                             paymentControl.getPrice(paymentControl.id, paymentControl.sku)
                             paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
                         }
@@ -143,7 +143,7 @@ Page {
                     Label {
                         horizontalAlignment: HorizontalAlignment.Center
                         verticalAlignment: VerticalAlignment.Top
-                        text: "900 COINS\n$2.99"
+                        text: "4000 COINS\n$2.99"
                         multiline: true
                         textStyle {
                             textAlign: TextAlign.Center
@@ -159,10 +159,10 @@ Page {
                         preferredHeight: 100
                         preferredWidth: 200
                         onClicked: {
-                            paymentControl.id = "123456789"
-                            paymentControl.sku = "SKU-1"
-                            paymentControl.name = "200 Coins"
-                            paymentControl.metadata = "900"
+                            paymentControl.id = "28015177"
+                            paymentControl.sku = "4000_coins"
+                            paymentControl.name = "4000 Coins"
+                            paymentControl.metadata = "4000"
                             paymentControl.getPrice(paymentControl.id, paymentControl.sku)
                             paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
                         }

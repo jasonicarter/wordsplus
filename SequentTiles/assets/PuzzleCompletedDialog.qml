@@ -2,10 +2,11 @@ import bb.cascades 1.0
 
 Dialog {
     Container {
-        //preferredHeight: 980
+        preferredWidth: 768
         layout: DockLayout {
         }
         background: Color.create("#272727")
+        horizontalAlignment: HorizontalAlignment.Center
         ImageView {
             horizontalAlignment: HorizontalAlignment.Center
             imageSource: "images/background_payment.png"
@@ -23,6 +24,15 @@ Dialog {
                     color: Color.create("#fafafa")
                 }
             }
+            Label {
+                horizontalAlignment: HorizontalAlignment.Center
+                text: "You've completed the game."
+                textStyle {
+                    textAlign: TextAlign.Center
+                    base: SystemDefaults.TextStyles.PrimaryText
+                    color: Color.create("#fafafa")
+                }
+            }
 
         }
         Container {
@@ -32,7 +42,7 @@ Dialog {
             verticalAlignment: VerticalAlignment.Bottom
             Label {
                 horizontalAlignment: HorizontalAlignment.Center
-                text: "HOME"
+                text: "Please Leave a Review"
                 textStyle {
                     textAlign: TextAlign.Center
                     base: SystemDefaults.TextStyles.BigText
@@ -80,7 +90,7 @@ Dialog {
                         //                        preferredHeight: 100
                         //                        preferredWidth: 200
                         onClicked: {
-
+                            invokeLeaveReview.trigger("bb.action.OPEN");
                         }
                     }
                 }
@@ -133,7 +143,7 @@ Dialog {
                         //                        preferredHeight: 200
                         //                        preferredWidth: 200
                         onClicked: {
-
+                            invokeWordsPlus.trigger("bb.action.OPEN");
                         }
                     }
                 }
@@ -153,6 +163,21 @@ Dialog {
                 }
             }
         }
-        attachedObjects: []
+        attachedObjects: [
+            Invocation {
+                id: invokeLeaveReview
+                query {
+                    invokeTargetId: "sys.appworld"
+                    uri: "appworld://content/21931881"
+                }
+            },
+            Invocation {
+                id: invokeWordsPlus
+                query {
+                    invokeTargetId: "sys.appworld"
+                    uri: "appworld://content/21931881"
+                }
+            }
+        ]
     }
 }

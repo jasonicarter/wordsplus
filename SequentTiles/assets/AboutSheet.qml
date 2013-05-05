@@ -65,7 +65,9 @@ Page {
                     }
                     Label {
                         multiline: true
-                        text: "arpeggio6lop by plagasul via freesound.org\n" + "sweetalertsound1 + 2 by kizilsungur via freesound.org"
+                        text:
+                        "sweetalertsound2 by kizilsungur via freesound.org\n"
+                        + "negativebeep by splashdust via freesound.org"
                         textStyle {
                             base: aboutSheetSubTitleNormalWhite.style
                         }
@@ -75,7 +77,7 @@ Page {
                     topMargin: 50
 
                     Label {
-                        text: "Attribution:"
+                        text: "Attribution: The Noun Project"
                         textStyle {
                             base: aboutSheetBigBodyNormalBlue.style
                         }
@@ -85,9 +87,17 @@ Page {
                     }
                     Label {
                         multiline: true
-                        text: "The Noun Project\n" 
-                        + "Other people here\n" + "Other people here\n" + "Other people here\n" 
-                        + "Other people here\n" + "Other people here\n" + "Other people here\n"
+                        text: 
+                        "rocket designed by Antonis Makriyannis\n"
+                        + "car designed by Geremy Good\n"
+                        + "airplane designed by Simon Child\n"
+                        + "remote-control designed by Simon Child\n"
+                        + "sail-boat designed by ___Lo\n"
+                        + "microware-oven designed by Marc Serre\n"
+                        + "radio designed by Monika Ciapala\n"
+                        + "zip-drive designed by Mike Wirth\n"
+                        + "cassette designed by mathies janssen\n"
+                        + "Drawing designed by Daniel Shannon\n"
                         textStyle {
                             base: aboutSheetSubTitleNormalWhite.style
                         }
