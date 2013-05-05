@@ -6,11 +6,13 @@ Page {
         }
         background: Color.create("#272727")
         preferredWidth: 768
+        preferredHeight: 1000
         horizontalAlignment: HorizontalAlignment.Center
         ScrollView {
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle
                 preferredWidth: 700
+                preferredHeight: 1280
                 topPadding: 100
                 Container {
                     Container {
@@ -50,7 +52,11 @@ Page {
 
                     }
                     Label {
-                        text: "1) Enable reset button.\n 2) Click button 'Reset Game'\n\n" + "All progress will be lost. Coins will be saved."
+                        text: 
+                        "1) Enable reset button.\n"
+                        + "2) Check 'Guest Mode' on to reset guest levels\n"
+                        + "3) Press 'Reset Game' button\n\n"
+                        + "All progress will be lost. Coins will be saved."
                         multiline: true
                         touchPropagationMode: TouchPropagationMode.None
                         verticalAlignment: VerticalAlignment.Center
@@ -130,18 +136,38 @@ Page {
                     }
                 } // middle container
             }
-        }
-    }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                settingsSheet.close();
+        } //end of scroll
+        Container {
+            layout: DockLayout {
+            }
+            preferredHeight: 150
+            preferredWidth: 768
+            background: Color.create("#272727")
+            verticalAlignment: VerticalAlignment.Bottom
+            ImageView {
+                id: homeBtn
+                horizontalAlignment: HorizontalAlignment.Center
+                imageSource: "images/buttons/home.png"
+            }
+            ImageView {
+                verticalAlignment: VerticalAlignment.Top
+                horizontalAlignment: HorizontalAlignment.Center
+                imageSource: "images/dashed_line.png"
+            }
+            onTouch: {
+                if (event.isUp()) {
+                    homeBtn.imageSource = "images/buttons/home.png"
+                    settingsSheet.close();
+                } else if (event.isDown()) {
+                    pressedImageSource:
+                    homeBtn.imageSource = "images/buttons/home_selected.png"
+                }
+            }
+            onTouchExit: {
+                //do nothing
             }
         }
-    ]
+    }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text

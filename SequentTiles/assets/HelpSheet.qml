@@ -5,6 +5,7 @@ Page {
         layout: DockLayout {
         }
         preferredWidth: 768
+        preferredHeight: 1000
         background: Color.create("#272727")
         horizontalAlignment: HorizontalAlignment.Center
         ScrollView {
@@ -15,7 +16,7 @@ Page {
                 verticalAlignment: VerticalAlignment.Center
                 horizontalAlignment: HorizontalAlignment.Center
                 Label {
-                    text: "Help:"
+                    text: "Help: Review the four examples below"
                     textStyle {
                         base: helpSheetBigBodyNormalBlue.style
                     }
@@ -68,9 +69,12 @@ Page {
                         }
                     }
                 }
+                Divider {
+                    
+                }
                 Label {
                     text: "Natural...If given '2, 0, H' how would you arrange them?\n"
-                    +"The chemical 'name' for water is - H20,"
+                    +"The chemical 'name' for water is - H20"
                     multiline: true
                     touchPropagationMode: TouchPropagationMode.None
                     verticalAlignment: VerticalAlignment.Center
@@ -112,6 +116,56 @@ Page {
                             imageSource: "packages/example_2/2.png"
                         }
                     }
+                }
+                Divider {
+
+                }
+                Label {
+                    text: "Words...Given 'AN', 'PE' and 'UT' there's only one word that can be spelt - peanut"
+                    multiline: true
+                    touchPropagationMode: TouchPropagationMode.None
+                    verticalAlignment: VerticalAlignment.Center
+                    horizontalAlignment: HorizontalAlignment.Left
+                    textStyle {
+                        base: helpSheetSubTitleNormalWhite.style
+                    }
+                }
+                Container {
+                    layout: StackLayout {
+                        orientation: LayoutOrientation.LeftToRight
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/example_4/0.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        rightMargin: 10
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/example_4/1.png"
+                        }
+                    }
+                    Container {
+                        preferredHeight: 200
+                        preferredWidth: 200
+                        background: Color.create("#0098f0")
+                        ImageView {
+
+                            imageSource: "packages/example_4/2.png"
+                        }
+                    }
+                }
+                Divider {
+                    
                 }
                 Label {
                     text: "Now think traffic lights and their sequence, " 
@@ -160,18 +214,38 @@ Page {
                 }
             }
             
-        }
-    }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                helpSheet.close();
+        } //end of scroll
+        Container {
+            layout: DockLayout {
+            }
+            preferredHeight: 150
+            preferredWidth: 768
+            background: Color.create("#272727")
+            verticalAlignment: VerticalAlignment.Bottom
+            ImageView {
+                id: homeBtn
+                horizontalAlignment: HorizontalAlignment.Center
+                imageSource: "images/buttons/home.png"
+            }
+            ImageView {
+                verticalAlignment: VerticalAlignment.Top
+                horizontalAlignment: HorizontalAlignment.Center
+                imageSource: "images/dashed_line.png"
+            }
+            onTouch: {
+                if (event.isUp()) {
+                    homeBtn.imageSource = "images/buttons/home.png"
+                    helpSheet.close();
+                } else if (event.isDown()) {
+                    pressedImageSource:
+                    homeBtn.imageSource = "images/buttons/home_selected.png"
+                }
+            }
+            onTouchExit: {
+                //do nothing
             }
         }
-    ]
+    }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text

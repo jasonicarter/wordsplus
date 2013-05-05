@@ -33,12 +33,14 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
 	hints = new LevelHints();
 
     // Initialize other stuff
+	isGuest = false;
     showNext = false;
     showRetry = false;
     hintShown = false;
     tilesAvailable = 4;
     currentLevel = getCurrentLevel();
     currentPackage = 1;
+    currentGuestLevel = getCurrentGuestLevel();
 
 
     InitializeHomeContainer();
@@ -117,6 +119,12 @@ bool ApplicationUI::getShowRetry(){
 void ApplicationUI::setShowRetry(bool status){
 	showRetry = status;
 }
+bool ApplicationUI::getIsGuest(){
+	return isGuest;
+}
+void ApplicationUI::setIsGuest(bool status){
+	isGuest = status;
+}
 int ApplicationUI::getCurrentLevel(){
 	return (settings->getValueFor("CurrentLevel", "1")).toInt();
 }
@@ -124,8 +132,15 @@ void ApplicationUI::setCurrentLevel(int level){
 	currentLevel = level;
 	settings->saveValueFor("CurrentLevel", QString::number(level));
 }
+int ApplicationUI::getCurrentGuestLevel(){
+	return (settings->getValueFor("CurrentGuestLevel", "1")).toInt();
+}
+void ApplicationUI::setCurrentGuestLevel(int level){
+	currentGuestLevel = level;
+	settings->saveValueFor("CurrentGuestLevel", QString::number(level));
+}
 void ApplicationUI::ResetAll(){
-	setCurrentLevel(1);
+	if(isGuest){setCurrentGuestLevel(1);}else{setCurrentLevel(1);}
 }
 void ApplicationUI::SkipToEnd(){
 	setCurrentLevel(levelCount);
@@ -144,35 +159,51 @@ void ApplicationUI::setHintShown(bool status){
 	hintShown = status;
 }
 QString ApplicationUI::getLevelHint(){
-	return 	hints->getHint(getCurrentLevel());
+	int level;
+	if(isGuest){level = getCurrentGuestLevel();}else{level = getCurrentLevel();}
+	return 	hints->getHint(level);
 }
 int ApplicationUI::getUserLevel(){
-	return getCurrentLevel();
+	int level;
+	if(isGuest){level = getCurrentGuestLevel();}else{level = getCurrentLevel();}
+	return level;
 }
 
 
 
 void ApplicationUI::NextGame(){
 
-	if(currentLevel < levelCount){ //just so it wont crash during testing
-		currentLevel = getCurrentLevel() + 1;
-		setCurrentLevel(currentLevel);
-		setHintShown(false);
+	int level;
+	//LOG("isGuest: %i, GuestLevel: %i, OwnerLevel: %i", isGuest, currentGuestLevel, getCurrentLevel());
+	if(isGuest){
+		level = getCurrentGuestLevel() + 1;
+		setCurrentGuestLevel(level);
+		//LOG("variable_level: %i", level);
+	}else{
+		level = getCurrentLevel() + 1;
+		setCurrentLevel(level);
+	}
 
-		emit levelHintChanged(); //so QML will update system toast with new message
+	if(level <= levelCount){
+		setHintShown(false);
+		emit levelHintChanged();
 		emit userLevelChanged();
-		NewGame(currentPackage,currentLevel);
+		NewGame(currentPackage,level);
 	}else {
 		emit gameCompletedSignal();
 	}
 
 }
 void ApplicationUI::RedoGame(){
-	NewGame(currentPackage,currentLevel);
+	int level;
+	if(isGuest){level = getCurrentGuestLevel();}else{level = getCurrentLevel();}
+	NewGame(currentPackage,level);
 }
 
 void ApplicationUI::StartGame(){
-	NewGame(1, getCurrentLevel());
+	int level;
+	if(isGuest){level = getCurrentGuestLevel();}else{level = getCurrentLevel();}
+	NewGame(currentPackage,level);
 }
 
 
