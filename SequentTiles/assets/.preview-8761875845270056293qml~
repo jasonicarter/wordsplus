@@ -29,8 +29,8 @@ Container {
                     layout: DockLayout {
                     }
                     preferredHeight: 60
-                    preferredWidth: 370
-                    rightPadding: 25                 
+                    preferredWidth: 500
+                    //rightPadding: 25                 
                     horizontalAlignment: HorizontalAlignment.Right
                     CheckBox {
                         verticalAlignment: VerticalAlignment.Center

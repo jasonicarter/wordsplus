@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SequentTiles/assets/packages/peanut&apos; to &apos;example_4&apos;" description="Rename resource &apos;peanut&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/packages/peanut" name="example_4" stamp="1367720938763" updateReferences="true"/>
+</session>

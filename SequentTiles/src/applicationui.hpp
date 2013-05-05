@@ -37,6 +37,7 @@ public:
     Q_PROPERTY (bool showRetry READ getShowRetry WRITE setShowRetry NOTIFY ShowRetryChanged);
     Q_PROPERTY (int coinCount READ getCoinCount WRITE setCoinCount NOTIFY coinCountChanged);
     Q_PROPERTY (bool hintShown READ getHintShown WRITE setHintShown NOTIFY hintShownChanged);
+    Q_PROPERTY (bool isGuest READ getIsGuest WRITE setIsGuest NOTIFY isGuestChanged);
     Q_PROPERTY (const QString levelHint READ getLevelHint NOTIFY levelHintChanged);
     Q_PROPERTY (int userLevel READ getUserLevel NOTIFY userLevelChanged);
 
@@ -47,7 +48,8 @@ public:
     	void hintShownChanged();
     	void levelHintChanged();
     	void userLevelChanged();
-    	void gameCompletedSignal(); //used in qml
+    	void gameCompletedSignal();
+    	void isGuestChanged();
 
 private Q_SLOTS:
 	void onTileTouch(bb::cascades::TouchEvent *event);
@@ -64,6 +66,9 @@ private:
 	int getCurrentLevel();
 	void setCurrentLevel(int level);
 
+	int getCurrentGuestLevel();
+	void setCurrentGuestLevel(int level);
+
 	int getCoinCount();
 	void setCoinCount(int coins);
 
@@ -75,6 +80,10 @@ private:
 	bool getShowRetry();
 	void setShowRetry(bool status);
 
+	bool isGuest;
+	bool getIsGuest();
+	void setIsGuest(bool status);
+
 	QString getLevelHint();
 	int getUserLevel();
 
@@ -82,6 +91,7 @@ private:
     float numTiles;
     int currentLevel;
     int currentPackage;
+    int currentGuestLevel;
     int tilesAvailable;
     int levelCount;
     QList<int> selectTiles;

@@ -26,29 +26,20 @@ Page {
 
         }
         Container {
-            layout: DockLayout {
-            }
-            preferredHeight: 150
-            preferredWidth: 768
-            background: Color.create("#272727")
+            bottomPadding: 50
+            preferredWidth: 720
+            horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Bottom
-            ImageView {
-                id: playBtn
+            Label {
                 horizontalAlignment: HorizontalAlignment.Center
-                imageSource: "images/buttons/play.png"
-            }
-            onTouch: {
-                if (event.isUp()) {
-                    playBtn.imageSource = "images/buttons/play.png"
-                    paymentSheet.close();
-                } else if (event.isDown()) {
-                    pressedImageSource:
-                    playBtn.imageSource = "images/buttons/play_selected.png"
+                text: "Guess the Sequent"
+                textStyle {
+                    textAlign: TextAlign.Center
+                    base: SystemDefaults.TextStyles.BigText
+                    color: Color.create("#fafafa")
                 }
             }
-            onTouchExit: {
-                //do nothing
-            }
+
         }
         Container {
             layout: AbsoluteLayout {
@@ -220,4 +211,14 @@ Page {
         //! [3]
         ]
     }
+    actions: [
+        ActionItem {
+            title: "Close"
+            imageSource: "images/close.png"
+            ActionBar.placement: ActionBarPlacement.OnBar
+            onTriggered: {
+                paymentSheet.close();
+            }
+        }
+    ]
 }
