@@ -4,6 +4,7 @@ CONFIG += qt warn_on cascades10
 
 
 LIBS += -lbb -lbbdata -lbbplatform -lbbdevice
+LIBS += -lbbmultimedia
 
 include(config.pri)
 

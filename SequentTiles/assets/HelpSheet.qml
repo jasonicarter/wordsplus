@@ -24,8 +24,8 @@ Page {
 
                 }
                 Label {
-                    text: "Here's an easy one - follows succession\n" 
-                    + "1, 2, 3 (ascending base 10)\n" + "or even 3, 9, 12 (ascending multiples of 3)"
+                    text: "Logical...If given numbers '3, 1, 2' and asked to arrange them," 
+                    + " how would you do it?"
                     multiline: true
                     touchPropagationMode: TouchPropagationMode.None
                     verticalAlignment: VerticalAlignment.Center
@@ -45,7 +45,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/0.png"
+                            imageSource: "packages/example_1/0.png"
                         }
                     }
                     Container {
@@ -55,7 +55,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/1.png"
+                            imageSource: "packages/example_1/1.png"
                         }
                     }
                     Container {
@@ -64,12 +64,13 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/2.png"
+                            imageSource: "packages/example_1/2.png"
                         }
                     }
                 }
                 Label {
-                    text: "Write stuff here\n" + "up and to the right\n" + "add some images"
+                    text: "Natural...If given '2, 0, H' how would you arrange them?\n"
+                    +"The chemical 'name' for water is - H20,"
                     multiline: true
                     touchPropagationMode: TouchPropagationMode.None
                     verticalAlignment: VerticalAlignment.Center
@@ -89,7 +90,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/0.png"
+                            imageSource: "packages/example_2/0.png"
                         }
                     }
                     Container {
@@ -99,7 +100,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/1.png"
+                            imageSource: "packages/example_2/1.png"
                         }
                     }
                     Container {
@@ -108,12 +109,13 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/2.png"
+                            imageSource: "packages/example_2/2.png"
                         }
                     }
                 }
                 Label {
-                    text: "Write stuff here\n" + "up and to the right\n" + "add some images"
+                    text: "Now think traffic lights and their sequence, " 
+                    + "'Green' comes before 'Yellow' which comes before 'Red'"
                     multiline: true
                     touchPropagationMode: TouchPropagationMode.None
                     verticalAlignment: VerticalAlignment.Center
@@ -133,7 +135,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/0.png"
+                            imageSource: "packages/example_3/0.png"
                         }
                     }
                     Container {
@@ -143,7 +145,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/1.png"
+                            imageSource: "packages/example_3/1.png"
                         }
                     }
                     Container {
@@ -152,7 +154,7 @@ Page {
                         background: Color.create("#0098f0")
                         ImageView {
 
-                            imageSource: "packages/pkg_1/example_1/2.png"
+                            imageSource: "packages/example_3/2.png"
                         }
                     }
                 }
