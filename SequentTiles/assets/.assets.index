@@ -1,5 +1,5 @@
 1
-422
+425
 AboutSheet.qml
 CustomDialogBox.qml
 HelpSheet.qml
@@ -37,10 +37,13 @@ images/category.png
 images/close.png
 images/correct_answer.png
 images/dashed_line.png
+images/facebook_large.png
+images/facebook_large_w.png
 images/gold.png
 images/help.png
 images/incorrect_answer.png
 images/trophy.png
+images/twitter_large.png
 main.qml
 packages/example_1/0.png
 packages/example_1/1.png

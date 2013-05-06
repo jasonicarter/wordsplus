@@ -1,0 +1,1 @@
+include (../qrcodes.pro)

@@ -9,8 +9,10 @@ Page {
         background: Color.create("#272727")
         horizontalAlignment: HorizontalAlignment.Center
         ScrollView {
+            preferredHeight: 1800
             horizontalAlignment: HorizontalAlignment.Center
             Container { //middle
+                preferredHeight: 1800
                 preferredWidth: 700
                 topPadding: 100
                 verticalAlignment: VerticalAlignment.Center
