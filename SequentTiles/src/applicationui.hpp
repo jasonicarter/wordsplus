@@ -33,6 +33,7 @@ public:
     Q_INVOKABLE void SkipToEnd();
     Q_INVOKABLE void Home();
     Q_INVOKABLE void Submit();
+
     Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
     Q_PROPERTY (bool showRetry READ getShowRetry WRITE setShowRetry NOTIFY ShowRetryChanged);
     Q_PROPERTY (int coinCount READ getCoinCount WRITE setCoinCount NOTIFY coinCountChanged);

@@ -65,7 +65,7 @@ PaymentServiceControl::PaymentServiceControl(QObject *parent)
     m_paymentManager->setWindowGroupId(windowGroupId);
 
     // Set the application name so that it shows up in the purchase banner.
-    m_paymentManager->setApplicationName("The Awesome Store");
+    m_paymentManager->setApplicationName("Sequent");
 }
 
 PaymentServiceControl::~PaymentServiceControl()

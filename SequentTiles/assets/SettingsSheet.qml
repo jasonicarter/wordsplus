@@ -21,7 +21,6 @@ Page {
                         background: Color.create("#272727")
                         preferredWidth: 700
                         preferredHeight: 100
-                        leftPadding: 15
                         Label {
                             text: "Enable Reset Button:"
                             touchPropagationMode: TouchPropagationMode.None
@@ -52,11 +51,7 @@ Page {
 
                     }
                     Label {
-                        text: 
-                        "1) Enable reset button.\n"
-                        + "2) Optional: Check 'Guest Mode' to reset guest levels\n"
-                        + "3) Press 'Reset Game' button\n\n"
-                        + "All progress will be lost. Coins will be saved."
+                        text: "1) Enable reset button.\n" + "2) Optional: Check 'Guest Mode' to reset guest levels\n" + "3) Press 'Reset Game' button\n\n" + "All progress will be lost. Coins will be saved."
                         multiline: true
                         touchPropagationMode: TouchPropagationMode.None
                         verticalAlignment: VerticalAlignment.Center
@@ -74,66 +69,62 @@ Page {
                             sequentTiles.ResetAll();
                         }
                     }
-                    Divider {
-                    	opacity: 0
-                    }
-                    Container {
-                        Container {
-                            layout: DockLayout {
-                            }
-                            background: Color.create("#272727")
-                            preferredWidth: 700
-                            preferredHeight: 100
-                            leftPadding: 15
-                            Label {
-                                text: "Skip to end:"
-                                touchPropagationMode: TouchPropagationMode.None
-                                verticalAlignment: VerticalAlignment.Center
-                                horizontalAlignment: HorizontalAlignment.Left
-                                textStyle {
-                                    base: settingsSheetBigBodyNormalBlue.style
-                                }
-                            }
-                            Container {
-                                rightPadding: 15
-                                verticalAlignment: VerticalAlignment.Center
-                                horizontalAlignment: HorizontalAlignment.Right
-                                ToggleButton {
-                                    id: skipToggle
-                                    checked: false
-                                    onCheckedChanged: {
-                                        if (skipToggle.checked == true) {
-                                            btnSkip.enabled = true;
-                                        } else {
-                                            btnSkip.enabled = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        Divider {
-
-                        }
-                        Label {
-                            text: "For testing ONLY.\nGo to last puzzle, answer or skip to see final screen."
-                            multiline: true
-                            touchPropagationMode: TouchPropagationMode.None
-                            verticalAlignment: VerticalAlignment.Center
-                            horizontalAlignment: HorizontalAlignment.Left
-                            textStyle {
-                                base: settingsSheetSubTitleNormalWhite.style
-                            }
-                        }
-                        Button {
-                            id: btnSkip
-                            text: "SKIP GAME"
-                            enabled: false
-                            onClicked: {
-                                skipToggle.checked = false;
-                                sequentTiles.SkipToEnd();
-                            }
-                        }
-                    }
+//                    Container {
+//                        Container {
+//                            layout: DockLayout {
+//                            }
+//                            background: Color.create("#272727")
+//                            preferredWidth: 700
+//                            preferredHeight: 100
+//                            Label {
+//                                text: "Skip to end:"
+//                                touchPropagationMode: TouchPropagationMode.None
+//                                verticalAlignment: VerticalAlignment.Center
+//                                horizontalAlignment: HorizontalAlignment.Left
+//                                textStyle {
+//                                    base: settingsSheetBigBodyNormalBlue.style
+//                                }
+//                            }
+//                            Container {
+//                                rightPadding: 15
+//                                verticalAlignment: VerticalAlignment.Center
+//                                horizontalAlignment: HorizontalAlignment.Right
+//                                ToggleButton {
+//                                    id: skipToggle
+//                                    checked: false
+//                                    onCheckedChanged: {
+//                                        if (skipToggle.checked == true) {
+//                                            btnSkip.enabled = true;
+//                                        } else {
+//                                            btnSkip.enabled = false;
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        Divider {
+//
+//                        }
+//                        Label {
+//                            text: "For testing ONLY.\nGo to last puzzle, answer or skip to see final screen."
+//                            multiline: true
+//                            touchPropagationMode: TouchPropagationMode.None
+//                            verticalAlignment: VerticalAlignment.Center
+//                            horizontalAlignment: HorizontalAlignment.Left
+//                            textStyle {
+//                                base: settingsSheetSubTitleNormalWhite.style
+//                            }
+//                        }
+//                        Button {
+//                            id: btnSkip
+//                            text: "SKIP GAME"
+//                            enabled: false
+//                            onClicked: {
+//                                skipToggle.checked = false;
+//                                sequentTiles.SkipToEnd();
+//                            }
+//                        }
+//                    }
                 } // middle container
             }
         } //end of scroll

@@ -87,15 +87,13 @@ Dialog {
                         verticalAlignment: VerticalAlignment.Bottom
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "Review It!"
-                        //                        preferredHeight: 100
-                        //                        preferredWidth: 200
                         onClicked: {
                             invokeLeaveReview.trigger("bb.action.OPEN");
                         }
                     }
                 }
             }
-            Container {
+            Container { //facebook
                 layoutProperties: AbsoluteLayoutProperties {
                     positionX: 379
                     positionY: 162
@@ -105,11 +103,20 @@ Dialog {
                     }
                     preferredHeight: 300
                     preferredWidth: 300
-                    background: Color.create("#0098f0")
+                    //background: Color.create("#0098f0")
                     ImageView {
                         imageSource: "images/buttons/selected.png"
                     }
-
+                    ImageView {
+                        horizontalAlignment: HorizontalAlignment.Center
+                        verticalAlignment: VerticalAlignment.Center
+                        imageSource: "images/facebook_large.png"
+                    }
+                }
+                onTouch: {
+                    if (event.isUp()) {
+                        invokeFacebook.trigger("bb.action.SHARE")
+                    }
                 }
             }
             Container {
@@ -140,25 +147,37 @@ Dialog {
                         verticalAlignment: VerticalAlignment.Bottom
                         horizontalAlignment: HorizontalAlignment.Center
                         text: "Get It Now!"
-                        //                        preferredHeight: 200
-                        //                        preferredWidth: 200
                         onClicked: {
                             invokeWordsPlus.trigger("bb.action.OPEN");
                         }
                     }
                 }
             }
-            Container {
+            Container { // twitter
                 layoutProperties: AbsoluteLayoutProperties {
                     positionX: 42
                     positionY: 502
                 }
                 Container {
+                    layout: DockLayout {
+                    }
                     preferredHeight: 300
                     preferredWidth: 300
-                    background: Color.create("#0098f0")
+                    //background: Color.create("#0098f0")
                     ImageView {
                         imageSource: "images/buttons/selected.png"
+                    }
+                    ImageView {
+                        preferredHeight: 100
+                        preferredWidth: 100
+                        horizontalAlignment: HorizontalAlignment.Center
+                        verticalAlignment: VerticalAlignment.Center
+                        imageSource: "images/twitter_large.png"
+                    }
+                }
+                onTouch: {
+                    if (event.isUp()) {
+                        invokeTwitter.trigger("bb.action.SHARE")
                     }
                 }
             }
@@ -168,7 +187,7 @@ Dialog {
                 id: invokeLeaveReview
                 query {
                     invokeTargetId: "sys.appworld"
-                    uri: "appworld://content/21931881"
+                    uri: "appworld://content/27783227"
                 }
             },
             Invocation {
@@ -176,6 +195,24 @@ Dialog {
                 query {
                     invokeTargetId: "sys.appworld"
                     uri: "appworld://content/21931881"
+                }
+            },
+            Invocation {
+                id: invokeTwitter
+                query {
+                    invokeTargetId: "Twitter"
+                    mimeType: "text/plain"
+                    data: "Sequent is one of the best games on BlackBerry. Go get it! " 
+                    + "https://appworld.blackberry.com/webstore/content/27783227\n\n"
+                }
+            },
+            Invocation {
+                id: invokeFacebook
+                query {
+                    invokeTargetId: "Facebook"
+                    mimeType: "text/plain"
+                    data: "Sequent is one of the best games on BlackBerry. Go get it! " 
+                    + "https://appworld.blackberry.com/webstore/content/27783227\n\n"
                 }
             }
         ]

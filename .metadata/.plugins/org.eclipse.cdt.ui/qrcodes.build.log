@@ -1,0 +1,32 @@
+
+**** Build of configuration Device-Debug for project qrcodes ****
+
+make -j4 Device-Debug 
+make -C .//translations -f Makefile update
+cd arm && C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake -spec blackberry-armv7le-qcc ../qrcodes.pro CONFIG+=debug_and_release CONFIG+=device
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate qrcodes.pro
+Updating 'qrcodes.ts'...
+    Found 1 source text(s) (1 new and 0 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/translations'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease qrcodes.pro
+Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/translations/qrcodes.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 1 untranslated source text(s)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/translations'
+make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/arm'
+make -f Makefile.Debug
+make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/arm'
+C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/moc.exe -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../qrcodes -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -D__QNXNTO__ ../src/applicationui.hpp -o o.le-v7-g/.moc/moc_applicationui.cpp
+qcc -Vgcc_ntoarmv7le -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../qrcodes -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -x c++-header -c ../precompiled.h -o o.le-v7-g/.obj/qrcodes.gch/c++
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/qrcodes -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../qrcodes -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/applicationui.o ../src/applicationui.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/qrcodes -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../qrcodes -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/main.o ../src/main.cpp
+qcc -Vgcc_ntoarmv7le -c -Wc,-include -Wc,o.le-v7-g/.obj/qrcodes -Wno-psabi -lang-c++ -fstack-protector -fstack-protector-all -mcpu=cortex-a9 -g -Wno-psabi -Wall -W -D_REENTRANT -DQT_NO_IMPORT_QT47_QML -DQ_OS_BLACKBERRY -DQT_DECLARATIVE_DEBUG -DQT_DECLARATIVE_LIB -DQT_CORE_LIB -DQT_SHARED -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc -I../../qrcodes -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtCore -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4/QtDeclarative -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/qt4 -I../src -Io.le-v7-g/.moc -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include -Ic:/bbndk/target_10_1_0_1483/qnx6/usr/include/freetype2 -I. -o o.le-v7-g/.obj/moc_applicationui.o o.le-v7-g/.moc/moc_applicationui.cpp
+qcc -Vgcc_ntoarmv7le -lang-c++ -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -Wl,-rpath-link,C:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -o o.le-v7-g/qrcodes o.le-v7-g/.obj/applicationui.o o.le-v7-g/.obj/main.o o.le-v7-g/.obj/moc_applicationui.o    -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib -LC:/bbndk/target_10_1_0_1483/qnx6/armle-v7/usr/lib/qt4/lib -LC:/bbndk/target_10_1_0_1483/qnx6//usr/lib/qt4/lib -lbbcascades -lQtDeclarative -lQtScript -lQtSvg -lQtSql -lsqlite3 -lz -lQtXmlPatterns -lQtGui -lQtNetwork -lsocket -lQtCore -lm -lbps 
+make[2]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/arm'
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/qrcodes/arm'
+
+**** Build Finished ****

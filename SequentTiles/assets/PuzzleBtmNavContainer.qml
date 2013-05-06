@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Container {
     layout: StackLayout {
@@ -31,10 +32,19 @@ Container {
             //            }
             if (event.isUp()) {
                 sequentTiles.RedoGame();
+                levelToast.show();
             }
         }
         onTouchExit: {
             //do nothing
         }
     }
+    attachedObjects: [
+        SystemToast {
+            id: levelToast
+            body: "RESET FOR ~ Level " + sequentTiles.userLevel
+            onFinished: {
+            }
+        }
+    ]
 }

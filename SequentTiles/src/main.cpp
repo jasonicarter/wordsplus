@@ -28,8 +28,8 @@ Q_DECL_EXPORT int main(int argc, char **argv)
         app.installTranslator( &translator );
     }
 
-    //PaymentManager::setConnectionMode(PaymentConnectionMode::Production);
-    PaymentManager::setConnectionMode(PaymentConnectionMode::Test);
+    PaymentManager::setConnectionMode(PaymentConnectionMode::Production);
+    //PaymentManager::setConnectionMode(PaymentConnectionMode::Test);
 
     // Register our class that wraps the C++ PaymentService interface with QML so that we
     // can make calls into the PaymentService and get results, through QML.

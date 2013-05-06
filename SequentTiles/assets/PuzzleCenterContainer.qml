@@ -203,6 +203,7 @@ Container {
                 if (event.isUp()) {
                     resetCorrect.visible = false
                     sequentTiles.RedoGame();
+                    levelToast.body = "RESET FOR ~ Level " + sequentTiles.userLevel
                     levelToast.show();
                 }
             }

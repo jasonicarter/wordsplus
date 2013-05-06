@@ -16,7 +16,6 @@ Container {
             //            }
             if (event.isUp()) {
                 sequentTiles.StartGame();
-                //sequentTiles.eventFromCpp("cppClick", "one");
             }
         }
         onTouchExit: {

@@ -7,6 +7,7 @@
 #include <bb/cascades/AbsoluteLayout>
 #include <bb/cascades/AbsoluteLayoutProperties>
 
+
 using namespace bb::cascades;
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[Sequent ] " fmt "\n", ##args); fflush(stdout); } while (0);
@@ -293,11 +294,6 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 			// Get the object name (actually the image name which is easy to identify).
 			QVariant v = senderImage->imageSource();
 
-//			AbsoluteLayoutProperties* pProperties = AbsoluteLayoutProperties::create();
-//			pProperties->setPositionX(337.0 * 1);
-//			pProperties->setPositionY(0.0);
-//			senderImage->setLayoutProperties(pProperties);
-//			playContainer->add(senderImage);
 
 			if (v.canConvert<QString>()) {
 				QStringList imageSrc = v.value<QString>().split("/");
@@ -320,7 +316,5 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 	}
 
 }
-
-
 
 
