@@ -1,11 +1,14 @@
 // Default empty project template
 #include "applicationui.hpp"
 
+#include <QLocale>
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/AbstractPane>
 #include <bb/cascades/AbsoluteLayout>
 #include <bb/cascades/AbsoluteLayoutProperties>
+
+#include "Countly.hpp"
 
 
 using namespace bb::cascades;
@@ -315,6 +318,29 @@ void ApplicationUI::onTileTouch(bb::cascades::TouchEvent *event) {
 	if (event->isCancel()) {
 	}
 
+}
+
+
+void ApplicationUI::cntlyBtnClick(const QString &key, const QString &segment) { //test with item,name
+	// LOCALE
+	QLocale locale;
+
+	countly::CountlyEvent event(this,"IAP");
+	event.setSum("0.99");
+	event.set(key, segment);
+	event.set("country", locale.countryToString(locale.country()));
+	event.send();
+}
+
+void ApplicationUI::cntlyBtnClick2(const QString &key, const QString &segment) { //test with item,name
+	// LOCALE
+	QLocale locale;
+
+	countly::CountlyEvent event(this,"IAP2");
+	event.setSum("0.99");
+	event.set(key, segment);
+	event.set("country", locale.countryToString(locale.country()));
+	event.send();
 }
 
 

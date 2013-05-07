@@ -22,8 +22,8 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
-       7,   94, // properties
+      18,   14, // methods
+       7,  104, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -50,15 +50,17 @@ static const uint qt_meta_data_ApplicationUI[] = {
      257,   14,   14,   14, 0x02,
      269,   14,   14,   14, 0x02,
      276,   14,   14,   14, 0x02,
+     297,  285,   14,   14, 0x02,
+     328,  285,   14,   14, 0x02,
 
  // properties: name, type, flags
-     290,  285, 0x01495103,
-     299,  285, 0x01495103,
-     313,  309, 0x02495103,
-     323,  285, 0x01495103,
-     333,  285, 0x01495103,
-     349,  341, 0x0a495001,
-     359,  309, 0x02495001,
+     365,  360, 0x01495103,
+     374,  360, 0x01495103,
+     388,  384, 0x02495103,
+     398,  360, 0x01495103,
+     408,  360, 0x01495103,
+     424,  416, 0x0a495001,
+     434,  384, 0x02495001,
 
  // properties: notify_signal_id
        0,
@@ -81,7 +83,9 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "StartGame()\0NextGame()\0RedoGame()\0"
     "ResetAll()\0SkipToEnd()\0Home()\0Submit()\0"
-    "bool\0showNext\0showRetry\0int\0coinCount\0"
+    "key,segment\0cntlyBtnClick(QString,QString)\0"
+    "cntlyBtnClick2(QString,QString)\0bool\0"
+    "showNext\0showRetry\0int\0coinCount\0"
     "hintShown\0isGuest\0QString\0levelHint\0"
     "userLevel\0"
 };
@@ -108,6 +112,8 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 13: _t->SkipToEnd(); break;
         case 14: _t->Home(); break;
         case 15: _t->Submit(); break;
+        case 16: _t->cntlyBtnClick((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 17: _t->cntlyBtnClick2((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         default: ;
         }
     }
@@ -145,9 +151,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 18;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
