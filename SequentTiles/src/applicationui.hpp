@@ -10,6 +10,7 @@
 #include <bb/cascades/ImageView>
 #include <bb/cascades/Container>
 
+
 using namespace bb::cascades;
 namespace bb { namespace cascades { class Application;  class ImageView; class TouchEvent;}}
 
@@ -33,6 +34,11 @@ public:
     Q_INVOKABLE void SkipToEnd();
     Q_INVOKABLE void Home();
     Q_INVOKABLE void Submit();
+
+    //countly
+    Q_INVOKABLE void cntlyBtnClick(const QString &key, const QString &segment);
+    Q_INVOKABLE void cntlyBtnClick2(const QString &key, const QString &segment);
+
 
     Q_PROPERTY (bool showNext READ getShowNext WRITE setShowNext NOTIFY showNextChanged);
     Q_PROPERTY (bool showRetry READ getShowRetry WRITE setShowRetry NOTIFY ShowRetryChanged);

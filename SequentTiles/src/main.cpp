@@ -5,12 +5,15 @@
 #include <QTranslator>
 #include "applicationui.hpp"
 
+
 #include "PaymentServiceControl.hpp"
 #include <bb/platform/PaymentManager>
 
 // include JS Debugger / CS Profiler enabler
 // this feature is enabled by default in the debug build only
 #include <Qt/qdeclarativedebug.h>
+
+#include "Countly.hpp"
 
 using namespace bb::cascades;
 using namespace bb::platform;
@@ -19,6 +22,7 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 {
     // this is where the server is started etc
     Application app(argc, argv);
+    countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
 
     // localization support
     QTranslator translator;

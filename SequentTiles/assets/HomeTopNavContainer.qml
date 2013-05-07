@@ -48,6 +48,7 @@ Container {
                     }
                     if (event.isUp()) {
                         about_selected.visible = false
+                        sequentTiles.cntlyBtnClick("item","600 Coins");
                         aboutSheet.open();
                     }
                 }
@@ -65,6 +66,7 @@ Container {
                     }
                     if (event.isUp()) {
                         help_selected.visible = false
+                        sequentTiles.cntlyBtnClick2("item", "900 Coins");
                         helpSheet.open();
                     }
                 }
