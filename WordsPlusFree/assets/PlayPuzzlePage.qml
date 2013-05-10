@@ -40,7 +40,7 @@ Container { // root Container
         }
 
         AdContainer {
-            horizontalAlignment: HorizontalAlignment.Center
+            //horizontalAlignment: HorizontalAlignment.Center
         }
         Container { // center container
             id: centerContainer
@@ -119,7 +119,7 @@ Container { // root Container
             id: btmNav
             verticalAlignment: VerticalAlignment.Bottom
             BtmNavPanel {
-                verticalAlignment: VerticalAlignment.Bottom
+               verticalAlignment: VerticalAlignment.Bottom
             }
         }
     } // main container

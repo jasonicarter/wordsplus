@@ -32,10 +32,8 @@ Container {
         }
     }
     Container {
-        horizontalAlignment: HorizontalAlignment.Right
-        //rightPadding: 40
         ImageView {
-            imageSource: "images/tabs.png"
+            imageSource: "asset:///images/tabs.png"
         }
     }
     Container {
@@ -104,23 +102,4 @@ Container {
             }
         }
     } //tab buttons
-    Container {
-        topPadding: 50
-        ImageView {
-            imageSource: "images/upgrade_small.png"
-            onTouch: {
-                invokeBuy.trigger("bb.action.OPEN");
-            }
-
-            attachedObjects: [
-                Invocation {
-                    id: invokeBuy
-                    query: InvokeQuery {
-                        invokeTargetId: "sys.appworld"
-                        uri: "appworld://content/21931881"
-                    }
-                }
-            ]
-        }
-    }
 }

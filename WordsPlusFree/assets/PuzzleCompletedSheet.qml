@@ -155,7 +155,7 @@ Page {
                                     attachedObjects: [
                                         Invocation {
                                             id: invokeReview
-                                            query: InvokeQuery {
+                                            query  {
                                                 invokeTargetId: "sys.appworld"
                                                 uri: "appworld://content/24752875"
                                             }
@@ -202,7 +202,7 @@ Page {
                         attachedObjects: [
                             Invocation {
                                 id: invokeBuy
-                                query: InvokeQuery {
+                                query {
                                     invokeTargetId: "sys.appworld"
                                     uri: "appworld://content/21931881"
                                 }
@@ -260,7 +260,7 @@ Page {
 //        var positionContainer = positionDef.createObject();
 //        position.add(positionContainer);
 
-        if (!wordsPlus.review) {
+        if (!wordsPlus.review && (toInt(wordsPlus.totalWordsFound) > 30)) {
             reviewDialog.show();
         }
     }
@@ -345,7 +345,7 @@ Page {
         },
         Invocation {
             id: invokeUserReview
-            query: InvokeQuery {
+            query {
                 invokeTargetId: "sys.appworld"
                 uri: "appworld://content/24752875"
             }

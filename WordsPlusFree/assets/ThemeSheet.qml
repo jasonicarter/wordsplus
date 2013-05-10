@@ -98,7 +98,7 @@ Page {
                         },
                         Invocation {
                             id: invokePaid
-                            query: InvokeQuery {
+                            query {
                                 invokeTargetId: "sys.appworld"
                                 uri: "appworld://content/21931881"
                             }
