@@ -1,6 +1,0 @@
-<root>
-    <item category="STAR TREK" filename="startrek" image= "asset:///images/categoryList/spaceship.png"/>
-    <item category="TECH" filename="tech" image= "asset:///images/categoryList/desktop.png"/>
-    <item category="WEIGHTS + MEASURES" filename="weights" image= "asset:///images/categoryList/scale.png"/>
-    <item category="SUPERHEROES" filename="superheroes" image= "asset:///images/categoryList/comics.png"/>
-</root>
