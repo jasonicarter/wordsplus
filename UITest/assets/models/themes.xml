@@ -1,6 +1,0 @@
-<root>
-    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="free"/>
-    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
-    <item image= "theme/words/theme_sample.jpg"	name="WordsPlus"	price="pay"/>
-    <item image= "theme/space/theme_sample.jpg"	name="Spacing Out"	price="free"/>
-</root>
