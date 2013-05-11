@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 sourceHoverBackgroundColor=255,255,225
 spelling_locale=en_GB
 spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
 wizard.preferred.toolchains=com.qnx.qcc.toolChain com.qnx.qcc.toolChain.exe.coverage com.qnx.qcc.toolChain.sharedLib.coverage com.qnx.qcc.toolChain.staticLib.coverage
