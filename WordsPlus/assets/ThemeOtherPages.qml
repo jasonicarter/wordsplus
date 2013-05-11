@@ -7,6 +7,7 @@ Container {
         id: theme
         ImageView {
             imageSource: "theme/" + wordsPlus.theme + "/theme_background.jpg"
+            //imageSource: "theme/" + "wordsPlus" + "/theme_background.jpg"
         }
     }
     Container {
@@ -21,6 +22,7 @@ Container {
                 positionY: 0
             }          
             imageSource: "theme/" + wordsPlus.theme + "/theme_icon.png"
+            //imageSource: "theme/" + "wordsPlus" + "/theme_icon.png"
         }
     }
 }

@@ -203,39 +203,10 @@ Container {
         }
     } //end of main container
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: bigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: bigBodyNormalWhite
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: subTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: smallTxtNormalWhite
-            base: SystemDefaults.TextStyles.SmallText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
         SystemToast {
             id: homeSysToast
             body: ""
-           //button.label: "Got it!" //btnName
+            //button.label: "Got it!" //btnName
         },
         Sheet {
             id: themeSheet

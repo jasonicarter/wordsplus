@@ -56,7 +56,7 @@ public:
 	Q_INVOKABLE void resetTimer();
 	Q_INVOKABLE void ControlsForBBM(int state);
 	Q_INVOKABLE void playSound(const QString msg);
-	Q_INVOKABLE void Share(QString target, QString section);
+	Q_INVOKABLE void invokeFacebook();
 
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
 	Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
@@ -156,14 +156,13 @@ private:
 	void ProcessAwards();
 
 	Page *appPage;
-	QmlDocument *mQmlDocument;
 	Control *homePageControl;
 	Control *puzzlePageControl;
 
 	// Some Controls that we need to remember
 	Container *mPlayAreaContainer;
 	Container *mWordsToFindContainer;
-	ImageView* mPlayField[32][32]; //change this or set to 10
+	ImageView* mPlayField[12][12];
 
 	// Internal game state variables
 	float mWantedSize;

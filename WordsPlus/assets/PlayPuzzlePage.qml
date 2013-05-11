@@ -10,6 +10,8 @@ Container { // root Container
         preferredHeight: 1280
         ThemeOtherPages {
         }
+//        TopNavPanel {           
+//        }
         Container { //highlight timer only for school theme
             topPadding: 60
             ImageView {
@@ -65,7 +67,8 @@ Container { // root Container
                         //text: "TIME: 2:00"
                         horizontalAlignment: HorizontalAlignment.Left
                         textStyle {
-                            base: puzzlePageSubTitleNormalWhite.style
+                            base: puzzlePageWhite.style
+                            //base: puzzlePageBurntOrgange.style
                         }
                     }
                 }
@@ -91,7 +94,7 @@ Container { // root Container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 70
+                topMargin: 40
                 preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
@@ -145,11 +148,12 @@ Container { // root Container
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
+            id: puzzlePageWhite
+            base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
+            fontSize: FontSize.Large
         },
         TextStyleDefinition {
             id: puzzlePageBurntOrgange

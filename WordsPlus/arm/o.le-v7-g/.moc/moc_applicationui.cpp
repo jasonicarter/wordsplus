@@ -77,23 +77,23 @@ static const uint qt_meta_data_ApplicationUI[] = {
      939,   14,   14,   14, 0x02,
      958,  952,   14,   14, 0x02,
      982,  978,   14,   14, 0x02,
-    1016, 1001,   14,   14, 0x02,
+    1001,   14,   14,   14, 0x02,
 
  // properties: name, type, flags
-    1047, 1039, 0x0a495103,
-    1053, 1039, 0x0a495103,
-    1062, 1039, 0x0a495001,
-    1067, 1039, 0x0a495001,
-    1088, 1083, 0x01495003,
-    1096, 1083, 0x01495003,
-    1104, 1083, 0x01495003,
-    1117, 1039, 0x0a495001,
-    1137, 1039, 0x0a495001,
-     737, 1152, 0x02495103,
-    1156, 1152, 0x02495001,
-    1168, 1039, 0x0a495103,
-    1184, 1152, 0x02495103,
-    1195, 1152, 0x02495001,
+    1026, 1018, 0x0a495103,
+    1032, 1018, 0x0a495103,
+    1041, 1018, 0x0a495001,
+    1046, 1018, 0x0a495001,
+    1067, 1062, 0x01495003,
+    1075, 1062, 0x01495003,
+    1083, 1062, 0x01495003,
+    1096, 1018, 0x0a495001,
+    1116, 1018, 0x0a495001,
+     737, 1131, 0x02495103,
+    1135, 1131, 0x02495001,
+    1147, 1018, 0x0a495103,
+    1163, 1131, 0x02495103,
+    1174, 1131, 0x02495001,
 
  // properties: notify_signal_id
        3,
@@ -142,10 +142,9 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "LoadAchievementsAwards()\0ScoreLoopThread*\0"
     "scoreLoop()\0startTimer()\0stopTimer()\0"
     "resetTimer()\0state\0ControlsForBBM(int)\0"
-    "msg\0playSound(QString)\0target,section\0"
-    "Share(QString,QString)\0QString\0theme\0"
-    "category\0time\0totalWordsFound\0bool\0"
-    "soundOn\0musicOn\0profileBoxOn\0"
+    "msg\0playSound(QString)\0invokeFacebook()\0"
+    "QString\0theme\0category\0time\0totalWordsFound\0"
+    "bool\0soundOn\0musicOn\0profileBoxOn\0"
     "puzzleCompletedTime\0lastPuzzleTime\0"
     "int\0gamesPlayed\0selectedLetters\0"
     "difficulty\0achievedAward\0"
@@ -201,7 +200,7 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 40: _t->resetTimer(); break;
         case 41: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 42: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 43: _t->Share((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 43: _t->invokeFacebook(); break;
         default: ;
         }
     }
