@@ -31,6 +31,7 @@
     <!-- The name that is displayed in the BlackBerry Tablet OS application installer. 
          May have multiple values for each language. See samples or xsd schema file. Optional. -->
     <name>WordsPlus</name>
+    <cascadesTheme>dark</cascadesTheme>
     
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
@@ -91,10 +92,10 @@
     
     <!--  The icon for the application -->
     <icon>
+        <image></image>
         <image>icon.png</image>
     </icon>
 
-    <asset path="icon.png">icon.png</asset>
     <asset path="assets">assets</asset>
     
     <!-- Locale support -->
@@ -104,6 +105,7 @@
     <asset path="assets/images/splashScreen.png">splashScreen.png</asset>
     <asset path="assets/720x720/images/splash.png">splash.png</asset>
     <asset path="assets/scoreloop">scoreloop</asset>
+    <asset path="assets/images/icon.png">icon.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

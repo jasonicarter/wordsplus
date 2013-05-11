@@ -22,6 +22,7 @@
 #include <bb/multimedia/SystemSound>
 #include <bb/cascades/FadeTransition>
 #include <bb/cascades/InvokeQuery>
+#include <bb/system/InvokeManager>
 
 
 //should probably all be static const and not #define as this makes them global
@@ -50,8 +51,6 @@
 #define GAMESPLAYED "settingsGamesPlayed"
 #define DIFFICULTY "settingsDifficulty"
 
-#define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlusGame.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
-
 //global - to be accessed from ApplicationUI to set awards
 //static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
 //static const char SCORELOOP_TESTTWO[]	= "wordsplus.testaward2";
@@ -78,6 +77,7 @@ static const char SCORELOOP_MIDNIGHT[] = "wordsplus.midnightrun";
 static const char SCORELOOP_OVERONEBILLION[] = "wordsplus.overonemillion";
 static const char SCORELOOP_OVERONEMILLION[] = "wordsplus.overonebillion";
 
+#define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlusGame.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
 using namespace bb::cascades;
 using namespace bb::system;
@@ -115,18 +115,13 @@ ApplicationUI::ApplicationUI(bb::platform::bbm::Context &context, bb::cascades::
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
-	//TODO look into area app runs for first time
-
+	//score loop stuff - need to register to make it work - investigate
+	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
 
 	//TODO do i use this still?
 	// Initialize the sound manager with a directory that resides in the
 	// assets directory which only contains playable files.
 	mSoundManager = new SoundManager("sounds/");
-
-	//score loop stuff - need to register to make it work - investigate
-	qmlRegisterType<ScoreLoopThread>("wordsPlus", 1, 0, "ScoreLoop");
-
-
 }
 
 
@@ -138,18 +133,15 @@ ApplicationUI::~ApplicationUI() {
 
 void ApplicationUI::show() {
 
-	LOG("show function");
+	//LOG("show function");
 
-//	QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
-	mQmlDocument = QmlDocument::create("asset:///main.qml").parent(this);
-	mQmlDocument->setContextProperty("wordsPlus", this);
+	QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+	qml->setContextProperty("wordsPlus", this);
 
+	if (!qml->hasErrors()) {
 
-	if (!mQmlDocument->hasErrors()) {
-	//if (!qml->hasErrors()) {
-
-		LOG("mQmlDocument has no errors");
-		appPage = mQmlDocument->createRootObject<Page>();
+		//LOG("qml has no errors");
+		appPage = qml->createRootObject<Page>();
 
 		if (appPage) {
 
@@ -181,6 +173,7 @@ void ApplicationUI::show() {
 			QObject::connect(Application::instance(), SIGNAL(fullscreen()),
 					this, SLOT(onFullscreen()));
 
+
 			InitializeHomePage();
 			InitializePuzzlePage();
 			Application::instance()->setScene(appPage);
@@ -196,9 +189,6 @@ void ApplicationUI::show() {
 void ApplicationUI::onThumbnail() {
 	stopTimer();
 	continuousGameAward = 0;
-	//instead of postponing at exit, look to sync when thumbnailed
-	//no exit, user must thumbnail to exit
-	//ScoreLoopThread::SyncAwards(mAppData);
 }
 
 void ApplicationUI::onFullscreen() {
@@ -211,8 +201,8 @@ void ApplicationUI::onOrientationChanged() {
 			//used for achievements
 			hintUsedAward = true;
 
-			ImageView *redHeartImage = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
-			redHeartImage->setRotationZ(90);
+//			ImageView *redHeartImage = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
+//			redHeartImage->setRotationZ(90);
 
 			int r = rand() % listOfWords.count(); //list of words reduced once word is found
 			//LOG("list count: %i", listOfWords.count());
@@ -222,32 +212,32 @@ void ApplicationUI::onOrientationChanged() {
 			if(wordDataValue >= 0) HighlightSelectedTile(wordDataValue, HINTREVEAL);
 		}
 		else if(isHomePageDisplayed) {
-			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
-			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
-			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateHeartImage->setRotationZ(90);
-			rotateProfileImage->setRotationZ(90);
-			rotateHomeImage->setRotationZ(90);
-			rotateImageMsg->setOpacity(1);
+//			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
+//			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
+//			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
+//			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+//			rotateHeartImage->setRotationZ(90);
+//			rotateProfileImage->setRotationZ(90);
+//			rotateHomeImage->setRotationZ(90);
+//			rotateImageMsg->setOpacity(1);
 		}
 	} // end of rightup
 	if (mOrientationSensor->orientation() == mOrientationSensor->OrientationSensor::TopUp) {
 		if (isPuzzleDisplayed && wordDataValue >= 0) {
-			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
-			redHeart->setRotationZ(0);
+//			ImageView *redHeart = puzzlePageControl->findChild<ImageView*>("puzzleHeart");
+//			redHeart->setRotationZ(0);
 
 			HighlightSelectedTile(wordDataValue, HINTROTATEUP);
 		}
 		else if(isHomePageDisplayed) {
-			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
-			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
-			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
-			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
-			rotateHeartImage->setRotationZ(0);
-			rotateProfileImage->setRotationZ(0);
-			rotateHomeImage->setRotationZ(0);
-			rotateImageMsg->setOpacity(0);
+//			ImageView *rotateHeartImage = homePageControl->findChild<ImageView*>("rotateHeartImage");
+//			ImageView *rotateProfileImage = homePageControl->findChild<ImageView*>("rotateProfileImage");
+//			ImageView *rotateHomeImage = homePageControl->findChild<ImageView*>("rotateHomeImage");
+//			ImageView *rotateImageMsg = homePageControl->findChild<ImageView*>("rotateImageMsg");
+//			rotateHeartImage->setRotationZ(0);
+//			rotateProfileImage->setRotationZ(0);
+//			rotateHomeImage->setRotationZ(0);
+//			rotateImageMsg->setOpacity(0);
 		}
 	} //end of topup
 }
@@ -570,9 +560,7 @@ void ApplicationUI::intializePlayArea() {
 								0).rightMargin(0);
 				imageView->setPreferredSize(mWantedSize, mWantedSize);
 
-				QString imageSource =
-						QString("asset:///theme/%1/letters/%2.png").arg(getTheme(),QString(letter[i][ii]).toLower());
-						//QString("asset:///images/letters/%1.png").arg(QString(letter[i][ii]).toLower());
+				QString imageSource = QString("asset:///theme/%1/letters/%2.png").arg(getTheme(),QString(letter[i][ii]).toLower());
 				imageView->setImage(Image(imageSource));
 
 				// We are connecting all our tiles to the same slot, we can later identify them by sender().
@@ -802,7 +790,6 @@ void ApplicationUI::HighlightSelectedTile(int pos, int stateOfLetter) {
 	QVariant v = mPlayField[i][ii]->imageSource();
 
 	if (v.canConvert<QString>()) {
-		//QString objURL = v.value<QString>();
 		QStringList imageSrc = v.value<QString>().split("/");
 		int index = imageSrc.size() - 1; // size gives count not last index
 		QStringList letterSrc = (imageSrc[index]).split(".");
@@ -838,9 +825,6 @@ void ApplicationUI::HighlightSelectedTile(int pos, int stateOfLetter) {
 }
 
 void ApplicationUI::WordCompleted(QList<int> listOfNumbers) {
-//TODO comment out
-//	ProcessAwards();
-//	emit puzzleCompleted();
 
 	int i;
 	int ii;
@@ -1123,9 +1107,8 @@ int ApplicationUI::getScore() {
 }
 
 void ApplicationUI::setScore(int puzzleTime) {
-//TODO
+
 	int score = getScore();
-	//score = score + (100000 / puzzleTime) * (getDifficulty() / 2); //had user get over 1billion in a day
 	score = score + (50000 / puzzleTime) * (getDifficulty() / 2); //minimize ridiculously large scores divide difficulty by 2
 
 	settings->saveValueFor(SCORE, QString::number(score));
@@ -1193,28 +1176,19 @@ void ApplicationUI::setDifficulty(int difficulty) {
 
 }
 
-void ApplicationUI::Share(QString target, QString section) {
+void ApplicationUI::invokeFacebook() {
 
-	// Declare an Invocation* called m_pInvocation somewhere.
-	QString msg;
-	if(target.toLower() == "facebook") {
-		msg = QString("On top of my game: %1 pts, with WordsPlus - https://appworld.blackberry.com/webstore/content/21931881\n\n").arg(getScore());
-	}
-	else if (target.toLower() == "twitter") {
-		msg = QString("Another great game: %1 pts, of #WordsPlus - https://appworld.blackberry.com/webstore/content/21931881\n\n").arg(getScore());
-	}
+	InvokeManager invokeManager;
+	InvokeRequest request;
+	request.setTarget("com.rim.bb.app.facebook");
+	request.setAction("bb.action.OPEN");
+	QVariantMap payload;
 
-	  m_pInvocation = Invocation::create(
-			InvokeQuery::create()
-	  	  	  .parent(this)
-			  .mimeType("text/plain")
-			  .invokeTargetId(target)
-			  .invokeActionId("bb.action.SHARE")
-			  .data(msg.toUtf8())
-		  );
+	payload["object_type"] = "page";
+	payload["object_id"] = "481826101858895"; // facebook.com/wordsplusgame
 
-	  QObject::connect(m_pInvocation, SIGNAL(armed()), this, SLOT(onArmed()));
-	  QObject::connect(m_pInvocation, SIGNAL(finished()), m_pInvocation, SLOT(deleteLater()));
+	request.setMetadata(payload);
+	invokeManager.invoke(request);
 
 }
 

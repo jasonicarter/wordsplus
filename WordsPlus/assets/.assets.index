@@ -1,9 +1,10 @@
 1
-488
+496
 720x720/BtmNav.qml
 720x720/HomePage.qml
 720x720/images/activeFrame.png
 720x720/images/splash.png
+720x720/main.qml
 720x720/PlayPuzzlePage.qml
 720x720/PuzzleCompletedSheet.qml
 720x720/ThemeHomePage.qml
@@ -42,6 +43,9 @@ images/categoryList/television.png
 images/categoryList/weather.png
 images/categoryList/woman.png
 images/close.png
+images/facebook_findus.png
+images/facebook_large.png
+images/facebook_like.png
 images/heart_small.png
 images/help.png
 images/hint.png
@@ -81,7 +85,10 @@ images/rotate_blk.png
 images/social.png
 images/splashScreen.png
 images/tabs.png
+images/theme_blk.png
+images/theme_red.png
 images/trophy.png
+images/twitter_large.png
 Leaderboard.qml
 main.qml
 models/schooltime.xml
@@ -472,6 +479,7 @@ ThemeOtherPages.qml
 ThemeSchoolHighlight.qml
 ThemeSheet.qml
 TopLeaderboard.qml
+TopNavPanel.qml
 wordLists/animals.txt
 wordLists/body.txt
 wordLists/boynames.txt
