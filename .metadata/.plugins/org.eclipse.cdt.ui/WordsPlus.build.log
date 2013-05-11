@@ -1,45 +1,24 @@
 
 **** Build of configuration Device-Debug for project WordsPlus ****
 
-make Device-Debug 
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake -spec unsupported/blackberry-armv7le-qcc -o arm/Makefile WordsPlus.pro CONFIG+=device
-C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake -spec unsupported/blackberry-x86-qcc -o x86/Makefile WordsPlus.pro CONFIG+=simulator
-make -C ./translations -f Makefile update release
+make -j4 Device-Debug 
+make -C .//translations -f Makefile update
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
 C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lupdate WordsPlus.pro
-Updating 'WordsPlus_en_GB.ts'...
-    Found 12 source text(s) (0 new and 12 already existing)
-Updating 'WordsPlus_fr.ts'...
-    Found 12 source text(s) (0 new and 12 already existing)
-Updating 'WordsPlus_it.ts'...
-    Found 12 source text(s) (0 new and 12 already existing)
-Updating 'WordsPlus_de.ts'...
-    Found 12 source text(s) (0 new and 12 already existing)
-Updating 'WordsPlus_es.ts'...
-    Found 12 source text(s) (0 new and 12 already existing)
 Updating 'WordsPlus.ts'...
     Found 12 source text(s) (0 new and 12 already existing)
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
+make -C .//translations -f Makefile release
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
 C:/bbndk/host_10_1_0_212/win32/x86/usr/bin/lrelease WordsPlus.pro
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_en_GB.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-    Ignored 12 untranslated source text(s)
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_fr.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-    Ignored 12 untranslated source text(s)
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_it.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-    Ignored 12 untranslated source text(s)
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_de.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-    Ignored 12 untranslated source text(s)
-Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus_es.qm'...
-    Generated 0 translation(s) (0 finished and 0 unfinished)
-    Ignored 12 untranslated source text(s)
 Updating 'C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations/WordsPlus.qm'...
     Generated 0 translation(s) (0 finished and 0 unfinished)
     Ignored 12 untranslated source text(s)
 make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/translations'
 make -C ./arm -f Makefile debug
+make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
+c:/bbndk/host_10_1_0_212/win32/x86/usr/bin/qmake.exe -spec c:/bbndk/target_10_1_0_1483/qnx6/usr/share/qt4/mkspecs/blackberry-armv7le-qcc CONFIG+=debug_and_release CONFIG+=device -o Makefile ../WordsPlus.pro
+make[1]: Leaving directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
 make[1]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
 make -f Makefile.Debug
 make[2]: Entering directory `C:/Users/Jason/Documents/blackberry-workspace/blackberry/WordsPlus/arm'
