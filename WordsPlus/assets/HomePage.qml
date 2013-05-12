@@ -188,6 +188,7 @@ Container {
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
+            welcomeDialog.open();
             //because score()->start is called after qml creation
             //scoreloop instance created, calls run() which does requestUserCompleted
             //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
@@ -211,6 +212,13 @@ Container {
         Sheet {
             id: themeSheet
             ThemeSheet {
+            }
+        },
+        WelcomeDialogBox {
+            id: welcomeDialog
+            onOpened: {
+            }
+            onClosed: {
             }
         }
     ]

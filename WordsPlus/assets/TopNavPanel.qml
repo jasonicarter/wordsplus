@@ -17,20 +17,28 @@ Container {
                     orientation: LayoutOrientation.RightToLeft
                 }
                 //background: Color.Red
-                rightPadding: 100
+                rightPadding: 70
                 preferredWidth: 720
                 preferredHeight: 45
                 horizontalAlignment: HorizontalAlignment.Center
                 Label {
-                    leftMargin: 150
-                    text: "SOCIAL"
+                    leftMargin: 90
+                    text: "POST"
                     verticalAlignment: VerticalAlignment.Center
                     textStyle {
                         base: btmNavPanelSmallNormalWhite.style
                     }
                 }
                 Label {
-                    leftMargin: 150
+                    leftMargin: 70
+                    text: "TWEET"
+                    verticalAlignment: VerticalAlignment.Center
+                    textStyle {
+                        base: btmNavPanelSmallNormalWhite.style
+                    }
+                }
+                Label {
+                    leftMargin: 50
                     text: "THEMES"
                     verticalAlignment: VerticalAlignment.Center
                     textStyle {
@@ -51,7 +59,7 @@ Container {
             layout: StackLayout {
                 orientation: LayoutOrientation.RightToLeft
             }
-            rightPadding: 20
+            rightPadding: 50
             preferredHeight: 150
             preferredWidth: 720
             //background: Color.Red
@@ -85,7 +93,7 @@ Container {
                 }
             }
             ImageView {
-                leftMargin: 50
+                rightMargin: 50
                 preferredHeight: 100
                 preferredWidth: 100
                 horizontalAlignment: HorizontalAlignment.Right
@@ -100,7 +108,7 @@ Container {
                 }
             }
             ImageView {
-                rightMargin: 150
+                rightMargin: 50
                 horizontalAlignment: HorizontalAlignment.Right
                 verticalAlignment: VerticalAlignment.Bottom
                 imageSource: "images/facebook_like.png"
@@ -129,7 +137,8 @@ Container {
             query {
                 invokeTargetId: "Twitter"
                 mimeType: "text/plain"
-                data: "Sequent is one of the best games on BlackBerry. Go get it! " + "https://appworld.blackberry.com/webstore/content/27783227\n\n"
+                data: "WordsPlus is one of the best games on BlackBerry. Go get it! " 
+                + "https://appworld.blackberry.com/webstore/content/21931881\n\n"
             }
         },
         Invocation {
@@ -137,7 +146,8 @@ Container {
             query {
                 invokeTargetId: "Facebook"
                 mimeType: "text/plain"
-                data: "Sequent is one of the best games on BlackBerry. Go get it! " + "https://appworld.blackberry.com/webstore/content/27783227\n\n"
+                data: "WordsPlus is one of the best games on BlackBerry. Go get it! "
+                + "https://appworld.blackberry.com/webstore/content/21931881\n\n"
             }
         }
     ]

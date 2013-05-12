@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlus/assets/CustomDialogBox.qml&apos; to &apos;WelcomeDialogBox.qml&apos;" description="Rename resource &apos;CustomDialogBox.qml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/CustomDialogBox.qml" name="WelcomeDialogBox.qml" stamp="1368324518308" updateReferences="true"/>
+</session>
