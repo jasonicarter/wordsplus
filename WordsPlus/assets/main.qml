@@ -91,7 +91,7 @@ Page {
             sourceUrl: "sounds/background.wav"
         }
     ]
-    onCreationCompleted: {
+    onCreationCompleted: {       
         if (wordsPlus.musicOn) {
             bgMusic.setRepeatMode(1);
             bgMusic.play();
