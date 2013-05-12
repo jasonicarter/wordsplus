@@ -48,6 +48,11 @@ Container {
                                 categorySheet.close()
                             }else if (sheetName == "statsSheet") {
                                 statsSheet.close()
+                            }else if (sheetName == "themeSheet") {
+                                themeSheet.close()
+                            }else if (sheetName == "puzzleCompletedSheet") {
+                                wordsPlus.intializePlayArea();
+                                puzzleCompletedSheet.close()
                             }
                         }
                     }

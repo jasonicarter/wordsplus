@@ -17,7 +17,7 @@ Container {
                     orientation: LayoutOrientation.RightToLeft
                 }
                 //background: Color.Red
-                rightPadding: 70
+                rightPadding: 100
                 preferredWidth: 720
                 preferredHeight: 45
                 horizontalAlignment: HorizontalAlignment.Center
@@ -59,7 +59,7 @@ Container {
             layout: StackLayout {
                 orientation: LayoutOrientation.RightToLeft
             }
-            rightPadding: 50
+            rightPadding: 80
             preferredHeight: 150
             preferredWidth: 720
             //background: Color.Red

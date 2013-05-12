@@ -101,57 +101,18 @@ Page {
                 } //end of listview
             }
         } // end of middle container
-    } // end of page
-    onCreationCompleted: {
-        //        var positionContainer = positionDef.createObject();
-        //        position.add(positionContainer);
-    }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                themeSheet.close();
-            }
+        BtmSheetNavPanel {
+            verticalAlignment: VerticalAlignment.Bottom
+            sheetName: "themeSheet"
         }
-    ]
+    } // end of container
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: statsSheetBigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
         TextStyleDefinition {
             id: statsSheetBigBodyNormalBlue
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: statsSheetBigBodyNormalWhite
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
         }
     ]
 }
