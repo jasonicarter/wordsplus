@@ -1,5 +1,5 @@
 1
-498
+500
 720x720/BtmNav.qml
 720x720/HomePage.qml
 720x720/images/activeFrame.png
@@ -81,6 +81,7 @@ images/play.png
 images/profileBox.png
 images/profileEdit_blk.png
 images/profileEdit_white.png
+images/qrcode.png
 images/review.png
 images/rotate_blk.png
 images/social.png
@@ -144,6 +145,7 @@ scoreloop/SLAwards.bundle/Award.wordsplus.usehint.unachieved.png
 scoreloop/SLAwards.bundle/en.lproj/Localizable.strings
 scoreloop/SLAwards.bundle/Info.json
 SettingsSheet.qml
+ShareSheet.qml
 sounds/background.wav
 sounds/puzzleCompleted.wav
 sounds/wordFound.wav

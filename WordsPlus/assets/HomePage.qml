@@ -1,5 +1,4 @@
 import bb.cascades 1.0
-import bb.system 1.0
 import bb.multimedia 1.0
 
 Container {
@@ -188,7 +187,6 @@ Container {
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
-            welcomeDialog.open();
             //because score()->start is called after qml creation
             //scoreloop instance created, calls run() which does requestUserCompleted
             //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
@@ -196,29 +194,32 @@ Container {
             //wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
         }
         //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
-        function onScoreloopLoaded(username) {
-            scoreLoopUsername = username;
-            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
-            homeSysToast.button.label = "Got it!"
-            homeSysToast.show();
+        //        function onScoreloopLoaded(username) {
+        //            scoreLoopUsername = username;
+        //            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
+        //            homeSysToast.button.label = "Got it!"
+        //            homeSysToast.show();
+        //        }
+        Container {
+            id: welcomeDialog
+            visible: wordsPlus.isFirstTimeUser
+            WelcomeDialogBox {
+
+            }
+            onTouch: {
+                if (event.isUp()) {
+                    if (wordsPlus.isFirstTimeUser) {
+                       // welcomeDialog.visible = false
+                        wordsPlus.isFirstTimeUser = false
+                    }
+                }
+            }
         }
     } //end of main container
     attachedObjects: [
-        SystemToast {
-            id: homeSysToast
-            body: ""
-            //button.label: "Got it!" //btnName
-        },
         Sheet {
             id: themeSheet
             ThemeSheet {
-            }
-        },
-        WelcomeDialogBox {
-            id: welcomeDialog
-            onOpened: {
-            }
-            onClosed: {
             }
         }
     ]

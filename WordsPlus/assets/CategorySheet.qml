@@ -135,6 +135,7 @@ Page {
                         onTriggered: {
                             var selectedItem = dataModel.data(indexPath);
                             wordsPlus.category = selectedItem.filename;
+                            wordsPlus.cntlyCategory((wordsPlus.category).toLowerCase(), wordsPlus.difficulty.toString());
                             wordsPlus.intializePlayArea();
                             categorySheet.close();
                         }

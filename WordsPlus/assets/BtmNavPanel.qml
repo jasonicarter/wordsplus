@@ -16,6 +16,7 @@ Container {
             preferredHeight: 45
             background: Color.create("#262626")
             verticalAlignment: VerticalAlignment.Bottom
+            horizontalAlignment: HorizontalAlignment.Center
         }
         Container { // profile
             preferredHeight: 150
@@ -29,64 +30,31 @@ Container {
                     objectName: "rotateProfileImage"
                     topMargin: 0
                     bottomMargin: 0
-                    imageSource: "asset:///images/profileEdit_blk.png"
+                    imageSource: "images/profileEdit_blk.png"
                 }
                 Label {
                     topMargin: 0
                     bottomMargin: 0
                     horizontalAlignment: HorizontalAlignment.Center
-                    text: "HOLD ME"
+                    text: "SHARE ME"
                     textStyle {
                         base: btmNavPanelSmallNormalWhite.style
                     }
                 }
                 onTouch: {
                     if (event.isDown()) {
-                        profileImage.imageSource = "asset:///images/profileEdit_white.png"
+                        profileImage.imageSource = "images/profileEdit_white.png"
                         wordsPlus.playSound("letterSelected");
                     }
                     if (event.isUp()) {
-                        profileImage.imageSource = "asset:///images/profileEdit_blk.png"
+                        profileImage.imageSource = "images/profileEdit_blk.png"
+                        shareSheet.open()
                     }
                 }
                 onTouchExit: {
-                    profileImage.imageSource = "asset:///images/profileEdit_blk.png"
+                    profileImage.imageSource = "images/profileEdit_blk.png"
                 }
             }
-            contextActions: [
-                ActionSet {
-                    title: "Share The Love."
-                    subtitle: "HOW DO YOU BBM?"
-                    ActionItem {
-                        title: "Invite My Friends"
-                        imageSource: "asset:///images/invite.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_invitetodownload);
-                        }
-                    }
-                    ActionItem {
-                        title: "I Love WordsPlus!"
-                        imageSource: "asset:///images/heart_small.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_personalmessage);
-                        }
-                    }
-                    ActionItem {
-                        title: "I'm Busy Playing"
-                        imageSource: "asset:///images/busy.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_statusmessage);
-                        }
-                    }
-                    ActionItem {
-                        title: "Leave A Review"
-                        imageSource: "asset:///images/review.png"
-                        onTriggered: {
-                            invokeLeaveReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                } // end of ActionSet
-            ] // end of contextActions list
         } // end of profile
         Container { // home
             property bool isHome: false
@@ -101,7 +69,7 @@ Container {
                     objectName: "rotateHomeImage"
                     topMargin: 0
                     bottomMargin: 0
-                    imageSource: "asset:///images/home_blk.png"
+                    imageSource: "images/home_blk.png"
                 }
                 Label {
                     topMargin: 0
@@ -116,18 +84,18 @@ Container {
             onTouch: {
                 if (event.isDown()) {
                     isHome = true;
-                    homeImage.imageSource = "asset:///images/home_white.png"
+                    homeImage.imageSource = "images/home_white.png"
                     wordsPlus.playSound("letterSelected");
                 }
                 if (event.isUp() && isHome) {
                     isHome = false;
-                    homeImage.imageSource = "asset:///images/home_blk.png"
+                    homeImage.imageSource = "images/home_blk.png"
                     wordsPlus.stopTimer();
                     wordsPlus.InitializeHomePage();
                 }
             }
             onTouchExit: {
-                homeImage.imageSource = "asset:///images/home_blk.png"
+                homeImage.imageSource = "images/home_blk.png"
             }
         } // end of home
         Container {
@@ -203,7 +171,7 @@ Container {
                     preferredWidth: 75
                     rightMargin: 0
                     leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/y.png"
+                    imageSource: "theme/" + "wordsPlus" + "/letters/y.png"
                     onTouchEnter: {
                         if (aLetter.imageSource == "asset:///theme/" + "wordsPlus" + "/letters/highlight/a.png") {
                             yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/highlight/y.png"
@@ -244,14 +212,6 @@ Container {
         }
     } // bottom panel
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: btmNavPanelTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
         TextStyleDefinition {
             id: btmNavPanelSmallNormalWhite
             base: SystemDefaults.TextStyles.SmallText
@@ -259,11 +219,9 @@ Container {
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
         },
-        Invocation {
-            id: invokeLeaveReview
-            query {
-                invokeTargetId: "sys.appworld"
-                uri: "appworld://content/21931881"
+        Sheet {
+            id: shareSheet
+            ShareSheet {
             }
         }
     ]

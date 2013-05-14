@@ -9,12 +9,14 @@ Page {
         helpAction: HelpActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
+                wordsPlus.cntlyMenuOptions("help");
                 helpSheet.open();
             }
         }
         settingsAction: SettingsActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
+                wordsPlus.cntlyMenuOptions("settings");
                 settingsSheet.open();
             }
         }
@@ -24,6 +26,7 @@ Page {
                 imageSource: "asset:///images/about.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("about");
                     aboutSheet.open();
                 }
             },
@@ -32,6 +35,7 @@ Page {
                 imageSource: "asset:///images/category.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("category");
                     categorySheet.open();
                 }
             },
@@ -40,6 +44,7 @@ Page {
                 imageSource: "asset:///images/trophy.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("stats");
                     statsSheet.open();
                 }
             }

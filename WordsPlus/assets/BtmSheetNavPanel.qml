@@ -53,6 +53,8 @@ Container {
                             }else if (sheetName == "puzzleCompletedSheet") {
                                 wordsPlus.intializePlayArea();
                                 puzzleCompletedSheet.close()
+                            }else if (sheetName == "shareSheet") {
+                                shareSheet.close()
                             }
                         }
                     }
