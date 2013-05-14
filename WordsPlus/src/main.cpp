@@ -6,6 +6,7 @@
 #include "applicationui.hpp"
 
 #include "applicationui.hpp"
+#include "Countly.hpp"
 
 // include JS Debugger / CS Profiler enabler
 // this feature is enabled by default in the debug build only
@@ -32,9 +33,12 @@ Q_DECL_EXPORT int main(int argc, char **argv)
     // You can generate one here: http://www.guidgenerator.com/
 	const QUuid uuid(QLatin1String("db386568-22e9-41a8-9a4b-c3db02d5a6a7"));
 
+
 	//Setup BBM registration handler
 	RegistrationHandler *registrationHandler = new RegistrationHandler(uuid, &app);
 	ApplicationUI *wordsPlus = new ApplicationUI(registrationHandler->context(), &app);
+	countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
+
 
 	QObject::connect(registrationHandler, SIGNAL(registered()), wordsPlus, SLOT(show()));
 	registrationHandler->registerApplication();

@@ -22,12 +22,12 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      44,   14, // methods
-      14,  234, // properties
+      47,   14, // methods
+      15,  249, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      18,       // signalCount
+      19,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       15,   14,   14,   14, 0x05,
@@ -48,52 +48,56 @@ static const uint qt_meta_data_ApplicationUI[] = {
      343,   14,   14,   14, 0x05,
      368,   14,   14,   14, 0x05,
      388,   14,   14,   14, 0x05,
+     411,   14,   14,   14, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     411,   14,   14,   14, 0x0a,
-     423,  418,   14,   14, 0x0a,
-     461,  451,   14,   14, 0x0a,
-     498,   14,   14,   14, 0x0a,
-     527,  521,   14,   14, 0x08,
-     566,   14,   14,   14, 0x08,
-     575,   14,   14,   14, 0x08,
-     589,   14,   14,   14, 0x08,
-     604,  418,   14,   14, 0x08,
-     645,   14,   14,   14, 0x08,
-     663,   14,   14,   14, 0x08,
+     436,   14,   14,   14, 0x0a,
+     448,  443,   14,   14, 0x0a,
+     486,  476,   14,   14, 0x0a,
+     523,   14,   14,   14, 0x0a,
+     552,  546,   14,   14, 0x08,
+     591,   14,   14,   14, 0x08,
+     600,   14,   14,   14, 0x08,
+     614,   14,   14,   14, 0x08,
+     629,  443,   14,   14, 0x08,
+     670,   14,   14,   14, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     673,   14,   14,   14, 0x02,
-     693,   14,   14,   14, 0x02,
-     714,   14,   14,   14, 0x02,
-     743,  737,   14,   14, 0x02,
-     777,  760,   14,   14, 0x02,
-     799,   14,   14,   14, 0x02,
-     832,   14,   14,   14, 0x02,
-     860,   14,   14,   14, 0x02,
-     902,   14,  885,   14, 0x02,
-     914,   14,   14,   14, 0x02,
-     927,   14,   14,   14, 0x02,
-     939,   14,   14,   14, 0x02,
-     958,  952,   14,   14, 0x02,
-     982,  978,   14,   14, 0x02,
-    1001,   14,   14,   14, 0x02,
+     688,   14,   14,   14, 0x02,
+     708,   14,   14,   14, 0x02,
+     729,   14,   14,   14, 0x02,
+     758,  752,   14,   14, 0x02,
+     792,  775,   14,   14, 0x02,
+     814,   14,   14,   14, 0x02,
+     847,   14,   14,   14, 0x02,
+     875,   14,   14,   14, 0x02,
+     917,   14,  900,   14, 0x02,
+     929,   14,   14,   14, 0x02,
+     942,   14,   14,   14, 0x02,
+     954,   14,   14,   14, 0x02,
+     973,  967,   14,   14, 0x02,
+     997,  993,   14,   14, 0x02,
+    1016,   14,   14,   14, 0x02,
+    1044, 1033,   14,   14, 0x02,
+    1080, 1075,   14,   14, 0x02,
+    1106, 1075,   14,   14, 0x02,
 
  // properties: name, type, flags
-    1026, 1018, 0x0a495103,
-    1032, 1018, 0x0a495103,
-    1041, 1018, 0x0a495001,
-    1046, 1018, 0x0a495001,
-    1067, 1062, 0x01495003,
-    1075, 1062, 0x01495003,
-    1083, 1062, 0x01495003,
-    1096, 1018, 0x0a495001,
-    1116, 1018, 0x0a495001,
-     737, 1131, 0x02495103,
-    1135, 1131, 0x02495001,
-    1147, 1018, 0x0a495103,
-    1163, 1131, 0x02495103,
-    1174, 1131, 0x02495001,
+    1135, 1127, 0x0a495103,
+    1141, 1127, 0x0a495103,
+    1150, 1127, 0x0a495001,
+    1155, 1127, 0x0a495001,
+    1176, 1171, 0x01495003,
+    1184, 1171, 0x01495003,
+    1192, 1171, 0x01495003,
+    1205, 1127, 0x0a495001,
+    1225, 1127, 0x0a495001,
+     752, 1240, 0x02495103,
+    1244, 1240, 0x02495001,
+    1256, 1127, 0x0a495103,
+    1272, 1240, 0x02495103,
+    1283, 1240, 0x02495001,
+    1297, 1171, 0x01495103,
 
  // properties: notify_signal_id
        3,
@@ -110,6 +114,7 @@ static const uint qt_meta_data_ApplicationUI[] = {
       15,
       16,
       17,
+      18,
 
        0        // eod
 };
@@ -126,16 +131,16 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "lastPuzzleTimeChanged()\0scoreChanged()\0"
     "gamesPlayedChanged()\0selectedLettersChanged()\0"
     "difficultyChanged()\0achievedAwardChanged()\0"
-    "show()\0data\0scoreLoopLoaded(AppData_t*)\0"
-    "scoreData\0onSubmitScoreCompleted(ScoreData_t*)\0"
+    "isFirstTimeUserChanged()\0show()\0data\0"
+    "scoreLoopLoaded(AppData_t*)\0scoreData\0"
+    "onSubmitScoreCompleted(ScoreData_t*)\0"
     "onOrientationChanged()\0event\0"
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "onTick()\0onThumbnail()\0onFullscreen()\0"
     "onLoadLeaderboardCompleted(QVariantList)\0"
-    "onAchievedAward()\0onArmed()\0"
-    "intializePlayArea()\0InitializeHomePage()\0"
-    "InitializePuzzlePage()\0score\0"
-    "submitScore(int)\0includeBuddyList\0"
+    "onAchievedAward()\0intializePlayArea()\0"
+    "InitializeHomePage()\0InitializePuzzlePage()\0"
+    "score\0submitScore(int)\0includeBuddyList\0"
     "loadLeaderboard(bool)\0"
     "loadLeaderboardAroundLastScore()\0"
     "loadLeaderboardAroundUser()\0"
@@ -143,11 +148,14 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "scoreLoop()\0startTimer()\0stopTimer()\0"
     "resetTimer()\0state\0ControlsForBBM(int)\0"
     "msg\0playSound(QString)\0invokeFacebook()\0"
-    "QString\0theme\0category\0time\0totalWordsFound\0"
-    "bool\0soundOn\0musicOn\0profileBoxOn\0"
+    "name,level\0cntlyCategory(QString,QString)\0"
+    "name\0cntlyMenuOptions(QString)\0"
+    "cntlySocial(QString)\0QString\0theme\0"
+    "category\0time\0totalWordsFound\0bool\0"
+    "soundOn\0musicOn\0profileBoxOn\0"
     "puzzleCompletedTime\0lastPuzzleTime\0"
     "int\0gamesPlayed\0selectedLetters\0"
-    "difficulty\0achievedAward\0"
+    "difficulty\0achievedAward\0isFirstTimeUser\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -174,17 +182,17 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 15: _t->selectedLettersChanged(); break;
         case 16: _t->difficultyChanged(); break;
         case 17: _t->achievedAwardChanged(); break;
-        case 18: _t->show(); break;
-        case 19: _t->scoreLoopLoaded((*reinterpret_cast< AppData_t*(*)>(_a[1]))); break;
-        case 20: _t->onSubmitScoreCompleted((*reinterpret_cast< ScoreData_t*(*)>(_a[1]))); break;
-        case 21: _t->onOrientationChanged(); break;
-        case 22: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 23: _t->onTick(); break;
-        case 24: _t->onThumbnail(); break;
-        case 25: _t->onFullscreen(); break;
-        case 26: _t->onLoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
-        case 27: _t->onAchievedAward(); break;
-        case 28: _t->onArmed(); break;
+        case 18: _t->isFirstTimeUserChanged(); break;
+        case 19: _t->show(); break;
+        case 20: _t->scoreLoopLoaded((*reinterpret_cast< AppData_t*(*)>(_a[1]))); break;
+        case 21: _t->onSubmitScoreCompleted((*reinterpret_cast< ScoreData_t*(*)>(_a[1]))); break;
+        case 22: _t->onOrientationChanged(); break;
+        case 23: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 24: _t->onTick(); break;
+        case 25: _t->onThumbnail(); break;
+        case 26: _t->onFullscreen(); break;
+        case 27: _t->onLoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
+        case 28: _t->onAchievedAward(); break;
         case 29: _t->intializePlayArea(); break;
         case 30: _t->InitializeHomePage(); break;
         case 31: _t->InitializePuzzlePage(); break;
@@ -201,6 +209,9 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 41: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 42: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 43: _t->invokeFacebook(); break;
+        case 44: _t->cntlyCategory((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 45: _t->cntlyMenuOptions((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 46: _t->cntlySocial((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -238,9 +249,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 44)
+        if (_id < 47)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 44;
+        _id -= 47;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -260,8 +271,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 11: *reinterpret_cast< QString*>(_v) = getSelectedLetters(); break;
         case 12: *reinterpret_cast< int*>(_v) = getDifficulty(); break;
         case 13: *reinterpret_cast< int*>(_v) = getAchievedAward(); break;
+        case 14: *reinterpret_cast< bool*>(_v) = getIsFirstTimeUser(); break;
         }
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
@@ -273,20 +285,21 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 9: setScore(*reinterpret_cast< int*>(_v)); break;
         case 11: setSelectedLetters(*reinterpret_cast< QString*>(_v)); break;
         case 12: setDifficulty(*reinterpret_cast< int*>(_v)); break;
+        case 14: setIsFirstTimeUser(*reinterpret_cast< bool*>(_v)); break;
         }
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 14;
+        _id -= 15;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -401,5 +414,11 @@ void ApplicationUI::difficultyChanged()
 void ApplicationUI::achievedAwardChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 17, 0);
+}
+
+// SIGNAL 18
+void ApplicationUI::isFirstTimeUserChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 18, 0);
 }
 QT_END_MOC_NAMESPACE

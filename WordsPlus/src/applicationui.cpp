@@ -1,6 +1,7 @@
 // Default empty project template
 #include "applicationui.hpp"
 #include "wordsearch.h"
+#include "Countly.hpp"
 
 
 #include <string>
@@ -50,6 +51,7 @@
 #define SCORE "settingsScore"
 #define GAMESPLAYED "settingsGamesPlayed"
 #define DIFFICULTY "settingsDifficulty"
+#define FIRSTTIMEUSER "settingsFirstTimeUser"
 
 //global - to be accessed from ApplicationUI to set awards
 //static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
@@ -1176,6 +1178,16 @@ void ApplicationUI::setDifficulty(int difficulty) {
 
 }
 
+bool ApplicationUI::getIsFirstTimeUser() {
+	return (settings->getValueFor(FIRSTTIMEUSER, "1")).toInt();
+}
+
+void ApplicationUI::setIsFirstTimeUser(bool status) {
+	settings->saveValueFor(FIRSTTIMEUSER, QString::number(status));
+	emit isFirstTimeUserChanged();
+}
+
+
 void ApplicationUI::invokeFacebook() {
 
 	InvokeManager invokeManager;
@@ -1192,12 +1204,32 @@ void ApplicationUI::invokeFacebook() {
 
 }
 
-void ApplicationUI::onArmed() {
-	  m_pInvocation->trigger("bb.action.SHARE");
+
+void ApplicationUI::cntlyCategory(const QString &name, const QString &level) {
+	countly::CountlyEvent event(this, "category");
+	event.set("item", name);
+	event.set("difficulty", level);
+	event.send();
 }
+
+
+void ApplicationUI::cntlyMenuOptions(const QString &name) {
+	countly::CountlyEvent event(this, "menu");
+	event.set("option", name);
+	event.send();
+}
+
+
+void ApplicationUI::cntlySocial(const QString &name) {
+	countly::CountlyEvent event(this, "social");
+	event.set("type", name);
+	event.send();
+}
+
 
 void ApplicationUI::ControlsForBBM(int state) {
 
+	//LOG("Inside ControlsForBBM");
 	if(m_context->registrationState() == bb::platform::bbm::RegistrationState::Allowed) {
 		// Create the user profile and profile box objects
 		m_userProfile = new bb::platform::bbm::UserProfile(m_context, this);
@@ -1207,6 +1239,7 @@ void ApplicationUI::ControlsForBBM(int state) {
 
 		switch (state) {
 			case PROFILEBOXPUZZLECOMPLETED: {
+				//LOG("PROFILEBOXPUZZLECOMPLETED");
 				if (getProfileBox()) {
 					QString msg = QString(
 							"Completed Another One! \nTime: %1  Score: %2").arg(
@@ -1220,25 +1253,32 @@ void ApplicationUI::ControlsForBBM(int state) {
 					//could use #define WORDSPLUSPROFILEBOX 1
 					//use 0 if you have no image
 					profileBox->addProfileBoxItem(msg, 3);
+					//cntlySocial("bbm_profileBox"); automated may not want this on
 				}
 				break;
 			}
 			case PRESONALMESSAGE: {
+				//LOG("PRESONALMESSAGE");
 				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMPERSONALMSG);
 				updateProfile = new UpdateProfile(m_userProfile);
 				updateProfile->savePersonalMessage();
+				cntlySocial("bbm_personalMsg");
 				break;
 			}
 			case STATUSMESSAGE: {
+				//LOG("STATUSMESSAGE");
 				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMSTATUSMSG);
 				updateProfile = new UpdateProfile(m_userProfile);
 				updateProfile->saveStatus();
+				cntlySocial("bbm_statusMsg");
 				break;
 			}
 			case INVITETODOWNLOAD: {
+				//LOG("INVITETODOWNLOAD");
 				ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_BBMINVITE);
 				inviteToDownload = new InviteToDownload(m_context);
 				inviteToDownload->sendInvite();
+				cntlySocial("bbm_inviteToDownload");
 				break;
 			}
 		}

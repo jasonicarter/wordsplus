@@ -1,2 +1,11 @@
 eclipse.preferences.version=1
+white-list.aboutSheet=
+white-list.categorySheet=
+white-list.helpSheet=
 white-list.pref_width_height=
+white-list.puzzleCompletedSheet=
+white-list.settingsSheet=
+white-list.shareSheet=
+white-list.statsSheet=
+white-list.themeSheet=
+white-list.wordsPlus=

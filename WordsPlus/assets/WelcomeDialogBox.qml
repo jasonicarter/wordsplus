@@ -1,9 +1,9 @@
 import bb.cascades 1.0
 // This is a Dialog. It is a custom built overlay
 
-Dialog {
+//Dialog {
+Container {
     Container {
-
         preferredWidth: 768
         preferredHeight: 1280
 
@@ -19,29 +19,19 @@ Dialog {
         Container {
             preferredHeight: 900
             preferredWidth: 600
-            background: Color.create("#272727")
+            //background: Color.create("#272727")
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             layout: DockLayout {
             }
-//            ImageView {
-//                imageSource: "images/background_dialog.png"
-//            }
+            ImageView {
+                imageSource: "images/splashScreen.png"
+            }
 
             // This Container contains the title and body of the dialog box.
             Container {
                 preferredWidth: 550
                 horizontalAlignment: HorizontalAlignment.Center
-                Label {
-                    text: "Welcome to WordsPlus"
-                    horizontalAlignment: HorizontalAlignment.Center
-                    textStyle {
-                        base: SystemDefaults.TextStyles.TitleText
-                        color: Color.create("#fafafa")
-                        textAlign: TextAlign.Center
-                    }
-
-                }
                 Label {
                     id: txtMsg
                     text: "version 1.3"
@@ -53,24 +43,25 @@ Dialog {
                     }
                 }
                 Container {
-                	Label{
-                	    text:"What's new"
+                    Label {
+                        text: "What's new"
                         textStyle {
                             base: welcomeDialogBlue.style
                         }
                     }
                     Label {
                         multiline: true
-                        text: "Just something stuff here werwere wlksjdlf  sjkdhf lksdjf"
-                        +" sdlkjsdf wlke io ndm ksldfkj dih fsldkjf skld uewr" 
-                        + " sdlkjsdf wlke io ndm ksldfkj dih fsldkjf s sd f;lksd  werl;wer" 
-                        + "m ksldfkj dih fsldkjrt r ter wer we\n\n"
-                        + "1) sdlkjfsd fslkjdfsd fsd kljf\n"
-                        + "2) lkjlkj s d uiower lkjwe jk lkj oiu oiuoiu ljk\n"
-                        + "3) wthwer ouoiu lkj iu  lkwjerjwer klj"
+                        text: "1. An updated design\n" 
+                        + "2. WordsPlus Facebook page - Like Me!\n" 
+                        + "3. Integrated analytics to help me, help you better\n"
+                        + "4. Q10 support"
                         textStyle {
                             base: welcomeDialogWhite.style
                         }
+                    }
+                    Divider {
+                        opacity: 0
+                        bottomMargin: 120
                     }
                     Label {
                         text: "Menu Options"
@@ -80,26 +71,21 @@ Dialog {
                     }
                     Label {
                         multiline: true
-                        text: "Looking for more options? Try the Application Menu.\n\n" 
-                        + "Swipe down from the top to:\n" 
-                        + "~Select different word categories\n" 
-                        + "~Change the difficulty level\n"
-                        + "~Read up on your stats and leaderboards\n"
-                        + "~Learn more about the developer"
+                        text: "For menu options, swipe down from the top to:\n\n" 
+                        + "~ Select different word categories\n" 
+                        + "~ Change the difficulty level\n" 
+                        + "~ Read up on your stats and leaderboards\n" 
+                        + "~ Learn more about me, the developer"
                         textStyle {
                             base: welcomeDialogWhite.style
                         }
                     }
                 }
             } // text container
-            Button {
-                id: btnOk
-                text: "OK"
-                horizontalAlignment: HorizontalAlignment.Center
+            Label {
                 verticalAlignment: VerticalAlignment.Bottom
-                onClicked: {
-                    welcomeDialog.close();
-                }
+                horizontalAlignment: HorizontalAlignment.Center
+                text: "TAP TO CLOSE"
             }
         }
     }
@@ -109,14 +95,14 @@ Dialog {
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
+            color: Color.create("#cc3f10")
         },
         TextStyleDefinition {
             id: welcomeDialogWhite
             base: SystemDefaults.TextStyles.SmallText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
+            color: Color.create("#262626")
         }
     ]
 }

@@ -6,10 +6,11 @@ CONFIG += mobility
 MOBILITY += sensors
 
 LIBS += -lbbsystem
-LIBS += -lscoreloopcore -lbbsystem
+LIBS += -lscoreloopcore
 LIBS += -lbbmultimedia
 LIBS += -lOpenAL -lalut -lasound
 LIBS += -lbbplatformbbm
+LIBS += -lbb -lbbdata -lbbplatform -lbbdevice
 
 include(config.pri)
 

@@ -58,6 +58,12 @@ public:
 	Q_INVOKABLE void playSound(const QString msg);
 	Q_INVOKABLE void invokeFacebook();
 
+	//countly
+	Q_INVOKABLE void cntlyCategory(const QString &name, const QString &level);
+	Q_INVOKABLE void cntlyMenuOptions(const QString &name);
+	Q_INVOKABLE void cntlySocial(const QString &name);
+	//countly
+
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
 	Q_PROPERTY (const QString category READ getCategory WRITE setCategory NOTIFY categoryChanged);
 	Q_PROPERTY (const QString time READ getTime NOTIFY timeChanged);
@@ -72,6 +78,7 @@ public:
 	Q_PROPERTY (const QString selectedLetters READ getSelectedLetters WRITE setSelectedLetters NOTIFY selectedLettersChanged);
 	Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
 	Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
+	Q_PROPERTY (bool isFirstTimeUser READ getIsFirstTimeUser WRITE setIsFirstTimeUser NOTIFY isFirstTimeUserChanged);
 
 	QString getCategory();
 	void setCategory(const QString cat);
@@ -90,6 +97,9 @@ public:
 
 	bool getProfileBox();
 	void setProfileBox(bool status);
+
+	bool getIsFirstTimeUser();
+	void setIsFirstTimeUser(bool status);
 
 	int getGamesPlayed();
 	void setGamesPlayed();
@@ -126,7 +136,6 @@ private Q_SLOTS:
 	void onFullscreen();
 	void onLoadLeaderboardCompleted(QVariantList data);
 	void onAchievedAward();
-	void onArmed();
 
 Q_SIGNALS:
 	void themeChanged();
@@ -144,6 +153,7 @@ Q_SIGNALS:
 	void selectedLettersChanged();
 	void difficultyChanged();
 	void achievedAwardChanged();
+	void isFirstTimeUserChanged();
 
 private:
 	void initTimer();
