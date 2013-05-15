@@ -22,8 +22,8 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      47,   14, // methods
-      15,  249, // properties
+      49,   14, // methods
+      15,  259, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -81,23 +81,25 @@ static const uint qt_meta_data_ApplicationUI[] = {
     1044, 1033,   14,   14, 0x02,
     1080, 1075,   14,   14, 0x02,
     1106, 1075,   14,   14, 0x02,
+    1127, 1075,   14,   14, 0x02,
+    1151, 1075,   14,   14, 0x02,
 
  // properties: name, type, flags
-    1135, 1127, 0x0a495103,
-    1141, 1127, 0x0a495103,
-    1150, 1127, 0x0a495001,
-    1155, 1127, 0x0a495001,
-    1176, 1171, 0x01495003,
-    1184, 1171, 0x01495003,
-    1192, 1171, 0x01495003,
-    1205, 1127, 0x0a495001,
-    1225, 1127, 0x0a495001,
-     752, 1240, 0x02495103,
-    1244, 1240, 0x02495001,
-    1256, 1127, 0x0a495103,
-    1272, 1240, 0x02495103,
-    1283, 1240, 0x02495001,
-    1297, 1171, 0x01495103,
+    1180, 1172, 0x0a495103,
+    1186, 1172, 0x0a495103,
+    1195, 1172, 0x0a495001,
+    1200, 1172, 0x0a495001,
+    1221, 1216, 0x01495003,
+    1229, 1216, 0x01495003,
+    1237, 1216, 0x01495003,
+    1250, 1172, 0x0a495001,
+    1270, 1172, 0x0a495001,
+     752, 1285, 0x02495103,
+    1289, 1285, 0x02495001,
+    1301, 1172, 0x0a495103,
+    1317, 1285, 0x02495103,
+    1328, 1285, 0x02495001,
+    1342, 1216, 0x01495103,
 
  // properties: notify_signal_id
        3,
@@ -150,7 +152,8 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "msg\0playSound(QString)\0invokeFacebook()\0"
     "name,level\0cntlyCategory(QString,QString)\0"
     "name\0cntlyMenuOptions(QString)\0"
-    "cntlySocial(QString)\0QString\0theme\0"
+    "cntlySocial(QString)\0cntlyScoreloop(QString)\0"
+    "cntlyThemes(QString)\0QString\0theme\0"
     "category\0time\0totalWordsFound\0bool\0"
     "soundOn\0musicOn\0profileBoxOn\0"
     "puzzleCompletedTime\0lastPuzzleTime\0"
@@ -212,6 +215,8 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 44: _t->cntlyCategory((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         case 45: _t->cntlyMenuOptions((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 46: _t->cntlySocial((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 47: _t->cntlyScoreloop((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 48: _t->cntlyThemes((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -249,9 +254,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 47)
+        if (_id < 49)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 47;
+        _id -= 49;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {

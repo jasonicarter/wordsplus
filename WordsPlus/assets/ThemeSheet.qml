@@ -93,6 +93,7 @@ Page {
                                 }
                                 if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
                                     //on confirm set c++ property
+                                    wordsPlus.cntlyThemes(selectedThemeFolder);
                                     wordsPlus.theme = selectedThemeFolder;
                                 }
                             }

@@ -255,7 +255,7 @@ void ApplicationUI::onSubmitScoreCompleted(ScoreData_t *scoreData) {
 }
 
 void ApplicationUI::submitScore(int score) {
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable() && mAppData) {
 		ScoreLoopThread::SubmitScore(mAppData, score, 0);
 	}
 }
@@ -272,27 +272,27 @@ void ApplicationUI::onLoadLeaderboardCompleted(QVariantList data) {
 
 void ApplicationUI::loadLeaderboard(bool includeBuddyList) {
 	LOG("loadLeaderboard")
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable() && mAppData) {
 		ScoreLoopThread::LoadLeaderboard(mAppData, SC_SCORES_SEARCH_LIST_ALL, 50, includeBuddyList);
 	}
 }
 
 void ApplicationUI::loadLeaderboardAroundLastScore() {
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable() && mAppData) {
 		ScoreLoopThread::LoadLeaderboardAroundScore(mAppData,
 				mLastScoreData->score, SC_SCORES_SEARCH_LIST_ALL, 5);
 	}
 }
 
 void ApplicationUI::loadLeaderboardAroundUser() {
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable() && mAppData) {
 		ScoreLoopThread::LoadLeaderboardAroundUser(mAppData,
 				SC_SCORES_SEARCH_LIST_ALL, 5);
 	}
 }
 
 void ApplicationUI::LoadAchievementsAwards() {
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable() && mAppData) {
 		ScoreLoopThread::LoadAchievements(mAppData);
 	}
 }
@@ -343,7 +343,7 @@ void ApplicationUI::ProcessAwards() {
 //		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_TESTTHREE);
 //	}
 
-	if (Global::instance()->getIsInternetAvailable()) {
+	if (Global::instance()->getIsInternetAvailable()  && mAppData) {
 		//beginner's luck
 		ScoreLoopThread::AchieveAward(mAppData, SCORELOOP_FIRSTGAME);
 
@@ -1222,6 +1222,20 @@ void ApplicationUI::cntlyMenuOptions(const QString &name) {
 
 void ApplicationUI::cntlySocial(const QString &name) {
 	countly::CountlyEvent event(this, "social");
+	event.set("type", name);
+	event.send();
+}
+
+
+void ApplicationUI::cntlyScoreloop(const QString &name) {
+	countly::CountlyEvent event(this, "scoreloop");
+	event.set("type", name);
+	event.send();
+}
+
+
+void ApplicationUI::cntlyThemes(const QString &name) {
+	countly::CountlyEvent event(this, "theme");
 	event.set("type", name);
 	event.send();
 }
