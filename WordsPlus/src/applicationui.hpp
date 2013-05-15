@@ -62,6 +62,8 @@ public:
 	Q_INVOKABLE void cntlyCategory(const QString &name, const QString &level);
 	Q_INVOKABLE void cntlyMenuOptions(const QString &name);
 	Q_INVOKABLE void cntlySocial(const QString &name);
+	Q_INVOKABLE void cntlyScoreloop(const QString &name);
+	Q_INVOKABLE void cntlyThemes(const QString &name);
 	//countly
 
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);

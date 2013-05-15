@@ -42,6 +42,7 @@ Page {
                                 leaderBoard.add(achievementContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("achievements");
                             }
                         }
                     }
@@ -56,6 +57,7 @@ Page {
                                 leaderBoard.add(LeadersContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("leaders");
                             }
                         }
                     }
@@ -70,6 +72,7 @@ Page {
                                 leaderBoard.add(positionContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("ranking");
                             }
                         }
                     }
@@ -84,6 +87,7 @@ Page {
                                 leaderBoard.add(buddyContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("friends");
                             }
                         }
                     }
