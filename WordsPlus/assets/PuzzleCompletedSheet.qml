@@ -78,33 +78,37 @@ Page {
                     //background: Color.create("#272727")
                     preferredWidth: 700
                     preferredHeight: 650
-                    SegmentedControl {
-                        id: segmentedRankingCrtl                
-                        preferredWidth: 710
-                        Option {
-                            id: ranking
-                            text: "Ranking"
-                            value: "ranking"
-                            selected: true
-                        }
-                        Option {
-                            id: achievements
-                            text: "Achievements"
-                            value: "achievements"
-                        }
-                        onSelectedIndexChanged: {
-                            if (segmentedRankingCrtl.selectedValue == "achievements") {
-                                position.visible = false;
-                                awards.visible = true;
-                                awards.removeAll();
-                                var awardsContainer = achievementDef.createObject();
-                                awards.add(awardsContainer);
-                            } else if (segmentedRankingCrtl.selectedValue == "ranking") {
-                                awards.visible = false;
-                                position.visible = true;
-                                position.removeAll();
-                                var positionContainer = positionDef.createObject();
-                                position.add(positionContainer);
+                    Container {
+                        background: Color.create("#272727")
+                        preferredWidth: 700
+                        SegmentedControl {
+                            id: segmentedRankingCrtl
+                            preferredWidth: 710
+                            Option {
+                                id: ranking
+                                text: "Ranking"
+                                value: "ranking"
+                                selected: true
+                            }
+                            Option {
+                                id: achievements
+                                text: "Achievements"
+                                value: "achievements"
+                            }
+                            onSelectedIndexChanged: {
+                                if (segmentedRankingCrtl.selectedValue == "achievements") {
+                                    position.visible = false;
+                                    awards.visible = true;
+                                    awards.removeAll();
+                                    var awardsContainer = achievementDef.createObject();
+                                    awards.add(awardsContainer);
+                                } else if (segmentedRankingCrtl.selectedValue == "ranking") {
+                                    awards.visible = false;
+                                    position.visible = true;
+                                    position.removeAll();
+                                    var positionContainer = positionDef.createObject();
+                                    position.add(positionContainer);
+                                }
                             }
                         }
                     }

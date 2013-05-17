@@ -90,6 +90,7 @@ ApplicationUI::ApplicationUI(bb::platform::bbm::Context &context, bb::cascades::
 : QObject(app), m_context(&context)
 {
 
+	LOG("appui function");
 	//set default values
 	deltaX = 0.0;
 	deltaY = 0.0;
@@ -135,7 +136,7 @@ ApplicationUI::~ApplicationUI() {
 
 void ApplicationUI::show() {
 
-	//LOG("show function");
+	LOG("show function");
 
 	QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
 	qml->setContextProperty("wordsPlus", this);
@@ -181,6 +182,7 @@ void ApplicationUI::show() {
 			Application::instance()->setScene(appPage);
 
 			mScoreLoop->start();
+			//countly::CountlyInit(Application::instance(), "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
 		}
 	}else{
 		LOG("mQmlDocument has errors");
