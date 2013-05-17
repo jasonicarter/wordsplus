@@ -36,7 +36,7 @@ Container {
                     topMargin: 0
                     bottomMargin: 0
                     horizontalAlignment: HorizontalAlignment.Center
-                    text: "SHARE ME"
+                    text: "HOLD ME"
                     textStyle {
                         base: btmNavPanelSmallNormalWhite.style
                     }
@@ -48,13 +48,52 @@ Container {
                     }
                     if (event.isUp()) {
                         profileImage.imageSource = "images/profileEdit_blk.png"
-                        shareSheet.open()
+                        //shareSheet.open();
                     }
                 }
                 onTouchExit: {
                     profileImage.imageSource = "images/profileEdit_blk.png"
                 }
             }
+            contextActions: [
+                ActionSet {
+                    title: "Share The Love."
+                    subtitle: "HOW DO YOU BBM?"
+
+                    ActionItem {
+                        title: "Invite My Friends"
+                        imageSource: "asset:///images/invite.png"
+
+                        onTriggered: {
+                            wordsPlus.ControlsForBBM(bbm_invitetodownload);
+                        }
+                    }
+                    ActionItem {
+                        title: "I Love WordsPlus!"
+                        imageSource: "asset:///images/heart_small.png"
+
+                        onTriggered: {
+                            wordsPlus.ControlsForBBM(bbm_personalmessage);
+                        }
+                    }
+                    ActionItem {
+                        title: "I'm Busy Playing"
+                        imageSource: "asset:///images/busy.png"
+
+                        onTriggered: {
+                            wordsPlus.ControlsForBBM(bbm_statusmessage);
+                        }
+                    }
+                    ActionItem {
+                        title: "Leave A Review"
+                        imageSource: "asset:///images/review.png"
+
+                        onTriggered: {
+                            invokeLeaveReview.trigger("bb.action.OPEN");
+                        }
+                    }
+                } // end of ActionSet
+            ] // end of contextActions list
         } // end of profile
         Container { // home
             property bool isHome: false
@@ -222,6 +261,13 @@ Container {
         Sheet {
             id: shareSheet
             ShareSheet {
+            }
+        },
+        Invocation {
+            id: invokeLeaveReview
+            query {
+                invokeTargetId: "sys.appworld"
+                uri: "appworld://content/21931881"
             }
         }
     ]

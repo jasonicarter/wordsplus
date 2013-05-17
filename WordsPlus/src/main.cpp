@@ -37,12 +37,12 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 	//Setup BBM registration handler
 	RegistrationHandler *registrationHandler = new RegistrationHandler(uuid, &app);
 	ApplicationUI *wordsPlus = new ApplicationUI(registrationHandler->context(), &app);
-	countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
-
 
 	QObject::connect(registrationHandler, SIGNAL(registered()), wordsPlus, SLOT(show()));
 	registrationHandler->registerApplication();
 
+
+	countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
 
     // we complete the transaction started in the app constructor and start the client event loop here
     return Application::exec();

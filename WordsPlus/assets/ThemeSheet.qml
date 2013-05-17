@@ -1,5 +1,5 @@
 import bb.cascades 1.0
-import bb.system 1.0
+//import bb.system 1.0
 
 Page {
     property string selectedThemeFolder
@@ -56,10 +56,12 @@ Page {
                             type: "item"
                             Container {
                                 rightPadding: 30
+
                                 Container {
                                     layout: StackLayout {
                                         orientation: LayoutOrientation.LeftToRight
                                     }
+
                                     topPadding: 2
                                     rightPadding: 2
                                     leftPadding: 2
@@ -83,21 +85,21 @@ Page {
                         }
                     }
                     attachedObjects: [
-                        SystemDialog {
-                            id: themeDialog
-                            title: "Switching Themes"
-                            body: "You are about to switch your theme to:\n" + selectedThemeName
-                            onFinished: {
-                                if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
-                                    //on cancel do nothing
-                                }
-                                if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
-                                    //on confirm set c++ property
-                                    wordsPlus.cntlyThemes(selectedThemeFolder);
-                                    wordsPlus.theme = selectedThemeFolder;
-                                }
-                            }
-                        }
+                    //                        SystemDialog {
+                    //                            id: themeDialog
+                    //                            title: "Switching Themes"
+                    //                            body: "You are about to switch your theme to:\n" + selectedThemeName
+                    //                            onFinished: {
+                    //                                if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
+                    //                                    //on cancel do nothing
+                    //                                }
+                    //                                if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
+                    //                                    //on confirm set c++ property
+                    //                                    wordsPlus.cntlyThemes(selectedThemeFolder);
+                    //                                    wordsPlus.theme = selectedThemeFolder;
+                    //                                }
+                    //                            }
+                    //                        }
                     ]
                 } //end of listview
             }

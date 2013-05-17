@@ -153,7 +153,7 @@ Container { // root Container
             fontWeight: FontWeight.Normal
             fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
-            fontSize: FontSize.Large
+            //fontSize: FontSize.Large
         },
         TextStyleDefinition {
             id: puzzlePageBurntOrgange

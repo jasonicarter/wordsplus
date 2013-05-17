@@ -26,6 +26,22 @@ Page {
                         base: shareSheetBigBodyNormalBlue.style
                     }
                 }
+                contextActions: [
+                    ActionSet {
+                        title: "Animations"
+                        subtitle: "Choose your animation"
+
+                        // This action plays the translation animation
+                        ActionItem {
+                            title: "Slide"
+                            imageSource: "asset:///images/invite.png"
+
+                            onTriggered: {
+                                wordsPlus.ControlsForBBM(bbm_invitetodownload);
+                            }
+                        }
+                    } // end of ActionSet
+                ] // end of contextActions list
             }
             Divider {
                 opacity: 0
