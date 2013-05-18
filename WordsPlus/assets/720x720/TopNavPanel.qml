@@ -17,11 +17,11 @@ Container {
                     orientation: LayoutOrientation.RightToLeft
                 }
                 //background: Color.Red
-                rightPadding: 190
+                rightPadding: 200
                 preferredWidth: 720
                 preferredHeight: 45
                 Label {
-                    leftMargin: 60
+                    leftMargin: 65
                     text: "POST"
                     verticalAlignment: VerticalAlignment.Center
                     textStyle {
@@ -29,7 +29,7 @@ Container {
                     }
                 }
                 Label {
-                    leftMargin: 45
+                    leftMargin: 55
                     text: "TWEET"
                     verticalAlignment: VerticalAlignment.Center
                     textStyle {

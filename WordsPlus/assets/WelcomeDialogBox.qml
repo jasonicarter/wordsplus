@@ -53,8 +53,8 @@ Container {
                         multiline: true
                         text: "1. An updated design\n" 
                         + "2. WordsPlus Facebook page - Like Me!\n" 
-                        + "3. Integrated analytics to help me, help you better\n"
-                        + "4. Q10 support"
+                        + "3. Better social integration with Facebook and Twitter\n" 
+                        + "4. A new Welcome page :)\n"
                         textStyle {
                             base: welcomeDialogWhite.style
                         }
@@ -71,7 +71,7 @@ Container {
                     }
                     Label {
                         multiline: true
-                        text: "For menu options, swipe down from the top to:\n\n" 
+                        text: "For menu options, swipe down from the top:\n" 
                         + "~ Select different word categories\n" 
                         + "~ Change the difficulty level\n" 
                         + "~ Read up on your stats and leaderboards\n" 

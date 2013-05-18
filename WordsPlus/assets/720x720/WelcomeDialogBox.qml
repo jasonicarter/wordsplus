@@ -57,7 +57,7 @@ Container {
                         multiline: true
                         text: "1. An updated design\n" 
                         + "2. WordsPlus Facebook page - Like Me!\n" 
-                        + "3. Integrated analytics to help me, help you better\n"
+                        + "3. Better social integration with Facebook and Twitter\n"
                         + "4. A new Welcome page :)"
                         textStyle {
                             base: welcomeDialogWhite.style
