@@ -68,7 +68,8 @@ Page {
                 Label {
                     leftPadding: 25
                     multiline: true
-                    text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" + "http://twocasualcoders.com/contact\n" + "http://facebook.com/WordsPlusGame"
+                    text: "Help improve WordsPlus by sending any requests, suggestions or issues to: \n\n" + "Twitter: @jasonicarter\n" 
+                    + "http://facebook.com/WordsPlusGame"             
                     textStyle {
                         base: aboutSheetSubTitleNormalWhite.style
                     }

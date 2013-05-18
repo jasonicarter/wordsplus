@@ -118,6 +118,7 @@ Page {
                     layout: DockLayout {
                     }
                     ListView {
+
                         id: catList
                         dataModel: XmlDataModel {
                             //source: "models/wordsplus.xml"

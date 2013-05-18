@@ -42,7 +42,7 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 	registrationHandler->registerApplication();
 
 
-	countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
+	//countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
 
     // we complete the transaction started in the app constructor and start the client event loop here
     return Application::exec();

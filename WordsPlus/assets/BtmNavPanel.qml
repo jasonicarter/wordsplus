@@ -258,11 +258,6 @@ Container {
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
         },
-        Sheet {
-            id: shareSheet
-            ShareSheet {
-            }
-        },
         Invocation {
             id: invokeLeaveReview
             query {
