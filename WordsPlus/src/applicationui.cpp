@@ -182,7 +182,7 @@ void ApplicationUI::show() {
 			Application::instance()->setScene(appPage);
 
 			mScoreLoop->start();
-			countly::CountlyInit(Application::instance(), "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e");
+			countly::CountlyInit(Application::instance(), "https://cloud.count.ly", "6ae3c77a6212757829fc75f3467a606a56733b0a");
 		}
 	}else{
 		LOG("mQmlDocument has errors");

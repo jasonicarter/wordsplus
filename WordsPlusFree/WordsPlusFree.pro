@@ -11,5 +11,6 @@ LIBS += -lbbmultimedia
 LIBS += -lOpenAL -lalut -lasound
 LIBS += -lbbplatformbbm
 LIBS += -lbbcascadesadvertisement
+LIBS += -lbb -lbbdata -lbbplatform -lbbdevice
 
 include(config.pri)

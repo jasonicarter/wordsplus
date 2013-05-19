@@ -1,6 +1,5 @@
 import bb.cascades 1.0
-import bb.system 1.0
-import bb.multimedia 1.0
+//import bb.multimedia 1.0
 
 Container {
     id: homePageContainer
@@ -195,48 +194,29 @@ Container {
             //wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
         }
         //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
-        function onScoreloopLoaded(username) {
-            scoreLoopUsername = username;
-            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
-            homeSysToast.button.label = "Got it!"
-            homeSysToast.show();
+        //        function onScoreloopLoaded(username) {
+        //            scoreLoopUsername = username;
+        //            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
+        //            homeSysToast.button.label = "Got it!"
+        //            homeSysToast.show();
+        //        }
+        Container {
+            id: welcomeDialog
+            visible: wordsPlus.isFirstTimeUser
+            WelcomeDialogBox {
+
+            }
+            onTouch: {
+                if (event.isUp()) {
+                    if (wordsPlus.isFirstTimeUser) {
+                       // welcomeDialog.visible = false
+                        wordsPlus.isFirstTimeUser = false
+                    }
+                }
+            }
         }
     } //end of main container
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: bigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: bigBodyNormalWhite
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: subTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: smallTxtNormalWhite
-            base: SystemDefaults.TextStyles.SmallText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        SystemToast {
-            id: homeSysToast
-            body: ""
-            //button.label: "Got it!" //btnName
-        },
         Sheet {
             id: themeSheet
             ThemeSheet {

@@ -1,5 +1,5 @@
 1
-501
+500
 720x720/AboutSheet.qml
 720x720/BtmNav.qml
 720x720/HomePage.qml
@@ -20,7 +20,6 @@ BtmNavPanel.qml
 BtmSheetNavPanel.qml
 BuddyListLeaderboard.qml
 CategorySheet.qml
-HeartBeatAnimation.qml
 HelpSheet.qml
 HomePage.qml
 HomePageAnimation.qml

@@ -1,12 +1,16 @@
 // Default empty project template
 #include <bb/cascades/Application>
-#include <bb/cascades/QmlDocument>
-#include <bb/cascades/AbstractPane>
 
 #include <QLocale>
 #include <QTranslator>
+#include "applicationui.hpp"
+
+#include "applicationui.hpp"
+#include "Countly.hpp"
+
+// include JS Debugger / CS Profiler enabler
+// this feature is enabled by default in the debug build only
 #include <Qt/qdeclarativedebug.h>
-#include "WordsPlusFree.hpp"
 
 using namespace bb::cascades;
 
@@ -23,16 +27,22 @@ Q_DECL_EXPORT int main(int argc, char **argv)
         app.installTranslator( &translator );
     }
 
-	// You can generate one here: http://www.guidgenerator.com/
-	const QUuid uuid(QLatin1String("c82f0d98-47cd-493e-9990-95dcfbae9e42"));
+
+    //new ApplicationUI(&app);
+
+    // You can generate one here: http://www.guidgenerator.com/
+    const QUuid uuid(QLatin1String("c82f0d98-47cd-493e-9990-95dcfbae9e42"));
+
 
 	//Setup BBM registration handler
 	RegistrationHandler *registrationHandler = new RegistrationHandler(uuid, &app);
-	WordsPlusFree *wordsPlusFree = new WordsPlusFree(registrationHandler->context(), &app);
-	//new WordsPlusGame(&app);
+	ApplicationUI *wordsPlus = new ApplicationUI(registrationHandler->context(), &app);
 
-    QObject::connect(registrationHandler, SIGNAL(registered()), wordsPlusFree, SLOT(show()));
-    registrationHandler->registerApplication();
+	QObject::connect(registrationHandler, SIGNAL(registered()), wordsPlus, SLOT(show()));
+	registrationHandler->registerApplication();
+
+
+	//countly::CountlyInit(&app, "https://cloud.count.ly", "34e7571ac2c7b2a9d155fd70608ea0914963ed2e"); //test id
 
     // we complete the transaction started in the app constructor and start the client event loop here
     return Application::exec();
