@@ -9,7 +9,6 @@ beacon
 bead
 beak
 beam
-bean
 beard
 beast
 beat
@@ -17,7 +16,6 @@ beaver
 beech
 beef
 bean
-beep
 beer
 beet
 beetle
@@ -103,15 +101,10 @@ fleet
 freak
 free
 freeze
-gear
-geese
-genie
 gleam
 glean
 grease
 glee
-greed
-green
 greet
 guarantee
 gear
@@ -274,7 +267,6 @@ tweed
 tweezers
 veal
 we
-weak
 wean
 weary
 weasel

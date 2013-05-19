@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.cascades.advertisement 1.0
 
 Container { // root Container
     id: playPuzzleRootContainer
@@ -9,6 +10,23 @@ Container { // root Container
         horizontalAlignment: HorizontalAlignment.Center
         preferredHeight: 1280
         ThemeOtherPages {
+        }
+//        TopNavPanel {           
+//        }
+        Banner {
+            //zoneId: 117145 //test id
+            //zoneId: 155255
+            //zoneId: 160884 //romain
+            //zoneId: 185563 //wordsplus 2
+            //zoneId: 185564 //wordsplus 3 native
+            refreshRate: 60
+            preferredWidth: 720
+            preferredHeight: 100
+            transitionsEnabled: true
+            placeHolderURL: "asset:///placeholder_728x90.png"
+            borderColor: Color.Blue
+            borderWidth: 2
+            horizontalAlignment: HorizontalAlignment.Center
         }
         Container { //highlight timer only for school theme
             topPadding: 60
@@ -38,22 +56,17 @@ Container { // root Container
                 }
             }
         }
-
-        AdContainer {
-            //horizontalAlignment: HorizontalAlignment.Center
-        }
         Container { // center container
             id: centerContainer
             objectName: "centerPuzzleContainer"
             //background: Color.Green
             horizontalAlignment: HorizontalAlignment.Center
-            verticalAlignment: VerticalAlignment.Center
             Container {
                 id: puzzleInfo
                 layout: DockLayout {
                 }
                 //background: Color.Green
-                //topPadding: 100
+                topPadding: 100
                 leftPadding: 20
                 Container {
                     Label {
@@ -70,7 +83,8 @@ Container { // root Container
                         //text: "TIME: 2:00"
                         horizontalAlignment: HorizontalAlignment.Left
                         textStyle {
-                            base: puzzlePageSubTitleNormalWhite.style
+                            base: puzzlePageWhite.style
+                            //base: puzzlePageBurntOrgange.style
                         }
                     }
                 }
@@ -96,7 +110,7 @@ Container { // root Container
                 layout: StackLayout {
                     orientation: LayoutOrientation.LeftToRight
                 }
-                topMargin: 15
+                topMargin: 40
                 preferredWidth: 720
                 preferredHeight: preferredWidth
                 horizontalAlignment: HorizontalAlignment.Center
@@ -119,7 +133,7 @@ Container { // root Container
             id: btmNav
             verticalAlignment: VerticalAlignment.Bottom
             BtmNavPanel {
-               verticalAlignment: VerticalAlignment.Bottom
+                verticalAlignment: VerticalAlignment.Bottom
             }
         }
     } // main container
@@ -150,11 +164,12 @@ Container { // root Container
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {
-            id: puzzlePageSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
+            id: puzzlePageWhite
+            base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
+            //fontSize: FontSize.Large
         },
         TextStyleDefinition {
             id: puzzlePageBurntOrgange

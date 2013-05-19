@@ -8,18 +8,18 @@ Page {
         layout: DockLayout {
         }
         background: Color.create("#0098f0")
-        preferredWidth: 768
+        preferredWidth: 720
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
         Container { //middle
             topPadding: 100
-            preferredWidth: 720
+            preferredWidth: 700
             verticalAlignment: VerticalAlignment.Top
             horizontalAlignment: HorizontalAlignment.Center
             Container {
                 topPadding: 10
-                preferredWidth: 768
+                preferredWidth: 700
                 preferredHeight: 70
                 horizontalAlignment: HorizontalAlignment.Center
                 background: Color.create("#272727")
@@ -37,29 +37,22 @@ Page {
             }
             Container {
                 //background: Color.create("#272727")
-                preferredHeight: 720
+                preferredHeight: 920
                 ListView {
                     id: myList
-                    //property string seletedTheme
                     dataModel: XmlDataModel {
                         source: "models/themes.xml"
                     }
                     scrollIndicatorMode: ScrollIndicatorMode.ProportionalBar
                     horizontalAlignment: HorizontalAlignment.Center
-                    layout: StackListLayout {
-                        orientation: LayoutOrientation.LeftToRight
-                    }
                     // Add appearance definitions for the list items using the
                     // listItemComponents list
                     listItemComponents: [
                         ListItemComponent {
                             type: "item"
                             Container {
-                                rightPadding: 30
+                                bottomPadding: 30
                                 Container {
-                                    layout: StackLayout {
-                                        orientation: LayoutOrientation.LeftToRight
-                                    }
                                     topPadding: 2
                                     rightPadding: 2
                                     leftPadding: 2
@@ -79,86 +72,41 @@ Page {
                         if (selectedItem.price == "free") {
                             themeDialog.show();
                         } else if (selectedItem.price == "pay") {
-                            //themeDialog.show();
+                            themeDialog.show();
                         }
                     }
                     attachedObjects: [
                         SystemDialog {
                             id: themeDialog
-                            title: "Premium Feature"
-                            body: "To switch themes, gain access to more categories and Scoreloop features" + " you'll need the premium version of WordsPlus.\n\nPlease upgrade now."
+                            title: "Switching Themes"
+                            body: "You are about to switch your theme to:\n" + selectedThemeName
                             onFinished: {
                                 if (themeDialog.result == SystemUiResult.CancelButtonSelection) {
                                     //on cancel do nothing
                                 }
                                 if (themeDialog.result == SystemUiResult.ConfirmButtonSelection) {
-                                    invokePaid.trigger("bb.action.OPEN");
+                                    //on confirm set c++ property
+                                    wordsPlus.cntlyThemes(selectedThemeFolder);
+                                    wordsPlus.theme = selectedThemeFolder;
                                 }
-                            }
-                        },
-                        Invocation {
-                            id: invokePaid
-                            query {
-                                invokeTargetId: "sys.appworld"
-                                uri: "appworld://content/21931881"
                             }
                         }
                     ]
                 } //end of listview
             }
         } // end of middle container
-    } // end of page
-    
-    onCreationCompleted: {
-        //        var positionContainer = positionDef.createObject();
-        //        position.add(positionContainer);
-    }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                themeSheet.close();
-            }
+        BtmSheetNavPanel {
+            verticalAlignment: VerticalAlignment.Bottom
+            sheetName: "themeSheet"
         }
-    ]
+    } // end of container
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: statsSheetBigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
         TextStyleDefinition {
             id: statsSheetBigBodyNormalBlue
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: statsSheetBigBodyNormalWhite
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
         }
     ]
 }

@@ -4,23 +4,17 @@ Page {
     Container {
         layout: DockLayout {
         }
-        //background: Color.create("#0098f0")
-        //preferredWidth: 768
-        horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
         }
-        AdWordsPlusPaid {
-        }
+        horizontalAlignment: HorizontalAlignment.Center
         Container { //middle
-            preferredWidth: 720
-            preferredHeight: 900
+            preferredWidth: 700
+            topPadding: 100
             verticalAlignment: VerticalAlignment.Center
             horizontalAlignment: HorizontalAlignment.Center
-            //background: Color.Gray
             Container {
-                preferredWidth: 720
                 DropDown {
                     id: statsDropDown
                     title: "Review"
@@ -40,7 +34,6 @@ Page {
                     Option {
                         id: dropDwnYourAchievements
                         text: "ACHIEVEMENTS"
-                        enabled: false
                         description: "Get them all!"
                         onSelectedChanged: {
                             if (selected == true) {
@@ -49,6 +42,7 @@ Page {
                                 leaderBoard.add(achievementContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("achievements");
                             }
                         }
                     }
@@ -63,13 +57,13 @@ Page {
                                 leaderBoard.add(LeadersContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("leaders");
                             }
                         }
                     }
                     Option {
                         id: dropDwnYourPosition
                         text: "YOUR POSITION"
-                        enabled: false
                         description: "How do you measure up against the rest?"
                         onSelectedChanged: {
                             if (selected == true) {
@@ -78,13 +72,13 @@ Page {
                                 leaderBoard.add(positionContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("ranking");
                             }
                         }
                     }
                     Option {
                         id: dropDwnBuddyPosition
                         text: "FRIENDS"
-                        enabled: false
                         description: "See how your friends are doing."
                         onSelectedChanged: {
                             if (selected == true) {
@@ -93,6 +87,7 @@ Page {
                                 leaderBoard.add(buddyContainer);
                                 localStats.visible = false;
                                 leaderBoard.visible = true;
+                                wordsPlus.cntlyScoreloop("friends");
                             }
                         }
                     }
@@ -105,8 +100,6 @@ Page {
                 Container {
                     id: leaderBoard
                     visible: false
-                    //background: Color.LightGray
-                    preferredWidth: 720
                     preferredHeight: 800
                     attachedObjects: [
                         ComponentDefinition {
@@ -269,27 +262,12 @@ Page {
                 }
             }
         }
-    }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                wordsPlus.startTimer();
-                statsSheet.close();
-            }
+        BtmSheetNavPanel {
+            verticalAlignment: VerticalAlignment.Bottom
+            sheetName: "statsSheet"
         }
-    ]
+    }
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: statsSheetBigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
         TextStyleDefinition {
             id: statsSheetBigBodyNormalBlue
             base: SystemDefaults.TextStyles.BodyText
@@ -300,20 +278,6 @@ Page {
         TextStyleDefinition {
             id: statsSheetBigBodyNormalWhite
             base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: statsSheetSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")

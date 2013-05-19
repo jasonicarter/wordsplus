@@ -1,4 +1,3 @@
-// Tabbed Pane project template
 import bb.cascades 1.0
 import bb.system 1.0
 import bb.multimedia 1.0
@@ -6,74 +5,18 @@ import bb.multimedia 1.0
 Page {
     id: mainPage
     property int connectionError: 0
-    shortcuts: [
-        Shortcut {
-            key: qsTr("h")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                wordsPlus.InitializeHomePage();
-            }
-        },
-        Shortcut {
-            key: qsTr("p")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                wordsPlus.intializePlayArea();
-            }
-        },
-        Shortcut {
-            key: qsTr("b")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                wordsPlus.intializePlayArea();
-            }
-        },
-        Shortcut {
-            key: qsTr("m")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                Application.menuEnabled = true;
-            }
-        },
-        Shortcut {
-            key: qsTr("c")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                categorySheet.open();
-            }
-        },
-        Shortcut {
-            key: qsTr("s")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                statsSheet.open();
-            }
-        },
-        Shortcut {
-            key: qsTr("t")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                wordsPlus.intializePlayArea();
-            }
-        },
-        Shortcut {
-            key: qsTr("r")
-            onTriggered: {
-                wordsPlus.stopTimer();
-                wordsPlus.intializePlayArea();
-            }
-        }
-    ]
     Menu.definition: MenuDefinition {
         helpAction: HelpActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
+                wordsPlus.cntlyMenuOptions("help");
                 helpSheet.open();
             }
         }
         settingsAction: SettingsActionItem {
             onTriggered: {
                 wordsPlus.stopTimer();
+                wordsPlus.cntlyMenuOptions("settings");
                 settingsSheet.open();
             }
         }
@@ -83,6 +26,7 @@ Page {
                 imageSource: "asset:///images/about.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("about");
                     aboutSheet.open();
                 }
             },
@@ -91,6 +35,7 @@ Page {
                 imageSource: "asset:///images/category.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("category");
                     categorySheet.open();
                 }
             },
@@ -99,6 +44,7 @@ Page {
                 imageSource: "asset:///images/trophy.png"
                 onTriggered: {
                     wordsPlus.stopTimer();
+                    wordsPlus.cntlyMenuOptions("stats");
                     statsSheet.open();
                 }
             }
@@ -150,7 +96,7 @@ Page {
             sourceUrl: "sounds/background.wav"
         }
     ]
-    onCreationCompleted: {
+    onCreationCompleted: {       
         if (wordsPlus.musicOn) {
             bgMusic.setRepeatMode(1);
             bgMusic.play();

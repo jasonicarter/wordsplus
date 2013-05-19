@@ -1,5 +1,8 @@
 <root>
+    <item category="ANIMALS" filename="animals" image= "asset:///images/categoryList/elephant.png"/>
     <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
+    <item category="THE BODY" filename="body" image= "asset:///images/categoryList/nurse.png"/>
+    <item category="EARTH" filename="earth" image= "asset:///images/categoryList/earth.png"/>
     <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
-    <item category="WEIGHTS + MEASURES" filename="weights" image= "asset:///images/categoryList/scale.png"/>
+    <item category="OUI! FR-ENCH" filename="french" image= "asset:///images/categoryList/eiffeltower.png"/>
 </root>

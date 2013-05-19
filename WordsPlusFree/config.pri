@@ -4,6 +4,16 @@ BASEDIR =  $$quote($$_PRO_FILE_PWD_)
 device {
     CONFIG(debug, debug|release) {
         SOURCES +=  $$quote($$BASEDIR/src/ActiveFrame.cpp) \
+                 $$quote($$BASEDIR/src/Countly.cpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
                  $$quote($$BASEDIR/src/GameSettings.cpp) \
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
@@ -12,7 +22,6 @@ device {
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -20,6 +29,17 @@ device {
                  $$quote($$BASEDIR/src/wordsearch.cpp)
 
         HEADERS +=  $$quote($$BASEDIR/src/ActiveFrame.h) \
+                 $$quote($$BASEDIR/src/Countly.hpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
                  $$quote($$BASEDIR/src/GameSettings.hpp) \
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
@@ -28,7 +48,6 @@ device {
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
@@ -37,6 +56,16 @@ device {
 
     CONFIG(release, debug|release) {
         SOURCES +=  $$quote($$BASEDIR/src/ActiveFrame.cpp) \
+                 $$quote($$BASEDIR/src/Countly.cpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
                  $$quote($$BASEDIR/src/GameSettings.cpp) \
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
@@ -45,7 +74,6 @@ device {
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -53,6 +81,17 @@ device {
                  $$quote($$BASEDIR/src/wordsearch.cpp)
 
         HEADERS +=  $$quote($$BASEDIR/src/ActiveFrame.h) \
+                 $$quote($$BASEDIR/src/Countly.hpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
                  $$quote($$BASEDIR/src/GameSettings.hpp) \
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
@@ -61,7 +100,6 @@ device {
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
@@ -72,6 +110,16 @@ device {
 simulator {
     CONFIG(debug, debug|release) {
         SOURCES +=  $$quote($$BASEDIR/src/ActiveFrame.cpp) \
+                 $$quote($$BASEDIR/src/Countly.cpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.cpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.cpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.cpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.cpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.cpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.cpp) \
                  $$quote($$BASEDIR/src/GameSettings.cpp) \
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
@@ -80,7 +128,6 @@ simulator {
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -88,6 +135,17 @@ simulator {
                  $$quote($$BASEDIR/src/wordsearch.cpp)
 
         HEADERS +=  $$quote($$BASEDIR/src/ActiveFrame.h) \
+                 $$quote($$BASEDIR/src/Countly.hpp) \
+                 $$quote($$BASEDIR/src/CountlyDatabase.hpp) \
+                 $$quote($$BASEDIR/src/CountlyEvent.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLog.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogLevel.hpp) \
+                 $$quote($$BASEDIR/src/CountlyLogStream.hpp) \
+                 $$quote($$BASEDIR/src/CountlyMetrics.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueue.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueueProcessor.hpp) \
+                 $$quote($$BASEDIR/src/CountlyQueuedUrl.hpp) \
+                 $$quote($$BASEDIR/src/CountlySentry.hpp) \
                  $$quote($$BASEDIR/src/GameSettings.hpp) \
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
@@ -96,7 +154,6 @@ simulator {
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
-                 $$quote($$BASEDIR/src/WordsPlusFree.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
