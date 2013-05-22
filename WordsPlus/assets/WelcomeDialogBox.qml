@@ -34,7 +34,7 @@ Container {
                 horizontalAlignment: HorizontalAlignment.Center
                 Label {
                     id: txtMsg
-                    text: "version 1.3"
+                    text: "version 1.4"
                     horizontalAlignment: HorizontalAlignment.Center
                     textStyle {
                         base: SystemDefaults.TextStyles.SubtitleText

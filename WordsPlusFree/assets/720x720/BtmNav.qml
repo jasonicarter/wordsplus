@@ -263,7 +263,7 @@ Container {
             id: invokeLeaveReview
             query {
                 invokeTargetId: "sys.appworld"
-                uri: "appworld://content/21931881"
+                uri: "appworld://content/24752875"
             }
         }
     ]

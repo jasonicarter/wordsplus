@@ -53,6 +53,7 @@
 #define GAMESPLAYED "settingsGamesPlayed"
 #define DIFFICULTY "settingsDifficulty"
 #define FIRSTTIMEUSER "settingsFirstTimeUser"
+#define PAID "settingsPaid"
 
 //global - to be accessed from ApplicationUI to set awards
 //static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
@@ -840,6 +841,11 @@ void ApplicationUI::WordCompleted(QList<int> listOfNumbers) {
 	int ii;
 	QString selectedWord;
 
+	//TODO REMOVE ME
+	//emit puzzleCompleted();
+	//if(getIsPaid()){ProcessAwards();}
+	//REMOVE ABOVE
+
 	//whether word found or not blank out selectedLetters
 	setSelectedLetters("clear");
 
@@ -897,7 +903,7 @@ void ApplicationUI::WordCompleted(QList<int> listOfNumbers) {
 			setScore(timeSec);
 			playSound(SOUNDLEVELCOMPLETED);
 			ControlsForBBM(PROFILEBOXPUZZLECOMPLETED);
-			ProcessAwards();
+			if(getIsPaid()){ProcessAwards();} //TODO only available if paid for
 			isPuzzleDisplayed = false;
 			emit puzzleCompleted();
 		}
@@ -1195,6 +1201,15 @@ void ApplicationUI::setIsFirstTimeUser(bool status) {
 	emit isFirstTimeUserChanged();
 }
 
+bool ApplicationUI::getIsPaid() {
+	return (settings->getValueFor(PAID, "0")).toInt();
+}
+
+void ApplicationUI::setIsPaid(bool status) {
+	settings->saveValueFor(PAID, QString::number(status));
+	emit isPaidChanged();
+}
+
 
 void ApplicationUI::invokeFacebook() {
 
@@ -1245,6 +1260,14 @@ void ApplicationUI::cntlyScoreloop(const QString &name) {
 void ApplicationUI::cntlyThemes(const QString &name) {
 	countly::CountlyEvent event(this, "theme");
 	event.set("type", name);
+	event.send();
+}
+
+
+void ApplicationUI::cntlyIAP(const QString &name, const QString &price) {
+	countly::CountlyEvent event(this, "iap");
+	event.set("type", name);
+	event.setSum(price);
 	event.send();
 }
 

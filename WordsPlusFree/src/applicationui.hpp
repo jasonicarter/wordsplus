@@ -64,6 +64,7 @@ public:
 	Q_INVOKABLE void cntlySocial(const QString &name);
 	Q_INVOKABLE void cntlyScoreloop(const QString &name);
 	Q_INVOKABLE void cntlyThemes(const QString &name);
+	Q_INVOKABLE void cntlyIAP(const QString &name, const QString &price);
 	//countly
 
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
@@ -81,6 +82,7 @@ public:
 	Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
 	Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
 	Q_PROPERTY (bool isFirstTimeUser READ getIsFirstTimeUser WRITE setIsFirstTimeUser NOTIFY isFirstTimeUserChanged);
+	Q_PROPERTY (bool isPaid READ getIsPaid WRITE setIsPaid NOTIFY isPaidChanged);
 
 	QString getCategory();
 	void setCategory(const QString cat);
@@ -102,6 +104,9 @@ public:
 
 	bool getIsFirstTimeUser();
 	void setIsFirstTimeUser(bool status);
+
+	bool getIsPaid();
+	void setIsPaid(bool status);
 
 	int getGamesPlayed();
 	void setGamesPlayed();
@@ -156,6 +161,7 @@ Q_SIGNALS:
 	void difficultyChanged();
 	void achievedAwardChanged();
 	void isFirstTimeUserChanged();
+	void isPaidChanged();
 
 private:
 	void initTimer();

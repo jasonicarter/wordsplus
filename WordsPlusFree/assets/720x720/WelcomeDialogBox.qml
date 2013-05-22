@@ -30,27 +30,41 @@ Container {
 
             // This Container contains the title and body of the dialog box.
             Container {
-                preferredWidth: 550
+                preferredWidth: 600
                 horizontalAlignment: HorizontalAlignment.Center
-                Label {
-                    id: txtMsg
-                    text: "version 1.3"
-                    horizontalAlignment: HorizontalAlignment.Center
-                    textStyle {
-                        base: SystemDefaults.TextStyles.SubtitleText
-                        color: Color.create("#fafafa")
-                        textAlign: TextAlign.Center
+//                Label {
+//                    id: txtMsg
+//                    text: "version 1.4"
+//                    horizontalAlignment: HorizontalAlignment.Center
+//                    textStyle {
+//                        base: SystemDefaults.TextStyles.SubtitleText
+//                        color: Color.create("#fafafa")
+//                        textAlign: TextAlign.Center
+//                    }
+//                }
+                Container {
+                    background: Color.create("#272727")
+                    TextArea {
+                        text: "v1.4"
+                        editable: false
+                        touchPropagationMode: TouchPropagationMode.None
+                        textStyle {
+                            base: welcomeDialogBlue.style
+                            textAlign: TextAlign.Center
+                        }
                     }
                 }
                 Container {
+                    preferredWidth: 550
+                    horizontalAlignment: HorizontalAlignment.Center
                     Divider {
                         opacity: 0
-                        bottomMargin: 160
+                        bottomMargin: 120
                     }
                     Label {
                         text: "What's new"
                         textStyle {
-                            base: welcomeDialogBlue.style
+                            base: welcomeDialogOrg.style
                         }
                     }
                     Label {
@@ -58,7 +72,7 @@ Container {
                         text: "1. An updated design\n" 
                         + "2. WordsPlus Facebook page - Like Me!\n" 
                         + "3. Better social integration with Facebook and Twitter\n"
-                        + "4. A new Welcome page :)"
+                        + "4. In-App Purchase to a full upgrade"
                         textStyle {
                             base: welcomeDialogWhite.style
                         }
@@ -66,7 +80,7 @@ Container {
                     Label {
                         text: "Menu + Shortcuts"
                         textStyle {
-                            base: welcomeDialogBlue.style
+                            base: welcomeDialogOrg.style
                         }
                     }
                     Label {
@@ -89,7 +103,7 @@ Container {
     }
     attachedObjects: [
         TextStyleDefinition {
-            id: welcomeDialogBlue
+            id: welcomeDialogOrg
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
@@ -101,6 +115,13 @@ Container {
             fontWeight: FontWeight.Normal
             fontFamily: "Times New Roman"
             color: Color.create("#262626")
+        },
+        TextStyleDefinition {
+            id: welcomeDialogBlue
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Normal
+            //fontFamily: "Times New Roman"
+            color: Color.create("#0098f0")
         }
     ]
 }

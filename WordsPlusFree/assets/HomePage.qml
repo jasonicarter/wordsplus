@@ -204,13 +204,12 @@ Container {
             id: welcomeDialog
             visible: wordsPlus.isFirstTimeUser
             WelcomeDialogBox {
-
             }
             onTouch: {
                 if (event.isUp()) {
                     if (wordsPlus.isFirstTimeUser) {
-                       // welcomeDialog.visible = false
-                        wordsPlus.isFirstTimeUser = false
+                       welcomeDialog.visible = false
+                       wordsPlus.isFirstTimeUser = false
                     }
                 }
             }
