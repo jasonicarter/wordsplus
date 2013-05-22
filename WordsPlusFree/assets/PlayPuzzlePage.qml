@@ -11,23 +11,6 @@ Container { // root Container
         preferredHeight: 1280
         ThemeOtherPages {
         }
-//        TopNavPanel {           
-//        }
-        Banner {
-            //zoneId: 117145 //test id
-            //zoneId: 155255
-            //zoneId: 160884 //romain
-            //zoneId: 185563 //wordsplus 2
-            //zoneId: 185564 //wordsplus 3 native
-            refreshRate: 60
-            preferredWidth: 720
-            preferredHeight: 100
-            transitionsEnabled: true
-            placeHolderURL: "asset:///placeholder_728x90.png"
-            borderColor: Color.Blue
-            borderWidth: 2
-            horizontalAlignment: HorizontalAlignment.Center
-        }
         Container { //highlight timer only for school theme
             topPadding: 60
             ImageView {
@@ -129,6 +112,28 @@ Container { // root Container
                 verticalAlignment: VerticalAlignment.Bottom
             }
         } //center container
+        Container {
+            visible: !wordsPlus.isPaid
+            horizontalAlignment: HorizontalAlignment.Center
+            Banner {
+                //zoneId: 117145 //test id
+                zoneId: 155255
+                //zoneId: 160884 //romain
+                //zoneId: 155697 //romain2
+                //zoneId: 146983 //romain3
+                //zoneId: 185563 //wordsplus 2
+                //zoneId: 185564 //wordsplus 3 native
+                refreshRate: 30
+                preferredWidth: 720
+                preferredHeight: 100
+                transitionsEnabled: true
+                placeHolderURL: "images/AdBanner.png"
+                borderColor: Color.Blue
+                borderWidth: 2
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Top
+            }
+        }
         Container {
             id: btmNav
             verticalAlignment: VerticalAlignment.Bottom

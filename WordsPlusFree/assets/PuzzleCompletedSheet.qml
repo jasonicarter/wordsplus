@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import com.sample.payment 1.0
 
 Page {
     Container {
@@ -7,6 +8,8 @@ Page {
         preferredWidth: 768
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
+        }
+        ThemeSchoolHighlight {
         }
         TopNavPanel {
             horizontalAlignment: HorizontalAlignment.Center
@@ -96,30 +99,110 @@ Page {
                                 value: "achievements"
                             }
                             onSelectedIndexChanged: {
-                                if (segmentedRankingCrtl.selectedValue == "achievements") {
-                                    position.visible = false;
-                                    awards.visible = true;
-                                    awards.removeAll();
-                                    var awardsContainer = achievementDef.createObject();
-                                    awards.add(awardsContainer);
-                                } else if (segmentedRankingCrtl.selectedValue == "ranking") {
+                                if (wordsPlus.isPaid == true) {
+                                    notPaid.visible = false;
+                                    notPaid.removeAll();
+                                    if (segmentedRankingCrtl.selectedValue == "achievements") {
+                                        position.visible = false;
+                                        awards.visible = true;
+                                        awards.removeAll();
+                                        var awardsContainer = achievementDef.createObject();
+                                        awards.add(awardsContainer);
+                                    } else if (segmentedRankingCrtl.selectedValue == "ranking") {
+                                        awards.visible = false;
+                                        position.visible = true;
+                                        position.removeAll();
+                                        var positionContainer = positionDef.createObject();
+                                        position.add(positionContainer);
+                                    }
+                                } else {
                                     awards.visible = false;
-                                    position.visible = true;
+                                    position.visible = false;
                                     position.removeAll();
-                                    var positionContainer = positionDef.createObject();
-                                    position.add(positionContainer);
+                                    awards.removeAll();
+                                    notPaid.visible = true;
                                 }
                             }
                         }
                     }
+                    Divider {
+                        opacity: 0
+                    }
+                    Container {
+                        layout: DockLayout {
+                        }
+                        id: notPaid
+                        preferredWidth: 600
+                        horizontalAlignment: HorizontalAlignment.Center
+                        ImageView {
+                            imageSource: "images/splash.png"
+                        }
+                        Container {
+                            background: Color.create("#272727")
+                            TextArea {
+                                text: "UPGRADE"
+                                editable: false
+                                touchPropagationMode: TouchPropagationMode.None
+                                textStyle.textAlign: TextAlign.Center
+                                textStyle {
+                                    base: statsSheetBigBodyNormalBlue.style
+                                }
+                            }
+                        }
+                        Container {
+                            preferredWidth: 600
+                            verticalAlignment: VerticalAlignment.Bottom
+                            horizontalAlignment: HorizontalAlignment.Center
+                            Divider {
+                                opacity: 0
+                                bottomMargin: 100
+                            }
+                            Label {
+                                horizontalAlignment: HorizontalAlignment.Center
+                                multiline: true
+                                text: "Although word categories are\n FREE, "
+                                + "Theme Skins and Scoreloop features are only available with\n" 
+                                + "the premium edition of WordsPlus"
+                                textStyle {
+                                    base: welcomeDialog.style
+                                    textAlign: TextAlign.Center
+                                }
+                            }
+                            Divider {
+                                //topMargin: 50
+                            }
+                            Container {
+                                layout: DockLayout {
+                                }
+                                preferredWidth: 600
+                                Button {
+                                    id: upgrade
+                                    text: "OK"
+                                    preferredWidth: 250
+                                    horizontalAlignment: HorizontalAlignment.Center
+                                    onClicked: {
+                                        paymentControl.id = "28487887"
+                                        paymentControl.sku = "full_upgrade"
+                                        paymentControl.name = "WordsPlus Full Upgrade"
+                                        paymentControl.metadata = "full_upgrade"
+                                        paymentControl.getPrice(paymentControl.id, paymentControl.sku)
+                                        paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                     Container {
                         id: position
+                        visible: false;
                         //background: Color.LightGray
                         preferredWidth: 700
                         //preferredHeight: 500
                     }
                     Container {
                         id: awards
+                        visible: false;
                         //background: Color.LightGray
                         preferredWidth: 700
                         //preferredHeight: 500
@@ -133,8 +216,12 @@ Page {
         }
     } // end of page
     onCreationCompleted: {
-        var positionContainer = positionDef.createObject();
-        position.add(positionContainer);
+        if (wordsPlus.isPaid) {
+            notPaid.visible = false;
+            position.visible = true;
+            var positionContainer = positionDef.createObject();
+            position.add(positionContainer);
+        }
     }
     attachedObjects: [
         TextStyleDefinition {
@@ -151,6 +238,14 @@ Page {
             fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
         },
+        TextStyleDefinition {
+            id: statsSheetBurntOrgange
+            base: SystemDefaults.TextStyles.BodyText
+            //fontWeight: FontWeight.Normal
+            fontFamily: "Slate Pro Light"
+            color: Color.create("#CC3F10")
+            //fontSize: FontSize.Large
+        },
         ComponentDefinition {
             id: achievementDef
             source: "Achievements.qml"
@@ -158,6 +253,29 @@ Page {
         ComponentDefinition {
             id: positionDef
             source: "PositionLeaderboard.qml"
+        },
+        PaymentServiceControl {
+            id: paymentControl
+            property string id
+            property string sku
+            property string name
+            property string metadata
+            onPriceResponseSuccess: {
+            }
+            onPurchaseResponseSuccess: {
+                wordsPlus.isPaid = true;
+                notPaid.visible = false;
+                position.visible = true;
+                var positionContainer = positionDef.createObject();
+                position.add(positionContainer);
+                wordsPlus.cntlyIAP(metadata, 0.99);
+            }
+            onExistingPurchasesResponseSuccess: {
+            }
+            onCheckStatusResponseSuccess: {
+            }
+            onInfoResponseError: {
+            }
         }
     ]
 }

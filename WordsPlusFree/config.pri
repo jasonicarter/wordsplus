@@ -18,6 +18,7 @@ device {
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
@@ -44,6 +45,7 @@ device {
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
@@ -70,6 +72,7 @@ device {
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
@@ -96,6 +99,7 @@ device {
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
@@ -124,6 +128,7 @@ simulator {
                  $$quote($$BASEDIR/src/Global.cpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
@@ -150,6 +155,7 @@ simulator {
                  $$quote($$BASEDIR/src/Global.hpp) \
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
+                 $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \

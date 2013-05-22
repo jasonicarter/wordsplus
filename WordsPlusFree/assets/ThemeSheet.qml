@@ -72,7 +72,11 @@ Page {
                         if (selectedItem.price == "free") {
                             themeDialog.show();
                         } else if (selectedItem.price == "pay") {
-                            themeDialog.show();
+                            if (wordsPlus.isPaid) {
+                                themeDialog.show();
+                            } else {
+                                upgradeDialog.open();
+                            }
                         }
                     }
                     attachedObjects: [
@@ -89,6 +93,13 @@ Page {
                                     wordsPlus.cntlyThemes(selectedThemeFolder);
                                     wordsPlus.theme = selectedThemeFolder;
                                 }
+                            }
+                        },
+                        UpgradeDialogBox {
+                            id: upgradeDialog
+                            onOpened: {
+                            }
+                            onClosed: {
                             }
                         }
                     ]

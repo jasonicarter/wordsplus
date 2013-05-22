@@ -33,6 +33,7 @@ Page {
                     }
                     Option {
                         id: dropDwnYourAchievements
+                        enabled: wordsPlus.isPaid
                         text: "ACHIEVEMENTS"
                         description: "Get them all!"
                         onSelectedChanged: {
@@ -63,6 +64,7 @@ Page {
                     }
                     Option {
                         id: dropDwnYourPosition
+                        enabled: wordsPlus.isPaid
                         text: "YOUR POSITION"
                         description: "How do you measure up against the rest?"
                         onSelectedChanged: {
@@ -78,6 +80,7 @@ Page {
                     }
                     Option {
                         id: dropDwnBuddyPosition
+                        enabled: wordsPlus.isPaid
                         text: "FRIENDS"
                         description: "See how your friends are doing."
                         onSelectedChanged: {
