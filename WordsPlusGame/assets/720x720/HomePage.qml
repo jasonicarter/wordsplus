@@ -1,6 +1,4 @@
 import bb.cascades 1.0
-//import bb.system 1.0
-//import bb.multimedia 1.0
 
 Container {
     id: homePageContainer
@@ -20,17 +18,17 @@ Container {
         Container { // center
             layout: DockLayout {
             }
-            bottomPadding: 110
+            //bottomPadding: 50
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             //background: Color.Gray
             ImageView {
                 id: puzzleLetters
                 opacity: 1
-                //imageSource: "theme/" + wordsPlus.theme + "/theme_home.png"
-                imageSource: "theme/" + "wordsPlus" + "/theme_home.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                imageSource: "theme/" + wordsPlus.theme + "/theme_home.png"
+                //imageSource: "theme/" + "wordsPlus" + "/theme_home.png"
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: puzzleLettersAnimation
                 }
@@ -39,8 +37,8 @@ Container {
                 id: wImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_w_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: wAnimation
                     onStarted: {
@@ -53,8 +51,8 @@ Container {
                 id: oImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_o_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: oAnimation
                     onStarted: {
@@ -67,8 +65,8 @@ Container {
                 id: rImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_r_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: rAnimation
                     onStarted: {
@@ -81,8 +79,8 @@ Container {
                 id: dImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_d_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: dAnimation
                     onStarted: {
@@ -93,8 +91,8 @@ Container {
                 id: pImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_p_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: pAnimation
                     onStarted: {
@@ -107,8 +105,8 @@ Container {
                 id: lImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_l_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: lAnimation
                     onStarted: {
@@ -121,8 +119,8 @@ Container {
                 id: uImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_u_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: uAnimation
                     onStarted: {
@@ -135,8 +133,8 @@ Container {
                 id: sImageView
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_s_red.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: sAnimation
                     onStarted: {
@@ -149,8 +147,8 @@ Container {
                 id: by
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_by_white.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: byAnimation
                     onStarted: {
@@ -163,8 +161,8 @@ Container {
                 id: ji
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_ji_white.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: jiAnimation
                     onStarted: {
@@ -177,8 +175,8 @@ Container {
                 id: carter
                 opacity: 0
                 imageSource: "asset:///images/homeAnimation/mainPage_carter_white.png"
-                preferredWidth: 500
-                preferredHeight: 500
+                preferredWidth: 400
+                preferredHeight: 400
                 animations: HomePageAnimation {
                     id: carterAnimation
                     onStarted: {
@@ -193,37 +191,27 @@ Container {
             wAnimation.play();
             pAnimation.play();
         }
-    } //end of main container
+        Container {
+            id: welcomeDialog
+            visible: wordsPlus.isFirstTimeUser
+            WelcomeDialogBox {
 
+            }
+            onTouch: {
+                if (event.isUp()) {
+                    if (wordsPlus.isFirstTimeUser) {
+                        // welcomeDialog.visible = false
+                        wordsPlus.isFirstTimeUser = false
+                    }
+                }
+            }
+        }
+    } //end of main container
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: bigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: bigBodyNormalWhite
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: subTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: smallTxtNormalWhite
-            base: SystemDefaults.TextStyles.SmallText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
+        Sheet {
+            id: themeSheet
+            ThemeSheet {
+            }
         }
     ]
 }//root container

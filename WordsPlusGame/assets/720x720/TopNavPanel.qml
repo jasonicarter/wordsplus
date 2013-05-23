@@ -1,273 +1,156 @@
 import bb.cascades 1.0
 
 Container {
-    preferredWidth: 720
-    Container { // bottom panel
-        preferredWidth: 600
-        horizontalAlignment: HorizontalAlignment.Center
-        Label {
-            horizontalAlignment: HorizontalAlignment.Center
-            text: "<html><span style='font-size:xx-small'><b>SHORTCUTS:</b> p [play] h [home]</span></html>" + "<html><span style='font-size:xx-small'> menu [Swipe down from the top]</span></html>"
-            //multiline: true
-            textStyle {
-                base: btmNavPanelSmallNormalWhite.style
-            }
-        }
-    } // bottom panel
-    // NEED TO REMOVE BOTTOM - BUT OBJECT NAMES USED IN C++, NEED TO MOVE THEM
-    Container { // bottom panel
-        visible: false
-        //background: Color.create("#0098f0")
-        //verticalAlignment: VerticalAlignment.Bottom
-        preferredHeight: 150
-        preferredWidth: 768
+    Container {
+        //background: Color.create("#262626")
+        preferredHeight: 125
+        preferredWidth: 720
         layout: DockLayout {
         }
         Container {
-            preferredWidth: 768
+            preferredWidth: 720
             preferredHeight: 45
             background: Color.create("#262626")
-            verticalAlignment: VerticalAlignment.Bottom
-        }
-        Container {
-            preferredHeight: 150
-            preferredWidth: 150
-            //background: Color.create("#0091f0")
-            horizontalAlignment: HorizontalAlignment.Left
-            Container {
-                horizontalAlignment: HorizontalAlignment.Center
-                ImageView {
-                    id: profileImage
-                    objectName: "rotateProfileImage"
-                    topMargin: 0
-                    bottomMargin: 0
-                    imageSource: "asset:///images/profileEdit_blk.png"
-                }
-                Label {
-                    topMargin: 0
-                    bottomMargin: 0
-                    horizontalAlignment: HorizontalAlignment.Center
-                    text: "HOLD ME"
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
-                    }
-                }
-                onTouch: {
-                    if (event.isDown()) {
-                        profileImage.imageSource = "asset:///images/profileEdit_white.png"
-                        wordsPlus.playSound("letterSelected");
-                    }
-                    if (event.isUp()) {
-                        profileImage.imageSource = "asset:///images/profileEdit_blk.png"
-                    }
-                }
-                onTouchExit: {
-                    profileImage.imageSource = "asset:///images/profileEdit_blk.png"
-                }
-            }
-            contextActions: [
-                ActionSet {
-                    title: "Share The Love."
-                    subtitle: "HOW DO YOU BBM?"
-                    ActionItem {
-                        title: "Invite My Friends"
-                        imageSource: "asset:///images/invite.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_invitetodownload);
-                        }
-                    }
-                    ActionItem {
-                        title: "I Love WordsPlus!"
-                        imageSource: "asset:///images/heart_small.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_personalmessage);
-                        }
-                    }
-                    ActionItem {
-                        title: "I'm Busy Playing"
-                        imageSource: "asset:///images/busy.png"
-                        onTriggered: {
-                            wordsPlus.ControlsForBBM(bbm_statusmessage);
-                        }
-                    }
-                    ActionItem {
-                        title: "Leave A Review"
-                        imageSource: "asset:///images/review.png"
-                        onTriggered: {
-                            invokeLeaveReview.trigger("bb.action.OPEN");
-                        }
-                    }
-                } // end of ActionSet
-            ] // end of contextActions list
-        } // end of profile
-        Container { // home
-            property bool isHome: false
-            preferredHeight: 150
-            preferredWidth: 150
-            //background: Color.create("#0091f0")
-            horizontalAlignment: HorizontalAlignment.Right
-            Container {
-                horizontalAlignment: HorizontalAlignment.Center
-                ImageView {
-                    id: homeImage
-                    objectName: "rotateHomeImage"
-                    topMargin: 0
-                    bottomMargin: 0
-                    imageSource: "asset:///images/home_blk.png"
-                }
-                Label {
-                    topMargin: 0
-                    bottomMargin: 0
-                    horizontalAlignment: HorizontalAlignment.Center
-                    text: "TAP ME"
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
-                    }
-                }
-            }
-            onTouch: {
-                if (event.isDown()) {
-                    isHome = true;
-                    homeImage.imageSource = "asset:///images/home_white.png"
-                    wordsPlus.playSound("letterSelected");
-                }
-                if (event.isUp() && isHome) {
-                    isHome = false;
-                    homeImage.imageSource = "asset:///images/home_blk.png"
-                    wordsPlus.stopTimer();
-                    wordsPlus.InitializeHomePage();
-                }
-            }
-            onTouchExit: {
-                homeImage.imageSource = "asset:///images/home_blk.png"
-            }
-        } // end of home
-        Container {
-            preferredHeight: 150
-            preferredWidth: 400
-            //background: Color.create("#0091f0")
-            horizontalAlignment: HorizontalAlignment.Center
+            verticalAlignment: VerticalAlignment.Top
             Container {
                 layout: StackLayout {
-                    orientation: LayoutOrientation.LeftToRight
+                    orientation: LayoutOrientation.RightToLeft
                 }
-                horizontalAlignment: HorizontalAlignment.Center
-                ImageView {
-                    id: pLetter
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    rightMargin: 0
-                    leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/p.png"
-                    onTouch: {
-                        if (event.isDown()) {
-                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/p.png"
-                            wordsPlus.playSound("letterSelected");
-                        } else if (event.isUp()) {
-                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
-                        }
-                    }
-                }
-                ImageView {
-                    id: lLetter
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    rightMargin: 0
-                    leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/l.png"
-                    onTouchEnter: {
-                        if (pLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/p.png") {
-                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/l.png"
-                            wordsPlus.playSound("letterSelected");
-                        }
-                    }
-                    onTouch: {
-                        if (event.isUp()) {
-                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
-                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
-                        }
-                    }
-                }
-                ImageView {
-                    id: aLetter
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    rightMargin: 0
-                    leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/a.png"
-                    onTouchEnter: {
-                        if (lLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/l.png") {
-                            aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/a.png"
-                            wordsPlus.playSound("letterSelected");
-                        }
-                    }
-                    onTouch: {
-                        if (event.isUp()) {
-                            pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
-                            lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
-                            aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
-                        }
-                    }
-                }
-                ImageView {
-                    id: yLetter
-                    preferredHeight: 75
-                    preferredWidth: 75
-                    rightMargin: 0
-                    leftMargin: 0
-                    imageSource: "asset:///theme/" + "wordsPlus" + "/letters/y.png"
-                    onTouchEnter: {
-                        if (aLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/a.png") {
-                            yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/highlight/y.png"
-                            wordsPlus.playSound("letterSelected");
-                        }
-                    }
-                    onTouchExit: {
-                        pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
-                        lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
-                        aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
-                        yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/y.png"
-                        wordsPlus.intializePlayArea();
-                    }
-                    onTouch: {
-                        if (event.isUp()) {
-                            if (yLetter.imageSource == "theme/" + "wordsPlus" + "/letters/highlight/y.png") {
-                                pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/p.png"
-                                lLetter.imageSource = "theme/" + "wordsPlus" + "/letters/l.png"
-                                aLetter.imageSource = "theme/" + "wordsPlus" + "/letters/a.png"
-                                yLetter.imageSource = "theme/" + "wordsPlus" + "/letters/y.png"
-                                wordsPlus.intializePlayArea();
-                            }
-                        }
-                    }
-                }
-            } // end of letters
-            Container {
-                topPadding: 40
-                horizontalAlignment: HorizontalAlignment.Center
+                //background: Color.Red
+                rightPadding: 200
+                preferredWidth: 720
+                preferredHeight: 45
                 Label {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    text: "SWIPE ME"
+                    leftMargin: 65
+                    text: "POST"
+                    verticalAlignment: VerticalAlignment.Center
+                    textStyle {
+                        base: btmNavPanelSmallNormalWhite.style
+                    }
+                }
+                Label {
+                    leftMargin: 55
+                    text: "TWEET"
+                    verticalAlignment: VerticalAlignment.Center
+                    textStyle {
+                        base: btmNavPanelSmallNormalWhite.style
+                    }
+                }
+//                Label {
+//                    leftMargin: 40
+//                    text: "THEMES"
+//                    verticalAlignment: VerticalAlignment.Center
+//                    textStyle {
+//                        base: btmNavPanelSmallNormalWhite.style
+//                    }
+//                }
+                Label {
+                    text: "WORDPLUS"
+                    verticalAlignment: VerticalAlignment.Center
                     textStyle {
                         base: btmNavPanelSmallNormalWhite.style
                     }
                 }
             }
         }
-    } // bottom panel
+
+        Container {
+            layout: StackLayout {
+                orientation: LayoutOrientation.RightToLeft
+            }
+            rightPadding: 190
+            preferredHeight: 150
+            preferredWidth: 720
+            //background: Color.Red
+            ImageView {
+                leftMargin: 50
+                preferredHeight: 70
+                preferredWidth: 70
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Bottom
+                imageSource: "images/facebook_large.png"
+                onTouch: {
+                    if (event.isDown()) {
+                        wordsPlus.playSound("letterSelected");
+                    } else if (event.isUp()) {
+                        wordsPlus.cntlySocial("Facebook");
+                        invokeFacebook.trigger("bb.action.SHARE")
+                    }
+                }
+            }
+            ImageView {
+                leftMargin: 50
+                preferredHeight: 70
+                preferredWidth: 70
+                horizontalAlignment: HorizontalAlignment.Right
+                verticalAlignment: VerticalAlignment.Bottom
+                imageSource: "images/twitter_large.png"
+                onTouch: {
+                    if (event.isDown()) {
+                        wordsPlus.playSound("letterSelected");
+                    } else if (event.isUp()) {
+                        wordsPlus.cntlySocial("Twitter");
+                        invokeTwitter.trigger("bb.action.SHARE")
+                    }
+                }
+            }
+//            ImageView {
+//                rightMargin: 50
+//                preferredHeight: 70
+//                preferredWidth: 70
+//                horizontalAlignment: HorizontalAlignment.Right
+//                verticalAlignment: VerticalAlignment.Bottom
+//                imageSource: "images/theme_red.png"
+//                onTouch: {
+//                    if (event.isDown()) {
+//                        wordsPlus.playSound("letterSelected");
+//                    } else if (event.isUp()) {
+//                        themeSheet.open();
+//                    }
+//                }
+//            }
+            ImageView {
+                rightMargin: 50          
+                horizontalAlignment: HorizontalAlignment.Right
+                verticalAlignment: VerticalAlignment.Bottom
+                imageSource: "images/facebook_like.png"
+                onTouch: {
+                    if (event.isDown()) {
+                        wordsPlus.playSound("letterSelected");
+                    } else if (event.isUp()) {
+                        wordsPlus.cntlySocial("fb_Like");
+                        wordsPlus.invokeFacebook();
+                    }
+                }
+            }
+
+        }
+
+    } // panel
     attachedObjects: [
         TextStyleDefinition {
             id: btmNavPanelSmallNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
+            base: SystemDefaults.TextStyles.SmallText
             fontWeight: FontWeight.Normal
-            fontFamily: "Slate Pro Light"
+            fontFamily: "Times New Roman"
             color: Color.create("#fafafa")
         },
         Invocation {
-            id: invokeLeaveReview
+            id: invokeTwitter
             query {
-                invokeTargetId: "sys.appworld"
-                uri: "appworld://content/21931881"
+                invokeTargetId: "Twitter"
+                mimeType: "text/plain"
+                data: "WordsPlus is one of the best games on BlackBerry. Go get it! " 
+                + "https://appworld.blackberry.com/webstore/content/21931881\n\n"
+            }
+        },
+        Invocation {
+            id: invokeFacebook
+            query {
+                invokeTargetId: "Facebook"
+                mimeType: "text/plain"
+                data: "WordsPlus is one of the best games on BlackBerry. Go get it! "
+                + "https://appworld.blackberry.com/webstore/content/21931881\n\n"
             }
         }
     ]

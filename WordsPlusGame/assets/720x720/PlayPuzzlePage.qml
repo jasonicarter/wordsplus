@@ -84,7 +84,8 @@ Container { // root Container
                     text: wordsPlus.selectedLetters
                     //text: "TEST"
                     textStyle {
-                        base: puzzlePageBodyBlack.style
+                        //base: puzzlePageBodyBlack.style
+                        base: puzzlePageBurntOrgange.style
                     }
                     onTextChanged: {
                         if(wordsPlus.selectedLetters != "") {
