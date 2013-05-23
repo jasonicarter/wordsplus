@@ -4,13 +4,13 @@ Page {
     Container {
         layout: DockLayout {
         }
-        preferredWidth: 768
+        preferredWidth: 720
         horizontalAlignment: HorizontalAlignment.Center
         ThemeOtherPages {
         }
         Container {
             opacity: wordsPlus.achievedAward
-            preferredWidth: 768
+            preferredWidth: 720
             preferredHeight: 70
             topPadding: 10
             background: Color.create("#FFD700")
@@ -26,7 +26,7 @@ Page {
         }
         Container { //middle
             topPadding: 100
-            preferredWidth: 720
+            preferredWidth: 700
             verticalAlignment: VerticalAlignment.Top
             horizontalAlignment: HorizontalAlignment.Center
             //background: Color.Gray
@@ -37,7 +37,7 @@ Page {
                     layout: DockLayout {
                     }
                     background: Color.create("#272727")
-                    preferredWidth: 720
+                    preferredWidth: 700
                     preferredHeight: 100
                     leftPadding: 15
                     TextArea {
@@ -70,80 +70,68 @@ Page {
                     opacity: 0
                 }
                 Container { // ranking
-                    background: Color.create("#272727")
-                    preferredWidth: 720
+                    //background: Color.create("#272727")
+                    preferredWidth: 700
                     preferredHeight: 650
                     //leftPadding: 15
-                    SegmentedControl {
-                        id: segmentedRankingCrtl
-                        preferredWidth: 710
-                        Option {
-                            id: ranking
-                            text: "Ranking"
-                            value: "ranking"
-                            selected: true
-                        }
-                        Option {
-                            id: achievements
-                            text: "Achievements"
-                            value: "achievements"
-                        }
-                        onSelectedIndexChanged: {
-                            if (segmentedRankingCrtl.selectedValue == "achievements") {
-                                position.visible = false;
-                                awards.visible = true;
-                                awards.removeAll();
-                                var awardsContainer = achievementDef.createObject();
-                                awards.add(awardsContainer);
-                            } else if (segmentedRankingCrtl.selectedValue == "ranking") {
-                                awards.visible = false;
-                                position.visible = true;
-                                position.removeAll();
-                                var positionContainer = positionDef.createObject();
-                                position.add(positionContainer);
+                    Container {
+                        background: Color.create("#272727")
+                        preferredWidth: 700
+                        SegmentedControl {
+                            id: segmentedRankingCrtl
+                            preferredWidth: 710
+                            Option {
+                                id: ranking
+                                text: "Ranking"
+                                value: "ranking"
+                                selected: true
+                            }
+                            Option {
+                                id: achievements
+                                text: "Achievements"
+                                value: "achievements"
+                            }
+                            onSelectedIndexChanged: {
+                                if (segmentedRankingCrtl.selectedValue == "achievements") {
+                                    position.visible = false;
+                                    awards.visible = true;
+                                    awards.removeAll();
+                                    var awardsContainer = achievementDef.createObject();
+                                    awards.add(awardsContainer);
+                                } else if (segmentedRankingCrtl.selectedValue == "ranking") {
+                                    awards.visible = false;
+                                    position.visible = true;
+                                    position.removeAll();
+                                    var positionContainer = positionDef.createObject();
+                                    position.add(positionContainer);
+                                }
                             }
                         }
                     }
                     Container {
                         id: position
                         //background: Color.LightGray
-                        preferredWidth: 720
+                        preferredWidth: 700
                         //preferredHeight: 500
                     }
                     Container {
                         id: awards
                         //background: Color.LightGray
-                        preferredWidth: 720
+                        preferredWidth: 700
                         //preferredHeight: 500
                     }
                 } // end of ranking
             }
         } // end of middle container
+        BtmSheetNavPanel {
+            verticalAlignment: VerticalAlignment.Bottom
+            sheetName: "puzzleCompletedSheet"
+        }
     } // end of page
     onCreationCompleted: {
         var positionContainer = positionDef.createObject();
         position.add(positionContainer);
     }
-    actions: [
-        ActionItem {
-            title: "Play Again"
-            imageSource: "asset:///images/play.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                wordsPlus.intializePlayArea();
-                puzzleCompletedSheet.close();
-            }
-        },
-        ActionItem {
-            title: "Home"
-            imageSource: "asset:///images/home.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                wordsPlus.InitializeHomePage();
-                puzzleCompletedSheet.close();
-            }
-        }
-    ]
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
         // it is better from a memory consumption point of view to create text

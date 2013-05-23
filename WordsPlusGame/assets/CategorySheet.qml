@@ -4,14 +4,17 @@ Page {
     Container {
         layout: DockLayout {
         }
-        horizontalAlignment: HorizontalAlignment.Center
+        
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
         }
         Container { //middle container
+            //background: Color.Green
             preferredWidth: 700
+            preferredHeight: 1130
             topPadding: 100
+            horizontalAlignment: HorizontalAlignment.Center
             Container {
                 preferredWidth: 700
                 property string category
@@ -115,6 +118,7 @@ Page {
                     layout: DockLayout {
                     }
                     ListView {
+
                         id: catList
                         dataModel: XmlDataModel {
                             //source: "models/wordsplus.xml"
@@ -132,6 +136,7 @@ Page {
                         onTriggered: {
                             var selectedItem = dataModel.data(indexPath);
                             wordsPlus.category = selectedItem.filename;
+                            wordsPlus.cntlyCategory((wordsPlus.category).toLowerCase(), wordsPlus.difficulty.toString());
                             wordsPlus.intializePlayArea();
                             categorySheet.close();
                         }
@@ -139,47 +144,9 @@ Page {
                 }
             }
         } //middle container
+        BtmSheetNavPanel {
+            verticalAlignment: VerticalAlignment.Bottom
+            sheetName: "categorySheet"
+        }
     }
-    actions: [
-        ActionItem {
-            title: "Close"
-            imageSource: "asset:///images/close.png"
-            ActionBar.placement: ActionBarPlacement.OnBar
-            onTriggered: {
-                wordsPlus.startTimer();
-                categorySheet.close();
-            }
-        }
-    ]
-    attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: categorySheetBigTextNormalWhite
-            base: SystemDefaults.TextStyles.BigText
-            color: Color.create("#fafafa")
-        },
-        TextStyleDefinition {
-            id: categorySheetBigBodyNormalBlue
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: categorySheetSubTitleNormalBlue
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#0098f0")
-        },
-        TextStyleDefinition {
-            id: categorySheetSubTitleNormalWhite
-            base: SystemDefaults.TextStyles.SubtitleText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#fafafa")
-        }
-    ]
 }
