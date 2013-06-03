@@ -83,6 +83,7 @@ public:
 	Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
 	Q_PROPERTY (bool isFirstTimeUser READ getIsFirstTimeUser WRITE setIsFirstTimeUser NOTIFY isFirstTimeUserChanged);
 	Q_PROPERTY (bool isPaid READ getIsPaid WRITE setIsPaid NOTIFY isPaidChanged);
+	Q_PROPERTY (bool isReviewed READ getIsReviewed WRITE setIsReviewed NOTIFY isReviewedChanged);
 
 	QString getCategory();
 	void setCategory(const QString cat);
@@ -107,6 +108,9 @@ public:
 
 	bool getIsPaid();
 	void setIsPaid(bool status);
+
+	bool getIsReviewed();
+	void setIsReviewed(bool status);
 
 	int getGamesPlayed();
 	void setGamesPlayed();
@@ -162,6 +166,7 @@ Q_SIGNALS:
 	void achievedAwardChanged();
 	void isFirstTimeUserChanged();
 	void isPaidChanged();
+	void isReviewedChanged();
 
 private:
 	void initTimer();

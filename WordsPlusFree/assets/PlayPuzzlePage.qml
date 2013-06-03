@@ -117,8 +117,8 @@ Container { // root Container
             horizontalAlignment: HorizontalAlignment.Center
             Banner {
                 //zoneId: 117145 //test id
-                zoneId: 155255
-                //zoneId: 160884 //romain
+                //zoneId: 155255
+                zoneId: 160884 //romain
                 //zoneId: 155697 //romain2
                 //zoneId: 146983 //romain3
                 //zoneId: 185563 //wordsplus 2
