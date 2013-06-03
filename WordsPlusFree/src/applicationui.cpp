@@ -54,6 +54,7 @@
 #define DIFFICULTY "settingsDifficulty"
 #define FIRSTTIMEUSER "settingsFirstTimeUser"
 #define PAID "settingsPaid"
+#define REVIEWED "settingsUserReviewed"
 
 //global - to be accessed from ApplicationUI to set awards
 //static const char SCORELOOP_TESTONE[] =	"wordsplus.testaward";
@@ -1208,6 +1209,16 @@ bool ApplicationUI::getIsPaid() {
 void ApplicationUI::setIsPaid(bool status) {
 	settings->saveValueFor(PAID, QString::number(status));
 	emit isPaidChanged();
+}
+
+
+bool ApplicationUI::getIsReviewed() {
+	return (settings->getValueFor(REVIEWED, "0")).toInt();
+}
+
+void ApplicationUI::setIsReviewed(bool status) {
+	settings->saveValueFor(REVIEWED, QString::number(status));
+	emit isReviewedChanged();
 }
 
 

@@ -1,5 +1,4 @@
 import bb.cascades 1.0
-//import bb.multimedia 1.0
 
 Container {
     id: homePageContainer
