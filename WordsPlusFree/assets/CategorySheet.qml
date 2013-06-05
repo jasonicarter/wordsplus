@@ -23,9 +23,10 @@ Page {
                     property int settingMedium: 4
                     property int settingEasy: 2
                     preferredWidth: 700
+                    
                     DropDown {
                         id: diffDropDown
-                        title: "Difficulty:"
+                        title: "Select Difficulty:"
                         Option {
                             id: hard
                             text: "Hard"
@@ -74,43 +75,19 @@ Page {
                 Divider {
                     opacity: 0
                 }
-                Container {
-                    preferredWidth: 720
-                    DropDown {
-                        id: catDropDown
-                        title: "Theme Category:"
-                        Option {
-                            id: defaultCat
-                            text: "WordsPlus"
-                            description: "Included Categories"
-                            value: "wordsplus"
-                        }
-                        Option {
-                            id: spacingOut
-                            text: "Spacing Out"
-                            description: "Technology, Star Trek and everything nerdy"
-                            value: "spacingout"
-                        }
-                        Option {
-                            id: schoolTime
-                            text: "School Time"
-                            description: "Recess, H2 pencils, gym class and more"
-                            value: "schooltime"
-                        }
-                        onSelectedOptionChanged: {
-                            if (selectedValue == "spacingout") {
-                                catList.dataModel.source = "models/spacingout.xml";
-                            } else if (selectedValue == "wordsplus") {
-                                catList.dataModel.source = "models/wordsplus.xml";
-                            } else if (selectedValue == "schooltime") {
-                                catList.dataModel.source = "models/schooltime.xml";
+                Container { //developer section
+                    Container {
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "Select Category:"
+                            editable: false
+                            touchPropagationMode: TouchPropagationMode.None
+                            textStyle {
+                                color: Color.create("#0098f0")
                             }
                         }
                     }
-                    onCreationCompleted: {
-                        defaultCat.selected = true;
-                    }
-                } //category dropdown
+                }
                 Divider {
                     opacity: 0
                 }
@@ -118,10 +95,9 @@ Page {
                     layout: DockLayout {
                     }
                     ListView {
-
                         id: catList
                         dataModel: XmlDataModel {
-                            //source: "models/wordsplus.xml"
+                            source: "models/wordsplus.xml"
                         }
                         listItemComponents: [
                             ListItemComponent {
