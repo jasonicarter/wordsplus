@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 import com.sample.payment 1.0
 
 Page {
@@ -213,6 +214,9 @@ Page {
             var positionContainer = positionDef.createObject();
             position.add(positionContainer);
         }
+        if ((wordsPlus.gamesPlayed % 5 == 0) && ! wordsPlus.isReviewed) {
+            reviewDialog.show();
+        }
     }
     attachedObjects: [
         // When modifying the SystemDefult fonts, like changing wieght or color,
@@ -280,6 +284,27 @@ Page {
             onCheckStatusResponseSuccess: {
             }
             onInfoResponseError: {
+            }
+        },
+        SystemDialog {
+            id: reviewDialog
+            title: "WOW! You've played " + wordsPlus.gamesPlayed + " times."
+            body: "Please give a 5 Star review and your feedback. Help make WordsPlus even better."
+            onFinished: {
+                if (reviewDialog.result == SystemUiResult.CancelButtonSelection) {
+                    //on cancel do nothing
+                }
+                if (reviewDialog.result == SystemUiResult.ConfirmButtonSelection) {
+                    invokeLeaveReview.trigger("bb.action.OPEN");
+                    wordsPlus.isReviewed = true;
+                }
+            }
+        },
+        Invocation {
+            id: invokeLeaveReview
+            query {
+                invokeTargetId: "sys.appworld"
+                uri: "appworld://content/24752875"
             }
         }
     ]

@@ -1,5 +1,6 @@
 import bb.cascades 1.0
 import bb.system 1.0
+import com.sample.payment 1.0
 
 Page {
     property string selectedThemeFolder
@@ -75,7 +76,7 @@ Page {
                             if (wordsPlus.isPaid) {
                                 themeDialog.show();
                             } else {
-                                upgradeDialog.open();
+                                themePayDialog.show();
                             }
                         }
                     }
@@ -95,11 +96,41 @@ Page {
                                 }
                             }
                         },
-                        UpgradeDialogBox {
-                            id: upgradeDialog
-                            onOpened: {
+                        SystemDialog {
+                            id: themePayDialog
+                            title: "A Change of Heart"
+                            body: "Theme Skins and Scoreloop features are only available with an upgrade.\nWould you like to continue?"
+                            onFinished: {
+                                if (themePayDialog.result == SystemUiResult.CancelButtonSelection) {
+                                    //on cancel do nothing
+                                }
+                                if (themePayDialog.result == SystemUiResult.ConfirmButtonSelection) {
+                                    paymentControl.id = "28487887"
+                                    paymentControl.sku = "full_upgrade"
+                                    paymentControl.name = "WordsPlus Full Upgrade"
+                                    paymentControl.metadata = "full_upgrade"
+                                    paymentControl.getPrice(paymentControl.id, paymentControl.sku)
+                                    paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
+                                }
                             }
-                            onClosed: {
+                        },
+                        PaymentServiceControl {
+                            id: paymentControl
+                            property string id
+                            property string sku
+                            property string name
+                            property string metadata
+                            onPriceResponseSuccess: {
+                            }
+                            onPurchaseResponseSuccess: {
+                                wordsPlus.isPaid = true;
+                                wordsPlus.cntlyIAP(metadata, 0.99);
+                            }
+                            onExistingPurchasesResponseSuccess: {
+                            }
+                            onCheckStatusResponseSuccess: {
+                            }
+                            onInfoResponseError: {
                             }
                         }
                     ]
