@@ -114,6 +114,7 @@ Container { // root Container
         } //center container
         Container {
             visible: !wordsPlus.isPaid
+            preferredWidth: 700
             horizontalAlignment: HorizontalAlignment.Center
             Banner {
                 //zoneId: 117145 //test id
@@ -124,12 +125,13 @@ Container { // root Container
                 //zoneId: 185563 //wordsplus 2
                 //zoneId: 185564 //wordsplus 3 native
                 refreshRate: 30
-                preferredWidth: 720
+                preferredWidth: 700
                 preferredHeight: 100
                 transitionsEnabled: true
                 placeHolderURL: "images/AdBanner.png"
-                borderColor: Color.Blue
-                borderWidth: 2
+                borderColor: Color.Black
+                borderWidth: 5
+                backgroundColor: Color.Transparent
                 horizontalAlignment: HorizontalAlignment.Center
                 verticalAlignment: VerticalAlignment.Top
             }
