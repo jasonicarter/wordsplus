@@ -21,6 +21,7 @@ device {
                  $$quote($$BASEDIR/src/ExternalIP.cpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.cpp) \
                  $$quote($$BASEDIR/src/PostHttp.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.cpp) \
                  $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
@@ -29,6 +30,7 @@ device {
                  $$quote($$BASEDIR/src/ExternalIP.hpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.hpp) \
                  $$quote($$BASEDIR/src/PostHttp.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.hpp) \
                  $$quote($$BASEDIR/src/json.h)
     }
@@ -52,6 +54,7 @@ device {
                  $$quote($$BASEDIR/src/ExternalIP.cpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.cpp) \
                  $$quote($$BASEDIR/src/PostHttp.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.cpp) \
                  $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
@@ -60,6 +63,7 @@ device {
                  $$quote($$BASEDIR/src/ExternalIP.hpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.hpp) \
                  $$quote($$BASEDIR/src/PostHttp.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.hpp) \
                  $$quote($$BASEDIR/src/json.h)
     }
@@ -85,6 +89,7 @@ simulator {
                  $$quote($$BASEDIR/src/ExternalIP.cpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.cpp) \
                  $$quote($$BASEDIR/src/PostHttp.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.cpp) \
                  $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
@@ -93,6 +98,7 @@ simulator {
                  $$quote($$BASEDIR/src/ExternalIP.hpp) \
                  $$quote($$BASEDIR/src/HttpSampleApp.hpp) \
                  $$quote($$BASEDIR/src/PostHttp.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RequestHeaders.hpp) \
                  $$quote($$BASEDIR/src/json.h)
     }

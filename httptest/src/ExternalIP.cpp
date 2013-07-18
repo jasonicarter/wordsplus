@@ -26,10 +26,14 @@
 #include <QSslConfiguration>
 #include <QUrl>
 
+#include <bb/data/JsonDataAccess>
+#include "QtObjectFormatter.hpp"
+
 #include "json.h"
 
 using QtJson::JsonObject;
 using QtJson::JsonArray;
+using namespace bb::data;
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[QtJson ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -59,7 +63,8 @@ ExternalIP::ExternalIP(QObject* parent)
 void ExternalIP::getIP()
 {
     //const QUrl url("http://httpbin.org/ip");
-	const QUrl url("http://api.wordnik.com/v4/words.json/wordOfTheDay?date=2013-01-28&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
+	//const QUrl url("http://api.wordnik.com/v4/words.json/wordOfTheDay?date=2013-01-28&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
+	const QUrl url("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=10&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
     QNetworkRequest request(url);
 
     // Check App settings to see if we should use SSL
@@ -97,52 +102,113 @@ void ExternalIP::onGetReply()
 
                 QString json(buffer);
 
-                bool ok;
-                // json is a QString containing the JSON data
-                QtJson::JsonObject result = QtJson::parse(json, ok).toMap();
-                response = result["word"].toString();
 
-
-                foreach(QVariant def, result["definitions"].toList()) {
-
-                	QtJson::JsonObject nested = def.toMap();
-                	LOG("%s", nested["text"].toString().toStdString().c_str() );
-
-                	response += "\n" + nested["text"].toString();
-                	response += "\n" + nested["partOfSpeech"].toString();
-                	response += "\n";
-
-                	//LOG("%s", plugin.toString().toStdString().c_str() );
-
-//                    qDebug() << "  -" << plugin.toString();
-//                    LOG("%s", plugin.toString().toStdString().c_str() );
-//                    response += " -" + plugin.toString();
-                }
-
-                foreach(QVariant ex, result["examples"].toList()) {
-
-                	QtJson::JsonObject nested = ex.toMap();
-
-                	response += "\n" + nested["text"].toString();
-                	response += "\n";
-                }
-
-                foreach(QVariant ex, result["contentProvider"].toList()) {
-
-                	QtJson::JsonObject nested = ex.toMap();
-
-                	response += "\n" + nested["name"].toString();
-                	response += "\n";
+                JsonDataAccess jda;
+                QVariant qtData = jda.loadFromBuffer(json);
+                if (jda.hasError()) {
+                	response = "fail";
+//                    const DataAccessError err = jda.error();
+//                    const QString errorMsg = tr("Error converting JSON data: %1").arg(err.errorMessage());
+//                    setResultAndState(errorMsg, JsonLoaded);
+                } else {
+                	response = "success";
+                	const QtObjectFormatter fmt;
+                	response = fmt.wordList(qtData);
+                	LOG("%s", response.toStdString().c_str() );
+//                    setQtData(qtData);
+//                    const QtObjectFormatter fmt;
+//                    setRhsTitleAndText(tr("Qt Data from JSON"), fmt.asString(qtData));
+//                    setResultAndState(result + tr("Success"), QtDisplayed);
                 }
 
 
-//                bb::data::JsonDataAccess ja;
-//                const QVariant jsonva = ja.loadFromBuffer(buffer);
-//                const QMap<QString, QVariant> externalip = jsonva.toMap();
+//                bool ok;
+//               QtJson::JsonObject result = QtJson::parse(json, ok).toMap();
 //
-//                foreach (const QVariant &value, externalip) {
-//                    response += value.toString();
+//                foreach(QString k, result.keys()){
+//                	LOG("%s", k.toStdString().c_str());
+//                	response += k;
 //                }
+
+//				foreach(QVariant def, result[""].toList()) {
+//
+//					QtJson::JsonObject nested = def.toMap();
+//					LOG("%s", nested["id"].toString().toStdString().c_str() );
+//
+//					response += "\n" + nested["id"].toString();
+//					response += "\n" + nested["word"].toString();
+//					response += "\n";
+//				}
+
+
+//                bool ok;
+//                QtJson::JsonObject result = QtJson::parse(json, ok).toMap();
+//
+//				foreach(QVariant def, result["definitions"].toList()) {
+//
+//					QtJson::JsonObject nested = def.toMap();
+//					LOG("%s", nested["text"].toString().toStdString().c_str() );
+//
+//					response += "\n" + nested["text"].toString();
+//					response += "\n" + nested["partOfSpeech"].toString();
+//					response += "\n";
+//				}
+//
+//                response += result["word"].toString();
+//                response += " " + result.count();
+//                //response = ok;
+//
+//                LOG("%i", ok );
+
+
+
+                // json is a QString containing the JSON data
+//                QtJson::JsonObject result = QtJson::parse(json, ok).toMap();
+//                response += result["word"].toString();
+//                response += " " + result.count();
+//                //response = ok;
+//
+//                LOG("%i", ok );
+
+                //LOG("%s", result["word"].toString().toStdString().c_str() );
+
+
+//				foreach(QVariant word, result.values()) {
+//
+//					QtJson::JsonObject nested = word.toMap();
+//					LOG("%s", nested["word"].toString().toStdString().c_str() );
+//
+//					response += "\n" + nested["word"].toString();
+//					response += "\n";
+//				}
+
+
+//                foreach(QVariant def, result["definitions"].toList()) {
+//
+//                	QtJson::JsonObject nested = def.toMap();
+//                	LOG("%s", nested["text"].toString().toStdString().c_str() );
+//
+//                	response += "\n" + nested["text"].toString();
+//                	response += "\n" + nested["partOfSpeech"].toString();
+//                	response += "\n";
+//                }
+//
+//                foreach(QVariant ex, result["examples"].toList()) {
+//
+//                	QtJson::JsonObject nested = ex.toMap();
+//
+//                	response += "\n" + nested["text"].toString();
+//                	response += "\n";
+//                }
+//
+//                foreach(QVariant ex, result["contentProvider"].toList()) {
+//
+//                	QtJson::JsonObject nested = ex.toMap();
+//
+//                	response += "\n" + nested["name"].toString();
+//                	response += "\n";
+//                }
+
             }
         } else {
             // Get http status code

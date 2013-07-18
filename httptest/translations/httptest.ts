@@ -4,12 +4,12 @@
 <context>
     <name>ExternalIP</name>
     <message>
-        <location filename="../src/ExternalIP.cpp" line="152"/>
+        <location filename="../src/ExternalIP.cpp" line="218"/>
         <source>Http Error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ExternalIP.cpp" line="159"/>
+        <location filename="../src/ExternalIP.cpp" line="225"/>
         <source>Unable to retrieve ip address</source>
         <translation type="unfinished"></translation>
     </message>
