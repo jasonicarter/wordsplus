@@ -13,4 +13,6 @@ LIBS += -lbbplatformbbm
 LIBS += -lbbcascadesadvertisement
 LIBS += -lbb -lbbdata -lbbplatform -lbbdevice
 
+QT += network
+
 include(config.pri)
