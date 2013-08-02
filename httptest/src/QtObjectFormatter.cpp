@@ -47,8 +47,11 @@
 
 #include <QtCore/QDebug>
 #include <QtCore/QMetaType>
+#include <QStringList>
 
 Q_DECLARE_METATYPE(QList<QVariantMap>)
+
+#define LOG(fmt, args...)   do { fprintf(stdout, "[QtJson ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
 QtObjectFormatter::QtObjectFormatter()
 {
@@ -88,7 +91,7 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
         case QVariant::String:
             {
                 out += value.toString();
-                out += ",";
+                out += "|";
             }
             break;
         default:
@@ -263,5 +266,25 @@ QString QtObjectFormatter::wordOfTheDay(const QVariant &value) const
     QString out;
     out.reserve(200);
     traverseWord(value, out);
+    splitter(out);
     return out;
 }
+
+void QtObjectFormatter::splitter(QString &out) const
+{
+	LOG("Splitter1: %s", out.toStdString().c_str() );
+	QStringList tmpSplit = out.split(";");
+
+	//partOfSpeech and definition
+	QStringList tmpDef = tmpSplit[0].split("|");
+	QString def = tmpDef[1].trimmed() + "," + tmpDef[3].trimmed();
+	LOG("Splitter2: %s", def.toStdString().c_str() );
+
+	//word
+	QStringList tmpWord = tmpSplit[2].split("|");
+	QString word = tmpWord[2].trimmed();
+	LOG("Splitter3: %s", word.toStdString().c_str() );
+
+	out = word + "," + def;
+}
+

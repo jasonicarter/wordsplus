@@ -68,6 +68,7 @@ private:
     void traverse(const QVariant& value, QString& out) const;
     void traverseList(const QVariant& value, QString& out) const;
     void traverseWord(const QVariant& value, QString& out) const;
+    void splitter(QString& out) const;
 };
 
 #endif
