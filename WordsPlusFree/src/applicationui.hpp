@@ -13,6 +13,8 @@
 #include "InviteToDownload.hpp"
 #include "ScoreLoopThread.hpp"
 #include "OrientationSensor.hpp"
+#include "Wordnik.hpp"
+
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -43,6 +45,7 @@ public:
     Q_INVOKABLE void intializePlayArea();
 	Q_INVOKABLE void InitializeHomePage();
 	Q_INVOKABLE void InitializePuzzlePage();
+	Q_INVOKABLE void InitializeWordnik(QString type);
 
 	Q_INVOKABLE void submitScore(int score);
 	Q_INVOKABLE void loadLeaderboard(bool includeBuddyList);
@@ -147,6 +150,8 @@ private Q_SLOTS:
 	void onFullscreen();
 	void onLoadLeaderboardCompleted(QVariantList data);
 	void onAchievedAward();
+	void onWordOfTheDay(QString response);
+	void onWordList(QString response);
 
 Q_SIGNALS:
 	void themeChanged();
@@ -239,6 +244,8 @@ private:
 	bb::platform::bbm::Context* m_context;
 
 	Invocation* m_pInvocation;
+
+	Wordnik* wordnik;
 
 	AppData_t *mAppData;
 	ScoreLoopThread *mScoreLoop;

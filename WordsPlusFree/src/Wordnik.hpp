@@ -18,16 +18,19 @@ class Wordnik : public QObject
     Q_OBJECT
 public:
     Wordnik(QObject* parent = 0);
-    QList<QString> getWordOfTheDay(QString date);
-    QList<QString> getWordList(int size);
+    void callWordnik(QString type);
+
+Q_SIGNALS:
+	void completedWordList(const QString &info);
+	void completedWordOfTheDay(const QString &info);
 
 
 private:
     QNetworkAccessManager* m_networkAccessManager;
+    QString wordnikType;
 
 private Q_SLOTS:
-    void onWordOfTheReply();
-    void onWordList();
+    void onWordReply();
 
 };
 

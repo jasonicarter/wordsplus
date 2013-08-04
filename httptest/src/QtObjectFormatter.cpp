@@ -66,8 +66,6 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
                 QMapIterator<QString, QVariant> it(object);
                 while(it.hasNext()) {
                     it.next();
-//                    out += it.key();
-//                    out += ": ";
                     traverseWord(it.value(), out);
                     out += "\n";
                 }
@@ -77,12 +75,8 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
             {
                 const QVariantList list = value.value<QVariantList>();
                 QListIterator<QVariant> it(list);
-//                int index = 0;
                 while(it.hasNext()) {
                     QVariant value = it.next();
-//                    out += "item[";
-//                    out += QString::number(index++);
-//                    out += "]:\n";
                     traverseWord(value, out);
                 }
                 out += ";\n";
@@ -99,15 +93,10 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
             {
                 const QList<QVariantMap> list = value.value< QList<QVariantMap> >();
                 QListIterator<QVariantMap> it(list);
-//                int index = 0;
                 while(it.hasNext()) {
                     QVariant value = it.next();
-//                    out += "item[";
-//                    out += QString::number(index++);
-//                    out += "]:\n";
                     traverseWord(value, out);
                 }
-//                out += "\n";
                 break;
             }
             qWarning() << "Unsupported property type: " << value.typeName();

@@ -26,7 +26,6 @@
 #include <QSslConfiguration>
 #include <QUrl>
 
-#include <bb/data/JsonDataAccess>
 #include "QtObjectFormatter.hpp"
 
 #include "json.h"

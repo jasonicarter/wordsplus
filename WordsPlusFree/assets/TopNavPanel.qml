@@ -118,8 +118,9 @@ Container {
                     if (event.isDown()) {
                         wordsPlus.playSound("letterSelected");
                     } else if (event.isUp()) {
-                        wordsPlus.cntlySocial("fb_Like");
-                        wordsPlus.invokeFacebook();
+                        //wordsPlus.cntlySocial("fb_Like");
+                        //wordsPlus.invokeFacebook();
+                        wordsPlus.InitializeWordnik("WordList");
                     }
                 }
             }
