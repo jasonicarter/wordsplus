@@ -55,6 +55,7 @@
 <definedSymbol symbol="Q_OS_BLACKBERRY=1"/>
 <definedSymbol symbol="QT_DECLARATIVE_DEBUG=1"/>
 <definedSymbol symbol="QT_DECLARATIVE_LIB=1"/>
+<definedSymbol symbol="QT_NETWORK_LIB=1"/>
 <definedSymbol symbol="QT_CORE_LIB=1"/>
 <definedSymbol symbol="QT_SHARED=1"/>
 <definedSymbol symbol="__STDC__=1"/>
@@ -257,7 +258,6 @@
 <definedSymbol symbol="__GXX_TYPEINFO_EQUALITY_INLINE=0"/>
 <definedSymbol symbol="__PRAGMA_PACK_PUSH_POP__=1"/>
 <definedSymbol symbol="__GNU_INDIRECT_FUNCTION__=1"/>
-<definedSymbol symbol="QT_NETWORK_LIB=1"/>
 </collector>
 </instance>
 <instance id="com.qnx.qcc.toolChain.163471362">

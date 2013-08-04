@@ -180,6 +180,13 @@ void ApplicationUI::show() {
 			QObject::connect(Application::instance(), SIGNAL(fullscreen()),
 					this, SLOT(onFullscreen()));
 
+			// worknik
+			wordnik = new Wordnik();
+			QObject::connect(wordnik, SIGNAL(completedWordOfTheDay(QString)),
+								this, SLOT(onWordOfTheDay(QString)));
+			QObject::connect(wordnik, SIGNAL(completedWordList(QString)),
+								this, SLOT(onWordList(QString)));
+
 
 			// Registers the banner for QML
 			qmlRegisterType<bb::cascades::advertisement::Banner>(
@@ -1282,6 +1289,29 @@ void ApplicationUI::cntlyIAP(const QString &name, const QString &price) {
 	event.send();
 }
 
+
+void ApplicationUI::onWordOfTheDay(QString response) {
+
+	LOG("%s", response.toStdString().c_str() );
+	//maybe breakup string and emit stuff for gui
+	//maybe send entire string and gui splits it with javascript
+
+}
+
+void ApplicationUI::onWordList(QString response) {
+
+	LOG("%s", response.toStdString().c_str() );
+	//maybe breakup string and emit stuff for gui
+	//maybe send entire string and gui splits it with javascript
+
+}
+
+void ApplicationUI::InitializeWordnik(QString type){
+
+	LOG("Made it: initializeWordnik");
+	wordnik->callWordnik(type);
+
+}
 
 void ApplicationUI::ControlsForBBM(int state) {
 

@@ -20,12 +20,12 @@ device {
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
                  $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
-                 $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
                  $$quote($$BASEDIR/src/timer.cpp) \
@@ -49,12 +49,12 @@ device {
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
                  $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
-                 $$quote($$BASEDIR/src/json.h) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
                  $$quote($$BASEDIR/src/wordsearch.h)
@@ -78,12 +78,12 @@ device {
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
                  $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
-                 $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
                  $$quote($$BASEDIR/src/timer.cpp) \
@@ -107,12 +107,12 @@ device {
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
                  $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
-                 $$quote($$BASEDIR/src/json.h) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
                  $$quote($$BASEDIR/src/wordsearch.h)
@@ -138,12 +138,12 @@ simulator {
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
                  $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
-                 $$quote($$BASEDIR/src/json.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
                  $$quote($$BASEDIR/src/timer.cpp) \
@@ -167,12 +167,12 @@ simulator {
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/PaymentServiceControl.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
                  $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
-                 $$quote($$BASEDIR/src/json.h) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
                  $$quote($$BASEDIR/src/wordsearch.h)

@@ -52,4 +52,15 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>Wordnik</name>
+    <message>
+        <source>Http Error: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to retrieve data</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>
