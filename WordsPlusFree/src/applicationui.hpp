@@ -88,6 +88,14 @@ public:
 	Q_PROPERTY (bool isPaid READ getIsPaid WRITE setIsPaid NOTIFY isPaidChanged);
 	Q_PROPERTY (bool isReviewed READ getIsReviewed WRITE setIsReviewed NOTIFY isReviewedChanged);
 
+	//wordnik
+	Q_PROPERTY (const QString wordnikWord READ getWord NOTIFY wordnikWordChanged);
+	Q_PROPERTY (const QString wordnikPartOfSpeech READ getPartOfSpeech NOTIFY wordnikPartOfSpeechChanged);
+	Q_PROPERTY (const QString wordnikDefinition READ getDefinition NOTIFY wordnikDefinitionChanged);
+	//wordnik
+
+
+
 	QString getCategory();
 	void setCategory(const QString cat);
 
@@ -132,6 +140,10 @@ public:
 
 	int getAchievedAward();
 
+	QString getWord();
+	QString getPartOfSpeech();
+	QString getDefinition();
+
 public Q_SLOTS:
 	void show();
 	void scoreLoopLoaded(AppData_t *data);
@@ -172,6 +184,9 @@ Q_SIGNALS:
 	void isFirstTimeUserChanged();
 	void isPaidChanged();
 	void isReviewedChanged();
+	void wordnikWordChanged();
+	void wordnikPartOfSpeechChanged();
+	void wordnikDefinitionChanged();
 
 private:
 	void initTimer();
@@ -234,6 +249,7 @@ private:
 	SoundManager *mSoundManager;
 	QMap<QString, int> wordDataIndex;
 	QStringList listOfWords;
+	QStringList tmpWordOfTheDay;
 
 	RegistrationHandler *regHandler;
 	ProfileBox *profileBox;

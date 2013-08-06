@@ -178,6 +178,9 @@ Container {
                     onStarted: {
                     }
                 }
+//                onTouch: {
+//                    wordnikSheet.open();
+//                }
             }
         }
         BtmNavPanel { // bottom panel
@@ -218,6 +221,11 @@ Container {
         Sheet {
             id: themeSheet
             ThemeSheet {
+            }
+        },
+        Sheet {
+            id: wordnikSheet
+            WordnikSheet {
             }
         }
     ]
