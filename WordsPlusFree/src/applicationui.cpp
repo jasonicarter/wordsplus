@@ -1293,25 +1293,41 @@ void ApplicationUI::cntlyIAP(const QString &name, const QString &price) {
 void ApplicationUI::onWordOfTheDay(QString response) {
 
 	LOG("%s", response.toStdString().c_str() );
-	//maybe breakup string and emit stuff for gui
-	//maybe send entire string and gui splits it with javascript
+
+	tmpWordOfTheDay.clear();
+	tmpWordOfTheDay = response.split(",");
+
+	emit wordnikWordChanged();
+	emit wordnikPartOfSpeechChanged();
+	emit wordnikDefinitionChanged();
 
 }
 
 void ApplicationUI::onWordList(QString response) {
 
 	LOG("%s", response.toStdString().c_str() );
-	//maybe breakup string and emit stuff for gui
-	//maybe send entire string and gui splits it with javascript
+
+	//call initialize play area or some variant of it with a new list of words
 
 }
 
 void ApplicationUI::InitializeWordnik(QString type){
 
-	LOG("Made it: initializeWordnik");
 	wordnik->callWordnik(type);
 
 }
+
+QString ApplicationUI::getWord(){
+	LOG("%s", tmpWordOfTheDay[0].toStdString().c_str() );
+	return tmpWordOfTheDay[0];
+}
+QString ApplicationUI::getPartOfSpeech(){
+	return tmpWordOfTheDay[1];
+}
+QString ApplicationUI::getDefinition(){
+	return tmpWordOfTheDay[2];
+}
+
 
 void ApplicationUI::ControlsForBBM(int state) {
 
