@@ -34,7 +34,6 @@ void Wordnik::callWordnik(QString type){
 
 	wordnikType.clear();
 	wordnikType = type.toLower();
-//	const QUrl url;
 
 	if(wordnikType == "wordoftheday"){
 		const QUrl url("http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
@@ -47,10 +46,6 @@ void Wordnik::callWordnik(QString type){
 		QNetworkReply* reply = m_networkAccessManager->get(request);
 		connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
 	}
-
-//	QNetworkRequest request(url);
-//	QNetworkReply* reply = m_networkAccessManager->get(request);
-//	connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
 
 }
 

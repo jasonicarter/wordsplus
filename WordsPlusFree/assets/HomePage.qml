@@ -178,9 +178,9 @@ Container {
                     onStarted: {
                     }
                 }
-//                onTouch: {
-//                    wordnikSheet.open();
-//                }
+                onTouch: {
+                    wordnikSheet.open();
+                }
             }
         }
         BtmNavPanel { // bottom panel
