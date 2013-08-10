@@ -38,41 +38,43 @@ Container {
                         } else if (event.isUp()) {
                             pLetter.imageSource = "theme/" + "wordsPlus" + "/letters/x.png"
                             wordsPlus.startTimer();
-                            if(sheetName == "aboutSheet"){
+                            if (sheetName == "aboutSheet") {
                                 aboutSheet.close()
-                            }else if (sheetName == "helpSheet") {
+                            } else if (sheetName == "helpSheet") {
                                 helpSheet.close()
-                            }else if (sheetName == "settingsSheet"){
+                            } else if (sheetName == "settingsSheet") {
                                 settingsSheet.close()
-                            }else if (sheetName == "categorySheet") {
+                            } else if (sheetName == "categorySheet") {
                                 categorySheet.close()
-                            }else if (sheetName == "statsSheet") {
+                            } else if (sheetName == "statsSheet") {
                                 statsSheet.close()
-                            }else if (sheetName == "themeSheet") {
+                            } else if (sheetName == "themeSheet") {
                                 themeSheet.close()
-                            }else if (sheetName == "puzzleCompletedSheet") {
+                            } else if (sheetName == "puzzleCompletedSheet") {
                                 wordsPlus.intializePlayArea();
                                 puzzleCompletedSheet.close()
-                            }else if (sheetName == "shareSheet") {
+                            } else if (sheetName == "shareSheet") {
                                 shareSheet.close()
-                            }
-                        }
-                    }
-                }
-            } // end of letters
-            Container {
-                topPadding: 40
-                horizontalAlignment: HorizontalAlignment.Center
-                Label {
-                    horizontalAlignment: HorizontalAlignment.Center
-                    text: "CLOSE ME"
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
+                            }else if (sheetName == "wordnikSheet") {
+	                            wordnikSheet.close()
+	                        }
                     }
                 }
             }
+        } // end of letters
+        Container {
+            topPadding: 40
+            horizontalAlignment: HorizontalAlignment.Center
+            Label {
+                horizontalAlignment: HorizontalAlignment.Center
+                text: "CLOSE ME"
+                textStyle {
+                    base: btmNavPanelSmallNormalWhite.style
+                }
+            }
         }
-    } // bottom panel
+    }
+} // bottom panel
     attachedObjects: [
         TextStyleDefinition {
             id: btmNavPanelSmallNormalWhite

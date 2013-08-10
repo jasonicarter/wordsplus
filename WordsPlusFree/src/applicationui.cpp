@@ -1312,20 +1312,32 @@ void ApplicationUI::onWordList(QString response) {
 }
 
 void ApplicationUI::InitializeWordnik(QString type){
-
-	wordnik->callWordnik(type);
-
+	if (Global::instance()->getIsInternetAvailable()){
+		wordnik->callWordnik(type);
+	}
 }
 
 QString ApplicationUI::getWord(){
-	LOG("%s", tmpWordOfTheDay[0].toStdString().c_str() );
-	return tmpWordOfTheDay[0];
+	if(!tmpWordOfTheDay.empty()){
+		LOG("%s", tmpWordOfTheDay[0].toStdString().c_str() );
+		return tmpWordOfTheDay[0];
+	}
+
+	return "What's the Word?";
 }
 QString ApplicationUI::getPartOfSpeech(){
-	return tmpWordOfTheDay[1];
+	if(!tmpWordOfTheDay.empty()){
+		return tmpWordOfTheDay[1];
+	}
+
+	return "No Part of Mine";
 }
 QString ApplicationUI::getDefinition(){
-	return tmpWordOfTheDay[2];
+	if(!tmpWordOfTheDay.empty()){
+		return tmpWordOfTheDay[2];
+	}
+
+	return "Define the Word";
 }
 
 

@@ -17596,3 +17596,1100 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 !ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-05 21:41:38.223
 !MESSAGE QML Preview compatibility check log.
 
+!SESSION 2013-08-09 12:48:40.960 -----------------------------------------------
+eclipse.buildId=10.1.0
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:51.697
+!MESSAGE Cannot resolve ValueType variant: Number
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.093
+!MESSAGE Cannot resolve ValueType variant: QLocale
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.093
+!MESSAGE Cannot resolve ValueType variant: String
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.094
+!MESSAGE Cannot resolve ValueType variant: bb::device::CellularService::Types
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.095
+!MESSAGE Cannot resolve ValueType variant: Boolean
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.096
+!MESSAGE Cannot resolve ValueType variant:  bb::system::SystemUiButton 
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:48:52.105
+!MESSAGE Issues while loading Components Definition:
+Duplicate Signal in: ComponentID: bb::cascades::InvokeActionItem, Signal: handlerChanged
+
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-08-09 12:48:52.170
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-08-09 12:48:52.192
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-08-09 12:48:52.203
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-08-09 12:48:52.206
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.core 1 0 2013-08-09 12:48:52.219
+!MESSAGE Using: UIAdaptability
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 12:48:55.602
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-08-09 12:48:55.847
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-08-09 12:48:57.872
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-08-09 12:48:57.872
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@18dfa76),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18dfa76)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@18dfa76),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@18dfa76)),sourcePriority=16640)
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 12:48:59.164
+!MESSAGE SDK version used 10.1.0.1720 with capabilities: [[CHANGE_ORIENTATION, ZOOM_CHANGE, UI_ADAPTABILITY, CHANGE_THEME]]
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.563
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.565
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.566
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.568
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.573
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.574
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.575
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.577
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.898
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:07.902
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.007
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.008
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.011
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.014
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.015
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.017
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.174
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.177
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.228
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.229
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.231
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.233
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.238
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.239
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.240
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.241
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.281
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.284
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.563
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.564
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.568
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.572
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.575
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.577
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.580
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.583
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.641
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.728
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:08.743
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.276
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.378
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.379
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.382
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.384
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.387
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.389
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.392
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.395
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.544
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.546
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.548
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.550
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.551
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.552
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.592
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.594
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.597
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.600
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.602
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.603
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.837
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 12:49:09.839
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 12:50:01.454
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-08-09 12:53:01.206
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-08-09 12:53:01.356
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-08-09 12:53:01.422
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.qnx.tools.ide.bbt.core 2 -1 2013-08-09 12:53:01.483
+!MESSAGE No category "null" is defined in the library descriptors.
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.080
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.082
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.084
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.086
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.091
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.092
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.094
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.095
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.358
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.361
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.386
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.389
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.529
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.530
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.533
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.535
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.537
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.539
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.541
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.543
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.597
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.883
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.988
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.989
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.992
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.995
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.997
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:07.998
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:08.001
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:01:08.003
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.621
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.623
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.624
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.625
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.629
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.630
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.631
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:00.632
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.016
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.019
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.166
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.169
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.267
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.270
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.444
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.447
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.450
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.453
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.455
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.457
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.460
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.462
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.511
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.783
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.878
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.879
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.882
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.884
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.887
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.888
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.891
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:01.893
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.193
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.195
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.197
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.214
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.219
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.220
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.221
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.223
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.333
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.336
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.365
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.368
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.430
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.432
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.435
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.438
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.440
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.442
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.445
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.447
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.497
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.620
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.646
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.648
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.652
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.654
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.657
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.659
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.661
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:02:02.664
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.980
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.982
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.983
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.985
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.993
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.994
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.996
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:06.998
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.227
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.232
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.272
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.276
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.395
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.397
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.400
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.403
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.406
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.407
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.409
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.412
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.470
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.722
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.820
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.821
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.825
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.828
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.831
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.832
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.835
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:03:07.837
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.712
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.714
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.716
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.718
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.723
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.724
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.725
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.726
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.996
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:03.999
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.028
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.031
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.154
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.156
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.159
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.161
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.164
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.165
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.168
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.170
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.219
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.480
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.602
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.605
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.609
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.611
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.615
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.616
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.620
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 13:04:04.623
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 18:41:39.491
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.918
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.921
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.923
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.927
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.931
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.932
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.933
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:09.936
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.171
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.174
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.198
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.201
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.312
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.314
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.317
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.320
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.323
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.324
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.326
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.329
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.371
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.595
+!MESSAGE Null type found: null, JS_PRIMITIVE_STRING
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.681
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.683
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.685
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.687
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.689
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.690
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.692
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 18:42:10.694
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 18:42:55.213
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 18:44:39.715
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 19:07:23.413
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 19:07:24.772
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 19:07:24.773
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 19:52:34.719
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 19:52:34.723
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 19:52:34.774
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:17:29.807
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:17:31.093
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:17:31.102
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:24:46.227
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:24:46.657
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.qnx.tools.bbt.core 4 0 2013-08-09 20:24:47.657
+!MESSAGE Unable to determine the application exit code
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:25:00.491
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:25:00.494
+!MESSAGE QML type not found: BaseObject
+
+!ENTRY com.rim.tad.tools.qml.simulator 1 0 2013-08-09 20:25:00.544
+!MESSAGE QML Preview compatibility check log.
+
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:07.487
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:07.492
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:07.493
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:07.494
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:48.503
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:48.506
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:48.507
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:48.510
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:49.980
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:49.982
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:49.983
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:49.985
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:50.176
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:50.178
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:50.179
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:50.181
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:57.553
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:57.561
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:57.564
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:49:57.569
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:01.402
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:01.407
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:01.409
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:01.415
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:14.614
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:14.615
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:14.616
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:14.618
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:15.119
+!MESSAGE QML type not found: QObject
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:15.121
+!MESSAGE QML type not found: AbstractActionItem
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:15.122
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 20:50:15.123
+!MESSAGE QML type not found: AbstractShortcut
+
+!ENTRY com.rim.tad.tools.qml.core 4 0 2013-08-09 21:05:52.158
+!MESSAGE com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+!STACK 0
+java.lang.ClassCastException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:495)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolveWithTypes(SemanticAnalyzer.java:136)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.analyze(SemanticAnalyzer.java:129)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:491)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSementicAnalyzesAndValidation(MasterModel.java:448)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateTextSyntaxSemantic(MasterModel.java:415)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.updateCore(TransactionModel.java:188)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.update(TransactionModel.java:149)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.update(MasterModel.java:155)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLEditor$2.invokeUpdateFromLastTextSnapshot(QMLEditor.java:278)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.updateNow(QMLModelUpdater.java:150)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.run(QMLModelUpdater.java:139)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.rim.tad.tools.qml.core 4 0 2013-08-09 21:05:52.161
+!MESSAGE com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+!STACK 0
+java.lang.RuntimeException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:297)
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:285)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:493)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSementicAnalyzesAndValidation(MasterModel.java:448)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateTextSyntaxSemantic(MasterModel.java:415)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.updateCore(TransactionModel.java:188)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.update(TransactionModel.java:149)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.update(MasterModel.java:155)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLEditor$2.invokeUpdateFromLastTextSnapshot(QMLEditor.java:278)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.updateNow(QMLModelUpdater.java:150)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.run(QMLModelUpdater.java:139)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassCastException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:495)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolveWithTypes(SemanticAnalyzer.java:136)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.analyze(SemanticAnalyzer.java:129)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:491)
+	... 9 more
+
+!ENTRY com.rim.tad.tools.qml.core 2 0 2013-08-09 21:05:52.166
+!MESSAGE com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+!STACK 0
+java.lang.RuntimeException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:297)
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:285)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.updateCore(TransactionModel.java:191)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.update(TransactionModel.java:149)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.update(MasterModel.java:155)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLEditor$2.invokeUpdateFromLastTextSnapshot(QMLEditor.java:278)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.updateNow(QMLModelUpdater.java:150)
+	at com.rim.tad.tools.qml.core.internal.editor.QMLModelUpdater$ValidationJob.run(QMLModelUpdater.java:139)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.RuntimeException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:297)
+	at com.rim.tad.tools.qml.core.internal.QMLCorePlugin.error(QMLCorePlugin.java:285)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:493)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSementicAnalyzesAndValidation(MasterModel.java:448)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateTextSyntaxSemantic(MasterModel.java:415)
+	at com.rim.tad.tools.qml.core.internal.model.TransactionModel.updateCore(TransactionModel.java:188)
+	... 6 more
+Caused by: java.lang.ClassCastException: com.rim.tad.tools.qml.parser.ast.ASTUnaryExpression cannot be cast to com.rim.tad.tools.qml.parser.ast.ASTBinaryExpression
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:495)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:496)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:238)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:142)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolve(SemanticAnalyzer.java:168)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.resolveWithTypes(SemanticAnalyzer.java:136)
+	at com.rim.tad.tools.qml.core.internal.model.semantic.analyzer.SemanticAnalyzer.analyze(SemanticAnalyzer.java:129)
+	at com.rim.tad.tools.qml.core.internal.model.MasterModel.updateSemanticAnalyzes(MasterModel.java:491)
+	... 9 more
