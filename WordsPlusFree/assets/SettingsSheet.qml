@@ -15,6 +15,63 @@ Page {
             topPadding: 100
             horizontalAlignment: HorizontalAlignment.Center
             Container {
+                Container {
+                    property int settingHard: 8
+                    property int settingMedium: 4
+                    property int settingEasy: 2
+                    preferredWidth: 700
+
+                    DropDown {
+                        id: diffDropDown
+                        title: "Select Difficulty:"
+                        Option {
+                            id: hard
+                            text: "Hard"
+                            description: "Now we're talking!"
+                            value: settingHard
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 8;
+                                }
+                            }
+                        }
+                        Option {
+                            id: medium
+                            text: "Medium"
+                            description: "Great place to start"
+                            value: settingMedium
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 4;
+                                }
+                            }
+                        }
+                        Option {
+                            id: easy
+                            text: "Easy"
+                            description: "Don't pick me, I'm too easy"
+                            value: settingEasy
+                            onSelectedChanged: {
+                                if (selected == true) {
+                                    wordsPlus.difficulty = 2; //settingEasy;
+                                }
+                            }
+                        }
+                    }
+                    onCreationCompleted: {
+                        //diffDropDown.setSelectedOption(easy);
+                        if (wordsPlus.difficulty == 2) {
+                            diffDropDown.setSelectedOption(easy);
+                        } else if (wordsPlus.difficulty == 4) {
+                            diffDropDown.setSelectedOption(medium);
+                        } else if (wordsPlus.difficulty == 8) {
+                            diffDropDown.setSelectedOption(hard);
+                        }
+                    }
+                } //diff buttons
+                Divider {
+                    opacity: 0
+                }
                 Container { // sound
                     layout: DockLayout {
                     }
