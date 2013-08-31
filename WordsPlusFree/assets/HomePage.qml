@@ -18,7 +18,7 @@ Container {
             topPadding: 150
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
-            //background: Color.Gray
+            //background: Color.LightGray
             ImageView {
                 id: puzzleLetters
                 opacity: 1
@@ -178,7 +178,18 @@ Container {
                     onStarted: {
                     }
                 }
+            }
+        }
+        Container {
+            bottomPadding: 650
+            leftPadding: 130
+            verticalAlignment: VerticalAlignment.Center
+            //background: Color.Gray
+            //horizontalAlignment: HorizontalAlignment.Center
+            ImageView {
+                imageSource: "/images/wordoftheday.png"
                 onTouch: {
+                    wordsPlus.InitializeWordnik("WordOfTheDay");
                     wordnikSheet.open();
                 }
             }
@@ -189,19 +200,7 @@ Container {
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
-            //because score()->start is called after qml creation
-            //scoreloop instance created, calls run() which does requestUserCompleted
-            //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
-            //if you do that, don't need this connnection in qml
-            //wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
         }
-        //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
-        //        function onScoreloopLoaded(username) {
-        //            scoreLoopUsername = username;
-        //            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
-        //            homeSysToast.button.label = "Got it!"
-        //            homeSysToast.show();
-        //        }
         Container {
             id: welcomeDialog
             visible: wordsPlus.isFirstTimeUser

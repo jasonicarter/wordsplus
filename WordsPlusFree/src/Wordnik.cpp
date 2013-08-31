@@ -41,7 +41,7 @@ void Wordnik::callWordnik(QString type){
 		QNetworkReply* reply = m_networkAccessManager->get(request);
 		connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
 	}else if (wordnikType == "wordlist") {
-		const QUrl url("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=12&limit=10&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
+		const QUrl url("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=11&limit=20&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
 		QNetworkRequest request(url);
 		QNetworkReply* reply = m_networkAccessManager->get(request);
 		connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
@@ -81,7 +81,7 @@ void Wordnik::onWordReply(){
 	                		//LOG("%s", qtData.toString().toStdString().c_str() );
 	                		response = fmt.wordOfTheDay(qtData);
 	                	}
-	                	LOG("%s", response.toStdString().c_str() );
+	                	//LOG("%s", response.toStdString().c_str() );
 	                }
 	            } // data available
 	        } else { // network error

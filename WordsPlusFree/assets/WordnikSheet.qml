@@ -52,57 +52,47 @@ Page {
                         touchPropagationMode: TouchPropagationMode.None
                         textStyle {
                             base: wordnikSheetSubTitleNormalBurntOrgange.style
+                            textAlign: TextAlign.Center
                         }
                     }
-                    
-                }
-            }
-            Container { //def section
-                topMargin: 50
-                Container {
-                    //background: Color.create("#272727")
                     Label {
                         multiline: true
-                        text: "Part of speech:"
+                        text: "(" + wordsPlus.wordnikPartOfSpeech +")"
                         textStyle {
                             base: wordnikSheetSubTitleNormalWhite.style
+                            textAlign: TextAlign.Center
                         }
+                        preferredWidth: 700
                     }
-                    Label {
-                        multiline: true
-                        text: "noun"
-                        textStyle {
-                            base: wordnikSheetBigBodyNormalWhite.style
-                        }
-                    }
-                    Divider {
-                        opacity: 0
-                        topMargin: 50
-                    }
+
+                }
+            }
+            Divider {
+                opacity: 0
+                topMargin: 100
+            }
+            Container { //def section
+                Container {
                     Label {
                         multiline: true
                         text: "Definition:"
                         textStyle {
                             base: wordnikSheetSubTitleNormalWhite.style
+                            textAlign: TextAlign.Center
                         }
+                        preferredWidth: 700
                     }
                     Label {
                         multiline: true
-                        //text: "by plagasul via freesoundby plagasul via freesound by plagasul via freesound"
+                        //text: "by plagasul via freesoundby plagasul via freesound by plagasul via freesound" 
+                        //+ "freesound by plagasul via freesound"
                         text: wordsPlus.wordnikDefinition
                         textStyle {
                             base: wordnikSheetBigBodyNormalWhite.style
+                            textAlign: TextAlign.Center
                         }
+                        preferredWidth: 700
                     }
-//                    TextArea {
-//                        text: "Definition: by plagasul via freesound.org " + "sweetalertsound1 + 2 by kizilsungur via freesound.org"
-//                        //text: "Part of speech: "+ wordsPlus.wordnikPartOfSpeech +"\n\nDefinition: "+ wordsPlus.wordnikDefinition
-//                        editable: false
-//                        touchPropagationMode: TouchPropagationMode.None
-//                        textStyle {
-//                            base: wordnikSheetBigBodyNormalWhite.style
-//                        }
-//                    }
                 }
 
 
@@ -114,38 +104,28 @@ Page {
         }
     }
     onCreationCompleted: {
-        wordsPlus.InitializeWordnik("WordOfTheDay");
+        //wordsPlus.InitializeWordnik("WordOfTheDay");
     }
     attachedObjects: [
-        // When modifying the SystemDefult fonts, like changing wieght or color,
-        // it is better from a memory consumption point of view to create text
-        // styles as attached objects.
-        TextStyleDefinition {
-            id: wordnikSheetBigBodyNormalBlack
-            base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
-            color: Color.create("#272727")
-        },
         TextStyleDefinition {
             id: wordnikSheetBigBodyNormalWhite
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {
             id: wordnikSheetBigBodyNormalBlue
             base: SystemDefaults.TextStyles.BodyText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#0098f0")
         },
         TextStyleDefinition {
             id: wordnikSheetSubTitleNormalWhite
             base: SystemDefaults.TextStyles.SubtitleText
             fontWeight: FontWeight.Normal
-            fontFamily: "Times New Roman"
+            fontFamily: "Slate Pro Light"
             color: Color.create("#fafafa")
         },
         TextStyleDefinition {

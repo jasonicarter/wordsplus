@@ -79,7 +79,7 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
                     QVariant value = it.next();
                     traverseWord(value, out);
                 }
-                out += ";\n";
+                out += "~\n";
             }
             break;
         case QVariant::String:
@@ -264,11 +264,12 @@ QString QtObjectFormatter::wordOfTheDay(const QVariant &value) const
 void QtObjectFormatter::splitter(QString &out) const
 {
 	//LOG("Splitter1: %s", out.toStdString().c_str() );
-	QStringList tmpSplit = out.split(";");
+	QStringList tmpSplit = out.split("~");
 
 	//partOfSpeech and definition
 	QStringList tmpDef = tmpSplit[0].split("|");
-	QString def = tmpDef[1].trimmed() + "," + tmpDef[3].trimmed();
+	//LOG("Splitter2Before: %s", tmpDef[2].trimmed().toStdString().c_str());
+	QString def = tmpDef[2].trimmed() + "|" + tmpDef[3].trimmed();
 	//LOG("Splitter2: %s", def.toStdString().c_str() );
 
 	//word
@@ -276,6 +277,5 @@ void QtObjectFormatter::splitter(QString &out) const
 	QString word = tmpWord[2].trimmed();
 	//LOG("Splitter3: %s", word.toStdString().c_str() );
 
-	out = word + "," + def;
+	out = word + "|" + def;
 }
-
