@@ -79,8 +79,8 @@ static const char SCORELOOP_RUSHHOUR[] = "wordsplus.rushhour";
 static const char SCORELOOP_OVERFIFTYK[] = "wordsplus.overfiftythousand";
 static const char SCORELOOP_OVERONETHOUSANDK[] = "wordsplus.overonethousandk";
 static const char SCORELOOP_MIDNIGHT[] = "wordsplus.midnightrun";
-static const char SCORELOOP_OVERONEBILLION[] = "wordsplus.overonemillion";
-static const char SCORELOOP_OVERONEMILLION[] = "wordsplus.overonebillion";
+static const char SCORELOOP_OVERONEMILLION[] = "wordsplus.overonemillion";
+static const char SCORELOOP_OVERONEBILLION[] = "wordsplus.overonebillion";
 
 #define LOG(fmt, args...)   do { fprintf(stdout, "[WorsPlusGame.cpp ] " fmt "\n", ##args); fflush(stdout); } while (0);
 
@@ -1184,7 +1184,7 @@ QString ApplicationUI::getSelectedLetters() {
 int ApplicationUI::getDifficulty() {
 
 	bool okDiff;
-	QString strDiff = settings->getValueFor(DIFFICULTY, "2");
+	QString strDiff = settings->getValueFor(DIFFICULTY, "8");
 	puzzleDifficulty = strDiff.toInt(&okDiff, 10);
 
 	//LOG("%i", puzzleDifficulty);
@@ -1292,10 +1292,10 @@ void ApplicationUI::cntlyIAP(const QString &name, const QString &price) {
 
 void ApplicationUI::onWordOfTheDay(QString response) {
 
-	LOG("%s", response.toStdString().c_str() );
+	//LOG("%s", response.toStdString().c_str() );
 
 	tmpWordOfTheDay.clear();
-	tmpWordOfTheDay = response.split(",");
+	tmpWordOfTheDay = response.split("|");
 
 	emit wordnikWordChanged();
 	emit wordnikPartOfSpeechChanged();
@@ -1306,8 +1306,37 @@ void ApplicationUI::onWordOfTheDay(QString response) {
 void ApplicationUI::onWordList(QString response) {
 
 	LOG("%s", response.toStdString().c_str() );
+	//response.replace(QString("-"),QString(""));
+	response.remove(QRegExp("[-']"));
+	LOG("%s", response.toStdString().c_str() );
 
 	//call initialize play area or some variant of it with a new list of words
+
+	QFile textfile("data/newfile.txt");
+	textfile.open(QIODevice::WriteOnly | QIODevice::Text);
+	QTextStream out(&textfile);
+	out <<  response; //"This is a text file\n";
+	textfile.close();
+
+
+	//testing to output what was written
+
+	if (textfile.open(QIODevice::ReadOnly | QIODevice::Text))
+	{
+		//LOG("onWordList:inside");
+	    QTextStream stream ( &textfile );
+	    QString line;
+	    do {
+	        line = stream.readLine();
+	        //qDebug() << line;
+	        LOG("%s", line.toStdString().c_str() );
+	    } while (!line.isNull());
+	}
+	else {
+		//LOG("onWordList:error");
+	}
+
+	textfile.close();
 
 }
 
@@ -1319,25 +1348,25 @@ void ApplicationUI::InitializeWordnik(QString type){
 
 QString ApplicationUI::getWord(){
 	if(!tmpWordOfTheDay.empty()){
-		LOG("%s", tmpWordOfTheDay[0].toStdString().c_str() );
+		//LOG("%s", tmpWordOfTheDay[0].toStdString().c_str() );
 		return tmpWordOfTheDay[0];
 	}
 
-	return "What's the Word?";
+	return "...";
 }
 QString ApplicationUI::getPartOfSpeech(){
+	if(!tmpWordOfTheDay.empty()){
+		return  tmpWordOfTheDay[2];
+	}
+
+	return "...";
+}
+QString ApplicationUI::getDefinition(){
 	if(!tmpWordOfTheDay.empty()){
 		return tmpWordOfTheDay[1];
 	}
 
-	return "No Part of Mine";
-}
-QString ApplicationUI::getDefinition(){
-	if(!tmpWordOfTheDay.empty()){
-		return tmpWordOfTheDay[2];
-	}
-
-	return "Define the Word";
+	return "Sorry. No word for today.";
 }
 
 

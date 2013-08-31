@@ -1,5 +1,5 @@
 1
-501
+502
 720x720/AboutSheet.qml
 720x720/BtmNav.qml
 720x720/HomePage.qml
@@ -94,6 +94,7 @@ images/theme_red.png
 images/tools.png
 images/trophy.png
 images/twitter_large.png
+images/wordoftheday.png
 Leaderboard.qml
 main.qml
 models/themes.xml
