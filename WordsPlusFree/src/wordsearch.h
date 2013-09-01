@@ -11,7 +11,7 @@
 #include <QList>
 #include <QMap>
 
-char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8);
+char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8, bool isRandomPuzzle = false);
 QList<char*> returnPuzzleWords();
 QMap<QString, int> returnPuzzleIndex();
 int returnNumberOfPuzzleWords();

@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Page {
     Container {
@@ -33,7 +34,10 @@ Page {
                     Button {
                         text: "Test"
                         onClicked: {
+                            progressToast.show();
                             wordsPlus.InitializeWordnik("WordList");
+                            //wordsPlus.intializePlayArea();
+                            //categorySheet.close();
                         }
                     }
                 }
@@ -75,11 +79,12 @@ Page {
                             }
                         ]
                         onTriggered: {
+                            progressToast.show();
                             var selectedItem = dataModel.data(indexPath);
                             wordsPlus.category = selectedItem.filename;
                             wordsPlus.cntlyCategory((wordsPlus.category).toLowerCase(), wordsPlus.difficulty.toString());
                             wordsPlus.intializePlayArea();
-                            categorySheet.close();
+                            //categorySheet.close();
                         }
                     } //listview
                 }
@@ -90,4 +95,21 @@ Page {
             sheetName: "categorySheet"
         }
     }
+    attachedObjects: [
+        SystemToast {
+            id: progressToast
+            body: "Hold on a minute, I'm doing \"stuff\"";
+            onFinished: {
+                categorySheet.close();
+            }
+        }
+//        SystemProgressToast {
+//            id: progressToast
+//            
+//            //body: "Hold on a minute, I'm doing \"stuff\""
+//            onFinished: {
+//                categorySheet.close();
+//            }
+//        }
+    ]
 }

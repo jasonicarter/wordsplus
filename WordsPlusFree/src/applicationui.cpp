@@ -119,6 +119,7 @@ ApplicationUI::ApplicationUI(bb::platform::bbm::Context &context, bb::cascades::
 	bbmBusyAward = false;
 	bbmInviteAward = false;
 	hintUsedAward = false;
+	isRandomPuzzle = false;
 
 	// Initialize for local storage settings
 	settings = new GameSettings();
@@ -517,7 +518,9 @@ void ApplicationUI::intializePlayArea() {
 		std::string cat = getCategory().toLower().toStdString();
 		cat.append(".txt");
 
-		char** letter = createNewPuzzle((char*) cat.c_str(), getDifficulty());
+		//LOG("isRandomPuzzle: %i", isRandomPuzzle);
+		char** letter = createNewPuzzle((char*) cat.c_str(), getDifficulty(), isRandomPuzzle);
+		isRandomPuzzle = false; //reset
 		QList<char*> puzzleWords = returnPuzzleWords();
 
 		numberOfWords = returnNumberOfPuzzleWords();
@@ -1305,38 +1308,47 @@ void ApplicationUI::onWordOfTheDay(QString response) {
 
 void ApplicationUI::onWordList(QString response) {
 
-	LOG("%s", response.toStdString().c_str() );
-	//response.replace(QString("-"),QString(""));
-	response.remove(QRegExp("[-']"));
-	LOG("%s", response.toStdString().c_str() );
+	//LOG("%s", response.toStdString().c_str() );
+	response.remove(QRegExp("[-' ]"));
+	//LOG("After Clense: %s", response.toStdString().c_str() );
+
+	QStringList wordList = response.split(",");
+	wordList.removeLast(); //comma at end of string, causes issue
+
+	QString tmp;
+	for(int i = 0; i < wordList.count(); i++){
+		tmp.append(wordList[i]).append("\n");
+	}
+
+	//LOG("WordList:\n%s", tmp.toStdString().c_str() );
 
 	//call initialize play area or some variant of it with a new list of words
-
-	QFile textfile("data/newfile.txt");
+	QFile textfile("data/wordnik.txt");
 	textfile.open(QIODevice::WriteOnly | QIODevice::Text);
 	QTextStream out(&textfile);
-	out <<  response; //"This is a text file\n";
+	out <<  tmp; //"This is a text file\n";
 	textfile.close();
 
+	isRandomPuzzle = true;
+	setCategory("wordnik");
+	intializePlayArea();
 
-	//testing to output what was written
-
-	if (textfile.open(QIODevice::ReadOnly | QIODevice::Text))
-	{
-		//LOG("onWordList:inside");
-	    QTextStream stream ( &textfile );
-	    QString line;
-	    do {
-	        line = stream.readLine();
-	        //qDebug() << line;
-	        LOG("%s", line.toStdString().c_str() );
-	    } while (!line.isNull());
-	}
-	else {
-		//LOG("onWordList:error");
-	}
-
-	textfile.close();
+//	if (textfile.open(QIODevice::ReadOnly | QIODevice::Text))
+//	{
+//		//LOG("onWordList:inside");
+//	    QTextStream stream ( &textfile );
+//	    QString line;
+//	    do {
+//	        line = stream.readLine();
+//	        //qDebug() << line;
+//	        LOG("%s", line.toStdString().c_str() );
+//	    } while (!line.isNull());
+//	}
+//	else {
+//		//LOG("onWordList:error");
+//	}
+//
+//	textfile.close();
 
 }
 
