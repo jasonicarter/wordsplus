@@ -238,6 +238,7 @@ private:
 	bool isProfileBoxEnabled;
 	bool isPuzzleDisplayed;
 	bool isHomePageDisplayed;
+	bool isRandomPuzzle;
 
 	QString m_strCategory;
 	QString m_strTime;

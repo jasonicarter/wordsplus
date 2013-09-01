@@ -182,7 +182,7 @@ Container {
         }
         Container {
             bottomPadding: 650
-            leftPadding: 130
+            leftPadding: 50
             verticalAlignment: VerticalAlignment.Center
             //background: Color.Gray
             //horizontalAlignment: HorizontalAlignment.Center

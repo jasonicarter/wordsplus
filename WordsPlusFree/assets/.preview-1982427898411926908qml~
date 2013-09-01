@@ -34,6 +34,7 @@ Page {
                         text: "Test"
                         onClicked: {
                             wordsPlus.InitializeWordnik("WordList");
+                            categorySheet.close();
                         }
                     }
                 }
