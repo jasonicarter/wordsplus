@@ -34,7 +34,7 @@ Container {
                 Container {
                     background: Color.create("#272727")
                     TextArea {
-                        text: "v1.4"
+                        text: "v1.5"
                         editable: false
                         touchPropagationMode: TouchPropagationMode.None
                         textStyle {
@@ -54,10 +54,10 @@ Container {
                     }
                     Label {
                         multiline: true
-                        text: "1. An updated design\n" 
-                        + "2. More word categories and 3 levels of difficulty\n" 
-                        + "3. WordsPlus Facebook page - Like Me!\n" 
-                        + "4. In-App Purchase to a full upgrade"
+                        text: "1. Word of the Day\n" 
+                        + "2. Dictionary Puzzles\n"
+                        + "3. Difficulty levels moved to Settings\n" 
+                        + "4. Bug Fixes\n" 
                        
                         textStyle {
                             base: welcomeDialogWhite.style
