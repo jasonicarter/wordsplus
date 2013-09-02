@@ -66,6 +66,11 @@ void QtObjectFormatter::traverseWord(const QVariant &value, QString &out) const
                 QMapIterator<QString, QVariant> it(object);
                 while(it.hasNext()) {
                     it.next();
+                    //definitions: [ pofs, text, source ]
+                    if(it.key() != "definitions"){
+                    	out += it.key();
+                    	out += ": ";
+                    }
                     traverseWord(it.value(), out);
                     out += "\n";
                 }
@@ -177,15 +182,49 @@ void QtObjectFormatter::splitter(QString &out) const
 	QStringList tmpSplit = out.split("~");
 
 	//partOfSpeech and definition
-	QStringList tmpDef = tmpSplit[0].split("|");
-	//LOG("Splitter2Before: %s", tmpDef[2].trimmed().toStdString().c_str());
-	QString def = tmpDef[2].trimmed() + "|" + tmpDef[3].trimmed();
-	//LOG("Splitter2: %s", def.toStdString().c_str() );
+	QStringList tmpList = tmpSplit[0].split("|");
+	//LOG("Splitter2Before: %s", tmpList[0].toStdString().c_str());
 
-	//word
+
+	QString partOfSpeech;
+	QString definition;
+	QString word;
+	 for (QStringList::iterator it = tmpList.begin(); it != tmpList.end(); ++it)
+	 {
+		QString tmpString = *it;
+		if(tmpString.contains("partOfSpeech:", Qt::CaseInsensitive)){
+			QStringList tmp = tmpString.trimmed().split(":");
+			partOfSpeech = tmp[1];
+			//LOG("partOfSpeech: %s", tmp[1].toStdString().c_str());
+			break;
+		}
+	}
+
+	 for (QStringList::iterator it = tmpList.begin(); it != tmpList.end(); ++it)
+	 {
+		QString tmpString = *it;
+		if(tmpString.contains("text:", Qt::CaseInsensitive)){
+			QStringList tmp = tmpString.trimmed().split(":");
+			definition = tmp[1];
+			//LOG("definition: %s",  tmp[1].toStdString().c_str());
+			break;
+		}
+	}
+
 	QStringList tmpWord = tmpSplit[2].split("|");
-	QString word = tmpWord[2].trimmed();
-	//LOG("Splitter3: %s", word.toStdString().c_str() );
+	//LOG("Splitter3Before: %s", tmpSplit[2].toStdString().c_str());
+	for (QStringList::iterator it = tmpWord.begin(); it != tmpWord.end(); ++it)
+	{
+		QString tmpString = *it;
+		if(tmpString.contains("word:", Qt::CaseInsensitive)){
+			QStringList tmp = tmpString.split(":");
+			word = tmp[1];
+			//LOG("word: %s", tmp[1].toStdString().c_str());
+			break;
+		}
+	}
 
-	out = word + "|" + def;
+	 out = word + "|" + definition + "|" + partOfSpeech;
+	 //LOG("%s",out.toStdString().c_str());
+
 }

@@ -212,6 +212,11 @@ Container {
             id: themeSheet
             ThemeSheet {
             }
+        },
+        Sheet {
+            id: wordnikSheet
+            WordnikSheet {
+            }
         }
     ]
 }//root container
