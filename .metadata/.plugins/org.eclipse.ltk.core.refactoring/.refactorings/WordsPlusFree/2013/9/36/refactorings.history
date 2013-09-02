@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WordsPlusFree/assets/images/Lock.png&apos; to &apos;lock.png&apos;" description="Rename resource &apos;Lock.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/images/Lock.png" name="lock.png" stamp="1378067834961" updateReferences="true"/>
+</session>

@@ -99,7 +99,7 @@ Page {
                         SystemDialog {
                             id: themePayDialog
                             title: "A Change of Heart"
-                            body: "Theme Skins and Scoreloop features are only available with an upgrade.\nWould you like to continue?"
+                            body: "Dictionary puzzles, Achievements, Ranking and Theme Skins are only available with the full upgrade.\n\nWould you like to continue?"
                             onFinished: {
                                 if (themePayDialog.result == SystemUiResult.CancelButtonSelection) {
                                     //on cancel do nothing

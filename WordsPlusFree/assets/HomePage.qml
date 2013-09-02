@@ -189,8 +189,11 @@ Container {
             ImageView {
                 imageSource: "/images/wordoftheday.png"
                 onTouch: {
-                    wordsPlus.InitializeWordnik("WordOfTheDay");
-                    wordnikSheet.open();
+                    if (event.isUp()) {
+                        wordsPlus.InitializeWordnik("WordOfTheDay");
+                        wordsPlus.cntlyWordOfTheDay();
+                        wordnikSheet.open();
+                    }
                 }
             }
         }
@@ -209,8 +212,8 @@ Container {
             onTouch: {
                 if (event.isUp()) {
                     if (wordsPlus.isFirstTimeUser) {
-                       welcomeDialog.visible = false
-                       wordsPlus.isFirstTimeUser = false
+                        welcomeDialog.visible = false
+                        wordsPlus.isFirstTimeUser = false
                     }
                 }
             }

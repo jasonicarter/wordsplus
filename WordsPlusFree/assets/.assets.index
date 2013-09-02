@@ -1,5 +1,5 @@
 1
-502
+504
 720x720/AboutSheet.qml
 720x720/BtmNav.qml
 720x720/HomePage.qml
@@ -79,10 +79,12 @@ images/home_blk.png
 images/home_white.png
 images/icon.png
 images/invite.png
+images/lock.png
 images/play.png
 images/profileBox.png
 images/profileEdit_blk.png
 images/profileEdit_white.png
+images/randompuzzle.png
 images/review.png
 images/rotate_blk.png
 images/social.png

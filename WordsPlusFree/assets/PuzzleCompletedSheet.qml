@@ -128,67 +128,59 @@ Page {
                     }
                     Divider {
                         opacity: 0
+                        topMargin: 50
                     }
                     Container {
-                        layout: DockLayout {
-                        }
                         id: notPaid
-                        preferredWidth: 600
                         horizontalAlignment: HorizontalAlignment.Center
-                        ImageView {
-                            imageSource: "images/splash.png"
+                        Container {
+                            layout: StackLayout {
+                                orientation: LayoutOrientation.LeftToRight
+                            }
+                            ImageView {
+                                imageSource: "images/randompuzzle.png"
+                            }
+                            Label{
+                                text:"+ Ranking\n+ Achievements\n+ Theme Skins"
+                                multiline: true;
+                            }
+
+                        }
+                        Divider {
+                            opacity: 0
+                            topMargin: 50
+                        }
+                        Label {
+                            text:"These features are only available\n with the unlocked edition of WordsPlus"
+                            multiline: true
+                            textStyle.textAlign: TextAlign.Center
+                            horizontalAlignment: HorizontalAlignment.Center                       
+                        }
+                        Divider {
+                            opacity: 0
+                            topMargin: 50
                         }
                         Container {
-                            background: Color.create("#272727")
-                            TextArea {
-                                text: "UPGRADE"
-                                editable: false
-                                touchPropagationMode: TouchPropagationMode.None
-                                textStyle.textAlign: TextAlign.Center
-                                textStyle {
-                                    base: statsSheetBigBodyNormalBlue.style
-                                }
+                            layout: StackLayout {
+                                orientation: LayoutOrientation.LeftToRight
                             }
-                        }
-                        Container {
-                            preferredWidth: 600
-                            verticalAlignment: VerticalAlignment.Bottom
-                            horizontalAlignment: HorizontalAlignment.Center
-                            Divider {
-                                opacity: 0
-                                bottomMargin: 100
+                            horizontalAlignment: HorizontalAlignment.Right
+                            ImageView {
+                                rightMargin: 50
+                                imageSource: "images/lock.png"
                             }
-                            Label {
+                            Button {
+                                id: upgrade
+                                text: "UNLOCK"
+                                preferredWidth: 250
                                 horizontalAlignment: HorizontalAlignment.Center
-                                multiline: true
-                                text: "Although word categories are\n FREE, "
-                                + "Theme Skins and Scoreloop features are only available with\n" 
-                                + "the premium edition of WordsPlus"
-                                textStyle {
-                                    base: welcomeDialog.style
-                                    textAlign: TextAlign.Center
-                                }
-                            }
-                            Divider {
-                                //topMargin: 50
-                            }
-                            Container {
-                                layout: DockLayout {
-                                }
-                                preferredWidth: 600
-                                Button {
-                                    id: upgrade
-                                    text: "OK"
-                                    preferredWidth: 250
-                                    horizontalAlignment: HorizontalAlignment.Center
-                                    onClicked: {
-                                        paymentControl.id = "28487887"
-                                        paymentControl.sku = "full_upgrade"
-                                        paymentControl.name = "WordsPlus Full Upgrade"
-                                        paymentControl.metadata = "full_upgrade"
-                                        paymentControl.getPrice(paymentControl.id, paymentControl.sku)
-                                        paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
-                                    }
+                                onClicked: {
+                                    paymentControl.id = "28487887"
+                                    paymentControl.sku = "full_upgrade"
+                                    paymentControl.name = "WordsPlus Full Upgrade"
+                                    paymentControl.metadata = "full_upgrade"
+                                    paymentControl.getPrice(paymentControl.id, paymentControl.sku)
+                                    paymentControl.purchase(paymentControl.id, paymentControl.sku, paymentControl.name, paymentControl.metadata)
                                 }
                             }
 

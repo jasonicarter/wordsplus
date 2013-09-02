@@ -60,12 +60,10 @@ public:
     /**
      * Returns the the given @p value formatted as string.
      */
-    QString asString(const QVariant &value) const;
     QString wordList(const QVariant &value) const;
     QString wordOfTheDay(const QVariant &value) const;
 
 private:
-    void traverse(const QVariant& value, QString& out) const;
     void traverseList(const QVariant& value, QString& out) const;
     void traverseWord(const QVariant& value, QString& out) const;
     void splitter(QString& out) const;
