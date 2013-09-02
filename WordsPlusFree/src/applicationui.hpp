@@ -67,6 +67,8 @@ public:
 	Q_INVOKABLE void cntlySocial(const QString &name);
 	Q_INVOKABLE void cntlyScoreloop(const QString &name);
 	Q_INVOKABLE void cntlyThemes(const QString &name);
+	Q_INVOKABLE void cntlyWordOfTheDay();
+	Q_INVOKABLE void cntlyDictionaryPuzzle();
 	Q_INVOKABLE void cntlyIAP(const QString &name, const QString &price);
 	//countly
 

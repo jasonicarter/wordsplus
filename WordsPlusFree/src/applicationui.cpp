@@ -499,6 +499,9 @@ void ApplicationUI::intializePlayArea() {
 	wordDataValue = -1;
 	listOfWords.clear();
 
+	//reset after puzzle completed
+	if(getCategory() == "wordnik"){isRandomPuzzle = true;}
+
 	//need to do id for timer, then get container to setup timer
 	mPlayAreaContainer = puzzlePageControl->findChild<Container*>("playAreaContainer");
 	mPlayAreaContainer->removeAll();
@@ -1281,6 +1284,18 @@ void ApplicationUI::cntlyScoreloop(const QString &name) {
 void ApplicationUI::cntlyThemes(const QString &name) {
 	countly::CountlyEvent event(this, "theme");
 	event.set("type", name);
+	event.send();
+}
+
+
+void ApplicationUI::cntlyWordOfTheDay() {
+	countly::CountlyEvent event(this, "wordOfTheDay");
+	event.send();
+}
+
+
+void ApplicationUI::cntlyDictionaryPuzzle() {
+	countly::CountlyEvent event(this, "dictionaryPuzzle");
 	event.send();
 }
 

@@ -52,7 +52,7 @@ Container {
                                 themeSheet.close()
                             } else if (sheetName == "puzzleCompletedSheet") {
                                 wordsPlus.intializePlayArea();
-                                puzzleCompletedSheet.close()
+                                puzzleCompletedSheet.close();
                             } else if (sheetName == "shareSheet") {
                                 shareSheet.close()
                             }else if (sheetName == "wordnikSheet") {

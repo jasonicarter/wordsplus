@@ -22,8 +22,8 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      58,   14, // methods
-      20,  304, // properties
+      60,   14, // methods
+      20,  314, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -91,29 +91,31 @@ static const uint qt_meta_data_ApplicationUI[] = {
     1304, 1273,   14,   14, 0x02,
     1325, 1273,   14,   14, 0x02,
     1349, 1273,   14,   14, 0x02,
-    1381, 1370,   14,   14, 0x02,
+    1370,   14,   14,   14, 0x02,
+    1390,   14,   14,   14, 0x02,
+    1425, 1414,   14,   14, 0x02,
 
  // properties: name, type, flags
-    1415, 1407, 0x0a495103,
-    1421, 1407, 0x0a495103,
-    1430, 1407, 0x0a495001,
-    1435, 1407, 0x0a495001,
-    1456, 1451, 0x01495003,
-    1464, 1451, 0x01495003,
-    1472, 1451, 0x01495003,
-    1485, 1407, 0x0a495001,
-    1505, 1407, 0x0a495001,
-     950, 1520, 0x02495103,
-    1524, 1520, 0x02495001,
-    1536, 1407, 0x0a495103,
-    1552, 1520, 0x02495103,
-    1563, 1520, 0x02495001,
-    1577, 1451, 0x01495103,
-    1593, 1451, 0x01495103,
-    1600, 1451, 0x01495103,
-    1611, 1407, 0x0a495001,
-    1623, 1407, 0x0a495001,
-    1643, 1407, 0x0a495001,
+    1459, 1451, 0x0a495103,
+    1465, 1451, 0x0a495103,
+    1474, 1451, 0x0a495001,
+    1479, 1451, 0x0a495001,
+    1500, 1495, 0x01495003,
+    1508, 1495, 0x01495003,
+    1516, 1495, 0x01495003,
+    1529, 1451, 0x0a495001,
+    1549, 1451, 0x0a495001,
+     950, 1564, 0x02495103,
+    1568, 1564, 0x02495001,
+    1580, 1451, 0x0a495103,
+    1596, 1564, 0x02495103,
+    1607, 1564, 0x02495001,
+    1621, 1495, 0x01495103,
+    1637, 1495, 0x01495103,
+    1644, 1495, 0x01495103,
+    1655, 1451, 0x0a495001,
+    1667, 1451, 0x0a495001,
+    1687, 1451, 0x0a495001,
 
  // properties: notify_signal_id
        3,
@@ -178,7 +180,8 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "name,level\0cntlyCategory(QString,QString)\0"
     "name\0cntlyMenuOptions(QString)\0"
     "cntlySocial(QString)\0cntlyScoreloop(QString)\0"
-    "cntlyThemes(QString)\0name,price\0"
+    "cntlyThemes(QString)\0cntlyWordOfTheDay()\0"
+    "cntlyDictionaryPuzzle()\0name,price\0"
     "cntlyIAP(QString,QString)\0QString\0"
     "theme\0category\0time\0totalWordsFound\0"
     "bool\0soundOn\0musicOn\0profileBoxOn\0"
@@ -253,7 +256,9 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 54: _t->cntlySocial((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 55: _t->cntlyScoreloop((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 56: _t->cntlyThemes((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 57: _t->cntlyIAP((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 57: _t->cntlyWordOfTheDay(); break;
+        case 58: _t->cntlyDictionaryPuzzle(); break;
+        case 59: _t->cntlyIAP((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
         default: ;
         }
     }
@@ -291,9 +296,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 58)
+        if (_id < 60)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 58;
+        _id -= 60;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {

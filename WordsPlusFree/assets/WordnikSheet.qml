@@ -97,6 +97,16 @@ Page {
 
 
             }
+            Label{
+                topMargin: 150
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Bottom
+                text: "Powered by Wordnik"
+                textStyle {
+                    base: wordnikSheetSubTitleNormalWhite.style
+                    textAlign: TextAlign.Center
+                }
+            }
         }
         BtmSheetNavPanel {
             verticalAlignment: VerticalAlignment.Bottom
