@@ -1,8 +1,18 @@
 <root>
     <item category="ANIMALS" filename="animals" image= "asset:///images/categoryList/elephant.png"/>
-    <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
-    <item category="THE BODY" filename="body" image= "asset:///images/categoryList/nurse.png"/>
+    <item category="BACK 2 SCHOOL" filename="school" image= "asset:///images/categoryList/school.png"/>
+    <item category="BOY NAMES" filename="boynames" image= "asset:///images/categoryList/man.png"/>
     <item category="EARTH" filename="earth" image= "asset:///images/categoryList/earth.png"/>
-    <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
+    <item category="GIRL NAMES" filename="girlnames" image= "asset:///images/categoryList/woman.png"/>
+    <item category="JOBS + OCCUPATIONS" filename="jobs" image= "asset:///images/categoryList/jobs.png"/>
     <item category="OUI! FR-ENCH" filename="french" image= "asset:///images/categoryList/eiffeltower.png"/>
+    <item category="SCIFI NAMES + SHOWS" filename="scifi" image= "asset:///images/categoryList/television.png"/>
+    <item category="SPACE" filename="space" image= "asset:///images/categoryList/telescope.png"/>
+    <item category="STAR TREK" filename="startrek" image= "asset:///images/categoryList/spaceship.png"/>
+    <item category="SUPERHEROES" filename="superheroes" image= "asset:///images/categoryList/comics.png"/>
+    <item category="TECH" filename="tech" image= "asset:///images/categoryList/desktop.png"/>
+    <item category="THE BODY" filename="body" image= "asset:///images/categoryList/nurse.png"/>
+    <item category="WEATHER" filename="weather" image= "asset:///images/categoryList/weather.png"/>
+    <item category="WEIGHTS + MEASURES" filename="weights" image= "asset:///images/categoryList/scale.png"/>
+    <item category="WORDS WITH E" filename="ewords" image= "asset:///images/categoryList/ewords.png"/>
 </root>

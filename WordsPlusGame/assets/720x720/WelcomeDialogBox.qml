@@ -32,20 +32,10 @@ Container {
             Container {
                 preferredWidth: 600
                 horizontalAlignment: HorizontalAlignment.Center
-//                Label {
-//                    id: txtMsg
-//                    text: "version 1.4"
-//                    horizontalAlignment: HorizontalAlignment.Center
-//                    textStyle {
-//                        base: SystemDefaults.TextStyles.SubtitleText
-//                        color: Color.create("#fafafa")
-//                        textAlign: TextAlign.Center
-//                    }
-//                }
                 Container {
                     background: Color.create("#272727")
                     TextArea {
-                        text: "v1.4"
+                        text: "v1.5"
                         editable: false
                         touchPropagationMode: TouchPropagationMode.None
                         textStyle {
@@ -69,10 +59,10 @@ Container {
                     }
                     Label {
                         multiline: true
-                        text: "1. An updated design\n" 
-                        + "2. WordsPlus Facebook page - Like Me!\n" 
-                        + "3. Post to Facebook and Twitter\n" 
-                        + "4. Q10 and v10.1 support"
+                        text: "1. Word of the Day\n"
+                        + "2. Dictionary Puzzles\n"
+                        + "3. Difficulty levels moved to Settings\n" 
+                        + "4. Bug Fixes\n"
                         textStyle {
                             base: welcomeDialogWhite.style
                         }

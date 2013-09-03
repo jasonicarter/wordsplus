@@ -222,7 +222,8 @@ Container {
                         lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
                         aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/a.png"
                         yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/y.png"
-                        wordsPlus.intializePlayArea();
+                        //wordsPlus.intializePlayArea();
+                        categorySheet.open();
                     }
                     onTouch: {
                         if (event.isUp()) {
@@ -231,7 +232,8 @@ Container {
                                 lLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/l.png"
                                 aLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/a.png"
                                 yLetter.imageSource = "asset:///theme/" + "wordsPlus" + "/letters/y.png"
-                                wordsPlus.intializePlayArea();
+                                //wordsPlus.intializePlayArea();
+                                categorySheet.open();
                             }
                         }
                     }
@@ -263,6 +265,11 @@ Container {
             query {
                 invokeTargetId: "sys.appworld"
                 uri: "appworld://content/21931881"
+            }
+        },
+        Sheet {
+            id: categorySheet
+            CategorySheet {
             }
         }
     ]

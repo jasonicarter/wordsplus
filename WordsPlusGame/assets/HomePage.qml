@@ -1,5 +1,4 @@
 import bb.cascades 1.0
-//import bb.multimedia 1.0
 
 Container {
     id: homePageContainer
@@ -181,35 +180,39 @@ Container {
                 }
             }
         }
+        Container {
+            bottomPadding: 650
+            leftPadding: 50
+            verticalAlignment: VerticalAlignment.Center
+            //background: Color.Gray
+            //horizontalAlignment: HorizontalAlignment.Center
+            ImageView {
+                imageSource: "/images/wordoftheday.png"
+                onTouch: {
+                    if (event.isUp()) {
+                        wordsPlus.InitializeWordnik("WordOfTheDay");
+                        wordsPlus.cntlyWordOfTheDay();
+                        wordnikSheet.open();
+                    }
+                }
+            }
+        }
         BtmNavPanel { // bottom panel
             verticalAlignment: VerticalAlignment.Bottom
         }
         onCreationCompleted: {
             wAnimation.play();
             pAnimation.play();
-            //because score()->start is called after qml creation
-            //scoreloop instance created, calls run() which does requestUserCompleted
-            //create invokable requestUser and connect in C++ requestUserCompleted to another slot to save off username
-            //if you do that, don't need this connnection in qml
-            //wordsPlus.scoreLoop().RequestUserCompleted.connect(mainContainer.onScoreloopLoaded);
         }
-        //requestUserCompleted has param of string (login/username) which onScoreloopLoaded uses
-        //        function onScoreloopLoaded(username) {
-        //            scoreLoopUsername = username;
-        //            homeSysToast.body = "Welcome to WordsPlus, " + scoreLoopUsername
-        //            homeSysToast.button.label = "Got it!"
-        //            homeSysToast.show();
-        //        }
         Container {
             id: welcomeDialog
             visible: wordsPlus.isFirstTimeUser
             WelcomeDialogBox {
-
             }
             onTouch: {
                 if (event.isUp()) {
                     if (wordsPlus.isFirstTimeUser) {
-                       // welcomeDialog.visible = false
+                        welcomeDialog.visible = false
                         wordsPlus.isFirstTimeUser = false
                     }
                 }
@@ -220,6 +223,11 @@ Container {
         Sheet {
             id: themeSheet
             ThemeSheet {
+            }
+        },
+        Sheet {
+            id: wordnikSheet
+            WordnikSheet {
             }
         }
     ]

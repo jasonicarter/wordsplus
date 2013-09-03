@@ -55,6 +55,8 @@ Container {
                                 puzzleCompletedSheet.close()
                             }else if (sheetName == "shareSheet") {
                                 shareSheet.close()
+                            } else if (sheetName == "wordnikSheet") {
+                                wordnikSheet.close()
                             }
                         }
                     }

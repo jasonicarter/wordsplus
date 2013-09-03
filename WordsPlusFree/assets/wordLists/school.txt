@@ -10,7 +10,6 @@ parents
 learning
 difficult
 school
-office
 teacher
 kids
 nerds
