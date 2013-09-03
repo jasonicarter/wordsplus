@@ -12,56 +12,72 @@ Container {
             preferredHeight: 45
             background: Color.create("#262626")
             verticalAlignment: VerticalAlignment.Top
-            Container {
-                layout: StackLayout {
-                    orientation: LayoutOrientation.RightToLeft
-                }
-                //background: Color.Red
-                rightPadding: 200
-                preferredWidth: 720
-                preferredHeight: 45
-                Label {
-                    leftMargin: 65
-                    text: "POST"
-                    verticalAlignment: VerticalAlignment.Center
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
-                    }
-                }
-                Label {
-                    leftMargin: 55
-                    text: "TWEET"
-                    verticalAlignment: VerticalAlignment.Center
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
-                    }
-                }
+//            Container {
+//                layout: StackLayout {
+//                    orientation: LayoutOrientation.RightToLeft
+//                }
+//                
+//                //background: Color.Red
+//                rightPadding: 200
+//                preferredWidth: 720
+//                preferredHeight: 45
 //                Label {
-//                    leftMargin: 40
-//                    text: "THEMES"
+//                    leftMargin: 65
+//                    text: "POST"
 //                    verticalAlignment: VerticalAlignment.Center
 //                    textStyle {
 //                        base: btmNavPanelSmallNormalWhite.style
 //                    }
 //                }
-                Label {
-                    text: "WORDPLUS"
-                    verticalAlignment: VerticalAlignment.Center
-                    textStyle {
-                        base: btmNavPanelSmallNormalWhite.style
-                    }
-                }
-            }
+//                Label {
+//                    leftMargin: 55
+//                    text: "TWEET"
+//                    verticalAlignment: VerticalAlignment.Center
+//                    textStyle {
+//                        base: btmNavPanelSmallNormalWhite.style
+//                    }
+//                }
+////                Label {
+////                    leftMargin: 40
+////                    text: "THEMES"
+////                    verticalAlignment: VerticalAlignment.Center
+////                    textStyle {
+////                        base: btmNavPanelSmallNormalWhite.style
+////                    }
+////                }
+//                Label {
+//                    text: "WORDPLUS"
+//                    verticalAlignment: VerticalAlignment.Center
+//                    textStyle {
+//                        base: btmNavPanelSmallNormalWhite.style
+//                    }
+//                }
+//            }
         }
 
         Container {
             layout: StackLayout {
                 orientation: LayoutOrientation.RightToLeft
             }
-            rightPadding: 190
+            rightPadding: 50
             preferredHeight: 150
             preferredWidth: 720
             //background: Color.Red
+            ImageView {
+                leftMargin: 50
+                preferredHeight: 80
+                preferredWidth: 200
+                horizontalAlignment: HorizontalAlignment.Center
+                verticalAlignment: VerticalAlignment.Bottom
+                imageSource: "/images/wordoftheday.png"
+                onTouch: {
+                    if (event.isUp()) {
+                        wordsPlus.InitializeWordnik("WordOfTheDay");
+                        wordsPlus.cntlyWordOfTheDay();
+                        wordnikSheet.open();
+                    }
+                }
+            }
             ImageView {
                 leftMargin: 50
                 preferredHeight: 70

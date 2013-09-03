@@ -22,12 +22,12 @@ static const uint qt_meta_data_ApplicationUI[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      49,   14, // methods
-      15,  259, // properties
+      57,   14, // methods
+      18,  299, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      19,       // signalCount
+      22,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       15,   14,   14,   14, 0x05,
@@ -49,57 +49,68 @@ static const uint qt_meta_data_ApplicationUI[] = {
      368,   14,   14,   14, 0x05,
      388,   14,   14,   14, 0x05,
      411,   14,   14,   14, 0x05,
+     436,   14,   14,   14, 0x05,
+     457,   14,   14,   14, 0x05,
+     486,   14,   14,   14, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     436,   14,   14,   14, 0x0a,
-     448,  443,   14,   14, 0x0a,
-     486,  476,   14,   14, 0x0a,
-     523,   14,   14,   14, 0x0a,
-     552,  546,   14,   14, 0x08,
-     591,   14,   14,   14, 0x08,
-     600,   14,   14,   14, 0x08,
-     614,   14,   14,   14, 0x08,
-     629,  443,   14,   14, 0x08,
-     670,   14,   14,   14, 0x08,
+     513,   14,   14,   14, 0x0a,
+     525,  520,   14,   14, 0x0a,
+     563,  553,   14,   14, 0x0a,
+     600,   14,   14,   14, 0x0a,
+     629,  623,   14,   14, 0x08,
+     668,   14,   14,   14, 0x08,
+     677,   14,   14,   14, 0x08,
+     691,   14,   14,   14, 0x08,
+     706,  520,   14,   14, 0x08,
+     747,   14,   14,   14, 0x08,
+     774,  765,   14,   14, 0x08,
+     798,  765,   14,   14, 0x08,
 
  // methods: signature, parameters, type, tag, flags
-     688,   14,   14,   14, 0x02,
-     708,   14,   14,   14, 0x02,
-     729,   14,   14,   14, 0x02,
-     758,  752,   14,   14, 0x02,
-     792,  775,   14,   14, 0x02,
-     814,   14,   14,   14, 0x02,
-     847,   14,   14,   14, 0x02,
-     875,   14,   14,   14, 0x02,
-     917,   14,  900,   14, 0x02,
-     929,   14,   14,   14, 0x02,
-     942,   14,   14,   14, 0x02,
-     954,   14,   14,   14, 0x02,
-     973,  967,   14,   14, 0x02,
-     997,  993,   14,   14, 0x02,
-    1016,   14,   14,   14, 0x02,
-    1044, 1033,   14,   14, 0x02,
-    1080, 1075,   14,   14, 0x02,
-    1106, 1075,   14,   14, 0x02,
-    1127, 1075,   14,   14, 0x02,
-    1151, 1075,   14,   14, 0x02,
+     818,   14,   14,   14, 0x02,
+     838,   14,   14,   14, 0x02,
+     859,   14,   14,   14, 0x02,
+     887,  882,   14,   14, 0x02,
+     920,  914,   14,   14, 0x02,
+     954,  937,   14,   14, 0x02,
+     976,   14,   14,   14, 0x02,
+    1009,   14,   14,   14, 0x02,
+    1037,   14,   14,   14, 0x02,
+    1079,   14, 1062,   14, 0x02,
+    1091,   14,   14,   14, 0x02,
+    1104,   14,   14,   14, 0x02,
+    1116,   14,   14,   14, 0x02,
+    1135, 1129,   14,   14, 0x02,
+    1159, 1155,   14,   14, 0x02,
+    1178,   14,   14,   14, 0x02,
+    1206, 1195,   14,   14, 0x02,
+    1242, 1237,   14,   14, 0x02,
+    1268, 1237,   14,   14, 0x02,
+    1289, 1237,   14,   14, 0x02,
+    1313, 1237,   14,   14, 0x02,
+    1334,   14,   14,   14, 0x02,
+    1354,   14,   14,   14, 0x02,
 
  // properties: name, type, flags
-    1180, 1172, 0x0a495103,
-    1186, 1172, 0x0a495103,
-    1195, 1172, 0x0a495001,
-    1200, 1172, 0x0a495001,
-    1221, 1216, 0x01495003,
-    1229, 1216, 0x01495003,
-    1237, 1216, 0x01495003,
-    1250, 1172, 0x0a495001,
-    1270, 1172, 0x0a495001,
-     752, 1285, 0x02495103,
-    1289, 1285, 0x02495001,
-    1301, 1172, 0x0a495103,
-    1317, 1285, 0x02495103,
-    1328, 1285, 0x02495001,
-    1342, 1216, 0x01495103,
+    1386, 1378, 0x0a495103,
+    1392, 1378, 0x0a495103,
+    1401, 1378, 0x0a495001,
+    1406, 1378, 0x0a495001,
+    1427, 1422, 0x01495003,
+    1435, 1422, 0x01495003,
+    1443, 1422, 0x01495003,
+    1456, 1378, 0x0a495001,
+    1476, 1378, 0x0a495001,
+     914, 1491, 0x02495103,
+    1495, 1491, 0x02495001,
+    1507, 1378, 0x0a495103,
+    1523, 1491, 0x02495103,
+    1534, 1491, 0x02495001,
+    1548, 1422, 0x01495103,
+    1564, 1378, 0x0a495001,
+    1576, 1378, 0x0a495001,
+    1596, 1378, 0x0a495001,
 
  // properties: notify_signal_id
        3,
@@ -117,6 +128,9 @@ static const uint qt_meta_data_ApplicationUI[] = {
       16,
       17,
       18,
+      19,
+      20,
+      21,
 
        0        // eod
 };
@@ -133,16 +147,21 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "lastPuzzleTimeChanged()\0scoreChanged()\0"
     "gamesPlayedChanged()\0selectedLettersChanged()\0"
     "difficultyChanged()\0achievedAwardChanged()\0"
-    "isFirstTimeUserChanged()\0show()\0data\0"
-    "scoreLoopLoaded(AppData_t*)\0scoreData\0"
-    "onSubmitScoreCompleted(ScoreData_t*)\0"
+    "isFirstTimeUserChanged()\0wordnikWordChanged()\0"
+    "wordnikPartOfSpeechChanged()\0"
+    "wordnikDefinitionChanged()\0show()\0"
+    "data\0scoreLoopLoaded(AppData_t*)\0"
+    "scoreData\0onSubmitScoreCompleted(ScoreData_t*)\0"
     "onOrientationChanged()\0event\0"
     "onTileTouch(bb::cascades::TouchEvent*)\0"
     "onTick()\0onThumbnail()\0onFullscreen()\0"
     "onLoadLeaderboardCompleted(QVariantList)\0"
-    "onAchievedAward()\0intializePlayArea()\0"
-    "InitializeHomePage()\0InitializePuzzlePage()\0"
-    "score\0submitScore(int)\0includeBuddyList\0"
+    "onAchievedAward()\0response\0"
+    "onWordOfTheDay(QString)\0onWordList(QString)\0"
+    "intializePlayArea()\0InitializeHomePage()\0"
+    "InitializePuzzlePage()\0type\0"
+    "InitializeWordnik(QString)\0score\0"
+    "submitScore(int)\0includeBuddyList\0"
     "loadLeaderboard(bool)\0"
     "loadLeaderboardAroundLastScore()\0"
     "loadLeaderboardAroundUser()\0"
@@ -153,12 +172,15 @@ static const char qt_meta_stringdata_ApplicationUI[] = {
     "name,level\0cntlyCategory(QString,QString)\0"
     "name\0cntlyMenuOptions(QString)\0"
     "cntlySocial(QString)\0cntlyScoreloop(QString)\0"
-    "cntlyThemes(QString)\0QString\0theme\0"
+    "cntlyThemes(QString)\0cntlyWordOfTheDay()\0"
+    "cntlyDictionaryPuzzle()\0QString\0theme\0"
     "category\0time\0totalWordsFound\0bool\0"
     "soundOn\0musicOn\0profileBoxOn\0"
     "puzzleCompletedTime\0lastPuzzleTime\0"
     "int\0gamesPlayed\0selectedLetters\0"
     "difficulty\0achievedAward\0isFirstTimeUser\0"
+    "wordnikWord\0wordnikPartOfSpeech\0"
+    "wordnikDefinition\0"
 };
 
 void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -186,37 +208,45 @@ void ApplicationUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 16: _t->difficultyChanged(); break;
         case 17: _t->achievedAwardChanged(); break;
         case 18: _t->isFirstTimeUserChanged(); break;
-        case 19: _t->show(); break;
-        case 20: _t->scoreLoopLoaded((*reinterpret_cast< AppData_t*(*)>(_a[1]))); break;
-        case 21: _t->onSubmitScoreCompleted((*reinterpret_cast< ScoreData_t*(*)>(_a[1]))); break;
-        case 22: _t->onOrientationChanged(); break;
-        case 23: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
-        case 24: _t->onTick(); break;
-        case 25: _t->onThumbnail(); break;
-        case 26: _t->onFullscreen(); break;
-        case 27: _t->onLoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
-        case 28: _t->onAchievedAward(); break;
-        case 29: _t->intializePlayArea(); break;
-        case 30: _t->InitializeHomePage(); break;
-        case 31: _t->InitializePuzzlePage(); break;
-        case 32: _t->submitScore((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 33: _t->loadLeaderboard((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 34: _t->loadLeaderboardAroundLastScore(); break;
-        case 35: _t->loadLeaderboardAroundUser(); break;
-        case 36: _t->LoadAchievementsAwards(); break;
-        case 37: { ScoreLoopThread* _r = _t->scoreLoop();
+        case 19: _t->wordnikWordChanged(); break;
+        case 20: _t->wordnikPartOfSpeechChanged(); break;
+        case 21: _t->wordnikDefinitionChanged(); break;
+        case 22: _t->show(); break;
+        case 23: _t->scoreLoopLoaded((*reinterpret_cast< AppData_t*(*)>(_a[1]))); break;
+        case 24: _t->onSubmitScoreCompleted((*reinterpret_cast< ScoreData_t*(*)>(_a[1]))); break;
+        case 25: _t->onOrientationChanged(); break;
+        case 26: _t->onTileTouch((*reinterpret_cast< bb::cascades::TouchEvent*(*)>(_a[1]))); break;
+        case 27: _t->onTick(); break;
+        case 28: _t->onThumbnail(); break;
+        case 29: _t->onFullscreen(); break;
+        case 30: _t->onLoadLeaderboardCompleted((*reinterpret_cast< QVariantList(*)>(_a[1]))); break;
+        case 31: _t->onAchievedAward(); break;
+        case 32: _t->onWordOfTheDay((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 33: _t->onWordList((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 34: _t->intializePlayArea(); break;
+        case 35: _t->InitializeHomePage(); break;
+        case 36: _t->InitializePuzzlePage(); break;
+        case 37: _t->InitializeWordnik((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 38: _t->submitScore((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 39: _t->loadLeaderboard((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 40: _t->loadLeaderboardAroundLastScore(); break;
+        case 41: _t->loadLeaderboardAroundUser(); break;
+        case 42: _t->LoadAchievementsAwards(); break;
+        case 43: { ScoreLoopThread* _r = _t->scoreLoop();
             if (_a[0]) *reinterpret_cast< ScoreLoopThread**>(_a[0]) = _r; }  break;
-        case 38: _t->startTimer(); break;
-        case 39: _t->stopTimer(); break;
-        case 40: _t->resetTimer(); break;
-        case 41: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 42: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 43: _t->invokeFacebook(); break;
-        case 44: _t->cntlyCategory((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
-        case 45: _t->cntlyMenuOptions((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 46: _t->cntlySocial((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 47: _t->cntlyScoreloop((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 48: _t->cntlyThemes((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 44: _t->startTimer(); break;
+        case 45: _t->stopTimer(); break;
+        case 46: _t->resetTimer(); break;
+        case 47: _t->ControlsForBBM((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 48: _t->playSound((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 49: _t->invokeFacebook(); break;
+        case 50: _t->cntlyCategory((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 51: _t->cntlyMenuOptions((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 52: _t->cntlySocial((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 53: _t->cntlyScoreloop((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 54: _t->cntlyThemes((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 55: _t->cntlyWordOfTheDay(); break;
+        case 56: _t->cntlyDictionaryPuzzle(); break;
         default: ;
         }
     }
@@ -254,9 +284,9 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 49)
+        if (_id < 57)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 49;
+        _id -= 57;
     }
 #ifndef QT_NO_PROPERTIES
       else if (_c == QMetaObject::ReadProperty) {
@@ -277,8 +307,11 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 12: *reinterpret_cast< int*>(_v) = getDifficulty(); break;
         case 13: *reinterpret_cast< int*>(_v) = getAchievedAward(); break;
         case 14: *reinterpret_cast< bool*>(_v) = getIsFirstTimeUser(); break;
+        case 15: *reinterpret_cast< QString*>(_v) = getWord(); break;
+        case 16: *reinterpret_cast< QString*>(_v) = getPartOfSpeech(); break;
+        case 17: *reinterpret_cast< QString*>(_v) = getDefinition(); break;
         }
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
@@ -292,19 +325,19 @@ int ApplicationUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 12: setDifficulty(*reinterpret_cast< int*>(_v)); break;
         case 14: setIsFirstTimeUser(*reinterpret_cast< bool*>(_v)); break;
         }
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::ResetProperty) {
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 15;
+        _id -= 18;
     }
 #endif // QT_NO_PROPERTIES
     return _id;
@@ -425,5 +458,23 @@ void ApplicationUI::achievedAwardChanged()
 void ApplicationUI::isFirstTimeUserChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 18, 0);
+}
+
+// SIGNAL 19
+void ApplicationUI::wordnikWordChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 19, 0);
+}
+
+// SIGNAL 20
+void ApplicationUI::wordnikPartOfSpeechChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 20, 0);
+}
+
+// SIGNAL 21
+void ApplicationUI::wordnikDefinitionChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 21, 0);
 }
 QT_END_MOC_NAMESPACE

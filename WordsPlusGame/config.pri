@@ -19,9 +19,11 @@ device {
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
+                 $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -45,9 +47,11 @@ device {
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
+                 $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
@@ -71,9 +75,11 @@ device {
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
+                 $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -97,9 +103,11 @@ device {
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
+                 $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \
@@ -125,9 +133,11 @@ simulator {
                  $$quote($$BASEDIR/src/InviteToDownload.cpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.cpp) \
                  $$quote($$BASEDIR/src/ProfileBox.cpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.cpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.cpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.cpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.cpp) \
+                 $$quote($$BASEDIR/src/Wordnik.cpp) \
                  $$quote($$BASEDIR/src/applicationui.cpp) \
                  $$quote($$BASEDIR/src/main.cpp) \
                  $$quote($$BASEDIR/src/soundmanager.cpp) \
@@ -151,9 +161,11 @@ simulator {
                  $$quote($$BASEDIR/src/InviteToDownload.hpp) \
                  $$quote($$BASEDIR/src/OrientationSensor.hpp) \
                  $$quote($$BASEDIR/src/ProfileBox.hpp) \
+                 $$quote($$BASEDIR/src/QtObjectFormatter.hpp) \
                  $$quote($$BASEDIR/src/RegistrationHandler.hpp) \
                  $$quote($$BASEDIR/src/ScoreLoopThread.hpp) \
                  $$quote($$BASEDIR/src/UpdateProfile.hpp) \
+                 $$quote($$BASEDIR/src/Wordnik.hpp) \
                  $$quote($$BASEDIR/src/applicationui.hpp) \
                  $$quote($$BASEDIR/src/soundmanager.h) \
                  $$quote($$BASEDIR/src/timer.hpp) \

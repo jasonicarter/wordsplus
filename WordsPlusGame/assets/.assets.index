@@ -1,7 +1,8 @@
 1
-501
+505
 720x720/AboutSheet.qml
 720x720/BtmNav.qml
+720x720/CategorySheet.qml
 720x720/HomePage.qml
 720x720/images/activeFrame.png
 720x720/images/splash.png
@@ -11,6 +12,7 @@
 720x720/ThemeHomePage.qml
 720x720/TopNavPanel.qml
 720x720/WelcomeDialogBox.qml
+720x720/WordnikSheet.qml
 AboutSheet.qml
 AchievementList.qml
 Achievements.qml
@@ -79,11 +81,13 @@ images/home_blk.png
 images/home_white.png
 images/icon.png
 images/invite.png
+images/lock.png
 images/play.png
 images/profileBox.png
 images/profileEdit_blk.png
 images/profileEdit_white.png
 images/qrcode.png
+images/randompuzzle.png
 images/review.png
 images/rotate_blk.png
 images/social.png
@@ -93,10 +97,9 @@ images/theme_blk.png
 images/theme_red.png
 images/trophy.png
 images/twitter_large.png
+images/wordoftheday.png
 Leaderboard.qml
 main.qml
-models/schooltime.xml
-models/spacingout.xml
 models/themes.xml
 models/wordsplus.xml
 PlayPuzzlePage.qml
@@ -501,3 +504,4 @@ wordLists/superheroes.txt
 wordLists/tech.txt
 wordLists/weather.txt
 wordLists/weights.txt
+WordnikSheet.qml

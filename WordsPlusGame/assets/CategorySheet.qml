@@ -1,10 +1,11 @@
 import bb.cascades 1.0
+import bb.system 1.0
 
 Page {
     Container {
         layout: DockLayout {
         }
-        
+
         ThemeOtherPages {
         }
         ThemeSchoolHighlight {
@@ -19,98 +20,65 @@ Page {
                 preferredWidth: 700
                 property string category
                 Container {
-                    property int settingHard: 8
-                    property int settingMedium: 4
-                    property int settingEasy: 2
-                    preferredWidth: 700
-                    DropDown {
-                        id: diffDropDown
-                        title: "Difficulty:"
-                        Option {
-                            id: hard
-                            text: "Hard"
-                            description: "Now we're talking!"
-                            value: settingHard
-                            onSelectedChanged: {
-                                if (selected == true) {
-                                    wordsPlus.difficulty = 8;
-                                }
-                            }
-                        }
-                        Option {
-                            id: medium
-                            text: "Medium"
-                            description: "Great place to start"
-                            value: settingMedium
-                            onSelectedChanged: {
-                                if (selected == true) {
-                                    wordsPlus.difficulty = 4;
-                                }
-                            }
-                        }
-                        Option {
-                            id: easy
-                            text: "Easy"
-                            description: "Don't pick me, I'm too easy"
-                            value: settingEasy
-                            onSelectedChanged: {
-                                if (selected == true) {
-                                    wordsPlus.difficulty = 2; //settingEasy;
-                                }
+                    Container { // random words
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "Fancy New Words..."
+                            editable: false
+                            touchPropagationMode: TouchPropagationMode.None
+                            textStyle {
+                                color: Color.create("#0098f0")
                             }
                         }
                     }
-                    onCreationCompleted: {
-                        //diffDropDown.setSelectedOption(easy);
-                        if (wordsPlus.difficulty == 2) {
-                            diffDropDown.setSelectedOption(easy);
-                        } else if (wordsPlus.difficulty == 4) {
-                            diffDropDown.setSelectedOption(medium);
-                        } else if (wordsPlus.difficulty == 8) {
-                            diffDropDown.setSelectedOption(hard);
+                    Container {
+                        layout: StackLayout {
+                            orientation: LayoutOrientation.LeftToRight
+                        }
+                        topPadding: 25
+                        ImageView {
+                            imageSource: "/images/randompuzzle.png"
+
+                        }
+                        Button {
+                            enabled: wordsPlus.isPaid
+                            text: "Create Puzzle"
+                            onClicked: {
+                                progressToast.show();
+                                wordsPlus.InitializeWordnik("WordList");
+                                wordsPlus.cntlyDictionaryPuzzle();
+                                //wordsPlus.intializePlayArea();
+                                //categorySheet.close();
+                            }
                         }
                     }
-                } //diff buttons
+                    Label {
+                        text: "Internet Access Required. Powered by Wordnik.\n" + "NOTE: Random dictionary words. Some words may not be suitable for all ages."
+                        multiline: true
+                        touchPropagationMode: TouchPropagationMode.None
+                        verticalAlignment: VerticalAlignment.Center
+                        horizontalAlignment: HorizontalAlignment.Left
+                        textStyle {
+                            base: categorySheetSubTitleNormalWhite.style
+                        }
+                    }
+                }
                 Divider {
                     opacity: 0
                 }
-                Container {
-                    preferredWidth: 720
-                    DropDown {
-                        id: catDropDown
-                        title: "Theme Category:"
-                        Option {
-                            id: defaultCat
-                            text: "WordsPlus"
-                            description: "Included Categories"
-                            value: "wordsplus"
-                        }
-                        Option {
-                            id: spacingOut
-                            text: "Spacing Out"
-                            description: "Technology, Star Trek and everything nerdy"
-                            value: "spacingout"
-                        }
-                        Option {
-                            id: schoolTime
-                            text: "School Time"
-                            description: "Recess, H2 pencils, gym class and more"
-                            value: "schooltime"
-                        }
-                        onSelectedOptionChanged: {
-                            if (selectedValue == "spacingout") {
-                                catList.dataModel.source = "models/spacingout.xml";
-                            } else if (selectedValue == "wordsplus") {
-                                catList.dataModel.source = "models/wordsplus.xml";
-                            } else if (selectedValue == "schooltime") {
-                                catList.dataModel.source = "models/schooltime.xml";
+                Container { //category section
+                    Container {
+                        background: Color.create("#272727")
+                        TextArea {
+                            text: "OR 10+ Categories:"
+                            editable: false
+                            touchPropagationMode: TouchPropagationMode.None
+                            textStyle {
+                                color: Color.create("#0098f0")
                             }
                         }
                     }
-                    onCreationCompleted: {
-                        defaultCat.selected = true;
-                    }
-                } //category dropdown
+                }
                 Divider {
                     opacity: 0
                 }
@@ -118,10 +86,9 @@ Page {
                     layout: DockLayout {
                     }
                     ListView {
-
                         id: catList
                         dataModel: XmlDataModel {
-                            //source: "models/wordsplus.xml"
+                            source: "models/wordsplus.xml"
                         }
                         listItemComponents: [
                             ListItemComponent {
@@ -134,11 +101,12 @@ Page {
                             }
                         ]
                         onTriggered: {
+                            progressToast.show();
                             var selectedItem = dataModel.data(indexPath);
                             wordsPlus.category = selectedItem.filename;
                             wordsPlus.cntlyCategory((wordsPlus.category).toLowerCase(), wordsPlus.difficulty.toString());
                             wordsPlus.intializePlayArea();
-                            categorySheet.close();
+                            //categorySheet.close();
                         }
                     } //listview
                 }
@@ -149,4 +117,20 @@ Page {
             sheetName: "categorySheet"
         }
     }
+    attachedObjects: [
+        TextStyleDefinition {
+            id: categorySheetSubTitleNormalWhite
+            base: SystemDefaults.TextStyles.SubtitleText
+            fontWeight: FontWeight.Normal
+            fontFamily: "Times New Roman"
+            color: Color.create("#fafafa")
+        },
+        SystemToast {
+            id: progressToast
+            body: "Please wait a few seconds, I'm doing \"stuff\""
+            onFinished: {
+                categorySheet.close();
+            }
+        }
+    ]
 }

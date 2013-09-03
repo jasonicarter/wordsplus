@@ -12,4 +12,6 @@ LIBS += -lOpenAL -lalut -lasound
 LIBS += -lbbplatformbbm
 LIBS += -lbb -lbbdata -lbbplatform -lbbdevice
 
+QT += network
+
 include(config.pri)

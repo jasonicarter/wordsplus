@@ -272,14 +272,22 @@ int longest(const void *first, const void *second) {
 	return strlen(*(char**) second) - strlen(*(char**) first);
 }
 
-char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8) {
+char** createNewPuzzle(char *str = "weather.txt", int difficulity = 8, bool isRandomPuzzle = false) {
 	hardness = difficulity;
 	Grid *grid = NULL;
 	char s[5000];
 
 	FILE *pFile;
-	std::string strFilePath("app//native//assets//wordLists//");
+	std::string strFilePath("");
+	if(isRandomPuzzle){
+		strFilePath.append("data//");
+	}
+	else {
+		strFilePath.append("app//native//assets//wordLists//");
+	}
+
 	strFilePath.append(str);
+	//perror(strFilePath.c_str());
 	pFile = fopen(strFilePath.c_str(), "r");
 
 	if (pFile == NULL) perror ("Error opening file");

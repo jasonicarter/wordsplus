@@ -13,6 +13,7 @@
 #include "InviteToDownload.hpp"
 #include "ScoreLoopThread.hpp"
 #include "OrientationSensor.hpp"
+#include "Wordnik.hpp"
 
 #include <QObject>
 #include <bb/cascades/Page>
@@ -43,6 +44,7 @@ public:
     Q_INVOKABLE void intializePlayArea();
 	Q_INVOKABLE void InitializeHomePage();
 	Q_INVOKABLE void InitializePuzzlePage();
+	Q_INVOKABLE void InitializeWordnik(QString type);
 
 	Q_INVOKABLE void submitScore(int score);
 	Q_INVOKABLE void loadLeaderboard(bool includeBuddyList);
@@ -64,6 +66,8 @@ public:
 	Q_INVOKABLE void cntlySocial(const QString &name);
 	Q_INVOKABLE void cntlyScoreloop(const QString &name);
 	Q_INVOKABLE void cntlyThemes(const QString &name);
+	Q_INVOKABLE void cntlyWordOfTheDay();
+	Q_INVOKABLE void cntlyDictionaryPuzzle();
 	//countly
 
 	Q_PROPERTY (const QString theme READ getTheme WRITE setTheme NOTIFY themeChanged);
@@ -81,6 +85,12 @@ public:
 	Q_PROPERTY (int difficulty READ getDifficulty WRITE setDifficulty NOTIFY difficultyChanged);
 	Q_PROPERTY (int achievedAward READ getAchievedAward NOTIFY achievedAwardChanged);
 	Q_PROPERTY (bool isFirstTimeUser READ getIsFirstTimeUser WRITE setIsFirstTimeUser NOTIFY isFirstTimeUserChanged);
+
+	//wordnik
+	Q_PROPERTY (const QString wordnikWord READ getWord NOTIFY wordnikWordChanged);
+	Q_PROPERTY (const QString wordnikPartOfSpeech READ getPartOfSpeech NOTIFY wordnikPartOfSpeechChanged);
+	Q_PROPERTY (const QString wordnikDefinition READ getDefinition NOTIFY wordnikDefinitionChanged);
+	//wordnik
 
 	QString getCategory();
 	void setCategory(const QString cat);
@@ -120,6 +130,10 @@ public:
 
 	int getAchievedAward();
 
+	QString getWord();
+	QString getPartOfSpeech();
+	QString getDefinition();
+
 public Q_SLOTS:
 	void show();
 	void scoreLoopLoaded(AppData_t *data);
@@ -138,6 +152,8 @@ private Q_SLOTS:
 	void onFullscreen();
 	void onLoadLeaderboardCompleted(QVariantList data);
 	void onAchievedAward();
+	void onWordOfTheDay(QString response);
+	void onWordList(QString response);
 
 Q_SIGNALS:
 	void themeChanged();
@@ -156,6 +172,9 @@ Q_SIGNALS:
 	void difficultyChanged();
 	void achievedAwardChanged();
 	void isFirstTimeUserChanged();
+	void wordnikWordChanged();
+	void wordnikPartOfSpeechChanged();
+	void wordnikDefinitionChanged();
 
 private:
 	void initTimer();
@@ -207,6 +226,7 @@ private:
 	bool isProfileBoxEnabled;
 	bool isPuzzleDisplayed;
 	bool isHomePageDisplayed;
+	bool isRandomPuzzle;
 
 	QString m_strCategory;
 	QString m_strTime;
@@ -218,6 +238,8 @@ private:
 	SoundManager *mSoundManager;
 	QMap<QString, int> wordDataIndex;
 	QStringList listOfWords;
+	QStringList tmpWordOfTheDay;
+
 
 	RegistrationHandler *regHandler;
 	ProfileBox *profileBox;
@@ -228,6 +250,8 @@ private:
 	bb::platform::bbm::Context* m_context;
 
 	Invocation* m_pInvocation;
+
+	Wordnik* wordnik;
 
 	AppData_t *mAppData;
 	ScoreLoopThread *mScoreLoop;
