@@ -36,12 +36,12 @@ void Wordnik::callWordnik(QString type){
 	wordnikType = type.toLower();
 
 	if(wordnikType == "wordoftheday"){
-		const QUrl url("http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
+		const QUrl url("http://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=your key here");
 		QNetworkRequest request(url);
 		QNetworkReply* reply = m_networkAccessManager->get(request);
 		connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
 	}else if (wordnikType == "wordlist") {
-		const QUrl url("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=3&maxLength=11&limit=50&api_key=ddf8d3e28266772522105018b8307cc64aa976d8f76f90ac8");
+		const QUrl url("http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=3&maxLength=11&limit=50&api_key=your key here");
 		QNetworkRequest request(url);
 		QNetworkReply* reply = m_networkAccessManager->get(request);
 		connect(reply, SIGNAL(finished()), this, SLOT(onWordReply()));
