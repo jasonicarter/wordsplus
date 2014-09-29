@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;WordsPlusGame/assets/theme/space/theme_icon_v3.png&apos; to &apos;theme_icon.png&apos;" description="Rename resource &apos;theme_icon_v3.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/theme/space/theme_icon_v3.png" name="theme_icon.png" stamp="1359321698465" updateReferences="true"/>
-</session>

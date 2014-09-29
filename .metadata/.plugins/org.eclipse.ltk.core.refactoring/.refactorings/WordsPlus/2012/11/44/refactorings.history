@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;WordsPlus/assets/sounds/levelCompletedSound.wav&apos; to &apos;puzzleCompleted.wav&apos;" description="Rename resource &apos;levelCompletedSound.wav&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/sounds/levelCompletedSound.wav" name="puzzleCompleted.wav" stamp="1351899832748" updateReferences="true"/>
-</session>

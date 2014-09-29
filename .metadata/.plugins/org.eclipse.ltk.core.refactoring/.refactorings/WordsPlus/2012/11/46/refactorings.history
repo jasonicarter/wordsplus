@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;WordsPlus/assets/images/icon_114x114.png&apos; to &apos;icon.png&apos;" description="Rename resource &apos;icon_114x114.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/images/icon_114x114.png" name="icon.png" stamp="1352932534052" updateReferences="true"/>
-</session>

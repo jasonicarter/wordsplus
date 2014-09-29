@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="\\JASON-PC\Users\Jason\AppData\Local\Research In Motion" key="userDebugTokenLocation"/>
-	<section name="com.qnx.tools.bbt.internal.ui.setupwizard.DeploymentSetupWizard">
-		<item value="false" key="doNotAutoOpen"/>
-		<item value="" key="selectedSigningRegistration"/>
-	</section>
-</section>

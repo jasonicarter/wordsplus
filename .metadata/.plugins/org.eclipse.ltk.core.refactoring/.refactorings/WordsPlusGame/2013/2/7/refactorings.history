@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;WordsPlusGame/assets/models/categories.xml&apos; to &apos;wordsplus.xml&apos;" description="Rename resource &apos;categories.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/models/categories.xml" name="wordsplus.xml" stamp="1360523232970" updateReferences="true"/>
-</session>

@@ -1,8 +1,0 @@
-
-**** Build of configuration Device-Release for project appMenu ****
-
-make Device-Release 
-Makefile:5: mk/cs-base.mk: No such file or directory
-make: *** No rule to make target `mk/cs-base.mk'.  Stop.
-
-**** Build Finished ****

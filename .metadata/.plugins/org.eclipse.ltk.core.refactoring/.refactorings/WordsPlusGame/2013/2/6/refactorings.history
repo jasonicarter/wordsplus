@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;WordsPlusGame/assets/theme/words&apos; to &apos;wordsPlus&apos;" description="Rename resource &apos;words&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/theme/words" name="wordsPlus" stamp="1360008227729" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;WordsPlusGame/assets/theme/wordsPlus/mainPage_full.png&apos; to &apos;theme_home.png&apos;" description="Rename resource &apos;mainPage_full.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/theme/wordsPlus/mainPage_full.png" name="theme_home.png" stamp="1360362891173" updateReferences="true"/>
-</session>

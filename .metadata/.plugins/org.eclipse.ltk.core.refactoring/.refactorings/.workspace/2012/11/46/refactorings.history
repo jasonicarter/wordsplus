@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;WordsPlus/assets/images/icon.png&apos;" deleteContents="false" description="Delete resource &apos;WordsPlus/assets/images/icon.png&apos;" element1="/WordsPlus/assets/images/icon.png" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1352932520645"/>
-</session>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;jsonreadwrite&apos;" deleteContents="true" description="Delete resource &apos;jsonreadwrite&apos;" element1="/jsonreadwrite" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1373121515405"/>&#x0A;<refactoring comment="Delete resource &apos;HelloWordnik&apos;" deleteContents="true" description="Delete resource &apos;HelloWordnik&apos;" element1="/HelloWordnik" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1373121522383"/>
-</session>

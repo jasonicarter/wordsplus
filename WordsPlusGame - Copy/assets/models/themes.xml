@@ -1,5 +1,0 @@
-<root>
-    <item image= "theme/wordsPlus/theme_sample.jpg"	folderName="wordsPlus"	themeName="WordsPlus" price="free"/>
-    <item image= "theme/space/theme_sample.jpg"	folderName="space"	themeName="Spacing Out"	price="free"/>
-    <item image= "theme/school/theme_sample.jpg"	folderName="school"	themeName="School Time"	price="free"/>
-</root>

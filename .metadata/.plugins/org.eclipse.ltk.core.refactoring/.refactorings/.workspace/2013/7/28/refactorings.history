@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;WordsPlusFree/src/Wordnik.cpp&apos;" deleteContents="false" description="Delete resource &apos;WordsPlusFree/src/Wordnik.cpp&apos;" element1="/WordsPlusFree/src/Wordnik.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1373213498480"/>&#x0A;<refactoring comment="Delete resource &apos;WordsPlusFree/src/Wordnik&apos;" deleteContents="false" description="Delete resource &apos;WordsPlusFree/src/Wordnik&apos;" element1="/WordsPlusFree/src/Wordnik" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1373213519391"/>
-</session>

@@ -1,1 +1,0 @@
-include (../WordsPlus.pro)
