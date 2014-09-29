@@ -16,6 +16,7 @@ Integrated APIs
 
 
 <h3>Product Summary</h3>
+img(https://github.com/jasonicarter/wordsplus/blob/master/WordsPlusFree/assets/images/icon.png)
 Never run out of words again!
 WordsPlus now with Word of the Day and Dictionary Puzzles. 
 
