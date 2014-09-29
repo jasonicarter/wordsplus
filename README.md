@@ -4,10 +4,10 @@
 This is the repository for BlackBerry 10 WordsPlus made by Jason I. Carter
 from http://jasoncarter.io | @jasonicarter
 
-WordsPlus was launch title back in 2013 for BlackBerry 10. 
+WordsPlus was a launch title back in 2013 for BlackBerry 10. 
 It's now available Open Source under the MIT License.
 
-**Most of this code is now terribly out of date to the latest SDK. Use at your own risk.**
+**Most of this code is now terribly out of date to the latest BB10 SDK. Use at your own risk.**
 Integrated APIs
 - BBM (social integration)
 - Scoreloop (online scoring and achievements)
@@ -16,7 +16,8 @@ Integrated APIs
 
 
 <h3>Product Summary</h3>
-img(https://github.com/jasonicarter/wordsplus/blob/master/WordsPlusFree/assets/images/icon.png)
+![alt tag](https://github.com/jasonicarter/wordsplus/blob/master/WordsPlusFree/assets/images/icon.png)
+
 Never run out of words again!
 WordsPlus now with Word of the Day and Dictionary Puzzles. 
 
