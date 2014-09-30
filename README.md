@@ -4,6 +4,8 @@
 This is the repository for BlackBerry 10 WordsPlus made by Jason I. Carter
 from http://jasoncarter.io | @jasonicarter
 
+My post: http://jasoncarter.io/wordsplus-for-blackberry-10-now-on-github/
+
 WordsPlus was a launch title back in 2013 for BlackBerry 10. 
 It's now available Open Source under the MIT License.
 
